@@ -1,0 +1,245 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-22" view-index="0" gantt-divider-location="400" resource-divider-location="300" version="2.8.5" locale="fr">
+    <description/>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="216" order="0"/>
+        <field id="tpd4" name="Date de début" width="65" order="1"/>
+        <field id="tpd5" name="Date de fin" width="115" order="2"/>
+        <timeline><![CDATA[260]]></timeline>
+        <option id="color.recent"><![CDATA[#ff6666 #f4f4f4 #00cc33 #00ff66 #ff6600 #0000ff #3366ff #ff0000 #000000 #00ffff]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="7" name="Etude préliminaire" meeting="false" start="2021-03-15" duration="20" complete="0" expand="false">
+            <task id="8" name="Prise de connaissance du sujet" color="#ff6666" meeting="false" start="2021-03-15" duration="10" complete="0" expand="true"/>
+            <task id="9" name="Réunion  Kick Off" color="#ff6666" meeting="true" start="2021-03-23" duration="0" complete="0" expand="true"/>
+            <task id="11" name="Rédaction des spécifications" color="#ff6666" meeting="false" start="2021-03-24" duration="8" complete="0" expand="true"/>
+            <task id="12" name="Rédaction d'un plan de vérification" color="#ff6666" meeting="false" start="2021-03-29" duration="10" complete="0" expand="true"/>
+            <task id="22" name="Validation spécifications" color="#ff6666" meeting="true" start="2021-04-06" duration="0" complete="0" expand="true">
+                <depend id="91" type="2" difference="0" hardness="Strong"/>
+                <depend id="109" type="2" difference="0" hardness="Strong"/>
+                <depend id="194" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="0" name="Hardware" color="#00cc33" meeting="false" start="2021-03-29" duration="120" complete="0" expand="false">
+            <task id="577" name="Carte interface" color="#00cc33" meeting="false" start="2021-03-29" duration="100" complete="0" expand="true">
+                <task id="4" name="Déterminer les spécfications des cartes" color="#00ff66" meeting="false" start="2021-03-29" duration="15" complete="0" expand="true"/>
+                <task id="30" name="Conception des circuits électroniques" color="#00ff66" meeting="false" start="2021-04-15" duration="12" complete="0" expand="true">
+                    <depend id="49" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="49" name="Validation de circuits" color="#00cc33" meeting="true" start="2021-05-03" duration="0" complete="0" expand="true">
+                    <depend id="254" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="546" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="594" name="Redaction banc de test" color="#00ff66" meeting="false" start="2021-05-05" duration="3" complete="0" expand="true"/>
+                <task id="31" name="Recherche de composants (COTS)" color="#00ff66" meeting="false" start="2021-05-03" duration="5" complete="0" expand="true"/>
+                <task id="35" name="Réalisation shémas électroniques" color="#00ff66" meeting="false" start="2021-05-10" duration="19" complete="0" expand="true"/>
+                <task id="38" name="Design PCB + achat" color="#00ff66" meeting="false" start="2021-06-04" duration="11" complete="0" expand="true">
+                    <depend id="53" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="42" name="Temps de livraison" color="#00ff66" shape="0,1,0,1,0,0,1,0,0,1,0,1,1,0,0,0" meeting="false" start="2021-06-18" duration="11" complete="0" expand="true"/>
+                <task id="53" name="Commande V1" color="#00cc33" meeting="true" start="2021-06-21" duration="0" complete="0" expand="true"/>
+                <task id="45" name="Montage + Vérifications de la carte" color="#00ff66" meeting="false" start="2021-06-25" duration="11" complete="0" expand="true">
+                    <depend id="51" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="51" name="Validation carte PCB" color="#00cc33" meeting="true" start="2021-07-12" duration="0" complete="0" expand="true"/>
+                <task id="579" name="V2 ?" color="#00ff66" meeting="false" start="2021-07-15" duration="22" complete="0" expand="true"/>
+            </task>
+            <task id="581" name="Balise" color="#f4f4f4" meeting="false" start="2021-03-29" duration="103" complete="0" expand="true">
+                <task id="583" name="Etude de faisabilité" color="#00ff66" meeting="false" start="2021-03-29" duration="24" complete="0" expand="true"/>
+                <task id="586" name="réalisation" color="#00ff66" meeting="false" start="2021-06-21" duration="35" complete="0" expand="true"/>
+                <task id="587" name="phase de test" color="#00ff66" meeting="false" start="2021-08-09" duration="8" complete="0" expand="true"/>
+            </task>
+            <task id="593" name="Station de charge" color="#00cc33" meeting="false" start="2021-07-14" duration="43" complete="0" expand="true">
+                <task id="610" name="Etude de faisabilité" color="#00ff66" meeting="false" start="2021-07-14" duration="21" complete="0" expand="true"/>
+                <task id="611" name="réalisation" color="#00ff66" meeting="false" start="2021-08-02" duration="15" complete="0" expand="true"/>
+                <task id="612" name="phase de test" color="#00ff66" meeting="false" start="2021-08-20" duration="16" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="1" name="Software" color="#0000ff" meeting="false" start="2021-03-29" duration="109" complete="0" expand="false">
+            <task id="5" name="création/installation linux embarqué U96" color="#3366ff" meeting="false" start="2021-03-29" duration="14" complete="0" priority="2" expand="true">
+                <depend id="62" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="62" name="installation de ROS" color="#3366ff" meeting="false" start="2021-04-16" duration="2" complete="0" expand="true">
+                <depend id="109" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="109" name="OS &amp; ROS installé" color="#0000ff" meeting="true" start="2021-04-20" duration="0" complete="0" expand="true">
+                <depend id="68" type="2" difference="0" hardness="Strong"/>
+                <depend id="69" type="2" difference="0" hardness="Strong"/>
+                <depend id="84" type="2" difference="0" hardness="Strong"/>
+                <depend id="85" type="2" difference="0" hardness="Strong"/>
+                <depend id="104" type="2" difference="0" hardness="Strong"/>
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="67" name="communiquation ROS &lt;-&gt; HW" color="#3366ff" meeting="false" start="2021-04-20" duration="39" complete="0" expand="true">
+                <task id="68" name="com/driver capteur &lt;-&gt; ROS" color="#3366ff" meeting="false" start="2021-04-20" duration="10" complete="0" expand="true">
+                    <depend id="69" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="126" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="69" name="com/driver actionneur &lt;-&gt; ROS" color="#3366ff" meeting="false" start="2021-05-04" duration="10" complete="0" expand="true">
+                    <depend id="126" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="126" name="test unitaire communication" color="#3366ff" meeting="false" start="2021-06-07" duration="5" complete="0" expand="true">
+                    <depend id="130" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="130" name="communication HW OK" color="#0000ff" meeting="true" start="2021-06-14" duration="0" complete="0" expand="true">
+                <depend id="80" type="2" difference="0" hardness="Strong"/>
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="65" name="Localisation fonctionnelle ROS" color="#3366ff" meeting="false" start="2021-06-14" duration="13" complete="0" expand="true">
+                <task id="80" name="Cartographie SLAM" color="#3366ff" meeting="false" start="2021-06-14" duration="2" complete="0" expand="true">
+                    <depend id="81" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="81" name="AMCL lidar" color="#3366ff" meeting="false" start="2021-06-16" duration="2" complete="0" expand="true">
+                    <depend id="82" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="106" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="82" name="odométrie encodeur" color="#3366ff" meeting="false" start="2021-06-18" duration="2" complete="0" expand="true">
+                    <depend id="83" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="83" name="fusion multicapteur EKF" color="#3366ff" meeting="false" start="2021-06-22" duration="2" complete="0" expand="true">
+                    <depend id="106" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="106" name="test localisation" color="#3366ff" meeting="false" start="2021-06-24" duration="5" complete="0" expand="true">
+                    <depend id="161" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="161" name="localisation OK" color="#0000ff" meeting="true" start="2021-07-01" duration="0" complete="0" expand="true">
+                <depend id="104" type="2" difference="0" hardness="Rubber"/>
+                <depend id="107" type="2" difference="0" hardness="Strong"/>
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="74" name="navigation fonctionnelle ROS" color="#3366ff" meeting="false" start="2021-07-01" duration="26" complete="0" expand="true">
+                <task id="104" name="paramétrage global planner" color="#3366ff" meeting="false" start="2021-07-01" duration="3" complete="0" expand="true">
+                    <depend id="105" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="105" name="paramétrage local planer" color="#3366ff" meeting="false" start="2021-07-06" duration="3" complete="0" expand="true">
+                    <depend id="84" type="2" difference="0" hardness="Strong"/>
+                    <depend id="107" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="84" name="gestionnaire de mission" color="#3366ff" meeting="false" start="2021-07-09" duration="5" complete="0" expand="true">
+                    <depend id="85" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="107" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="85" name="gestionnaire d'anomalie" color="#3366ff" meeting="false" start="2021-07-16" duration="5" complete="0" expand="true">
+                    <depend id="107" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="234" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="234" name="gestionnaire de démarrage" color="#3366ff" meeting="false" start="2021-07-23" duration="5" complete="0" expand="true">
+                    <depend id="107" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="107" name="test navigation" color="#3366ff" meeting="false" start="2021-07-30" duration="5" complete="0" expand="true">
+                    <depend id="190" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="190" name="navigation OK" color="#0000ff" meeting="true" start="2021-08-06" duration="0" complete="0" expand="true">
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="75" name="IHM mvp" color="#3366ff" meeting="false" start="2021-04-06" duration="35" complete="0" expand="true">
+                <task id="194" name="dévellopement front (interface)" color="#3366ff" meeting="false" start="2021-04-06" duration="10" complete="0" expand="true">
+                    <depend id="91" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="218" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="91" name="mise en place réseaux" color="#3366ff" meeting="false" start="2021-04-20" duration="5" complete="0" expand="true">
+                    <depend id="209" type="2" difference="0" hardness="Rubber"/>
+                    <depend id="218" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="209" name="communication IHM &lt;-&gt; ROS" color="#3366ff" meeting="false" start="2021-04-27" duration="3" complete="0" expand="true">
+                    <depend id="89" type="2" difference="0" hardness="Strong"/>
+                    <depend id="90" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="89" name="streaming vidéo" color="#3366ff" meeting="false" start="2021-05-14" duration="2" complete="0" expand="true">
+                    <depend id="218" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="90" name="control manuel (clavier)" color="#3366ff" meeting="false" start="2021-04-30" duration="2" complete="0" expand="true">
+                    <depend id="218" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="218" name="test IHM mvp" color="#3366ff" meeting="false" start="2021-05-18" duration="5" complete="0" expand="true">
+                    <depend id="219" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="219" name="IHM mvp OK" color="#0000ff" meeting="true" start="2021-05-25" duration="0" complete="0" expand="true">
+                <depend id="100" type="2" difference="0" hardness="Strong"/>
+                <depend id="101" type="2" difference="0" hardness="Strong"/>
+                <depend id="102" type="2" difference="0" hardness="Strong"/>
+                <depend id="103" type="2" difference="0" hardness="Strong"/>
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="76" name="IHM" color="#3366ff" meeting="false" start="2021-05-25" duration="5" complete="0" expand="false">
+                <task id="100" name="web RVIZ" color="#3366ff" meeting="false" start="2021-05-25" duration="3" complete="0" expand="true">
+                    <depend id="245" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="101" name="affichage du niveau de batterie" color="#3366ff" meeting="false" start="2021-05-25" duration="1" complete="0" expand="true">
+                    <depend id="245" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="102" name="consultation des logs vidéo" color="#3366ff" meeting="false" start="2021-05-25" duration="5" complete="0" expand="true">
+                    <depend id="245" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="103" name="édition de ronde" color="#3366ff" meeting="false" start="2021-05-25" duration="5" complete="0" expand="true">
+                    <depend id="245" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="245" name="IHM OK" color="#0000ff" meeting="true" start="2021-06-01" duration="0" complete="0" expand="true">
+                <depend id="247" type="2" difference="0" hardness="Strong"/>
+            </task>
+            <task id="247" name="tests intégrations" color="#3366ff" meeting="false" start="2021-08-06" duration="15" complete="0" expand="true"/>
+        </task>
+        <task id="3" name="FPGA" color="#ff6600" meeting="false" start="2021-03-29" duration="120" complete="0" expand="true">
+            <task id="6" name="Acquisition vidéo" color="#ff6600" meeting="false" start="2021-03-29" duration="80" complete="0" expand="true">
+                <task id="258" name="Acquisition flux vidéo MIPI" color="#ff6600" meeting="false" start="2021-03-29" duration="20" complete="0" priority="4" expand="true">
+                    <depend id="259" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="259" name="Demosaiquer l'image" color="#ff6600" meeting="false" start="2021-04-26" duration="14" complete="0" priority="4" expand="true">
+                    <depend id="576" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="576" name="Flux video" color="#ff6600" meeting="true" start="2021-05-14" duration="0" complete="0" expand="true">
+                    <depend id="89" type="2" difference="0" hardness="Strong"/>
+                    <depend id="260" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="260" name="Traitement basique" color="#ff6600" meeting="false" start="2021-06-07" duration="20" complete="0" expand="true">
+                    <depend id="261" type="2" difference="0" hardness="Rubber"/>
+                </task>
+                <task id="261" name="Auto-focus" color="#ff6600" meeting="false" start="2021-07-05" duration="10" complete="0" priority="0" expand="true"/>
+            </task>
+            <task id="546" name="Interface GPIO" color="#ff6600" meeting="false" start="2021-05-03" duration="5" complete="0" priority="2" expand="true"/>
+            <task id="254" name="Devloppement protocole de communication" color="#ff6600" meeting="false" start="2021-05-17" duration="15" complete="0" expand="true">
+                <task id="257" name="UART" color="#ff6600" meeting="false" start="2021-05-17" duration="15" complete="0" expand="true">
+                    <depend id="126" type="2" difference="0" hardness="Strong"/>
+                </task>
+            </task>
+            <task id="262" name="Fonctions de délestage PS" color="#ff6600" meeting="false" start="2021-07-19" duration="40" complete="0" priority="0" expand="true"/>
+        </task>
+        <task id="243" name="fin stage" color="#ff0000" meeting="true" start="2021-09-13" duration="0" complete="0" expand="true"/>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
