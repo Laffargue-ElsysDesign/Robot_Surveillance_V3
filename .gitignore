@@ -50,3 +50,10 @@ modules.order
 Module.symvers
 Mkfile.old
 dkms.conf
+
+#folders
+
+Archives_Robot_V1
+Archives_Robot_V2
+Logiciels
+Rapports_2021
