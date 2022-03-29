@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-02-14" view-index="0" gantt-divider-location="400" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-02-14" view-index="0" gantt-divider-location="634" resource-divider-location="300" version="2.8.5" locale="fr">
     <description><![CDATA[Diagramme de Gantt initial pour le projet de robot autonome de surveillance.]]></description>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="215" order="0"/>
-        <field id="tpd4" name="Date de début" width="91" order="1"/>
-        <field id="tpd5" name="Date de fin" width="90" order="2"/>
-        <option id="color.recent"><![CDATA[#ff0033 #ff6666 #f4f4f4 #00cc33 #00ff66 #ff6600 #0000ff #3366ff #ff0000 #000000]]></option>
+        <field id="tpd3" name="Nom" width="333" order="0"/>
+        <field id="tpd4" name="Date de début" width="129" order="1"/>
+        <field id="tpd5" name="Date de fin" width="168" order="2"/>
+        <option id="color.recent"><![CDATA[#0033ff #ff0033 #ff6666 #f4f4f4 #00cc33 #00ff66 #ff6600 #0000ff #3366ff #ff0000]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -45,26 +45,56 @@
             <depend id="6" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="6" name="Rédaction des spécifications" color="#ff0033" meeting="false" start="2022-03-25" duration="9" complete="0" expand="true"/>
-        <task id="23" name="Software" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="24" name="Préparation Ultra96 de test" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="25" name="Verification OS" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="26" name="Communication HW" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="27" name="Contrôle du robot OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="28" name="Communication sans-fil" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="30" name="Auto-formation IHM" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="31" name="Contrôle à distance OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="41" name="Documentation SLAM" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
-        <task id="32" name="Algorithme SLAM" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="45" name="Cartographie OK" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
-        <task id="42" name="Documentation AMCL" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
-        <task id="44" name="Algorithme de localisation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
-        <task id="34" name="Localisation OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="43" name="Documentation Navigation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
-        <task id="35" name="Algorithme Navigation Aller-Retour" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="36" name="Navigation OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="37" name="Gestionnaire de mission" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="38" name="Developpement IHM" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
-        <task id="39" name="Tests intégration" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+        <task id="23" name="Software" meeting="false" start="2022-02-14" duration="11" complete="0" expand="true">
+            <task id="46" name="Contrôle manuel du robot" meeting="false" start="2022-02-21" duration="4" complete="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+                <task id="24" name="Préparation Ultra96 de test" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true">
+                    <depend id="25" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="25" name="Verification OS" meeting="false" start="2022-02-22" duration="1" complete="0" expand="true">
+                    <depend id="26" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="26" name="Communication HW" meeting="false" start="2022-02-23" duration="1" complete="0" expand="true">
+                    <depend id="27" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="27" name="Contrôle du robot OK" meeting="false" start="2022-02-24" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="47" name="Contrôle manuel remote" meeting="false" start="2022-02-25" duration="2" complete="0" expand="true">
+                <task id="28" name="Communication sans-fil" meeting="false" start="2022-02-25" duration="1" complete="0" expand="true">
+                    <depend id="31" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="31" name="Contrôle à distance OK" meeting="false" start="2022-02-28" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="49" name="Manipulation des capteurs critique" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true">
+                <task id="50" name="Evaluation des performances des ultrasons" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="53" name="Evaluation de la camera" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="57" name="Capteur battteire" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="48" name="Cartographie" color="#0033ff" meeting="false" start="2022-02-21" duration="3" complete="0" expand="true">
+                <task id="41" name="Documentation SLAM" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true">
+                    <depend id="32" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="32" name="Algorithme SLAM" meeting="false" start="2022-02-22" duration="1" complete="0" expand="true">
+                    <depend id="45" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="45" name="Cartographie OK" meeting="false" start="2022-02-23" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="54" name="Localisation" meeting="false" start="2022-02-14" duration="6" complete="0" expand="true">
+                <task id="42" name="Documentation Triangulation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="58" name="Simulation/Emulation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="44" name="Algorithme de localisation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="34" name="Localisation OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="55" name="Navigation" meeting="false" start="2022-02-14" duration="6" complete="0" expand="true">
+                <task id="43" name="Documentation Navigation" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+                <task id="35" name="Algorithme Navigation Aller-Retour" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+                <task id="36" name="Navigation OK" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+            </task>
+            <task id="37" name="Gestionnaire de mission" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+            <task id="30" name="Auto-formation IHM" meeting="false" start="2022-02-28" duration="1" complete="0" expand="true"/>
+            <task id="38" name="Developpement IHM" meeting="false" start="2022-02-21" duration="1" complete="0" expand="true"/>
+            <task id="39" name="Tests intégration" meeting="false" start="2022-02-14" duration="1" complete="0" expand="true"/>
+        </task>
     </tasks>
     <resources/>
     <allocations/>
