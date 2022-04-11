@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-04-04" view-index="0" gantt-divider-location="634" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-02-01" view-index="0" gantt-divider-location="649" resource-divider-location="300" version="2.8.5" locale="fr">
     <description><![CDATA[Diagramme de Gantt initial pour le projet de robot autonome de surveillance.]]></description>
-    <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="333" order="0"/>
-        <field id="tpd4" name="Date de début" width="129" order="1"/>
-        <field id="tpd5" name="Date de fin" width="168" order="2"/>
-        <option id="color.recent"><![CDATA[#0099ff #ff0033 #0000ff #660066 #0033ff #ff6666 #f4f4f4 #00cc33 #00ff66 #ff6600]]></option>
+    <view zooming-state="default:9" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="338" order="0"/>
+        <field id="tpd4" name="Date de début" width="134" order="1"/>
+        <field id="tpd5" name="Date de fin" width="173" order="2"/>
+        <option id="color.recent"><![CDATA[#99ff00 #00cc00 #66cc00 #009900 #00ff00 #0099ff #ff0033 #0000ff #660066 #0033ff]]></option>
     </view>
     <view id="resource-table">
         <field id="0" name="Nom" width="210" order="0"/>
@@ -47,7 +47,7 @@
             <depend id="6" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="6" name="Rédaction des spécifications" color="#ff0033" meeting="false" start="2022-03-25" duration="9" complete="0" expand="true"/>
-        <task id="23" name="Software" color="#0000ff" meeting="false" start="2022-04-04" duration="81" complete="0" expand="true">
+        <task id="23" name="Software" color="#0000ff" meeting="false" start="2022-04-04" duration="81" complete="0" expand="false">
             <task id="46" name="Contrôle manuel du robot" color="#0000ff" meeting="false" start="2022-04-04" duration="10" complete="0" expand="true">
                 <depend id="49" type="2" difference="0" hardness="Strong"/>
                 <task id="25" name="Verification HW Ultra96" color="#0099ff" meeting="false" start="2022-04-04" duration="1" complete="0" expand="true">
@@ -116,6 +116,37 @@
             <depend id="60" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="60" name="Rédaction REX" color="#ff0033" meeting="false" start="2022-09-12" duration="4" complete="0" expand="true"/>
+        <task id="186" name="Hardware" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="true">
+            <task id="187" name="Carte inrerface" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="true">
+                <task id="190" name="Déterminer les spécifications" color="#99ff00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
+                <task id="191" name="Recherche circuits et composants" color="#99ff00" meeting="false" start="2022-04-15" duration="15" complete="0" expand="true"/>
+                <task id="193" name="Rédaction des vérifications" color="#99ff00" meeting="false" start="2022-05-06" duration="6" complete="0" expand="true"/>
+                <task id="194" name="Réalisation du schéma électrique" color="#99ff00" meeting="false" start="2022-05-13" duration="15" complete="0" expand="true">
+                    <depend id="197" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="197" name="Validation du Schéma électrique" color="#99ff00" meeting="true" start="2022-06-07" duration="0" complete="0" expand="true"/>
+                <task id="198" name="PCB" color="#99ff00" meeting="false" start="2022-06-08" duration="11" complete="0" expand="true">
+                    <depend id="199" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="199" name="Validation du PCB et achat" color="#99ff00" meeting="true" start="2022-06-23" duration="0" complete="0" expand="true"/>
+                <task id="200" name="Durée de livraison" color="#99ff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-06-24" duration="11" complete="0" expand="true"/>
+                <task id="201" name="Test du fonctionnement de la carte" color="#99ff00" meeting="false" start="2022-07-08" duration="9" complete="0" expand="true">
+                    <depend id="203" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="203" name="Validation de la carte?" color="#99ff00" meeting="true" start="2022-07-22" duration="0" complete="0" expand="true"/>
+                <task id="204" name="Version 2?" color="#99ff00" meeting="false" start="2022-07-22" duration="20" complete="0" expand="true"/>
+            </task>
+            <task id="206" name="Balise" color="#00cc00" meeting="false" start="2022-03-28" duration="97" complete="0" expand="true">
+                <task id="208" name="Etude de faisabilité" color="#99ff00" meeting="false" start="2022-03-28" duration="24" complete="0" expand="true"/>
+                <task id="213" name="Réalisation" color="#99ff00" meeting="false" start="2022-06-20" duration="34" complete="0" expand="true"/>
+                <task id="209" name="Phase de test" color="#99ff00" meeting="false" start="2022-08-08" duration="6" complete="0" expand="true"/>
+            </task>
+            <task id="207" name="Station de charge" color="#00cc00" meeting="false" start="2022-06-20" duration="43" complete="0" expand="true">
+                <task id="210" name="Etude de faisabilité" color="#99ff00" meeting="false" start="2022-06-20" duration="15" complete="0" expand="true"/>
+                <task id="211" name="Réalisation" color="#99ff00" meeting="false" start="2022-07-11" duration="9" complete="0" expand="true"/>
+                <task id="212" name="Phase de test" color="#99ff00" meeting="false" start="2022-07-25" duration="19" complete="0" expand="true"/>
+            </task>
+        </task>
     </tasks>
     <resources/>
     <allocations/>

@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-22" view-index="0" gantt-divider-location="400" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Untitled Gantt Project" company="" webLink="http://" view-date="2021-03-22" view-index="0" gantt-divider-location="373" resource-divider-location="300" version="2.8.5" locale="fr">
     <description/>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="216" order="0"/>
-        <field id="tpd4" name="Date de début" width="65" order="1"/>
-        <field id="tpd5" name="Date de fin" width="115" order="2"/>
+        <field id="tpd3" name="Nom" width="201" order="0"/>
+        <field id="tpd4" name="Date de début" width="61" order="1"/>
+        <field id="tpd5" name="Date de fin" width="107" order="2"/>
         <timeline><![CDATA[260]]></timeline>
         <option id="color.recent"><![CDATA[#ff6666 #f4f4f4 #00cc33 #00ff66 #ff6600 #0000ff #3366ff #ff0000 #000000 #00ffff]]></option>
     </view>
@@ -46,7 +46,7 @@
                 <depend id="194" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="0" name="Hardware" color="#00cc33" meeting="false" start="2021-03-29" duration="120" complete="0" expand="false">
+        <task id="0" name="Hardware" color="#00cc33" meeting="false" start="2021-03-29" duration="120" complete="0" expand="true">
             <task id="577" name="Carte interface" color="#00cc33" meeting="false" start="2021-03-29" duration="100" complete="0" expand="true">
                 <task id="4" name="Déterminer les spécfications des cartes" color="#00ff66" meeting="false" start="2021-03-29" duration="15" complete="0" expand="true"/>
                 <task id="30" name="Conception des circuits électroniques" color="#00ff66" meeting="false" start="2021-04-15" duration="12" complete="0" expand="true">
@@ -210,7 +210,7 @@
             </task>
             <task id="247" name="tests intégrations" color="#3366ff" meeting="false" start="2021-08-06" duration="15" complete="0" expand="true"/>
         </task>
-        <task id="3" name="FPGA" color="#ff6600" meeting="false" start="2021-03-29" duration="120" complete="0" expand="true">
+        <task id="3" name="FPGA" color="#ff6600" meeting="false" start="2021-03-29" duration="120" complete="0" expand="false">
             <task id="6" name="Acquisition vidéo" color="#ff6600" meeting="false" start="2021-03-29" duration="80" complete="0" expand="true">
                 <task id="258" name="Acquisition flux vidéo MIPI" color="#ff6600" meeting="false" start="2021-03-29" duration="20" complete="0" priority="4" expand="true">
                     <depend id="259" type="2" difference="0" hardness="Strong"/>
