@@ -1,0 +1,193 @@
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-02-14" view-index="0" gantt-divider-location="649" resource-divider-location="300" version="2.8.5" locale="fr">
+    <description><![CDATA[Diagramme de Gantt initial pour le projet de robot autonome de surveillance.]]></description>
+    <view zooming-state="default:7" id="gantt-chart">
+        <field id="tpd3" name="Nom" width="338" order="0"/>
+        <field id="tpd4" name="Date de début" width="134" order="1"/>
+        <field id="tpd5" name="Date de fin" width="173" order="2"/>
+        <option id="color.recent"><![CDATA[#ff0033 #0099ff #0000ff #ffcc00 #99ff00 #00cc00 #66cc00 #009900 #00ff00 #660066]]></option>
+    </view>
+    <view id="resource-table">
+        <field id="0" name="Nom" width="210" order="0"/>
+        <field id="1" name="Rôle par défaut" width="86" order="1"/>
+    </view>
+    <!-- -->
+    <calendars>
+        <day-types>
+            <day-type id="0"/>
+            <day-type id="1"/>
+            <default-week id="1" name="default" sun="1" mon="0" tue="0" wed="0" thu="0" fri="0" sat="1"/>
+            <only-show-weekends value="false"/>
+            <overriden-day-types/>
+            <days/>
+        </day-types>
+        <date year="2022" month="4" date="18" type="HOLIDAY"><![CDATA[Lundi de Pâques]]></date>
+        <date year="2022" month="5" date="26" type="HOLIDAY"><![CDATA[Jeudi de l'Ascencion]]></date>
+        <date year="2022" month="6" date="6" type="HOLIDAY"><![CDATA[Lundi de Pentcôte]]></date>
+        <date year="2022" month="7" date="14" type="HOLIDAY"><![CDATA[Fête nationale]]></date>
+        <date year="2022" month="8" date="15" type="HOLIDAY"><![CDATA[Assomption]]></date>
+    </calendars>
+    <tasks empty-milestones="true">
+        <taskproperties>
+            <taskproperty id="tpd0" name="type" type="default" valuetype="icon"/>
+            <taskproperty id="tpd1" name="priority" type="default" valuetype="icon"/>
+            <taskproperty id="tpd2" name="info" type="default" valuetype="icon"/>
+            <taskproperty id="tpd3" name="name" type="default" valuetype="text"/>
+            <taskproperty id="tpd4" name="begindate" type="default" valuetype="date"/>
+            <taskproperty id="tpd5" name="enddate" type="default" valuetype="date"/>
+            <taskproperty id="tpd6" name="duration" type="default" valuetype="int"/>
+            <taskproperty id="tpd7" name="completion" type="default" valuetype="int"/>
+            <taskproperty id="tpd8" name="coordinator" type="default" valuetype="text"/>
+            <taskproperty id="tpd9" name="predecessorsr" type="default" valuetype="text"/>
+        </taskproperties>
+        <task id="9" name="Etude préliminaire" color="#ff0033" meeting="false" start="2022-03-21" duration="1" complete="0" expand="true">
+            <depend id="1" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="1" name="Prises de connaissances" color="#ff0033" meeting="false" start="2022-03-22" duration="9" complete="0" expand="true"/>
+        <task id="3" name="Réunion Kick-Off" color="#ff0033" meeting="true" start="2022-03-25" duration="0" complete="0" expand="true">
+            <depend id="6" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="6" name="Rédaction des spécifications" color="#ff0033" meeting="false" start="2022-03-25" duration="16" complete="0" expand="true">
+            <depend id="123" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="374" name="choix technologique" color="#ff0033" meeting="false" start="2022-04-04" duration="5" complete="0" expand="true"/>
+        <task id="23" name="Software" color="#0000ff" meeting="false" start="2022-04-19" duration="68" complete="0" expand="false">
+            <task id="123" name="Configuation carte choisie" color="#0000ff" meeting="false" start="2022-04-19" duration="7" complete="0" expand="true">
+                <depend id="47" type="2" difference="0" hardness="Strong"/>
+                <task id="124" name="Mise en place Carte" color="#0099ff" meeting="false" start="2022-04-19" duration="2" complete="0" expand="true">
+                    <depend id="125" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="125" name="Mise en place environnement" color="#0099ff" meeting="false" start="2022-04-21" duration="1" complete="0" expand="true">
+                    <depend id="127" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="127" name="Déplacement manuel sur nouvelle carte" color="#0099ff" meeting="false" start="2022-04-22" duration="4" complete="0" expand="true"/>
+            </task>
+            <task id="47" name="Contrôle manuel remote" color="#0000ff" meeting="false" start="2022-04-28" duration="40" complete="0" expand="true">
+                <task id="28" name="Communication sans-fil" color="#0099ff" meeting="false" start="2022-04-28" duration="3" complete="0" expand="true">
+                    <depend id="30" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="30" name="Auto-formation IHM" color="#0099ff" meeting="false" start="2022-05-03" duration="4" complete="0" expand="true">
+                    <depend id="38" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="38" name="Developpement IHM" color="#0099ff" meeting="false" start="2022-05-09" duration="5" complete="0" expand="true">
+                    <depend id="31" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="31" name="Contrôle à distance OK" color="#0099ff" meeting="false" start="2022-05-16" duration="1" complete="0" expand="true"/>
+                <task id="185" name="Flux vidéo" color="#0099ff" meeting="false" start="2022-06-20" duration="5" complete="0" expand="true"/>
+            </task>
+            <task id="286" name="Réception des flux de données" color="#0000ff" meeting="false" start="2022-05-02" duration="22" complete="0" expand="false">
+                <task id="287" name="Odométrique" color="#0099ff" meeting="false" start="2022-05-02" duration="3" complete="0" expand="true"/>
+                <task id="288" name="IMU" color="#0099ff" meeting="false" start="2022-05-03" duration="3" complete="0" expand="true"/>
+                <task id="289" name="RFID" color="#0099ff" meeting="false" start="2022-05-16" duration="2" complete="0" expand="true"/>
+                <task id="290" name="Ultrasons" color="#0099ff" meeting="false" start="2022-05-30" duration="3" complete="0" expand="true"/>
+            </task>
+            <task id="55" name="Navigation" color="#0000ff" meeting="false" start="2022-05-02" duration="30" complete="0" expand="true">
+                <task id="43" name="Documentation Localisation par IMU + Odometrie" color="#0099ff" meeting="false" start="2022-05-02" duration="3" complete="0" expand="true">
+                    <depend id="35" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="35" name="Documentation Dijkstra" color="#0099ff" meeting="false" start="2022-05-05" duration="1" complete="0" expand="true">
+                    <depend id="36" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="36" name="Bloc Navigation" color="#0099ff" meeting="false" start="2022-05-06" duration="5" complete="0" expand="true">
+                    <depend id="325" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="325" name="Gestionnaire V1" color="#0099ff" meeting="false" start="2022-05-13" duration="2" complete="0" expand="true">
+                    <depend id="302" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="302" name="Rondes" color="#0099ff" meeting="false" start="2022-05-17" duration="1" complete="0" expand="true">
+                    <depend id="303" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="303" name="Gestion d'alertes" color="#0099ff" meeting="false" start="2022-05-18" duration="3" complete="0" expand="true">
+                    <depend id="304" type="2" difference="0" hardness="Strong"/>
+                    <depend id="305" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="304" name="Detections d'alertes" color="#0099ff" meeting="false" start="2022-05-23" duration="15" complete="0" expand="true"/>
+                <task id="305" name="Navigation OK" color="#0099ff" meeting="true" start="2022-05-23" duration="0" complete="0" expand="true"/>
+            </task>
+            <task id="165" name="Evitement d'obstacles" color="#0000ff" meeting="false" start="2022-05-24" duration="15" complete="0" expand="true">
+                <depend id="39" type="2" difference="0" hardness="Strong"/>
+                <task id="166" name="Réévaluatoin des Spécificités d'évitement" color="#0099ff" meeting="false" start="2022-05-24" duration="3" complete="0" expand="true">
+                    <depend id="167" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="167" name="Detection d'obstacles" color="#0099ff" meeting="false" start="2022-05-30" duration="2" complete="0" expand="true">
+                    <depend id="168" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="168" name="Evitement d'obstacles" color="#0099ff" meeting="false" start="2022-06-01" duration="10" complete="0" expand="true"/>
+            </task>
+            <task id="39" name="Tests intégration" color="#0099ff" meeting="false" start="2022-06-16" duration="28" complete="0" expand="true">
+                <depend id="65" type="2" difference="0" hardness="Strong"/>
+            </task>
+        </task>
+        <task id="65" name="Intégration" color="#ff0033" meeting="false" start="2022-07-27" duration="22" complete="0" expand="true">
+            <depend id="61" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="61" name="Vérifications" color="#ff0033" meeting="false" start="2022-08-29" duration="10" complete="0" expand="true">
+            <depend id="60" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="60" name="Rédaction REX" color="#ff0033" meeting="false" start="2022-09-12" duration="4" complete="0" expand="true"/>
+        <task id="186" name="Hardware" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
+            <task id="187" name="Carte interface" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
+                <task id="190" name="Déterminer les spécifications" color="#99ff00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
+                <task id="191" name="Recherche circuits et composants" color="#99ff00" meeting="false" start="2022-04-15" duration="15" complete="0" expand="true"/>
+                <task id="193" name="Rédaction des vérifications" color="#99ff00" meeting="false" start="2022-05-06" duration="6" complete="0" expand="true"/>
+                <task id="194" name="Réalisation du schéma électrique" color="#99ff00" meeting="false" start="2022-05-13" duration="15" complete="0" expand="true">
+                    <depend id="197" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="197" name="Validation du Schéma électrique" color="#99ff00" meeting="true" start="2022-06-07" duration="0" complete="0" expand="true"/>
+                <task id="198" name="PCB" color="#99ff00" meeting="false" start="2022-06-08" duration="11" complete="0" expand="true">
+                    <depend id="199" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="199" name="Validation du PCB et achat" color="#99ff00" meeting="true" start="2022-06-23" duration="0" complete="0" expand="true"/>
+                <task id="200" name="Durée de livraison" color="#99ff00" shape="1,0,1,0,0,1,0,1,1,0,1,0,0,1,0,1" meeting="false" start="2022-06-24" duration="11" complete="0" expand="true"/>
+                <task id="201" name="Test du fonctionnement de la carte" color="#99ff00" meeting="false" start="2022-07-08" duration="9" complete="0" expand="true">
+                    <depend id="203" type="2" difference="0" hardness="Strong"/>
+                </task>
+                <task id="203" name="Validation de la carte?" color="#99ff00" meeting="true" start="2022-07-22" duration="0" complete="0" expand="true"/>
+                <task id="204" name="Version 2?" color="#99ff00" meeting="false" start="2022-07-22" duration="20" complete="0" expand="true"/>
+            </task>
+            <task id="206" name="Balise" color="#00cc00" meeting="false" start="2022-03-28" duration="97" complete="0" expand="false">
+                <task id="208" name="Etude de faisabilité" color="#99ff00" meeting="false" start="2022-03-28" duration="24" complete="0" expand="true"/>
+                <task id="213" name="Réalisation" color="#99ff00" meeting="false" start="2022-06-20" duration="34" complete="0" expand="true"/>
+                <task id="209" name="Phase de test" color="#99ff00" meeting="false" start="2022-08-08" duration="6" complete="0" expand="true"/>
+            </task>
+            <task id="207" name="Station de charge" color="#00cc00" meeting="false" start="2022-06-20" duration="43" complete="0" expand="false">
+                <task id="210" name="Etude de faisabilité" color="#99ff00" meeting="false" start="2022-06-20" duration="15" complete="0" expand="true"/>
+                <task id="211" name="Réalisation" color="#99ff00" meeting="false" start="2022-07-11" duration="9" complete="0" expand="true"/>
+                <task id="212" name="Phase de test" color="#99ff00" meeting="false" start="2022-07-25" duration="19" complete="0" expand="true"/>
+            </task>
+        </task>
+        <task id="214" name="FPGA" color="#ffcc00" meeting="false" start="2022-03-28" duration="96" complete="0" expand="false">
+            <task id="220" name="Spécifications et recherches" color="#ffcc00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
+            <task id="233" name="Gestion capteurs et protocoles de communication" color="#ffcc00" meeting="false" start="2022-04-19" duration="29" complete="0" expand="true">
+                <task id="253" name="Gestion capteurs (ultrasons/lecteur RFID)" color="#ffcc00" meeting="false" start="2022-04-19" duration="14" complete="0" expand="true"/>
+                <task id="242" name="I2C" color="#ffcc00" meeting="false" start="2022-05-09" duration="11" complete="0" expand="true"/>
+                <task id="244" name="UART" color="#ffcc00" meeting="false" start="2022-05-24" duration="4" complete="0" expand="true"/>
+            </task>
+            <task id="215" name="Caméra" color="#ffcc00" meeting="false" start="2022-05-30" duration="53" complete="0" expand="true">
+                <task id="231" name="Acquisition vidéo" color="#ffcc00" meeting="false" start="2022-05-30" duration="33" complete="0" expand="true">
+                    <depend id="248" type="2" difference="0" hardness="Strong"/>
+                    <task id="259" name="Vidéo DMA" color="#ffcc00" meeting="false" start="2022-05-30" duration="12" complete="0" expand="true">
+                        <depend id="263" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="263" name="Acquisition flux vidéo MIPI" color="#ffcc00" meeting="false" start="2022-06-16" duration="7" complete="0" expand="true">
+                        <depend id="265" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="265" name="Démosaiquer l'image" color="#ffcc00" meeting="false" start="2022-06-27" duration="13" complete="0" expand="true">
+                        <depend id="268" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="268" name="Flux vidéo" color="#ffcc00" meeting="false" start="2022-07-15" duration="1" complete="0" expand="true"/>
+                </task>
+                <task id="248" name="Traitement vidéo" color="#ffcc00" meeting="false" start="2022-07-18" duration="20" complete="0" expand="true">
+                    <task id="280" name="Traitement basique" color="#ffcc00" meeting="false" start="2022-07-18" duration="11" complete="0" expand="true">
+                        <depend id="284" type="2" difference="0" hardness="Strong"/>
+                    </task>
+                    <task id="284" name="Détection des tags" color="#ffcc00" meeting="false" start="2022-08-02" duration="9" complete="0" expand="true"/>
+                </task>
+            </task>
+        </task>
+    </tasks>
+    <resources/>
+    <allocations/>
+    <vacations/>
+    <previous/>
+    <roles roleset-name="Default"/>
+</project>
