@@ -1,0 +1,94 @@
+# Created by Ultra Librarian Gold 8.3.307 Copyright © 1999-2021
+# Frank Frank, Accelerated Designs
+
+StartFootprints
+
+Footprint (Name "CONN_PPPC041LGBN-RC_SUL")
+Pad (Name "1") (Location 0, 0) (HoleSize 40) (Surface False) (Rotation 0) (ExpandMask 0)
+PadShape (Size 60, 60) (Shape Rectangular) (Layer Top)
+PadShape (Size 60, 60) (Shape Rectangular) (Layer Bottom)
+PadShape (Size 60, 60) (Shape Rectangular) (Layer MidLayer)
+EndPad
+Pad (Name "2") (Location -100, 0) (HoleSize 40) (Surface False) (Rotation 0) (ExpandMask 0)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Top)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Bottom)
+PadShape (Size 60, 60) (Shape Rounded) (Layer MidLayer)
+EndPad
+Pad (Name "3") (Location -200, 0) (HoleSize 40) (Surface False) (Rotation 0) (ExpandMask 0)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Top)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Bottom)
+PadShape (Size 60, 60) (Shape Rounded) (Layer MidLayer)
+EndPad
+Pad (Name "4") (Location -300, 0) (HoleSize 40) (Surface False) (Rotation 0) (ExpandMask 0)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Top)
+PadShape (Size 60, 60) (Shape Rounded) (Layer Bottom)
+PadShape (Size 60, 60) (Shape Rounded) (Layer MidLayer)
+EndPad
+Line (Width 6) (Start -370, 408) (End -370, -32) (Layer Mechanical15) 
+Line (Width 6) (Start -370, -32) (End 70, -32) (Layer Mechanical15) 
+Line (Width 6) (Start 70, -32) (End 70, 408) (Layer Mechanical15) 
+Line (Width 6) (Start 70, 408) (End -370, 408) (Layer Mechanical15) 
+Polygon (PointCount 4) (Layer Mechanical15) 
+Point (-370, 408)
+Point (-370, -32)
+Point (70, -32)
+Point (70, 408)
+EndPolygon
+Polygon (PointCount 4) (Layer Mechanical5) 
+Point (75, 413)
+Point (75, -23)
+Point (-375, -23)
+Point (-375, 413)
+EndPolygon
+Line (Width 6) (Start -258.90729952, -13) (End -241.09270048, -13) (Layer TopOverlay) 
+Line (Width 6) (Start 0, 408) (End -25, 458) (Layer TopOverlay) 
+Line (Width 6) (Start -25, 458) (End 25, 458) (Layer TopOverlay) 
+Line (Width 6) (Start 25, 458) (End 0, 408) (Layer TopOverlay) 
+Line (Width 6) (Start -365, -13) (End -341.09270048, -13) (Layer TopOverlay) 
+Line (Width 6) (Start 65, -13) (End 65, 403) (Layer TopOverlay) 
+Line (Width 6) (Start 65, 403) (End -365, 403) (Layer TopOverlay) 
+Line (Width 6) (Start -365, 403) (End -365, -13) (Layer TopOverlay) 
+Line (Width 6) (Start 43.10000038, -13) (End 65, -13) (Layer TopOverlay) 
+Line (Width 6) (Start -58.90729952, -13) (End -43.10000038, -13) (Layer TopOverlay) 
+Line (Width 6) (Start -158.90729952, -13) (End -141.09270048, -13) (Layer TopOverlay) 
+Line (Width 1) (Start 0, 408) (End -25, 458) (Layer Mechanical13) 
+Line (Width 1) (Start -25, 458) (End 25, 458) (Layer Mechanical13) 
+Line (Width 1) (Start 25, 458) (End 0, 408) (Layer Mechanical13) 
+Line (Width 1) (Start -360, -8) (End 60, -8) (Layer Mechanical13) 
+Line (Width 1) (Start 60, -8) (End 60, 398) (Layer Mechanical13) 
+Line (Width 1) (Start 60, 398) (End -360, 398) (Layer Mechanical13) 
+Line (Width 1) (Start -360, 398) (End -360, -8) (Layer Mechanical13) 
+Step (Name CONN_PPPC041LGBN-RC_SUL.step)
+EndFootprint
+EndFootprints
+
+StartComponents
+
+Component (Name "PPPC041LGBN-RC") (PartCount 1) (DesPrefix "J?")
+Pin (Location 200, 0) (Rotation 180) (PinType Passive) (Length 200) (Width 0) (Designator Visible "1") (Name Hidden "1") (PinSwap 0) (PartSwap 0) (PinSeq 1) (Part 1)
+Pin (Location 200, -100) (Rotation 180) (PinType Passive) (Length 200) (Width 0) (Designator Visible "2") (Name Hidden "2") (PinSwap 0) (PartSwap 0) (PinSeq 2) (Part 1)
+Pin (Location 200, -200) (Rotation 180) (PinType Passive) (Length 200) (Width 0) (Designator Visible "3") (Name Hidden "3") (PinSwap 0) (PartSwap 0) (PinSeq 3) (Part 1)
+Pin (Location 200, -300) (Rotation 180) (PinType Passive) (Length 200) (Width 0) (Designator Visible "4") (Name Hidden "4") (PinSwap 0) (PartSwap 0) (PinSeq 4) (Part 1)
+Line (Width 5) (Start 400, 0) (End 200, 0) (Part 1)
+Line (Width 5) (Start 400, -100) (End 200, -100) (Part 1)
+Line (Width 5) (Start 400, -200) (End 200, -200) (Part 1)
+Line (Width 5) (Start 400, -300) (End 200, -300) (Part 1)
+Line (Width 5) (Start 400, 0) (End 350, 33.3333) (Part 1)
+Line (Width 5) (Start 400, -100) (End 350, -66.6667) (Part 1)
+Line (Width 5) (Start 400, -200) (End 350, -166.6667) (Part 1)
+Line (Width 5) (Start 400, -300) (End 350, -266.6667) (Part 1)
+Line (Width 5) (Start 400, 0) (End 350, -33.3333) (Part 1)
+Line (Width 5) (Start 400, -100) (End 350, -133.3333) (Part 1)
+Line (Width 5) (Start 400, -200) (End 350, -233.3333) (Part 1)
+Line (Width 5) (Start 400, -300) (End 350, -333.3333) (Part 1)
+Rectangle (Width 5) (Start 200, -400) (End 500, 100) (Part 1)
+Parameter (Name "Copyright") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "Copyright (C) 2022 Ultra Librarian. All rights reserved.") (Part 1)
+Parameter (Name "Mfr_Name") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "Sullins") (Part 1)
+Parameter (Name "Manufacturer_Part_Number") (Location 0, 0) (Height 50) (Rotation 0) (Justification Center) (Value "PPPC041LGBN-RC") (Part 1)
+Parameter (Name "RefDes") (Location 350, 250) (Height 82) (Rotation 0) (Justification Center) (Value "RefDes") (Part 1)
+Parameter (Name "Type") (Location 400, -200) (Height 82) (Rotation 0) (Justification Center) (Value "DEV") (Part 1)
+Description (Value "No Description Available") (Part 1)
+Comment (Value "PPPC041LGBN-RC") (Part 1)
+Footprint (Name "CONN_PPPC041LGBN-RC_SUL")
+EndComponent
+EndComponents
