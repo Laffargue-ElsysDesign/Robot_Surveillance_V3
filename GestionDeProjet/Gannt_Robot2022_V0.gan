@@ -151,8 +151,8 @@
         <task id="214" name="FPGA" color="#ffcc00" meeting="false" start="2022-03-28" duration="99" complete="0" expand="true">
             <task id="220" name="Spécifications et recherches" color="#ffcc00" meeting="false" start="2022-03-28" duration="21" complete="0" expand="true"/>
             <task id="233" name="Gestion capteurs et protocoles de communication" color="#ffcc00" meeting="false" start="2022-04-26" duration="27" complete="0" expand="true">
-                <task id="242" name="I2C" color="#ffcc00" meeting="false" start="2022-04-26" duration="11" complete="0" expand="true"/>
-                <task id="244" name="UART" color="#ffcc00" meeting="false" start="2022-05-10" duration="4" complete="0" expand="true"/>
+                <task id="244" name="UART" color="#ffcc00" meeting="false" start="2022-04-26" duration="4" complete="0" expand="true"/>
+                <task id="242" name="I2C" color="#ffcc00" meeting="false" start="2022-04-29" duration="11" complete="0" expand="true"/>
                 <task id="253" name="Gestion capteurs (ultrasons)" color="#ffcc00" meeting="false" start="2022-05-13" duration="14" complete="0" expand="true"/>
             </task>
             <task id="215" name="Caméra" color="#ffcc00" meeting="false" start="2022-06-02" duration="53" complete="0" expand="true">
