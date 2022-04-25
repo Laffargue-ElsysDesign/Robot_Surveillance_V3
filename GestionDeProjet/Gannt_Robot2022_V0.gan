@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-02-14" view-index="0" gantt-divider-location="649" resource-divider-location="300" version="2.8.5" locale="fr">
+<?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-04-25" view-index="0" gantt-divider-location="649" resource-divider-location="300" version="2.8.5" locale="fr">
     <description><![CDATA[Diagramme de Gantt initial pour le projet de robot autonome de surveillance.]]></description>
     <view zooming-state="default:7" id="gantt-chart">
         <field id="tpd3" name="Nom" width="338" order="0"/>
@@ -117,13 +117,6 @@
                 <depend id="65" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="65" name="Intégration" color="#ff0033" meeting="false" start="2022-07-27" duration="22" complete="0" expand="true">
-            <depend id="61" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="61" name="Vérifications" color="#ff0033" meeting="false" start="2022-08-29" duration="10" complete="0" expand="true">
-            <depend id="60" type="2" difference="0" hardness="Strong"/>
-        </task>
-        <task id="60" name="Rédaction REX" color="#ff0033" meeting="false" start="2022-09-12" duration="4" complete="0" expand="true"/>
         <task id="186" name="Hardware" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
             <task id="187" name="Carte interface" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
                 <task id="190" name="Déterminer les spécifications" color="#99ff00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
@@ -155,35 +148,42 @@
                 <task id="212" name="Phase de test" color="#99ff00" meeting="false" start="2022-07-25" duration="19" complete="0" expand="true"/>
             </task>
         </task>
-        <task id="214" name="FPGA" color="#ffcc00" meeting="false" start="2022-03-28" duration="96" complete="0" expand="false">
-            <task id="220" name="Spécifications et recherches" color="#ffcc00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
-            <task id="233" name="Gestion capteurs et protocoles de communication" color="#ffcc00" meeting="false" start="2022-04-19" duration="29" complete="0" expand="true">
-                <task id="253" name="Gestion capteurs (ultrasons/lecteur RFID)" color="#ffcc00" meeting="false" start="2022-04-19" duration="14" complete="0" expand="true"/>
-                <task id="242" name="I2C" color="#ffcc00" meeting="false" start="2022-05-09" duration="11" complete="0" expand="true"/>
-                <task id="244" name="UART" color="#ffcc00" meeting="false" start="2022-05-24" duration="4" complete="0" expand="true"/>
+        <task id="214" name="FPGA" color="#ffcc00" meeting="false" start="2022-03-28" duration="99" complete="0" expand="true">
+            <task id="220" name="Spécifications et recherches" color="#ffcc00" meeting="false" start="2022-03-28" duration="21" complete="0" expand="true"/>
+            <task id="233" name="Gestion capteurs et protocoles de communication" color="#ffcc00" meeting="false" start="2022-04-26" duration="27" complete="0" expand="true">
+                <task id="242" name="I2C" color="#ffcc00" meeting="false" start="2022-04-26" duration="11" complete="0" expand="true"/>
+                <task id="244" name="UART" color="#ffcc00" meeting="false" start="2022-05-10" duration="4" complete="0" expand="true"/>
+                <task id="253" name="Gestion capteurs (ultrasons)" color="#ffcc00" meeting="false" start="2022-05-13" duration="14" complete="0" expand="true"/>
             </task>
-            <task id="215" name="Caméra" color="#ffcc00" meeting="false" start="2022-05-30" duration="53" complete="0" expand="true">
-                <task id="231" name="Acquisition vidéo" color="#ffcc00" meeting="false" start="2022-05-30" duration="33" complete="0" expand="true">
+            <task id="215" name="Caméra" color="#ffcc00" meeting="false" start="2022-06-02" duration="53" complete="0" expand="true">
+                <task id="231" name="Acquisition vidéo" color="#ffcc00" meeting="false" start="2022-06-02" duration="33" complete="0" expand="true">
                     <depend id="248" type="2" difference="0" hardness="Strong"/>
-                    <task id="259" name="Vidéo DMA" color="#ffcc00" meeting="false" start="2022-05-30" duration="12" complete="0" expand="true">
+                    <task id="259" name="Vidéo DMA" color="#ffcc00" meeting="false" start="2022-06-02" duration="12" complete="0" expand="true">
                         <depend id="263" type="2" difference="0" hardness="Strong"/>
                     </task>
-                    <task id="263" name="Acquisition flux vidéo MIPI" color="#ffcc00" meeting="false" start="2022-06-16" duration="7" complete="0" expand="true">
+                    <task id="263" name="Acquisition flux vidéo MIPI" color="#ffcc00" meeting="false" start="2022-06-21" duration="7" complete="0" expand="true">
                         <depend id="265" type="2" difference="0" hardness="Strong"/>
                     </task>
-                    <task id="265" name="Démosaiquer l'image" color="#ffcc00" meeting="false" start="2022-06-27" duration="13" complete="0" expand="true">
+                    <task id="265" name="Démosaiquer l'image" color="#ffcc00" meeting="false" start="2022-06-30" duration="13" complete="0" expand="true">
                         <depend id="268" type="2" difference="0" hardness="Strong"/>
                     </task>
-                    <task id="268" name="Flux vidéo" color="#ffcc00" meeting="false" start="2022-07-15" duration="1" complete="0" expand="true"/>
+                    <task id="268" name="Flux vidéo" color="#ffcc00" meeting="false" start="2022-07-20" duration="1" complete="0" expand="true"/>
                 </task>
-                <task id="248" name="Traitement vidéo" color="#ffcc00" meeting="false" start="2022-07-18" duration="20" complete="0" expand="true">
-                    <task id="280" name="Traitement basique" color="#ffcc00" meeting="false" start="2022-07-18" duration="11" complete="0" expand="true">
+                <task id="248" name="Traitement vidéo" color="#ffcc00" meeting="false" start="2022-07-21" duration="20" complete="0" expand="true">
+                    <task id="280" name="Traitement basique" color="#ffcc00" meeting="false" start="2022-07-21" duration="11" complete="0" expand="true">
                         <depend id="284" type="2" difference="0" hardness="Strong"/>
                     </task>
-                    <task id="284" name="Détection des tags" color="#ffcc00" meeting="false" start="2022-08-02" duration="9" complete="0" expand="true"/>
+                    <task id="284" name="Détection des tags" color="#ffcc00" meeting="false" start="2022-08-05" duration="9" complete="0" expand="true"/>
                 </task>
             </task>
         </task>
+        <task id="65" name="Intégration" color="#ff0033" meeting="false" start="2022-07-27" duration="22" complete="0" expand="true">
+            <depend id="61" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="61" name="Vérifications" color="#ff0033" meeting="false" start="2022-08-29" duration="10" complete="0" expand="true">
+            <depend id="60" type="2" difference="0" hardness="Strong"/>
+        </task>
+        <task id="60" name="Rédaction REX" color="#ff0033" meeting="false" start="2022-09-12" duration="4" complete="0" expand="true"/>
     </tasks>
     <resources/>
     <allocations/>
