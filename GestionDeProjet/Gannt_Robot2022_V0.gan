@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?><project name="Gantt_Robot20222_V0" company="" webLink="http://" view-date="2022-04-25" view-index="0" gantt-divider-location="649" resource-divider-location="300" version="2.8.5" locale="fr">
     <description><![CDATA[Diagramme de Gantt initial pour le projet de robot autonome de surveillance.]]></description>
     <view zooming-state="default:7" id="gantt-chart">
-        <field id="tpd3" name="Nom" width="338" order="0"/>
-        <field id="tpd4" name="Date de début" width="134" order="1"/>
-        <field id="tpd5" name="Date de fin" width="173" order="2"/>
+        <field id="tpd3" name="Nom" width="330" order="0"/>
+        <field id="tpd4" name="Date de début" width="131" order="1"/>
+        <field id="tpd5" name="Date de fin" width="169" order="2"/>
         <option id="color.recent"><![CDATA[#ff0033 #0099ff #0000ff #ffcc00 #99ff00 #00cc00 #66cc00 #009900 #00ff00 #660066]]></option>
     </view>
     <view id="resource-table">
@@ -50,7 +50,7 @@
             <depend id="123" type="2" difference="0" hardness="Strong"/>
         </task>
         <task id="374" name="choix technologique" color="#ff0033" meeting="false" start="2022-04-04" duration="5" complete="0" expand="true"/>
-        <task id="23" name="Software" color="#0000ff" meeting="false" start="2022-04-19" duration="68" complete="0" expand="false">
+        <task id="23" name="Software" color="#0000ff" meeting="false" start="2022-04-19" duration="68" complete="0" expand="true">
             <task id="123" name="Configuation carte choisie" color="#0000ff" meeting="false" start="2022-04-19" duration="7" complete="0" expand="true">
                 <depend id="47" type="2" difference="0" hardness="Strong"/>
                 <task id="124" name="Mise en place Carte" color="#0099ff" meeting="false" start="2022-04-19" duration="2" complete="0" expand="true">
@@ -117,7 +117,7 @@
                 <depend id="65" type="2" difference="0" hardness="Strong"/>
             </task>
         </task>
-        <task id="186" name="Hardware" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
+        <task id="186" name="Hardware" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="true">
             <task id="187" name="Carte interface" color="#00cc00" meeting="false" start="2022-03-28" duration="100" complete="0" expand="false">
                 <task id="190" name="Déterminer les spécifications" color="#99ff00" meeting="false" start="2022-03-28" duration="15" complete="0" expand="true"/>
                 <task id="191" name="Recherche circuits et composants" color="#99ff00" meeting="false" start="2022-04-15" duration="15" complete="0" expand="true"/>
