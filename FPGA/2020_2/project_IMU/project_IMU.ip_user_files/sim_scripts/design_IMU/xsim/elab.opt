@@ -1,0 +1,1 @@
+--relax --debug typical --mt auto -L xil_defaultlib -L secureip -L xpm --snapshot design_IMU xil_defaultlib.design_IMU -log elaborate.log

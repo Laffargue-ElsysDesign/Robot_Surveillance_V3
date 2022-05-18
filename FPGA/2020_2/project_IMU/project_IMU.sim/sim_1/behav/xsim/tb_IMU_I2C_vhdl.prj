@@ -1,0 +1,21 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_IMU.srcs/sources_1/imports/new/time_pulse.vhd" \
+"../../../../project_IMU.srcs/sources_1/imports/new/IO_buffer.vhd" \
+"../../../../project_IMU.srcs/sources_1/imports/new/IMU_control.vhd" \
+"../../../../project_IMU.srcs/sources_1/imports/new/I2C_master.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_blk_mem_gen_0_0/design_IMU_blk_mem_gen_0_0_sim_netlist.vhdl" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_time_pulse_0_0/sim/design_IMU_time_pulse_0_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_ila_0_0/sim/design_IMU_ila_0_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_IO_buffer_0_0/sim/design_IMU_IO_buffer_0_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_IO_buffer_1_0/sim/design_IMU_IO_buffer_1_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_IMU_control_0_0/sim/design_IMU_IMU_control_0_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/ip/design_IMU_I2C_master_0_0/sim/design_IMU_I2C_master_0_0.vhd" \
+"../../../../project_IMU.ip_user_files/bd/design_IMU/sim/design_IMU.vhd" \
+"../../../../project_IMU.gen/sources_1/bd/design_IMU/hdl/design_IMU_wrapper.vhd" \
+"../../../../project_IMU.srcs/sim_1/imports/imports/i2c_slave.vhd" \
+"../../../../project_IMU.srcs/sim_1/imports/imports/slave_controller.vhd" \
+"../../../../project_IMU.srcs/sim_1/new/tb_IMU_I2C.vhd" \
+
+# Do not sort compile order
+nosort
