@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/projets/2020_2/project_IMU/project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc rfile:../../../project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/project_IMU/project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc rfile:../../../project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict {PACKAGE_PIN K17 IOSTANDARD LVCMOS33} [get_ports clk]
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

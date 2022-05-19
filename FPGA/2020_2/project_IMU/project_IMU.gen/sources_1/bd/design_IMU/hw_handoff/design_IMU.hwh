@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed May 18 17:05:29 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Thu May 19 08:44:10 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.1" DEVICE="7z020" NAME="design_IMU" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -20,8 +20,8 @@
         <CONNECTION INSTANCE="blk_mem_gen_0" PORT="clka"/>
         <CONNECTION INSTANCE="ila_0" PORT="clk"/>
         <CONNECTION INSTANCE="filtre_anti_rebond_0" PORT="clk"/>
-        <CONNECTION INSTANCE="IMU_control_0" PORT="clk"/>
         <CONNECTION INSTANCE="I2C_master_0" PORT="clk"/>
+        <CONNECTION INSTANCE="IMU_control_0" PORT="clk"/>
       </CONNECTIONS>
     </PORT>
     <PORT DIR="I" NAME="rst_n" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
@@ -516,8 +516,8 @@
         <PORT DIR="O" NAME="o_sign" SIGIS="undef" SIGNAME="filtre_anti_rebond_0_o_sign">
           <CONNECTIONS>
             <CONNECTION INSTANCE="time_pulse_0" PORT="rst_n"/>
-            <CONNECTION INSTANCE="IMU_control_0" PORT="rst_n"/>
             <CONNECTION INSTANCE="I2C_master_0" PORT="rst_n"/>
+            <CONNECTION INSTANCE="IMU_control_0" PORT="rst_n"/>
           </CONNECTIONS>
         </PORT>
       </PORTS>

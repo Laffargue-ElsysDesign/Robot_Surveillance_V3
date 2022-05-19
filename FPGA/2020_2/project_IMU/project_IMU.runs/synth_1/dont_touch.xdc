@@ -21,16 +21,16 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_
 # IP: bd/design_IMU/ip/design_IMU_IO_buffer_1_0/design_IMU_IO_buffer_1_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_IO_buffer_1_0 || ORIG_REF_NAME==design_IMU_IO_buffer_1_0} -quiet] -quiet
 
-# IP: bd/design_IMU/ip/design_IMU_IMU_control_0_0/design_IMU_IMU_control_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_IMU_control_0_0 || ORIG_REF_NAME==design_IMU_IMU_control_0_0} -quiet] -quiet
-
-# IP: bd/design_IMU/ip/design_IMU_I2C_master_0_0/design_IMU_I2C_master_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_I2C_master_0_0 || ORIG_REF_NAME==design_IMU_I2C_master_0_0} -quiet] -quiet
+# IP: bd/design_IMU/ip/design_IMU_xlconstant_0_0/design_IMU_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_xlconstant_0_0 || ORIG_REF_NAME==design_IMU_xlconstant_0_0} -quiet] -quiet
 
 # IP: bd/design_IMU/ip/design_IMU_filtre_anti_rebond_0_0/design_IMU_filtre_anti_rebond_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_filtre_anti_rebond_0_0 || ORIG_REF_NAME==design_IMU_filtre_anti_rebond_0_0} -quiet] -quiet
 
-# IP: bd/design_IMU/ip/design_IMU_xlconstant_0_0/design_IMU_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_xlconstant_0_0 || ORIG_REF_NAME==design_IMU_xlconstant_0_0} -quiet] -quiet
+# IP: bd/design_IMU/ip/design_IMU_I2C_master_0_0/design_IMU_I2C_master_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_I2C_master_0_0 || ORIG_REF_NAME==design_IMU_I2C_master_0_0} -quiet] -quiet
 
-# XDC: d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/design_IMU_ooc.xdc
+# IP: bd/design_IMU/ip/design_IMU_IMU_control_0_0/design_IMU_IMU_control_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_IMU_control_0_0 || ORIG_REF_NAME==design_IMU_IMU_control_0_0} -quiet] -quiet
+
+# XDC: d:/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/design_IMU_ooc.xdc

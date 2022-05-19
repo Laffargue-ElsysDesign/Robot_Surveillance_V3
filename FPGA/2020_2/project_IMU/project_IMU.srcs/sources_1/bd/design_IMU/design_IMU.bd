@@ -18,8 +18,8 @@
       "IO_buffer_1": "",
       "xlconstant_0": "",
       "filtre_anti_rebond_0": "",
-      "IMU_control_0": "",
-      "I2C_master_0": ""
+      "I2C_master_0": "",
+      "IMU_control_0": ""
     },
     "ports": {
       "IMU_I2C_SCL": {
@@ -302,6 +302,92 @@
           }
         }
       },
+      "I2C_master_0": {
+        "vlnv": "xilinx.com:module_ref:I2C_master:1.0",
+        "xci_name": "design_IMU_I2C_master_0_0",
+        "xci_path": "ip\\design_IMU_I2C_master_0_0\\design_IMU_I2C_master_0_0.xci",
+        "inst_hier_path": "I2C_master_0",
+        "parameters": {
+          "bus_clk": {
+            "value": "400000"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2C_master",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_IMU_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ena": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "ack_err": {
+            "direction": "O"
+          },
+          "data_wr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_rd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "SDA_i": {
+            "direction": "I"
+          },
+          "SDA_o": {
+            "direction": "O"
+          },
+          "SDA_t": {
+            "direction": "O"
+          },
+          "SCL_i": {
+            "direction": "I"
+          },
+          "SCL_o": {
+            "direction": "O"
+          },
+          "SCL_t": {
+            "direction": "O"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "flag_data_ack": {
+            "direction": "O"
+          }
+        }
+      },
       "IMU_control_0": {
         "vlnv": "xilinx.com:module_ref:IMU_control:1.0",
         "xci_name": "design_IMU_IMU_control_0_0",
@@ -386,92 +472,6 @@
             "direction": "O",
             "left": "3",
             "right": "0"
-          }
-        }
-      },
-      "I2C_master_0": {
-        "vlnv": "xilinx.com:module_ref:I2C_master:1.0",
-        "xci_name": "design_IMU_I2C_master_0_0",
-        "xci_path": "ip\\design_IMU_I2C_master_0_0\\design_IMU_I2C_master_0_0.xci",
-        "inst_hier_path": "I2C_master_0",
-        "parameters": {
-          "bus_clk": {
-            "value": "400000"
-          }
-        },
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "I2C_master",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "CLK_DOMAIN": {
-                "value": "design_IMU_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "ena": {
-            "direction": "I"
-          },
-          "addr": {
-            "direction": "I",
-            "left": "6",
-            "right": "0"
-          },
-          "ack_err": {
-            "direction": "O"
-          },
-          "data_wr": {
-            "direction": "I",
-            "left": "7",
-            "right": "0"
-          },
-          "data_rd": {
-            "direction": "O",
-            "left": "7",
-            "right": "0"
-          },
-          "SDA_i": {
-            "direction": "I"
-          },
-          "SDA_o": {
-            "direction": "O"
-          },
-          "SDA_t": {
-            "direction": "O"
-          },
-          "SCL_i": {
-            "direction": "I"
-          },
-          "SCL_o": {
-            "direction": "O"
-          },
-          "SCL_t": {
-            "direction": "O"
-          },
-          "rw": {
-            "direction": "I"
-          },
-          "busy": {
-            "direction": "O"
-          },
-          "flag_data_ack": {
-            "direction": "O"
           }
         }
       }
@@ -598,16 +598,16 @@
           "blk_mem_gen_0/clka",
           "ila_0/clk",
           "filtre_anti_rebond_0/clk",
-          "IMU_control_0/clk",
-          "I2C_master_0/clk"
+          "I2C_master_0/clk",
+          "IMU_control_0/clk"
         ]
       },
       "rst_n_0_1": {
         "ports": [
           "filtre_anti_rebond_0/o_sign",
           "time_pulse_0/rst_n",
-          "IMU_control_0/rst_n",
-          "I2C_master_0/rst_n"
+          "I2C_master_0/rst_n",
+          "IMU_control_0/rst_n"
         ]
       },
       "I2C_master_0_ack_err": {

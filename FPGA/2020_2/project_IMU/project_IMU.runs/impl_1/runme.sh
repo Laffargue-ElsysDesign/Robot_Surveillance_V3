@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1'
+HD_PWD='D:/project_IMU/project_IMU.runs/impl_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

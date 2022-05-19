@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed May 18 16:49:01 2022
+-- Date        : Thu May 19 08:45:04 2022
 -- Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
---               d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/ip/design_IMU_IMU_control_0_0/design_IMU_IMU_control_0_0_stub.vhdl
+--               d:/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/ip/design_IMU_IMU_control_0_0/design_IMU_IMU_control_0_0_stub.vhdl
 -- Design      : design_IMU_IMU_control_0_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1

@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed May 18 17:05:29 2022
+--Date        : Thu May 19 08:44:10 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_IMU.bd
 --Design      : design_IMU
@@ -87,26 +87,6 @@ architecture STRUCTURE of design_IMU is
     o_sign : out STD_LOGIC
   );
   end component design_IMU_filtre_anti_rebond_0_0;
-  component design_IMU_IMU_control_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    ack_err_i2c : in STD_LOGIC;
-    data_ri2c : in STD_LOGIC_VECTOR ( 7 downto 0 );
-    addr_i2c : out STD_LOGIC_VECTOR ( 6 downto 0 );
-    data_wi2c : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    ena_i2c : out STD_LOGIC;
-    rw_i2c : out STD_LOGIC;
-    busy_i2c : in STD_LOGIC;
-    flag_data_i2c : in STD_LOGIC;
-    addr_bram : out STD_LOGIC_VECTOR ( 7 downto 0 );
-    din_bram : out STD_LOGIC_VECTOR ( 15 downto 0 );
-    en_bram : out STD_LOGIC;
-    we_bram : out STD_LOGIC;
-    pulse_1ms : in STD_LOGIC;
-    led : out STD_LOGIC_VECTOR ( 3 downto 0 )
-  );
-  end component design_IMU_IMU_control_0_0;
   component design_IMU_I2C_master_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -127,6 +107,26 @@ architecture STRUCTURE of design_IMU is
     flag_data_ack : out STD_LOGIC
   );
   end component design_IMU_I2C_master_0_0;
+  component design_IMU_IMU_control_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    ack_err_i2c : in STD_LOGIC;
+    data_ri2c : in STD_LOGIC_VECTOR ( 7 downto 0 );
+    addr_i2c : out STD_LOGIC_VECTOR ( 6 downto 0 );
+    data_wi2c : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    ena_i2c : out STD_LOGIC;
+    rw_i2c : out STD_LOGIC;
+    busy_i2c : in STD_LOGIC;
+    flag_data_i2c : in STD_LOGIC;
+    addr_bram : out STD_LOGIC_VECTOR ( 7 downto 0 );
+    din_bram : out STD_LOGIC_VECTOR ( 15 downto 0 );
+    en_bram : out STD_LOGIC;
+    we_bram : out STD_LOGIC;
+    pulse_1ms : in STD_LOGIC;
+    led : out STD_LOGIC_VECTOR ( 3 downto 0 )
+  );
+  end component design_IMU_IMU_control_0_0;
   signal I2C_master_0_SCL_o : STD_LOGIC;
   signal I2C_master_0_SCL_t : STD_LOGIC;
   signal I2C_master_0_SDA_o : STD_LOGIC;

@@ -22,6 +22,9 @@
 library IEEE;
 use IEEE.STD_LOGIC_1164.ALL;
 
+library robot;
+use robot.package_IMU.all;
+
 -- Uncomment the following library declaration if using
 -- arithmetic functions with Signed or Unsigned values
 use IEEE.NUMERIC_STD.ALL;
@@ -66,8 +69,8 @@ signal acc_xH, acc_yH, vit_ang_zH, mag_xL, mag_yL : std_logic_vector(7 downto 0)
 constant sens_acc : integer := 16384;
 constant sens_gyro : integer := 131;
 constant G : integer :=98; -- à diviser par 10
-constant addr_ICM : std_logic_vector := "1101001";
-constant addr_AK : std_logic_vector := "0001100";
+-- constant addr_ICM : std_logic_vector := "1101001";
+-- constant addr_AK : std_logic_vector := "0001100";
 
 begin
 
@@ -120,12 +123,12 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     ena_i2c <= '1'; -- démarrage de l'i2c
                     rw_i2c <= '0'; -- on est en ecriture
                     if periph = '0' then -- ICM20600, envoi de l'adresse du registre ciblé
-                        addr_i2c <= addr_ICM; -- adresse du peripherique ICM20600
-                        data_wi2c <= "01101011"; -- adresse du registre dans lequel on veut écrire
+                        addr_i2c <= adr_ICM20600; -- adresse du peripherique ICM20600
+                        data_wi2c <= ICM_reg_ecr_cycle; -- adresse du registre dans lequel on veut écrire
                         --rw_i2c <= '0'; -- on est en ecriture
                     elsif periph = '1' then -- AK09918, envoi de l'adresse du registre cible
-                        addr_i2c <= addr_AK; -- adresse du peripherique AK09918
-                        data_wi2c <= "00110001"; -- adresse du registre dans lequel on veut écrire, 
+                        addr_i2c <= adr_AK09918; -- adresse du peripherique AK09918
+                        data_wi2c <= AK_reg_ecr_mode; -- adresse du registre dans lequel on veut écrire, 
                         --rw_i2c <= '1'; -- on est en ecriture  ----------------------------------------------------------'1'
                     end if; 
                 else 
@@ -141,11 +144,11 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     current_state <= init_data; 
                     ena_i2c <= '1'; -- démarrage de l'i2c
                     if periph = '0' then 
-                        addr_i2c <= addr_ICM; -- adresse du peripherique ICM20600
-                        data_wi2c <= "00000001"; -- data a ecrire
+                        addr_i2c <= adr_ICM20600; -- adresse du peripherique ICM20600
+                        data_wi2c <= ICM_data_ecr_cycle; -- data a ecrire
                     elsif periph = '1' then
-                        addr_i2c <= addr_AK; -- adresse du peripherique AK09918
-                        data_wi2c <= "00000110"; -- data a ecrire
+                        addr_i2c <= adr_AK09918; -- adresse du peripherique AK09918
+                        data_wi2c <= AK_data_ecr_mode; -- data a ecrire
                     end if; 
                 elsif ack_err_i2c = '1' then -- erreur d'ack, on refait l'initialisation du periphérique
                     current_state <= idle; 
@@ -182,26 +185,26 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                 elsif periph = '0' and busy_i2c = '0' and cpt_ms >= 20 then -- une fois les 20 ms passés, on commence par la lecture des registres de l'ICM20600
                     cpt_ms <= 20; 
                     current_state <= read_ra; 
-                    addr_i2c <= addr_ICM; -- adresse du peripherique ICM20600
+                    addr_i2c <= adr_ICM20600; -- adresse du peripherique ICM20600
                     ena_i2c <= '1'; -- démarrage de l'i2c
                     rw_i2c <= '0'; -- on est en ecriture
                     if nb_r = 4 then -- lecture de la vitesse angulaire de z
-                        data_wi2c <= "01000111"; -- adresse du registre dans lequel on veut lire
+                        data_wi2c <= ICM_reg_lec_vitang; -- adresse du registre dans lequel on veut lire
                     else -- on débute par la lecture des acc linéaires de x et y 
                         nb_r <= 0;
-                        data_wi2c <= "00111011"; -- adresse du registre dans lequel on veut lire
+                        data_wi2c <= ICM_reg_lec_acc; -- adresse du registre dans lequel on veut lire
                     end if;
                 elsif periph = '1' and busy_i2c = '0' then -- on passe à la lecture des registres de l'AK09918
                     cpt_ms <= 0; 
                     current_state <= read_ra; 
-                    addr_i2c <= addr_AK; -- adresse du peripherique AK09918
+                    addr_i2c <= adr_AK09918; -- adresse du peripherique AK09918
                     ena_i2c <= '1'; -- démarrage de l'i2c
                     rw_i2c <= '0'; -- on est en ecriture
                     if nb_r = 4 then -- lecture du registre 0x18, obligatoire pour signaler la fin de la lecture des registres pour l'AK09918
-                        data_wi2c <= "00011000"; -- adresse du registre dans lequel on veut lire
+                        data_wi2c <= AK_reg_lec_fin; -- adresse du registre dans lequel on veut lire
                     else -- on débute par la lecture des mag x et y 
                         nb_r <= 0;
-                        data_wi2c <= "00010001"; -- adresse du registre dans lequel on veut lire
+                        data_wi2c <= AK_reg_lec_mag; -- adresse du registre dans lequel on veut lire
                     end if;
                 else
                     current_state <= wait_data;
@@ -215,10 +218,10 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     data_wi2c <= "00000000";
                     if periph = '0' then 
                         cpt_ms <= 20; 
-                        addr_i2c <= addr_ICM; -- adresse du peripherique ICM20600
+                        addr_i2c <= adr_ICM20600; -- adresse du peripherique ICM20600
                     elsif periph = '1' then 
                         cpt_ms <= 0; 
-                        addr_i2c <= addr_AK; -- adresse du peripherique AK09918
+                        addr_i2c <= adr_AK09918; -- adresse du peripherique AK09918
                     end if; 
                 elsif ack_err_i2c = '1' then 
                     cpt_ms <= 20;
@@ -256,7 +259,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     current_state <= read_data; 
                     data_wi2c <= "00000000";
                     if periph = '0' then 
-                        addr_i2c <= addr_ICM; -- adresse du peripherique ICM20600
+                        addr_i2c <= adr_ICM20600; -- adresse du peripherique ICM20600
                         if nb_r = 0 then 
                             rw_i2c <= '1'; -- on est en lecture
                             addr_bram <= (others=>'0'); 
@@ -267,7 +270,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                             ena_i2c <= '1'; 
                             acc_xH <= data_ri2c;  -- on stocke la donnée lue
                         elsif nb_r = 1 then 
-                            addr_bram <= "00000001"; -- adresse d'écriture dans la ram 0x01
+                            addr_bram <= adr_bram_acc_x; -- adresse d'écriture dans la ram 0x01
                             din_bram <= std_logic_vector(to_signed(to_integer(not(signed(acc_xH&data_ri2c)))*G/(10*sens_acc),16)); -- data a ecrire
                             en_bram <= '1'; -- on active la ram
                             we_bram <= '1'; -- on passe en ecriture
@@ -284,7 +287,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                             acc_yH <= data_ri2c;  
                             rw_i2c <= '1'; -- on est en lecture
                         elsif nb_r = 3 then 
-                            addr_bram <= "00000010"; 
+                            addr_bram <= adr_bram_acc_y; 
                             din_bram <= std_logic_vector(to_signed(to_integer(not(signed(acc_yH&data_ri2c)))*G/(10*sens_acc),16)); 
                             en_bram <= '1';
                             we_bram <= '1';
@@ -301,7 +304,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                             vit_ang_zH <= data_ri2c;  
                             rw_i2c <= '1'; -- on est en lecture
                         elsif nb_r = 5 then 
-                            addr_bram <= "00000011"; 
+                            addr_bram <= adr_bram_vitang_z; 
                             din_bram <= std_logic_vector(to_signed(to_integer(not(signed(vit_ang_zH&data_ri2c)))*314/(sens_gyro*180*100),16)); 
                             en_bram <= '1';
                             we_bram <= '1';
@@ -310,7 +313,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                         end if; 
                         
                     elsif periph = '1' then 
-                        addr_i2c <= addr_AK; -- adresse du peripherique AK09918
+                        addr_i2c <= adr_AK09918; -- adresse du peripherique AK09918
                         if nb_r = 0 then 
                             addr_bram <= (others=>'0'); 
                             din_bram <= (others=>'0'); 
@@ -321,7 +324,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                             mag_xL <= data_ri2c;  -- on stocke la donnée lue
                             rw_i2c <= '1'; -- on est en lecture
                         elsif nb_r = 1 then 
-                            addr_bram <= "00000100"; -- adresse d'écriture dans la ram 0x01
+                            addr_bram <= adr_bram_mag_x; -- adresse d'écriture dans la ram 0x01
                             din_bram <= std_logic_vector(to_signed(to_integer(not(signed(acc_xH&data_ri2c)))*15/(100*1000000),16)); -- data a ecrire
                             en_bram <= '1'; -- on active la ram
                             we_bram <= '1'; -- on passe en ecriture
@@ -338,7 +341,7 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                             mag_yL <= data_ri2c;  
                             rw_i2c <= '1'; -- on est en lecture
                         elsif nb_r = 3 then 
-                            addr_bram <= "00000101"; 
+                            addr_bram <= adr_bram_mag_y; 
                             din_bram <= std_logic_vector(to_signed(to_integer(not(signed(acc_yH&data_ri2c)))*G/(10*sens_acc),16)); 
                             en_bram <= '1';
                             we_bram <= '1';
