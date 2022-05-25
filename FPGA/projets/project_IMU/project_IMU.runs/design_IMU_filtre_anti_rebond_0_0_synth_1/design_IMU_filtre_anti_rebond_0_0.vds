@@ -1,0 +1,218 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Mon May 23 09:19:44 2022
+# Process ID: 14524
+# Current directory: D:/projets/project_IMU/project_IMU.runs/design_IMU_filtre_anti_rebond_0_0_synth_1
+# Command line: vivado.exe -log design_IMU_filtre_anti_rebond_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_IMU_filtre_anti_rebond_0_0.tcl
+# Log file: D:/projets/project_IMU/project_IMU.runs/design_IMU_filtre_anti_rebond_0_0_synth_1/design_IMU_filtre_anti_rebond_0_0.vds
+# Journal file: D:/projets/project_IMU/project_IMU.runs/design_IMU_filtre_anti_rebond_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_IMU_filtre_anti_rebond_0_0.tcl -notrace
+Command: synth_design -top design_IMU_filtre_anti_rebond_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+WARNING: [IP_Flow 19-3571] IP 'design_IMU_filtre_anti_rebond_0_0' is restricted:
+* Module reference is stale and needs refreshing.
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 18428
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:08 ; elapsed = 00:00:15 . Memory (MB): peak = 1110.824 ; gain = 0.000
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_IMU_filtre_anti_rebond_0_0' [d:/projets/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/ip/design_IMU_filtre_anti_rebond_0_0/synth/design_IMU_filtre_anti_rebond_0_0.vhd:65]
+	Parameter delay_us bound to: 5 - type: integer 
+	Parameter freq_clk_MHz bound to: 125 - type: integer 
+INFO: [Synth 8-3491] module 'filtre_anti_rebond' declared at 'D:/projets/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/imports/new/filtre_anti_rebond.vhd:34' bound to instance 'U0' of component 'filtre_anti_rebond' [d:/projets/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/ip/design_IMU_filtre_anti_rebond_0_0/synth/design_IMU_filtre_anti_rebond_0_0.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'filtre_anti_rebond' [D:/projets/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/imports/new/filtre_anti_rebond.vhd:43]
+	Parameter delay_us bound to: 5 - type: integer 
+	Parameter freq_clk_MHz bound to: 125 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'filtre_anti_rebond' (1#1) [D:/projets/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/imports/new/filtre_anti_rebond.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'design_IMU_filtre_anti_rebond_0_0' (2#1) [d:/projets/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/ip/design_IMU_filtre_anti_rebond_0_0/synth/design_IMU_filtre_anti_rebond_0_0.vhd:65]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:30 . Memory (MB): peak = 1152.289 ; gain = 41.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 1152.289 ; gain = 41.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:32 . Memory (MB): peak = 1152.289 ; gain = 41.465
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1152.289 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1240.953 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.734 . Memory (MB): peak = 1240.953 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 1240.953 ; gain = 130.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 1240.953 ; gain = 130.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 1240.953 ; gain = 130.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:16 ; elapsed = 00:00:49 . Memory (MB): peak = 1240.953 ; gain = 130.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   10 Bit       Adders := 1     
++---Registers : 
+	               10 Bit    Registers := 1     
+	                8 Bit    Registers := 1     
++---Muxes : 
+	   2 Input   10 Bit        Muxes := 1     
+	   2 Input    1 Bit        Muxes := 1     
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:51 . Memory (MB): peak = 1240.953 ; gain = 130.129
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1247.613 ; gain = 136.789
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1247.688 ; gain = 136.863
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:59 . Memory (MB): peak = 1267.285 ; gain = 156.461
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-----+------+
+|      |Cell |Count |
++------+-----+------+
+|1     |LUT1 |     1|
+|2     |LUT2 |     1|
+|3     |LUT3 |     2|
+|4     |LUT4 |     4|
+|5     |LUT5 |     4|
+|6     |LUT6 |    11|
+|7     |FDCE |    18|
++------+-----+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:19 ; elapsed = 00:00:52 . Memory (MB): peak = 1273.062 ; gain = 73.574
+Synthesis Optimization Complete : Time (s): cpu = 00:00:30 ; elapsed = 00:01:03 . Memory (MB): peak = 1273.062 ; gain = 162.238
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.102 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1294.297 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+17 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:37 ; elapsed = 00:01:13 . Memory (MB): peak = 1294.297 ; gain = 183.473
+INFO: [Common 17-1381] The checkpoint 'D:/projets/project_IMU/project_IMU.runs/design_IMU_filtre_anti_rebond_0_0_synth_1/design_IMU_filtre_anti_rebond_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Common 17-1381] The checkpoint 'D:/projets/project_IMU/project_IMU.runs/design_IMU_filtre_anti_rebond_0_0_synth_1/design_IMU_filtre_anti_rebond_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_IMU_filtre_anti_rebond_0_0_utilization_synth.rpt -pb design_IMU_filtre_anti_rebond_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Mon May 23 09:21:06 2022...
