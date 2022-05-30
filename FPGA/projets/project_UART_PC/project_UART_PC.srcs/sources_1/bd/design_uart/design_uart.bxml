@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Root MajorVersion="0" MinorVersion="39">
+  <CompositeFile CompositeFileTopName="design_uart" CanBeSetAsTop="false" CanDisplayChildGraph="true">
+    <Description>Composite Fileset</Description>
+    <Generation Name="SYNTHESIS" State="RESET" Timestamp="1653913758"/>
+    <Generation Name="IMPLEMENTATION" State="RESET" Timestamp="1653913758"/>
+    <Generation Name="SIMULATION" State="RESET" Timestamp="1653913758"/>
+    <Generation Name="HW_HANDOFF" State="RESET" Timestamp="1653913758"/>
+    <FileCollection Name="SOURCES" Type="SOURCES">
+      <File Name="ip\design_uart_UART_control_0_0\design_uart_UART_control_0_0.xci" Type="IP">
+        <Instance HierarchyPath="UART_control_0"/>
+        <Properties IsEditable="false" IsVisible="true" Timestamp="0" IsTrackable="true" IsStatusTracked="true"/>
+        <Library Name="xil_defaultlib"/>
+        <UsedIn Val="SYNTHESIS"/>
+        <UsedIn Val="IMPLEMENTATION"/>
+        <UsedIn Val="SIMULATION"/>
+      </File>
+    </FileCollection>
+  </CompositeFile>
+</Root>

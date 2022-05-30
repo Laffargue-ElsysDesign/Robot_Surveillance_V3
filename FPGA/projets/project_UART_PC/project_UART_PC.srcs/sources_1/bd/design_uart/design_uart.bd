@@ -1,0 +1,94 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x90FAA5E12A8E16F3",
+      "device": "xc7z020clg400-1",
+      "name": "design_uart",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.1"
+    },
+    "design_tree": {
+      "UART_control_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "RX": {
+        "direction": "I"
+      },
+      "TX": {
+        "direction": "O"
+      },
+      "TX_Active": {
+        "direction": "O"
+      },
+      "TX_Done": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "UART_control_0": {
+        "vlnv": "xilinx.com:module_ref:UART_control:1.0",
+        "xci_name": "design_uart_UART_control_0_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "RX": {
+            "direction": "I"
+          },
+          "TX_Done": {
+            "direction": "O"
+          },
+          "TX": {
+            "direction": "O"
+          },
+          "TX_Active": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "UART_control_0/clk"
+        ]
+      },
+      "RX_0_1": {
+        "ports": [
+          "RX",
+          "UART_control_0/RX"
+        ]
+      },
+      "UART_control_0_TX": {
+        "ports": [
+          "UART_control_0/TX",
+          "TX"
+        ]
+      },
+      "UART_control_0_TX_Active": {
+        "ports": [
+          "UART_control_0/TX_Active",
+          "TX_Active"
+        ]
+      },
+      "UART_control_0_TX_Done": {
+        "ports": [
+          "UART_control_0/TX_Done",
+          "TX_Done"
+        ]
+      }
+    }
+  }
+}
