@@ -1,0 +1,3 @@
+[submodule "Software_RH"]
+	path = Software_RH
+	url = https://github.com/Laffargue-ElsysDesign/Software_RH.git
