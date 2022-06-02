@@ -1,142 +1,134 @@
-----------------------------------------------------------------------
--- File Downloaded from http://www.nandland.com
-----------------------------------------------------------------------
--- This file contains the UART Receiver.  This receiver is able to
--- receive 8 bits of serial data, one start bit, one stop bit,
--- and no parity bit.  When receive is complete o_rx_dv will be
--- driven high for one clock cycle.
--- 
--- Set Generic g_CLKS_PER_BIT as follows:
--- g_CLKS_PER_BIT = (Frequency of i_Clk)/(Frequency of UART)
--- Example: 10 MHz Clock, 115200 baud UART
--- (10000000)/(115200) = 87
---
 library ieee;
-use ieee.std_logic_1164.ALL;
+use ieee.std_logic_1164.all;
 use ieee.numeric_std.all;
- 
-entity UART_RX is
-  generic (
-    g_CLKS_PER_BIT : integer := 108     -- Needs to be set correctly
-    );
-  port (
-    i_Clk       : in  std_logic;
-    i_RX_Serial : in  std_logic;
-    o_RX_DV     : out std_logic;
-    o_RX_Byte   : out std_logic_vector(7 downto 0)
-    );
-end UART_RX;
- 
- 
-architecture rtl of UART_RX is
- 
-  type t_SM_Main is (s_Idle, s_RX_Start_Bit, s_RX_Data_Bits,
-                     s_RX_Stop_Bit, s_Cleanup);
-  signal r_SM_Main : t_SM_Main := s_Idle;
- 
-  signal r_RX_Data_R : std_logic := '0';
-  signal r_RX_Data   : std_logic := '0';
-   
-  signal r_Clk_Count : integer range 0 to g_CLKS_PER_BIT-1 := 0;
-  signal r_Bit_Index : integer range 0 to 7 := 0;  -- 8 Bits Total
-  signal r_RX_Byte   : std_logic_vector(7 downto 0) := (others => '0');
-  signal r_RX_DV     : std_logic := '0';
-   
+
+
+
+entity UART_rx is
+
+    generic(
+        BAUD_X16_CLK_TICKS: integer := 68); -- (clk / baud_rate) / 16 => (100 000 000 / 115 200) / 16 = 54.25
+
+    port(
+        clk            : in  std_logic;
+        reset          : in  std_logic;
+        rx_data_in     : in  std_logic;
+        rx_data_out    : out std_logic_vector (7 downto 0)
+        );
+end UART_rx;
+
+
+architecture Behavioral of UART_rx is
+
+    type rx_states_t is (IDLE, START, DATA, STOP);
+    signal rx_state: rx_states_t := IDLE;
+
+    signal baud_rate_x16_clk  : std_logic := '0';
+    signal rx_stored_data     : std_logic_vector(7 downto 0) := (others => '0');
+
+
+
 begin
- 
-  -- Purpose: Double-register the incoming data.
-  -- This allows it to be used in the UART RX Clock Domain.
-  -- (It removes problems caused by metastabiliy)
-  p_SAMPLE : process (i_Clk)
-  begin
-    if rising_edge(i_Clk) then
-      r_RX_Data_R <= i_RX_Serial;
-      r_RX_Data   <= r_RX_Data_R;
-    end if;
-  end process p_SAMPLE;
-   
- 
-  -- Purpose: Control RX state machine
-  p_UART_RX : process (i_Clk)
-  begin
-    if rising_edge(i_Clk) then
-         
-      case r_SM_Main is
- 
-        when s_Idle =>
-          r_RX_DV     <= '0';
-          r_Clk_Count <= 0;
-          r_Bit_Index <= 0;
- 
-          if r_RX_Data = '0' then       -- Start bit detected
-            r_SM_Main <= s_RX_Start_Bit;
-          else
-            r_SM_Main <= s_Idle;
-          end if;
- 
-           
-        -- Check middle of start bit to make sure it's still low
-        when s_RX_Start_Bit =>
-          if r_Clk_Count = (g_CLKS_PER_BIT-1)/2 then
-            if r_RX_Data = '0' then
-              r_Clk_Count <= 0;  -- reset counter since we found the middle
-              r_SM_Main   <= s_RX_Data_Bits;
+
+
+-- The baud_rate_x16_clk_generator process generates an oversampled clock.
+-- The baud_rate_x16_clk signal is 16 times faster than the baud rate clock.
+-- Oversampling is needed to put the capture point at the middle of duration of
+-- the receiving bit.
+-- The BAUD_X16_CLK_TICKS constant reflects the ratio between the master clk
+-- and the x16 baud rate.
+
+    baud_rate_x16_clk_generator: process(clk)
+    variable baud_x16_count: integer range 0 to (BAUD_X16_CLK_TICKS - 1) := (BAUD_X16_CLK_TICKS - 1);
+    begin
+        if rising_edge(clk) then
+            if (reset = '1') then
+                baud_rate_x16_clk <= '0';
+                baud_x16_count := (BAUD_X16_CLK_TICKS - 1);
             else
-              r_SM_Main   <= s_Idle;
+                if (baud_x16_count = 0) then
+                    baud_rate_x16_clk <= '1';
+                    baud_x16_count := (BAUD_X16_CLK_TICKS - 1);
+                else
+                    baud_rate_x16_clk <= '0';
+                    baud_x16_count := baud_x16_count - 1;
+                end if;
             end if;
-          else
-            r_Clk_Count <= r_Clk_Count + 1;
-            r_SM_Main   <= s_RX_Start_Bit;
-          end if;
- 
-           
-        -- Wait g_CLKS_PER_BIT-1 clock cycles to sample serial data
-        when s_RX_Data_Bits =>
-          if r_Clk_Count < g_CLKS_PER_BIT-1 then
-            r_Clk_Count <= r_Clk_Count + 1;
-            r_SM_Main   <= s_RX_Data_Bits;
-          else
-            r_Clk_Count            <= 0;
-            r_RX_Byte(r_Bit_Index) <= r_RX_Data;
-             
-            -- Check if we have sent out all bits
-            if r_Bit_Index < 7 then
-              r_Bit_Index <= r_Bit_Index + 1;
-              r_SM_Main   <= s_RX_Data_Bits;
+        end if;
+    end process baud_rate_x16_clk_generator;
+
+
+-- The UART_rx_FSM process represents a Finite State Machine which has
+-- four states (IDLE, START, DATA, STOP). See inline comments for more details.
+
+    UART_rx_FSM: process(clk)
+        variable bit_duration_count : integer range 0 to 15 := 0;
+        variable bit_count          : integer range 0 to 7  := 0;
+    begin
+        if rising_edge(clk) then
+            if (reset = '1') then
+                rx_state <= IDLE;
+                rx_stored_data <= (others => '0');
+                rx_data_out <= (others => '0');
+                bit_duration_count := 0;
+                bit_count := 0;
             else
-              r_Bit_Index <= 0;
-              r_SM_Main   <= s_RX_Stop_Bit;
+                if (baud_rate_x16_clk = '1') then     -- the FSM works 16 times faster the baud rate frequency
+                    case rx_state is
+
+                        when IDLE =>
+
+                            rx_stored_data <= (others => '0');    -- clean the received data register
+                            bit_duration_count := 0;              -- reset counters
+                            bit_count := 0;
+
+                            if (rx_data_in = '0') then             -- if the start bit received
+                                rx_state <= START;                 -- transit to the START state
+                            end if;
+
+                        when START =>
+
+                            if (rx_data_in = '0') then             -- verify that the start bit is preset
+                                if (bit_duration_count = 7) then   -- wait a half of the baud rate cycle
+                                    rx_state <= DATA;              -- (it puts the capture point at the middle of duration of the receiving bit)
+                                    bit_duration_count := 0;
+                                else
+                                    bit_duration_count := bit_duration_count + 1;
+                                end if;
+                            else
+                                rx_state <= IDLE;                  -- the start bit is not preset (false alarm)
+                            end if;
+
+                        when DATA =>
+
+                            if (bit_duration_count = 15) then                -- wait for "one" baud rate cycle (not strictly one, about one)
+                                rx_stored_data(bit_count) <= rx_data_in;     -- fill in the receiving register one received bit.
+                                bit_duration_count := 0;
+                                if (bit_count = 7) then                      -- when all 8 bit received, go to the STOP state
+                                    rx_state <= STOP;
+                                    bit_duration_count := 0;
+                                else
+                                    bit_count := bit_count + 1;
+                                end if;
+                            else
+                                bit_duration_count := bit_duration_count + 1;
+                            end if;
+
+                        when STOP =>
+
+                            if (bit_duration_count = 15) then      -- wait for "one" baud rate cycle
+                                rx_data_out <= rx_stored_data;     -- transer the received data to the outside world
+                                rx_state <= IDLE;
+                            else
+                                bit_duration_count := bit_duration_count + 1;
+                            end if;
+
+                        when others =>
+                            rx_state <= IDLE;
+                    end case;
+                end if;
             end if;
-          end if;
- 
- 
-        -- Receive Stop bit.  Stop bit = 1
-        when s_RX_Stop_Bit =>
-          -- Wait g_CLKS_PER_BIT-1 clock cycles for Stop bit to finish
-          if r_Clk_Count < g_CLKS_PER_BIT-1 then
-            r_Clk_Count <= r_Clk_Count + 1;
-            r_SM_Main   <= s_RX_Stop_Bit;
-          else
-            r_RX_DV     <= '1';
-            r_Clk_Count <= 0;
-            r_SM_Main   <= s_Cleanup;
-          end if;
- 
-                   
-        -- Stay here 1 clock
-        when s_Cleanup =>
-          r_SM_Main <= s_Idle;
-          r_RX_DV   <= '0';
- 
-             
-        when others =>
-          r_SM_Main <= s_Idle;
- 
-      end case;
-    end if;
-  end process p_UART_RX;
- 
-  o_RX_DV   <= r_RX_DV;
-  o_RX_Byte <= r_RX_Byte;
-   
-end rtl;
+        end if;
+    end process UART_rx_FSM;
+
+end Behavioral;

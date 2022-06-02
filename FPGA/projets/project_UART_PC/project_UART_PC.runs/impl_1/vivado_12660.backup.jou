@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.1 (64-bit)
+# SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
+# IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
+# Start of session at: Wed Jun  1 16:23:50 2022
+# Process ID: 12660
+# Current directory: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1
+# Command line: vivado.exe -log design_UART_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_UART_wrapper.tcl -notrace
+# Log file: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_UART_wrapper.vdi
+# Journal file: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_UART_wrapper.tcl -notrace

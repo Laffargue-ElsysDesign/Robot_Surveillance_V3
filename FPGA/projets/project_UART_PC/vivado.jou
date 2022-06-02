@@ -2,47 +2,155 @@
 # Vivado v2020.1 (64-bit)
 # SW Build 2902540 on Wed May 27 19:54:49 MDT 2020
 # IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
-# Start of session at: Tue May 31 15:42:30 2022
-# Process ID: 16408
+# Start of session at: Wed Jun  1 15:42:42 2022
+# Process ID: 14360
 # Current directory: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent1624 D:\Robot_Surveillance_V3\FPGA\projets\project_UART_PC\project_UART_PC.xpr
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent15180 D:\Robot_Surveillance_V3\FPGA\projets\project_UART_PC\project_UART_PC.xpr
 # Log file: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/vivado.log
 # Journal file: D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC\vivado.jou
 #-----------------------------------------------------------
-start_gui
-open_project D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.xpr
+start_guioopen_project D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.xpruupdate_compile_order -fileset sources_1update_module_reference design_uart_UART_control_0_0
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_uart/hdl/design_uart_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_uart/hdl/design_uart_wrapper.vhd
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_uart/design_uart.bd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_uart/design_uart.bd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_uart
+import_files -force -norecurse {C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART_rx.vhd C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART_tx.vhd C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART_controller.vhd C:/Users/VANLEEUWEN/Downloads/UART_controller_files/button_debounce.vhd C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART.vhd}
 update_compile_order -fileset sources_1
-update_module_reference design_uart_UART_control_0_0
-reset_run synth_1
-launch_runs impl_1 -to_step write_bitstream -jobs 8
-wait_on_run impl_1
-open_hw_manager
-connect_hw_server -allow_non_jtag
-open_hw_target
-set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/UART_control.bit} [get_hw_devices xc7z020_1]
-current_hw_device [get_hw_devices xc7z020_1]
-refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+create_bd_design "design_UART"
+update_compile_order -fileset sources_1
+create_bd_cell -type module -reference UART_controller UART_controller_0
+startgroup
+make_bd_pins_external  [get_bd_pins UART_controller_0/reset]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins UART_controller_0/clk]
+endgroup
+set_property name clk [get_bd_ports clk_0]
+set_property name rst [get_bd_ports reset_0]
+startgroup
+make_bd_pins_external  [get_bd_cells UART_controller_0]
+make_bd_intf_pins_external  [get_bd_cells UART_controller_0]
+endgroup
+set_property name RXD [get_bd_ports rx_0]
+set_property name data_in [get_bd_ports data_in_0]
+set_property name tx_enable [get_bd_ports tx_enable_0]
+set_property name data_out [get_bd_ports data_out_0]
+set_property name TXD [get_bd_ports tx_0]
+make_wrapper -files [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/design_UART.bd] -top
+add_files -norecurse D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+update_compile_order -fileset sources_1
 # Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
 set_property source_mgmt_mode None [current_project]
-set_property top design_uart_wrapper [current_fileset]
+set_property top design_UART_wrapper [current_fileset]
 # Re-enabling previously disabled source management mode.
 set_property source_mgmt_mode All [current_project]
 update_compile_order -fileset sources_1
 reset_run synth_1
 launch_runs impl_1 -to_step write_bitstream -jobs 8
 wait_on_run impl_1
+set_property name clok [get_bd_ports clk]
+set_property name clock [get_bd_ports clok]
+save_bd_design
+reset_run synth_1
+reset_run design_UART_UART_controller_0_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_rx.vhd
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART_controller_files/UART_tx.vhd
+update_module_reference design_UART_UART_controller_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+make_wrapper -files [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/design_UART.bd] -top
+delete_bd_objs [get_bd_nets data_in_0_1] [get_bd_ports data_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins UART_controller_0/data_in]
+startgroup
+set_property -dict [list CONFIG.CONST_WIDTH {8} CONFIG.CONST_VAL {24}] [get_bd_cells xlconstant_0]
+endgroup
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+reset_run impl_1
+set_property name clk [get_bd_ports clock]
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+make_wrapper -files [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/design_UART.bd] -top
+add_files -norecurse D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+export_ip_user_files -of_objects  [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd] -no_script -reset -force -quiet
+remove_files  D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+file delete -force D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+update_compile_order -fileset sources_1
+make_wrapper -files [get_files D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/design_UART.bd] -top
+add_files -norecurse D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd
+update_compile_order -fileset sources_1
+open_bd_design {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/design_UART.bd}
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_UART_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+reset_run synth_1
+update_compile_order -fileset sources_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+delete_bd_objs [get_bd_nets xlconstant_0_dout] [get_bd_cells xlconstant_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property -dict [list CONFIG.CONST_WIDTH {8} CONFIG.CONST_VAL {123}] [get_bd_cells xlconstant_0]
+connect_bd_net [get_bd_pins xlconstant_0/dout] [get_bd_pins UART_controller_0/data_in]
+save_bd_design
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_UART_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+reset_run impl_1 -prev_step 
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_uart_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_UART_wrapper.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+update_module_reference design_UART_UART_controller_0_0
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_uart_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_UART_wrapper.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 8
+wait_on_run impl_1
 set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
 set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
-set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_uart_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/impl_1/design_UART_wrapper.bit} [get_hw_devices xc7z020_1]
 program_hw_devices [get_hw_devices xc7z020_1]
 refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]

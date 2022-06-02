@@ -1,6 +1,6 @@
 
 *** Running vivado
-    with args -log UART_control.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_control.tcl
+    with args -log design_UART_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_UART_wrapper.tcl
 
 
 
@@ -9,112 +9,93 @@
   **** IP Build 2902112 on Wed May 27 22:43:36 MDT 2020
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source UART_control.tcl -notrace
-Command: synth_design -top UART_control -part xc7z020clg400-1
+source design_UART_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/2020_1/Vivado/2020.1/data/ip'.
+Command: synth_design -top design_UART_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 1516
+INFO: [Synth 8-7075] Helper process launched with PID 17356
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1110.609 ; gain = 0.000
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1111.926 ; gain = 0.000
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'UART_control' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd:42]
-	Parameter g_CLKS_PER_BIT bound to: 108 - type: integer 
-INFO: [Synth 8-3491] module 'UART_RX' declared at 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_rx.vhd:18' bound to instance 'DUT1' of component 'UART_RX' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd:73]
-INFO: [Synth 8-638] synthesizing module 'UART_RX' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_rx.vhd:31]
-	Parameter g_CLKS_PER_BIT bound to: 108 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART_RX' (1#1) [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_rx.vhd:31]
-	Parameter g_CLKS_PER_BIT bound to: 108 - type: integer 
-INFO: [Synth 8-3491] module 'UART_TX' declared at 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_tx.vhd:18' bound to instance 'DUT2' of component 'UART_TX' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd:80]
-INFO: [Synth 8-638] synthesizing module 'UART_TX' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_tx.vhd:33]
-	Parameter g_CLKS_PER_BIT bound to: 108 - type: integer 
-INFO: [Synth 8-256] done synthesizing module 'UART_TX' (2#1) [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/imports/UART/uart_tx.vhd:33]
-INFO: [Synth 8-256] done synthesizing module 'UART_control' (3#1) [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/new/UART_control.vhd:42]
+INFO: [Synth 8-638] synthesizing module 'design_UART_wrapper' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd:25]
+INFO: [Synth 8-3491] module 'design_UART' declared at 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/synth/design_UART.vhd:14' bound to instance 'design_UART_i' of component 'design_UART' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd:37]
+INFO: [Synth 8-638] synthesizing module 'design_UART' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/synth/design_UART.vhd:29]
+INFO: [Synth 8-3491] module 'design_UART_UART_controller_0_0' declared at 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/.Xil/Vivado-14452-D-14JM0W2/realtime/design_UART_UART_controller_0_0_stub.vhdl:5' bound to instance 'UART_controller_0' of component 'design_UART_UART_controller_0_0' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/synth/design_UART.vhd:66]
+INFO: [Synth 8-638] synthesizing module 'design_UART_UART_controller_0_0' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/.Xil/Vivado-14452-D-14JM0W2/realtime/design_UART_UART_controller_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_UART_xlconstant_0_1' declared at 'd:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ip/design_UART_xlconstant_0_1/synth/design_UART_xlconstant_0_1.v:57' bound to instance 'xlconstant_0' of component 'design_UART_xlconstant_0_1' [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/synth/design_UART.vhd:76]
+INFO: [Synth 8-6157] synthesizing module 'design_UART_xlconstant_0_1' [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ip/design_UART_xlconstant_0_1/synth/design_UART_xlconstant_0_1.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 123 - type: integer 
+	Parameter CONST_WIDTH bound to: 8 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (1#1) [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_UART_xlconstant_0_1' (2#1) [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ip/design_UART_xlconstant_0_1/synth/design_UART_xlconstant_0_1.v:57]
+INFO: [Synth 8-256] done synthesizing module 'design_UART' (3#1) [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/synth/design_UART.vhd:29]
+INFO: [Synth 8-256] done synthesizing module 'design_UART_wrapper' (4#1) [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd:25]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1141.934 ; gain = 31.324
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1151.273 ; gain = 39.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1141.934 ; gain = 31.324
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.273 ; gain = 39.348
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1141.934 ; gain = 31.324
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1151.273 ; gain = 39.348
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1141.934 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1151.273 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
+Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ip/design_UART_UART_controller_0_0/design_UART_UART_controller_0_0/design_UART_UART_controller_0_0_in_context.xdc] for cell 'design_UART_i/UART_controller_0'
+Finished Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/sources_1/bd/design_UART/ip/design_UART_UART_controller_0_0/design_UART_UART_controller_0_0/design_UART_UART_controller_0_0_in_context.xdc] for cell 'design_UART_i/UART_controller_0'
 Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
 Finished Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
-INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/UART_control_propImpl.xdc].
-Resolution: To avoid this warning, move constraints listed in [.Xil/UART_control_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_UART_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_UART_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1263.305 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1187.918 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1263.305 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.002 . Memory (MB): peak = 1187.918 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished Constraint Validation : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1187.918 ; gain = 75.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1187.918 ; gain = 75.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
+Applied set_property DONT_TOUCH = true for design_UART_i. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_UART_i/UART_controller_0. (constraint file  auto generated constraint, line ).
+Applied set_property DONT_TOUCH = true for design_UART_i/xlconstant_0. (constraint file  auto generated constraint, line ).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1187.918 ; gain = 75.992
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
----------------------------------------------------------------------------------------------------
-                   State |                     New Encoding |                Previous Encoding 
----------------------------------------------------------------------------------------------------
-                  s_idle |                              000 |                              000
-          s_tx_start_bit |                              001 |                              001
-          s_tx_data_bits |                              010 |                              010
-           s_tx_stop_bit |                              011 |                              011
-               s_cleanup |                              100 |                              100
----------------------------------------------------------------------------------------------------
-INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'sequential' in module 'UART_TX'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:09 ; elapsed = 00:00:10 . Memory (MB): peak = 1187.918 ; gain = 75.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
 ---------------------------------------------------------------------------------
 Detailed RTL Component Info : 
-+---Adders : 
-	   2 Input    7 Bit       Adders := 2     
-	   2 Input    3 Bit       Adders := 2     
-+---Registers : 
-	                8 Bit    Registers := 2     
-	                7 Bit    Registers := 2     
-	                3 Bit    Registers := 3     
-	                1 Bit    Registers := 6     
-+---Muxes : 
-	   6 Input    8 Bit        Muxes := 1     
-	   2 Input    8 Bit        Muxes := 1     
-	   6 Input    7 Bit        Muxes := 1     
-	   2 Input    7 Bit        Muxes := 1     
-	   2 Input    3 Bit        Muxes := 8     
-	   5 Input    3 Bit        Muxes := 1     
-	   2 Input    2 Bit        Muxes := 2     
-	   3 Input    2 Bit        Muxes := 1     
-	   2 Input    1 Bit        Muxes := 3     
-	   6 Input    1 Bit        Muxes := 2     
-	   5 Input    1 Bit        Muxes := 10    
 ---------------------------------------------------------------------------------
 Finished RTL Component Statistics 
 ---------------------------------------------------------------------------------
@@ -131,25 +112,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1187.918 ; gain = 75.992
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.758 ; gain = 118.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1263.305 ; gain = 152.695
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1230.758 ; gain = 118.832
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1250.383 ; gain = 138.457
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -167,80 +148,75 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
 ---------------------------------------------------------------------------------
 
 Report BlackBoxes: 
-+-+--------------+----------+
-| |BlackBox name |Instances |
-+-+--------------+----------+
-+-+--------------+----------+
++------+--------------------------------+----------+
+|      |BlackBox name                   |Instances |
++------+--------------------------------+----------+
+|1     |design_UART_UART_controller_0_0 |         1|
++------+--------------------------------+----------+
 
 Report Cell Usage: 
-+------+-----+------+
-|      |Cell |Count |
-+------+-----+------+
-|1     |BUFG |     1|
-|2     |LUT2 |     5|
-|3     |LUT3 |    10|
-|4     |LUT4 |     8|
-|5     |LUT5 |    12|
-|6     |LUT6 |    31|
-|7     |FDRE |    48|
-|8     |IBUF |     2|
-|9     |OBUF |     3|
-+------+-----+------+
++------+-------------------------------------+------+
+|      |Cell                                 |Count |
++------+-------------------------------------+------+
+|1     |design_UART_UART_controller_0_0_bbox |     1|
+|2     |IBUF                                 |     4|
+|3     |OBUF                                 |     9|
++------+-------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:21 . Memory (MB): peak = 1272.785 ; gain = 40.805
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1272.785 ; gain = 162.176
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1256.203 ; gain = 107.633
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1256.203 ; gain = 144.277
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1281.523 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1268.277 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1286.797 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1269.246 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+28 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1286.797 ; gain = 176.188
-INFO: [Common 17-1381] The checkpoint 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/UART_control.dcp' has been generated.
-INFO: [runtcl-4] Executing : report_utilization -file UART_control_utilization_synth.rpt -pb UART_control_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Mon May 30 14:30:00 2022...
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:27 . Memory (MB): peak = 1269.246 ; gain = 157.320
+INFO: [Common 17-1381] The checkpoint 'D:/Robot_Surveillance_V3/FPGA/projets/project_UART_PC/project_UART_PC.runs/synth_1/design_UART_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_UART_wrapper_utilization_synth.rpt -pb design_UART_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  1 16:42:55 2022...

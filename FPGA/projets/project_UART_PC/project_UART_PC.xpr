@@ -69,6 +69,22 @@
   <FileSets Version="1" Minor="31">
     <FileSet Name="sources_1" Type="DesignSrcs" RelSrcDir="$PSRCDIR/sources_1">
       <Filter Type="Srcs"/>
+      <File Path="$PSRCDIR/sources_1/imports/UART_controller_files/UART.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART.vhd"/>
+          <Attr Name="ImportTime" Val="1654088706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/imports/UART_controller_files/button_debounce.vhd">
+        <FileInfo>
+          <Attr Name="ImportPath" Val="C:/Users/VANLEEUWEN/Downloads/UART_controller_files/button_debounce.vhd"/>
+          <Attr Name="ImportTime" Val="1654088706"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <File Path="$PSRCDIR/sources_1/imports/UART/uart_rx.vhd">
         <FileInfo>
           <Attr Name="ImportPath" Val="C:/Users/VANLEEUWEN/Downloads/UART/uart_rx.vhd"/>
@@ -85,34 +101,33 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/UART_control.vhd">
+      <File Path="$PSRCDIR/sources_1/imports/UART_controller_files/UART_controller.vhd">
         <FileInfo>
+          <Attr Name="ImportPath" Val="C:/Users/VANLEEUWEN/Downloads/UART_controller_files/UART_controller.vhd"/>
+          <Attr Name="ImportTime" Val="1654088706"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_uart/design_uart.bd">
+      <File Path="$PSRCDIR/sources_1/bd/design_UART/design_UART.bd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_UART.bd" FileRelPathName="ip/design_UART_UART_controller_0_0/design_UART_UART_controller_0_0.xci">
+          <Proxy FileSetName="design_UART_UART_controller_0_0"/>
+        </CompFileExtendedInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_uart/hdl/design_uart_wrapper.vhd">
+      <File Path="$PSRCDIR/sources_1/bd/design_UART/hdl/design_UART_wrapper.vhd">
         <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="UART_control"/>
-        <Option Name="TopLib" Val="xil_defaultlib"/>
-        <Option Name="TopArchitecture" Val="Behavioral"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/UART_control.vhd"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
+        <Option Name="TopModule" Val="design_UART_wrapper"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1">
@@ -130,12 +145,13 @@
       </Config>
     </FileSet>
     <FileSet Name="sim_1" Type="SimulationSrcs" RelSrcDir="$PSRCDIR/sim_1">
+      <Filter Type="Srcs"/>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
-        <Option Name="TopModule" Val="UART_control"/>
+        <Option Name="TopModule" Val="UART_controller"/>
         <Option Name="TopLib" Val="xil_defaultlib"/>
         <Option Name="TopArchitecture" Val="Behavioral"/>
-        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/new/UART_control.vhd"/>
+        <Option Name="TopRTLFile" Val="$PSRCDIR/sources_1/imports/UART_controller_files/UART_controller.vhd"/>
         <Option Name="TopAutoSet" Val="TRUE"/>
         <Option Name="TransportPathDelay" Val="0"/>
         <Option Name="TransportIntDelay" Val="0"/>
@@ -151,6 +167,12 @@
       <Filter Type="Utils"/>
       <Config>
         <Option Name="TopAutoSet" Val="TRUE"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_UART_UART_controller_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_UART_UART_controller_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_UART_UART_controller_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
   </FileSets>
@@ -175,6 +197,16 @@
   <Runs Version="1" Minor="11">
     <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true">
       <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_UART_UART_controller_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_UART_UART_controller_0_0" Part="xc7z020clg400-1" ConstrsSet="design_UART_UART_controller_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_UART_UART_controller_0_0_synth_1" IncludeInArchive="true">
+      <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
         </StratHandle>
@@ -186,6 +218,24 @@
       <RQSFiles/>
     </Run>
     <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_UART_UART_controller_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_UART_UART_controller_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_UART_UART_controller_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>
@@ -200,7 +250,6 @@
         <Step Id="post_route_phys_opt_design"/>
         <Step Id="write_bitstream"/>
       </Strategy>
-      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
       <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>

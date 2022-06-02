@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log UART_control.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source UART_control.tcl
+EAStep vivado -log design_UART_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_UART_wrapper.tcl
