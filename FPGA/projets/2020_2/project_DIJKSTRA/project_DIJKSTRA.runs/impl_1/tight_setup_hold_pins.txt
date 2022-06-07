@@ -1,0 +1,17 @@
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[5]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[8]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[4]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[0]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[1]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[2]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                   design_dijkstra_all_i/UPDATE_RAM_0/U0/FSM_onehot_current_state_reg[2]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                   design_dijkstra_all_i/UPDATE_RAM_0/U0/FSM_onehot_current_state_reg[6]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                        design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node_seen_reg[15]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                        design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node_seen_reg[14]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                        design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node_seen_reg[10]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                      design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/FSM_sequential_current_state_reg[0]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                        design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node_seen_reg[11]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+

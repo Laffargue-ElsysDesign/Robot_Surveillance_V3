@@ -1,0 +1,1094 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jun  7 16:24:03 2022
+# Process ID: 14700
+# Current directory: D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1
+# Command line: vivado.exe -log design_dijkstra_all_wrapper.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source design_dijkstra_all_wrapper.tcl -notrace
+# Log file: D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.vdi
+# Journal file: D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source design_dijkstra_all_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+Command: link_design -top design_dijkstra_all_wrapper -part xc7z020clg400-1
+Design is defaulting to srcset: sources_1
+Design is defaulting to constrset: constrs_1
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.dcp' for cell 'design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/design_dijkstra_all_NEAREST_NODE_0_0.dcp' for cell 'design_dijkstra_all_i/NEAREST_NODE_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ROM_0_0/design_dijkstra_all_ROM_0_0.dcp' for cell 'design_dijkstra_all_i/ROM_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_UPDATE_RAM_0_0/design_dijkstra_all_UPDATE_RAM_0_0.dcp' for cell 'design_dijkstra_all_i/UPDATE_RAM_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_blk_mem_gen_0_0/design_dijkstra_all_blk_mem_gen_0_0.dcp' for cell 'design_dijkstra_all_i/blk_mem_gen_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.dcp' for cell 'design_dijkstra_all_i/clk_wiz_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur1_0_0/design_dijkstra_all_comparateur1_0_0.dcp' for cell 'design_dijkstra_all_i/comparateur1_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur2_0_0/design_dijkstra_all_comparateur2_0_0.dcp' for cell 'design_dijkstra_all_i/comparateur2_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_dpram_0_0/design_dijkstra_all_dpram_0_0.dcp' for cell 'design_dijkstra_all_i/dpram_0'
+INFO: [Project 1-454] Reading design checkpoint 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0.dcp' for cell 'design_dijkstra_all_i/ila_0'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.119 . Memory (MB): peak = 1144.582 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 357 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-479] Netlist was created with Vivado 2020.2
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Chipscope 16-324] Core: design_dijkstra_all_i/ila_0 UUID: 873e0880-84ec-5663-935c-d9f7a4ab4ad3 
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_dijkstra_all_i/ila_0/U0'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila_impl.xdc] for cell 'design_dijkstra_all_i/ila_0/U0'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_dijkstra_all_i/ila_0/U0'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'design_dijkstra_all_i/ila_0/U0'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_board.xdc] for cell 'design_dijkstra_all_i/clk_wiz_0/inst'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_board.xdc] for cell 'design_dijkstra_all_i/clk_wiz_0/inst'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xdc] for cell 'design_dijkstra_all_i/clk_wiz_0/inst'
+INFO: [Timing 38-35] Done setting XDC timing constraints. [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xdc:57]
+INFO: [Timing 38-2] Deriving generated clocks [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xdc:57]
+get_clocks: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1708.270 ; gain = 563.688
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xdc] for cell 'design_dijkstra_all_i/clk_wiz_0/inst'
+Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
+Finished Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.004 . Memory (MB): peak = 1708.270 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+  A total of 136 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 136 instances
+
+23 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+link_design completed successfully
+link_design: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1708.270 ; gain = 563.688
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+Command: opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command opt_design
+
+Starting DRC Task
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Project 1-461] DRC finished with 0 Errors
+INFO: [Project 1-462] Please refer to the DRC report (report_drc) for more information.
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.891 . Memory (MB): peak = 1708.270 ; gain = 0.000
+
+Starting Cache Timing Information Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-2] Deriving generated clocks
+Ending Cache Timing Information Task | Checksum: 153f641f6
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.244 . Memory (MB): peak = 1727.188 ; gain = 18.918
+
+Starting Logic Optimization Task
+
+Phase 1 Generate And Synthesize Debug Cores
+INFO: [Chipscope 16-329] Generating Script for core instance : dbg_hub 
+INFO: [IP_Flow 19-3806] Processing IP xilinx.com:ip:xsdbm:3.0 for cell dbg_hub_CV.
+INFO: [Chipscope 16-469] Using cached IP synthesis design for IP xilinx.com:ip:xsdbm:3.0, cache-ID = f83900a7de4d5aea.
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1984.551 ; gain = 0.000
+Phase 1 Generate And Synthesize Debug Cores | Checksum: 1cff409f6
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 1984.551 ; gain = 44.676
+
+Phase 2 Retarget
+INFO: [Opt 31-138] Pushed 2 inverter(s) to 2 load pin(s).
+INFO: [Opt 31-49] Retargeted 0 cell(s).
+Phase 2 Retarget | Checksum: 194064842
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-389] Phase Retarget created 362 cells and removed 383 cells
+INFO: [Opt 31-1021] In phase Retarget, 64 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 3 Constant propagation
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Phase 3 Constant propagation | Checksum: bf2b19b8
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-389] Phase Constant propagation created 332 cells and removed 392 cells
+INFO: [Opt 31-1021] In phase Constant propagation, 47 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 4 Sweep
+Phase 4 Sweep | Checksum: 107cfe4ee
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-389] Phase Sweep created 0 cells and removed 86 cells
+INFO: [Opt 31-1021] In phase Sweep, 966 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+
+Phase 5 BUFG optimization
+Phase 5 BUFG optimization | Checksum: 107cfe4ee
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-662] Phase BUFG optimization created 0 cells of which 0 are BUFGs and removed 0 cells.
+
+Phase 6 Shift Register Optimization
+INFO: [Opt 31-1064] SRL Remap converted 0 SRLs to 0 registers and converted 0 registers of register chains to 0 SRLs
+Phase 6 Shift Register Optimization | Checksum: 107cfe4ee
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-389] Phase Shift Register Optimization created 0 cells and removed 0 cells
+
+Phase 7 Post Processing Netlist
+Phase 7 Post Processing Netlist | Checksum: 107cfe4ee
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+INFO: [Opt 31-389] Phase Post Processing Netlist created 0 cells and removed 0 cells
+INFO: [Opt 31-1021] In phase Post Processing Netlist, 57 netlist objects are constrained preventing optimization. Please run opt_design with -debug_log to get more detail. 
+Opt_design Change Summary
+=========================
+
+
+-------------------------------------------------------------------------------------------------------------------------
+|  Phase                        |  #Cells created  |  #Cells Removed  |  #Constrained objects preventing optimizations  |
+-------------------------------------------------------------------------------------------------------------------------
+|  Retarget                     |             362  |             383  |                                             64  |
+|  Constant propagation         |             332  |             392  |                                             47  |
+|  Sweep                        |               0  |              86  |                                            966  |
+|  BUFG optimization            |               0  |               0  |                                              0  |
+|  Shift Register Optimization  |               0  |               0  |                                              0  |
+|  Post Processing Netlist      |               0  |               0  |                                             57  |
+-------------------------------------------------------------------------------------------------------------------------
+
+
+
+Starting Connectivity Check Task
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.009 . Memory (MB): peak = 1984.551 ; gain = 0.000
+Ending Logic Optimization Task | Checksum: 9c9e6ba1
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:14 . Memory (MB): peak = 1984.551 ; gain = 44.676
+
+Starting Power Optimization Task
+INFO: [Pwropt 34-132] Skipping clock gating for clocks with a period < 2.00 ns.
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+INFO: [Pwropt 34-9] Applying IDT optimizations ...
+INFO: [Pwropt 34-10] Applying ODC optimizations ...
+
+
+Starting PowerOpt Patch Enables Task
+INFO: [Pwropt 34-162] WRITE_MODE attribute of 0 BRAM(s) out of a total of 45 has been updated to save power. Run report_power_opt to get a complete listing of the BRAMs updated.
+INFO: [Pwropt 34-201] Structural ODC has moved 0 WE to EN ports
+Number of BRAM Ports augmented: 53 newly gated: 0 Total Ports: 90
+Ending PowerOpt Patch Enables Task | Checksum: 10fe21c75
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.225 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Ending Power Optimization Task | Checksum: 10fe21c75
+
+Time (s): cpu = 00:00:07 ; elapsed = 00:00:05 . Memory (MB): peak = 2067.297 ; gain = 82.746
+
+Starting Final Cleanup Task
+
+Starting Logic Optimization Task
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Ending Logic Optimization Task | Checksum: 17114d510
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.627 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Ending Final Cleanup Task | Checksum: 17114d510
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:03 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Starting Netlist Obfuscation Task
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Ending Netlist Obfuscation Task | Checksum: 17114d510
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+58 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+opt_design completed successfully
+opt_design: Time (s): cpu = 00:00:16 ; elapsed = 00:00:25 . Memory (MB): peak = 2067.297 ; gain = 359.027
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_opt.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_dijkstra_all_wrapper_drc_opted.rpt -pb design_dijkstra_all_wrapper_drc_opted.pb -rpx design_dijkstra_all_wrapper_drc_opted.rpx
+Command: report_drc -file design_dijkstra_all_wrapper_drc_opted.rpt -pb design_dijkstra_all_wrapper_drc_opted.pb -rpx design_dijkstra_all_wrapper_drc_opted.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_drc_opted.rpt.
+report_drc completed successfully
+INFO: [Chipscope 16-240] Debug cores have already been implemented
+Command: place_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command place_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+Starting Placer Task
+INFO: [Place 30-611] Multithreading enabled for place_design using a maximum of 2 CPUs
+
+Phase 1 Placer Initialization
+
+Phase 1.1 Placer Initialization Netlist Sorting
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 1.1 Placer Initialization Netlist Sorting | Checksum: f5548671
+
+Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.010 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device
+Phase 1.2 IO Placement/ Clock Placement/ Build Placer Device | Checksum: 1d81e273c
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.353 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 1.3 Build Placer Netlist Model
+Phase 1.3 Build Placer Netlist Model | Checksum: 2cbe4e28c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 1.4 Constrain Clocks/Macros
+Phase 1.4 Constrain Clocks/Macros | Checksum: 2cbe4e28c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 1 Placer Initialization | Checksum: 2cbe4e28c
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 2 Global Placement
+
+Phase 2.1 Floorplanning
+Phase 2.1 Floorplanning | Checksum: 2a1c038b8
+
+Time (s): cpu = 00:00:03 ; elapsed = 00:00:02 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 2.2 Update Timing before SLR Path Opt
+Phase 2.2 Update Timing before SLR Path Opt | Checksum: 2c4335ae3
+
+Time (s): cpu = 00:00:04 ; elapsed = 00:00:02 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 2.3 Global Placement Core
+
+Phase 2.3.1 Physical Synthesis In Placer
+INFO: [Physopt 32-1035] Found 63 LUTNM shape to break, 113 LUT instances to create LUTNM shape
+INFO: [Physopt 32-1044] Break lutnm for timing: one critical 18, two critical 45, total 63, new lutff created 0
+INFO: [Physopt 32-775] End 1 Pass. Optimized 109 nets or cells. Created 63 new cells, deleted 46 existing cells and moved 0 existing cell
+INFO: [Physopt 32-65] No nets found for high-fanout optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[2] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[2] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[4] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[4] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[0] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[0] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[1] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[1] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[3] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[3] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[6] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[6] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[7] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[7] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[9] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[9] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[5] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[5] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[11] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[11] to the instance has DONT_TOUCH
+INFO: [Physopt 32-698] Replication is not feasible on the instance design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[8] as the input net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/icap_addr[8] to the instance has DONT_TOUCH
+INFO: [Physopt 32-64] No nets found for fanout-optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/read_addr_reg[13]_1 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__2 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/read_addr_reg[13]_0 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__1 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/enb_array[0] could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[3]_1 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/enb_array[1] could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_2__0 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[3]_4 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[3]_5 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena_array[0] could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena_array[1] could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__0 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/ena_array[2] could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/ila_trace_memory_inst/SUBCORE_RAM_BLK_MEM_1.trace_block_memory/inst_blk_mem_gen/gnbram.gnativebmg.native_blk_mem_gen/valid.cstr/bindec_a.bindec_inst_a/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__1 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/i_intcap.CAP_ADDR_O_reg[13]_0 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_cap_ctrl/u_cap_addrgen/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1__2 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[3]_3 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM18.ram_i_2 could not be replicated
+INFO: [Physopt 32-117] Net design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/multiple_read_latency.read_enable_out_reg[3]_2 could not be optimized because driver design_dijkstra_all_i/ila_0/U0/ila_core_inst/xsdb_memory_read_inst/DEVICE_7SERIES.NO_BMM_INFO.SDP.SIMPLE_PRIM36.ram_i_1 could not be replicated
+INFO: [Physopt 32-46] Identified 4 candidate nets for critical-cell optimization.
+INFO: [Physopt 32-232] Optimized 0 net. Created 0 new instance.
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-1123] No candidate cells found for Shift Register to Pipeline optimization
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-775] End 1 Pass. Optimized 10 nets or cells. Created 20 new cells, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Physopt 32-526] No candidate cells for BRAM register optimization found in the design
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-846] No candidate cells for URAM register optimization found in the design
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+INFO: [Physopt 32-949] No candidate nets found for dynamic/static region interface net replication
+INFO: [Physopt 32-775] End 1 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization                                     |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+|  LUT Combining                                    |           63  |             46  |                   109  |           0  |           1  |  00:00:00  |
+|  Very High Fanout                                 |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Fanout                                           |            0  |              0  |                     0  |          11  |           1  |  00:00:00  |
+|  Critical Cell                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  DSP Register                                     |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register to Pipeline                       |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Shift Register                                   |           20  |              0  |                    10  |           0  |           1  |  00:00:00  |
+|  BRAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  URAM Register                                    |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Dynamic/Static Region Interface Net Replication  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Total                                            |           83  |             46  |                   119  |          11  |          10  |  00:00:00  |
+-----------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Phase 2.3.1 Physical Synthesis In Placer | Checksum: 1cd580bc5
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:08 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 2.3 Global Placement Core | Checksum: 19e4fa879
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 2 Global Placement | Checksum: 19e4fa879
+
+Time (s): cpu = 00:00:17 ; elapsed = 00:00:09 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3 Detail Placement
+
+Phase 3.1 Commit Multi Column Macros
+Phase 3.1 Commit Multi Column Macros | Checksum: 1bd86f1ad
+
+Time (s): cpu = 00:00:18 ; elapsed = 00:00:09 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.2 Commit Most Macros & LUTRAMs
+Phase 3.2 Commit Most Macros & LUTRAMs | Checksum: 172e0e865
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.3 Area Swap Optimization
+Phase 3.3 Area Swap Optimization | Checksum: 1f6c16ffa
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.4 Pipeline Register Optimization
+Phase 3.4 Pipeline Register Optimization | Checksum: 11111acbf
+
+Time (s): cpu = 00:00:19 ; elapsed = 00:00:10 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.5 Fast Optimization
+Phase 3.5 Fast Optimization | Checksum: 13a5c50b9
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:13 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.6 Small Shape Detail Placement
+Phase 3.6 Small Shape Detail Placement | Checksum: 18893ad2b
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.7 Re-assign LUT pins
+Phase 3.7 Re-assign LUT pins | Checksum: 1504ed06d
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.8 Pipeline Register Optimization
+Phase 3.8 Pipeline Register Optimization | Checksum: 1dd766583
+
+Time (s): cpu = 00:00:24 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3.9 Fast Optimization
+Phase 3.9 Fast Optimization | Checksum: 212b688c0
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 3 Detail Placement | Checksum: 212b688c0
+
+Time (s): cpu = 00:00:35 ; elapsed = 00:00:27 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 4 Post Placement Optimization and Clean-Up
+
+Phase 4.1 Post Commit Optimization
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+
+Phase 4.1.1 Post Placement Optimization
+Post Placement Optimization Initialization | Checksum: 125fe064d
+
+Phase 4.1.1.1 BUFG Insertion
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.822 | TNS=-1425.258 |
+Phase 1 Physical Synthesis Initialization | Checksum: 116c30367
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.374 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Place 46-56] BUFG insertion identified 0 candidate nets. Inserted BUFG: 0, Replicated BUFG Driver: 0, Skipped due to Placement/Routing Conflicts: 0, Skipped due to Timing Degradation: 0, Skipped due to Illegal Netlist: 0.
+Ending Physical Synthesis Task | Checksum: 1ae7294eb
+
+Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.390 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 4.1.1.1 BUFG Insertion | Checksum: 125fe064d
+
+Time (s): cpu = 00:00:38 ; elapsed = 00:00:29 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Place 30-746] Post Placement Timing Summary WNS=-3.384. For the most accurate timing information please run report_timing.
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 4.1 Post Commit Optimization | Checksum: 8a998cb3
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 4.2 Post Placement Cleanup
+Phase 4.2 Post Placement Cleanup | Checksum: 8a998cb3
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 4.3 Placer Reporting
+
+Phase 4.3.1 Print Estimated Congestion
+INFO: [Place 30-612] Post-Placement Estimated Congestion 
+ ____________________________________________________
+|           | Global Congestion | Short Congestion  |
+| Direction | Region Size       | Region Size       |
+|___________|___________________|___________________|
+|      North|                1x1|                1x1|
+|___________|___________________|___________________|
+|      South|                1x1|                4x4|
+|___________|___________________|___________________|
+|       East|                1x1|                2x2|
+|___________|___________________|___________________|
+|       West|                1x1|                1x1|
+|___________|___________________|___________________|
+
+Phase 4.3.1 Print Estimated Congestion | Checksum: 8a998cb3
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 4.3 Placer Reporting | Checksum: 8a998cb3
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 4.4 Final Placement Cleanup
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Phase 4 Post Placement Optimization and Clean-Up | Checksum: 908fd057
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Ending Placer Task | Checksum: 4a992476
+
+Time (s): cpu = 00:00:56 ; elapsed = 00:00:46 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+129 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+place_design completed successfully
+place_design: Time (s): cpu = 00:00:57 ; elapsed = 00:00:47 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.428 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_placed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_io -file design_dijkstra_all_wrapper_io_placed.rpt
+report_io: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.033 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [runtcl-4] Executing : report_utilization -file design_dijkstra_all_wrapper_utilization_placed.rpt -pb design_dijkstra_all_wrapper_utilization_placed.pb
+INFO: [runtcl-4] Executing : report_control_sets -verbose -file design_dijkstra_all_wrapper_control_sets_placed.rpt
+report_control_sets: Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.019 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Command: phys_opt_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Starting Physical Synthesis Task
+
+Phase 1 Physical Synthesis Initialization
+INFO: [Physopt 32-721] Multithreading enabled for phys_opt_design using a maximum of 2 CPUs
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.384 | TNS=-1280.235 |
+Phase 1 Physical Synthesis Initialization | Checksum: 1091d71d4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.849 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.384 | TNS=-1280.235 |
+
+Phase 2 DSP Register Optimization
+INFO: [Physopt 32-456] No candidate cells for DSP register optimization found in the design.
+INFO: [Physopt 32-775] End 2 Pass. Optimized 0 net or cell. Created 0 new cell, deleted 0 existing cell and moved 0 existing cell
+Phase 2 DSP Register Optimization | Checksum: 1091d71d4
+
+Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.868 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 3 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.384 | TNS=-1280.235 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[31]_31[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/clk_wiz_0/inst/clk_out1_design_dijkstra_all_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_9_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.382 | TNS=-1280.171 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]_INST_0
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.376 | TNS=-1279.745 |
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_8_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.363 | TNS=-1279.329 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_7_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.348 | TNS=-1278.849 |
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.343 | TNS=-1278.689 |
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[2] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[2].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[2]_INST_0
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[2]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.293 | TNS=-1265.328 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[29]_1[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][1]_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][1]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][1]_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][1]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][1]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[1]_i_4_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[1]_i_10_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.286 | TNS=-1265.104 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][1]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[1]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[1]_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.283 | TNS=-1263.376 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3
+INFO: [Physopt 32-81] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.278 | TNS=-1263.224 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2
+INFO: [Physopt 32-710] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Critical path length was reduced through logic transformation on cell design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_comp.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.277 | TNS=-1263.692 |
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]_INST_0
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.246 | TNS=-1246.616 |
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.233 | TNS=-1243.899 |
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1
+INFO: [Physopt 32-81] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0. Replicated 1 times.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.228 | TNS=-1244.379 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.219 | TNS=-1242.777 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_6_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_6
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_6_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_6_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.209 | TNS=-1239.695 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[15]_15[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][5]_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][5]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][5]_i_2
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][5]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.204 | TNS=-1238.440 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]_INST_0
+INFO: [Physopt 32-710] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_n_0. Critical path length was reduced through logic transformation on cell design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[2]_INST_0_i_1_comp.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.183 | TNS=-1226.832 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0_repN.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_comp
+INFO: [Physopt 32-710] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Critical path length was reduced through logic transformation on cell design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_comp_1.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0_repN. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.148 | TNS=-1225.638 |
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2
+INFO: [Physopt 32-81] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0. Replicated 2 times.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.146 | TNS=-1223.445 |
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0_repN.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_comp_1
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0_repN. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[5].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[5]_INST_0
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[5] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[5]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.137 | TNS=-1220.938 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[1]_29[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[1][3]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node_reg[4]
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[1]_29[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/clk_wiz_0/inst/clk_out1_design_dijkstra_all_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_6_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[0]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-663] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0.  Re-placed instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_comp_1
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_3_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.132 | TNS=-1220.490 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[22]_8[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][7]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][7]_i_2
+INFO: [Physopt 32-735] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][7]_i_2_n_0. Optimization improves timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.124 | TNS=-1216.906 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[1][3]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node_reg[4]
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.124 | TNS=-1216.906 |
+Phase 3 Critical Path Optimization | Checksum: 1091d71d4
+
+Time (s): cpu = 00:00:23 ; elapsed = 00:00:11 . Memory (MB): peak = 2067.297 ; gain = 0.000
+
+Phase 4 Critical Path Optimization
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.124 | TNS=-1216.906 |
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[1]_29[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/clk_wiz_0/inst/clk_out1_design_dijkstra_all_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2
+INFO: [Physopt 32-134] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0. Rewiring did not optimize the net.
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]_INST_0
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0 was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[1][3]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node_reg[4]
+INFO: [Physopt 32-572] Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4] was not replicated.
+Resolution: phys_opt_design can be forced to replicate a net driver using the option -force_replication_on_nets <list of net objects>.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[1]_29[3]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/clk_wiz_0/inst/clk_out1_design_dijkstra_all_clk_wiz_0_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[30][3]_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram_reg[30][3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a_reg[3]_i_3_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/data_out_a[3]_i_9_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1].  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[1]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0.  Did not re-place instance design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/UPDATE_RAM_0/comp_in1[4]_INST_0_i_2_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]_INST_0
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[7]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0.  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node[9]_INST_0_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/dpram_0/U0/memory_ram[1][3]_i_1_n_0. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-662] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4].  Did not re-place instance design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node_reg[4]
+INFO: [Physopt 32-702] Processed net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_next_node[4]. Optimizations did not improve timing on the net.
+INFO: [Physopt 32-619] Estimated Timing Summary | WNS=-3.124 | TNS=-1216.906 |
+Phase 4 Critical Path Optimization | Checksum: 1091d71d4
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.012 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Physopt 32-603] Post Physical Optimization Timing Summary | WNS=-3.124 | TNS=-1216.906 |
+
+Summary of Physical Synthesis Optimizations
+============================================
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  Optimization   |  WNS Gain (ns)  |  TNS Gain (ns)  |  Added Cells  |  Removed Cells  |  Optimized Cells/Nets  |  Dont Touch  |  Iterations  |  Elapsed   |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+|  DSP Register   |          0.000  |          0.000  |            0  |              0  |                     0  |           0  |           1  |  00:00:00  |
+|  Critical Path  |          0.260  |         63.329  |            4  |              0  |                    22  |           0  |           2  |  00:00:14  |
+|  Total          |          0.260  |         63.329  |            4  |              0  |                    22  |           0  |           3  |  00:00:14  |
+-------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 2067.297 ; gain = 0.000
+Ending Physical Synthesis Task | Checksum: cb68e0f6
+
+Time (s): cpu = 00:00:30 ; elapsed = 00:00:15 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-83] Releasing license: Implementation
+344 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+phys_opt_design completed successfully
+phys_opt_design: Time (s): cpu = 00:00:32 ; elapsed = 00:00:16 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.429 . Memory (MB): peak = 2067.297 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_physopt.dcp' has been generated.
+Command: route_design
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+Running DRC as a precondition to command route_design
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Vivado_Tcl 4-198] DRC finished with 0 Errors
+INFO: [Vivado_Tcl 4-199] Please refer to the DRC report (report_drc) for more information.
+
+
+Starting Routing Task
+INFO: [Route 35-254] Multithreading enabled for route_design using a maximum of 2 CPUs
+Checksum: PlaceDB: 1ecd5b42 ConstDB: 0 ShapeSum: 12a31834 RouteDB: 0
+
+Phase 1 Build RT Design
+Phase 1 Build RT Design | Checksum: 2c68ef7c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2150.535 ; gain = 83.238
+Post Restoration Checksum: NetGraph: 14ee6573 NumContArr: 177a8a09 Constraints: 0 Timing: 0
+
+Phase 2 Router Initialization
+
+Phase 2.1 Create Timer
+Phase 2.1 Create Timer | Checksum: 2c68ef7c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2150.539 ; gain = 83.242
+
+Phase 2.2 Fix Topology Constraints
+Phase 2.2 Fix Topology Constraints | Checksum: 2c68ef7c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2157.016 ; gain = 89.719
+
+Phase 2.3 Pre Route Cleanup
+Phase 2.3 Pre Route Cleanup | Checksum: 2c68ef7c
+
+Time (s): cpu = 00:00:22 ; elapsed = 00:00:19 . Memory (MB): peak = 2157.016 ; gain = 89.719
+ Number of Nodes with overlaps = 0
+
+Phase 2.4 Update Timing
+Phase 2.4 Update Timing | Checksum: 1e7c9fa46
+
+Time (s): cpu = 00:00:25 ; elapsed = 00:00:21 . Memory (MB): peak = 2175.758 ; gain = 108.461
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.956 | TNS=-1125.154| WHS=-0.270 | THS=-321.829|
+
+
+Phase 2.5 Update Timing for Bus Skew
+
+Phase 2.5.1 Update Timing
+Phase 2.5.1 Update Timing | Checksum: 1aa6b05cf
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2181.785 ; gain = 114.488
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-2.956 | TNS=-1055.784| WHS=N/A    | THS=N/A    |
+
+Phase 2.5 Update Timing for Bus Skew | Checksum: 1d6aaa973
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2194.680 ; gain = 127.383
+Phase 2 Router Initialization | Checksum: 123842e19
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:22 . Memory (MB): peak = 2194.680 ; gain = 127.383
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 0.000569535 %
+  Global Horizontal Routing Utilization  = 0.000507099 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 5330
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 5328
+  Number of Partially Routed Nets     = 2
+  Number of Node Overlaps             = 2
+
+
+Phase 3 Initial Routing
+
+Phase 3.1 Global Routing
+Phase 3.1 Global Routing | Checksum: 123842e19
+
+Time (s): cpu = 00:00:28 ; elapsed = 00:00:23 . Memory (MB): peak = 2194.680 ; gain = 127.383
+Phase 3 Initial Routing | Checksum: 1915d863a
+
+Time (s): cpu = 00:00:33 ; elapsed = 00:00:25 . Memory (MB): peak = 2205.859 ; gain = 138.562
+INFO: [Route 35-580] Design has 13 pins with tight setup and hold constraints.
+
+The top 5 pins with tight setup and hold constraints:
+
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+|       Launch Clock       |      Capture Clock       |                                                 Pin                                                      |
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[5]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[8]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[4]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[0]/D|
+| clk_out1_design_dijkstra_all_clk_wiz_0_0_1 |clk_out1_design_dijkstra_all_clk_wiz_0_0 |                                              design_dijkstra_all_i/NEAREST_NODE_0/U0/s_next_node_reg[1]/D|
++--------------------------+--------------------------+----------------------------------------------------------------------------------------------------------+
+
+File with complete list of pins: tight_setup_hold_pins.txt
+
+
+Phase 4 Rip-up And Reroute
+
+Phase 4.1 Global Iteration 0
+ Number of Nodes with overlaps = 795
+ Number of Nodes with overlaps = 210
+ Number of Nodes with overlaps = 73
+ Number of Nodes with overlaps = 44
+ Number of Nodes with overlaps = 21
+ Number of Nodes with overlaps = 15
+ Number of Nodes with overlaps = 1
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.025 | TNS=-2262.728| WHS=N/A    | THS=N/A    |
+
+Phase 4.1 Global Iteration 0 | Checksum: 85f850c8
+
+Time (s): cpu = 00:00:41 ; elapsed = 00:00:32 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 4.2 Global Iteration 1
+ Number of Nodes with overlaps = 157
+ Number of Nodes with overlaps = 85
+ Number of Nodes with overlaps = 9
+ Number of Nodes with overlaps = 5
+ Number of Nodes with overlaps = 2
+ Number of Nodes with overlaps = 0
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-4.184 | TNS=-2322.546| WHS=N/A    | THS=N/A    |
+
+Phase 4.2 Global Iteration 1 | Checksum: 1f356562a
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:34 . Memory (MB): peak = 2205.859 ; gain = 138.562
+Phase 4 Rip-up And Reroute | Checksum: 1f356562a
+
+Time (s): cpu = 00:00:43 ; elapsed = 00:00:34 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 5 Delay and Skew Optimization
+
+Phase 5.1 Delay CleanUp
+
+Phase 5.1.1 Update Timing
+Phase 5.1.1 Update Timing | Checksum: 241286155
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:34 . Memory (MB): peak = 2205.859 ; gain = 138.562
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.910 | TNS=-2110.284| WHS=N/A    | THS=N/A    |
+
+ Number of Nodes with overlaps = 0
+Phase 5.1 Delay CleanUp | Checksum: 1e690b5fb
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 5.2 Clock Skew Optimization
+Phase 5.2 Clock Skew Optimization | Checksum: 1e690b5fb
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+Phase 5 Delay and Skew Optimization | Checksum: 1e690b5fb
+
+Time (s): cpu = 00:00:44 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 6 Post Hold Fix
+
+Phase 6.1 Hold Fix Iter
+
+Phase 6.1.1 Update Timing
+Phase 6.1.1 Update Timing | Checksum: 18cf95dfc
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+INFO: [Route 35-416] Intermediate Timing Summary | WNS=-3.872 | TNS=-2114.137| WHS=0.011  | THS=0.000  |
+
+Phase 6.1 Hold Fix Iter | Checksum: 24cb407a7
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+Phase 6 Post Hold Fix | Checksum: 24cb407a7
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 7 Route finalize
+
+Router Utilization Summary
+  Global Vertical Routing Utilization    = 1.40199 %
+  Global Horizontal Routing Utilization  = 1.94253 %
+  Routable Net Status*
+  *Does not include unroutable nets such as driverless and loadless.
+  Run report_route_status for detailed report.
+  Number of Failed Nets               = 0
+    (Failed Nets is the sum of unrouted and partially routed nets)
+  Number of Unrouted Nets             = 0
+  Number of Partially Routed Nets     = 0
+  Number of Node Overlaps             = 0
+
+Congestion Report
+North Dir 1x1 Area, Max Cong = 66.6667%, No Congested Regions.
+South Dir 1x1 Area, Max Cong = 67.5676%, No Congested Regions.
+East Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+West Dir 1x1 Area, Max Cong = 70.5882%, No Congested Regions.
+
+------------------------------
+Reporting congestion hotspots
+------------------------------
+Direction: North
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: South
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: East
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+Direction: West
+----------------
+Congested clusters found at Level 0
+Effective congestion level: 0 Aspect Ratio: 1 Sparse Ratio: 0
+
+Phase 7 Route finalize | Checksum: 1e15fdbda
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 8 Verifying routed nets
+
+ Verification completed successfully
+Phase 8 Verifying routed nets | Checksum: 1e15fdbda
+
+Time (s): cpu = 00:00:45 ; elapsed = 00:00:35 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 9 Depositing Routes
+Phase 9 Depositing Routes | Checksum: 1b8aceb84
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Phase 10 Post Router Timing
+INFO: [Route 35-57] Estimated Timing Summary | WNS=-3.872 | TNS=-2114.137| WHS=0.011  | THS=0.000  |
+
+WARNING: [Route 35-328] Router estimated timing not met.
+Resolution: For a complete and accurate timing signoff, report_timing_summary must be run after route_design. Alternatively, route_design can be run with the -timing_summary option to enable a complete timing signoff at the end of route_design.
+Phase 10 Post Router Timing | Checksum: 1b8aceb84
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 2205.859 ; gain = 138.562
+INFO: [Route 35-16] Router Completed Successfully
+
+Time (s): cpu = 00:00:46 ; elapsed = 00:00:36 . Memory (MB): peak = 2205.859 ; gain = 138.562
+
+Routing Is Done.
+INFO: [Common 17-83] Releasing license: Implementation
+364 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+route_design completed successfully
+route_design: Time (s): cpu = 00:00:49 ; elapsed = 00:00:38 . Memory (MB): peak = 2205.859 ; gain = 138.562
+INFO: [Timing 38-480] Writing timing data to binary archive.
+Writing placer database...
+Writing XDEF routing.
+Writing XDEF routing logical nets.
+Writing XDEF routing special nets.
+Write XDEF Complete: Time (s): cpu = 00:00:02 ; elapsed = 00:00:00.571 . Memory (MB): peak = 2205.859 ; gain = 0.000
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_routed.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_drc -file design_dijkstra_all_wrapper_drc_routed.rpt -pb design_dijkstra_all_wrapper_drc_routed.pb -rpx design_dijkstra_all_wrapper_drc_routed.rpx
+Command: report_drc -file design_dijkstra_all_wrapper_drc_routed.rpt -pb design_dijkstra_all_wrapper_drc_routed.pb -rpx design_dijkstra_all_wrapper_drc_routed.rpx
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+INFO: [Coretcl 2-168] The results of DRC are in file D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_drc_routed.rpt.
+report_drc completed successfully
+INFO: [runtcl-4] Executing : report_methodology -file design_dijkstra_all_wrapper_methodology_drc_routed.rpt -pb design_dijkstra_all_wrapper_methodology_drc_routed.pb -rpx design_dijkstra_all_wrapper_methodology_drc_routed.rpx
+Command: report_methodology -file design_dijkstra_all_wrapper_methodology_drc_routed.rpt -pb design_dijkstra_all_wrapper_methodology_drc_routed.pb -rpx design_dijkstra_all_wrapper_methodology_drc_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+INFO: [DRC 23-133] Running Methodology with 2 threads
+INFO: [Coretcl 2-1520] The results of Report Methodology are in file D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper_methodology_drc_routed.rpt.
+report_methodology completed successfully
+INFO: [runtcl-4] Executing : report_power -file design_dijkstra_all_wrapper_power_routed.rpt -pb design_dijkstra_all_wrapper_power_summary_routed.pb -rpx design_dijkstra_all_wrapper_power_routed.rpx
+Command: report_power -file design_dijkstra_all_wrapper_power_routed.rpt -pb design_dijkstra_all_wrapper_power_summary_routed.pb -rpx design_dijkstra_all_wrapper_power_routed.rpx
+INFO: [Timing 38-35] Done setting XDC timing constraints.
+Running Vector-less Activity Propagation...
+
+Finished Running Vector-less Activity Propagation
+376 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+report_power completed successfully
+INFO: [runtcl-4] Executing : report_route_status -file design_dijkstra_all_wrapper_route_status.rpt -pb design_dijkstra_all_wrapper_route_status.pb
+INFO: [runtcl-4] Executing : report_timing_summary -max_paths 10 -file design_dijkstra_all_wrapper_timing_summary_routed.rpt -pb design_dijkstra_all_wrapper_timing_summary_routed.pb -rpx design_dijkstra_all_wrapper_timing_summary_routed.rpx -warn_on_violation 
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+CRITICAL WARNING: [Timing 38-282] The design failed to meet the timing requirements. Please see the timing summary report for details on the timing violations.
+WARNING: [Timing 38-436] There are set_bus_skew constraint(s) in this design. Please run report_bus_skew to ensure that bus skew requirements are met.
+INFO: [runtcl-4] Executing : report_incremental_reuse -file design_dijkstra_all_wrapper_incremental_reuse_routed.rpt
+INFO: [Vivado_Tcl 4-1062] Incremental flow is disabled. No incremental reuse Info to report.
+INFO: [runtcl-4] Executing : report_clock_utilization -file design_dijkstra_all_wrapper_clock_utilization_routed.rpt
+INFO: [runtcl-4] Executing : report_bus_skew -warn_on_violation -file design_dijkstra_all_wrapper_bus_skew_routed.rpt -pb design_dijkstra_all_wrapper_bus_skew_routed.pb -rpx design_dijkstra_all_wrapper_bus_skew_routed.rpx
+INFO: [Timing 38-91] UpdateTimingParams: Speed grade: -1, Delay Type: min_max.
+INFO: [Timing 38-191] Multithreading enabled for timing update using a maximum of 2 CPUs
+Command: write_bitstream -force design_dijkstra_all_wrapper.bit
+Attempting to get a license for feature 'Implementation' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Implementation' and/or device 'xc7z020'
+Running DRC as a precondition to command write_bitstream
+INFO: [IP_Flow 19-1839] IP Catalog is up to date.
+INFO: [DRC 23-27] Running DRC with 2 threads
+WARNING: [DRC PDRC-153] Gated clock check: Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node__0 is a gated clock net sourced by a combinational pin design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node_reg[4]_i_1/O, cell design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node_reg[4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
+WARNING: [DRC RTSTAT-10] No routable loads: 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gr1.gr1_int.rfwft/aempty_fwft_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg[2:0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD7_CTL/ctl_reg_en_2[1], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_capture[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_drck[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_switch/m_bscan_runtest[0], dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwhf.whf/overflow, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_RD/U_RD_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_rdfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.rd/gras.rsts/ram_empty_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/gntv_or_sync_fifo.gl0.wr/gwas.wsts/ram_full_i, dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD6_WR/U_WR_FIFO/SUBCORE_FIFO.xsdbm_v3_0_0_wrfifo_inst/inst_fifo_gen/gconvfifo.rf/grf.rf/rstblk/rd_rst_reg[0], dbg_hub/inst/BSCANID.u_xsdbm_id/SWITCH_N_EXT_BSCAN.bscan_inst/s_bscan_tms, design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[13], design_dijkstra_all_i/ila_0/U0/ila_core_inst/u_ila_regs/U_XSDB_SLAVE/s_daddr_o[14]... and (the first 15 of 23 listed).
+WARNING: [DRC ZPS7-1] PS7 block required: The PS7 cell must be used in this Zynq design in order to enable correct default configuration.
+INFO: [Vivado 12-3199] DRC finished with 0 Errors, 3 Warnings
+INFO: [Vivado 12-3200] Please refer to the DRC report (report_drc) for more information.
+INFO: [Designutils 20-2272] Running write_bitstream with 2 threads.
+Loading data files...
+Loading site data...
+Loading route data...
+Processing options...
+Creating bitmap...
+Creating bitstream...
+Writing bitstream ./design_dijkstra_all_wrapper.bit...
+INFO: [Vivado 12-1842] Bitgen Completed Successfully.
+INFO: [Project 1-120] WebTalk data collection is mandatory when using a WebPACK part without a full Vivado license. To see the specific WebTalk data collected for your design, open the usage_statistics_webtalk.html or usage_statistics_webtalk.xml file in the implementation directory.
+INFO: [Common 17-186] 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/usage_statistics_webtalk.xml' has been successfully sent to Xilinx on Tue Jun  7 16:27:18 2022. For additional details about this file, please refer to the WebTalk help file at D:/Programmes/Vivado/2020.2/doc/webtalk_introduction.html.
+INFO: [Common 17-83] Releasing license: Implementation
+13 Infos, 3 Warnings, 0 Critical Warnings and 0 Errors encountered.
+write_bitstream completed successfully
+write_bitstream: Time (s): cpu = 00:00:18 ; elapsed = 00:00:20 . Memory (MB): peak = 2687.672 ; gain = 464.848
+INFO: [Common 17-206] Exiting Vivado at Tue Jun  7 16:27:18 2022...

@@ -1,0 +1,73 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.53617",
+   "Default View_TopLeft":"-289,-131",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -210 -y 710 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -210 -y 180 -defaultsOSRD
+preplace port en -pg 1 -lvl 0 -x -210 -y 690 -defaultsOSRD
+preplace port flag_finished -pg 1 -lvl 6 -x 2100 -y 500 -defaultsOSRD
+preplace portBus led_c -pg 1 -lvl 6 -x 2100 -y 640 -defaultsOSRD
+preplace portBus led_u -pg 1 -lvl 6 -x 2100 -y 370 -defaultsOSRD
+preplace portBus led_n -pg 1 -lvl 6 -x 2100 -y 290 -defaultsOSRD
+preplace inst comparateur1_0 -pg 1 -lvl 3 -x 840 -y 480 -defaultsOSRD
+preplace inst comparateur2_0 -pg 1 -lvl 2 -x 420 -y 420 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 840 -y 610 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -x 420 -y 220 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 840 -y 710 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1350 -y 240 -defaultsOSRD
+preplace inst ROM_0 -pg 1 -lvl 4 -x 1350 -y 470 -defaultsOSRD
+preplace inst dpram_0 -pg 1 -lvl 4 -x 1350 -y 700 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 1 -x 80 -y 90 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 420 -y 560 -defaultsOSRD
+preplace inst UPDATE_RAM_0 -pg 1 -lvl 5 -x 1790 -y 280 -defaultsOSRD
+preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 5 -x 1790 -y 570 -defaultsOSRD
+preplace inst NEAREST_NODE_0 -pg 1 -lvl 3 -x 840 -y 160 -defaultsOSRD
+preplace netloc clk_0_1 1 0 5 -140 370 210 630 600 350 1100 110 1570
+preplace netloc rst_n_0_1 1 0 5 -190 380 190 640 580 -40 N -40 1620
+preplace netloc en_0_1 1 0 5 NJ 690 170 770 NJ 770 1070J 560 1630J
+preplace netloc NEAREST_NODE_0_flag_node 1 3 2 1020J 60 1580J
+preplace netloc NEAREST_NODE_0_flag_end_write 1 3 2 1020J 80 1530J
+preplace netloc NEAREST_NODE_0_next_node 1 3 2 1020J 100 1520J
+preplace netloc NEAREST_NODE_0_comp_in1 1 0 4 -120 430 200 790 NJ 790 1020
+preplace netloc NEAREST_NODE_0_comp_in2 1 0 4 -110 450 180 800 NJ 800 1010
+preplace netloc NEAREST_NODE_0_addr_ram 1 0 4 -60 820 N 820 N 820 1040
+preplace netloc DIJKSTRA_CONTROLLER_0_en_NearestNode 1 0 6 -10 320 170 140 560 -60 NJ -60 NJ -60 2010J
+preplace netloc DIJKSTRA_CONTROLLER_0_node_seen 1 0 6 -30 330 190 150 570 -30 NJ -30 1630 130 1970J
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_read_path 1 2 4 670 -50 NJ -50 NJ -50 2040J
+preplace netloc comparateur2_0_comp_out 1 0 3 -130 670 N 670 620
+preplace netloc dpram_0_data_out_b 1 0 5 -20 360 210 160 660 -20 NJ -20 1500
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_finished 1 5 1 N 500
+preplace netloc DIJKSTRA_CONTROLLER_0_en_UpdateRam 1 0 6 -70 680 N 680 640 370 N 370 1590 710 1950J
+preplace netloc DIJKSTRA_CONTROLLER_0_node 1 0 6 -40 780 N 780 N 780 1110 580 1550 730 1960J
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_init 1 0 6 -80 650 N 650 630 380 N 380 1600 720 1940J
+preplace netloc comparateur1_0_comp_out 1 3 2 1060 120 1560
+preplace netloc UPDATE_RAM_0_en_rom 1 3 3 1140 70 NJ 70 1950
+preplace netloc UPDATE_RAM_0_addr_rom 1 3 3 1110 50 NJ 50 1960
+preplace netloc ROM_0_data_rom 1 4 1 1540 340n
+preplace netloc dpram_0_data_out_a 1 4 1 1610 360n
+preplace netloc UPDATE_RAM_0_flag_RAM 1 0 6 -50 660 N 660 650 390 N 390 1510 430 1940
+preplace netloc UPDATE_RAM_0_comp_in1 1 2 4 660 840 N 840 NJ 840 2030
+preplace netloc UPDATE_RAM_0_comp_in2 1 2 4 670 850 N 850 NJ 850 2020
+preplace netloc UPDATE_RAM_0_addr_ram 1 0 6 -160 830 N 830 N 830 1130 830 NJ 830 1980
+preplace netloc UPDATE_RAM_0_din_ram 1 0 6 -170 860 N 860 N 860 1120 860 NJ 860 2000
+preplace netloc UPDATE_RAM_0_we_ram 1 0 6 -150 870 N 870 N 870 1140 870 NJ 870 1990
+preplace netloc xlconstant_1_dout 1 2 1 610J 220n
+preplace netloc xlconstant_0_dout 1 3 2 1060 550 N
+preplace netloc xlconstant_2_dout 1 3 2 1090 570 N
+preplace netloc NEAREST_NODE_0_addr_ram_ext 1 3 1 1090 190n
+preplace netloc NEAREST_NODE_0_din_ram_ext 1 3 1 1090 210n
+preplace netloc blk_mem_gen_0_douta 1 2 2 670 330 1050J
+preplace netloc NEAREST_NODE_0_en_ram_ext 1 3 1 1080 230n
+preplace netloc NEAREST_NODE_0_we_ram_ext 1 3 1 1070 250n
+preplace netloc DIJKSTRA_CONTROLLER_0_led_c 1 0 6 -180 810 N 810 N 810 1100 820 N 820 2060
+preplace netloc UPDATE_RAM_0_led_u 1 0 6 -90 350 180 -10 N -10 N -10 N -10 2060
+preplace netloc NEAREST_NODE_0_led_n 1 0 6 -100 340 200 330 590 340 1030J 90 NJ 90 2050J
+preplace netloc clk_1 1 0 2 -190J 640 170
+levelinfo -pg 1 -210 80 420 840 1350 1790 2100
+pagesize -pg 1 -db -bbox -sgen -290 -140 2230 880
+"
+}
+0

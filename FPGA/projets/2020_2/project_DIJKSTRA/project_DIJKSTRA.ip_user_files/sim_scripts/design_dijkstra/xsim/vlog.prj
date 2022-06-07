@@ -1,0 +1,8 @@
+verilog xil_defaultlib --include "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra/ipshared/d0f7" \
+"../../../bd/design_dijkstra/ip/design_dijkstra_xlconstant_0_0/sim/design_dijkstra_xlconstant_0_0.v" \
+"../../../bd/design_dijkstra/ip/design_dijkstra_xlconstant_1_0/sim/design_dijkstra_xlconstant_1_0.v" \
+"../../../bd/design_dijkstra/ip/design_dijkstra_xlconstant_2_0/sim/design_dijkstra_xlconstant_2_0.v" \
+
+verilog xil_defaultlib "glbl.v"
+
+nosort
