@@ -331,7 +331,7 @@ proc create_root_design { parentCell } {
   # Create instance: xlconstant_2, and set properties
   set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {16} \
+   CONFIG.CONST_VAL {15} \
    CONFIG.CONST_WIDTH {5} \
  ] $xlconstant_2
 

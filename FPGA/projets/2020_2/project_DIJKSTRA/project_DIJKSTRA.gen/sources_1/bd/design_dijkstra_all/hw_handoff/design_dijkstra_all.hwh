@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  7 16:22:28 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  7 17:14:56 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.1" DEVICE="7z020" NAME="design_dijkstra_all" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -4616,7 +4616,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="5"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x10"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x0F"/>
         <PARAMETER NAME="Component_Name" VALUE="design_dijkstra_all_xlconstant_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>

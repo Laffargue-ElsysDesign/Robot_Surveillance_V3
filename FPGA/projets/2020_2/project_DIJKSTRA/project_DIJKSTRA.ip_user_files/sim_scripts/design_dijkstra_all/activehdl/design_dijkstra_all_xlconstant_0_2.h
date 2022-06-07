@@ -57,7 +57,7 @@
 #include "systemc.h"
 class design_dijkstra_all_xlconstant_0_2 : public sc_module {
   public:
-xlconstant_v1_1_7<5,16> mod;
+xlconstant_v1_1_7<5,15> mod;
   sc_out< sc_bv<5> > dout;
 design_dijkstra_all_xlconstant_0_2 (sc_core::sc_module_name name);
   };

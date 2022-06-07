@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Jun  7 15:27:18 2022
+// Date        : Tue Jun  7 16:08:26 2022
 // Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_sim_netlist.v
@@ -93,37 +93,37 @@ endmodule
 module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
    (led_c,
     en_NearestNode,
-    flag_init,
     node_seen,
-    node,
     en_UpdateRam,
+    flag_init,
+    node,
     flag_read_path,
     flag_finished,
     clk,
     end_node,
-    rst_n,
     next_node,
-    en,
-    start_node,
-    flag_RAM,
+    rst_n,
     flag_end_write,
+    en,
+    flag_RAM,
+    start_node,
     flag_node);
   output [1:0]led_c;
   output en_NearestNode;
-  output flag_init;
   output [16:0]node_seen;
-  output [9:0]node;
   output en_UpdateRam;
+  output flag_init;
+  output [9:0]node;
   output flag_read_path;
   output flag_finished;
   input clk;
   input [4:0]end_node;
-  input rst_n;
   input [9:0]next_node;
-  input en;
-  input [4:0]start_node;
-  input flag_RAM;
+  input rst_n;
   input flag_end_write;
+  input en;
+  input flag_RAM;
+  input [4:0]start_node;
   input flag_node;
 
   wire \FSM_sequential_current_state[1]_i_1_n_0 ;
@@ -216,17 +216,21 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   wire prev_flag_node_i_1_n_0;
   wire rst_n;
   wire [4:0]s_end_node;
+  wire s_end_node__0;
+  wire [9:0]s_next_node;
+  wire s_next_node0;
+  wire \s_next_node[9]_i_1_n_0 ;
   wire [4:0]start_node;
 
   LUT6 #(
-    .INIT(64'h000FAACCFF0FAACC)) 
+    .INIT(64'h3300AAF033FFAAF0)) 
     \FSM_sequential_current_state[0]_i_1 
        (.I0(prev_flag_node),
-        .I1(en),
-        .I2(flag_RAM),
+        .I1(flag_end_write),
+        .I2(en),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(flag_end_write),
+        .I5(flag_RAM),
         .O(next_state));
   LUT1 #(
     .INIT(2'h1)) 
@@ -250,8 +254,8 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hFFFFFFFF00004100)) 
     en_NearestNode_INST_0
-       (.I0(en_UpdateRam_INST_0_i_3_n_0),
-        .I1(next_node[4]),
+       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(s_next_node[4]),
         .I2(s_end_node[4]),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -268,47 +272,46 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I4(led_c[0]),
         .O(en_NearestNode_INST_0_i_1_n_0));
   LUT6 #(
-    .INIT(64'hEAAAEAEAEAEAEAAA)) 
+    .INIT(64'hFFFFFFFF80888880)) 
     en_UpdateRam_INST_0
        (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
-        .I2(prev_flag_node),
-        .I3(en_UpdateRam_INST_0_i_3_n_0),
-        .I4(next_node[4]),
-        .I5(s_end_node[4]),
+        .I1(prev_flag_node),
+        .I2(en_UpdateRam_INST_0_i_2_n_0),
+        .I3(s_next_node[4]),
+        .I4(s_end_node[4]),
+        .I5(en_UpdateRam_INST_0_i_3_n_0),
         .O(en_UpdateRam));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h002E)) 
-    en_UpdateRam_INST_0_i_1
-       (.I0(en),
-        .I1(led_c[0]),
-        .I2(flag_RAM),
-        .I3(led_c[1]),
-        .O(en_UpdateRam_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    en_UpdateRam_INST_0_i_2
+    en_UpdateRam_INST_0_i_1
        (.I0(led_c[1]),
         .I1(led_c[0]),
-        .O(en_UpdateRam_INST_0_i_2_n_0));
+        .O(en_UpdateRam_INST_0_i_1_n_0));
   LUT5 #(
     .INIT(32'hFFFF6FF6)) 
-    en_UpdateRam_INST_0_i_3
+    en_UpdateRam_INST_0_i_2
        (.I0(s_end_node[1]),
-        .I1(next_node[1]),
+        .I1(s_next_node[1]),
         .I2(s_end_node[0]),
-        .I3(next_node[0]),
+        .I3(s_next_node[0]),
         .I4(en_UpdateRam_INST_0_i_4_n_0),
+        .O(en_UpdateRam_INST_0_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT4 #(
+    .INIT(16'h0704)) 
+    en_UpdateRam_INST_0_i_3
+       (.I0(flag_RAM),
+        .I1(led_c[0]),
+        .I2(led_c[1]),
+        .I3(en),
         .O(en_UpdateRam_INST_0_i_3_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h6FF6)) 
     en_UpdateRam_INST_0_i_4
-       (.I0(next_node[2]),
+       (.I0(s_next_node[2]),
         .I1(s_end_node[2]),
-        .I2(next_node[3]),
+        .I2(s_next_node[3]),
         .I3(s_end_node[3]),
         .O(en_UpdateRam_INST_0_i_4_n_0));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
@@ -319,19 +322,19 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I1(led_c[0]),
         .I2(flag_end_write),
         .O(flag_finished));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT3 #(
-    .INIT(8'h10)) 
+    .INIT(8'h02)) 
     flag_init_INST_0
-       (.I0(led_c[1]),
-        .I1(led_c[0]),
-        .I2(en),
+       (.I0(en),
+        .I1(led_c[1]),
+        .I2(led_c[0]),
         .O(flag_init));
   LUT6 #(
     .INIT(64'h5530000055000000)) 
     flag_read_path_INST_0
        (.I0(flag_end_write),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(flag_read_path_INST_0_i_1_n_0),
         .I3(led_c[0]),
         .I4(led_c[1]),
@@ -341,14 +344,14 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     .INIT(4'h9)) 
     flag_read_path_INST_0_i_1
        (.I0(s_end_node[4]),
-        .I1(next_node[4]),
+        .I1(s_next_node[4]),
         .O(flag_read_path_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
   LUT4 #(
-    .INIT(16'h3F10)) 
+    .INIT(16'h5F10)) 
     init_node_i_1
-       (.I0(led_c[0]),
-        .I1(led_c[1]),
+       (.I0(led_c[1]),
+        .I1(led_c[0]),
         .I2(rst_n),
         .I3(init_node),
         .O(init_node_i_1_n_0));
@@ -364,18 +367,18 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
        (.I0(\node[0]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
         .I2(start_node[0]),
-        .I3(next_node[0]),
+        .I3(s_next_node[0]),
         .I4(\node[1]_INST_0_i_2_n_0 ),
         .O(node[0]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[0]_INST_0_i_1 
-       (.I0(next_node[0]),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(s_next_node[0]),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
         .I2(prev_flag_node),
         .I3(s_end_node[0]),
         .I4(s_end_node[1]),
-        .I5(next_node[1]),
+        .I5(s_next_node[1]),
         .O(\node[0]_INST_0_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFEAEAEA)) 
@@ -383,26 +386,26 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
        (.I0(\node[1]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
         .I2(start_node[1]),
-        .I3(next_node[1]),
+        .I3(s_next_node[1]),
         .I4(\node[1]_INST_0_i_2_n_0 ),
         .O(node[1]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[1]_INST_0_i_1 
-       (.I0(next_node[1]),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(s_next_node[1]),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
         .I2(prev_flag_node),
         .I3(s_end_node[1]),
         .I4(s_end_node[0]),
-        .I5(next_node[0]),
+        .I5(s_next_node[0]),
         .O(\node[1]_INST_0_i_1_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF28AAAA28)) 
     \node[1]_INST_0_i_2 
-       (.I0(\node[4]_INST_0_i_2_n_0 ),
-        .I1(next_node[2]),
+       (.I0(\node[4]_INST_0_i_3_n_0 ),
+        .I1(s_next_node[2]),
         .I2(s_end_node[2]),
-        .I3(next_node[3]),
+        .I3(s_next_node[3]),
         .I4(s_end_node[3]),
         .I5(\node[9]_INST_0_i_1_n_0 ),
         .O(\node[1]_INST_0_i_2_n_0 ));
@@ -412,18 +415,18 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
        (.I0(\node[2]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
         .I2(start_node[2]),
-        .I3(next_node[2]),
+        .I3(s_next_node[2]),
         .I4(\node[3]_INST_0_i_3_n_0 ),
         .O(node[2]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[2]_INST_0_i_1 
-       (.I0(next_node[2]),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(s_next_node[2]),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
         .I2(prev_flag_node),
         .I3(s_end_node[2]),
         .I4(s_end_node[3]),
-        .I5(next_node[3]),
+        .I5(s_next_node[3]),
         .O(\node[2]_INST_0_i_1_n_0 ));
   LUT5 #(
     .INIT(32'hFFEAEAEA)) 
@@ -431,20 +434,20 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
        (.I0(\node[3]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
         .I2(start_node[3]),
-        .I3(next_node[3]),
+        .I3(s_next_node[3]),
         .I4(\node[3]_INST_0_i_3_n_0 ),
         .O(node[3]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[3]_INST_0_i_1 
-       (.I0(next_node[3]),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(s_next_node[3]),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
         .I2(prev_flag_node),
         .I3(s_end_node[3]),
         .I4(s_end_node[2]),
-        .I5(next_node[2]),
+        .I5(s_next_node[2]),
         .O(\node[3]_INST_0_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT4 #(
     .INIT(16'h00E2)) 
     \node[3]_INST_0_i_2 
@@ -456,24 +459,24 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hFFFFFFFF28AAAA28)) 
     \node[3]_INST_0_i_3 
-       (.I0(\node[4]_INST_0_i_2_n_0 ),
-        .I1(next_node[0]),
+       (.I0(\node[4]_INST_0_i_3_n_0 ),
+        .I1(s_next_node[0]),
         .I2(s_end_node[0]),
-        .I3(next_node[1]),
+        .I3(s_next_node[1]),
         .I4(s_end_node[1]),
         .I5(\node[9]_INST_0_i_1_n_0 ),
         .O(\node[3]_INST_0_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFEAEAAAEA)) 
+    .INIT(64'hFEEEFEEEEEEEFEEE)) 
     \node[4]_INST_0 
        (.I0(\node[4]_INST_0_i_1_n_0 ),
-        .I1(next_node[4]),
-        .I2(\node[4]_INST_0_i_2_n_0 ),
-        .I3(s_end_node[4]),
-        .I4(en_UpdateRam_INST_0_i_3_n_0),
-        .I5(\node[4]_INST_0_i_3_n_0 ),
+        .I1(\node[4]_INST_0_i_2_n_0 ),
+        .I2(s_next_node[4]),
+        .I3(\node[4]_INST_0_i_3_n_0 ),
+        .I4(s_end_node[4]),
+        .I5(en_UpdateRam_INST_0_i_2_n_0),
         .O(node[4]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
     .INIT(32'h45400000)) 
     \node[4]_INST_0_i_1 
@@ -483,100 +486,100 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I3(en),
         .I4(start_node[4]),
         .O(\node[4]_INST_0_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT4 #(
+    .INIT(16'h0400)) 
+    \node[4]_INST_0_i_2 
+       (.I0(init_node),
+        .I1(s_next_node[4]),
+        .I2(led_c[1]),
+        .I3(led_c[0]),
+        .O(\node[4]_INST_0_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h40)) 
-    \node[4]_INST_0_i_2 
+    \node[4]_INST_0_i_3 
        (.I0(led_c[0]),
         .I1(led_c[1]),
         .I2(prev_flag_node),
-        .O(\node[4]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT4 #(
-    .INIT(16'h0040)) 
-    \node[4]_INST_0_i_3 
-       (.I0(led_c[1]),
-        .I1(next_node[4]),
-        .I2(led_c[0]),
-        .I3(init_node),
         .O(\node[4]_INST_0_i_3_n_0 ));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[5]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(next_node[5]),
+        .I5(s_next_node[5]),
         .O(node[5]));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[6]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(next_node[6]),
+        .I5(s_next_node[6]),
         .O(node[6]));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[7]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(next_node[7]),
+        .I5(s_next_node[7]),
         .O(node[7]));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[8]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(next_node[8]),
+        .I5(s_next_node[8]),
         .O(node[8]));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[9]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I1(en_UpdateRam_INST_0_i_2_n_0),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
-        .I5(next_node[9]),
+        .I5(s_next_node[9]),
         .O(node[9]));
   LUT6 #(
     .INIT(64'h003C550000005500)) 
     \node[9]_INST_0_i_1 
        (.I0(init_node),
         .I1(s_end_node[4]),
-        .I2(next_node[4]),
+        .I2(s_next_node[4]),
         .I3(led_c[0]),
         .I4(led_c[1]),
         .I5(prev_flag_node),
         .O(\node[9]_INST_0_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[0]_i_1 
        (.I0(\node_seen[0]_i_2_n_0 ),
         .I1(\node_seen[0]_i_3_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[0]),
         .O(\node_seen[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h00004000)) 
     \node_seen[0]_i_2 
        (.I0(next_node[4]),
-        .I1(led_c[1]),
-        .I2(rst_n),
+        .I1(rst_n),
+        .I2(led_c[1]),
         .I3(flag_node),
         .I4(next_node[0]),
         .O(\node_seen[0]_i_2_n_0 ));
@@ -601,7 +604,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBABBBBB88A88888)) 
     \node_seen[10]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[10]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -621,7 +624,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBABBBBB88A88888)) 
     \node_seen[11]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[11]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -641,7 +644,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBABBBBB88A88888)) 
     \node_seen[12]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[12]_i_2_n_0 ),
         .I2(next_node[2]),
         .I3(next_node[1]),
@@ -661,7 +664,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBABBBBB88A88888)) 
     \node_seen[13]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[13]_i_2_n_0 ),
         .I2(next_node[2]),
         .I3(next_node[1]),
@@ -681,7 +684,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hABBBBBBBA8888888)) 
     \node_seen[14]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[14]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -698,7 +701,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I4(end_node[1]),
         .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[14]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hA8AA)) 
     \node_seen[14]_i_3 
@@ -712,15 +715,15 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \node_seen[14]_i_4 
        (.I0(next_node[0]),
         .I1(flag_node),
-        .I2(rst_n),
-        .I3(led_c[1]),
+        .I2(led_c[1]),
+        .I3(rst_n),
         .I4(next_node[4]),
         .I5(next_node[3]),
         .O(\node_seen[14]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hABBBBBBBA8888888)) 
     \node_seen[15]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[15]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -737,7 +740,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I4(end_node[1]),
         .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[15]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'hA2AA)) 
     \node_seen[15]_i_3 
@@ -751,26 +754,26 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \node_seen[15]_i_4 
        (.I0(next_node[0]),
         .I1(flag_node),
-        .I2(rst_n),
-        .I3(led_c[1]),
+        .I2(led_c[1]),
+        .I3(rst_n),
         .I4(next_node[4]),
         .I5(next_node[3]),
         .O(\node_seen[15]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT3 #(
-    .INIT(8'h84)) 
+    .INIT(8'h90)) 
     \node_seen[15]_i_5 
        (.I0(led_c[0]),
-        .I1(rst_n),
-        .I2(led_c[1]),
+        .I1(led_c[1]),
+        .I2(rst_n),
         .O(\node_seen[15]_i_5_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[16]_i_1 
        (.I0(\node_seen[16]_i_2_n_0 ),
         .I1(\node_seen[16]_i_3_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[16]),
         .O(\node_seen[16]_i_1_n_0 ));
@@ -787,14 +790,14 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'h0000800000000000)) 
     \node_seen[16]_i_3 
-       (.I0(led_c[1]),
-        .I1(rst_n),
+       (.I0(rst_n),
+        .I1(led_c[1]),
         .I2(flag_node),
         .I3(next_node[4]),
         .I4(next_node[0]),
         .I5(\node_seen[16]_i_4_n_0 ),
         .O(\node_seen[16]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \node_seen[16]_i_4 
@@ -803,22 +806,22 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I2(next_node[3]),
         .O(\node_seen[16]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[1]_i_1 
        (.I0(\node_seen[1]_i_2_n_0 ),
         .I1(\node_seen[1]_i_3_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[1]),
         .O(\node_seen[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'h40000000)) 
     \node_seen[1]_i_2 
        (.I0(next_node[4]),
-        .I1(led_c[1]),
-        .I2(rst_n),
+        .I1(rst_n),
+        .I2(led_c[1]),
         .I3(flag_node),
         .I4(next_node[0]),
         .O(\node_seen[1]_i_2_n_0 ));
@@ -840,12 +843,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I2(end_node[0]),
         .O(\node_seen[1]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[2]_i_1 
        (.I0(\node_seen[6]_i_2_n_0 ),
         .I1(\node_seen[2]_i_2_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[2]),
         .O(\node_seen[2]_i_1_n_0 ));
@@ -860,12 +863,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I5(\node_seen[3]_i_3_n_0 ),
         .O(\node_seen[2]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[3]_i_1 
        (.I0(\node_seen[7]_i_2_n_0 ),
         .I1(\node_seen[3]_i_2_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[3]),
         .O(\node_seen[3]_i_1_n_0 ));
@@ -879,6 +882,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I4(end_node[0]),
         .I5(\node_seen[3]_i_3_n_0 ),
         .O(\node_seen[3]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \node_seen[3]_i_3 
@@ -886,12 +890,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I1(next_node[2]),
         .O(\node_seen[3]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[4]_i_1 
        (.I0(\node_seen[6]_i_2_n_0 ),
         .I1(\node_seen[4]_i_2_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[4]),
         .O(\node_seen[4]_i_1_n_0 ));
@@ -906,12 +910,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I5(\node_seen[5]_i_3_n_0 ),
         .O(\node_seen[4]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[5]_i_1 
        (.I0(\node_seen[7]_i_2_n_0 ),
         .I1(\node_seen[5]_i_2_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[5]),
         .O(\node_seen[5]_i_1_n_0 ));
@@ -933,12 +937,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I1(next_node[1]),
         .O(\node_seen[5]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[6]_i_1 
        (.I0(\node_seen[6]_i_2_n_0 ),
         .I1(\node_seen[6]_i_3_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[6]),
         .O(\node_seen[6]_i_1_n_0 ));
@@ -947,8 +951,8 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \node_seen[6]_i_2 
        (.I0(next_node[0]),
         .I1(flag_node),
-        .I2(rst_n),
-        .I3(led_c[1]),
+        .I2(led_c[1]),
+        .I3(rst_n),
         .I4(next_node[4]),
         .I5(next_node[3]),
         .O(\node_seen[6]_i_2_n_0 ));
@@ -963,12 +967,12 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I5(\node_seen[7]_i_4_n_0 ),
         .O(\node_seen[6]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0777F0F700008080)) 
+    .INIT(64'h0777FF0700008800)) 
     \node_seen[7]_i_1 
        (.I0(\node_seen[7]_i_2_n_0 ),
         .I1(\node_seen[7]_i_3_n_0 ),
-        .I2(led_c[1]),
-        .I3(rst_n),
+        .I2(rst_n),
+        .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(node_seen[7]),
         .O(\node_seen[7]_i_1_n_0 ));
@@ -977,8 +981,8 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \node_seen[7]_i_2 
        (.I0(next_node[0]),
         .I1(flag_node),
-        .I2(rst_n),
-        .I3(led_c[1]),
+        .I2(led_c[1]),
+        .I3(rst_n),
         .I4(next_node[4]),
         .I5(next_node[3]),
         .O(\node_seen[7]_i_2_n_0 ));
@@ -992,7 +996,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .I4(end_node[0]),
         .I5(\node_seen[7]_i_4_n_0 ),
         .O(\node_seen[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \node_seen[7]_i_4 
@@ -1002,7 +1006,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBBABBBB888A8888)) 
     \node_seen[8]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[8]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -1022,7 +1026,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hBBBABBBB888A8888)) 
     \node_seen[9]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+       (.I0(en_UpdateRam_INST_0_i_1_n_0),
         .I1(\node_seen[9]_i_2_n_0 ),
         .I2(next_node[1]),
         .I3(next_node[2]),
@@ -1141,7 +1145,6 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
         .D(\node_seen[9]_i_1_n_0 ),
         .Q(node_seen[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT3 #(
     .INIT(8'hB8)) 
     prev_flag_node_i_1
@@ -1161,7 +1164,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \s_end_node_reg[0] 
        (.CLR(1'b0),
         .D(end_node[0]),
-        .G(flag_init),
+        .G(s_end_node__0),
         .GE(1'b1),
         .Q(s_end_node[0]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -1170,7 +1173,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \s_end_node_reg[1] 
        (.CLR(1'b0),
         .D(end_node[1]),
-        .G(flag_init),
+        .G(s_end_node__0),
         .GE(1'b1),
         .Q(s_end_node[1]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -1179,7 +1182,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \s_end_node_reg[2] 
        (.CLR(1'b0),
         .D(end_node[2]),
-        .G(flag_init),
+        .G(s_end_node__0),
         .GE(1'b1),
         .Q(s_end_node[2]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -1188,7 +1191,7 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \s_end_node_reg[3] 
        (.CLR(1'b0),
         .D(end_node[3]),
-        .G(flag_init),
+        .G(s_end_node__0),
         .GE(1'b1),
         .Q(s_end_node[3]));
   (* XILINX_LEGACY_PRIM = "LD" *) 
@@ -1197,9 +1200,92 @@ module design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_DIJKSTRA_CONTROLLER
     \s_end_node_reg[4] 
        (.CLR(1'b0),
         .D(end_node[4]),
-        .G(flag_init),
+        .G(s_end_node__0),
         .GE(1'b1),
         .Q(s_end_node[4]));
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    \s_end_node_reg[4]_i_1 
+       (.I0(led_c[1]),
+        .I1(led_c[0]),
+        .I2(en),
+        .O(s_end_node__0));
+  LUT3 #(
+    .INIT(8'h02)) 
+    \s_next_node[9]_i_1 
+       (.I0(rst_n),
+        .I1(led_c[1]),
+        .I2(led_c[0]),
+        .O(\s_next_node[9]_i_1_n_0 ));
+  LUT4 #(
+    .INIT(16'h4000)) 
+    \s_next_node[9]_i_2 
+       (.I0(led_c[0]),
+        .I1(prev_flag_node),
+        .I2(rst_n),
+        .I3(led_c[1]),
+        .O(s_next_node0));
+  FDRE \s_next_node_reg[0] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[0]),
+        .Q(s_next_node[0]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[1] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[1]),
+        .Q(s_next_node[1]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[2] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[2]),
+        .Q(s_next_node[2]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[3] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[3]),
+        .Q(s_next_node[3]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[4] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[4]),
+        .Q(s_next_node[4]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[5] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[5]),
+        .Q(s_next_node[5]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[6] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[6]),
+        .Q(s_next_node[6]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[7] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[7]),
+        .Q(s_next_node[7]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[8] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[8]),
+        .Q(s_next_node[8]),
+        .R(\s_next_node[9]_i_1_n_0 ));
+  FDRE \s_next_node_reg[9] 
+       (.C(clk),
+        .CE(s_next_node0),
+        .D(next_node[9]),
+        .Q(s_next_node[9]),
+        .R(\s_next_node[9]_i_1_n_0 ));
 endmodule
 `ifndef GLBL
 `define GLBL

@@ -1,0 +1,8 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/sim/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/sim/design_dijkstra_all_NEAREST_NODE_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_NEAREST_NODE_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/sim/design_dijkstra_all.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_wrapper'

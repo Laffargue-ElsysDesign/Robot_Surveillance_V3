@@ -146,7 +146,7 @@ begin
             else
                 next_state <= compare;
             end if;
-            comp_in1 <= data_ram(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr) & std_logic_vector(to_unsigned(cpt_addr,nb_bit_addr));
+            comp_in1 <=(others=>'1');
             if comp ='1' then 
                 comp_in2 <= (others=>'1'); 
             else 

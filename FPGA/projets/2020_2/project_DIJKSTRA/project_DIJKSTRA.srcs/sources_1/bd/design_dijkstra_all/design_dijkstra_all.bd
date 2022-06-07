@@ -233,7 +233,7 @@
         "inst_hier_path": "xlconstant_2",
         "parameters": {
           "CONST_VAL": {
-            "value": "16"
+            "value": "15"
           },
           "CONST_WIDTH": {
             "value": "5"
