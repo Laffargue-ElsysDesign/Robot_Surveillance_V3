@@ -171,6 +171,7 @@ proc create_root_design { parentCell } {
   set led_c [ create_bd_port -dir O -from 1 -to 0 led_c ]
   set led_n [ create_bd_port -dir O -from 1 -to 0 led_n ]
   set led_u [ create_bd_port -dir O -from 2 -to 0 led_u ]
+  set resetn [ create_bd_port -dir I -type rst resetn ]
   set rst_n [ create_bd_port -dir I -type rst rst_n ]
 
   # Create instance: DIJKSTRA_CONTROLLER_0, and set properties
@@ -299,11 +300,12 @@ proc create_root_design { parentCell } {
    CONFIG.C_DATA_DEPTH {16384} \
    CONFIG.C_ENABLE_ILA_AXI_MON {false} \
    CONFIG.C_MONITOR_TYPE {Native} \
-   CONFIG.C_NUM_OF_PROBES {17} \
+   CONFIG.C_NUM_OF_PROBES {18} \
    CONFIG.C_PROBE0_WIDTH {2} \
    CONFIG.C_PROBE14_WIDTH {10} \
    CONFIG.C_PROBE15_WIDTH {5} \
    CONFIG.C_PROBE16_WIDTH {10} \
+   CONFIG.C_PROBE17_WIDTH {16} \
    CONFIG.C_PROBE1_WIDTH {2} \
    CONFIG.C_PROBE2_WIDTH {3} \
    CONFIG.C_PROBE3_WIDTH {10} \
@@ -331,7 +333,7 @@ proc create_root_design { parentCell } {
   # Create instance: xlconstant_2, and set properties
   set xlconstant_2 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_2 ]
   set_property -dict [ list \
-   CONFIG.CONST_VAL {15} \
+   CONFIG.CONST_VAL {16} \
    CONFIG.CONST_WIDTH {5} \
  ] $xlconstant_2
 
@@ -348,7 +350,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net NEAREST_NODE_0_addr_ram_ext [get_bd_pins NEAREST_NODE_0/addr_ram_ext] [get_bd_pins blk_mem_gen_0/addra]
   connect_bd_net -net NEAREST_NODE_0_comp_in1 [get_bd_pins NEAREST_NODE_0/comp_in1] [get_bd_pins comparateur2_0/comp_in1] [get_bd_pins ila_0/probe3]
   connect_bd_net -net NEAREST_NODE_0_comp_in2 [get_bd_pins NEAREST_NODE_0/comp_in2] [get_bd_pins comparateur2_0/comp_in2] [get_bd_pins ila_0/probe4]
-  connect_bd_net -net NEAREST_NODE_0_din_ram_ext [get_bd_pins NEAREST_NODE_0/din_ram_ext] [get_bd_pins blk_mem_gen_0/dina]
+  connect_bd_net -net NEAREST_NODE_0_din_ram_ext [get_bd_pins NEAREST_NODE_0/din_ram_ext] [get_bd_pins blk_mem_gen_0/dina] [get_bd_pins ila_0/probe17]
   connect_bd_net -net NEAREST_NODE_0_en_ram_ext [get_bd_pins NEAREST_NODE_0/en_ram_ext] [get_bd_pins blk_mem_gen_0/ena]
   connect_bd_net -net NEAREST_NODE_0_flag_end_write [get_bd_pins DIJKSTRA_CONTROLLER_0/flag_end_write] [get_bd_pins NEAREST_NODE_0/flag_end_write]
   connect_bd_net -net NEAREST_NODE_0_flag_node [get_bd_pins DIJKSTRA_CONTROLLER_0/flag_node] [get_bd_pins NEAREST_NODE_0/flag_node]
@@ -373,7 +375,8 @@ proc create_root_design { parentCell } {
   connect_bd_net -net dpram_0_data_out_a [get_bd_pins UPDATE_RAM_0/data_ram] [get_bd_pins dpram_0/data_out_a]
   connect_bd_net -net dpram_0_data_out_b [get_bd_pins NEAREST_NODE_0/data_ram] [get_bd_pins dpram_0/data_out_b] [get_bd_pins ila_0/probe16]
   connect_bd_net -net en_0_1 [get_bd_ports en] [get_bd_pins DIJKSTRA_CONTROLLER_0/en]
-  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins DIJKSTRA_CONTROLLER_0/rst_n] [get_bd_pins NEAREST_NODE_0/rst_n] [get_bd_pins UPDATE_RAM_0/rst_n] [get_bd_pins clk_wiz_0/resetn] [get_bd_pins comparateur1_0/rst_n] [get_bd_pins comparateur2_0/rst_n]
+  connect_bd_net -net resetn_0_1 [get_bd_ports resetn] [get_bd_pins clk_wiz_0/resetn]
+  connect_bd_net -net rst_n_0_1 [get_bd_ports rst_n] [get_bd_pins DIJKSTRA_CONTROLLER_0/rst_n] [get_bd_pins NEAREST_NODE_0/rst_n] [get_bd_pins UPDATE_RAM_0/rst_n] [get_bd_pins comparateur1_0/rst_n] [get_bd_pins comparateur2_0/rst_n]
   connect_bd_net -net xlconstant_0_dout [get_bd_pins DIJKSTRA_CONTROLLER_0/start_node] [get_bd_pins xlconstant_0/dout]
   connect_bd_net -net xlconstant_1_dout [get_bd_pins NEAREST_NODE_0/busy_ram_ext] [get_bd_pins xlconstant_1/dout]
   connect_bd_net -net xlconstant_2_dout [get_bd_pins DIJKSTRA_CONTROLLER_0/end_node] [get_bd_pins xlconstant_2/dout]

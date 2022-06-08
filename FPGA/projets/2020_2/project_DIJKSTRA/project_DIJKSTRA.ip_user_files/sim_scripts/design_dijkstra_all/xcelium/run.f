@@ -24,8 +24,8 @@
   "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/sim/design_dijkstra_all_ila_0_0.vhd" \
   "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_sim_netlist.vhdl" \
   "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_UPDATE_RAM_0_0/sim/design_dijkstra_all_UPDATE_RAM_0_0.vhd" \
-  "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/sim/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.vhd" \
   "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/sim/design_dijkstra_all_NEAREST_NODE_0_0.vhd" \
+  "../../../bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/sim/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.vhd" \
   "../../../bd/design_dijkstra_all/sim/design_dijkstra_all.vhd" \
 -endlib
 -makelib xcelium_lib/xil_defaultlib \

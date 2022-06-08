@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------
 | Tool Version              : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date                      : Tue Jun  7 16:25:48 2022
+| Date                      : Wed Jun  8 11:19:47 2022
 | Host                      : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command                   : report_io -file design_dijkstra_all_wrapper_io_placed.rpt
 | Design                    : design_dijkstra_all_wrapper
@@ -25,7 +25,7 @@ Table of Contents
 +---------------+
 | Total User IO |
 +---------------+
-|            11 |
+|            12 |
 +---------------+
 
 
@@ -407,7 +407,7 @@ Table of Contents
 | W10        |               | High Range | IO_L16P_T2_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W11        |               | High Range | IO_L18P_T2_13           | User IO     |             |      13 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W12        |               |            | GND                     | GND         |             |         |            |      |                     |                      |     0.0 |            |           |          |      |                  |              |                   |              |
-| W13        |               | High Range | IO_L4N_T0_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
+| W13        | resetn        | High Range | IO_L4N_T0_34            | INPUT       | LVCMOS33    |      34 |            |      |                     |                 NONE |         | FIXED      |           |          |      | NONE             |              |                   |              |
 | W14        |               | High Range | IO_L8P_T1_34            | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W15        |               | High Range | IO_L10N_T1_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |
 | W16        |               | High Range | IO_L18N_T2_34           | User IO     |             |      34 |            |      |                     |                      |         |            |           |          |      |                  |              |                   |              |

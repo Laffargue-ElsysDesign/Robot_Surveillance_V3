@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Jun  7 16:08:26 2022
+// Date        : Wed Jun  8 10:26:34 2022
 // Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim -rename_top decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix -prefix
 //               decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_ design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_sim_netlist.v
@@ -16,56 +16,58 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
    (led_c,
     en_NearestNode,
     node_seen,
-    en_UpdateRam,
     flag_init,
+    en_UpdateRam,
     node,
     flag_read_path,
     flag_finished,
     clk,
     end_node,
     next_node,
+    start_node,
     rst_n,
     flag_end_write,
-    en,
     flag_RAM,
-    start_node,
+    en,
     flag_node);
   output [1:0]led_c;
   output en_NearestNode;
   output [16:0]node_seen;
-  output en_UpdateRam;
   output flag_init;
+  output en_UpdateRam;
   output [9:0]node;
   output flag_read_path;
   output flag_finished;
   input clk;
   input [4:0]end_node;
   input [9:0]next_node;
+  input [4:0]start_node;
   input rst_n;
   input flag_end_write;
-  input en;
   input flag_RAM;
-  input [4:0]start_node;
+  input en;
   input flag_node;
 
   wire \FSM_sequential_current_state[1]_i_1_n_0 ;
   wire clk;
   wire en;
   wire en_NearestNode;
-  wire en_NearestNode_INST_0_i_1_n_0;
   wire en_UpdateRam;
   wire en_UpdateRam_INST_0_i_1_n_0;
   wire en_UpdateRam_INST_0_i_2_n_0;
   wire en_UpdateRam_INST_0_i_3_n_0;
-  wire en_UpdateRam_INST_0_i_4_n_0;
   wire [4:0]end_node;
   wire flag_RAM;
   wire flag_end_write;
   wire flag_finished;
   wire flag_init;
+  wire flag_init_INST_0_i_1_n_0;
+  wire flag_init_INST_0_i_2_n_0;
+  wire flag_init_INST_0_i_3_n_0;
+  wire flag_init_INST_0_i_4_n_0;
+  wire flag_init_INST_0_i_5_n_0;
   wire flag_node;
   wire flag_read_path;
-  wire flag_read_path_INST_0_i_1_n_0;
   wire init_node;
   wire init_node_i_1_n_0;
   wire [1:0]led_c;
@@ -82,24 +84,20 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
   wire \node[4]_INST_0_i_1_n_0 ;
   wire \node[4]_INST_0_i_2_n_0 ;
   wire \node[4]_INST_0_i_3_n_0 ;
+  wire \node[4]_INST_0_i_4_n_0 ;
+  wire \node[4]_INST_0_i_5_n_0 ;
   wire \node[9]_INST_0_i_1_n_0 ;
+  wire \node[9]_INST_0_i_2_n_0 ;
   wire [16:0]node_seen;
   wire \node_seen[0]_i_1_n_0 ;
-  wire \node_seen[0]_i_2_n_0 ;
-  wire \node_seen[0]_i_3_n_0 ;
-  wire \node_seen[0]_i_4_n_0 ;
   wire \node_seen[10]_i_1_n_0 ;
-  wire \node_seen[10]_i_2_n_0 ;
   wire \node_seen[11]_i_1_n_0 ;
   wire \node_seen[11]_i_2_n_0 ;
   wire \node_seen[12]_i_1_n_0 ;
-  wire \node_seen[12]_i_2_n_0 ;
   wire \node_seen[13]_i_1_n_0 ;
   wire \node_seen[13]_i_2_n_0 ;
   wire \node_seen[14]_i_1_n_0 ;
   wire \node_seen[14]_i_2_n_0 ;
-  wire \node_seen[14]_i_3_n_0 ;
-  wire \node_seen[14]_i_4_n_0 ;
   wire \node_seen[15]_i_1_n_0 ;
   wire \node_seen[15]_i_2_n_0 ;
   wire \node_seen[15]_i_3_n_0 ;
@@ -109,47 +107,34 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
   wire \node_seen[16]_i_2_n_0 ;
   wire \node_seen[16]_i_3_n_0 ;
   wire \node_seen[16]_i_4_n_0 ;
+  wire \node_seen[16]_i_5_n_0 ;
   wire \node_seen[1]_i_1_n_0 ;
-  wire \node_seen[1]_i_2_n_0 ;
-  wire \node_seen[1]_i_3_n_0 ;
-  wire \node_seen[1]_i_4_n_0 ;
   wire \node_seen[2]_i_1_n_0 ;
-  wire \node_seen[2]_i_2_n_0 ;
   wire \node_seen[3]_i_1_n_0 ;
-  wire \node_seen[3]_i_2_n_0 ;
-  wire \node_seen[3]_i_3_n_0 ;
   wire \node_seen[4]_i_1_n_0 ;
-  wire \node_seen[4]_i_2_n_0 ;
   wire \node_seen[5]_i_1_n_0 ;
-  wire \node_seen[5]_i_2_n_0 ;
-  wire \node_seen[5]_i_3_n_0 ;
   wire \node_seen[6]_i_1_n_0 ;
-  wire \node_seen[6]_i_2_n_0 ;
-  wire \node_seen[6]_i_3_n_0 ;
   wire \node_seen[7]_i_1_n_0 ;
-  wire \node_seen[7]_i_2_n_0 ;
-  wire \node_seen[7]_i_3_n_0 ;
-  wire \node_seen[7]_i_4_n_0 ;
   wire \node_seen[8]_i_1_n_0 ;
-  wire \node_seen[8]_i_2_n_0 ;
   wire \node_seen[9]_i_1_n_0 ;
   wire \node_seen[9]_i_2_n_0 ;
   wire prev_flag_node;
   wire prev_flag_node_i_1_n_0;
   wire rst_n;
   wire [4:0]s_end_node;
-  wire s_end_node__0;
   wire [9:0]s_next_node;
   wire s_next_node0;
   wire \s_next_node[9]_i_1_n_0 ;
+  wire [4:0]s_start_node;
+  wire s_start_node_0;
   wire [4:0]start_node;
 
   LUT6 #(
-    .INIT(64'h3300AAF033FFAAF0)) 
+    .INIT(64'hF3F0FAF0F3FFFAF0)) 
     \FSM_sequential_current_state[0]_i_1 
        (.I0(prev_flag_node),
         .I1(flag_end_write),
-        .I2(en),
+        .I2(flag_init),
         .I3(led_c[1]),
         .I4(led_c[0]),
         .I5(flag_RAM),
@@ -174,69 +159,52 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .D(en_NearestNode),
         .Q(led_c[1]));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00004100)) 
+    .INIT(64'h1C3C1030DCFCD0F0)) 
     en_NearestNode_INST_0
-       (.I0(en_UpdateRam_INST_0_i_2_n_0),
-        .I1(s_next_node[4]),
-        .I2(s_end_node[4]),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
-        .I5(en_NearestNode_INST_0_i_1_n_0),
-        .O(en_NearestNode));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
-  LUT5 #(
-    .INIT(32'h55CC0F00)) 
-    en_NearestNode_INST_0_i_1
-       (.I0(flag_end_write),
-        .I1(flag_RAM),
-        .I2(prev_flag_node),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
-        .O(en_NearestNode_INST_0_i_1_n_0));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF80888880)) 
-    en_UpdateRam_INST_0
        (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(prev_flag_node),
-        .I2(en_UpdateRam_INST_0_i_2_n_0),
-        .I3(s_next_node[4]),
-        .I4(s_end_node[4]),
-        .I5(en_UpdateRam_INST_0_i_3_n_0),
-        .O(en_UpdateRam));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    en_UpdateRam_INST_0_i_1
-       (.I0(led_c[1]),
-        .I1(led_c[0]),
-        .O(en_UpdateRam_INST_0_i_1_n_0));
-  LUT5 #(
-    .INIT(32'hFFFF6FF6)) 
-    en_UpdateRam_INST_0_i_2
-       (.I0(s_end_node[1]),
-        .I1(s_next_node[1]),
-        .I2(s_end_node[0]),
-        .I3(s_next_node[0]),
-        .I4(en_UpdateRam_INST_0_i_4_n_0),
-        .O(en_UpdateRam_INST_0_i_2_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT4 #(
-    .INIT(16'h0704)) 
-    en_UpdateRam_INST_0_i_3
-       (.I0(flag_RAM),
         .I1(led_c[0]),
         .I2(led_c[1]),
-        .I3(en),
-        .O(en_UpdateRam_INST_0_i_3_n_0));
+        .I3(prev_flag_node),
+        .I4(flag_RAM),
+        .I5(flag_end_write),
+        .O(en_NearestNode));
+  LUT6 #(
+    .INIT(64'hF0F0F8F0F0FFF8F0)) 
+    en_UpdateRam_INST_0
+       (.I0(prev_flag_node),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I2(flag_init),
+        .I3(led_c[1]),
+        .I4(led_c[0]),
+        .I5(flag_RAM),
+        .O(en_UpdateRam));
+  LUT4 #(
+    .INIT(16'hEFFE)) 
+    en_UpdateRam_INST_0_i_1
+       (.I0(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(en_UpdateRam_INST_0_i_3_n_0),
+        .I2(s_next_node[4]),
+        .I3(s_end_node[4]),
+        .O(en_UpdateRam_INST_0_i_1_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT4 #(
     .INIT(16'h6FF6)) 
-    en_UpdateRam_INST_0_i_4
+    en_UpdateRam_INST_0_i_2
        (.I0(s_next_node[2]),
         .I1(s_end_node[2]),
         .I2(s_next_node[3]),
         .I3(s_end_node[3]),
-        .O(en_UpdateRam_INST_0_i_4_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+        .O(en_UpdateRam_INST_0_i_2_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+  LUT4 #(
+    .INIT(16'h6FF6)) 
+    en_UpdateRam_INST_0_i_3
+       (.I0(s_next_node[0]),
+        .I1(s_end_node[0]),
+        .I2(s_next_node[1]),
+        .I3(s_end_node[1]),
+        .O(en_UpdateRam_INST_0_i_3_n_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h80)) 
     flag_finished_INST_0
@@ -244,31 +212,75 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .I1(led_c[0]),
         .I2(flag_end_write),
         .O(flag_finished));
-  (* SOFT_HLUTNM = "soft_lutpair4" *) 
-  LUT3 #(
-    .INIT(8'h02)) 
-    flag_init_INST_0
-       (.I0(en),
-        .I1(led_c[1]),
-        .I2(led_c[0]),
-        .O(flag_init));
   LUT6 #(
-    .INIT(64'h5530000055000000)) 
+    .INIT(64'hFFFFFFFE00000000)) 
+    flag_init_INST_0
+       (.I0(flag_init_INST_0_i_1_n_0),
+        .I1(flag_init_INST_0_i_2_n_0),
+        .I2(flag_init_INST_0_i_3_n_0),
+        .I3(flag_init_INST_0_i_4_n_0),
+        .I4(flag_init_INST_0_i_5_n_0),
+        .I5(s_start_node_0),
+        .O(flag_init));
+  (* SOFT_HLUTNM = "soft_lutpair4" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    flag_init_INST_0_i_1
+       (.I0(end_node[2]),
+        .I1(s_end_node[2]),
+        .O(flag_init_INST_0_i_1_n_0));
+  LUT4 #(
+    .INIT(16'h6FF6)) 
+    flag_init_INST_0_i_2
+       (.I0(s_start_node[4]),
+        .I1(start_node[4]),
+        .I2(s_start_node[0]),
+        .I3(start_node[0]),
+        .O(flag_init_INST_0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    flag_init_INST_0_i_3
+       (.I0(end_node[1]),
+        .I1(s_end_node[1]),
+        .I2(end_node[0]),
+        .I3(s_end_node[0]),
+        .I4(s_start_node[3]),
+        .I5(start_node[3]),
+        .O(flag_init_INST_0_i_3_n_0));
+  LUT4 #(
+    .INIT(16'h6FF6)) 
+    flag_init_INST_0_i_4
+       (.I0(s_end_node[3]),
+        .I1(end_node[3]),
+        .I2(s_end_node[4]),
+        .I3(end_node[4]),
+        .O(flag_init_INST_0_i_4_n_0));
+  LUT4 #(
+    .INIT(16'h6FF6)) 
+    flag_init_INST_0_i_5
+       (.I0(s_start_node[1]),
+        .I1(start_node[1]),
+        .I2(s_start_node[2]),
+        .I3(start_node[2]),
+        .O(flag_init_INST_0_i_5_n_0));
+  LUT3 #(
+    .INIT(8'h10)) 
+    flag_init_INST_0_i_6
+       (.I0(led_c[1]),
+        .I1(led_c[0]),
+        .I2(en),
+        .O(s_start_node_0));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  LUT5 #(
+    .INIT(32'h53005000)) 
     flag_read_path_INST_0
        (.I0(flag_end_write),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
-        .I2(flag_read_path_INST_0_i_1_n_0),
-        .I3(led_c[0]),
-        .I4(led_c[1]),
-        .I5(prev_flag_node),
+        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I2(led_c[0]),
+        .I3(led_c[1]),
+        .I4(prev_flag_node),
         .O(flag_read_path));
-  LUT2 #(
-    .INIT(4'h9)) 
-    flag_read_path_INST_0_i_1
-       (.I0(s_end_node[4]),
-        .I1(s_next_node[4]),
-        .O(flag_read_path_INST_0_i_1_n_0));
-  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT4 #(
     .INIT(16'h5F10)) 
     init_node_i_1
@@ -287,16 +299,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(32'hFFEAEAEA)) 
     \node[0]_INST_0 
        (.I0(\node[0]_INST_0_i_1_n_0 ),
-        .I1(\node[3]_INST_0_i_2_n_0 ),
-        .I2(start_node[0]),
-        .I3(s_next_node[0]),
-        .I4(\node[1]_INST_0_i_2_n_0 ),
+        .I1(\node[1]_INST_0_i_2_n_0 ),
+        .I2(s_next_node[0]),
+        .I3(start_node[0]),
+        .I4(\node[4]_INST_0_i_1_n_0 ),
         .O(node[0]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[0]_INST_0_i_1 
        (.I0(s_next_node[0]),
-        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I1(\node[4]_INST_0_i_5_n_0 ),
         .I2(prev_flag_node),
         .I3(s_end_node[0]),
         .I4(s_end_node[1]),
@@ -306,16 +318,16 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(32'hFFEAEAEA)) 
     \node[1]_INST_0 
        (.I0(\node[1]_INST_0_i_1_n_0 ),
-        .I1(\node[3]_INST_0_i_2_n_0 ),
-        .I2(start_node[1]),
-        .I3(s_next_node[1]),
-        .I4(\node[1]_INST_0_i_2_n_0 ),
+        .I1(\node[1]_INST_0_i_2_n_0 ),
+        .I2(s_next_node[1]),
+        .I3(start_node[1]),
+        .I4(\node[4]_INST_0_i_1_n_0 ),
         .O(node[1]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[1]_INST_0_i_1 
        (.I0(s_next_node[1]),
-        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I1(\node[4]_INST_0_i_5_n_0 ),
         .I2(prev_flag_node),
         .I3(s_end_node[1]),
         .I4(s_end_node[0]),
@@ -324,7 +336,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hFFFFFFFF28AAAA28)) 
     \node[1]_INST_0_i_2 
-       (.I0(\node[4]_INST_0_i_3_n_0 ),
+       (.I0(\node[3]_INST_0_i_3_n_0 ),
         .I1(s_next_node[2]),
         .I2(s_end_node[2]),
         .I3(s_next_node[3]),
@@ -336,15 +348,15 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     \node[2]_INST_0 
        (.I0(\node[2]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
-        .I2(start_node[2]),
-        .I3(s_next_node[2]),
-        .I4(\node[3]_INST_0_i_3_n_0 ),
+        .I2(s_next_node[2]),
+        .I3(start_node[2]),
+        .I4(\node[4]_INST_0_i_1_n_0 ),
         .O(node[2]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[2]_INST_0_i_1 
        (.I0(s_next_node[2]),
-        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I1(\node[4]_INST_0_i_5_n_0 ),
         .I2(prev_flag_node),
         .I3(s_end_node[2]),
         .I4(s_end_node[3]),
@@ -355,81 +367,96 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     \node[3]_INST_0 
        (.I0(\node[3]_INST_0_i_1_n_0 ),
         .I1(\node[3]_INST_0_i_2_n_0 ),
-        .I2(start_node[3]),
-        .I3(s_next_node[3]),
-        .I4(\node[3]_INST_0_i_3_n_0 ),
+        .I2(s_next_node[3]),
+        .I3(start_node[3]),
+        .I4(\node[4]_INST_0_i_1_n_0 ),
         .O(node[3]));
   LUT6 #(
     .INIT(64'h0080808080800080)) 
     \node[3]_INST_0_i_1 
        (.I0(s_next_node[3]),
-        .I1(en_UpdateRam_INST_0_i_1_n_0),
+        .I1(\node[4]_INST_0_i_5_n_0 ),
         .I2(prev_flag_node),
         .I3(s_end_node[3]),
         .I4(s_end_node[2]),
         .I5(s_next_node[2]),
         .O(\node[3]_INST_0_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT4 #(
-    .INIT(16'h00E2)) 
-    \node[3]_INST_0_i_2 
-       (.I0(en),
-        .I1(led_c[0]),
-        .I2(init_node),
-        .I3(led_c[1]),
-        .O(\node[3]_INST_0_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hFFFFFFFF28AAAA28)) 
-    \node[3]_INST_0_i_3 
-       (.I0(\node[4]_INST_0_i_3_n_0 ),
+    \node[3]_INST_0_i_2 
+       (.I0(\node[3]_INST_0_i_3_n_0 ),
         .I1(s_next_node[0]),
         .I2(s_end_node[0]),
         .I3(s_next_node[1]),
         .I4(s_end_node[1]),
         .I5(\node[9]_INST_0_i_1_n_0 ),
-        .O(\node[3]_INST_0_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'hFEEEFEEEEEEEFEEE)) 
-    \node[4]_INST_0 
-       (.I0(\node[4]_INST_0_i_1_n_0 ),
-        .I1(\node[4]_INST_0_i_2_n_0 ),
-        .I2(s_next_node[4]),
-        .I3(\node[4]_INST_0_i_3_n_0 ),
-        .I4(s_end_node[4]),
-        .I5(en_UpdateRam_INST_0_i_2_n_0),
-        .O(node[4]));
-  (* SOFT_HLUTNM = "soft_lutpair2" *) 
-  LUT5 #(
-    .INIT(32'h45400000)) 
-    \node[4]_INST_0_i_1 
-       (.I0(led_c[1]),
-        .I1(init_node),
-        .I2(led_c[0]),
-        .I3(en),
-        .I4(start_node[4]),
-        .O(\node[4]_INST_0_i_1_n_0 ));
+        .O(\node[3]_INST_0_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair6" *) 
-  LUT4 #(
-    .INIT(16'h0400)) 
-    \node[4]_INST_0_i_2 
-       (.I0(init_node),
-        .I1(s_next_node[4]),
-        .I2(led_c[1]),
-        .I3(led_c[0]),
-        .O(\node[4]_INST_0_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT3 #(
     .INIT(8'h40)) 
-    \node[4]_INST_0_i_3 
+    \node[3]_INST_0_i_3 
        (.I0(led_c[0]),
         .I1(led_c[1]),
         .I2(prev_flag_node),
+        .O(\node[3]_INST_0_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'hFFFFFFFF8F888888)) 
+    \node[4]_INST_0 
+       (.I0(start_node[4]),
+        .I1(\node[4]_INST_0_i_1_n_0 ),
+        .I2(init_node),
+        .I3(s_next_node[4]),
+        .I4(\node[4]_INST_0_i_2_n_0 ),
+        .I5(\node[4]_INST_0_i_3_n_0 ),
+        .O(node[4]));
+  LUT6 #(
+    .INIT(64'hFFFFFFFFAAAAAAA8)) 
+    \node[4]_INST_0_i_1 
+       (.I0(s_start_node_0),
+        .I1(flag_init_INST_0_i_2_n_0),
+        .I2(flag_init_INST_0_i_3_n_0),
+        .I3(flag_init_INST_0_i_4_n_0),
+        .I4(flag_init_INST_0_i_5_n_0),
+        .I5(\node[4]_INST_0_i_4_n_0 ),
+        .O(\node[4]_INST_0_i_1_n_0 ));
+  LUT2 #(
+    .INIT(4'h2)) 
+    \node[4]_INST_0_i_2 
+       (.I0(led_c[0]),
+        .I1(led_c[1]),
+        .O(\node[4]_INST_0_i_2_n_0 ));
+  LUT6 #(
+    .INIT(64'h8080808080800080)) 
+    \node[4]_INST_0_i_3 
+       (.I0(s_next_node[4]),
+        .I1(\node[4]_INST_0_i_5_n_0 ),
+        .I2(prev_flag_node),
+        .I3(s_end_node[4]),
+        .I4(en_UpdateRam_INST_0_i_3_n_0),
+        .I5(en_UpdateRam_INST_0_i_2_n_0),
         .O(\node[4]_INST_0_i_3_n_0 ));
+  LUT6 #(
+    .INIT(64'h00AA003C00AA0000)) 
+    \node[4]_INST_0_i_4 
+       (.I0(init_node),
+        .I1(end_node[2]),
+        .I2(s_end_node[2]),
+        .I3(led_c[1]),
+        .I4(led_c[0]),
+        .I5(en),
+        .O(\node[4]_INST_0_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair6" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
+    \node[4]_INST_0_i_5 
+       (.I0(led_c[1]),
+        .I1(led_c[0]),
+        .O(\node[4]_INST_0_i_5_n_0 ));
   LUT6 #(
     .INIT(64'hAAAAEAAA00000000)) 
     \node[5]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(\node[9]_INST_0_i_2_n_0 ),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -439,7 +466,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(64'hAAAAEAAA00000000)) 
     \node[6]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(\node[9]_INST_0_i_2_n_0 ),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -449,7 +476,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(64'hAAAAEAAA00000000)) 
     \node[7]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(\node[9]_INST_0_i_2_n_0 ),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -459,7 +486,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(64'hAAAAEAAA00000000)) 
     \node[8]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(\node[9]_INST_0_i_2_n_0 ),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -469,7 +496,7 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
     .INIT(64'hAAAAEAAA00000000)) 
     \node[9]_INST_0 
        (.I0(\node[9]_INST_0_i_1_n_0 ),
-        .I1(en_UpdateRam_INST_0_i_2_n_0),
+        .I1(\node[9]_INST_0_i_2_n_0 ),
         .I2(prev_flag_node),
         .I3(led_c[1]),
         .I4(led_c[0]),
@@ -485,209 +512,140 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .I4(led_c[1]),
         .I5(prev_flag_node),
         .O(\node[9]_INST_0_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
-    \node_seen[0]_i_1 
-       (.I0(\node_seen[0]_i_2_n_0 ),
-        .I1(\node_seen[0]_i_3_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
-        .I5(node_seen[0]),
-        .O(\node_seen[0]_i_1_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
-    .INIT(32'h00004000)) 
-    \node_seen[0]_i_2 
-       (.I0(next_node[4]),
-        .I1(rst_n),
-        .I2(led_c[1]),
-        .I3(flag_node),
-        .I4(next_node[0]),
-        .O(\node_seen[0]_i_2_n_0 ));
+    .INIT(32'hFFFF6FF6)) 
+    \node[9]_INST_0_i_2 
+       (.I0(s_end_node[1]),
+        .I1(s_next_node[1]),
+        .I2(s_end_node[0]),
+        .I3(s_next_node[0]),
+        .I4(en_UpdateRam_INST_0_i_2_n_0),
+        .O(\node[9]_INST_0_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000000000FE)) 
-    \node_seen[0]_i_3 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(\node_seen[0]_i_4_n_0 ),
+    .INIT(64'hAAAAFFBFAAAA0080)) 
+    \node_seen[0]_i_1 
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[9]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
         .I3(next_node[3]),
-        .I4(next_node[1]),
-        .I5(next_node[2]),
-        .O(\node_seen[0]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT3 #(
-    .INIT(8'hFE)) 
-    \node_seen[0]_i_4 
-       (.I0(end_node[4]),
-        .I1(end_node[3]),
-        .I2(end_node[0]),
-        .O(\node_seen[0]_i_4_n_0 ));
+        .I4(\node_seen[15]_i_4_n_0 ),
+        .I5(node_seen[0]),
+        .O(\node_seen[0]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hBBABBBBB88A88888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[10]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(\node_seen[10]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[14]_i_3_n_0 ),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[11]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[10]),
         .O(\node_seen[10]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF20200020)) 
-    \node_seen[10]_i_2 
-       (.I0(\node_seen[14]_i_4_n_0 ),
-        .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[1]),
-        .I4(end_node[2]),
-        .I5(\node_seen[15]_i_5_n_0 ),
-        .O(\node_seen[10]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBABBBBB88A88888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[11]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
         .I1(\node_seen[11]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[15]_i_3_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[11]),
         .O(\node_seen[11]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20200020)) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \node_seen[11]_i_2 
-       (.I0(\node_seen[15]_i_4_n_0 ),
+       (.I0(next_node[1]),
         .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[1]),
-        .I4(end_node[2]),
-        .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[11]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hBBABBBBB88A88888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[12]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(\node_seen[12]_i_2_n_0 ),
-        .I2(next_node[2]),
-        .I3(next_node[1]),
-        .I4(\node_seen[14]_i_3_n_0 ),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[13]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[12]),
         .O(\node_seen[12]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF20200020)) 
-    \node_seen[12]_i_2 
-       (.I0(\node_seen[14]_i_4_n_0 ),
-        .I1(next_node[1]),
-        .I2(next_node[2]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
-        .O(\node_seen[12]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBABBBBB88A88888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[13]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
         .I1(\node_seen[13]_i_2_n_0 ),
-        .I2(next_node[2]),
-        .I3(next_node[1]),
-        .I4(\node_seen[15]_i_3_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[13]),
         .O(\node_seen[13]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF20200020)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h2)) 
     \node_seen[13]_i_2 
-       (.I0(\node_seen[15]_i_4_n_0 ),
+       (.I0(next_node[2]),
         .I1(next_node[1]),
-        .I2(next_node[2]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[13]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hABBBBBBBA8888888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[14]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(\node_seen[14]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[14]_i_3_n_0 ),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[15]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[14]),
         .O(\node_seen[14]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF00808080)) 
+    .INIT(64'h0000000044400000)) 
     \node_seen[14]_i_2 
-       (.I0(\node_seen[14]_i_4_n_0 ),
-        .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
+       (.I0(next_node[4]),
+        .I1(rst_n),
+        .I2(\node_seen[16]_i_4_n_0 ),
+        .I3(\node_seen[16]_i_5_n_0 ),
+        .I4(\node_seen[15]_i_5_n_0 ),
+        .I5(next_node[0]),
         .O(\node_seen[14]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hA8AA)) 
-    \node_seen[14]_i_3 
-       (.I0(\node_seen[14]_i_4_n_0 ),
-        .I1(end_node[0]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .O(\node_seen[14]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0000400000000000)) 
-    \node_seen[14]_i_4 
-       (.I0(next_node[0]),
-        .I1(flag_node),
-        .I2(led_c[1]),
-        .I3(rst_n),
-        .I4(next_node[4]),
-        .I5(next_node[3]),
-        .O(\node_seen[14]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hABBBBBBBA8888888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[15]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
         .I1(\node_seen[15]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[15]_i_3_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[15]),
         .O(\node_seen[15]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF00808080)) 
+  (* SOFT_HLUTNM = "soft_lutpair7" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
     \node_seen[15]_i_2 
-       (.I0(\node_seen[15]_i_4_n_0 ),
+       (.I0(next_node[1]),
         .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[15]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair5" *) 
-  LUT4 #(
-    .INIT(16'hA2AA)) 
-    \node_seen[15]_i_3 
-       (.I0(\node_seen[15]_i_4_n_0 ),
-        .I1(end_node[0]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .O(\node_seen[15]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0000800000000000)) 
-    \node_seen[15]_i_4 
-       (.I0(next_node[0]),
-        .I1(flag_node),
-        .I2(led_c[1]),
-        .I3(rst_n),
-        .I4(next_node[4]),
-        .I5(next_node[3]),
-        .O(\node_seen[15]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
+    .INIT(64'h4440000000000000)) 
+    \node_seen[15]_i_3 
+       (.I0(next_node[4]),
+        .I1(rst_n),
+        .I2(\node_seen[16]_i_4_n_0 ),
+        .I3(\node_seen[16]_i_5_n_0 ),
+        .I4(\node_seen[15]_i_5_n_0 ),
+        .I5(next_node[0]),
+        .O(\node_seen[15]_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair5" *) 
   LUT3 #(
     .INIT(8'h90)) 
-    \node_seen[15]_i_5 
+    \node_seen[15]_i_4 
        (.I0(led_c[0]),
         .I1(led_c[1]),
         .I2(rst_n),
+        .O(\node_seen[15]_i_4_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT2 #(
+    .INIT(4'h8)) 
+    \node_seen[15]_i_5 
+       (.I0(led_c[1]),
+        .I1(flag_node),
         .O(\node_seen[15]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h0777FF0700008800)) 
@@ -699,271 +657,140 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .I4(led_c[0]),
         .I5(node_seen[16]),
         .O(\node_seen[16]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair2" *) 
+  LUT5 #(
+    .INIT(32'hA8000000)) 
+    \node_seen[16]_i_2 
+       (.I0(rst_n),
+        .I1(\node_seen[16]_i_4_n_0 ),
+        .I2(\node_seen[16]_i_5_n_0 ),
+        .I3(flag_node),
+        .I4(led_c[1]),
+        .O(\node_seen[16]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT5 #(
-    .INIT(32'hFFFFFEFF)) 
-    \node_seen[16]_i_2 
-       (.I0(end_node[0]),
-        .I1(end_node[1]),
-        .I2(end_node[2]),
-        .I3(end_node[4]),
-        .I4(end_node[3]),
-        .O(\node_seen[16]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0000800000000000)) 
+    .INIT(32'h00000004)) 
     \node_seen[16]_i_3 
-       (.I0(rst_n),
-        .I1(led_c[1]),
-        .I2(flag_node),
-        .I3(next_node[4]),
-        .I4(next_node[0]),
-        .I5(\node_seen[16]_i_4_n_0 ),
-        .O(\node_seen[16]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT3 #(
-    .INIT(8'h01)) 
-    \node_seen[16]_i_4 
-       (.I0(next_node[2]),
-        .I1(next_node[1]),
+       (.I0(next_node[0]),
+        .I1(next_node[4]),
         .I2(next_node[3]),
-        .O(\node_seen[16]_i_4_n_0 ));
+        .I3(next_node[2]),
+        .I4(next_node[1]),
+        .O(\node_seen[16]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    \node_seen[16]_i_4 
+       (.I0(end_node[2]),
+        .I1(next_node[2]),
+        .I2(end_node[1]),
+        .I3(next_node[1]),
+        .I4(next_node[3]),
+        .I5(end_node[3]),
+        .O(\node_seen[16]_i_4_n_0 ));
+  LUT4 #(
+    .INIT(16'h6FF6)) 
+    \node_seen[16]_i_5 
+       (.I0(next_node[4]),
+        .I1(end_node[4]),
+        .I2(next_node[0]),
+        .I3(end_node[0]),
+        .O(\node_seen[16]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[1]_i_1 
-       (.I0(\node_seen[1]_i_2_n_0 ),
-        .I1(\node_seen[1]_i_3_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[9]_i_2_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[1]),
         .O(\node_seen[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
-  LUT5 #(
-    .INIT(32'h40000000)) 
-    \node_seen[1]_i_2 
-       (.I0(next_node[4]),
-        .I1(rst_n),
-        .I2(led_c[1]),
-        .I3(flag_node),
-        .I4(next_node[0]),
-        .O(\node_seen[1]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'h00000000000000FE)) 
-    \node_seen[1]_i_3 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(\node_seen[1]_i_4_n_0 ),
-        .I3(next_node[3]),
-        .I4(next_node[1]),
-        .I5(next_node[2]),
-        .O(\node_seen[1]_i_3_n_0 ));
-  LUT3 #(
-    .INIT(8'hEF)) 
-    \node_seen[1]_i_4 
-       (.I0(end_node[4]),
-        .I1(end_node[3]),
-        .I2(end_node[0]),
-        .O(\node_seen[1]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[2]_i_1 
-       (.I0(\node_seen[6]_i_2_n_0 ),
-        .I1(\node_seen[2]_i_2_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[11]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[2]),
         .O(\node_seen[2]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFB00000000)) 
-    \node_seen[2]_i_2 
-       (.I0(end_node[2]),
-        .I1(end_node[1]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[3]_i_3_n_0 ),
-        .O(\node_seen[2]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[3]_i_1 
-       (.I0(\node_seen[7]_i_2_n_0 ),
-        .I1(\node_seen[3]_i_2_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[11]_i_2_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[3]),
         .O(\node_seen[3]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFBFFFF00000000)) 
-    \node_seen[3]_i_2 
-       (.I0(end_node[2]),
-        .I1(end_node[1]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[3]_i_3_n_0 ),
-        .O(\node_seen[3]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \node_seen[3]_i_3 
-       (.I0(next_node[1]),
-        .I1(next_node[2]),
-        .O(\node_seen[3]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[4]_i_1 
-       (.I0(\node_seen[6]_i_2_n_0 ),
-        .I1(\node_seen[4]_i_2_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[13]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[4]),
         .O(\node_seen[4]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFB00000000)) 
-    \node_seen[4]_i_2 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[5]_i_3_n_0 ),
-        .O(\node_seen[4]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[5]_i_1 
-       (.I0(\node_seen[7]_i_2_n_0 ),
-        .I1(\node_seen[5]_i_2_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[13]_i_2_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[5]),
         .O(\node_seen[5]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFBFFFF00000000)) 
-    \node_seen[5]_i_2 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[5]_i_3_n_0 ),
-        .O(\node_seen[5]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \node_seen[5]_i_3 
-       (.I0(next_node[2]),
-        .I1(next_node[1]),
-        .O(\node_seen[5]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[6]_i_1 
-       (.I0(\node_seen[6]_i_2_n_0 ),
-        .I1(\node_seen[6]_i_3_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[15]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[6]),
         .O(\node_seen[6]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000004000)) 
-    \node_seen[6]_i_2 
-       (.I0(next_node[0]),
-        .I1(flag_node),
-        .I2(led_c[1]),
-        .I3(rst_n),
-        .I4(next_node[4]),
-        .I5(next_node[3]),
-        .O(\node_seen[6]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFF700000000)) 
-    \node_seen[6]_i_3 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[7]_i_4_n_0 ),
-        .O(\node_seen[6]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h0777FF0700008800)) 
+    .INIT(64'hAAAAFFBFAAAA0080)) 
     \node_seen[7]_i_1 
-       (.I0(\node_seen[7]_i_2_n_0 ),
-        .I1(\node_seen[7]_i_3_n_0 ),
-        .I2(rst_n),
-        .I3(led_c[1]),
-        .I4(led_c[0]),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[15]_i_2_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[7]),
         .O(\node_seen[7]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h0000000000008000)) 
-    \node_seen[7]_i_2 
-       (.I0(next_node[0]),
-        .I1(flag_node),
-        .I2(led_c[1]),
-        .I3(rst_n),
-        .I4(next_node[4]),
-        .I5(next_node[3]),
-        .O(\node_seen[7]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFF7FFFF00000000)) 
-    \node_seen[7]_i_3 
-       (.I0(end_node[1]),
-        .I1(end_node[2]),
-        .I2(end_node[4]),
-        .I3(end_node[3]),
-        .I4(end_node[0]),
-        .I5(\node_seen[7]_i_4_n_0 ),
-        .O(\node_seen[7]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair9" *) 
-  LUT2 #(
-    .INIT(4'h8)) 
-    \node_seen[7]_i_4 
-       (.I0(next_node[1]),
-        .I1(next_node[2]),
-        .O(\node_seen[7]_i_4_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBABBBB888A8888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[8]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
-        .I1(\node_seen[8]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[14]_i_3_n_0 ),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
+        .I1(\node_seen[9]_i_2_n_0 ),
+        .I2(\node_seen[14]_i_2_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[8]),
         .O(\node_seen[8]_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFF02020200)) 
-    \node_seen[8]_i_2 
-       (.I0(\node_seen[14]_i_4_n_0 ),
-        .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
-        .O(\node_seen[8]_i_2_n_0 ));
-  LUT6 #(
-    .INIT(64'hBBBABBBB888A8888)) 
+    .INIT(64'hAAAABFFFAAAA8000)) 
     \node_seen[9]_i_1 
-       (.I0(en_UpdateRam_INST_0_i_1_n_0),
+       (.I0(\node[4]_INST_0_i_5_n_0 ),
         .I1(\node_seen[9]_i_2_n_0 ),
-        .I2(next_node[1]),
-        .I3(next_node[2]),
-        .I4(\node_seen[15]_i_3_n_0 ),
+        .I2(\node_seen[15]_i_3_n_0 ),
+        .I3(next_node[3]),
+        .I4(\node_seen[15]_i_4_n_0 ),
         .I5(node_seen[9]),
         .O(\node_seen[9]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF02020200)) 
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT2 #(
+    .INIT(4'h1)) 
     \node_seen[9]_i_2 
-       (.I0(\node_seen[15]_i_4_n_0 ),
+       (.I0(next_node[1]),
         .I1(next_node[2]),
-        .I2(next_node[1]),
-        .I3(end_node[2]),
-        .I4(end_node[1]),
-        .I5(\node_seen[15]_i_5_n_0 ),
         .O(\node_seen[9]_i_2_n_0 ));
   FDRE \node_seen_reg[0] 
        (.C(clk),
@@ -1080,73 +907,50 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .D(prev_flag_node_i_1_n_0),
         .Q(prev_flag_node),
         .R(1'b0));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \s_end_node_reg[0] 
-       (.CLR(1'b0),
+  FDCE \s_end_node_reg[0] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
         .D(end_node[0]),
-        .G(s_end_node__0),
-        .GE(1'b1),
         .Q(s_end_node[0]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \s_end_node_reg[1] 
-       (.CLR(1'b0),
+  FDCE \s_end_node_reg[1] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
         .D(end_node[1]),
-        .G(s_end_node__0),
-        .GE(1'b1),
         .Q(s_end_node[1]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \s_end_node_reg[2] 
-       (.CLR(1'b0),
+  FDCE \s_end_node_reg[2] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
         .D(end_node[2]),
-        .G(s_end_node__0),
-        .GE(1'b1),
         .Q(s_end_node[2]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \s_end_node_reg[3] 
-       (.CLR(1'b0),
+  FDCE \s_end_node_reg[3] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
         .D(end_node[3]),
-        .G(s_end_node__0),
-        .GE(1'b1),
         .Q(s_end_node[3]));
-  (* XILINX_LEGACY_PRIM = "LD" *) 
-  LDCE #(
-    .INIT(1'b0)) 
-    \s_end_node_reg[4] 
-       (.CLR(1'b0),
+  FDCE \s_end_node_reg[4] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
         .D(end_node[4]),
-        .G(s_end_node__0),
-        .GE(1'b1),
         .Q(s_end_node[4]));
-  (* SOFT_HLUTNM = "soft_lutpair7" *) 
   LUT3 #(
-    .INIT(8'hFE)) 
-    \s_end_node_reg[4]_i_1 
+    .INIT(8'h10)) 
+    \s_next_node[9]_i_1 
        (.I0(led_c[1]),
         .I1(led_c[0]),
-        .I2(en),
-        .O(s_end_node__0));
-  LUT3 #(
-    .INIT(8'h02)) 
-    \s_next_node[9]_i_1 
-       (.I0(rst_n),
-        .I1(led_c[1]),
-        .I2(led_c[0]),
+        .I2(rst_n),
         .O(\s_next_node[9]_i_1_n_0 ));
   LUT4 #(
-    .INIT(16'h4000)) 
+    .INIT(16'h0800)) 
     \s_next_node[9]_i_2 
-       (.I0(led_c[0]),
-        .I1(prev_flag_node),
-        .I2(rst_n),
-        .I3(led_c[1]),
+       (.I0(prev_flag_node),
+        .I1(led_c[1]),
+        .I2(led_c[0]),
+        .I3(rst_n),
         .O(s_next_node0));
   FDRE \s_next_node_reg[0] 
        (.C(clk),
@@ -1208,6 +1012,36 @@ module decalper_eb_ot_sdeen_pot_pi_dehcac_xnilix_DIJKSTRA_CONTROLLER
         .D(next_node[9]),
         .Q(s_next_node[9]),
         .R(\s_next_node[9]_i_1_n_0 ));
+  FDCE \s_start_node_reg[0] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
+        .D(start_node[0]),
+        .Q(s_start_node[0]));
+  FDCE \s_start_node_reg[1] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
+        .D(start_node[1]),
+        .Q(s_start_node[1]));
+  FDCE \s_start_node_reg[2] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
+        .D(start_node[2]),
+        .Q(s_start_node[2]));
+  FDCE \s_start_node_reg[3] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
+        .D(start_node[3]),
+        .Q(s_start_node[3]));
+  FDCE \s_start_node_reg[4] 
+       (.C(clk),
+        .CE(s_start_node_0),
+        .CLR(\FSM_sequential_current_state[1]_i_1_n_0 ),
+        .D(start_node[4]),
+        .Q(s_start_node[4]));
 endmodule
 
 (* CHECK_LICENSE_TYPE = "design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0,DIJKSTRA_CONTROLLER,{}" *) (* downgradeipidentifiedwarnings = "yes" *) (* ip_definition_source = "module_ref" *) 

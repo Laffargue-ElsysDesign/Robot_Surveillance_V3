@@ -3,21 +3,21 @@
    <wave_state>
    </wave_state>
    <db_ref_list>
-      <db_ref path="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+      <db_ref path="D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
          <top_modules>
          </top_modules>
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="8234fs"></ZoomStartTime>
-      <ZoomEndTime time="8252fs"></ZoomEndTime>
-      <Cursor1Time time="8241fs"></Cursor1Time>
+      <ZoomStartTime time="8834fs"></ZoomStartTime>
+      <ZoomEndTime time="8852fs"></ZoomEndTime>
+      <Cursor1Time time="8842fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="287"></NameColumnWidth>
-      <ValueColumnWidth column_width="60"></ValueColumnWidth>
+      <NameColumnWidth column_width="236"></NameColumnWidth>
+      <ValueColumnWidth column_width="107"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="15" />
+   <WVObjectSize size="16" />
    <wave_markers>
    </wave_markers>
    <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_led_n" type="array">
@@ -96,7 +96,7 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_node[9:0]</obj_property>
       <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_node[9:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -104,7 +104,7 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_dijkstra_all_i/comparateur2_0_comp_out[9:0]</obj_property>
       <obj_property name="ObjectShortName">comparateur2_0_comp_out[9:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
@@ -136,6 +136,14 @@
       <obj_property name="DisplayName">FullPathName</obj_property>
       <obj_property name="ElementShortName">design_dijkstra_all_i/dpram_0_data_out_b[9:0]</obj_property>
       <obj_property name="ObjectShortName">dpram_0_data_out_b[9:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_din_ram_ext" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_din_ram_ext[15:0]</obj_property>
+      <obj_property name="ObjectShortName">NEAREST_NODE_0_din_ram_ext[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

@@ -24,7 +24,7 @@ else
 fi
 export LD_LIBRARY_PATH
 
-HD_PWD='D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1'
+HD_PWD='D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1'
 cd "$HD_PWD"
 
 HD_LOG=runme.log

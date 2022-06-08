@@ -38,18 +38,19 @@ end tb_dijkstra;
 architecture Behavioral of tb_dijkstra is
 
 component design_dijkstra_all_wrapper is
-  port(
+  port (
     clk : in STD_LOGIC;
     en : in STD_LOGIC;
     flag_finished : out STD_LOGIC;
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    resetn : in STD_LOGIC;
     rst_n : in STD_LOGIC
   );
 end component;
 
-signal rst_n, clk, en, flag_fin, busy_ram_ext : std_logic :='0'; 
+signal rst_n, reset_n, clk, en, flag_fin, busy_ram_ext : std_logic :='0'; 
 signal led_c, led_n : std_logic_vector(1 downto 0);
 signal led_u : std_logic_vector(2 downto 0);
 --signal start_node, end_node : std_logic_vector ( 4 downto 0 ) := "00000";
@@ -59,6 +60,8 @@ rst_n <= '1' after 15 ns;
 clk <= not clk after 8 ns;
 en <= '1' after 25 ns; 
 --end_node <= "00110";
+reset_n <= '0';
+
 
 
 DUT1 : design_dijkstra_all_wrapper port map(
@@ -68,6 +71,7 @@ flag_finished => flag_fin,
 led_c(1 downto 0) => led_c(1 downto 0),
 led_n(1 downto 0) => led_n(1 downto 0),
 led_u(2 downto 0) => led_u(2 downto 0),
+resetn => reset_n,
 rst_n => rst_n
 ); 
 

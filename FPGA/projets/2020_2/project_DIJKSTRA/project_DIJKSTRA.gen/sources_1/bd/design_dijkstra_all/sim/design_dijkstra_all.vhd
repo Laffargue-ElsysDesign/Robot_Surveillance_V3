@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue Jun  7 17:14:56 2022
+--Date        : Wed Jun  8 11:16:25 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_dijkstra_all.bd
 --Design      : design_dijkstra_all
@@ -19,6 +19,7 @@ entity design_dijkstra_all is
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    resetn : in STD_LOGIC;
     rst_n : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
@@ -111,7 +112,8 @@ architecture STRUCTURE of design_dijkstra_all is
     probe13 : in STD_LOGIC_VECTOR ( 0 to 0 );
     probe14 : in STD_LOGIC_VECTOR ( 9 downto 0 );
     probe15 : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    probe16 : in STD_LOGIC_VECTOR ( 9 downto 0 )
+    probe16 : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    probe17 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_dijkstra_all_ila_0_0;
   component design_dijkstra_all_clk_wiz_0_0 is
@@ -228,6 +230,7 @@ architecture STRUCTURE of design_dijkstra_all is
   signal dpram_0_data_out_a : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal dpram_0_data_out_b : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal en_0_1 : STD_LOGIC;
+  signal resetn_0_1 : STD_LOGIC;
   signal rst_n_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
@@ -239,6 +242,8 @@ architecture STRUCTURE of design_dijkstra_all is
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
   attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_dijkstra_all_clk_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
+  attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
+  attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
   attribute X_INTERFACE_INFO of rst_n : signal is "xilinx.com:signal:reset:1.0 RST.RST_N RST";
   attribute X_INTERFACE_PARAMETER of rst_n : signal is "XIL_INTERFACENAME RST.RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
@@ -248,6 +253,7 @@ begin
   led_c(1 downto 0) <= DIJKSTRA_CONTROLLER_0_led_c(1 downto 0);
   led_n(1 downto 0) <= NEAREST_NODE_0_led_n(1 downto 0);
   led_u(2 downto 0) <= UPDATE_RAM_0_led_u(2 downto 0);
+  resetn_0_1 <= resetn;
   rst_n_0_1 <= rst_n;
 DIJKSTRA_CONTROLLER_0: component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0
      port map (
@@ -336,7 +342,7 @@ clk_wiz_0: component design_dijkstra_all_clk_wiz_0_0
       clk_in1 => clk_1,
       clk_out1 => clk_0_1,
       locked => NLW_clk_wiz_0_locked_UNCONNECTED,
-      resetn => rst_n_0_1
+      resetn => resetn_0_1
     );
 comparateur1_0: component design_dijkstra_all_comparateur1_0_0
      port map (
@@ -378,6 +384,7 @@ ila_0: component design_dijkstra_all_ila_0_0
       probe14(9 downto 0) => DIJKSTRA_CONTROLLER_0_node(9 downto 0),
       probe15(4 downto 0) => NEAREST_NODE_0_addr_ram(4 downto 0),
       probe16(9 downto 0) => dpram_0_data_out_b(9 downto 0),
+      probe17(15 downto 0) => NEAREST_NODE_0_din_ram_ext(15 downto 0),
       probe2(2 downto 0) => UPDATE_RAM_0_led_u(2 downto 0),
       probe3(9 downto 0) => NEAREST_NODE_0_comp_in1(9 downto 0),
       probe4(9 downto 0) => NEAREST_NODE_0_comp_in2(9 downto 0),

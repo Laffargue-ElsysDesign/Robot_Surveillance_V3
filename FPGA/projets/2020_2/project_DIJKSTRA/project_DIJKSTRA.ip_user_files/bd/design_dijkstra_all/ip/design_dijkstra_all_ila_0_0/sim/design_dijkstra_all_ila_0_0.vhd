@@ -71,7 +71,8 @@ probe0 : IN STD_LOGIC_VECTOR(1 DOWNTO 0);
     probe13 : IN STD_LOGIC_VECTOR(0 DOWNTO 0);
     probe14 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
     probe15 : IN STD_LOGIC_VECTOR(4 DOWNTO 0);
-    probe16 : IN STD_LOGIC_VECTOR(9 DOWNTO 0)
+    probe16 : IN STD_LOGIC_VECTOR(9 DOWNTO 0);
+    probe17 : IN STD_LOGIC_VECTOR(15 DOWNTO 0)
 );
 END design_dijkstra_all_ila_0_0;
 

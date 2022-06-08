@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA4E74194255561F1",
+      "boundary_crc": "0xE55F46F3B10B5699",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all",
       "name": "design_dijkstra_all",
@@ -86,6 +86,20 @@
         "direction": "O",
         "left": "1",
         "right": "0"
+      },
+      "resetn": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
       }
     },
     "components": {
@@ -233,7 +247,7 @@
         "inst_hier_path": "xlconstant_2",
         "parameters": {
           "CONST_VAL": {
-            "value": "15"
+            "value": "16"
           },
           "CONST_WIDTH": {
             "value": "5"
@@ -399,7 +413,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "17"
+            "value": "18"
           },
           "C_PROBE0_WIDTH": {
             "value": "2"
@@ -412,6 +426,9 @@
           },
           "C_PROBE16_WIDTH": {
             "value": "10"
+          },
+          "C_PROBE17_WIDTH": {
+            "value": "16"
           },
           "C_PROBE1_WIDTH": {
             "value": "2"
@@ -866,7 +883,6 @@
           "rst_n",
           "comparateur1_0/rst_n",
           "comparateur2_0/rst_n",
-          "clk_wiz_0/resetn",
           "UPDATE_RAM_0/rst_n",
           "DIJKSTRA_CONTROLLER_0/rst_n",
           "NEAREST_NODE_0/rst_n"
@@ -1076,7 +1092,8 @@
       "NEAREST_NODE_0_din_ram_ext": {
         "ports": [
           "NEAREST_NODE_0/din_ram_ext",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "ila_0/probe17"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -1122,6 +1139,12 @@
         "ports": [
           "clk",
           "clk_wiz_0/clk_in1"
+        ]
+      },
+      "resetn_0_1": {
+        "ports": [
+          "resetn",
+          "clk_wiz_0/resetn"
         ]
       }
     }

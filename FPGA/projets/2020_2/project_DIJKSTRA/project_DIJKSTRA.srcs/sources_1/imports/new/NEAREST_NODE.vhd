@@ -95,6 +95,7 @@ begin
             comp <= '1'; 
         end if;
         if current_state = nearest_node or next_state = nearest_node then 
+        --if current_state = nearest_node then
             s_next_node <= comp_out; 
         elsif current_state = write_ram_ext then
             s_next_node <= data_ram; 
@@ -104,7 +105,7 @@ begin
     end if; 
 end process Sequentiel;
 
-
+next_node <= s_next_node;
 
 Combinatoire : process(current_state, node_seen, en, flag_read_path, cpt_addr, comp, data_ram, comp_out, s_next_node) -- définit les sorties et l'état suivant en fonction des entrées, et de l'état actuel 
 begin 
@@ -113,7 +114,6 @@ begin
         led_n <= "00";
             flag_node <= '0'; 
             flag_end_write <= '0'; 
-            --s_next_node <= (others=>'0'); 
             comp_in1 <= (others=>'0'); 
             comp_in2 <= (others=>'0'); 
             addr_ram <= (others=>'0'); 
@@ -122,7 +122,6 @@ begin
             din_ram_ext  <= (others=>'0'); 
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            --comp <= '1'; 
             if en = '1' then
                 next_state <= read_ram;
             else
@@ -134,7 +133,6 @@ begin
         led_n <= "01";
             flag_node <= '0'; 
             flag_end_write <= '0'; 
-            --s_next_node <= (others=>'0'); 
             addr_ram <= std_logic_vector(to_unsigned(cpt_addr,nb_bit_addr)); 
             en_ram  <= '1'; 
             addr_ram_ext  <= (others=>'0'); 
@@ -179,14 +177,12 @@ begin
         led_n <= "11";
             flag_node <= '1'; 
             flag_end_write <= '0'; 
-            --s_next_node <= comp_out;  
             addr_ram <= (others=>'0'); 
             en_ram  <= '0'; 
             addr_ram_ext  <= (others=>'0'); 
             din_ram_ext  <= (others=>'0'); 
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            --comp <= '0'; 
             if en = '0' then
                 next_state <= idle;
             elsif flag_read_path = '1' then
@@ -200,14 +196,12 @@ begin
         when write_ram_ext => 
         led_n <= "01";
             flag_node <= '0'; 
-            --comp <= '0'; 
             comp_in1 <= (others=>'0'); 
             comp_in2 <= (others=>'0'); 
             en_ram  <= '1'; 
             if cpt_addr = 0 then 
                 addr_ram_ext  <= std_logic_vector((unsigned(addr_ram_ex) + "00000001")); 
                 din_ram_ext  <= "00000000000" & s_next_node(nb_bit_addr-1 downto 0); 
-                --s_next_node <= comp_out;
                 en_ram_ext  <= '1'; 
                 we_ram_ext  <= '1';
                 flag_end_write <= '0'; 
@@ -219,7 +213,6 @@ begin
                 en_ram_ext  <= '1'; 
                 we_ram_ext  <= '1';
                 flag_end_write <= '1'; 
-                --s_next_node <= (others=>'0'); 
                 addr_ram <= (others=>'0'); 
                 next_state <= idle;
             else 
@@ -228,7 +221,6 @@ begin
                 en_ram_ext  <= '1'; 
                 we_ram_ext  <= '1';
                 flag_end_write <= '0'; 
-                --s_next_node <= data_ram; 
                 addr_ram <= data_ram(nb_bit_addr - 1 downto 0);  
                 next_state <= write_ram_ext;
             end if;
@@ -237,7 +229,6 @@ begin
         led_n <= "00";
             flag_node <= '0'; 
             flag_end_write <= '0'; 
-            --s_next_node <= (others=>'0'); 
             comp_in1 <= (others=>'0'); 
             comp_in2 <= (others=>'0'); 
             addr_ram <= (others=>'0'); 
@@ -250,6 +241,6 @@ begin
 
 end process Combinatoire;
 
-next_node <= s_next_node;
+
 
 end Behavioral;

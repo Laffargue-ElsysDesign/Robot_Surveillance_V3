@@ -75,6 +75,8 @@ process(clk, rst_n) is
 begin
     if rst_n = '0' then 
         current_state <= idle;
+        s_start_node <= (others=>'0');
+        s_end_node <= (others=>'0');
     elsif rising_edge(Clk) then
         current_state <= next_state;
         if current_state = nearest_node then 
@@ -91,10 +93,21 @@ begin
         end if;
         if current_state = idle then 
             s_next_node <= (others=>'0');
+            if en = '1' then 
+                s_start_node <= start_node;
+                s_end_node <= end_node;
+            else 
+                s_start_node <= s_start_node;
+                s_end_node <= s_end_node;
+            end if;
         elsif current_state = nearest_node and prev_flag_node = '1' then
             s_next_node <= next_node;
+            s_start_node <= s_start_node;
+            s_end_node <= s_end_node;
         else
             s_next_node <= s_next_node;
+            s_start_node <= s_start_node;
+            s_end_node <= s_end_node;
         end if;
         prev_flag_node <= flag_node;
     end if;
@@ -109,27 +122,22 @@ begin
             flag_finished <= '0';
             en_NearestNode <= '0'; 
             flag_read_path <= '0';
-            --if en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then
-            if en = '1' then
+            if en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then
+            --if en = '1' then
                 next_state <= update_ram;
                 flag_init <= '1';
                 en_UpdateRam <= '1';
                 node <= dist_zero & start_node; 
-                s_start_node <= start_node;
-                s_end_node <= end_node;
-                --node_seen(to_integer(unsigned(start_node))) <= '1'; 
             else 
                 next_state <= idle;
                 flag_init <= '0';
                 en_UpdateRam <= '0';
                 node <= (others=>'0'); 
-                --node_seen <= (others=>'0'); 
             end if;
  
         when update_ram =>
         led_c <= "01";
             flag_finished <= '0';
-            s_end_node <= end_node;
             flag_read_path <= '0';
             flag_init <= '0';
             if init_node = '1' then 
@@ -150,7 +158,6 @@ begin
         when nearest_node => 
         led_c <= "10";
             flag_finished <= '0';
-            s_end_node <= end_node;
             if prev_flag_node = '1' and s_next_node(nb_bit_addr - 1 downto 0) = s_end_node then
                 next_state <= read_path;
                 en_NearestNode <= '1'; 
@@ -165,7 +172,6 @@ begin
                 flag_init <= '0';
                 en_UpdateRam <= '1';
                 node <= s_next_node;
-                --node_seen(to_integer(unsigned(next_node(nb_bit_addr - 1 downto 0)))) <= '1';
             else 
                 next_state <= nearest_node;
                 en_NearestNode <= '1'; 
@@ -177,7 +183,6 @@ begin
             
         when read_path => 
         led_c <= "11";
-            s_end_node <= end_node;
             if flag_end_write = '1' then
                 flag_finished <= '1';
                 en_NearestNode <= '0'; 
@@ -186,7 +191,6 @@ begin
                 en_UpdateRam <= '0';
                 node <= (others=>'0'); 
                 next_state <= idle;
-                --node_seen <= (others=>'0'); 
             else 
                 next_state <= read_path;
                 flag_finished <= '0';
@@ -205,7 +209,6 @@ begin
             flag_init <= '0';
             en_UpdateRam <= '0';
             node <= (others=>'0');
-            s_end_node <= (others=>'0');
  
     end case;
 end process;

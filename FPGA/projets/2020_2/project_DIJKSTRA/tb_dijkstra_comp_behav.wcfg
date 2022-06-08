@@ -12,13 +12,13 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="20354896fs"></ZoomStartTime>
-      <ZoomEndTime time="20729397fs"></ZoomEndTime>
-      <Cursor1Time time="20728000fs"></Cursor1Time>
+      <ZoomStartTime time="16306400fs"></ZoomStartTime>
+      <ZoomEndTime time="16457001fs"></ZoomEndTime>
+      <Cursor1Time time="14431400fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="188"></NameColumnWidth>
-      <ValueColumnWidth column_width="91"></ValueColumnWidth>
+      <ValueColumnWidth column_width="87"></ValueColumnWidth>
    </column_width_setting>
    <WVObjectSize size="36" />
    <wvobject fp_name="/tb_dijkstra/rst_n" type="logic">
@@ -64,6 +64,7 @@
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/next_node" type="array">
       <obj_property name="ElementShortName">next_node[9:0]</obj_property>
       <obj_property name="ObjectShortName">next_node[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/current_state" type="other">
       <obj_property name="ElementShortName">current_state</obj_property>
@@ -77,7 +78,7 @@
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp_in1" type="array">
       <obj_property name="ElementShortName">comp_in1[9:0]</obj_property>
       <obj_property name="ObjectShortName">comp_in1[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp_in2" type="array">
       <obj_property name="ElementShortName">comp_in2[9:0]</obj_property>
@@ -118,6 +119,7 @@
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/din_ram_ext" type="array">
       <obj_property name="ElementShortName">din_ram_ext[15:0]</obj_property>
       <obj_property name="ObjectShortName">din_ram_ext[15:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
    </wvobject>
    <wvobject fp_name="/tb_dijkstra/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/en_ram_ext" type="logic">
       <obj_property name="ElementShortName">en_ram_ext</obj_property>

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Tue Jun  7 16:26:48 2022
+| Date         : Wed Jun  8 11:20:52 2022
 | Host         : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command      : report_drc -file design_dijkstra_all_wrapper_drc_routed.rpt -pb design_dijkstra_all_wrapper_drc_routed.pb -rpx design_dijkstra_all_wrapper_drc_routed.rpx
 | Design       : design_dijkstra_all_wrapper
@@ -24,22 +24,16 @@ Table of Contents
       Design limits: <entire design considered>
            Ruledeck: default
              Max violations: <unlimited>
-             Violations found: 3
+             Violations found: 2
 +-----------+----------+--------------------+------------+
 | Rule      | Severity | Description        | Violations |
 +-----------+----------+--------------------+------------+
-| PDRC-153  | Warning  | Gated clock check  | 1          |
 | RTSTAT-10 | Warning  | No routable loads  | 1          |
 | ZPS7-1    | Warning  | PS7 block required | 1          |
 +-----------+----------+--------------------+------------+
 
 2. REPORT DETAILS
 -----------------
-PDRC-153#1 Warning
-Gated clock check  
-Net design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node__0 is a gated clock net sourced by a combinational pin design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node_reg[4]_i_1/O, cell design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/s_end_node_reg[4]_i_1. This is not good design practice and will likely impact performance. For SLICE registers, for example, use the CE pin to control the loading of data.
-Related violations: <none>
-
 RTSTAT-10#1 Warning
 No routable loads  
 25 net(s) have no routable loads. The problem bus(es) and/or net(s) are dbg_hub/inst/BSCANID.u_xsdbm_id/CORE_XSDB.UUT_MASTER/U_ICON_INTERFACE/U_CMD1/ctl_reg_en_2[1],

@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
-<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Tue Jun  7 17:14:56 2022" VIVADOVERSION="2020.2">
+<EDKSYSTEM EDWVERSION="1.2" TIMESTAMP="Wed Jun  8 11:16:25 2022" VIVADOVERSION="2020.2">
 
   <SYSTEMINFO ARCH="zynq" BOARD="digilentinc.com:zybo-z7-20:part0:1.1" DEVICE="7z020" NAME="design_dijkstra_all" PACKAGE="clg400" SPEEDGRADE="-1"/>
 
@@ -13,7 +13,6 @@
       <CONNECTIONS>
         <CONNECTION INSTANCE="comparateur1_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="comparateur2_0" PORT="rst_n"/>
-        <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
         <CONNECTION INSTANCE="UPDATE_RAM_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="DIJKSTRA_CONTROLLER_0" PORT="rst_n"/>
         <CONNECTION INSTANCE="NEAREST_NODE_0" PORT="rst_n"/>
@@ -42,6 +41,11 @@
     <PORT DIR="O" LEFT="1" NAME="led_n" RIGHT="0" SIGIS="undef" SIGNAME="NEAREST_NODE_0_led_n">
       <CONNECTIONS>
         <CONNECTION INSTANCE="NEAREST_NODE_0" PORT="led_n"/>
+      </CONNECTIONS>
+    </PORT>
+    <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_resetn">
+      <CONNECTIONS>
+        <CONNECTION INSTANCE="clk_wiz_0" PORT="resetn"/>
       </CONNECTIONS>
     </PORT>
   </EXTERNALPORTS>
@@ -246,6 +250,7 @@
         <PORT DIR="O" LEFT="15" NAME="din_ram_ext" RIGHT="0" SIGIS="undef" SIGNAME="NEAREST_NODE_0_din_ram_ext">
           <CONNECTIONS>
             <CONNECTION INSTANCE="blk_mem_gen_0" PORT="dina"/>
+            <CONNECTION INSTANCE="ila_0" PORT="probe17"/>
           </CONNECTIONS>
         </PORT>
         <PORT DIR="O" NAME="en_ram_ext" SIGIS="undef" SIGNAME="NEAREST_NODE_0_en_ram_ext">
@@ -1196,9 +1201,9 @@
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
       <PORTS>
-        <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_rst_n">
+        <PORT DIR="I" NAME="resetn" POLARITY="ACTIVE_LOW" SIGIS="rst" SIGNAME="External_Ports_resetn">
           <CONNECTIONS>
-            <CONNECTION INSTANCE="External_Ports" PORT="rst_n"/>
+            <CONNECTION INSTANCE="External_Ports" PORT="resetn"/>
           </CONNECTIONS>
         </PORT>
         <PORT CLKFREQUENCY="100000000" DIR="I" NAME="clk_in1" SIGIS="clk" SIGNAME="External_Ports_clk">
@@ -1365,7 +1370,7 @@
         <PARAMETER NAME="C_SLOT_0_AXI_PROTOCOL" VALUE="AXI4"/>
         <PARAMETER NAME="C_NUM_MONITOR_SLOTS" VALUE="1"/>
         <PARAMETER NAME="C_ENABLE_ILA_AXI_MON" VALUE="0"/>
-        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="17"/>
+        <PARAMETER NAME="C_NUM_OF_PROBES" VALUE="18"/>
         <PARAMETER NAME="C_DATA_DEPTH" VALUE="16384"/>
         <PARAMETER NAME="C_MAJOR_VERSION" VALUE="2020"/>
         <PARAMETER NAME="C_MINOR_VERSION" VALUE="2"/>
@@ -1406,7 +1411,7 @@
         <PARAMETER NAME="C_PROBE14_WIDTH" VALUE="10"/>
         <PARAMETER NAME="C_PROBE15_WIDTH" VALUE="5"/>
         <PARAMETER NAME="C_PROBE16_WIDTH" VALUE="10"/>
-        <PARAMETER NAME="C_PROBE17_WIDTH" VALUE="1"/>
+        <PARAMETER NAME="C_PROBE17_WIDTH" VALUE="16"/>
         <PARAMETER NAME="C_PROBE18_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE19_WIDTH" VALUE="1"/>
         <PARAMETER NAME="C_PROBE20_WIDTH" VALUE="1"/>
@@ -4575,6 +4580,11 @@
             <CONNECTION INSTANCE="dpram_0" PORT="data_out_b"/>
           </CONNECTIONS>
         </PORT>
+        <PORT DIR="I" LEFT="15" NAME="probe17" RIGHT="0" SIGIS="undef" SIGNAME="NEAREST_NODE_0_din_ram_ext">
+          <CONNECTIONS>
+            <CONNECTION INSTANCE="NEAREST_NODE_0" PORT="din_ram_ext"/>
+          </CONNECTIONS>
+        </PORT>
       </PORTS>
       <BUSINTERFACES/>
     </MODULE>
@@ -4616,7 +4626,7 @@
       <DOCUMENTS/>
       <PARAMETERS>
         <PARAMETER NAME="CONST_WIDTH" VALUE="5"/>
-        <PARAMETER NAME="CONST_VAL" VALUE="0x0F"/>
+        <PARAMETER NAME="CONST_VAL" VALUE="0x10"/>
         <PARAMETER NAME="Component_Name" VALUE="design_dijkstra_all_xlconstant_0_2"/>
         <PARAMETER NAME="EDK_IPTYPE" VALUE="PERIPHERAL"/>
       </PARAMETERS>
