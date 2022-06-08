@@ -19,13 +19,13 @@ preplace inst xlconstant_0 -pg 1 -lvl 3 -x 850 -y 610 -defaultsOSRD
 preplace inst xlconstant_1 -pg 1 -lvl 2 -x 420 -y 220 -defaultsOSRD
 preplace inst xlconstant_2 -pg 1 -lvl 3 -x 850 -y 710 -defaultsOSRD
 preplace inst blk_mem_gen_0 -pg 1 -lvl 4 -x 1350 -y 240 -defaultsOSRD
-preplace inst ROM_0 -pg 1 -lvl 4 -x 1350 -y 470 -defaultsOSRD
 preplace inst dpram_0 -pg 1 -lvl 4 -x 1350 -y 700 -defaultsOSRD
 preplace inst ila_0 -pg 1 -lvl 1 -x 80 -y 90 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 2 -x 420 -y 560 -defaultsOSRD
 preplace inst UPDATE_RAM_0 -pg 1 -lvl 5 -x 1810 -y 280 -defaultsOSRD
-preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 5 -x 1810 -y 570 -defaultsOSRD
+preplace inst ROM_0 -pg 1 -lvl 4 -x 1350 -y 470 -defaultsOSRD
 preplace inst NEAREST_NODE_0 -pg 1 -lvl 3 -x 850 -y 160 -defaultsOSRD
+preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 5 -x 1810 -y 570 -defaultsOSRD
 preplace netloc clk_0_1 1 0 5 -150 370 200 630 590 -10 1110 50 1620
 preplace netloc rst_n_0_1 1 0 5 -210 380 180 640 580 -50 N -50 1630
 preplace netloc en_0_1 1 0 5 -220J 700 N 700 650J 390 1040J 550 1590J

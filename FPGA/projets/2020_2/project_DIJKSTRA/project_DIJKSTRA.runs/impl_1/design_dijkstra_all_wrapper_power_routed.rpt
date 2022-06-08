@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Wed Jun  8 11:20:58 2022
+| Date             : Wed Jun  8 16:32:57 2022
 | Host             : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_dijkstra_all_wrapper_power_routed.rpt -pb design_dijkstra_all_wrapper_power_summary_routed.pb -rpx design_dijkstra_all_wrapper_power_routed.rpx
 | Design           : design_dijkstra_all_wrapper
@@ -30,10 +30,10 @@ Table of Contents
 ----------
 
 +--------------------------+--------------+
-| Total On-Chip Power (W)  | 0.260        |
+| Total On-Chip Power (W)  | 0.262        |
 | Design Power Budget (W)  | Unspecified* |
 | Power Budget Margin (W)  | NA           |
-| Dynamic (W)              | 0.149        |
+| Dynamic (W)              | 0.151        |
 | Device Static (W)        | 0.111        |
 | Effective TJA (C/W)      | 11.5         |
 | Max Ambient (C)          | 82.0         |
@@ -53,20 +53,20 @@ Table of Contents
 | On-Chip                  | Power (W) | Used     | Available | Utilization (%) |
 +--------------------------+-----------+----------+-----------+-----------------+
 | Clocks                   |     0.013 |        9 |       --- |             --- |
-| Slice Logic              |     0.003 |     7690 |       --- |             --- |
-|   LUT as Logic           |     0.003 |     2609 |     53200 |            4.90 |
-|   Register               |    <0.001 |     3585 |    106400 |            3.37 |
+| Slice Logic              |     0.003 |     7705 |       --- |             --- |
+|   LUT as Logic           |     0.003 |     2614 |     53200 |            4.91 |
+|   Register               |    <0.001 |     3591 |    106400 |            3.38 |
 |   LUT as Shift Register  |    <0.001 |      248 |     17400 |            1.43 |
-|   F7/F8 Muxes            |    <0.001 |      124 |     53200 |            0.23 |
+|   F7/F8 Muxes            |    <0.001 |      127 |     53200 |            0.24 |
 |   CARRY4                 |    <0.001 |       82 |     13300 |            0.62 |
 |   LUT as Distributed RAM |    <0.001 |       24 |     17400 |            0.14 |
 |   Others                 |     0.000 |      566 |       --- |             --- |
-| Signals                  |     0.007 |     5535 |       --- |             --- |
+| Signals                  |     0.008 |     5561 |       --- |             --- |
 | Block RAM                |     0.009 |       52 |       140 |           37.14 |
 | PLL                      |     0.112 |        1 |         4 |           25.00 |
-| I/O                      |     0.003 |       12 |       125 |            9.60 |
+| I/O                      |     0.005 |       12 |       125 |            9.60 |
 | Static Power             |     0.111 |          |           |                 |
-| Total                    |     0.260 |          |           |                 |
+| Total                    |     0.262 |          |           |                 |
 +--------------------------+-----------+----------+-----------+-----------------+
 
 
@@ -158,17 +158,17 @@ Table of Contents
 +-----------------------------+-----------+
 | Name                        | Power (W) |
 +-----------------------------+-----------+
-| design_dijkstra_all_wrapper |     0.149 |
-|   dbg_hub                   |     0.002 |
-|     inst                    |     0.002 |
-|       BSCANID.u_xsdbm_id    |     0.002 |
-|   design_dijkstra_all_i     |     0.143 |
+| design_dijkstra_all_wrapper |     0.151 |
+|   dbg_hub                   |     0.003 |
+|     inst                    |     0.003 |
+|       BSCANID.u_xsdbm_id    |     0.003 |
+|   design_dijkstra_all_i     |     0.144 |
 |     NEAREST_NODE_0          |     0.001 |
 |       U0                    |     0.001 |
 |     clk_wiz_0               |     0.113 |
 |       inst                  |     0.113 |
-|     dpram_0                 |     0.004 |
-|       U0                    |     0.004 |
+|     dpram_0                 |     0.005 |
+|       U0                    |     0.005 |
 |     ila_0                   |     0.023 |
 |       U0                    |     0.023 |
 +-----------------------------+-----------+

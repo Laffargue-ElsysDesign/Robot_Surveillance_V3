@@ -1,4 +1,4 @@
-set_property SRC_FILE_INFO {cfile:D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc rfile:../../../project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc id:1} [current_design]
+set_property SRC_FILE_INFO {cfile:D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc rfile:../../../project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc id:1} [current_design]
 set_property src_info {type:XDC file:1 line:8 export:INPUT save:INPUT read:READ} [current_design]
 set_property -dict { PACKAGE_PIN K17   IOSTANDARD LVCMOS33 } [get_ports { clk }]; #IO_L12P_T1_MRCC_35 Sch=sysclk
 set_property src_info {type:XDC file:1 line:13 export:INPUT save:INPUT read:READ} [current_design]

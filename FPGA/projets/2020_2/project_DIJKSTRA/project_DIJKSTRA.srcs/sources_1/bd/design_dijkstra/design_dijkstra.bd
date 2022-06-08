@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xA4E74194255561F1",
+      "boundary_crc": "0xE55F46F3B10B5699",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra",
       "name": "design_dijkstra",
@@ -10,18 +10,19 @@
       "tool_version": "2020.2"
     },
     "design_tree": {
+      "UPDATE_RAM_0": "",
       "blk_mem_gen_0": "",
+      "clk_wiz_0": "",
       "comparateur1_0": "",
       "comparateur2_0": "",
+      "ila_0": "",
       "xlconstant_0": "",
       "xlconstant_1": "",
       "xlconstant_2": "",
       "blk_mem_gen_1": "",
       "ROM_0": "",
-      "clk_wiz_0": "",
-      "UPDATE_RAM_0": "",
-      "DIJKSTRA_CONTROLLER_0": "",
-      "NEAREST_NODE_0": ""
+      "NEAREST_NODE_0": "",
+      "DIJKSTRA_CONTROLLER_0": ""
     },
     "ports": {
       "clk": {
@@ -33,10 +34,6 @@
       },
       "flag_finished": {
         "direction": "O"
-      },
-      "rst_n": {
-        "type": "rst",
-        "direction": "I"
       },
       "led_c": {
         "direction": "O",
@@ -52,367 +49,21 @@
         "direction": "O",
         "left": "2",
         "right": "0"
+      },
+      "resetn": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
       }
     },
     "components": {
-      "blk_mem_gen_0": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "design_dijkstra_blk_mem_gen_0_0",
-        "xci_path": "ip\\design_dijkstra_blk_mem_gen_0_0\\design_dijkstra_blk_mem_gen_0_0.xci",
-        "inst_hier_path": "blk_mem_gen_0",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Read_Width_A": {
-            "value": "16"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "256"
-          },
-          "Write_Width_A": {
-            "value": "16"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "comparateur1_0": {
-        "vlnv": "xilinx.com:module_ref:comparateur1:1.0",
-        "xci_name": "design_dijkstra_comparateur1_0_0",
-        "xci_path": "ip\\design_dijkstra_comparateur1_0_0\\design_dijkstra_comparateur1_0_0.xci",
-        "inst_hier_path": "comparateur1_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "comparateur1",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_dijkstra_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "comp_in1": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "comp_in2": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "comp_out": {
-            "direction": "O",
-            "left": "4",
-            "right": "0"
-          }
-        }
-      },
-      "comparateur2_0": {
-        "vlnv": "xilinx.com:module_ref:comparateur2:1.0",
-        "xci_name": "design_dijkstra_comparateur2_0_0",
-        "xci_path": "ip\\design_dijkstra_comparateur2_0_0\\design_dijkstra_comparateur2_0_0.xci",
-        "inst_hier_path": "comparateur2_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "comparateur2",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_dijkstra_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "rst_n": {
-            "type": "rst",
-            "direction": "I",
-            "parameters": {
-              "POLARITY": {
-                "value": "ACTIVE_LOW",
-                "value_src": "constant"
-              }
-            }
-          },
-          "comp_in1": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "comp_in2": {
-            "direction": "I",
-            "left": "9",
-            "right": "0"
-          },
-          "comp_out": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          }
-        }
-      },
-      "xlconstant_0": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_dijkstra_xlconstant_0_0",
-        "xci_path": "ip\\design_dijkstra_xlconstant_0_0\\design_dijkstra_xlconstant_0_0.xci",
-        "inst_hier_path": "xlconstant_0",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "6"
-          },
-          "CONST_WIDTH": {
-            "value": "5"
-          }
-        }
-      },
-      "xlconstant_1": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_dijkstra_xlconstant_1_0",
-        "xci_path": "ip\\design_dijkstra_xlconstant_1_0\\design_dijkstra_xlconstant_1_0.xci",
-        "inst_hier_path": "xlconstant_1",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "0"
-          }
-        }
-      },
-      "xlconstant_2": {
-        "vlnv": "xilinx.com:ip:xlconstant:1.1",
-        "xci_name": "design_dijkstra_xlconstant_2_0",
-        "xci_path": "ip\\design_dijkstra_xlconstant_2_0\\design_dijkstra_xlconstant_2_0.xci",
-        "inst_hier_path": "xlconstant_2",
-        "parameters": {
-          "CONST_VAL": {
-            "value": "16"
-          },
-          "CONST_WIDTH": {
-            "value": "5"
-          }
-        }
-      },
-      "blk_mem_gen_1": {
-        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
-        "xci_name": "design_dijkstra_blk_mem_gen_0_1",
-        "xci_path": "ip\\design_dijkstra_blk_mem_gen_0_1\\design_dijkstra_blk_mem_gen_0_1.xci",
-        "inst_hier_path": "blk_mem_gen_1",
-        "parameters": {
-          "Enable_32bit_Address": {
-            "value": "false"
-          },
-          "Enable_B": {
-            "value": "Use_ENB_Pin"
-          },
-          "Memory_Type": {
-            "value": "True_Dual_Port_RAM"
-          },
-          "Port_B_Clock": {
-            "value": "100"
-          },
-          "Port_B_Enable_Rate": {
-            "value": "100"
-          },
-          "Port_B_Write_Rate": {
-            "value": "50"
-          },
-          "Read_Width_A": {
-            "value": "10"
-          },
-          "Read_Width_B": {
-            "value": "10"
-          },
-          "Register_PortA_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Register_PortB_Output_of_Memory_Primitives": {
-            "value": "false"
-          },
-          "Use_Byte_Write_Enable": {
-            "value": "false"
-          },
-          "Use_RSTA_Pin": {
-            "value": "false"
-          },
-          "Write_Depth_A": {
-            "value": "32"
-          },
-          "Write_Width_A": {
-            "value": "10"
-          },
-          "Write_Width_B": {
-            "value": "10"
-          },
-          "use_bram_block": {
-            "value": "Stand_Alone"
-          }
-        }
-      },
-      "ROM_0": {
-        "vlnv": "xilinx.com:module_ref:ROM:1.0",
-        "xci_name": "design_dijkstra_ROM_0_0",
-        "xci_path": "ip\\design_dijkstra_ROM_0_0\\design_dijkstra_ROM_0_0.xci",
-        "inst_hier_path": "ROM_0",
-        "reference_info": {
-          "ref_type": "hdl",
-          "ref_name": "ROM",
-          "boundary_crc": "0x0"
-        },
-        "ports": {
-          "clk": {
-            "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "100000000",
-                "value_src": "default_prop"
-              },
-              "PHASE": {
-                "value": "0.000",
-                "value_src": "default_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "design_dijkstra_clk",
-                "value_src": "default_prop"
-              }
-            }
-          },
-          "en_rom": {
-            "direction": "I"
-          },
-          "addr_rom": {
-            "direction": "I",
-            "left": "4",
-            "right": "0"
-          },
-          "data_rom": {
-            "direction": "O",
-            "left": "9",
-            "right": "0"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_dijkstra_clk_wiz_0_0",
-        "xci_path": "ip\\design_dijkstra_clk_wiz_0_0\\design_dijkstra_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT1_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT1_JITTER": {
-            "value": "203.457"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "155.540"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "50"
-          },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFG"
-          },
-          "JITTER_SEL": {
-            "value": "No_Jitter"
-          },
-          "MMCM_BANDWIDTH": {
-            "value": "OPTIMIZED"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "17"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "17"
-          },
-          "MMCM_CLKOUT0_DUTY_CYCLE": {
-            "value": "0.5"
-          },
-          "MMCM_COMPENSATION": {
-            "value": "ZHOLD"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "2"
-          },
-          "PRIMITIVE": {
-            "value": "PLL"
-          },
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          },
-          "USE_MIN_POWER": {
-            "value": "true"
-          }
-        }
-      },
       "UPDATE_RAM_0": {
         "vlnv": "xilinx.com:module_ref:UPDATE_RAM:1.0",
-        "xci_name": "design_dijkstra_UPDATE_RAM_0_0",
-        "xci_path": "ip\\design_dijkstra_UPDATE_RAM_0_0\\design_dijkstra_UPDATE_RAM_0_0.xci",
+        "xci_name": "design_dijkstra_UPDATE_RAM_0_1",
+        "xci_path": "ip\\design_dijkstra_UPDATE_RAM_0_1\\design_dijkstra_UPDATE_RAM_0_1.xci",
         "inst_hier_path": "UPDATE_RAM_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -422,7 +73,21 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst_n": {
             "type": "rst",
@@ -509,20 +174,137 @@
           }
         }
       },
-      "DIJKSTRA_CONTROLLER_0": {
-        "vlnv": "xilinx.com:module_ref:DIJKSTRA_CONTROLLER:1.0",
-        "xci_name": "design_dijkstra_DIJKSTRA_CONTROLLER_0_0",
-        "xci_path": "ip\\design_dijkstra_DIJKSTRA_CONTROLLER_0_0\\design_dijkstra_DIJKSTRA_CONTROLLER_0_0.xci",
-        "inst_hier_path": "DIJKSTRA_CONTROLLER_0",
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_dijkstra_blk_mem_gen_0_2",
+        "xci_path": "ip\\design_dijkstra_blk_mem_gen_0_2\\design_dijkstra_blk_mem_gen_0_2.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Read_Width_A": {
+            "value": "16"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_dijkstra_clk_wiz_0_1",
+        "xci_path": "ip\\design_dijkstra_clk_wiz_0_1\\design_dijkstra_clk_wiz_0_1.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "203.457"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "155.540"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "JITTER_SEL": {
+            "value": "No_Jitter"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "17"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "17"
+          },
+          "MMCM_CLKOUT0_DUTY_CYCLE": {
+            "value": "0.5"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_MIN_POWER": {
+            "value": "true"
+          }
+        }
+      },
+      "comparateur1_0": {
+        "vlnv": "xilinx.com:module_ref:comparateur1:1.0",
+        "xci_name": "design_dijkstra_comparateur1_0_1",
+        "xci_path": "ip\\design_dijkstra_comparateur1_0_1\\design_dijkstra_comparateur1_0_1.xci",
+        "inst_hier_path": "comparateur1_0",
         "reference_info": {
           "ref_type": "hdl",
-          "ref_name": "DIJKSTRA_CONTROLLER",
+          "ref_name": "comparateur1",
           "boundary_crc": "0x0"
         },
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I"
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
           "rst_n": {
             "type": "rst",
@@ -534,69 +316,270 @@
               }
             }
           },
-          "en": {
-            "direction": "I"
-          },
-          "start_node": {
+          "comp_in1": {
             "direction": "I",
             "left": "4",
             "right": "0"
           },
-          "end_node": {
+          "comp_in2": {
             "direction": "I",
             "left": "4",
             "right": "0"
           },
-          "flag_finished": {
-            "direction": "O"
-          },
-          "en_UpdateRam": {
-            "direction": "O"
-          },
-          "en_NearestNode": {
-            "direction": "O"
-          },
-          "node": {
+          "comp_out": {
             "direction": "O",
-            "left": "9",
+            "left": "4",
             "right": "0"
+          }
+        }
+      },
+      "comparateur2_0": {
+        "vlnv": "xilinx.com:module_ref:comparateur2:1.0",
+        "xci_name": "design_dijkstra_comparateur2_0_1",
+        "xci_path": "ip\\design_dijkstra_comparateur2_0_1\\design_dijkstra_comparateur2_0_1.xci",
+        "inst_hier_path": "comparateur2_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "comparateur2",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
           },
-          "node_seen": {
-            "direction": "O",
-            "left": "16",
-            "right": "0"
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
           },
-          "flag_RAM": {
-            "direction": "I"
-          },
-          "flag_node": {
-            "direction": "I"
-          },
-          "flag_end_write": {
-            "direction": "I"
-          },
-          "flag_init": {
-            "direction": "O"
-          },
-          "flag_read_path": {
-            "direction": "O"
-          },
-          "next_node": {
+          "comp_in1": {
             "direction": "I",
             "left": "9",
             "right": "0"
           },
-          "led_c": {
+          "comp_in2": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "comp_out": {
             "direction": "O",
-            "left": "1",
+            "left": "9",
+            "right": "0"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_dijkstra_ila_0_0",
+        "xci_path": "ip\\design_dijkstra_ila_0_0\\design_dijkstra_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "16384"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "18"
+          },
+          "C_PROBE0_WIDTH": {
+            "value": "2"
+          },
+          "C_PROBE14_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE15_WIDTH": {
+            "value": "5"
+          },
+          "C_PROBE16_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE17_WIDTH": {
+            "value": "16"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "2"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE4_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "17"
+          },
+          "C_PROBE7_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE8_WIDTH": {
+            "value": "5"
+          },
+          "C_TRIGIN_EN": {
+            "value": "false"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_dijkstra_xlconstant_0_1",
+        "xci_path": "ip\\design_dijkstra_xlconstant_0_1\\design_dijkstra_xlconstant_0_1.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "6"
+          },
+          "CONST_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_dijkstra_xlconstant_1_1",
+        "xci_path": "ip\\design_dijkstra_xlconstant_1_1\\design_dijkstra_xlconstant_1_1.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_dijkstra_xlconstant_2_1",
+        "xci_path": "ip\\design_dijkstra_xlconstant_2_1\\design_dijkstra_xlconstant_2_1.xci",
+        "inst_hier_path": "xlconstant_2",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "16"
+          },
+          "CONST_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "blk_mem_gen_1": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_dijkstra_blk_mem_gen_1_0",
+        "xci_path": "ip\\design_dijkstra_blk_mem_gen_1_0\\design_dijkstra_blk_mem_gen_1_0.xci",
+        "inst_hier_path": "blk_mem_gen_1",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Enable_B": {
+            "value": "Use_ENB_Pin"
+          },
+          "Memory_Type": {
+            "value": "True_Dual_Port_RAM"
+          },
+          "Port_B_Clock": {
+            "value": "100"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "100"
+          },
+          "Port_B_Write_Rate": {
+            "value": "50"
+          },
+          "Read_Width_A": {
+            "value": "10"
+          },
+          "Read_Width_B": {
+            "value": "10"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Register_PortB_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "32"
+          },
+          "Write_Width_A": {
+            "value": "10"
+          },
+          "Write_Width_B": {
+            "value": "10"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "ROM_0": {
+        "vlnv": "xilinx.com:module_ref:ROM:1.0",
+        "xci_name": "design_dijkstra_ROM_0_1",
+        "xci_path": "ip\\design_dijkstra_ROM_0_1\\design_dijkstra_ROM_0_1.xci",
+        "inst_hier_path": "ROM_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "ROM",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "en_rom": {
+            "direction": "I"
+          },
+          "addr_rom": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "data_rom": {
+            "direction": "O",
+            "left": "9",
             "right": "0"
           }
         }
       },
       "NEAREST_NODE_0": {
         "vlnv": "xilinx.com:module_ref:NEAREST_NODE:1.0",
-        "xci_name": "design_dijkstra_NEAREST_NODE_0_0",
-        "xci_path": "ip\\design_dijkstra_NEAREST_NODE_0_0\\design_dijkstra_NEAREST_NODE_0_0.xci",
+        "xci_name": "design_dijkstra_NEAREST_NODE_0_1",
+        "xci_path": "ip\\design_dijkstra_NEAREST_NODE_0_1\\design_dijkstra_NEAREST_NODE_0_1.xci",
         "inst_hier_path": "NEAREST_NODE_0",
         "reference_info": {
           "ref_type": "hdl",
@@ -698,18 +681,104 @@
             "right": "0"
           }
         }
+      },
+      "DIJKSTRA_CONTROLLER_0": {
+        "vlnv": "xilinx.com:module_ref:DIJKSTRA_CONTROLLER:1.0",
+        "xci_name": "design_dijkstra_DIJKSTRA_CONTROLLER_0_1",
+        "xci_path": "ip\\design_dijkstra_DIJKSTRA_CONTROLLER_0_1\\design_dijkstra_DIJKSTRA_CONTROLLER_0_1.xci",
+        "inst_hier_path": "DIJKSTRA_CONTROLLER_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "DIJKSTRA_CONTROLLER",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "start_node": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "end_node": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "flag_finished": {
+            "direction": "O"
+          },
+          "en_UpdateRam": {
+            "direction": "O"
+          },
+          "en_NearestNode": {
+            "direction": "O"
+          },
+          "node": {
+            "direction": "O",
+            "left": "9",
+            "right": "0"
+          },
+          "node_seen": {
+            "direction": "O",
+            "left": "16",
+            "right": "0"
+          },
+          "flag_RAM": {
+            "direction": "I"
+          },
+          "flag_node": {
+            "direction": "I"
+          },
+          "flag_end_write": {
+            "direction": "I"
+          },
+          "flag_init": {
+            "direction": "O"
+          },
+          "flag_read_path": {
+            "direction": "O"
+          },
+          "next_node": {
+            "direction": "I",
+            "left": "9",
+            "right": "0"
+          },
+          "led_c": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
       }
     },
     "nets": {
       "DIJKSTRA_CONTROLLER_0_en_NearestNode": {
         "ports": [
           "DIJKSTRA_CONTROLLER_0/en_NearestNode",
+          "ila_0/probe13",
           "NEAREST_NODE_0/en"
         ]
       },
       "DIJKSTRA_CONTROLLER_0_en_UpdateRam": {
         "ports": [
           "DIJKSTRA_CONTROLLER_0/en_UpdateRam",
+          "ila_0/probe12",
           "UPDATE_RAM_0/en"
         ]
       },
@@ -722,6 +791,7 @@
       "DIJKSTRA_CONTROLLER_0_flag_init": {
         "ports": [
           "DIJKSTRA_CONTROLLER_0/flag_init",
+          "ila_0/probe9",
           "UPDATE_RAM_0/flag_init"
         ]
       },
@@ -731,17 +801,33 @@
           "NEAREST_NODE_0/flag_read_path"
         ]
       },
+      "DIJKSTRA_CONTROLLER_0_led_c": {
+        "ports": [
+          "DIJKSTRA_CONTROLLER_0/led_c",
+          "led_c",
+          "ila_0/probe1"
+        ]
+      },
       "DIJKSTRA_CONTROLLER_0_node": {
         "ports": [
           "DIJKSTRA_CONTROLLER_0/node",
+          "ila_0/probe14",
           "UPDATE_RAM_0/node"
         ]
       },
       "DIJKSTRA_CONTROLLER_0_node_seen": {
         "ports": [
           "DIJKSTRA_CONTROLLER_0/node_seen",
+          "ila_0/probe6",
           "UPDATE_RAM_0/node_seen",
           "NEAREST_NODE_0/node_seen"
+        ]
+      },
+      "NEAREST_NODE_0_addr_ram": {
+        "ports": [
+          "NEAREST_NODE_0/addr_ram",
+          "ila_0/probe15",
+          "blk_mem_gen_1/addrb"
         ]
       },
       "NEAREST_NODE_0_addr_ram_ext": {
@@ -753,19 +839,22 @@
       "NEAREST_NODE_0_comp_in1": {
         "ports": [
           "NEAREST_NODE_0/comp_in1",
-          "comparateur2_0/comp_in1"
+          "comparateur2_0/comp_in1",
+          "ila_0/probe3"
         ]
       },
       "NEAREST_NODE_0_comp_in2": {
         "ports": [
           "NEAREST_NODE_0/comp_in2",
-          "comparateur2_0/comp_in2"
+          "comparateur2_0/comp_in2",
+          "ila_0/probe4"
         ]
       },
       "NEAREST_NODE_0_din_ram_ext": {
         "ports": [
           "NEAREST_NODE_0/din_ram_ext",
-          "blk_mem_gen_0/dina"
+          "blk_mem_gen_0/dina",
+          "ila_0/probe17"
         ]
       },
       "NEAREST_NODE_0_en_ram_ext": {
@@ -786,6 +875,13 @@
           "DIJKSTRA_CONTROLLER_0/flag_node"
         ]
       },
+      "NEAREST_NODE_0_led_n": {
+        "ports": [
+          "NEAREST_NODE_0/led_n",
+          "led_n",
+          "ila_0/probe0"
+        ]
+      },
       "NEAREST_NODE_0_next_node": {
         "ports": [
           "NEAREST_NODE_0/next_node",
@@ -802,6 +898,13 @@
         "ports": [
           "ROM_0/data_rom",
           "UPDATE_RAM_0/data_rom"
+        ]
+      },
+      "UPDATE_RAM_0_addr_ram": {
+        "ports": [
+          "UPDATE_RAM_0/addr_ram",
+          "ila_0/probe8",
+          "blk_mem_gen_1/addra"
         ]
       },
       "UPDATE_RAM_0_addr_rom": {
@@ -822,6 +925,13 @@
           "comparateur1_0/comp_in2"
         ]
       },
+      "UPDATE_RAM_0_din_ram": {
+        "ports": [
+          "UPDATE_RAM_0/din_ram",
+          "ila_0/probe7",
+          "blk_mem_gen_1/dina"
+        ]
+      },
       "UPDATE_RAM_0_en_rom": {
         "ports": [
           "UPDATE_RAM_0/en_rom",
@@ -831,7 +941,22 @@
       "UPDATE_RAM_0_flag_RAM": {
         "ports": [
           "UPDATE_RAM_0/flag_RAM",
+          "ila_0/probe11",
           "DIJKSTRA_CONTROLLER_0/flag_RAM"
+        ]
+      },
+      "UPDATE_RAM_0_led_u": {
+        "ports": [
+          "UPDATE_RAM_0/led_u",
+          "led_u",
+          "ila_0/probe2"
+        ]
+      },
+      "UPDATE_RAM_0_we_ram": {
+        "ports": [
+          "UPDATE_RAM_0/we_ram",
+          "ila_0/probe10",
+          "blk_mem_gen_1/wea"
         ]
       },
       "blk_mem_gen_0_douta": {
@@ -846,12 +971,19 @@
           "comparateur1_0/clk",
           "comparateur2_0/clk",
           "blk_mem_gen_0/clka",
-          "blk_mem_gen_1/clka",
-          "blk_mem_gen_1/clkb",
-          "ROM_0/clk",
+          "ila_0/clk",
           "UPDATE_RAM_0/clk",
-          "DIJKSTRA_CONTROLLER_0/clk",
-          "NEAREST_NODE_0/clk"
+          "blk_mem_gen_1/clkb",
+          "blk_mem_gen_1/clka",
+          "ROM_0/clk",
+          "NEAREST_NODE_0/clk",
+          "DIJKSTRA_CONTROLLER_0/clk"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
         ]
       },
       "comparateur1_0_comp_out": {
@@ -863,7 +995,15 @@
       "comparateur2_0_comp_out": {
         "ports": [
           "comparateur2_0/comp_out",
+          "ila_0/probe5",
           "NEAREST_NODE_0/comp_out"
+        ]
+      },
+      "dpram_0_data_out_b": {
+        "ports": [
+          "blk_mem_gen_1/doutb",
+          "ila_0/probe16",
+          "NEAREST_NODE_0/data_ram"
         ]
       },
       "en_0_1": {
@@ -872,15 +1012,20 @@
           "DIJKSTRA_CONTROLLER_0/en"
         ]
       },
+      "resetn_0_1": {
+        "ports": [
+          "resetn",
+          "clk_wiz_0/resetn"
+        ]
+      },
       "rst_n_0_1": {
         "ports": [
           "rst_n",
           "comparateur1_0/rst_n",
           "comparateur2_0/rst_n",
-          "clk_wiz_0/resetn",
           "UPDATE_RAM_0/rst_n",
-          "DIJKSTRA_CONTROLLER_0/rst_n",
-          "NEAREST_NODE_0/rst_n"
+          "NEAREST_NODE_0/rst_n",
+          "DIJKSTRA_CONTROLLER_0/rst_n"
         ]
       },
       "xlconstant_0_dout": {
@@ -901,16 +1046,10 @@
           "DIJKSTRA_CONTROLLER_0/end_node"
         ]
       },
-      "UPDATE_RAM_0_addr_ram": {
+      "NEAREST_NODE_0_en_ram": {
         "ports": [
-          "UPDATE_RAM_0/addr_ram",
-          "blk_mem_gen_1/addra"
-        ]
-      },
-      "UPDATE_RAM_0_din_ram": {
-        "ports": [
-          "UPDATE_RAM_0/din_ram",
-          "blk_mem_gen_1/dina"
+          "NEAREST_NODE_0/en_ram",
+          "blk_mem_gen_1/enb"
         ]
       },
       "UPDATE_RAM_0_en_ram": {
@@ -919,58 +1058,10 @@
           "blk_mem_gen_1/ena"
         ]
       },
-      "UPDATE_RAM_0_we_ram": {
-        "ports": [
-          "UPDATE_RAM_0/we_ram",
-          "blk_mem_gen_1/wea"
-        ]
-      },
       "blk_mem_gen_1_douta": {
         "ports": [
           "blk_mem_gen_1/douta",
           "UPDATE_RAM_0/data_ram"
-        ]
-      },
-      "NEAREST_NODE_0_addr_ram": {
-        "ports": [
-          "NEAREST_NODE_0/addr_ram",
-          "blk_mem_gen_1/addrb"
-        ]
-      },
-      "NEAREST_NODE_0_en_ram": {
-        "ports": [
-          "NEAREST_NODE_0/en_ram",
-          "blk_mem_gen_1/enb"
-        ]
-      },
-      "blk_mem_gen_1_doutb": {
-        "ports": [
-          "blk_mem_gen_1/doutb",
-          "NEAREST_NODE_0/data_ram"
-        ]
-      },
-      "DIJKSTRA_CONTROLLER_0_led_c": {
-        "ports": [
-          "DIJKSTRA_CONTROLLER_0/led_c",
-          "led_c"
-        ]
-      },
-      "NEAREST_NODE_0_led_n": {
-        "ports": [
-          "NEAREST_NODE_0/led_n",
-          "led_n"
-        ]
-      },
-      "UPDATE_RAM_0_led_u": {
-        "ports": [
-          "UPDATE_RAM_0/led_u",
-          "led_u"
-        ]
-      },
-      "clk_1": {
-        "ports": [
-          "clk",
-          "clk_wiz_0/clk_in1"
         ]
       }
     }

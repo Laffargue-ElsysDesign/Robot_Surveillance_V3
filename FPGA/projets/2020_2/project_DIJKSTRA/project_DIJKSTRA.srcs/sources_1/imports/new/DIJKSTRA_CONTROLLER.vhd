@@ -77,6 +77,7 @@ begin
         current_state <= idle;
         s_start_node <= (others=>'0');
         s_end_node <= (others=>'0');
+        s_next_node <= (others=>'0');
     elsif rising_edge(Clk) then
         current_state <= next_state;
         if current_state = nearest_node then 
@@ -92,7 +93,7 @@ begin
             init_node <= '0';
         end if;
         if current_state = idle then 
-            s_next_node <= (others=>'0');
+            s_next_node <= s_next_node;
             if en = '1' then 
                 s_start_node <= start_node;
                 s_end_node <= end_node;
@@ -113,7 +114,7 @@ begin
     end if;
 end process;
  
-process(current_state, en, flag_RAM, flag_node, s_next_node, next_node, flag_end_write, dist_zero, start_node, end_node, s_end_node, prev_flag_node, init_node) is
+process(current_state, en, flag_RAM, flag_node, s_start_node, s_next_node, next_node, flag_end_write, dist_zero, start_node, end_node, s_end_node, prev_flag_node, init_node) is
 begin 
     case current_state is
  

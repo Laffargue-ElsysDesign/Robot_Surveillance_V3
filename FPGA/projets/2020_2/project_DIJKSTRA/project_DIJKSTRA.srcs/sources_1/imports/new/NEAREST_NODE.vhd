@@ -72,7 +72,7 @@ signal s_next_node : std_logic_vector(nb_bit_dist+nb_bit_addr-1 downto 0);
 
 begin
 
-Sequentiel : process(clk, rst_n, current_state)   -- process séquentiel permettant de passer à l'état suivant et d'incrémenter le cpt ram si nécéssaire
+Sequentiel : process(clk, rst_n, current_state, next_state)   -- process séquentiel permettant de passer à l'état suivant et d'incrémenter le cpt ram si nécéssaire
 begin 
     if rst_n = '0' then 
         current_state <= idle; 
@@ -94,8 +94,8 @@ begin
         else
             comp <= '1'; 
         end if;
-        if current_state = nearest_node or next_state = nearest_node then 
-        --if current_state = nearest_node then
+        --if current_state = nearest_node or next_state = nearest_node then 
+        if current_state = nearest_node then
             s_next_node <= comp_out; 
         elsif current_state = write_ram_ext then
             s_next_node <= data_ram; 
@@ -139,7 +139,9 @@ begin
             din_ram_ext  <= (others=>'0'); 
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            if node_seen(cpt_addr)='1' then
+            if node_seen(cpt_addr)='1' and cpt_addr >= 17 then
+                next_state <= nearest_node;
+            elsif node_seen(cpt_addr)='1' then
                 next_state <= read_ram;
             else
                 next_state <= compare;

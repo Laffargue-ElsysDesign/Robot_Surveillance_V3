@@ -3,7 +3,7 @@
 <!--                                                         -->
 <!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.   -->
 
-<Project Version="7" Minor="54" Path="D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr">
+<Project Version="7" Minor="54" Path="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
     <Option Name="Id" Val="188fec7ef2da41aea7b6047cf526264c"/>
@@ -47,7 +47,7 @@
     <Option Name="IPStaticSourceDir" Val="$PIPUSERFILESDIR/ipstatic"/>
     <Option Name="EnableBDX" Val="FALSE"/>
     <Option Name="DSABoardId" Val="zybo-z7-20"/>
-    <Option Name="WTXSimLaunchSim" Val="60"/>
+    <Option Name="WTXSimLaunchSim" Val="61"/>
     <Option Name="WTModelSimLaunchSim" Val="0"/>
     <Option Name="WTQuestaLaunchSim" Val="0"/>
     <Option Name="WTIesLaunchSim" Val="0"/>
@@ -147,20 +147,17 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_UPDATE_RAM_0_0/design_dijkstra_all_UPDATE_RAM_0_0.xci">
-          <Proxy FileSetName="design_dijkstra_all_UPDATE_RAM_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0.xci">
+          <Proxy FileSetName="design_dijkstra_all_ila_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xci">
           <Proxy FileSetName="design_dijkstra_all_clk_wiz_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_NEAREST_NODE_0_0/design_dijkstra_all_NEAREST_NODE_0_0.xci">
-          <Proxy FileSetName="design_dijkstra_all_NEAREST_NODE_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_UPDATE_RAM_0_0/design_dijkstra_all_UPDATE_RAM_0_0.xci">
+          <Proxy FileSetName="design_dijkstra_all_UPDATE_RAM_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0.xci">
-          <Proxy FileSetName="design_dijkstra_all_ila_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.xci">
-          <Proxy FileSetName="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_ROM_0_0/design_dijkstra_all_ROM_0_0.xci">
+          <Proxy FileSetName="design_dijkstra_all_ROM_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_comparateur1_0_0/design_dijkstra_all_comparateur1_0_0.xci">
           <Proxy FileSetName="design_dijkstra_all_comparateur1_0_0"/>
@@ -171,30 +168,15 @@
         <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_blk_mem_gen_0_0/design_dijkstra_all_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="design_dijkstra_all_blk_mem_gen_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_ROM_0_0/design_dijkstra_all_ROM_0_0.xci">
-          <Proxy FileSetName="design_dijkstra_all_ROM_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_dpram_0_0/design_dijkstra_all_dpram_0_0.xci">
           <Proxy FileSetName="design_dijkstra_all_dpram_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra_all.bd" FileRelPathName="ip/design_dijkstra_all_NEAREST_NODE_0_0/design_dijkstra_all_NEAREST_NODE_0_0.xci">
+          <Proxy FileSetName="design_dijkstra_all_NEAREST_NODE_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd">
         <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PSRCDIR/sources_1/bd/design_dijkstra/design_dijkstra.bd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="implementation"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
-      <File Path="$PGENDIR/sources_1/bd/design_dijkstra/hdl/design_dijkstra_wrapper.vhd">
-        <FileInfo>
-          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -206,10 +188,63 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_TOP_Dijkstra/design_TOP_Dijkstra.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_TOP_Dijkstra.bd" FileRelPathName="ip/design_TOP_Dijkstra_ila_0_0/design_TOP_Dijkstra_ila_0_0.xci">
+          <Proxy FileSetName="design_TOP_Dijkstra_ila_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_TOP_Dijkstra.bd" FileRelPathName="ip/design_TOP_Dijkstra_blk_mem_gen_0_0/design_TOP_Dijkstra_blk_mem_gen_0_0.xci">
+          <Proxy FileSetName="design_TOP_Dijkstra_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_TOP_Dijkstra.bd" FileRelPathName="ip/design_TOP_Dijkstra_clk_wiz_0_0/design_TOP_Dijkstra_clk_wiz_0_0.xci">
+          <Proxy FileSetName="design_TOP_Dijkstra_clk_wiz_0_0"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/design_TOP_Dijkstra/hdl/design_TOP_Dijkstra_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/bd/design_dijkstra/design_dijkstra.bd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="implementation"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra.bd" FileRelPathName="ip/design_dijkstra_blk_mem_gen_1_0/design_dijkstra_blk_mem_gen_1_0.xci">
+          <Proxy FileSetName="design_dijkstra_blk_mem_gen_1_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra.bd" FileRelPathName="ip/design_dijkstra_comparateur1_0_1/design_dijkstra_comparateur1_0_1.xci">
+          <Proxy FileSetName="design_dijkstra_comparateur1_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra.bd" FileRelPathName="ip/design_dijkstra_comparateur2_0_1/design_dijkstra_comparateur2_0_1.xci">
+          <Proxy FileSetName="design_dijkstra_comparateur2_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra.bd" FileRelPathName="ip/design_dijkstra_clk_wiz_0_1/design_dijkstra_clk_wiz_0_1.xci">
+          <Proxy FileSetName="design_dijkstra_clk_wiz_0_1"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_dijkstra.bd" FileRelPathName="ip/design_dijkstra_UPDATE_RAM_0_1/design_dijkstra_UPDATE_RAM_0_1.xci">
+          <Proxy FileSetName="design_dijkstra_UPDATE_RAM_0_1"/>
+        </CompFileExtendedInfo>
+      </File>
+      <File Path="$PGENDIR/sources_1/bd/design_dijkstra/hdl/design_dijkstra_wrapper.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
       <Config>
         <Option Name="DesignMode" Val="RTL"/>
         <Option Name="TopModule" Val="design_dijkstra_all_wrapper"/>
-        <Option Name="TopAutoSet" Val="TRUE"/>
       </Config>
     </FileSet>
     <FileSet Name="constrs_1" Type="Constrs" RelSrcDir="$PSRCDIR/constrs_1" RelGenDir="$PGENDIR/constrs_1">
@@ -320,12 +355,6 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_dijkstra_all_ROM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_all_ROM_0_0" RelGenDir="$PGENDIR/design_dijkstra_all_ROM_0_0">
-      <Config>
-        <Option Name="TopModule" Val="design_dijkstra_all_ROM_0_0"/>
-        <Option Name="UseBlackboxStub" Val="1"/>
-      </Config>
-    </FileSet>
     <FileSet Name="design_dijkstra_all_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_all_ila_0_0" RelGenDir="$PGENDIR/design_dijkstra_all_ila_0_0">
       <Config>
         <Option Name="TopModule" Val="design_dijkstra_all_ila_0_0"/>
@@ -344,9 +373,57 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0" RelGenDir="$PGENDIR/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0">
+    <FileSet Name="design_dijkstra_blk_mem_gen_1_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_blk_mem_gen_1_0" RelGenDir="$PGENDIR/design_dijkstra_blk_mem_gen_1_0">
       <Config>
-        <Option Name="TopModule" Val="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0"/>
+        <Option Name="TopModule" Val="design_dijkstra_blk_mem_gen_1_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_dijkstra_UPDATE_RAM_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_UPDATE_RAM_0_1" RelGenDir="$PGENDIR/design_dijkstra_UPDATE_RAM_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_dijkstra_UPDATE_RAM_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_dijkstra_comparateur1_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_comparateur1_0_1" RelGenDir="$PGENDIR/design_dijkstra_comparateur1_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_dijkstra_comparateur1_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_dijkstra_comparateur2_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_comparateur2_0_1" RelGenDir="$PGENDIR/design_dijkstra_comparateur2_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_dijkstra_comparateur2_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_dijkstra_clk_wiz_0_1" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_clk_wiz_0_1" RelGenDir="$PGENDIR/design_dijkstra_clk_wiz_0_1">
+      <Config>
+        <Option Name="TopModule" Val="design_dijkstra_clk_wiz_0_1"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_TOP_Dijkstra_blk_mem_gen_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_TOP_Dijkstra_blk_mem_gen_0_0" RelGenDir="$PGENDIR/design_TOP_Dijkstra_blk_mem_gen_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_TOP_Dijkstra_blk_mem_gen_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_TOP_Dijkstra_clk_wiz_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_TOP_Dijkstra_clk_wiz_0_0" RelGenDir="$PGENDIR/design_TOP_Dijkstra_clk_wiz_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_TOP_Dijkstra_clk_wiz_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_TOP_Dijkstra_ila_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_TOP_Dijkstra_ila_0_0" RelGenDir="$PGENDIR/design_TOP_Dijkstra_ila_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_TOP_Dijkstra_ila_0_0"/>
+        <Option Name="UseBlackboxStub" Val="1"/>
+      </Config>
+    </FileSet>
+    <FileSet Name="design_dijkstra_all_ROM_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_dijkstra_all_ROM_0_0" RelGenDir="$PGENDIR/design_dijkstra_all_ROM_0_0">
+      <Config>
+        <Option Name="TopModule" Val="design_dijkstra_all_ROM_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -376,7 +453,7 @@
     </Simulator>
   </Simulators>
   <Runs Version="1" Minor="15">
-    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/synth_1">
+    <Run Id="synth_1" Type="Ft3:Synth" SrcSet="sources_1" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -386,7 +463,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_comparateur2_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_comparateur2_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur2_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_comparateur2_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_comparateur2_0_0_synth_1">
+    <Run Id="design_dijkstra_all_comparateur2_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_comparateur2_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur2_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_comparateur2_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_comparateur2_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -396,7 +473,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_comparateur1_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_comparateur1_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur1_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_comparateur1_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_comparateur1_0_0_synth_1">
+    <Run Id="design_dijkstra_all_comparateur1_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_comparateur1_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur1_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_comparateur1_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_comparateur1_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -406,7 +483,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_blk_mem_gen_0_0_synth_1">
+    <Run Id="design_dijkstra_all_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_blk_mem_gen_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -416,7 +493,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_dpram_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_dpram_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_dpram_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_dpram_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_dpram_0_0_synth_1">
+    <Run Id="design_dijkstra_all_dpram_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_dpram_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_dpram_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_dpram_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_dpram_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -426,7 +503,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_ROM_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_ROM_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ROM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_ROM_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_ROM_0_0_synth_1">
+    <Run Id="design_dijkstra_all_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_ila_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_ila_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_ila_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -436,7 +513,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_ila_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_ila_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_ila_0_0_synth_1">
+    <Run Id="design_dijkstra_all_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_clk_wiz_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_clk_wiz_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -446,7 +523,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_clk_wiz_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_clk_wiz_0_0_synth_1">
+    <Run Id="design_dijkstra_all_UPDATE_RAM_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_UPDATE_RAM_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_UPDATE_RAM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_UPDATE_RAM_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_UPDATE_RAM_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -456,7 +533,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_UPDATE_RAM_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_UPDATE_RAM_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_UPDATE_RAM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_UPDATE_RAM_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_UPDATE_RAM_0_0_synth_1">
+    <Run Id="design_dijkstra_blk_mem_gen_1_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_blk_mem_gen_1_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_blk_mem_gen_1_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_blk_mem_gen_1_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_blk_mem_gen_1_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
@@ -466,7 +543,77 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1">
+    <Run Id="design_dijkstra_UPDATE_RAM_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_UPDATE_RAM_0_1" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_UPDATE_RAM_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_UPDATE_RAM_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_UPDATE_RAM_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_comparateur1_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_comparateur1_0_1" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_comparateur1_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_comparateur1_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_comparateur1_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_comparateur2_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_comparateur2_0_1" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_comparateur2_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_comparateur2_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_comparateur2_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_clk_wiz_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_clk_wiz_0_1" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_clk_wiz_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_clk_wiz_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_clk_wiz_0_1_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_blk_mem_gen_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_TOP_Dijkstra_blk_mem_gen_0_0" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_blk_mem_gen_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_TOP_Dijkstra_blk_mem_gen_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_blk_mem_gen_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_clk_wiz_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_TOP_Dijkstra_clk_wiz_0_0" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_clk_wiz_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_TOP_Dijkstra_clk_wiz_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_clk_wiz_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_ila_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_TOP_Dijkstra_ila_0_0" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_ila_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_TOP_Dijkstra_ila_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_ila_0_0_synth_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
+        <Step Id="synth_design"/>
+      </Strategy>
+      <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
+      <ReportStrategy Name="Vivado Synthesis Default Reports" Flow="Vivado Synthesis 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_all_ROM_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_dijkstra_all_ROM_0_0" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ROM_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_dijkstra_all_ROM_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_ROM_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -490,7 +637,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/impl_1">
+    <Run Id="impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="constrs_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" State="current" Dir="$PRUNDIR/impl_1" SynthRun="synth_1" IncludeInArchive="true" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -508,7 +655,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_comparateur2_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur2_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_comparateur2_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_comparateur2_0_0_impl_1">
+    <Run Id="design_dijkstra_all_comparateur2_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur2_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_comparateur2_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_comparateur2_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -525,7 +672,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_comparateur1_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur1_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_comparateur1_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_comparateur1_0_0_impl_1">
+    <Run Id="design_dijkstra_all_comparateur1_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_comparateur1_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_comparateur1_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_comparateur1_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -542,7 +689,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_blk_mem_gen_0_0_impl_1">
+    <Run Id="design_dijkstra_all_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_blk_mem_gen_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -559,7 +706,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_dpram_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_dpram_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_dpram_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_dpram_0_0_impl_1">
+    <Run Id="design_dijkstra_all_dpram_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_dpram_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_dpram_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_dpram_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -576,7 +723,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_ROM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ROM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_ROM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_ROM_0_0_impl_1">
+    <Run Id="design_dijkstra_all_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_ila_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -593,7 +740,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_ila_0_0_impl_1">
+    <Run Id="design_dijkstra_all_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_clk_wiz_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -610,7 +757,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_clk_wiz_0_0_impl_1">
+    <Run Id="design_dijkstra_all_UPDATE_RAM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_UPDATE_RAM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_UPDATE_RAM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_UPDATE_RAM_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -627,7 +774,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_UPDATE_RAM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_UPDATE_RAM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_UPDATE_RAM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PPRDIR/../../../../../projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/utils_1/imports/design_dijkstra_all_UPDATE_RAM_0_0_impl_1">
+    <Run Id="design_dijkstra_blk_mem_gen_1_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_blk_mem_gen_1_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_blk_mem_gen_1_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_blk_mem_gen_1_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
@@ -644,7 +791,126 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0_impl_1">
+    <Run Id="design_dijkstra_UPDATE_RAM_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_UPDATE_RAM_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_UPDATE_RAM_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_UPDATE_RAM_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_comparateur1_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_comparateur1_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_comparateur1_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_comparateur1_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_comparateur2_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_comparateur2_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_comparateur2_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_comparateur2_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_clk_wiz_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_clk_wiz_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_clk_wiz_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_clk_wiz_0_1_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_blk_mem_gen_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_blk_mem_gen_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_TOP_Dijkstra_blk_mem_gen_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_blk_mem_gen_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_clk_wiz_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_clk_wiz_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_TOP_Dijkstra_clk_wiz_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_clk_wiz_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_TOP_Dijkstra_ila_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_TOP_Dijkstra_ila_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_TOP_Dijkstra_ila_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_TOP_Dijkstra_ila_0_0_impl_1">
+      <Strategy Version="1" Minor="2">
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
+        <Step Id="init_design"/>
+        <Step Id="opt_design"/>
+        <Step Id="power_opt_design"/>
+        <Step Id="place_design"/>
+        <Step Id="post_place_power_opt_design"/>
+        <Step Id="phys_opt_design"/>
+        <Step Id="route_design"/>
+        <Step Id="post_route_phys_opt_design"/>
+        <Step Id="write_bitstream"/>
+      </Strategy>
+      <ReportStrategy Name="Vivado Implementation Default Reports" Flow="Vivado Implementation 2020"/>
+      <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
+      <RQSFiles/>
+    </Run>
+    <Run Id="design_dijkstra_all_ROM_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_dijkstra_all_ROM_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_dijkstra_all_ROM_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_dijkstra_all_ROM_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

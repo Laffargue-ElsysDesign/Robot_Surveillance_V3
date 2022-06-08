@@ -2,303 +2,67 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Tue Jun  7 17:01:23 2022
-# Process ID: 10488
-# Current directory: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA
-# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent2188 D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.xpr
-# Log file: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/vivado.log
-# Journal file: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA\vivado.jou
+# Start of session at: Wed Jun  8 11:26:53 2022
+# Process ID: 6548
+# Current directory: D:/projets/2020_2/project_DIJKSTRA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4920 D:\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.xpr
+# Log file: D:/projets/2020_2/project_DIJKSTRA/vivado.log
+# Journal file: D:/projets/2020_2/project_DIJKSTRA\vivado.jou
 #-----------------------------------------------------------
 start_gui
-open_project D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr
-INFO: [Project 1-313] Project file moved from 'D:/projets/2020_2/project_DIJKSTRA' since last save.
+open_project D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr
+INFO: [Project 1-313] Project file moved from 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA' since last save.
 Scanning sources...
 Finished scanning sources
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1704] No user IP repositories specified
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
-open_project: Time (s): cpu = 00:00:15 ; elapsed = 00:00:08 . Memory (MB): peak = 1143.633 ; gain = 0.000
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Programmes/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_dijkstra' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_dijkstra_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_0/sim/design_dijkstra_all_xlconstant_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_1/sim/design_dijkstra_all_xlconstant_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_2/sim/design_dijkstra_all_xlconstant_0_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_2
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module glbl
-"xvhdl --incr --relax -prj tb_dijkstra_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/pkg_dijkstra.vhd" into library robot
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/comparateur1.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'comparateur1'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/comparateur2.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'comparateur2'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/ROM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'ROM'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DPRAM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'dpram'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/UPDATE_RAM.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'UPDATE_RAM'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DIJKSTRA_CONTROLLER.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'DIJKSTRA_CONTROLLER'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/NEAREST_NODE.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'NEAREST_NODE'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur1_0_0/sim/design_dijkstra_all_comparateur1_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_comparateur1_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur2_0_0/sim/design_dijkstra_all_comparateur2_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_comparateur2_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_blk_mem_gen_0_0/design_dijkstra_all_blk_mem_gen_0_0_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_width'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_generic_cstr'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_top'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_blk_mem_gen_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_ROM_0_0/sim/design_dijkstra_all_ROM_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_ROM_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_dpram_0_0/sim/design_dijkstra_all_dpram_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_dpram_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/sim/design_dijkstra_all_ila_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_ila_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_sim_netlist.vhdl" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz'
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_clk_wiz_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_UPDATE_RAM_0_0/sim/design_dijkstra_all_UPDATE_RAM_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_UPDATE_RAM_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/sim/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/sim/design_dijkstra_all_NEAREST_NODE_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_NEAREST_NODE_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/sim/design_dijkstra_all.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_wrapper'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sim_1/new/tb_dijkstra.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'tb_dijkstra'
-run_program: Time (s): cpu = 00:00:00 ; elapsed = 00:00:05 . Memory (MB): peak = 1143.633 ; gain = 0.000
-INFO: [USF-XSim-69] 'compile' step finished in '5' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xelab -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package robot.pkg_dijkstra
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_textio
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.DIJKSTRA_CONTROLLER [\DIJKSTRA_CONTROLLER(nb_bit_dist...]
-Compiling architecture design_dijkstra_all_dijkstra_controller_0_0_arch of entity xil_defaultlib.design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 [design_dijkstra_all_dijkstra_con...]
-Compiling architecture behavioral of entity xil_defaultlib.NEAREST_NODE [\NEAREST_NODE(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_nearest_node_0_0_arch of entity xil_defaultlib.design_dijkstra_all_NEAREST_NODE_0_0 [design_dijkstra_all_nearest_node...]
-Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
-Compiling architecture design_dijkstra_all_rom_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ROM_0_0 [design_dijkstra_all_rom_0_0_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.UPDATE_RAM [\UPDATE_RAM(nb_bit_dist=5,nb_bit...]
-Compiling architecture design_dijkstra_all_update_ram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_UPDATE_RAM_0_0 [design_dijkstra_all_update_ram_0...]
-Compiling architecture gnd_v of entity unisim.GND [gnd_default]
-Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
-Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(read_width_a=18,read_w...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_width [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_generic_cstr [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_top [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
-Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=17,clki...]
-Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="0001")(0,3)\]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0 [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur1 [\comparateur1(nb_bit_dist=5)\]
-Compiling architecture design_dijkstra_all_comparateur1_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur1_0_0 [design_dijkstra_all_comparateur1...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur2 [\comparateur2(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_comparateur2_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur2_0_0 [design_dijkstra_all_comparateur2...]
-Compiling architecture behavioral of entity xil_defaultlib.dpram [dpram_default]
-Compiling architecture design_dijkstra_all_dpram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_dpram_0_0 [design_dijkstra_all_dpram_0_0_de...]
-Compiling architecture design_dijkstra_all_ila_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ila_0_0 [design_dijkstra_all_ila_0_0_defa...]
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all [design_dijkstra_all_default]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_wrapper [design_dijkstra_all_wrapper_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.tb_dijkstra
-Built simulation snapshot tb_dijkstra_behav
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:07 . Memory (MB): peak = 1145.910 ; gain = 0.000
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
 
-****** Webtalk v2020.2 (64-bit)
-  **** SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
-  **** IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
     ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 
-source D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim/xsim.dir/tb_dijkstra_behav/webtalk/xsim_webtalk.tcl -notrace
-INFO: [Common 17-206] Exiting Webtalk at Tue Jun  7 17:02:29 2022...
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:12 . Memory (MB): peak = 1143.633 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '12' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_dijkstra_behav -key {Behavioral:sim_1:Functional:tb_dijkstra} -tclbatch {tb_dijkstra.tcl} -protoinst "protoinst_files/design_dijkstra_all.protoinst" -view {D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/tb_dijkstra_comp_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_dijkstra_all.protoinst
-Time resolution is 1 ps
-open_wave_config D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/tb_dijkstra_comp_behav.wcfg
-WARNING: Simulation object /tb_dijkstra_comp/rst_n was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/clk was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/en was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/flag_fin was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_finished was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/en_UpdateRam was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/en_NearestNode was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/node_seen was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_RAM was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_node was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_end_write was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_init was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/flag_read_path was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/next_node was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/current_state was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/we_ram_ext was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp_in1 was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp_in2 was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp_out was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/current_state was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/cpt_addr was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/comp was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/addr_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/data_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/addr_ram_ext was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/NEAREST_NODE_0/U0/din_ram_ext was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_rom was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/data_rom was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/addr_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/din_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/we_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/current_state was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/node_addr was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/cpt_ram was not found in the design.
-WARNING: Simulation object /tb_dijkstra_comp/DUT1/design_dijkstra_all_i/UPDATE_RAM_0/U0/dist_rom was not found in the design.
-source tb_dijkstra.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dijkstra_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:14 ; elapsed = 00:00:44 . Memory (MB): peak = 1173.367 ; gain = 29.734
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:01 ; elapsed = 00:00:08 . Memory (MB): peak = 1145.910 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351B48339A
+open_hw_target: Time (s): cpu = 00:00:04 ; elapsed = 00:00:07 . Memory (MB): peak = 2671.625 ; gain = 1525.715
+set_property PROGRAM.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-2302] Device xc7z020 (JTAG device index = 1) is programmed with a design that has 1 ILA core(s).
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]]
 update_compile_order -fileset sources_1
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Programmes/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_dijkstra' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_dijkstra_vlog.prj"
-"xvhdl --incr --relax -prj tb_dijkstra_vhdl.prj"
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xelab -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-INFO: [XSIM 43-4323] No Change in HDL. Linking previously generated obj files to create kernel
-INFO: [USF-XSim-69] 'elaborate' step finished in '2' seconds
-Vivado Simulator 2020.2
-INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_dijkstra_all.protoinst
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:04 ; elapsed = 00:00:10 . Memory (MB): peak = 1186.043 ; gain = 11.871
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-run 15 us
-run 15 us
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-restart: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 1461.008 ; gain = 0.000
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-update_module_reference {design_dijkstra_NEAREST_NODE_0_0 design_dijkstra_all_NEAREST_NODE_0_0}
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'nb_bit_distD' by 5 for port or parameter 'nb_bit_dist'
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'nb_bit_addrD' by 5 for port or parameter 'nb_bit_addr'
-INFO: [IP_Flow 19-1976] HDL Parser: Replacing 'nb_nodeD' by 17 for port or parameter 'nb_node'
-INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
-INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
-WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
-WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
-INFO: [IP_Flow 19-234] Refreshing IP repositories
-INFO: [IP_Flow 19-1704] No user IP repositories specified
-Reading block design file <D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd>...
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+ERROR: [Labtools 27-1395] Unable to arm ILA 'hw_ila_1'. The core clock is slow or no core clock connected for this ILA or the ILA core may not meet timing.
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+INFO: [Labtools 27-1964] The ILA core 'hw_ila_1' trigger was armed at 2022-Jun-08 11:28:15
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]]
+INFO: [Labtools 27-1966] The ILA core 'hw_ila_1' triggered at 2022-Jun-08 11:28:16
+INFO: [Labtools 27-3304] ILA Waveform data saved to file D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.hw/backup/hw_ila_data_1.ila. Use Tcl command 'read_hw_ila_data' or Vivado File->Import->Import ILA Data menu item to import the previously saved data.
+open_bd_design {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd}
+Reading block design file <D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd>...
 Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
 Adding component instance block -- xilinx.com:module_ref:comparateur1:1.0 - comparateur1_0
 Adding component instance block -- xilinx.com:module_ref:comparateur2:1.0 - comparateur2_0
@@ -311,11 +75,10 @@ Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
 Adding component instance block -- xilinx.com:module_ref:UPDATE_RAM:1.0 - UPDATE_RAM_0
 Adding component instance block -- xilinx.com:module_ref:DIJKSTRA_CONTROLLER:1.0 - DIJKSTRA_CONTROLLER_0
 Adding component instance block -- xilinx.com:module_ref:NEAREST_NODE:1.0 - NEAREST_NODE_0
-Successfully read diagram <design_dijkstra> from block design file <D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd>
-Upgrading 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd'
-INFO: [IP_Flow 19-1972] Upgraded design_dijkstra_NEAREST_NODE_0_0 from NEAREST_NODE_v1_0 1.0 to NEAREST_NODE_v1_0 1.0
-Wrote  : <D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra\design_dijkstra.bd> 
-Reading block design file <D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd>...
+Successfully read diagram <design_dijkstra> from block design file <D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd>
+open_bd_design: Time (s): cpu = 00:00:09 ; elapsed = 00:00:07 . Memory (MB): peak = 2867.129 ; gain = 93.664
+open_bd_design {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd}
+Reading block design file <D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd>...
 Adding component instance block -- xilinx.com:module_ref:comparateur1:1.0 - comparateur1_0
 Adding component instance block -- xilinx.com:module_ref:comparateur2:1.0 - comparateur2_0
 Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
@@ -330,300 +93,74 @@ Adding component instance block -- xilinx.com:ip:clk_wiz:6.0 - clk_wiz_0
 Adding component instance block -- xilinx.com:module_ref:UPDATE_RAM:1.0 - UPDATE_RAM_0
 Adding component instance block -- xilinx.com:module_ref:DIJKSTRA_CONTROLLER:1.0 - DIJKSTRA_CONTROLLER_0
 Adding component instance block -- xilinx.com:module_ref:NEAREST_NODE:1.0 - NEAREST_NODE_0
-Successfully read diagram <design_dijkstra_all> from block design file <D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd>
-Upgrading 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd'
-WARNING: [Vivado 12-1017] Problems encountered:
-1. Failed to delete one or more files in run directory D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_NEAREST_NODE_0_0_synth_1
-
-INFO: [IP_Flow 19-1972] Upgraded design_dijkstra_all_NEAREST_NODE_0_0 from NEAREST_NODE_v1_0 1.0 to NEAREST_NODE_v1_0 1.0
-Wrote  : <D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra_all\design_dijkstra_all.bd> 
-Wrote  : <D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/ui/bd_c56f7819.ui> 
-upgrade_ip: Time (s): cpu = 00:00:15 ; elapsed = 00:00:11 . Memory (MB): peak = 1489.129 ; gain = 28.121
-update_module_reference: Time (s): cpu = 00:00:19 ; elapsed = 00:00:47 . Memory (MB): peak = 1489.129 ; gain = 28.121
-relaunch_sim
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/dpram_0/data_in_b
-/dpram_0/rw_b
-
-Wrote  : <D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra_all\design_dijkstra_all.bd> 
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/synth/design_dijkstra_all.vhd
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/sim/design_dijkstra_all.vhd
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd
-INFO: [BD 41-1029] Generation completed for the IP Integrator block NEAREST_NODE_0 .
-Exporting to file d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hw_handoff/design_dijkstra_all.hwh
-Generated Block Design Tcl file d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hw_handoff/design_dijkstra_all_bd.tcl
-Generated Hardware Definition File d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/synth/design_dijkstra_all.hwdef
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Programmes/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_dijkstra' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_dijkstra_vlog.prj"
-"xvhdl --incr --relax -prj tb_dijkstra_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/NEAREST_NODE.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'NEAREST_NODE'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_wrapper'
-INFO: [USF-XSim-69] 'compile' step finished in '2' seconds
-launch_simulation: Time (s): cpu = 00:00:04 ; elapsed = 00:00:29 . Memory (MB): peak = 1613.840 ; gain = 124.711
-Command: launch_simulation -simset sim_1 -mode behavioral
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xelab -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package robot.pkg_dijkstra
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_textio
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.DIJKSTRA_CONTROLLER [\DIJKSTRA_CONTROLLER(nb_bit_dist...]
-Compiling architecture design_dijkstra_all_dijkstra_controller_0_0_arch of entity xil_defaultlib.design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 [design_dijkstra_all_dijkstra_con...]
-Compiling architecture behavioral of entity xil_defaultlib.NEAREST_NODE [\NEAREST_NODE(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_nearest_node_0_0_arch of entity xil_defaultlib.design_dijkstra_all_NEAREST_NODE_0_0 [design_dijkstra_all_nearest_node...]
-Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
-Compiling architecture design_dijkstra_all_rom_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ROM_0_0 [design_dijkstra_all_rom_0_0_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.UPDATE_RAM [\UPDATE_RAM(nb_bit_dist=5,nb_bit...]
-Compiling architecture design_dijkstra_all_update_ram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_UPDATE_RAM_0_0 [design_dijkstra_all_update_ram_0...]
-Compiling architecture gnd_v of entity unisim.GND [gnd_default]
-Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
-Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(read_width_a=18,read_w...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_width [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_generic_cstr [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_top [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
-Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=17,clki...]
-Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="0001")(0,3)\]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0 [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur1 [\comparateur1(nb_bit_dist=5)\]
-Compiling architecture design_dijkstra_all_comparateur1_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur1_0_0 [design_dijkstra_all_comparateur1...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur2 [\comparateur2(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_comparateur2_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur2_0_0 [design_dijkstra_all_comparateur2...]
-Compiling architecture behavioral of entity xil_defaultlib.dpram [dpram_default]
-Compiling architecture design_dijkstra_all_dpram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_dpram_0_0 [design_dijkstra_all_dpram_0_0_de...]
-Compiling architecture design_dijkstra_all_ila_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ila_0_0 [design_dijkstra_all_ila_0_0_defa...]
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all [design_dijkstra_all_default]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_wrapper [design_dijkstra_all_wrapper_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.tb_dijkstra
-Built simulation snapshot tb_dijkstra_behav
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.840 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
-launch_simulation: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 1613.840 ; gain = 0.000
-Vivado Simulator 2020.2
-INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_dijkstra_all.protoinst
-Time resolution is 1 ps
-relaunch_sim: Time (s): cpu = 00:00:08 ; elapsed = 00:00:41 . Memory (MB): peak = 1613.840 ; gain = 124.711
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-run 15 us
-ERROR: Index 31 out of bound 16 downto 0
-Time: 20728 ns  Iteration: 9  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/line__74
-  File: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DIJKSTRA_CONTROLLER.vhd
-
-HDL Line: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DIJKSTRA_CONTROLLER.vhd:82
-restart
-INFO: [Simtcl 6-17] Simulation restarted
-restart: Time (s): cpu = 00:00:07 ; elapsed = 00:00:08 . Memory (MB): peak = 1775.961 ; gain = 0.000
-run 15 us
-Warning: Warning : input CLKIN1 period and attribute CLKIN1_PERIOD are not same.
-Time: 1448 ns  Iteration: 5  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/clk_wiz_0/inst/plle2_adv_inst/pchk_p  File: /wrk/ci/prod/2020.2/rdi_builds/continuous/2020_11_18_3064766/data/vhdl/src/unisims/primitive/PLLE2_ADV.vhd
-run 15 us
-ERROR: Index 31 out of bound 16 downto 0
-Time: 20728 ns  Iteration: 9  Process: /tb_dijkstra/DUT1/design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0/U0/line__74
-  File: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DIJKSTRA_CONTROLLER.vhd
-
-HDL Line: D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/imports/new/DIJKSTRA_CONTROLLER.vhd:82
-open_bd_design {D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd}
+Successfully read diagram <design_dijkstra_all> from block design file <D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd>
+current_bd_design [get_bd_designs design_dijkstra]
 startgroup
-set_property -dict [list CONFIG.CONST_VAL {15}] [get_bd_cells xlconstant_2]
+delete_bd_objs [get_bd_nets UPDATE_RAM_0_we_ram] [get_bd_nets DIJKSTRA_CONTROLLER_0_node] [get_bd_nets NEAREST_NODE_0_en_ram_ext] [get_bd_nets DIJKSTRA_CONTROLLER_0_led_c] [get_bd_nets blk_mem_gen_1_douta] [get_bd_nets xlconstant_0_dout] [get_bd_nets NEAREST_NODE_0_next_node] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_finished] [get_bd_nets blk_mem_gen_1_doutb] [get_bd_nets UPDATE_RAM_0_addr_ram] [get_bd_nets clk_0_1] [get_bd_nets NEAREST_NODE_0_we_ram_ext] [get_bd_nets NEAREST_NODE_0_comp_in1] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_read_path] [get_bd_nets NEAREST_NODE_0_led_n] [get_bd_nets blk_mem_gen_0_douta] [get_bd_nets UPDATE_RAM_0_comp_in1] [get_bd_nets ROM_0_data_rom] [get_bd_nets NEAREST_NODE_0_comp_in2] [get_bd_nets rst_n_0_1] [get_bd_nets comparateur1_0_comp_out] [get_bd_nets UPDATE_RAM_0_comp_in2] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_init] [get_bd_nets UPDATE_RAM_0_flag_RAM] [get_bd_nets DIJKSTRA_CONTROLLER_0_en_UpdateRam] [get_bd_nets DIJKSTRA_CONTROLLER_0_en_NearestNode] [get_bd_nets UPDATE_RAM_0_led_u] [get_bd_nets NEAREST_NODE_0_din_ram_ext] [get_bd_nets DIJKSTRA_CONTROLLER_0_node_seen] [get_bd_nets clk_1] [get_bd_nets xlconstant_1_dout] [get_bd_nets UPDATE_RAM_0_en_rom] [get_bd_nets NEAREST_NODE_0_en_ram] [get_bd_nets xlconstant_2_dout] [get_bd_nets UPDATE_RAM_0_din_ram] [get_bd_nets UPDATE_RAM_0_addr_rom] [get_bd_nets NEAREST_NODE_0_addr_ram_ext] [get_bd_nets NEAREST_NODE_0_addr_ram] [get_bd_nets UPDATE_RAM_0_en_ram] [get_bd_nets NEAREST_NODE_0_flag_end_write] [get_bd_nets en_0_1] [get_bd_nets comparateur2_0_comp_out] [get_bd_nets NEAREST_NODE_0_flag_node]
+delete_bd_objs [get_bd_cells comparateur2_0] [get_bd_cells UPDATE_RAM_0] [get_bd_cells comparateur1_0] [get_bd_cells xlconstant_0] [get_bd_cells xlconstant_1] [get_bd_cells NEAREST_NODE_0] [get_bd_cells xlconstant_2] [get_bd_cells blk_mem_gen_0] [get_bd_cells ROM_0] [get_bd_cells DIJKSTRA_CONTROLLER_0] [get_bd_cells blk_mem_gen_1] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_ports rst_n] [get_bd_ports clk] [get_bd_ports en] [get_bd_ports flag_finished] [get_bd_ports led_u] [get_bd_ports led_c] [get_bd_ports led_n]
 endgroup
-save_wave_config {D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/tb_dijkstra_comp_behav.wcfg}
-close_sim
-INFO: [Simtcl 6-16] Simulation closed
+current_bd_design design_dijkstra_all
+set tmpCopyObjs [concat  [get_bd_cells {ila_0 xlconstant_1 comparateur2_0 clk_wiz_0 NEAREST_NODE_0 comparateur1_0 xlconstant_0 xlconstant_2 blk_mem_gen_0 ROM_0 dpram_0 UPDATE_RAM_0 DIJKSTRA_CONTROLLER_0}] [get_bd_ports {rst_n resetn en clk flag_finished led_n led_u led_c}] [get_bd_nets {DIJKSTRA_CONTROLLER_0_en_NearestNode DIJKSTRA_CONTROLLER_0_en_UpdateRam DIJKSTRA_CONTROLLER_0_flag_finished DIJKSTRA_CONTROLLER_0_flag_init DIJKSTRA_CONTROLLER_0_flag_read_path DIJKSTRA_CONTROLLER_0_led_c DIJKSTRA_CONTROLLER_0_node DIJKSTRA_CONTROLLER_0_node_seen NEAREST_NODE_0_addr_ram NEAREST_NODE_0_addr_ram_ext NEAREST_NODE_0_comp_in1 NEAREST_NODE_0_comp_in2 NEAREST_NODE_0_din_ram_ext NEAREST_NODE_0_en_ram_ext NEAREST_NODE_0_flag_end_write NEAREST_NODE_0_flag_node NEAREST_NODE_0_led_n NEAREST_NODE_0_next_node NEAREST_NODE_0_we_ram_ext ROM_0_data_rom UPDATE_RAM_0_addr_ram UPDATE_RAM_0_addr_rom UPDATE_RAM_0_comp_in1 UPDATE_RAM_0_comp_in2 UPDATE_RAM_0_din_ram UPDATE_RAM_0_en_rom UPDATE_RAM_0_flag_RAM UPDATE_RAM_0_led_u UPDATE_RAM_0_we_ram blk_mem_gen_0_douta clk_0_1 clk_1 comparateur1_0_comp_out comparateur2_0_comp_out dpram_0_data_out_a dpram_0_data_out_b en_0_1 resetn_0_1 rst_n_0_1 xlconstant_0_dout xlconstant_1_dout xlconstant_2_dout}]]
+current_bd_design design_dijkstra
+copy_bd_objs -from_design design_dijkstra_all / $tmpCopyObjs
+INFO: [xilinx.com:ip:ila:6.2-6] /ila_0: Xilinx recommends using the System ILA IP in IP Integrator. The System ILA IP is functionally equivalent to an ILA and offers additional benefits in debugging interfaces both within IP Integrator and the Hardware Manager. Consult the Programming and Debug User Guide UG908 for further details.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/addra> is being overridden by the user with net <NEAREST_NODE_0_addr_ram_ext>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/dina> is being overridden by the user with net <NEAREST_NODE_0_din_ram_ext>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/ena> is being overridden by the user with net <NEAREST_NODE_0_en_ram_ext>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/wea> is being overridden by the user with net <NEAREST_NODE_0_we_ram_ext>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/douta> is being overridden by the user with net <blk_mem_gen_0_douta>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_0/clka> is being overridden by the user with net <clk_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+copy_bd_objs: Time (s): cpu = 00:00:07 ; elapsed = 00:01:28 . Memory (MB): peak = 3153.879 ; gain = 234.477
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets dpram_0_data_out_a] [get_bd_cells dpram_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_1
+endgroup
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Width_A {10} CONFIG.Write_Depth_A {32} CONFIG.Read_Width_A {10} CONFIG.Write_Width_B {10} CONFIG.Read_Width_B {10} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_1]
+set_property location {4 1134 587} [get_bd_cells blk_mem_gen_1]
+connect_bd_net [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins NEAREST_NODE_0/addr_ram]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/addrb> is being overridden by the user with net </NEAREST_NODE_0_addr_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+connect_bd_net [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/clkb> is being overridden by the user with net </clk_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+connect_bd_net [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins clk_wiz_0/clk_out1]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/clka> is being overridden by the user with net </clk_0_1>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+startgroup
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins NEAREST_NODE_0/data_ram]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/doutb> is being overridden by the user with net </dpram_0_data_out_b>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins blk_mem_gen_1/dinb]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/dinb> is being overridden by the user with net </dpram_0_data_out_b>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+endgroup
+undo
+INFO: [Common 17-17] undo 'endgroup'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins blk_mem_gen_1/dinb]'
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins NEAREST_NODE_0/data_ram]'
+INFO: [Common 17-17] undo 'startgroup'
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins NEAREST_NODE_0/data_ram]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/doutb> is being overridden by the user with net </dpram_0_data_out_b>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+connect_bd_net [get_bd_pins blk_mem_gen_1/enb] [get_bd_pins NEAREST_NODE_0/en_ram]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/enb> is being overridden by the user with net <NEAREST_NODE_0_en_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTB>.
+connect_bd_net [get_bd_pins UPDATE_RAM_0/en_ram] [get_bd_pins blk_mem_gen_1/ena]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/ena> is being overridden by the user with net <UPDATE_RAM_0_en_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins UPDATE_RAM_0/we_ram] [get_bd_pins blk_mem_gen_1/wea]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/wea> is being overridden by the user with net </UPDATE_RAM_0_we_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351B48339A
+connect_bd_net [get_bd_pins UPDATE_RAM_0/din_ram] [get_bd_pins blk_mem_gen_1/dina]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/dina> is being overridden by the user with net </UPDATE_RAM_0_din_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins UPDATE_RAM_0/data_ram] [get_bd_pins blk_mem_gen_1/douta]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/douta> is being overridden by the user with net <blk_mem_gen_1_douta>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+connect_bd_net [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins UPDATE_RAM_0/addr_ram]
+WARNING: [BD 41-1306] The connection to interface pin </blk_mem_gen_1/addra> is being overridden by the user with net </UPDATE_RAM_0_addr_ram>. This pin will not be connected as a part of interface connection <BRAM_PORTA>.
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+WARNING: [IP_Flow 19-4067] Ignoring invalid widget type specified checkbox.Providing a default widget
+startgroup
+endgroup
+regenerate_bd_layout
 save_bd_design
-Wrote  : <D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra_all\design_dijkstra_all.bd> 
-generate_target Simulation [get_files D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd]
-INFO: [xilinx.com:ip:clk_wiz:6.0-1] /clk_wiz_0 clk_wiz propagate
-CRITICAL WARNING: [BD 41-759] The input pins (listed below) are either not connected or do not have a source port, and they don't have a tie-off specified. These pins are tied-off to all 0's to avoid error in Implementation flow.
-Please check your design and connect them as needed: 
-/dpram_0/data_in_b
-/dpram_0/rw_b
-
-Wrote  : <D:\Robot_Surveillance_V3\FPGA\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra_all\design_dijkstra_all.bd> 
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/synth/design_dijkstra_all.vhd
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/sim/design_dijkstra_all.vhd
-VHDL Output written to : d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd
-WARNING: [IP_Flow 19-5160] IP 'design_dijkstra_all_xlconstant_0_2' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
-WARNING: [IP_Flow 19-5160] IP 'design_dijkstra_all_xlconstant_0_2' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
-INFO: [BD 41-1029] Generation completed for the IP Integrator block xlconstant_2 .
-Exporting to file d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hw_handoff/design_dijkstra_all.hwh
-Generated Block Design Tcl file d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hw_handoff/design_dijkstra_all_bd.tcl
-Generated Hardware Definition File d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/synth/design_dijkstra_all.hwdef
-export_ip_user_files -of_objects [get_files D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd] -no_script -sync -force -quiet
-export_simulation -of_objects [get_files D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd] -directory D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/sim_scripts -ip_user_files_dir D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files -ipstatic_source_dir D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/ipstatic -lib_map_path [list {modelsim=D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/compile_simlib/modelsim} {questa=D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/compile_simlib/questa} {riviera=D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/compile_simlib/riviera} {activehdl=D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/compile_simlib/activehdl}] -use_ip_compiled_libs -force -quiet
-launch_simulation
-Command: launch_simulation 
-INFO: [Vivado 12-5698] Checking validity of IPs in the design for the 'XSim' simulator...
-INFO: [Vivado 12-5682] Launching behavioral simulation in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [Vivado 12-4795] Using compiled simulation libraries for IPs
-INFO: [SIM-utils-51] Simulation object is 'sim_1'
-INFO: [USF-XSim-7] Finding pre-compiled libraries...
-INFO: [USF-XSim-11] File 'D:/Programmes/Vivado/2020.2/data/xsim/xsim.ini' copied to run dir:'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [SIM-utils-54] Inspecting design source files for 'tb_dijkstra' in fileset 'sim_1'...
-INFO: [USF-XSim-97] Finding global include files...
-INFO: [USF-XSim-98] Fetching design files from 'sim_1'...
-INFO: [USF-XSim-2] XSim::Compile design
-INFO: [USF-XSim-61] Executing 'COMPILE and ANALYZE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xvlog --incr --relax -prj tb_dijkstra_vlog.prj"
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_0/sim/design_dijkstra_all_xlconstant_0_0.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_0
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_1/sim/design_dijkstra_all_xlconstant_0_1.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_1
-INFO: [VRFC 10-2263] Analyzing Verilog file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_2/sim/design_dijkstra_all_xlconstant_0_2.v" into library xil_defaultlib
-INFO: [VRFC 10-311] analyzing module design_dijkstra_all_xlconstant_0_2
-"xvhdl --incr --relax -prj tb_dijkstra_vhdl.prj"
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/sim/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/sim/design_dijkstra_all_NEAREST_NODE_0_0.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_NEAREST_NODE_0_0'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/sim/design_dijkstra_all.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all'
-INFO: [VRFC 10-163] Analyzing VHDL file "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/hdl/design_dijkstra_all_wrapper.vhd" into library xil_defaultlib
-INFO: [VRFC 10-3107] analyzing entity 'design_dijkstra_all_wrapper'
-INFO: [USF-XSim-69] 'compile' step finished in '3' seconds
-INFO: [USF-XSim-3] XSim::Elaborate design
-INFO: [USF-XSim-61] Executing 'ELABORATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-"xelab -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log"
-Vivado Simulator 2020.2
-Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
-Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log 
-Using 2 slave threads.
-Starting static elaboration
-Pass Through NonSizing Optimizer
-Completed static elaboration
-Starting simulation data flow analysis
-Completed simulation data flow analysis
-Time Resolution for simulation is 1ps
-Compiling package std.standard
-Compiling package std.textio
-Compiling package ieee.std_logic_1164
-Compiling package ieee.numeric_std
-Compiling package unisim.vcomponents
-Compiling package robot.pkg_dijkstra
-Compiling package ieee.std_logic_arith
-Compiling package ieee.std_logic_signed
-Compiling package ieee.std_logic_textio
-Compiling package ieee.vital_timing
-Compiling package ieee.vital_primitives
-Compiling package unisim.vpkg
-Compiling package vl.vl_types
-Compiling module xil_defaultlib.glbl
-Compiling architecture behavioral of entity xil_defaultlib.DIJKSTRA_CONTROLLER [\DIJKSTRA_CONTROLLER(nb_bit_dist...]
-Compiling architecture design_dijkstra_all_dijkstra_controller_0_0_arch of entity xil_defaultlib.design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 [design_dijkstra_all_dijkstra_con...]
-Compiling architecture behavioral of entity xil_defaultlib.NEAREST_NODE [\NEAREST_NODE(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_nearest_node_0_0_arch of entity xil_defaultlib.design_dijkstra_all_NEAREST_NODE_0_0 [design_dijkstra_all_nearest_node...]
-Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
-Compiling architecture design_dijkstra_all_rom_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ROM_0_0 [design_dijkstra_all_rom_0_0_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.UPDATE_RAM [\UPDATE_RAM(nb_bit_dist=5,nb_bit...]
-Compiling architecture design_dijkstra_all_update_ram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_UPDATE_RAM_0_0 [design_dijkstra_all_update_ram_0...]
-Compiling architecture gnd_v of entity unisim.GND [gnd_default]
-Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
-Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(read_width_a=18,read_w...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_width [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_generic_cstr [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_top [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0 [design_dijkstra_all_blk_mem_gen_...]
-Compiling architecture bufg_v of entity unisim.BUFG [bufg_default]
-Compiling architecture ibuf_v of entity unisim.IBUF [\IBUF(1,9)(1,1)(1,4)(1,7)\]
-Compiling architecture plle2_adv_v of entity unisim.PLLE2_ADV [\PLLE2_ADV(clkfbout_mult=17,clki...]
-Compiling architecture lut1_v of entity unisim.LUT1 [\LUT1(init="0001")(0,3)\]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_clk_wiz_0_0 [design_dijkstra_all_clk_wiz_0_0_...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur1 [\comparateur1(nb_bit_dist=5)\]
-Compiling architecture design_dijkstra_all_comparateur1_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur1_0_0 [design_dijkstra_all_comparateur1...]
-Compiling architecture behavioral of entity xil_defaultlib.comparateur2 [\comparateur2(nb_bit_dist=5,nb_b...]
-Compiling architecture design_dijkstra_all_comparateur2_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur2_0_0 [design_dijkstra_all_comparateur2...]
-Compiling architecture behavioral of entity xil_defaultlib.dpram [dpram_default]
-Compiling architecture design_dijkstra_all_dpram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_dpram_0_0 [design_dijkstra_all_dpram_0_0_de...]
-Compiling architecture design_dijkstra_all_ila_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ila_0_0 [design_dijkstra_all_ila_0_0_defa...]
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
-Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all [design_dijkstra_all_default]
-Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_wrapper [design_dijkstra_all_wrapper_defa...]
-Compiling architecture behavioral of entity xil_defaultlib.tb_dijkstra
-Built simulation snapshot tb_dijkstra_behav
-run_program: Time (s): cpu = 00:00:01 ; elapsed = 00:00:07 . Memory (MB): peak = 2387.324 ; gain = 0.000
-INFO: [USF-XSim-69] 'elaborate' step finished in '7' seconds
-INFO: [USF-XSim-4] XSim::Simulate design
-INFO: [USF-XSim-61] Executing 'SIMULATE' step in 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.sim/sim_1/behav/xsim'
-INFO: [USF-XSim-98] *** Running xsim
-   with args "tb_dijkstra_behav -key {Behavioral:sim_1:Functional:tb_dijkstra} -tclbatch {tb_dijkstra.tcl} -protoinst "protoinst_files/design_dijkstra_all.protoinst" -view {D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/tb_dijkstra_comp_behav.wcfg} -log {simulate.log}"
-INFO: [USF-XSim-8] Loading simulator feature
-Vivado Simulator 2020.2
-INFO: [Wavedata 42-565] Reading protoinst file protoinst_files/design_dijkstra_all.protoinst
-Time resolution is 1 ps
-open_wave_config D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/tb_dijkstra_comp_behav.wcfg
-source tb_dijkstra.tcl
-# set curr_wave [current_wave_config]
-# if { [string length $curr_wave] == 0 } {
-#   if { [llength [get_objects]] > 0} {
-#     add_wave /
-#     set_property needs_save false [current_wave_config]
-#   } else {
-#      send_msg_id Add_Wave-1 WARNING "No top level signals found. Simulator will start without a wave window. If you want to open a wave window go to 'File->New Waveform Configuration' or type 'create_wave_config' in the TCL console."
-#   }
-# }
-# run 1000ns
-xsim: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 2387.324 ; gain = 0.000
-INFO: [USF-XSim-96] XSim completed. Design snapshot 'tb_dijkstra_behav' loaded.
-INFO: [USF-XSim-97] XSim simulation ran for 1000ns
-launch_simulation: Time (s): cpu = 00:00:07 ; elapsed = 00:00:22 . Memory (MB): peak = 2387.324 ; gain = 0.000
+Wrote  : <D:\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.srcs\sources_1\bd\design_dijkstra\design_dijkstra.bd> 
+Wrote  : <D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/ui/bd_9cdebe57.ui> 
+set_property top design_dijkstra_wrapper [current_fileset]
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun  8 11:36:18 2022...

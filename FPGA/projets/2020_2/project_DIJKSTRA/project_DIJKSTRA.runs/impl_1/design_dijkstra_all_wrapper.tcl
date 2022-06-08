@@ -17,7 +17,7 @@ proc create_report { reportName command } {
   }
 }
 namespace eval ::optrace {
-  variable script "D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.tcl"
+  variable script "D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.tcl"
   variable category "vivado_impl"
 }
 
@@ -132,20 +132,20 @@ OPTRACE "create in-memory project" START { }
   set_param project.singleFileAddWarning.threshold 0
 OPTRACE "create in-memory project" END { }
 OPTRACE "set parameters" START { }
-  set_property webtalk.parent_dir D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/wt [current_project]
-  set_property parent.project_path D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr [current_project]
-  set_property ip_output_repo D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/ip [current_project]
+  set_property webtalk.parent_dir D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/wt [current_project]
+  set_property parent.project_path D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr [current_project]
+  set_property ip_output_repo D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/ip [current_project]
   set_property ip_cache_permissions {read write} [current_project]
   set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 OPTRACE "set parameters" END { }
 OPTRACE "add files" START { }
-  add_files -quiet D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/design_dijkstra_all_wrapper.dcp
+  add_files -quiet D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/design_dijkstra_all_wrapper.dcp
   set_msg_config -source 4 -id {BD 41-1661} -limit 0
   set_param project.isImplRun true
-  add_files D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd
+  add_files D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd
   set_param project.isImplRun false
 OPTRACE "read constraints: implementation" START { }
-  read_xdc D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc
+  read_xdc D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc
 OPTRACE "read constraints: implementation" END { }
 OPTRACE "add files" END { }
 OPTRACE "link_design" START { }
