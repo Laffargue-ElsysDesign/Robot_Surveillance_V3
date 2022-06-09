@@ -1,7 +1,7 @@
 {
   "design": {
     "design_info": {
-      "boundary_crc": "0xE55F46F3B10B5699",
+      "boundary_crc": "0xA4E74194255561F1",
       "device": "xc7z020clg400-1",
       "gen_directory": "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all",
       "name": "design_dijkstra_all",
@@ -18,9 +18,9 @@
       "blk_mem_gen_0": "",
       "dpram_0": "",
       "ila_0": "",
-      "clk_wiz_0": "",
       "UPDATE_RAM_0": "",
       "ROM_0": "",
+      "clk_wiz_0": "",
       "NEAREST_NODE_0": "",
       "DIJKSTRA_CONTROLLER_0": ""
     },
@@ -53,10 +53,6 @@
         "direction": "O",
         "left": "1",
         "right": "0"
-      },
-      "resetn": {
-        "type": "rst",
-        "direction": "I"
       }
     },
     "components": {
@@ -179,7 +175,7 @@
         "inst_hier_path": "xlconstant_0",
         "parameters": {
           "CONST_VAL": {
-            "value": "13"
+            "value": "15"
           },
           "CONST_WIDTH": {
             "value": "5"
@@ -204,7 +200,7 @@
         "inst_hier_path": "xlconstant_2",
         "parameters": {
           "CONST_VAL": {
-            "value": "3"
+            "value": "8"
           },
           "CONST_WIDTH": {
             "value": "5"
@@ -326,7 +322,7 @@
             "value": "Native"
           },
           "C_NUM_OF_PROBES": {
-            "value": "18"
+            "value": "21"
           },
           "C_PROBE0_WIDTH": {
             "value": "2"
@@ -342,6 +338,12 @@
           },
           "C_PROBE17_WIDTH": {
             "value": "16"
+          },
+          "C_PROBE18_WIDTH": {
+            "value": "10"
+          },
+          "C_PROBE19_WIDTH": {
+            "value": "5"
           },
           "C_PROBE1_WIDTH": {
             "value": "2"
@@ -369,77 +371,6 @@
           },
           "C_TRIGIN_EN": {
             "value": "false"
-          }
-        }
-      },
-      "clk_wiz_0": {
-        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
-        "xci_name": "design_dijkstra_all_clk_wiz_0_0",
-        "xci_path": "ip\\design_dijkstra_all_clk_wiz_0_0\\design_dijkstra_all_clk_wiz_0_0.xci",
-        "inst_hier_path": "clk_wiz_0",
-        "parameters": {
-          "CLKOUT1_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT1_JITTER": {
-            "value": "203.457"
-          },
-          "CLKOUT1_PHASE_ERROR": {
-            "value": "155.540"
-          },
-          "CLKOUT1_REQUESTED_OUT_FREQ": {
-            "value": "50"
-          },
-          "CLKOUT2_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT3_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT4_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT5_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT6_DRIVES": {
-            "value": "BUFG"
-          },
-          "CLKOUT7_DRIVES": {
-            "value": "BUFG"
-          },
-          "JITTER_SEL": {
-            "value": "No_Jitter"
-          },
-          "MMCM_BANDWIDTH": {
-            "value": "OPTIMIZED"
-          },
-          "MMCM_CLKFBOUT_MULT_F": {
-            "value": "17"
-          },
-          "MMCM_CLKOUT0_DIVIDE_F": {
-            "value": "17"
-          },
-          "MMCM_CLKOUT0_DUTY_CYCLE": {
-            "value": "0.5"
-          },
-          "MMCM_COMPENSATION": {
-            "value": "ZHOLD"
-          },
-          "MMCM_DIVCLK_DIVIDE": {
-            "value": "2"
-          },
-          "PRIMITIVE": {
-            "value": "PLL"
-          },
-          "RESET_PORT": {
-            "value": "resetn"
-          },
-          "RESET_TYPE": {
-            "value": "ACTIVE_LOW"
-          },
-          "USE_MIN_POWER": {
-            "value": "true"
           }
         }
       },
@@ -601,6 +532,68 @@
           }
         }
       },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_dijkstra_all_clk_wiz_0_0",
+        "xci_path": "ip\\design_dijkstra_all_clk_wiz_0_0\\design_dijkstra_all_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "203.457"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "155.540"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "17"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "17"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
       "NEAREST_NODE_0": {
         "vlnv": "xilinx.com:module_ref:NEAREST_NODE:1.0",
         "xci_name": "design_dijkstra_all_NEAREST_NODE_0_0",
@@ -614,21 +607,7 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "rst_n": {
             "type": "rst",
@@ -646,6 +625,11 @@
           "node_seen": {
             "direction": "I",
             "left": "16",
+            "right": "0"
+          },
+          "start_node": {
+            "direction": "I",
+            "left": "4",
             "right": "0"
           },
           "flag_node": {
@@ -798,6 +782,11 @@
             "left": "9",
             "right": "0"
           },
+          "o_start_node": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          },
           "led_c": {
             "direction": "O",
             "left": "1",
@@ -807,20 +796,6 @@
       }
     },
     "nets": {
-      "clk_0_1": {
-        "ports": [
-          "clk_wiz_0/clk_out1",
-          "comparateur1_0/clk",
-          "comparateur2_0/clk",
-          "blk_mem_gen_0/clka",
-          "dpram_0/clk",
-          "ila_0/clk",
-          "UPDATE_RAM_0/clk",
-          "ROM_0/clk",
-          "NEAREST_NODE_0/clk",
-          "DIJKSTRA_CONTROLLER_0/clk"
-        ]
-      },
       "rst_n_0_1": {
         "ports": [
           "rst_n",
@@ -852,6 +827,7 @@
       "NEAREST_NODE_0_next_node": {
         "ports": [
           "NEAREST_NODE_0/next_node",
+          "ila_0/probe18",
           "DIJKSTRA_CONTROLLER_0/next_node"
         ]
       },
@@ -1054,7 +1030,8 @@
       "NEAREST_NODE_0_we_ram_ext": {
         "ports": [
           "NEAREST_NODE_0/we_ram_ext",
-          "blk_mem_gen_0/wea"
+          "blk_mem_gen_0/wea",
+          "ila_0/probe20"
         ]
       },
       "DIJKSTRA_CONTROLLER_0_led_c": {
@@ -1078,16 +1055,31 @@
           "ila_0/probe0"
         ]
       },
+      "clk_0_1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "comparateur1_0/clk",
+          "comparateur2_0/clk",
+          "blk_mem_gen_0/clka",
+          "dpram_0/clk",
+          "ila_0/clk",
+          "UPDATE_RAM_0/clk",
+          "ROM_0/clk",
+          "NEAREST_NODE_0/clk",
+          "DIJKSTRA_CONTROLLER_0/clk"
+        ]
+      },
       "clk_1": {
         "ports": [
           "clk",
           "clk_wiz_0/clk_in1"
         ]
       },
-      "resetn_0_1": {
+      "DIJKSTRA_CONTROLLER_0_o_end_node": {
         "ports": [
-          "resetn",
-          "clk_wiz_0/resetn"
+          "DIJKSTRA_CONTROLLER_0/o_start_node",
+          "ila_0/probe19",
+          "NEAREST_NODE_0/start_node"
         ]
       }
     }

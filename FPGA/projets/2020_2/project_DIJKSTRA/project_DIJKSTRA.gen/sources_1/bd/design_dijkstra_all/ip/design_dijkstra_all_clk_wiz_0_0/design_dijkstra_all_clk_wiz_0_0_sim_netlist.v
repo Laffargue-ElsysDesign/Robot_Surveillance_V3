@@ -1,10 +1,10 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Tue Jun  7 11:25:28 2022
+// Date        : Thu Jun  9 09:25:43 2022
 // Host        : D-14JM0W2 running 64-bit major release  (build 9200)
-// Command     : write_verilog -force -mode funcsim
-//               d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_sim_netlist.v
+// Command     : write_verilog -force -mode funcsim -rename_top design_dijkstra_all_clk_wiz_0_0 -prefix
+//               design_dijkstra_all_clk_wiz_0_0_ design_dijkstra_all_clk_wiz_0_0_sim_netlist.v
 // Design      : design_dijkstra_all_clk_wiz_0_0
 // Purpose     : This verilog netlist is a functional simulation representation of the design and should not be modified
 //               or synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -15,35 +15,22 @@
 (* NotValidForBitStream *)
 module design_dijkstra_all_clk_wiz_0_0
    (clk_out1,
-    resetn,
-    locked,
     clk_in1);
   output clk_out1;
-  input resetn;
-  output locked;
   input clk_in1;
 
   (* IBUF_LOW_PWR *) wire clk_in1;
   wire clk_out1;
-  wire locked;
-  wire resetn;
 
   design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz inst
        (.clk_in1(clk_in1),
-        .clk_out1(clk_out1),
-        .locked(locked),
-        .resetn(resetn));
+        .clk_out1(clk_out1));
 endmodule
 
-(* ORIG_REF_NAME = "design_dijkstra_all_clk_wiz_0_0_clk_wiz" *) 
 module design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz
    (clk_out1,
-    resetn,
-    locked,
     clk_in1);
   output clk_out1;
-  input resetn;
-  output locked;
   input clk_in1;
 
   wire clk_in1;
@@ -52,15 +39,13 @@ module design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz
   wire clk_out1_design_dijkstra_all_clk_wiz_0_0;
   wire clkfbout_buf_design_dijkstra_all_clk_wiz_0_0;
   wire clkfbout_design_dijkstra_all_clk_wiz_0_0;
-  wire locked;
-  wire reset_high;
-  wire resetn;
   wire NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED;
   wire NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED;
   wire NLW_plle2_adv_inst_DRDY_UNCONNECTED;
+  wire NLW_plle2_adv_inst_LOCKED_UNCONNECTED;
   wire [15:0]NLW_plle2_adv_inst_DO_UNCONNECTED;
 
   (* BOX_TYPE = "PRIMITIVE" *) 
@@ -132,14 +117,9 @@ module design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz
         .DO(NLW_plle2_adv_inst_DO_UNCONNECTED[15:0]),
         .DRDY(NLW_plle2_adv_inst_DRDY_UNCONNECTED),
         .DWE(1'b0),
-        .LOCKED(locked),
+        .LOCKED(NLW_plle2_adv_inst_LOCKED_UNCONNECTED),
         .PWRDWN(1'b0),
-        .RST(reset_high));
-  LUT1 #(
-    .INIT(2'h1)) 
-    plle2_adv_inst_i_1
-       (.I0(resetn),
-        .O(reset_high));
+        .RST(1'b0));
 endmodule
 `ifndef GLBL
 `define GLBL

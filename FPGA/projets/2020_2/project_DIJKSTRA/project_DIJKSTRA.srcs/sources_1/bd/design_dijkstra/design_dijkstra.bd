@@ -609,6 +609,11 @@
             "left": "16",
             "right": "0"
           },
+          "start_node": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
           "flag_node": {
             "direction": "O"
           },
@@ -757,6 +762,11 @@
           "next_node": {
             "direction": "I",
             "left": "9",
+            "right": "0"
+          },
+          "o_start_node": {
+            "direction": "O",
+            "left": "4",
             "right": "0"
           },
           "led_c": {

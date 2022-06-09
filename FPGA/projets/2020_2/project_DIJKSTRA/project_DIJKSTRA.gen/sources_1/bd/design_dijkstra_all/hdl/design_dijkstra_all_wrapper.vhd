@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Jun  8 16:28:10 2022
+--Date        : Thu Jun  9 14:04:00 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_dijkstra_all_wrapper.bd
 --Design      : design_dijkstra_all_wrapper
@@ -19,7 +19,6 @@ entity design_dijkstra_all_wrapper is
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    resetn : in STD_LOGIC;
     rst_n : in STD_LOGIC
   );
 end design_dijkstra_all_wrapper;
@@ -33,8 +32,7 @@ architecture STRUCTURE of design_dijkstra_all_wrapper is
     flag_finished : out STD_LOGIC;
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    resetn : in STD_LOGIC
+    led_n : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component design_dijkstra_all;
 begin
@@ -46,7 +44,6 @@ design_dijkstra_all_i: component design_dijkstra_all
       led_c(1 downto 0) => led_c(1 downto 0),
       led_n(1 downto 0) => led_n(1 downto 0),
       led_u(2 downto 0) => led_u(2 downto 0),
-      resetn => resetn,
       rst_n => rst_n
     );
 end STRUCTURE;

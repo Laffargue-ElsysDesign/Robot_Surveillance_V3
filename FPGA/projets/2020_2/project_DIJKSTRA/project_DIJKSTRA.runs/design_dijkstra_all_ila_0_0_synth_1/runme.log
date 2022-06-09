@@ -17,11 +17,11 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 13208
+INFO: [Synth 8-7075] Helper process launched with PID 3268
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:10 ; elapsed = 00:00:11 . Memory (MB): peak = 1211.234 ; gain = 84.895
+Starting RTL Elaboration : Time (s): cpu = 00:00:09 ; elapsed = 00:00:11 . Memory (MB): peak = 1211.523 ; gain = 68.027
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:79]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:82]
 	Parameter C_XLNX_HW_PROBE_INFO bound to: DEFAULT - type: string 
 	Parameter C_XDEVICEFAMILY bound to: zynq - type: string 
 	Parameter C_CORE_TYPE bound to: 1 - type: integer 
@@ -30,7 +30,7 @@ INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/Robot_
 	Parameter C_CAPTURE_TYPE bound to: 0 - type: integer 
 	Parameter C_MU_TYPE bound to: 0 - type: integer 
 	Parameter C_TC_TYPE bound to: 0 - type: integer 
-	Parameter C_NUM_OF_PROBES bound to: 18 - type: integer 
+	Parameter C_NUM_OF_PROBES bound to: 21 - type: integer 
 	Parameter C_DATA_DEPTH bound to: 16384 - type: integer 
 	Parameter C_MAJOR_VERSION bound to: 2020 - type: integer 
 	Parameter C_MINOR_VERSION bound to: 2 - type: integer 
@@ -70,8 +70,8 @@ INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/Robot_
 	Parameter C_PROBE15_WIDTH bound to: 5 - type: integer 
 	Parameter C_PROBE16_WIDTH bound to: 10 - type: integer 
 	Parameter C_PROBE17_WIDTH bound to: 16 - type: integer 
-	Parameter C_PROBE18_WIDTH bound to: 1 - type: integer 
-	Parameter C_PROBE19_WIDTH bound to: 1 - type: integer 
+	Parameter C_PROBE18_WIDTH bound to: 10 - type: integer 
+	Parameter C_PROBE19_WIDTH bound to: 5 - type: integer 
 	Parameter C_PROBE20_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE21_WIDTH bound to: 1 - type: integer 
 	Parameter C_PROBE22_WIDTH bound to: 1 - type: integer 
@@ -2118,9 +2118,9 @@ INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/Robot_
 	Parameter C_PROBE15_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE16_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE17_TYPE bound to: 0 - type: integer 
-	Parameter C_PROBE18_TYPE bound to: 1 - type: integer 
-	Parameter C_PROBE19_TYPE bound to: 1 - type: integer 
-	Parameter C_PROBE20_TYPE bound to: 1 - type: integer 
+	Parameter C_PROBE18_TYPE bound to: 0 - type: integer 
+	Parameter C_PROBE19_TYPE bound to: 0 - type: integer 
+	Parameter C_PROBE20_TYPE bound to: 0 - type: integer 
 	Parameter C_PROBE21_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE22_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE23_TYPE bound to: 1 - type: integer 
@@ -3124,7 +3124,7 @@ INFO: [Synth 8-638] synthesizing module 'design_dijkstra_all_ila_0_0' [d:/Robot_
 	Parameter C_PROBE1021_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1022_TYPE bound to: 1 - type: integer 
 	Parameter C_PROBE1023_TYPE bound to: 1 - type: integer 
-INFO: [Synth 8-3491] module 'ila_v6_2_11_ila' declared at 'd:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ipshared/c968/hdl/ila_v6_2_syn_rfs.v:5642' bound to instance 'U0' of component 'ila_v6_2_11_ila' [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:4264]
+INFO: [Synth 8-3491] module 'ila_v6_2_11_ila' declared at 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ipshared/c968/hdl/ila_v6_2_syn_rfs.v:5642' bound to instance 'U0' of component 'ila_v6_2_11_ila' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:4267]
 INFO: [Synth 8-6157] synthesizing module 'CFGLUT5' [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1524]
 INFO: [Synth 8-6155] done synthesizing module 'CFGLUT5' (8#1) [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1524]
 INFO: [Synth 8-6157] synthesizing module 'CARRY4' [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:1487]
@@ -3137,57 +3137,57 @@ INFO: [Synth 8-6157] synthesizing module 'SRLC16E' [D:/Programmes/Vivado/2020.2/
 INFO: [Synth 8-6155] done synthesizing module 'SRLC16E' (23#1) [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:78123]
 INFO: [Synth 8-6157] synthesizing module 'FDRE' [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
 INFO: [Synth 8-6155] done synthesizing module 'FDRE' (28#1) [D:/Programmes/Vivado/2020.2/scripts/rt/data/unisim_comp.v:13724]
-INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_all_ila_0_0' (48#1) [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:79]
+INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_all_ila_0_0' (48#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/synth/design_dijkstra_all_ila_0_0.vhd:82]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished RTL Elaboration : Time (s): cpu = 00:00:42 ; elapsed = 00:00:45 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:44 ; elapsed = 00:00:47 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:43 ; elapsed = 00:00:46 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.224 . Memory (MB): peak = 1712.594 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 276 Unisim elements for replacement
-INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.243 . Memory (MB): peak = 1716.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 309 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 1 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0_ooc.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0_ooc.xdc] for cell 'U0'
-Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'U0'
-Finished Parsing XDC File [d:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'U0'
-Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc]
-Finished Parsing XDC File [D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc]
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0_ooc.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0_ooc.xdc] for cell 'U0'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'U0'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/ila_v6_2/constraints/ila.xdc] for cell 'U0'
+Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1712.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.005 . Memory (MB): peak = 1716.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 166 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
-  CFGLUT5 => SRLC32E: 22 instances
+  A total of 185 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 160 instances
+  CFGLUT5 => SRLC32E: 25 instances
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.235 . Memory (MB): peak = 1712.594 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.248 . Memory (MB): peak = 1716.188 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Constraint Validation : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
 ---------------------------------------------------------------------------------
-Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc, line 9).
+Applied set_property KEEP_HIERARCHY = SOFT for U0. (constraint file  D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/dont_touch.xdc, line 9).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:54 ; elapsed = 00:00:57 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:53 ; elapsed = 00:00:57 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized0'
@@ -3209,6 +3209,9 @@ INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in modul
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized16'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized17'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized18'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized19'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized20'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized21'
 INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'ltlib_v1_0_0_generic_memrd'
 ---------------------------------------------------------------------------------------------------
                    State |                     New Encoding |                Previous Encoding 
@@ -3414,6 +3417,36 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
                    State |                     New Encoding |                Previous Encoding 
 ---------------------------------------------------------------------------------------------------
 *
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized19'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized20'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
+                    IDLE |                             0001 |                             0001
+                     REG |                             0010 |                             0010
+                     P2S |                             0100 |                             0100
+                     S2P |                             1000 |                             1000
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'xsdbs_v1_0_2_reg_p2s__parameterized21'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+*
               RESET_ADDR |                          0000001 |                          0000001
             REQUEST_READ |                          0000010 |                          0000010
            WAIT_READ_ACK |                          0000100 |                          0000100
@@ -3424,7 +3457,7 @@ INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in m
 ---------------------------------------------------------------------------------------------------
 INFO: [Synth 8-3898] No Re-encoding of one hot register 'current_state_reg' in module 'ltlib_v1_0_0_generic_memrd'
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:57 ; elapsed = 00:01:00 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -3445,25 +3478,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:12 ; elapsed = 00:01:16 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:01:13 ; elapsed = 00:01:17 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:20 ; elapsed = 00:01:23 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:24 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Timing Optimization : Time (s): cpu = 00:01:21 ; elapsed = 00:01:25 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:01:22 ; elapsed = 00:01:25 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Technology Mapping : Time (s): cpu = 00:01:23 ; elapsed = 00:01:26 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -3519,37 +3552,37 @@ INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[2] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[1] to constant 0
 INFO: [Synth 8-3295] tying undriven pin U0:sl_iport0[0] to constant 0
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished IO Insertion : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:01:25 ; elapsed = 00:01:28 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Renaming Generated Instances : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Renaming Generated Ports : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Handling Custom Attributes : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Renaming Generated Nets : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -3565,50 +3598,51 @@ Report Cell Usage:
 +------+---------+------+
 |      |Cell     |Count |
 +------+---------+------+
-|1     |CARRY4   |    70|
-|2     |CFGLUT5  |   166|
-|3     |LUT1     |    47|
-|4     |LUT2     |    65|
-|5     |LUT3     |   122|
-|6     |LUT4     |   315|
-|7     |LUT5     |    83|
-|8     |LUT6     |   859|
-|9     |MUXF7    |    21|
-|10    |RAMB36E1 |    52|
-|11    |SRL16E   |   119|
-|12    |SRLC16E  |     2|
-|13    |SRLC32E  |    17|
-|14    |FDRE     |  2413|
-|15    |FDSE     |    10|
+|1     |CARRY4   |    77|
+|2     |CFGLUT5  |   185|
+|3     |LUT1     |    48|
+|4     |LUT2     |    86|
+|5     |LUT3     |   131|
+|6     |LUT4     |   255|
+|7     |LUT5     |   137|
+|8     |LUT6     |   887|
+|9     |MUXF7    |    81|
+|10    |MUXF8    |    16|
+|11    |RAMB36E1 |    59|
+|13    |SRL16E   |   135|
+|14    |SRLC16E  |     2|
+|15    |SRLC32E  |    17|
+|16    |FDRE     |  2616|
+|17    |FDSE     |    10|
 +------+---------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Finished Writing Synthesis Report : Time (s): cpu = 00:01:26 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:36 ; elapsed = 00:01:23 . Memory (MB): peak = 1712.594 ; gain = 586.254
-Synthesis Optimization Complete : Time (s): cpu = 00:01:26 ; elapsed = 00:01:29 . Memory (MB): peak = 1712.594 ; gain = 586.254
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:38 ; elapsed = 00:01:24 . Memory (MB): peak = 1716.188 ; gain = 572.691
+Synthesis Optimization Complete : Time (s): cpu = 00:01:27 ; elapsed = 00:01:30 . Memory (MB): peak = 1716.188 ; gain = 572.691
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.128 . Memory (MB): peak = 1712.594 ; gain = 0.000
-INFO: [Netlist 29-17] Analyzing 309 Unisim elements for replacement
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.144 . Memory (MB): peak = 1716.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 418 Unisim elements for replacement
 INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1712.594 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1716.188 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
-  A total of 166 instances were transformed.
-  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 144 instances
-  CFGLUT5 => SRLC32E: 22 instances
+  A total of 185 instances were transformed.
+  CFGLUT5 => CFGLUT5 (SRL16E, SRLC32E): 160 instances
+  CFGLUT5 => SRLC32E: 25 instances
 
 INFO: [Common 17-83] Releasing license: Synthesis
-111 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+117 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:01:32 ; elapsed = 00:01:37 . Memory (MB): peak = 1712.594 ; gain = 586.254
+synth_design: Time (s): cpu = 00:01:34 ; elapsed = 00:01:39 . Memory (MB): peak = 1716.188 ; gain = 572.691
 INFO: [Common 17-600] The following parameters have non-default value.
 tcl.collectionResultDisplayLimit
-INFO: [Common 17-1381] The checkpoint 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/design_dijkstra_all_ila_0_0.dcp' has been generated.
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/design_dijkstra_all_ila_0_0.dcp' has been generated.
 WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
-INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_dijkstra_all_ila_0_0, cache-ID = 9814ce3dd8ea8a2c
-INFO: [Coretcl 2-1174] Renamed 303 cell refs.
-INFO: [Common 17-1381] The checkpoint 'D:/Robot_Surveillance_V3/FPGA/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/design_dijkstra_all_ila_0_0.dcp' has been generated.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_dijkstra_all_ila_0_0, cache-ID = b457303d2da6d65a
+INFO: [Coretcl 2-1174] Renamed 333 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_all_ila_0_0_synth_1/design_dijkstra_all_ila_0_0.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_dijkstra_all_ila_0_0_utilization_synth.rpt -pb design_dijkstra_all_ila_0_0_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun  8 09:30:32 2022...
+INFO: [Common 17-206] Exiting Vivado at Thu Jun  9 13:29:15 2022...

@@ -73,6 +73,7 @@ OPTRACE "design_TOP_Dijkstra_ila_0_0_synth_1" START { ROLLUP_AUTO }
 set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
+set_msg_config -id {Common 17-41} -limit 10000000
 set_param project.vivado.isBlockSynthRun true
 set_msg_config -msgmgr_mode ooc_run
 OPTRACE "Creating in-memory project" START { }
@@ -92,7 +93,7 @@ set_property ip_output_repo d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/design_TOP_Dijkstra_ila_0_0.xci
+read_ip -quiet D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/design_TOP_Dijkstra_ila_0_0.xci
 set_property used_in_synthesis false [get_files -all d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/ila_v6_2/constraints/ila_impl.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/ila_v6_2/constraints/ila.xdc]

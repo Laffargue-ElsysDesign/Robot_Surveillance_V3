@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log design_dijkstra_all_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_all_wrapper.tcl" );
+         "-log design_TOP_Dijkstra_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_TOP_Dijkstra_wrapper.tcl" );
 
 
 

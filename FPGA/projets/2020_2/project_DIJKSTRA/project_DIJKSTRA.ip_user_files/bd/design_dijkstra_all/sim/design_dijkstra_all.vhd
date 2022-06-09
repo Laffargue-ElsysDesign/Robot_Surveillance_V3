@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Jun  8 10:19:57 2022
+--Date        : Thu Jun  9 09:19:27 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_dijkstra_all.bd
 --Design      : design_dijkstra_all
@@ -19,11 +19,10 @@ entity design_dijkstra_all is
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    resetn : in STD_LOGIC;
     rst_n : in STD_LOGIC
   );
   attribute CORE_GENERATION_INFO : string;
-  attribute CORE_GENERATION_INFO of design_dijkstra_all : entity is "design_dijkstra_all,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_dijkstra_all,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=13,numReposBlks=13,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
+  attribute CORE_GENERATION_INFO of design_dijkstra_all : entity is "design_dijkstra_all,IP_Integrator,{x_ipVendor=xilinx.com,x_ipLibrary=BlockDiagram,x_ipName=design_dijkstra_all,x_ipVersion=1.00.a,x_ipLanguage=VHDL,numBlks=12,numReposBlks=12,numNonXlnxBlks=0,numHierBlks=0,maxHierDepth=0,numSysgenBlks=0,numHlsBlks=0,numHdlrefBlks=7,numPkgbdBlks=0,bdsource=USER,synth_mode=OOC_per_IP}";
   attribute HW_HANDOFF : string;
   attribute HW_HANDOFF of design_dijkstra_all : entity is "design_dijkstra_all.hwdef";
 end design_dijkstra_all;
@@ -72,14 +71,6 @@ architecture STRUCTURE of design_dijkstra_all is
     douta : out STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_dijkstra_all_blk_mem_gen_0_0;
-  component design_dijkstra_all_ROM_0_0 is
-  port (
-    clk : in STD_LOGIC;
-    en_rom : in STD_LOGIC;
-    addr_rom : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    data_rom : out STD_LOGIC_VECTOR ( 9 downto 0 )
-  );
-  end component design_dijkstra_all_ROM_0_0;
   component design_dijkstra_all_dpram_0_0 is
   port (
     data_in_a : in STD_LOGIC_VECTOR ( 9 downto 0 );
@@ -116,14 +107,6 @@ architecture STRUCTURE of design_dijkstra_all is
     probe17 : in STD_LOGIC_VECTOR ( 15 downto 0 )
   );
   end component design_dijkstra_all_ila_0_0;
-  component design_dijkstra_all_clk_wiz_0_0 is
-  port (
-    resetn : in STD_LOGIC;
-    clk_in1 : in STD_LOGIC;
-    clk_out1 : out STD_LOGIC;
-    locked : out STD_LOGIC
-  );
-  end component design_dijkstra_all_clk_wiz_0_0;
   component design_dijkstra_all_UPDATE_RAM_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -147,27 +130,14 @@ architecture STRUCTURE of design_dijkstra_all is
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 )
   );
   end component design_dijkstra_all_UPDATE_RAM_0_0;
-  component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 is
+  component design_dijkstra_all_ROM_0_0 is
   port (
     clk : in STD_LOGIC;
-    rst_n : in STD_LOGIC;
-    en : in STD_LOGIC;
-    start_node : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    end_node : in STD_LOGIC_VECTOR ( 4 downto 0 );
-    flag_finished : out STD_LOGIC;
-    en_UpdateRam : out STD_LOGIC;
-    en_NearestNode : out STD_LOGIC;
-    node : out STD_LOGIC_VECTOR ( 9 downto 0 );
-    node_seen : out STD_LOGIC_VECTOR ( 16 downto 0 );
-    flag_RAM : in STD_LOGIC;
-    flag_node : in STD_LOGIC;
-    flag_end_write : in STD_LOGIC;
-    flag_init : out STD_LOGIC;
-    flag_read_path : out STD_LOGIC;
-    next_node : in STD_LOGIC_VECTOR ( 9 downto 0 );
-    led_c : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    en_rom : in STD_LOGIC;
+    addr_rom : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    data_rom : out STD_LOGIC_VECTOR ( 9 downto 0 )
   );
-  end component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0;
+  end component design_dijkstra_all_ROM_0_0;
   component design_dijkstra_all_NEAREST_NODE_0_0 is
   port (
     clk : in STD_LOGIC;
@@ -193,6 +163,27 @@ architecture STRUCTURE of design_dijkstra_all is
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 )
   );
   end component design_dijkstra_all_NEAREST_NODE_0_0;
+  component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 is
+  port (
+    clk : in STD_LOGIC;
+    rst_n : in STD_LOGIC;
+    en : in STD_LOGIC;
+    start_node : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    end_node : in STD_LOGIC_VECTOR ( 4 downto 0 );
+    flag_finished : out STD_LOGIC;
+    en_UpdateRam : out STD_LOGIC;
+    en_NearestNode : out STD_LOGIC;
+    node : out STD_LOGIC_VECTOR ( 9 downto 0 );
+    node_seen : out STD_LOGIC_VECTOR ( 16 downto 0 );
+    flag_RAM : in STD_LOGIC;
+    flag_node : in STD_LOGIC;
+    flag_end_write : in STD_LOGIC;
+    flag_init : out STD_LOGIC;
+    flag_read_path : out STD_LOGIC;
+    next_node : in STD_LOGIC_VECTOR ( 9 downto 0 );
+    led_c : out STD_LOGIC_VECTOR ( 1 downto 0 )
+  );
+  end component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0;
   signal DIJKSTRA_CONTROLLER_0_en_NearestNode : STD_LOGIC;
   signal DIJKSTRA_CONTROLLER_0_en_UpdateRam : STD_LOGIC;
   signal DIJKSTRA_CONTROLLER_0_flag_finished : STD_LOGIC;
@@ -224,36 +215,30 @@ architecture STRUCTURE of design_dijkstra_all is
   signal UPDATE_RAM_0_we_ram : STD_LOGIC;
   signal blk_mem_gen_0_douta : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal clk_0_1 : STD_LOGIC;
-  signal clk_1 : STD_LOGIC;
   signal comparateur1_0_comp_out : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal comparateur2_0_comp_out : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal dpram_0_data_out_a : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal dpram_0_data_out_b : STD_LOGIC_VECTOR ( 9 downto 0 );
   signal en_0_1 : STD_LOGIC;
-  signal resetn_0_1 : STD_LOGIC;
   signal rst_n_0_1 : STD_LOGIC;
   signal xlconstant_0_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal xlconstant_1_dout : STD_LOGIC_VECTOR ( 0 to 0 );
   signal xlconstant_2_dout : STD_LOGIC_VECTOR ( 4 downto 0 );
   signal NLW_NEAREST_NODE_0_en_ram_UNCONNECTED : STD_LOGIC;
   signal NLW_UPDATE_RAM_0_en_ram_UNCONNECTED : STD_LOGIC;
-  signal NLW_clk_wiz_0_locked_UNCONNECTED : STD_LOGIC;
   attribute X_INTERFACE_INFO : string;
   attribute X_INTERFACE_INFO of clk : signal is "xilinx.com:signal:clock:1.0 CLK.CLK CLK";
   attribute X_INTERFACE_PARAMETER : string;
-  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_dijkstra_all_clk_0, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
-  attribute X_INTERFACE_INFO of resetn : signal is "xilinx.com:signal:reset:1.0 RST.RESETN RST";
-  attribute X_INTERFACE_PARAMETER of resetn : signal is "XIL_INTERFACENAME RST.RESETN, INSERT_VIP 0, POLARITY ACTIVE_LOW";
+  attribute X_INTERFACE_PARAMETER of clk : signal is "XIL_INTERFACENAME CLK.CLK, CLK_DOMAIN design_dijkstra_all_clk, FREQ_HZ 100000000, FREQ_TOLERANCE_HZ 0, INSERT_VIP 0, PHASE 0.000";
   attribute X_INTERFACE_INFO of rst_n : signal is "xilinx.com:signal:reset:1.0 RST.RST_N RST";
   attribute X_INTERFACE_PARAMETER of rst_n : signal is "XIL_INTERFACENAME RST.RST_N, INSERT_VIP 0, POLARITY ACTIVE_LOW";
 begin
-  clk_1 <= clk;
+  clk_0_1 <= clk;
   en_0_1 <= en;
   flag_finished <= DIJKSTRA_CONTROLLER_0_flag_finished;
   led_c(1 downto 0) <= DIJKSTRA_CONTROLLER_0_led_c(1 downto 0);
   led_n(1 downto 0) <= NEAREST_NODE_0_led_n(1 downto 0);
   led_u(2 downto 0) <= UPDATE_RAM_0_led_u(2 downto 0);
-  resetn_0_1 <= resetn;
   rst_n_0_1 <= rst_n;
 DIJKSTRA_CONTROLLER_0: component design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0
      port map (
@@ -336,13 +321,6 @@ blk_mem_gen_0: component design_dijkstra_all_blk_mem_gen_0_0
       douta(15 downto 0) => blk_mem_gen_0_douta(15 downto 0),
       ena => NEAREST_NODE_0_en_ram_ext,
       wea(0) => NEAREST_NODE_0_we_ram_ext
-    );
-clk_wiz_0: component design_dijkstra_all_clk_wiz_0_0
-     port map (
-      clk_in1 => clk_1,
-      clk_out1 => clk_0_1,
-      locked => NLW_clk_wiz_0_locked_UNCONNECTED,
-      resetn => resetn_0_1
     );
 comparateur1_0: component design_dijkstra_all_comparateur1_0_0
      port map (

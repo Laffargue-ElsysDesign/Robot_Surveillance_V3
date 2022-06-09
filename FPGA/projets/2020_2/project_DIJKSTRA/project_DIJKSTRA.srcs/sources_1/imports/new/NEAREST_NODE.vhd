@@ -42,6 +42,7 @@ Port (clk : in std_logic;
       rst_n : in std_logic; 
       en : in std_logic; 
       node_seen : in std_logic_vector(nb_node-1 downto 0); 
+      start_node : in std_logic_vector(nb_bit_addr-1 downto 0);
       flag_node : out std_logic; 
       flag_end_write : out std_logic; 
       flag_read_path : in std_logic;
@@ -64,7 +65,7 @@ end NEAREST_NODE;
 
 architecture Behavioral of NEAREST_NODE is
 
-type state is (idle, read_ram, compare, nearest_node, write_ram_ext);
+type state is (idle, read_ram, compare, buff, nearest_node, write_ram_ext, write_nb_nodes);
 signal current_state, next_state : state;
 signal cpt_addr : integer range 0 to nb_node; 
 signal comp : std_logic; 
@@ -95,7 +96,7 @@ begin
             comp <= '1'; 
         end if;
         --if current_state = nearest_node or next_state = nearest_node then 
-        if current_state = nearest_node then
+        if current_state = nearest_node or current_state = buff then
             s_next_node <= comp_out; 
         elsif current_state = write_ram_ext then
             s_next_node <= data_ram; 
@@ -107,7 +108,7 @@ end process Sequentiel;
 
 next_node <= s_next_node;
 
-Combinatoire : process(current_state, node_seen, en, flag_read_path, cpt_addr, comp, data_ram, comp_out, s_next_node) -- définit les sorties et l'état suivant en fonction des entrées, et de l'état actuel 
+Combinatoire : process(current_state, node_seen, en, flag_read_path, cpt_addr, comp, data_ram, comp_out, s_next_node, start_node) -- définit les sorties et l'état suivant en fonction des entrées, et de l'état actuel 
 begin 
     case current_state is 
         when idle =>
@@ -140,7 +141,7 @@ begin
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
             if node_seen(cpt_addr)='1' and cpt_addr >= 17 then
-                next_state <= nearest_node;
+                next_state <= buff;
             elsif node_seen(cpt_addr)='1' then
                 next_state <= read_ram;
             else
@@ -170,10 +171,24 @@ begin
                 comp_in2 <= comp_out; 
             end if; 
             if cpt_addr >= 17 then
-                next_state <= nearest_node;
+                next_state <= buff;
             else
                 next_state <= read_ram;
             end if;
+            
+        when buff => 
+        led_n <= "00";
+            flag_node <= '0'; 
+            flag_end_write <= '0'; 
+            comp_in1 <= data_ram(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr) & std_logic_vector(to_unsigned(cpt_addr-1,nb_bit_addr)); 
+            addr_ram <= std_logic_vector(to_unsigned(cpt_addr-1,nb_bit_addr));
+            en_ram  <= '1'; 
+            addr_ram_ext  <= (others=>'0'); 
+            din_ram_ext  <= (others=>'0'); 
+            en_ram_ext  <= '0'; 
+            we_ram_ext  <= '0';
+            comp_in2 <= comp_out;  
+            next_state <= nearest_node;
             
         when nearest_node => 
         led_n <= "11";
@@ -209,14 +224,14 @@ begin
                 flag_end_write <= '0'; 
                 addr_ram <= s_next_node(nb_bit_addr-1 downto 0); 
                 next_state <= write_ram_ext;
-            elsif data_ram(nb_bit_addr - 1 downto 0) = s_next_node(nb_bit_addr - 1 downto 0) then
+            elsif data_ram(nb_bit_addr - 1 downto 0) = start_node then
                 addr_ram_ext  <= addr_ram_ex; 
-                din_ram_ext  <= "00000000000" & std_logic_vector((to_unsigned(cpt_addr,nb_bit_addr))); 
+                din_ram_ext  <= "00000000000" & data_ram(nb_bit_addr - 1 downto 0);
                 en_ram_ext  <= '1'; 
                 we_ram_ext  <= '1';
-                flag_end_write <= '1'; 
+                flag_end_write <= '0'; 
                 addr_ram <= (others=>'0'); 
-                next_state <= idle;
+                next_state <= write_nb_nodes;
             else 
                 addr_ram_ext  <= std_logic_vector(unsigned(addr_ram_ex) + to_unsigned(cpt_addr+1, 8));
                 din_ram_ext  <= "00000000000" & data_ram(nb_bit_addr - 1 downto 0); 
@@ -227,6 +242,20 @@ begin
                 next_state <= write_ram_ext;
             end if;
         
+        when write_nb_nodes => 
+        led_n <= "01";
+            flag_node <= '0'; 
+            comp_in1 <= (others=>'0'); 
+            comp_in2 <= (others=>'0'); 
+            en_ram  <= '1'; 
+            addr_ram_ext  <= addr_ram_ex; 
+            din_ram_ext  <= "00000000000" & std_logic_vector((to_unsigned(cpt_addr,nb_bit_addr))); 
+            en_ram_ext  <= '1'; 
+            we_ram_ext  <= '1';
+            flag_end_write <= '1'; 
+            addr_ram <= (others=>'0'); 
+            next_state <= idle;
+
         when others => next_state <= idle;
         led_n <= "00";
             flag_node <= '0'; 

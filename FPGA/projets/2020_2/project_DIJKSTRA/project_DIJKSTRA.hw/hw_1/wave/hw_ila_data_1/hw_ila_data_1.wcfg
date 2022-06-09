@@ -9,153 +9,82 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="0fs"></ZoomStartTime>
-      <ZoomEndTime time="16385fs"></ZoomEndTime>
-      <Cursor1Time time="8764fs"></Cursor1Time>
+      <ZoomStartTime time="433fs"></ZoomStartTime>
+      <ZoomEndTime time="609fs"></ZoomEndTime>
+      <Cursor1Time time="522fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
       <NameColumnWidth column_width="269"></NameColumnWidth>
-      <ValueColumnWidth column_width="87"></ValueColumnWidth>
+      <ValueColumnWidth column_width="83"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="18" />
+   <WVObjectSize size="9" />
    <wave_markers>
    </wave_markers>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_node" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/TOP_dijkstra_0_addr_ram_ext" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_node[9:0]</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_node[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_node_seen" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_node_seen[16:0]</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_node_seen[16:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_led_n" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_led_n[1:0]</obj_property>
-      <obj_property name="ObjectShortName">NEAREST_NODE_0_led_n[1:0]</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/TOP_dijkstra_0_addr_ram_ext[7:0]</obj_property>
+      <obj_property name="ObjectShortName">TOP_dijkstra_0_addr_ram_ext[7:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_en_NearestNode" type="logic">
+   <wvobject fp_name="design_TOP_Dijkstra_i/TOP_dijkstra_0_en_ram_ext" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_en_NearestNode</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_en_NearestNode</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/TOP_dijkstra_0_en_ram_ext</obj_property>
+      <obj_property name="ObjectShortName">TOP_dijkstra_0_en_ram_ext</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_en_UpdateRam" type="logic">
+   <wvobject fp_name="design_TOP_Dijkstra_i/TOP_dijkstra_0_flag_finished" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_en_UpdateRam</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_en_UpdateRam</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/TOP_dijkstra_0_flag_finished</obj_property>
+      <obj_property name="ObjectShortName">TOP_dijkstra_0_flag_finished</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_flag_init" type="logic">
+   <wvobject fp_name="design_TOP_Dijkstra_i/TOP_dijkstra_0_we_ram_ext" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_flag_init</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_flag_init</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/TOP_dijkstra_0_we_ram_ext</obj_property>
+      <obj_property name="ObjectShortName">TOP_dijkstra_0_we_ram_ext</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_led_c" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/xlconstant_0_dout" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/DIJKSTRA_CONTROLLER_0_led_c[1:0]</obj_property>
-      <obj_property name="ObjectShortName">DIJKSTRA_CONTROLLER_0_led_c[1:0]</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/xlconstant_0_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">xlconstant_0_dout[4:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/dpram_0_data_out_b" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/xlconstant_1_dout" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/dpram_0_data_out_b[9:0]</obj_property>
-      <obj_property name="ObjectShortName">dpram_0_data_out_b[9:0]</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/xlconstant_1_dout[4:0]</obj_property>
+      <obj_property name="ObjectShortName">xlconstant_1_dout[4:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_addr_ram" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/TOP_dijkstra_0_din_ram_ext" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_addr_ram[4:0]</obj_property>
-      <obj_property name="ObjectShortName">NEAREST_NODE_0_addr_ram[4:0]</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/TOP_dijkstra_0_din_ram_ext[15:0]</obj_property>
+      <obj_property name="ObjectShortName">TOP_dijkstra_0_din_ram_ext[15:0]</obj_property>
       <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_comp_in1" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/blk_mem_gen_0_douta" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_comp_in1[9:0]</obj_property>
-      <obj_property name="ObjectShortName">NEAREST_NODE_0_comp_in1[9:0]</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/blk_mem_gen_0_douta[15:0]</obj_property>
+      <obj_property name="ObjectShortName">blk_mem_gen_0_douta[15:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_comp_in2" type="array">
+   <wvobject fp_name="design_TOP_Dijkstra_i/en_0_1" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_comp_in2[9:0]</obj_property>
-      <obj_property name="ObjectShortName">NEAREST_NODE_0_comp_in2[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/comparateur2_0_comp_out" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/comparateur2_0_comp_out[9:0]</obj_property>
-      <obj_property name="ObjectShortName">comparateur2_0_comp_out[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/NEAREST_NODE_0_din_ram_ext" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/NEAREST_NODE_0_din_ram_ext[15:0]</obj_property>
-      <obj_property name="ObjectShortName">NEAREST_NODE_0_din_ram_ext[15:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/UPDATE_RAM_0_addr_ram" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/UPDATE_RAM_0_addr_ram[4:0]</obj_property>
-      <obj_property name="ObjectShortName">UPDATE_RAM_0_addr_ram[4:0]</obj_property>
-      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/UPDATE_RAM_0_din_ram" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/UPDATE_RAM_0_din_ram[9:0]</obj_property>
-      <obj_property name="ObjectShortName">UPDATE_RAM_0_din_ram[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/UPDATE_RAM_0_we_ram" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/UPDATE_RAM_0_we_ram</obj_property>
-      <obj_property name="ObjectShortName">UPDATE_RAM_0_we_ram</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/UPDATE_RAM_0_flag_RAM" type="logic">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/UPDATE_RAM_0_flag_RAM</obj_property>
-      <obj_property name="ObjectShortName">UPDATE_RAM_0_flag_RAM</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_all_i/UPDATE_RAM_0_led_u" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_all_i/UPDATE_RAM_0_led_u[2:0]</obj_property>
-      <obj_property name="ObjectShortName">UPDATE_RAM_0_led_u[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="ElementShortName">design_TOP_Dijkstra_i/en_0_1</obj_property>
+      <obj_property name="ObjectShortName">en_0_1</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>

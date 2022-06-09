@@ -3,46 +3,28 @@
 
 # XDC: imports/Desktop/zybo-z7-20.xdc
 
-# Block Designs: bd/design_dijkstra_all/design_dijkstra_all.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all || ORIG_REF_NAME==design_dijkstra_all} -quiet] -quiet
+# Block Designs: bd/design_TOP_Dijkstra/design_TOP_Dijkstra.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra || ORIG_REF_NAME==design_TOP_Dijkstra} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur1_0_0/design_dijkstra_all_comparateur1_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_comparateur1_0_0 || ORIG_REF_NAME==design_dijkstra_all_comparateur1_0_0} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_blk_mem_gen_0_0/design_TOP_Dijkstra_blk_mem_gen_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_blk_mem_gen_0_0 || ORIG_REF_NAME==design_TOP_Dijkstra_blk_mem_gen_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_comparateur2_0_0/design_dijkstra_all_comparateur2_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_comparateur2_0_0 || ORIG_REF_NAME==design_dijkstra_all_comparateur2_0_0} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_xlconstant_0_0/design_TOP_Dijkstra_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_xlconstant_0_0 || ORIG_REF_NAME==design_TOP_Dijkstra_xlconstant_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_0/design_dijkstra_all_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_xlconstant_0_0 || ORIG_REF_NAME==design_dijkstra_all_xlconstant_0_0} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_xlconstant_1_0/design_TOP_Dijkstra_xlconstant_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_xlconstant_1_0 || ORIG_REF_NAME==design_TOP_Dijkstra_xlconstant_1_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_1/design_dijkstra_all_xlconstant_0_1.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_xlconstant_0_1 || ORIG_REF_NAME==design_dijkstra_all_xlconstant_0_1} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_ila_0_0/design_TOP_Dijkstra_ila_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_ila_0_0 || ORIG_REF_NAME==design_TOP_Dijkstra_ila_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_2/design_dijkstra_all_xlconstant_0_2.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_xlconstant_0_2 || ORIG_REF_NAME==design_dijkstra_all_xlconstant_0_2} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_xlconstant_0_1/design_TOP_Dijkstra_xlconstant_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_xlconstant_0_1 || ORIG_REF_NAME==design_TOP_Dijkstra_xlconstant_0_1} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_blk_mem_gen_0_0/design_dijkstra_all_blk_mem_gen_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_blk_mem_gen_0_0 || ORIG_REF_NAME==design_dijkstra_all_blk_mem_gen_0_0} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_clk_wiz_0_0/design_TOP_Dijkstra_clk_wiz_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_clk_wiz_0_0 || ORIG_REF_NAME==design_TOP_Dijkstra_clk_wiz_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_ROM_0_0/design_dijkstra_all_ROM_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_ROM_0_0 || ORIG_REF_NAME==design_dijkstra_all_ROM_0_0} -quiet] -quiet
+# IP: bd/design_TOP_Dijkstra/ip/design_TOP_Dijkstra_TOP_dijkstra_0_0/design_TOP_Dijkstra_TOP_dijkstra_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_TOP_Dijkstra_TOP_dijkstra_0_0 || ORIG_REF_NAME==design_TOP_Dijkstra_TOP_dijkstra_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_dpram_0_0/design_dijkstra_all_dpram_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_dpram_0_0 || ORIG_REF_NAME==design_dijkstra_all_dpram_0_0} -quiet] -quiet
-
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_ila_0_0/design_dijkstra_all_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_ila_0_0 || ORIG_REF_NAME==design_dijkstra_all_ila_0_0} -quiet] -quiet
-
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_clk_wiz_0_0 || ORIG_REF_NAME==design_dijkstra_all_clk_wiz_0_0} -quiet] -quiet
-
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_UPDATE_RAM_0_0/design_dijkstra_all_UPDATE_RAM_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_UPDATE_RAM_0_0 || ORIG_REF_NAME==design_dijkstra_all_UPDATE_RAM_0_0} -quiet] -quiet
-
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_NEAREST_NODE_0_0/design_dijkstra_all_NEAREST_NODE_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_NEAREST_NODE_0_0 || ORIG_REF_NAME==design_dijkstra_all_NEAREST_NODE_0_0} -quiet] -quiet
-
-# IP: bd/design_dijkstra_all/ip/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0/design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 || ORIG_REF_NAME==design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0} -quiet] -quiet
-
-# XDC: d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/design_dijkstra_all_ooc.xdc
+# XDC: d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra/design_TOP_Dijkstra_ooc.xdc

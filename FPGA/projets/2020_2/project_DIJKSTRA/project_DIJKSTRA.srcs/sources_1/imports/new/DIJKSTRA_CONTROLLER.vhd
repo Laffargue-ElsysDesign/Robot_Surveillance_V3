@@ -54,6 +54,7 @@ Port (clk : in std_logic;
       flag_init : out std_logic;
       flag_read_path : out std_logic;
       next_node : in std_logic_vector(nb_bit_dist+nb_bit_addr-1 downto 0);
+      o_start_node : out std_logic_vector(nb_bit_addr-1 downto 0); 
       led_c : out std_logic_vector(1 downto 0)
       );
 end DIJKSTRA_CONTROLLER;
@@ -101,7 +102,7 @@ begin
                 s_start_node <= s_start_node;
                 s_end_node <= s_end_node;
             end if;
-        elsif current_state = nearest_node and prev_flag_node = '1' then
+        elsif current_state = nearest_node and flag_node = '1' then
             s_next_node <= next_node;
             s_start_node <= s_start_node;
             s_end_node <= s_end_node;
@@ -113,7 +114,9 @@ begin
         prev_flag_node <= flag_node;
     end if;
 end process;
- 
+
+o_start_node <= s_start_node;
+
 process(current_state, en, flag_RAM, flag_node, s_start_node, s_next_node, next_node, flag_end_write, dist_zero, start_node, end_node, s_end_node, prev_flag_node, init_node) is
 begin 
     case current_state is
@@ -123,7 +126,12 @@ begin
             flag_finished <= '0';
             en_NearestNode <= '0'; 
             flag_read_path <= '0';
-            if en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then
+            if to_integer(unsigned(start_node)) >=17 or to_integer(unsigned(end_node)) >=17 then 
+                next_state <= idle;
+                flag_init <= '0';
+                en_UpdateRam <= '0';
+                node <= (others=>'0');
+            elsif en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then
             --if en = '1' then
                 next_state <= update_ram;
                 flag_init <= '1';
@@ -171,7 +179,7 @@ begin
                 en_NearestNode <= '0'; 
                 flag_read_path <= '0';
                 flag_init <= '0';
-                en_UpdateRam <= '1';
+                en_UpdateRam <= '0';
                 node <= s_next_node;
             else 
                 next_state <= nearest_node;

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Tue Jun  7 11:25:28 2022
+-- Date        : Thu Jun  9 09:25:43 2022
 -- Host        : D-14JM0W2 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode funcsim
---               d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_all/ip/design_dijkstra_all_clk_wiz_0_0/design_dijkstra_all_clk_wiz_0_0_sim_netlist.vhdl
+-- Command     : write_vhdl -force -mode funcsim -rename_top design_dijkstra_all_clk_wiz_0_0 -prefix
+--               design_dijkstra_all_clk_wiz_0_0_ design_dijkstra_all_clk_wiz_0_0_sim_netlist.vhdl
 -- Design      : design_dijkstra_all_clk_wiz_0_0
 -- Purpose     : This VHDL netlist is a functional simulation representation of the design and should not be modified or
 --               synthesized. This netlist cannot be used for SDF annotated simulation.
@@ -17,12 +17,8 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz is
   port (
     clk_out1 : out STD_LOGIC;
-    resetn : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
-  attribute ORIG_REF_NAME : string;
-  attribute ORIG_REF_NAME of design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz : entity is "design_dijkstra_all_clk_wiz_0_0_clk_wiz";
 end design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz;
 
 architecture STRUCTURE of design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz is
@@ -30,13 +26,13 @@ architecture STRUCTURE of design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_cl
   signal clk_out1_design_dijkstra_all_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_buf_design_dijkstra_all_clk_wiz_0_0 : STD_LOGIC;
   signal clkfbout_design_dijkstra_all_clk_wiz_0_0 : STD_LOGIC;
-  signal reset_high : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT1_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT2_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT3_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT4_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_CLKOUT5_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_DRDY_UNCONNECTED : STD_LOGIC;
+  signal NLW_plle2_adv_inst_LOCKED_UNCONNECTED : STD_LOGIC;
   signal NLW_plle2_adv_inst_DO_UNCONNECTED : STD_LOGIC_VECTOR ( 15 downto 0 );
   attribute BOX_TYPE : string;
   attribute BOX_TYPE of clkf_buf : label is "PRIMITIVE";
@@ -121,17 +117,9 @@ plle2_adv_inst: unisim.vcomponents.PLLE2_ADV
       DO(15 downto 0) => NLW_plle2_adv_inst_DO_UNCONNECTED(15 downto 0),
       DRDY => NLW_plle2_adv_inst_DRDY_UNCONNECTED,
       DWE => '0',
-      LOCKED => locked,
+      LOCKED => NLW_plle2_adv_inst_LOCKED_UNCONNECTED,
       PWRDWN => '0',
-      RST => reset_high
-    );
-plle2_adv_inst_i_1: unisim.vcomponents.LUT1
-    generic map(
-      INIT => X"1"
-    )
-        port map (
-      I0 => resetn,
-      O => reset_high
+      RST => '0'
     );
 end STRUCTURE;
 library IEEE;
@@ -141,8 +129,6 @@ use UNISIM.VCOMPONENTS.ALL;
 entity design_dijkstra_all_clk_wiz_0_0 is
   port (
     clk_out1 : out STD_LOGIC;
-    resetn : in STD_LOGIC;
-    locked : out STD_LOGIC;
     clk_in1 : in STD_LOGIC
   );
   attribute NotValidForBitStream : boolean;
@@ -154,8 +140,6 @@ begin
 inst: entity work.design_dijkstra_all_clk_wiz_0_0_design_dijkstra_all_clk_wiz_0_0_clk_wiz
      port map (
       clk_in1 => clk_in1,
-      clk_out1 => clk_out1,
-      locked => locked,
-      resetn => resetn
+      clk_out1 => clk_out1
     );
 end STRUCTURE;

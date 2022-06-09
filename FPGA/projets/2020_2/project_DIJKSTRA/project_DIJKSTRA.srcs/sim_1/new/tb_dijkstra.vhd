@@ -45,7 +45,6 @@ component design_dijkstra_all_wrapper is
     led_c : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_n : out STD_LOGIC_VECTOR ( 1 downto 0 );
     led_u : out STD_LOGIC_VECTOR ( 2 downto 0 );
-    resetn : in STD_LOGIC;
     rst_n : in STD_LOGIC
   );
 end component;
@@ -57,7 +56,7 @@ signal led_u : std_logic_vector(2 downto 0);
 
 begin
 rst_n <= '1' after 15 ns; 
-clk <= not clk after 8 ns;
+clk <= not clk after 10 ns;
 en <= '1' after 25 ns; 
 --end_node <= "00110";
 reset_n <= '0';
@@ -71,7 +70,6 @@ flag_finished => flag_fin,
 led_c(1 downto 0) => led_c(1 downto 0),
 led_n(1 downto 0) => led_n(1 downto 0),
 led_u(2 downto 0) => led_u(2 downto 0),
-resetn => reset_n,
 rst_n => rst_n
 ); 
 
