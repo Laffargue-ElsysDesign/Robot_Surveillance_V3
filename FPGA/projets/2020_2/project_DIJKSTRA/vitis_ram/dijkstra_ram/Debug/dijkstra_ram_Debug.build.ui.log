@@ -1,0 +1,10 @@
+2022-06-13T11:36:38.474360500255-11:36:38 **** Incremental Build of configuration Debug for project dijkstra_ram ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-make[1]: Nothing to be done for 'main-build'.
+00255-
+11:36:39 Build Finished (took 741ms)
+

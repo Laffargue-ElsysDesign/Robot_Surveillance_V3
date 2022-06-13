@@ -1,0 +1,37 @@
+Nothing to build in platform 'design_dijkstra_ram_wrapper'
+
+14:48:42 **** Incremental Build of configuration Debug for project dijkstra ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_FPGA/vitis_dijkstra/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/sw/design_dijkstra_ram_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:83:35: warning: format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]
+   83 |  printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
+      |                               ~~~~^                                 ~~~~~~~~~~~~~
+      |                                   |                                            |
+      |                                   long unsigned int                            int32_t * {aka long int *}
+      |                               %08ln
+../src/helloworld.c:97:35: warning: format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]
+   97 |  printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
+      |                               ~~~~^                                 ~~~~~~~~~~~~~
+      |                                   |                                            |
+      |                                   long unsigned int                            int32_t * {aka long int *}
+      |                               %08ln
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: dijkstra.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/projets/2020_2/project_FPGA/vitis_dijkstra/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/sw/design_dijkstra_ram_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "dijkstra.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: dijkstra.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size dijkstra.elf  |tee "dijkstra.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  51044	   2556	  22656	  76256	  129e0	dijkstra.elf
+'Finished building: dijkstra.elf.size'
+' '
