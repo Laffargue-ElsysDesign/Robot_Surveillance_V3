@@ -40,4 +40,4 @@ EAStep()
      fi
 }
 
-EAStep vivado -log design_TOP_Dijkstra_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_TOP_Dijkstra_wrapper.tcl
+EAStep vivado -log design_dijkstra_ram_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_ram_wrapper.tcl

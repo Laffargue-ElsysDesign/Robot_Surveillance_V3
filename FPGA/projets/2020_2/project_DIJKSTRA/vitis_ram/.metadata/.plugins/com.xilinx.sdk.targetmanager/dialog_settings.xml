@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<item key="dijkstra_ram_system-bitFile" value="${project_loc:dijkstra_ram}/_ide/bitstream/design_dijkstra_ram_wrapper.bit"/>
+	<item key="dijkstra_ram_system-bmmFile" value="${project_loc:dijkstra_ram}/_ide/bitstream/design_dijkstra_ram_wrapper.mmi"/>
+	<item key="dijkstra_ram_system-target" value="Local"/>
+	<item key="dijkstra_ram_system-device" value="Auto Detect"/>
+	<item key="dijkstra_ram_system-partial_bit" value="false"/>
+	<item key="dijkstra_ram_system-skip_rev_check" value="false"/>
+	<item key="programfpga.sdxproject" value="dijkstra_ram_system"/>
+	<item key="devices_info_Local" value="{&quot;cables&quot;:[{&quot;name&quot;:&quot;Digilent Zybo Z7 210351B48339A&quot;,&quot;indexContextMap&quot;:{&quot;2&quot;:&quot;jsn-Zybo Z7-210351B48339A-4ba00477-0&quot;,&quot;3&quot;:&quot;jsn-Zybo Z7-210351B48339A-23727093-0&quot;}}]}"/>
+</section>
