@@ -123,7 +123,9 @@ start_step write_bitstream
 set ACTIVE_STEP write_bitstream
 set rc [catch {
   create_msg_db write_bitstream.pb
+  set_param tcl.collectionResultDisplayLimit 0
   set_param chipscope.maxJobs 3
+  set_param xicom.use_bs_reader 1
   open_checkpoint design_dijkstra_ram_wrapper_routed.dcp
   set_property webtalk.parent_dir D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.cache/wt [current_project]
 set_property TOP design_dijkstra_ram_wrapper [current_fileset]

@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version     : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date             : Fri Jun 10 16:03:26 2022
+| Date             : Mon Jun 13 11:59:19 2022
 | Host             : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command          : report_power -file design_dijkstra_ram_wrapper_power_routed.rpt -pb design_dijkstra_ram_wrapper_power_summary_routed.pb -rpx design_dijkstra_ram_wrapper_power_routed.rpx
 | Design           : design_dijkstra_ram_wrapper
@@ -53,14 +53,14 @@ Table of Contents
 | On-Chip                 | Power (W) | Used     | Available | Utilization (%) |
 +-------------------------+-----------+----------+-----------+-----------------+
 | Clocks                  |     0.003 |        3 |       --- |             --- |
-| Slice Logic             |     0.001 |     3134 |       --- |             --- |
-|   LUT as Logic          |    <0.001 |     1216 |     53200 |            2.29 |
-|   Register              |    <0.001 |     1295 |    106400 |            1.22 |
+| Slice Logic             |     0.001 |     3152 |       --- |             --- |
+|   LUT as Logic          |     0.001 |     1216 |     53200 |            2.29 |
+|   Register              |    <0.001 |     1308 |    106400 |            1.23 |
+|   F7/F8 Muxes           |    <0.001 |      106 |     53200 |            0.20 |
 |   CARRY4                |    <0.001 |       18 |     13300 |            0.14 |
-|   F7/F8 Muxes           |    <0.001 |      104 |     53200 |            0.20 |
 |   LUT as Shift Register |    <0.001 |       62 |     17400 |            0.36 |
-|   Others                |     0.000 |      215 |       --- |             --- |
-| Signals                 |     0.001 |     2164 |       --- |             --- |
+|   Others                |     0.000 |      217 |       --- |             --- |
+| Signals                 |     0.002 |     2163 |       --- |             --- |
 | Block RAM               |    <0.001 |        2 |       140 |            1.43 |
 | PS7                     |     1.399 |        1 |       --- |             --- |
 | Static Power            |     0.138 |          |           |                 |
@@ -152,8 +152,8 @@ Table of Contents
 +-----------------------------+-----------+
 | design_dijkstra_ram_wrapper |     1.405 |
 |   design_dijkstra_ram_i     |     1.405 |
-|     Dijkstra_algorithm_0    |     0.002 |
-|       U0                    |     0.002 |
+|     Dijkstra_algorithm_0    |     0.003 |
+|       U0                    |     0.003 |
 |     processing_system7_0    |     1.399 |
 |       inst                  |     1.399 |
 |     ps7_0_axi_periph        |     0.002 |

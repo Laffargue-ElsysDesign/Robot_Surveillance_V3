@@ -32,7 +32,8 @@ use IEEE.STD_LOGIC_1164.ALL;
 --use UNISIM.VComponents.all;
 
 entity RAM_Controller is
-  Port (addr_ram_dijkstra : in STD_LOGIC_VECTOR ( 7 downto 0 );
+  Port (clk : in std_logic;
+        addr_ram_dijkstra : in STD_LOGIC_VECTOR ( 7 downto 0 );
         data_ram_dijkstra : out STD_LOGIC_VECTOR ( 15 downto 0 );
         din_ram_dijkstra : in STD_LOGIC_VECTOR ( 15 downto 0 );
         en_ram_dijkstra : in STD_LOGIC;
@@ -42,17 +43,23 @@ entity RAM_Controller is
         data_ram : in STD_LOGIC_VECTOR ( 31 downto 0 );
         din_ram : out STD_LOGIC_VECTOR ( 31 downto 0 );
         en_ram : out STD_LOGIC;
-        we_ram : out STD_LOGIC);
+        we_ram : out STD_LOGIC_VECTOR(3 downto 0));
 end RAM_Controller;
 
 architecture Behavioral of RAM_Controller is
 
 begin
-busy_ram_dijkstra <= '0'; 
-en_ram <= en_ram_dijkstra; 
-we_ram <= we_ram_dijkstra;
-addr_ram <= "000000000000000000000000" & addr_ram_dijkstra;
-din_ram <= "0000000000000000" & din_ram_dijkstra;
-data_ram_dijkstra <= data_ram( 15 downto 0 );
+
+process(clk)
+begin
+    if rising_edge(clk) then 
+        busy_ram_dijkstra <= '0'; 
+        en_ram <= en_ram_dijkstra; 
+        we_ram <= we_ram_dijkstra & we_ram_dijkstra & we_ram_dijkstra & we_ram_dijkstra;
+        addr_ram <= "0000000000000000000000" & addr_ram_dijkstra & "00" ;
+        din_ram <= "0000000000000000" & din_ram_dijkstra;
+        data_ram_dijkstra <= data_ram( 15 downto 0 );
+    end if; 
+end process;
 
 end Behavioral;

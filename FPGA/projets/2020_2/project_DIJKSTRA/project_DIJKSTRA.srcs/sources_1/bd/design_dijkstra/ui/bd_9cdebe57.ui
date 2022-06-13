@@ -24,8 +24,8 @@ preplace inst xlconstant_1 -pg 1 -lvl 2 -x 390 -y 490 -defaultsOSRD
 preplace inst xlconstant_2 -pg 1 -lvl 3 -x 800 -y 170 -defaultsOSRD
 preplace inst blk_mem_gen_1 -pg 1 -lvl 5 -x 1760 -y 960 -defaultsOSRD
 preplace inst ROM_0 -pg 1 -lvl 2 -x 390 -y 1080 -defaultsOSRD
-preplace inst NEAREST_NODE_0 -pg 1 -lvl 3 -x 800 -y 410 -defaultsOSRD
 preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 4 -x 1320 -y 340 -defaultsOSRD
+preplace inst NEAREST_NODE_0 -pg 1 -lvl 3 -x 800 -y 410 -defaultsOSRD
 preplace netloc DIJKSTRA_CONTROLLER_0_en_NearestNode 1 2 3 590 590 NJ 590 1610
 preplace netloc DIJKSTRA_CONTROLLER_0_en_UpdateRam 1 2 3 580 970 NJ 970 1550
 preplace netloc DIJKSTRA_CONTROLLER_0_flag_finished 1 4 2 NJ 260 1860J

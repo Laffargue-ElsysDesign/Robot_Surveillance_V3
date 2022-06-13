@@ -55,6 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_dijkstra_ram_RAM_Controller_0_0 IS
   PORT (
+    clk : IN STD_LOGIC;
     addr_ram_dijkstra : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     data_ram_dijkstra : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
     din_ram_dijkstra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -65,7 +66,7 @@ ENTITY design_dijkstra_ram_RAM_Controller_0_0 IS
     data_ram : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     din_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     en_ram : OUT STD_LOGIC;
-    we_ram : OUT STD_LOGIC
+    we_ram : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
   );
 END design_dijkstra_ram_RAM_Controller_0_0;
 
@@ -74,6 +75,7 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_dijkstra_ram_RAM_Controller_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT RAM_Controller IS
     PORT (
+      clk : IN STD_LOGIC;
       addr_ram_dijkstra : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       data_ram_dijkstra : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
       din_ram_dijkstra : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -84,7 +86,7 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
       data_ram : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       din_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       en_ram : OUT STD_LOGIC;
-      we_ram : OUT STD_LOGIC
+      we_ram : OUT STD_LOGIC_VECTOR(3 DOWNTO 0)
     );
   END COMPONENT RAM_Controller;
   ATTRIBUTE X_CORE_INFO : STRING;
@@ -95,9 +97,14 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
   ATTRIBUTE CORE_GENERATION_INFO OF design_dijkstra_ram_RAM_Controller_0_0_arch: ARCHITECTURE IS "design_dijkstra_ram_RAM_Controller_0_0,RAM_Controller,{x_ipProduct=Vivado 2020.2,x_ipVendor=xilinx.com,x_ipLibrary=module_ref,x_ipName=RAM_Controller,x_ipVersion=1.0,x_ipCoreRevision=1,x_ipLanguage=VHDL,x_ipSimLanguage=VHDL}";
   ATTRIBUTE IP_DEFINITION_SOURCE : STRING;
   ATTRIBUTE IP_DEFINITION_SOURCE OF design_dijkstra_ram_RAM_Controller_0_0_arch: ARCHITECTURE IS "module_ref";
+  ATTRIBUTE X_INTERFACE_INFO : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
+  ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_dijkstra_ram_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
 BEGIN
   U0 : RAM_Controller
     PORT MAP (
+      clk => clk,
       addr_ram_dijkstra => addr_ram_dijkstra,
       data_ram_dijkstra => data_ram_dijkstra,
       din_ram_dijkstra => din_ram_dijkstra,

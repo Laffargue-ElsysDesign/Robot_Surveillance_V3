@@ -227,7 +227,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_ACT_DCI_PERIPHERAL_FREQMHZ {10.158730} \
    CONFIG.PCW_ACT_ENET0_PERIPHERAL_FREQMHZ {125.000000} \
    CONFIG.PCW_ACT_ENET1_PERIPHERAL_FREQMHZ {10.000000} \
-   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {25.000000} \
+   CONFIG.PCW_ACT_FPGA0_PERIPHERAL_FREQMHZ {50.000000} \
    CONFIG.PCW_ACT_FPGA1_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA2_PERIPHERAL_FREQMHZ {10.000000} \
    CONFIG.PCW_ACT_FPGA3_PERIPHERAL_FREQMHZ {10.000000} \
@@ -269,7 +269,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_CAN_PERIPHERAL_DIVISOR1 {1} \
    CONFIG.PCW_CAN_PERIPHERAL_FREQMHZ {100} \
    CONFIG.PCW_CAN_PERIPHERAL_VALID {0} \
-   CONFIG.PCW_CLK0_FREQ {25000000} \
+   CONFIG.PCW_CLK0_FREQ {50000000} \
    CONFIG.PCW_CLK1_FREQ {10000000} \
    CONFIG.PCW_CLK2_FREQ {10000000} \
    CONFIG.PCW_CLK3_FREQ {10000000} \
@@ -392,8 +392,8 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_EN_USB1 {0} \
    CONFIG.PCW_EN_WDT {0} \
    CONFIG.PCW_FCLK0_PERIPHERAL_CLKSRC {IO PLL} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {8} \
-   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {5} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR0 {5} \
+   CONFIG.PCW_FCLK0_PERIPHERAL_DIVISOR1 {4} \
    CONFIG.PCW_FCLK1_PERIPHERAL_CLKSRC {IO PLL} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR0 {1} \
    CONFIG.PCW_FCLK1_PERIPHERAL_DIVISOR1 {1} \
@@ -407,7 +407,7 @@ proc create_root_design { parentCell } {
    CONFIG.PCW_FCLK_CLK1_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK2_BUF {FALSE} \
    CONFIG.PCW_FCLK_CLK3_BUF {FALSE} \
-   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {25} \
+   CONFIG.PCW_FPGA0_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA1_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA2_PERIPHERAL_FREQMHZ {50} \
    CONFIG.PCW_FPGA3_PERIPHERAL_FREQMHZ {50} \
@@ -1043,7 +1043,7 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RAM_Controller_0_en_ram [get_bd_pins RAM_Controller_0/en_ram] [get_bd_pins blk_mem_gen_0/enb]
   connect_bd_net -net RAM_Controller_0_we_ram [get_bd_pins RAM_Controller_0/we_ram] [get_bd_pins blk_mem_gen_0/web]
   connect_bd_net -net blk_mem_gen_0_doutb [get_bd_pins RAM_Controller_0/data_ram] [get_bd_pins blk_mem_gen_0/doutb]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Dijkstra_algorithm_0/s00_axi_aclk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Dijkstra_algorithm_0/s00_axi_aclk] [get_bd_pins RAM_Controller_0/clk] [get_bd_pins axi_bram_ctrl_0/s_axi_aclk] [get_bd_pins blk_mem_gen_0/clkb] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
   connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins Dijkstra_algorithm_0/s00_axi_aresetn] [get_bd_pins axi_bram_ctrl_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
 

@@ -7,8 +7,7 @@
       "name": "design_TOP_Dijkstra",
       "rev_ctrl_bd_flag": "RevCtrlBdOff",
       "synth_flow_mode": "Hierarchical",
-      "tool_version": "2020.2",
-      "validated": "true"
+      "tool_version": "2020.2"
     },
     "design_tree": {
       "blk_mem_gen_0": "",
@@ -22,29 +21,7 @@
     "ports": {
       "clk": {
         "type": "clk",
-        "direction": "I",
-        "parameters": {
-          "CLK_DOMAIN": {
-            "value": "design_TOP_Dijkstra_clk",
-            "value_src": "default"
-          },
-          "FREQ_HZ": {
-            "value": "100000000",
-            "value_src": "default"
-          },
-          "FREQ_TOLERANCE_HZ": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "PHASE": {
-            "value": "0.000",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       },
       "en": {
         "direction": "I"
@@ -54,17 +31,7 @@
       },
       "rst_n": {
         "type": "rst",
-        "direction": "I",
-        "parameters": {
-          "INSERT_VIP": {
-            "value": "0",
-            "value_src": "default"
-          },
-          "POLARITY": {
-            "value": "ACTIVE_LOW",
-            "value_src": "default"
-          }
-        }
+        "direction": "I"
       }
     },
     "components": {
@@ -273,21 +240,7 @@
         "ports": {
           "clk": {
             "type": "clk",
-            "direction": "I",
-            "parameters": {
-              "FREQ_HZ": {
-                "value": "50000000",
-                "value_src": "ip_prop"
-              },
-              "PHASE": {
-                "value": "0.0",
-                "value_src": "ip_prop"
-              },
-              "CLK_DOMAIN": {
-                "value": "/clk_wiz_0_clk_out1",
-                "value_src": "ip_prop"
-              }
-            }
+            "direction": "I"
           },
           "rst_n": {
             "type": "rst",
@@ -354,8 +307,8 @@
       "en_0_1": {
         "ports": [
           "en",
-          "TOP_dijkstra_0/en",
-          "ila_0/probe7"
+          "ila_0/probe7",
+          "TOP_dijkstra_0/en"
         ]
       },
       "TOP_dijkstra_0_flag_finished": {
@@ -416,8 +369,8 @@
       "blk_mem_gen_0_douta": {
         "ports": [
           "blk_mem_gen_0/douta",
-          "TOP_dijkstra_0/data_ram_ext",
-          "ila_0/probe8"
+          "ila_0/probe8",
+          "TOP_dijkstra_0/data_ram_ext"
         ]
       },
       "xlconstant_2_dout": {

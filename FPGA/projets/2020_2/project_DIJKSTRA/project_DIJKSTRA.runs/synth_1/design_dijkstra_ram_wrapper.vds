@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Fri Jun 10 16:01:11 2022
-# Process ID: 20136
+# Start of session at: Mon Jun 13 11:56:51 2022
+# Process ID: 27892
 # Current directory: D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1
 # Command line: vivado.exe -log design_dijkstra_ram_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_ram_wrapper.tcl
 # Log file: D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/design_dijkstra_ram_wrapper.vds
@@ -13,7 +13,6 @@ source design_dijkstra_ram_wrapper.tcl -notrace
 INFO: [IP_Flow 19-234] Refreshing IP repositories
 INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/ip_repo/Dijkstra_algorithm_1.0'.
 INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
-add_files: Time (s): cpu = 00:00:02 ; elapsed = 00:00:05 . Memory (MB): peak = 1126.785 ; gain = 0.000
 Command: synth_design -top design_dijkstra_ram_wrapper -part xc7z020clg400-1
 Starting synth_design
 Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
@@ -21,58 +20,56 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 22708
+INFO: [Synth 8-7075] Helper process launched with PID 21264
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1193.707 ; gain = 66.922
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1195.777 ; gain = 69.133
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_wrapper' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:40]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram' declared at 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1121' bound to instance 'design_dijkstra_ram_i' of component 'design_dijkstra_ram' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:67]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_wrapper' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:40]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram' declared at 'd:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1121' bound to instance 'design_dijkstra_ram_i' of component 'design_dijkstra_ram' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:67]
 INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1151]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_Dijkstra_algorithm_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_Dijkstra_algorithm_0_0_stub.vhdl:5' bound to instance 'Dijkstra_algorithm_0' of component 'design_dijkstra_ram_Dijkstra_algorithm_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1488]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_Dijkstra_algorithm_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_Dijkstra_algorithm_0_0_stub.vhdl:38]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_RAM_Controller_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_RAM_Controller_0_0_stub.vhdl:5' bound to instance 'RAM_Controller_0' of component 'design_dijkstra_ram_RAM_Controller_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1518]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_RAM_Controller_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_RAM_Controller_0_0_stub.vhdl:22]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_axi_bram_ctrl_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_dijkstra_ram_axi_bram_ctrl_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1532]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_axi_bram_ctrl_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_axi_bram_ctrl_0_0_stub.vhdl:39]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_blk_mem_gen_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'design_dijkstra_ram_blk_mem_gen_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1563]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_blk_mem_gen_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_blk_mem_gen_0_0_stub.vhdl:25]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_processing_system7_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_dijkstra_ram_processing_system7_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1584]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_processing_system7_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_Dijkstra_algorithm_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_Dijkstra_algorithm_0_0_stub.vhdl:5' bound to instance 'Dijkstra_algorithm_0' of component 'design_dijkstra_ram_Dijkstra_algorithm_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1489]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_Dijkstra_algorithm_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_Dijkstra_algorithm_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_RAM_Controller_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_RAM_Controller_0_0_stub.vhdl:5' bound to instance 'RAM_Controller_0' of component 'design_dijkstra_ram_RAM_Controller_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1519]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_RAM_Controller_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_RAM_Controller_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_axi_bram_ctrl_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_axi_bram_ctrl_0_0_stub.vhdl:5' bound to instance 'axi_bram_ctrl_0' of component 'design_dijkstra_ram_axi_bram_ctrl_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1534]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_axi_bram_ctrl_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_axi_bram_ctrl_0_0_stub.vhdl:39]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_blk_mem_gen_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_blk_mem_gen_0_0_stub.vhdl:5' bound to instance 'blk_mem_gen_0' of component 'design_dijkstra_ram_blk_mem_gen_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1565]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_blk_mem_gen_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_blk_mem_gen_0_0_stub.vhdl:25]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_processing_system7_0_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_dijkstra_ram_processing_system7_0_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1583]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_processing_system7_0_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_processing_system7_0_0_stub.vhdl:76]
 INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_ps7_0_axi_periph_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:641]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_1W1MU55' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_1W1MU55' (1#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:61]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_15OLHZ1' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:172]
 INFO: [Synth 8-256] done synthesizing module 'm01_couplers_imp_15OLHZ1' (2#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:172]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_KKWVAF' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:302]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_auto_pc_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_dijkstra_ram_auto_pc_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:485]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_auto_pc_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_auto_pc_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_dijkstra_ram_auto_pc_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:485]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_auto_pc_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_KKWVAF' (3#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:302]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_xbar_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_dijkstra_ram_xbar_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1054]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_xbar_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_xbar_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_dijkstra_ram_xbar_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1054]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_xbar_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_xbar_0_stub.vhdl:51]
 INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_ram_ps7_0_axi_periph_0' (4#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:641]
-INFO: [Synth 8-3491] module 'design_dijkstra_ram_rst_ps7_0_50M_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_dijkstra_ram_rst_ps7_0_50M_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1739]
-INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_rst_ps7_0_50M_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-20136-D-14JM0W2/realtime/design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_dijkstra_ram_rst_ps7_0_50M_0' declared at 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_dijkstra_ram_rst_ps7_0_50M_0' [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1738]
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_ram_rst_ps7_0_50M_0' [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/.Xil/Vivado-27892-D-14JM0W2/realtime/design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl:21]
 INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_ram' (5#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/synth/design_dijkstra_ram.vhd:1151]
-INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_ram_wrapper' (6#1) [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:40]
+INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_ram_wrapper' (6#1) [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/hdl/design_dijkstra_ram_wrapper.vhd:40]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1252.027 ; gain = 125.242
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.078 ; gain = 128.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.953 ; gain = 143.168
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.078 ; gain = 128.434
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1269.953 ; gain = 143.168
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1255.078 ; gain = 128.434
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.026 . Memory (MB): peak = 1269.953 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1255.078 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
 Initializing timing engine
-Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_axi_Dijkstra_algorithm_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/Dijkstra_algorithm_0'
-Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_axi_Dijkstra_algorithm_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/Dijkstra_algorithm_0'
 Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_blk_mem_gen_0_0/design_dijkstra_ram_blk_mem_gen_0_0/design_dijkstra_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/blk_mem_gen_0'
 Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_blk_mem_gen_0_0/design_dijkstra_ram_blk_mem_gen_0_0/design_dijkstra_ram_blk_mem_gen_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/blk_mem_gen_0'
 Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_processing_system7_0_0/design_dijkstra_ram_processing_system7_0_0/design_axi_processing_system7_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/processing_system7_0'
@@ -81,32 +78,34 @@ Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/source
 Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_xbar_0/design_dijkstra_ram_xbar_0/design_dijkstra_ram_xbar_0_in_context.xdc] for cell 'design_dijkstra_ram_i/ps7_0_axi_periph/xbar'
 Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0/design_axi_auto_pc_0_in_context.xdc] for cell 'design_dijkstra_ram_i/ps7_0_axi_periph/s00_couplers/auto_pc'
 Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0/design_axi_auto_pc_0_in_context.xdc] for cell 'design_dijkstra_ram_i/ps7_0_axi_periph/s00_couplers/auto_pc'
-Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0/design_axi_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_dijkstra_ram_i/rst_ps7_0_50M'
-Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0/design_axi_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_dijkstra_ram_i/rst_ps7_0_50M'
 Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_bram_ctrl_0_0/design_dijkstra_ram_axi_bram_ctrl_0_0/design_dijkstra_ram_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/axi_bram_ctrl_0'
 Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_bram_ctrl_0_0/design_dijkstra_ram_axi_bram_ctrl_0_0/design_dijkstra_ram_axi_bram_ctrl_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/axi_bram_ctrl_0'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0/design_axi_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_dijkstra_ram_i/rst_ps7_0_50M'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0/design_axi_rst_ps7_0_50M_0_in_context.xdc] for cell 'design_dijkstra_ram_i/rst_ps7_0_50M'
 Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/RAM_Controller_0'
 Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/RAM_Controller_0'
+Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/Dijkstra_algorithm_0'
+Finished Parsing XDC File [d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0_in_context.xdc] for cell 'design_dijkstra_ram_i/Dijkstra_algorithm_0'
 Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
 Finished Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
 Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1285.121 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1279.695 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1285.121 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1279.695 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1285.121 ; gain = 158.336
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1286.910 ; gain = 160.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1285.121 ; gain = 158.336
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1286.910 ; gain = 160.266
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -372,20 +371,20 @@ Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ps_porb. (constrain
 Applied set_property IO_BUFFER_TYPE = NONE for FIXED_IO_0_ps_srstb. (constraint file  d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_processing_system7_0_0/design_dijkstra_ram_processing_system7_0_0/design_axi_processing_system7_0_0_in_context.xdc, line 260).
 Applied set_property CLOCK_BUFFER_TYPE = NONE for FIXED_IO_0_ps_srstb. (constraint file  d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_processing_system7_0_0/design_dijkstra_ram_processing_system7_0_0/design_axi_processing_system7_0_0_in_context.xdc, line 261).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/Dijkstra_algorithm_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/blk_mem_gen_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/processing_system7_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/ps7_0_axi_periph/xbar. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/ps7_0_axi_periph/s00_couplers/auto_pc. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/ps7_0_axi_periph. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/axi_bram_ctrl_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/rst_ps7_0_50M. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/RAM_Controller_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_dijkstra_ram_i/Dijkstra_algorithm_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1285.121 ; gain = 158.336
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1286.930 ; gain = 160.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1285.121 ; gain = 158.336
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1286.930 ; gain = 160.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -407,25 +406,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1285.121 ; gain = 158.336
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1286.930 ; gain = 160.285
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1321.367 ; gain = 194.582
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1329.066 ; gain = 202.422
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1321.664 ; gain = 194.879
+Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1329.289 ; gain = 202.645
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1340.746 ; gain = 213.961
+Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1348.410 ; gain = 221.766
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -443,37 +442,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -507,23 +506,25 @@ Report Cell Usage:
 |8     |design_dijkstra_ram_xbar_0_bbox                 |     1|
 +------+------------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1354.430 ; gain = 227.785
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:20 . Memory (MB): peak = 1347.535 ; gain = 205.582
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1347.535 ; gain = 220.750
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:15 ; elapsed = 00:00:20 . Memory (MB): peak = 1354.430 ; gain = 201.586
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1354.430 ; gain = 227.785
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:01 ; elapsed = 00:00:00.027 . Memory (MB): peak = 1347.535 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1354.430 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1365.504 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1372.172 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 44 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:29 . Memory (MB): peak = 1369.484 ; gain = 242.699
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1378.176 ; gain = 251.531
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1/design_dijkstra_ram_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_dijkstra_ram_wrapper_utilization_synth.rpt -pb design_dijkstra_ram_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Fri Jun 10 16:01:54 2022...
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 13 11:57:34 2022...

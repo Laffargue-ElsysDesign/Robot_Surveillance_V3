@@ -1,7 +1,7 @@
 {
    "ActiveEmotionalView":"Default View",
    "Default View_ScaleFactor":"0.772406",
-   "Default View_TopLeft":"259,422",
+   "Default View_TopLeft":"259,109",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
@@ -23,8 +23,8 @@ preplace inst ila_0 -pg 1 -lvl 4 -x 1690 -y 750 -defaultsOSRD
 preplace inst UPDATE_RAM_0 -pg 1 -lvl 3 -x 1240 -y 200 -defaultsOSRD
 preplace inst ROM_0 -pg 1 -lvl 1 -x 270 -y 110 -defaultsOSRD
 preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 270 -y 230 -defaultsOSRD
-preplace inst NEAREST_NODE_0 -pg 1 -lvl 1 -x 270 -y 560 -defaultsOSRD
 preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 3 -x 1240 -y 740 -defaultsOSRD
+preplace inst NEAREST_NODE_0 -pg 1 -lvl 1 -x 270 -y 560 -defaultsOSRD
 preplace netloc rst_n_0_1 1 0 3 -10J 20 450 60 1000
 preplace netloc en_0_1 1 0 3 -10J 1010 NJ 1010 1000J
 preplace netloc NEAREST_NODE_0_flag_node 1 1 2 460 280 940J

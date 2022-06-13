@@ -80,6 +80,13 @@ printf("Read : 0x%08lx \n\r", *(baseaddr+1));
 *(baseaddr+0) = 0x00000000;
 printf("Wrote: 0x%08lx \n\r", *(baseaddr+0));
 
+// Disable DIJKSTRA algorithm
+*(baseaddr+0) = 0x000F0501;
+printf("Wrote: 0x%08lx \n\r", *(baseaddr+0));
+// Read flag on
+printf("Read : 0x%08lx \n\r", *(baseaddr+1));
+
+*(baseaddr+0) = 0x00000000;
 // Read flag off
 printf("Read : 0x%08lx \n\r", *(baseaddr+1));
 
