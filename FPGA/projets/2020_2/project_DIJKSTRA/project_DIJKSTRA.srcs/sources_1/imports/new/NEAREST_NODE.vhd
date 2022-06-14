@@ -43,6 +43,7 @@ Port (clk : in std_logic;
       en : in std_logic; 
       node_seen : in std_logic_vector(nb_node-1 downto 0); 
       start_node : in std_logic_vector(nb_bit_addr-1 downto 0);
+      end_node : in std_logic_vector(nb_bit_addr-1 downto 0);
       flag_node : out std_logic; 
       flag_end_write : out std_logic; 
       flag_read_path : in std_logic;
@@ -58,8 +59,7 @@ Port (clk : in std_logic;
       din_ram_ext : out std_logic_vector (15 downto 0);
       en_ram_ext : out std_logic;
       busy_ram_ext : in std_logic;
-      we_ram_ext : out std_logic;
-      led_n : out std_logic_vector(1 downto 0)
+      we_ram_ext : out std_logic
       );
 end NEAREST_NODE;
 
@@ -79,16 +79,16 @@ begin
         current_state <= idle; 
     elsif clk'event and clk = '1' then 
         current_state <= next_state; 
-        if current_state = read_ram then 
+        if current_state = read_ram then -- incrementation du compteur quand on fait des lectures dans la ram ou écritures dans la ram externe au dijkstra
             cpt_addr <= cpt_addr  + 1; 
-        elsif current_state = write_ram_ext and busy_ram_ext ='0' then 
+        elsif current_state = write_ram_ext then
             cpt_addr <= cpt_addr  + 1; 
         elsif current_state = compare or current_state = write_ram_ext then 
             cpt_addr <= cpt_addr;
         else 
             cpt_addr <= 0; 
         end if; 
-        if current_state = compare then 
+        if current_state = compare then  -- permet de savoir si on est au niveau de la première comparaison ou non 
             comp <= '0';
         elsif current_state = read_ram then
             comp <= comp;
@@ -96,7 +96,7 @@ begin
             comp <= '1'; 
         end if;
         --if current_state = nearest_node or next_state = nearest_node then 
-        if current_state = nearest_node or current_state = buff then
+        if current_state = nearest_node or current_state = buff then -- on met a jour la sortie next_node une fois la comparaison finie
             s_next_node <= comp_out; 
         elsif current_state = write_ram_ext then
             s_next_node <= data_ram; 
@@ -108,11 +108,10 @@ end process Sequentiel;
 
 next_node <= s_next_node;
 
-Combinatoire : process(current_state, node_seen, en, flag_read_path, cpt_addr, comp, data_ram, comp_out, s_next_node, start_node) -- définit les sorties et l'état suivant en fonction des entrées, et de l'état actuel 
+Combinatoire : process(current_state, node_seen, en, flag_read_path, cpt_addr, comp, data_ram, comp_out, s_next_node, start_node, busy_ram_ext) -- définit les sorties et l'état suivant en fonction des entrées, et de l'état actuel 
 begin 
     case current_state is 
-        when idle =>
-        led_n <= "00";
+        when idle => -- etat d'attente en attendant qu'on allume le bloc 
             flag_node <= '0'; 
             flag_end_write <= '0'; 
             comp_in1 <= (others=>'0'); 
@@ -130,8 +129,7 @@ begin
             end if;
             
             
-        when read_ram => 
-        led_n <= "01";
+        when read_ram => -- etat dans lequel on lit la ram
             flag_node <= '0'; 
             flag_end_write <= '0'; 
             addr_ram <= std_logic_vector(to_unsigned(cpt_addr,nb_bit_addr)); 
@@ -140,22 +138,21 @@ begin
             din_ram_ext  <= (others=>'0'); 
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            if node_seen(cpt_addr)='1' and cpt_addr >= 17 then
+            if node_seen(cpt_addr)='1' and cpt_addr >= 17 then -- si on a fait le tour de tous les noeuds, on termine la comparaison 
                 next_state <= buff;
-            elsif node_seen(cpt_addr)='1' then
+            elsif node_seen(cpt_addr)='1' then -- si noeud déjà vu, on passe au noeud suivant 
                 next_state <= read_ram;
             else
                 next_state <= compare;
             end if;
             comp_in1 <=(others=>'1');
-            if comp ='1' then 
+            if comp ='1' then -- si première compraison, on compare avec un bus à "1...1"
                 comp_in2 <= (others=>'1'); 
-            else 
+            else -- sinon on compare avec le noeud précédent 
                 comp_in2 <= comp_out; 
             end if; 
             
-        when compare => 
-        led_n <= "10";
+        when compare => -- etat de comparaison 
             flag_node <= '0'; 
             flag_end_write <= '0'; 
             comp_in1 <= data_ram(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr) & std_logic_vector(to_unsigned(cpt_addr-1,nb_bit_addr)); 
@@ -165,19 +162,18 @@ begin
             din_ram_ext  <= (others=>'0'); 
             en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            if comp ='1' then  
+            if comp ='1' then -- on garde les entrées du comparateur constantes
                 comp_in2 <= (others=>'1'); 
             else 
                 comp_in2 <= comp_out; 
             end if; 
-            if cpt_addr >= 17 then
+            if cpt_addr >= 17 then -- si on a vu tous les noeuds on passe à la fin de la comparaison 
                 next_state <= buff;
             else
                 next_state <= read_ram;
             end if;
             
-        when buff => 
-        led_n <= "00";
+        when buff => -- etat qui permet de garder la sortie du comparateur un coup de plus, pour éviter des glitch
             flag_node <= '0'; 
             flag_end_write <= '0'; 
             comp_in1 <= data_ram(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr) & std_logic_vector(to_unsigned(cpt_addr-1,nb_bit_addr)); 
@@ -190,41 +186,45 @@ begin
             comp_in2 <= comp_out;  
             next_state <= nearest_node;
             
-        when nearest_node => 
-        led_n <= "11";
+        when nearest_node => -- on met à jour la sortie next_node qui correspond au noeud le plus proche pas encore visité 
             flag_node <= '1'; 
             flag_end_write <= '0'; 
             addr_ram <= (others=>'0'); 
             en_ram  <= '0'; 
-            addr_ram_ext  <= (others=>'0'); 
+            addr_ram_ext  <= addr_ram_ex; 
             din_ram_ext  <= (others=>'0'); 
-            en_ram_ext  <= '0'; 
             we_ram_ext  <= '0';
-            if en = '0' then
+            if en = '0' then -- si le module est désactivé on retourne dans idle
                 next_state <= idle;
-            elsif flag_read_path = '1' then
-                next_state <= write_ram_ext;
-            else 
+                en_ram_ext  <= '0';
+            elsif flag_read_path = '1' then -- si le noeud le plus proche est le noeud d'arrivé, on va mettre à jour la ram 
+                en_ram_ext  <= '1';
+                if busy_ram_ext = '0' then
+                    next_state <= write_ram_ext;
+                else 
+                    next_state <= nearest_node;
+                end if; 
+            else -- on attend que le module soit désactivé ou qu'une ecriture soit demandée
+                en_ram_ext  <= '0';
                 next_state <= nearest_node;
-            end if;
+            end if; 
             comp_in1 <= data_ram(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr) & std_logic_vector(to_unsigned(cpt_addr-1,nb_bit_addr)); 
             comp_in2 <= comp_out; 
         
-        when write_ram_ext => 
-        led_n <= "01";
+        when write_ram_ext => -- met à jour la ram extérieure (permettant de communiquer avec le soft) avec le nouveau chemin 
             flag_node <= '0'; 
             comp_in1 <= (others=>'0'); 
             comp_in2 <= (others=>'0'); 
             en_ram  <= '1'; 
-            if cpt_addr = 0 then 
+            if cpt_addr = 0 then -- on met a jour la première adresse de la ram avec le noeud d'arrivé 
                 addr_ram_ext  <= std_logic_vector((unsigned(addr_ram_ex) + "00000001")); 
-                din_ram_ext  <= "00000000000" & s_next_node(nb_bit_addr-1 downto 0); 
+                din_ram_ext  <= "00000000000" & end_node(nb_bit_addr-1 downto 0); 
                 en_ram_ext  <= '1'; 
                 we_ram_ext  <= '1';
                 flag_end_write <= '0'; 
-                addr_ram <= s_next_node(nb_bit_addr-1 downto 0); 
+                addr_ram <= end_node(nb_bit_addr-1 downto 0); 
                 next_state <= write_ram_ext;
-            elsif data_ram(nb_bit_addr - 1 downto 0) = start_node then
+            elsif data_ram(nb_bit_addr - 1 downto 0) = start_node then -- on met à jour la dernière adresse ram avec le dernier noeud (le noeud de départ)
                 addr_ram_ext  <= std_logic_vector(unsigned(addr_ram_ex) + to_unsigned(cpt_addr+1, 8));
                 din_ram_ext  <= "00000000000" & data_ram(nb_bit_addr - 1 downto 0);
                 en_ram_ext  <= '1'; 
@@ -232,7 +232,7 @@ begin
                 flag_end_write <= '0'; 
                 addr_ram <= (others=>'0'); 
                 next_state <= write_nb_nodes;
-            else 
+            else -- on met à jour les adresses suivantes 
                 addr_ram_ext  <= std_logic_vector(unsigned(addr_ram_ex) + to_unsigned(cpt_addr+1, 8));
                 din_ram_ext  <= "00000000000" & data_ram(nb_bit_addr - 1 downto 0); 
                 en_ram_ext  <= '1'; 
@@ -242,8 +242,7 @@ begin
                 next_state <= write_ram_ext;
             end if;
         
-        when write_nb_nodes => 
-        led_n <= "01";
+        when write_nb_nodes => -- on ecrit le nombre de noeuds à lire afin que le soft sache combien de lectures ram effectuer avant de retourner en idle
             flag_node <= '0'; 
             comp_in1 <= (others=>'0'); 
             comp_in2 <= (others=>'0'); 
@@ -257,7 +256,6 @@ begin
             next_state <= idle;
 
         when others => next_state <= idle;
-        led_n <= "00";
             flag_node <= '0'; 
             flag_end_write <= '0'; 
             comp_in1 <= (others=>'0'); 

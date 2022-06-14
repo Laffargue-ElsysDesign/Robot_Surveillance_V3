@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Mon Jun 13 11:24:18 2022
+// Date        : Tue Jun 14 11:49:46 2022
 // Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode synth_stub
 //               d:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0_stub.v
@@ -14,10 +14,12 @@
 // The synthesis directives are for Synopsys Synplify support to prevent IO buffer insertion.
 // Please paste the declaration into a Verilog source file or add the file as an additional source.
 (* x_core_info = "RAM_Controller,Vivado 2020.2" *)
-module design_dijkstra_ram_RAM_Controller_0_0(clk, addr_ram_dijkstra, data_ram_dijkstra, 
-  din_ram_dijkstra, en_ram_dijkstra, busy_ram_dijkstra, we_ram_dijkstra, addr_ram, data_ram, 
-  din_ram, en_ram, we_ram)
-/* synthesis syn_black_box black_box_pad_pin="clk,addr_ram_dijkstra[7:0],data_ram_dijkstra[15:0],din_ram_dijkstra[15:0],en_ram_dijkstra,busy_ram_dijkstra,we_ram_dijkstra,addr_ram[31:0],data_ram[31:0],din_ram[31:0],en_ram,we_ram[3:0]" */;
+module design_dijkstra_ram_RAM_Controller_0_0(rst_n, clk, addr_ram_dijkstra, 
+  data_ram_dijkstra, din_ram_dijkstra, en_ram_dijkstra, busy_ram_dijkstra, we_ram_dijkstra, 
+  addr_ram_IMU, data_ram_IMU, din_ram_IMU, en_ram_IMU, busy_ram_IMU, we_ram_IMU, addr_ram, 
+  data_ram, din_ram, en_ram, we_ram)
+/* synthesis syn_black_box black_box_pad_pin="rst_n,clk,addr_ram_dijkstra[7:0],data_ram_dijkstra[15:0],din_ram_dijkstra[15:0],en_ram_dijkstra,busy_ram_dijkstra,we_ram_dijkstra,addr_ram_IMU[7:0],data_ram_IMU[15:0],din_ram_IMU[15:0],en_ram_IMU,busy_ram_IMU,we_ram_IMU,addr_ram[31:0],data_ram[31:0],din_ram[31:0],en_ram,we_ram[3:0]" */;
+  input rst_n;
   input clk;
   input [7:0]addr_ram_dijkstra;
   output [15:0]data_ram_dijkstra;
@@ -25,6 +27,12 @@ module design_dijkstra_ram_RAM_Controller_0_0(clk, addr_ram_dijkstra, data_ram_d
   input en_ram_dijkstra;
   output busy_ram_dijkstra;
   input we_ram_dijkstra;
+  input [7:0]addr_ram_IMU;
+  output [15:0]data_ram_IMU;
+  input [15:0]din_ram_IMU;
+  input en_ram_IMU;
+  output busy_ram_IMU;
+  input we_ram_IMU;
   output [31:0]addr_ram;
   input [31:0]data_ram;
   output [31:0]din_ram;

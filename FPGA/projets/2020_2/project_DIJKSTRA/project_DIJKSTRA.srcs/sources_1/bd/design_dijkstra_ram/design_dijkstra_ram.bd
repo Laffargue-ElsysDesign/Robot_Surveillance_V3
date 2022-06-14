@@ -23,8 +23,9 @@
       },
       "axi_bram_ctrl_0": "",
       "rst_ps7_0_50M": "",
+      "Dijkstra_algorithm_0": "",
       "RAM_Controller_0": "",
-      "Dijkstra_algorithm_0": ""
+      "xlconstant_0": ""
     },
     "interface_ports": {
       "DDR_0": {
@@ -2253,16 +2254,22 @@
           }
         },
         "interface_nets": {
+          "xbar_to_m01_couplers": {
+            "interface_ports": [
+              "xbar/M01_AXI",
+              "m01_couplers/S_AXI"
+            ]
+          },
           "m00_couplers_to_ps7_0_axi_periph": {
             "interface_ports": [
               "M00_AXI",
               "m00_couplers/M_AXI"
             ]
           },
-          "xbar_to_m00_couplers": {
+          "s00_couplers_to_xbar": {
             "interface_ports": [
-              "xbar/M00_AXI",
-              "m00_couplers/S_AXI"
+              "s00_couplers/M_AXI",
+              "xbar/S00_AXI"
             ]
           },
           "m01_couplers_to_ps7_0_axi_periph": {
@@ -2271,22 +2278,16 @@
               "m01_couplers/M_AXI"
             ]
           },
-          "xbar_to_m01_couplers": {
+          "xbar_to_m00_couplers": {
             "interface_ports": [
-              "xbar/M01_AXI",
-              "m01_couplers/S_AXI"
+              "xbar/M00_AXI",
+              "m00_couplers/S_AXI"
             ]
           },
           "ps7_0_axi_periph_to_s00_couplers": {
             "interface_ports": [
               "S00_AXI",
               "s00_couplers/S_AXI"
-            ]
-          },
-          "s00_couplers_to_xbar": {
-            "interface_ports": [
-              "s00_couplers/M_AXI",
-              "xbar/S00_AXI"
             ]
           }
         },
@@ -2347,6 +2348,12 @@
         "xci_path": "ip\\design_dijkstra_ram_rst_ps7_0_50M_0\\design_dijkstra_ram_rst_ps7_0_50M_0.xci",
         "inst_hier_path": "rst_ps7_0_50M"
       },
+      "Dijkstra_algorithm_0": {
+        "vlnv": "elsys-design.com:user:Dijkstra_algorithm:1.0",
+        "xci_name": "design_dijkstra_ram_Dijkstra_algorithm_0_0",
+        "xci_path": "ip\\design_dijkstra_ram_Dijkstra_algorithm_0_0\\design_dijkstra_ram_Dijkstra_algorithm_0_0.xci",
+        "inst_hier_path": "Dijkstra_algorithm_0"
+      },
       "RAM_Controller_0": {
         "vlnv": "xilinx.com:module_ref:RAM_Controller:1.0",
         "xci_name": "design_dijkstra_ram_RAM_Controller_0_0",
@@ -2358,6 +2365,16 @@
           "boundary_crc": "0x0"
         },
         "ports": {
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
           "clk": {
             "type": "clk",
             "direction": "I",
@@ -2396,6 +2413,30 @@
           "we_ram_dijkstra": {
             "direction": "I"
           },
+          "addr_ram_IMU": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_ram_IMU": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "din_ram_IMU": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "en_ram_IMU": {
+            "direction": "I"
+          },
+          "busy_ram_IMU": {
+            "direction": "O"
+          },
+          "we_ram_IMU": {
+            "direction": "I"
+          },
           "addr_ram": {
             "direction": "O",
             "left": "31",
@@ -2421,24 +2462,41 @@
           }
         }
       },
-      "Dijkstra_algorithm_0": {
-        "vlnv": "elsys-design.com:user:Dijkstra_algorithm:1.0",
-        "xci_name": "design_dijkstra_ram_Dijkstra_algorithm_0_0",
-        "xci_path": "ip\\design_dijkstra_ram_Dijkstra_algorithm_0_0\\design_dijkstra_ram_Dijkstra_algorithm_0_0.xci",
-        "inst_hier_path": "Dijkstra_algorithm_0"
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_dijkstra_ram_xlconstant_0_0",
+        "xci_path": "ip\\design_dijkstra_ram_xlconstant_0_0\\design_dijkstra_ram_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          }
+        }
       }
     },
     "interface_nets": {
-      "processing_system7_0_M_AXI_GP0": {
+      "processing_system7_0_DDR": {
         "interface_ports": [
-          "processing_system7_0/M_AXI_GP0",
-          "ps7_0_axi_periph/S00_AXI"
+          "DDR_0",
+          "processing_system7_0/DDR"
+        ]
+      },
+      "ps7_0_axi_periph_M00_AXI": {
+        "interface_ports": [
+          "ps7_0_axi_periph/M00_AXI",
+          "Dijkstra_algorithm_0/S00_AXI"
         ]
       },
       "axi_bram_ctrl_0_BRAM_PORTA": {
         "interface_ports": [
           "axi_bram_ctrl_0/BRAM_PORTA",
           "blk_mem_gen_0/BRAM_PORTA"
+        ]
+      },
+      "processing_system7_0_M_AXI_GP0": {
+        "interface_ports": [
+          "processing_system7_0/M_AXI_GP0",
+          "ps7_0_axi_periph/S00_AXI"
         ]
       },
       "ps7_0_axi_periph_M01_AXI": {
@@ -2451,18 +2509,6 @@
         "interface_ports": [
           "FIXED_IO_0",
           "processing_system7_0/FIXED_IO"
-        ]
-      },
-      "ps7_0_axi_periph_M00_AXI": {
-        "interface_ports": [
-          "ps7_0_axi_periph/M00_AXI",
-          "Dijkstra_algorithm_0/S00_AXI"
-        ]
-      },
-      "processing_system7_0_DDR": {
-        "interface_ports": [
-          "DDR_0",
-          "processing_system7_0/DDR"
         ]
       }
     },
@@ -2478,8 +2524,8 @@
           "ps7_0_axi_periph/M01_ACLK",
           "blk_mem_gen_0/clkb",
           "rst_ps7_0_50M/slowest_sync_clk",
-          "RAM_Controller_0/clk",
-          "Dijkstra_algorithm_0/s00_axi_aclk"
+          "Dijkstra_algorithm_0/s00_axi_aclk",
+          "RAM_Controller_0/clk"
         ]
       },
       "rst_ps7_0_50M_peripheral_aresetn": {
@@ -2490,7 +2536,8 @@
           "ps7_0_axi_periph/ARESETN",
           "axi_bram_ctrl_0/s_axi_aresetn",
           "ps7_0_axi_periph/M01_ARESETN",
-          "Dijkstra_algorithm_0/s00_axi_aresetn"
+          "Dijkstra_algorithm_0/s00_axi_aresetn",
+          "RAM_Controller_0/rst_n"
         ]
       },
       "Dijkstra_algorithm_0_addr_ram_ext": {
@@ -2563,6 +2610,12 @@
         "ports": [
           "processing_system7_0/FCLK_RESET0_N",
           "rst_ps7_0_50M/ext_reset_in"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "RAM_Controller_0/en_ram_IMU"
         ]
       }
     },

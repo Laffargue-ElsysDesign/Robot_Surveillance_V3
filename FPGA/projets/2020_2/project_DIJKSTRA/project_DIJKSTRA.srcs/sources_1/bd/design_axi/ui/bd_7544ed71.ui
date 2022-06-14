@@ -22,10 +22,10 @@ preplace netloc Dijkstra_algorithm_0_we_ram_ext 1 3 1 N 310
 preplace netloc processing_system7_0_FCLK_CLK0 1 0 4 20 130 450 350 770J 180 1100
 preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 140 430
 preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 460 340 780J
-preplace netloc processing_system7_0_DDR 1 1 4 NJ 380 NJ 380 NJ 380 NJ
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 760 120n
 preplace netloc processing_system7_0_FIXED_IO 1 1 4 NJ 400 NJ 400 NJ 400 NJ
 preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 440 60n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 760 120n
+preplace netloc processing_system7_0_DDR 1 1 4 NJ 380 NJ 380 NJ 380 NJ
 levelinfo -pg 1 0 230 610 940 1220 1340
 pagesize -pg 1 -db -bbox -sgen 0 0 1470 540
 "

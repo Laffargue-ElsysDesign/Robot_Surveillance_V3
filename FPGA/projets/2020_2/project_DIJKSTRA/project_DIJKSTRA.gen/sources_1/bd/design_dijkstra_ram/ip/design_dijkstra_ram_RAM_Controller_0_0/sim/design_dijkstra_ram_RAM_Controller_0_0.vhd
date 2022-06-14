@@ -55,6 +55,7 @@ USE ieee.numeric_std.ALL;
 
 ENTITY design_dijkstra_ram_RAM_Controller_0_0 IS
   PORT (
+    rst_n : IN STD_LOGIC;
     clk : IN STD_LOGIC;
     addr_ram_dijkstra : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
     data_ram_dijkstra : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -62,6 +63,12 @@ ENTITY design_dijkstra_ram_RAM_Controller_0_0 IS
     en_ram_dijkstra : IN STD_LOGIC;
     busy_ram_dijkstra : OUT STD_LOGIC;
     we_ram_dijkstra : IN STD_LOGIC;
+    addr_ram_IMU : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+    data_ram_IMU : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+    din_ram_IMU : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+    en_ram_IMU : IN STD_LOGIC;
+    busy_ram_IMU : OUT STD_LOGIC;
+    we_ram_IMU : IN STD_LOGIC;
     addr_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
     data_ram : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
     din_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -75,6 +82,7 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
   ATTRIBUTE DowngradeIPIdentifiedWarnings OF design_dijkstra_ram_RAM_Controller_0_0_arch: ARCHITECTURE IS "yes";
   COMPONENT RAM_Controller IS
     PORT (
+      rst_n : IN STD_LOGIC;
       clk : IN STD_LOGIC;
       addr_ram_dijkstra : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
       data_ram_dijkstra : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
@@ -82,6 +90,12 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
       en_ram_dijkstra : IN STD_LOGIC;
       busy_ram_dijkstra : OUT STD_LOGIC;
       we_ram_dijkstra : IN STD_LOGIC;
+      addr_ram_IMU : IN STD_LOGIC_VECTOR(7 DOWNTO 0);
+      data_ram_IMU : OUT STD_LOGIC_VECTOR(15 DOWNTO 0);
+      din_ram_IMU : IN STD_LOGIC_VECTOR(15 DOWNTO 0);
+      en_ram_IMU : IN STD_LOGIC;
+      busy_ram_IMU : OUT STD_LOGIC;
+      we_ram_IMU : IN STD_LOGIC;
       addr_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
       data_ram : IN STD_LOGIC_VECTOR(31 DOWNTO 0);
       din_ram : OUT STD_LOGIC_VECTOR(31 DOWNTO 0);
@@ -95,9 +109,12 @@ ARCHITECTURE design_dijkstra_ram_RAM_Controller_0_0_arch OF design_dijkstra_ram_
   ATTRIBUTE X_INTERFACE_PARAMETER : STRING;
   ATTRIBUTE X_INTERFACE_PARAMETER OF clk: SIGNAL IS "XIL_INTERFACENAME clk, FREQ_HZ 50000000, FREQ_TOLERANCE_HZ 0, PHASE 0.000, CLK_DOMAIN design_dijkstra_ram_processing_system7_0_0_FCLK_CLK0, INSERT_VIP 0";
   ATTRIBUTE X_INTERFACE_INFO OF clk: SIGNAL IS "xilinx.com:signal:clock:1.0 clk CLK";
+  ATTRIBUTE X_INTERFACE_PARAMETER OF rst_n: SIGNAL IS "XIL_INTERFACENAME rst_n, POLARITY ACTIVE_LOW, INSERT_VIP 0";
+  ATTRIBUTE X_INTERFACE_INFO OF rst_n: SIGNAL IS "xilinx.com:signal:reset:1.0 rst_n RST";
 BEGIN
   U0 : RAM_Controller
     PORT MAP (
+      rst_n => rst_n,
       clk => clk,
       addr_ram_dijkstra => addr_ram_dijkstra,
       data_ram_dijkstra => data_ram_dijkstra,
@@ -105,6 +122,12 @@ BEGIN
       en_ram_dijkstra => en_ram_dijkstra,
       busy_ram_dijkstra => busy_ram_dijkstra,
       we_ram_dijkstra => we_ram_dijkstra,
+      addr_ram_IMU => addr_ram_IMU,
+      data_ram_IMU => data_ram_IMU,
+      din_ram_IMU => din_ram_IMU,
+      en_ram_IMU => en_ram_IMU,
+      busy_ram_IMU => busy_ram_IMU,
+      we_ram_IMU => we_ram_IMU,
       addr_ram => addr_ram,
       data_ram => data_ram,
       din_ram => din_ram,

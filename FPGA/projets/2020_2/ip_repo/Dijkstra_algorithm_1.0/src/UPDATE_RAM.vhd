@@ -55,8 +55,7 @@ Port (clk : in std_logic;
       din_ram : out std_logic_vector (nb_bit_dist+nb_bit_addr-1 downto 0); 
       data_ram : in std_logic_vector (nb_bit_dist+nb_bit_addr-1 downto 0);
       en_ram : out std_logic;
-      we_ram : out std_logic;
-      led_u : out std_logic_vector(2 downto 0));
+      we_ram : out std_logic);
 end UPDATE_RAM;
 
 architecture Behavioral of UPDATE_RAM is
@@ -96,7 +95,6 @@ Combinatoire : process(current_state, en, data_rom, node, cpt_ram, data_ram, fla
 begin 
     case current_state is 
         when idle =>  -- attente d'activation de notre bloc update_ram, toutes les sorties restent à zéro
-        led_u <= "000";
             flag_RAM <= '0'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0');  
@@ -117,7 +115,6 @@ begin
             end if; 
             
         when init_ram => -- initialisation de la ram, on met tous les bits à '1' (dist max) sauf les bits du point de départ qu'on met à '0' (dist min)
-        led_u <= "001";
             flag_RAM <= '0'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0');  
@@ -140,7 +137,6 @@ begin
             end if; 
         
         when read_rom => -- on procède à la lecture de la rom a une adresse prédéfinie 
-        led_u <= "010";
             flag_RAM <= '0'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0');  
@@ -156,7 +152,6 @@ begin
 
         
         when read_ram => -- on procède à la lecture de la ram à partir du noeud lu dans la rom, qui correspond au noeud suivant accessible depuis le noeud actuel
-        led_u <= "011";
             flag_RAM <= '0'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0'); 
@@ -177,7 +172,6 @@ begin
             end if; 
         
         when compare => -- on compare la distance lue dans la rom+distance parcourue à la distance déjà stockée dans la ram 
-        led_u <= "100";
             flag_RAM <= '0';
             dist_rom <= std_logic_vector(unsigned(data_rom(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr))+ unsigned(node(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr)));
             comp_in1 <= dist_rom;  
@@ -192,7 +186,6 @@ begin
             --node_rom <= node_rom; 
             
         when write_ram => -- si la distance de la rom = distance parcourue est plus petite on stoke la nouvelle valeur et le noeud actuel dans la ram 
-        led_u <= "101";
             dist_rom <= std_logic_vector(unsigned(data_rom(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr))+ unsigned(node(nb_bit_dist+nb_bit_addr-1 downto nb_bit_addr)));
             flag_RAM <= '0'; 
             --node_rom <= node_rom;  ----------------------------------------------------------------------
@@ -218,7 +211,6 @@ begin
             end if; 
         
         when end_compare =>  -- permet d'envoyer un flag de fin de mise à jour de la ram 
-        led_u <= "110";
             flag_RAM <= '1'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0');  
@@ -233,7 +225,6 @@ begin
             next_state <= idle;
         
         when others => next_state <= idle;
-        led_u <= "111";
             flag_RAM <= '0'; 
             comp_in1 <= (others=>'0');  
             comp_in2 <= (others=>'0');  

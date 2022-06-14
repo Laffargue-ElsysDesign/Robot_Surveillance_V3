@@ -55,11 +55,11 @@ Port (clk : in std_logic;
       flag_read_path : out std_logic;
       next_node : in std_logic_vector(nb_bit_dist+nb_bit_addr-1 downto 0);
       o_start_node : out std_logic_vector(nb_bit_addr-1 downto 0); 
-      led_c : out std_logic_vector(1 downto 0)
+      o_end_node : out std_logic_vector(nb_bit_addr-1 downto 0)
       );
 end DIJKSTRA_CONTROLLER;
 
-architecture Behavioral of DIJKSTRA_CONTROLLER is
+architecture Behavioral of DIJKSTRA_CONTROLLER is -- controleur de notre algorithme dijkstra, permet d'activer ou désactiver les différents blocs et met à jour les noeuds visités
 
 type state is (idle, update_ram, nearest_node, read_path);
 signal current_state, next_state : state;
@@ -82,7 +82,7 @@ begin
     elsif rising_edge(Clk) then
         current_state <= next_state;
         if current_state = nearest_node then 
-            if flag_node = '1' and next_node(nb_bit_addr - 1 downto 0) /= end_node then
+            if flag_node = '1' and next_node(nb_bit_addr - 1 downto 0) /= end_node then -- on met à jour les noeuds déjà vus 
                 node_seen(to_integer(unsigned(next_node(nb_bit_addr - 1 downto 0)))) <= '1';
             end if;
         elsif current_state /= update_ram then
@@ -116,22 +116,22 @@ begin
 end process;
 
 o_start_node <= s_start_node;
+o_end_node <= s_end_node;
 
 process(current_state, en, flag_RAM, flag_node, s_start_node, s_next_node, next_node, flag_end_write, dist_zero, start_node, end_node, s_end_node, prev_flag_node, init_node) is
 begin 
     case current_state is
  
-        when idle =>
-        led_c <= "00";
+        when idle => -- etat d'attente, on attend que le dijkstra soit activé 
             flag_finished <= '0';
             en_NearestNode <= '0'; 
             flag_read_path <= '0';
-            if to_integer(unsigned(start_node)) >=17 or to_integer(unsigned(end_node)) >=17 then 
+            if to_integer(unsigned(start_node)) >=17 or to_integer(unsigned(end_node)) >=17 then -- si les noeuds donnés par le soft dépassent la valeur max, on ne démarre pas le dijkstra 
                 next_state <= idle;
                 flag_init <= '0';
                 en_UpdateRam <= '0';
                 node <= (others=>'0');
-            elsif en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then
+            elsif en = '1' and (s_start_node /= start_node or s_end_node /= end_node) then -- si on allume le dijkstra et que les noeuds sont bien différent des deriers noeuds visités on commence le calcul
             --if en = '1' then
                 next_state <= update_ram;
                 flag_init <= '1';
@@ -144,8 +144,7 @@ begin
                 node <= (others=>'0'); 
             end if;
  
-        when update_ram =>
-        led_c <= "01";
+        when update_ram => -- état qui permet d'activer le block update ram on attend le flag de fin avant de passer au block suivant 
             flag_finished <= '0';
             flag_read_path <= '0';
             flag_init <= '0';
@@ -164,8 +163,7 @@ begin
                 en_UpdateRam <= '1'; 
             end if;
             
-        when nearest_node => 
-        led_c <= "10";
+        when nearest_node => -- etat qui permet d'activer le block nearest_node, on attend la fin avant de vérifier si le noeud suivant est bien différent du noeud d'arrivé : si c'est le même, on demande de mettre à jour le chemin dans la ram ext
             flag_finished <= '0';
             if prev_flag_node = '1' and s_next_node(nb_bit_addr - 1 downto 0) = s_end_node then
                 next_state <= read_path;
@@ -190,9 +188,8 @@ begin
                 node <= (others=>'0');
             end if;
             
-        when read_path => 
-        led_c <= "11";
-            if flag_end_write = '1' then
+        when read_path => -- on demande au block nearest node d'écrire le trajet a effectuer sur la ram ext
+            if flag_end_write = '1' then -- si l'écriture est finie, on signale la fin de l'exécution de l'algo au soft. 
                 flag_finished <= '1';
                 en_NearestNode <= '0'; 
                 flag_read_path <= '0';

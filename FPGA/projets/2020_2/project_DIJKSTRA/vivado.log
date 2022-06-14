@@ -1684,3 +1684,5 @@ INFO: [Vivado 12-417] Running vitis
 INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
 current_project project_DIJKSTRA
 close_project
+exit
+INFO: [Common 17-206] Exiting Vivado at Mon Jun 13 15:03:47 2022...
