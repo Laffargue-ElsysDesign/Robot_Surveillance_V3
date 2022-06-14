@@ -20,3 +20,39 @@ domain active {zynq_fsbl}
 domain active {standalone_ps7_cortexa9_0}
 platform generate -quick
 platform generate
+platform active {design_dijkstra_ram_wrapper}
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform generate -domains 

@@ -62,45 +62,61 @@ int32_t i, nb_nodes;
 
 int main()
 {
-xil_printf("Debut Test\n\r");
-init_platform();
+	xil_printf("Debut Test\n\r");
+	init_platform();
 
-xil_printf("Dijkstra Test\n\r");
+	xil_printf("Dijkstra Test\n\r");
 
-// Read flag off
-printf("Read : 0x%08lx \n\r", *(addr_dijkstra+1));
+	// Read flag off
+	printf("Read : 0x%08lx \n\r", *(addr_dijkstra+1));
 
-// Write inputs to DIJKSTRA :  les autres bits inutilisés + 5 bits stop node + 3 bits inutilisés + 5 bits start_node + 7 bits inutilisés + 1 bit en
-// pour enable et envoyer les nodes : 0x000F0601 ==> 0F = noeud 15 d'arrivé, 06 noeud 6 de départ, 01 enable
-*(addr_dijkstra+0) = 0x00030c01;
-printf("Wrote stop node + start node + enable : 0x%08lx \n\r", *(addr_dijkstra+0));
+	// Write inputs to DIJKSTRA :  les autres bits inutilisés + 5 bits stop node + 3 bits inutilisés + 5 bits start_node + 7 bits inutilisés + 1 bit en
+	// pour enable et envoyer les nodes : 0x000F0601 ==> 0F = noeud 15 d'arrivé, 06 noeud 6 de départ, 01 enable
+	*(addr_dijkstra+0) = 0x00020d01;
+	printf("Wrote stop node + start node + enable : 0x%08lx \n\r", *(addr_dijkstra+0));
+	// Read flag finished
+	printf("Read value flag : 0x%08lx \n\r", *(addr_dijkstra+1));
 
-// Read flag finished
-printf("Read value flag : 0x%08lx \n\r", *(addr_dijkstra+1));
+	nb_nodes = *(addr_ram+10);
+	for (i=nb_nodes-1; i>=0; i--){
+		printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
+	};
 
-nb_nodes = *(addr_ram+10);
-for (i=0; i<nb_nodes; i++){
-	printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
-};
+	// Disable DIJKSTRA algorithm
+	*(addr_dijkstra+0) = 0x00000000;
 
-// Disable DIJKSTRA algorithm
-*(addr_dijkstra+0) = 0x00000000;
+	// New write
+	*(addr_dijkstra+0) = 0x00100501;
+	printf("Wrote stop node + start node + enable : 0x%08lx \n\r", *(addr_dijkstra+0));
+	// Read flag on
+	printf("Read value flag : 0x%08lx \n\r", *(addr_dijkstra+1));
 
-// New write
-*(addr_dijkstra+0) = 0x00100501;
-printf("Wrote stop node + start node + enable : 0x%08lx \n\r", *(addr_dijkstra+0));
-// Read flag on
-printf("Read value flag : 0x%08lx \n\r", *(addr_dijkstra+1));
+	nb_nodes = *(addr_ram+10);
+	for (i=nb_nodes-1; i>=0; i--){
+		printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
+	};
 
-nb_nodes = *(addr_ram+10);
-for (i=0; i<nb_nodes; i++){
-	printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
-};
+	*(addr_dijkstra+0) = 0x00000000;
+	// Read flag off
+	printf("Read flag off : 0x%08lx \n\r", *(addr_dijkstra+1));
 
-*(addr_dijkstra+0) = 0x00000000;
-// Read flag off
-printf("Read flag off : 0x%08lx \n\r", *(addr_dijkstra+1));
-printf("End of test\n\n\r");
+	// New write
+	*(addr_dijkstra+0) = 0x00100001;
+	printf("Wrote stop node + start node + enable : 0x%08lx \n\r", *(addr_dijkstra+0));
+	// Read flag on
+	printf("Read value flag : 0x%08lx \n\r", *(addr_dijkstra+1));
 
-return 0;
+	nb_nodes = *(addr_ram+10);
+	for (i=nb_nodes-1; i>=0; i--){
+		printf("Read ram address : 0x%08lx & read ram value 0x%08lx \n\r", addr_ram+11+i,*(addr_ram+11+i));
+	};
+
+	*(addr_dijkstra+0) = 0x00000000;
+	// Read flag off
+	printf("Read flag off : 0x%08lx \n\r", *(addr_dijkstra+1));
+
+	printf("End of test\n\n\r");
+
+	cleanup_platform();
+	return 0;
 }

@@ -1,7 +1,7 @@
 // Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 // --------------------------------------------------------------------------------
 // Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-// Date        : Mon Jun 13 13:54:08 2022
+// Date        : Tue Jun 14 15:58:48 2022
 // Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 // Command     : write_verilog -force -mode funcsim
 //               d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0_sim_netlist.v
@@ -92,6 +92,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0
   wire s00_axi_wready;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
+  wire we_ram_ext;
 
   assign addr_ram_ext[7] = \<const0> ;
   assign addr_ram_ext[6] = \<const0> ;
@@ -112,7 +113,6 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0
   assign s00_axi_bresp[0] = \<const0> ;
   assign s00_axi_rresp[1] = \<const0> ;
   assign s00_axi_rresp[0] = \<const0> ;
-  assign we_ram_ext = en_ram_ext;
   GND GND
        (.G(\<const0> ));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0 U0
@@ -136,53 +136,55 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .we_ram_ext(we_ram_ext));
 endmodule
 
 (* ORIG_REF_NAME = "DIJKSTRA_CONTROLLER" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
-   (\comp_out_reg[4] ,
+   (D,
+    \cpt_addr_reg[3] ,
+    \s_end_node_reg[4]_0 ,
+    \comp_out_reg[4] ,
     \s_next_node_reg[8]_0 ,
     \s_next_node_reg[6]_0 ,
-    s00_axi_aresetn_0,
     prev_flag_node_reg_0,
     \FSM_sequential_current_state_reg[1]_0 ,
-    \FSM_onehot_current_state_reg[1] ,
-    D,
-    \s_next_node_reg[5]_0 ,
     \FSM_sequential_current_state_reg[1]_1 ,
+    s00_axi_aresetn_0,
+    \data_out_a_reg[8] ,
+    \s_next_node_reg[5]_0 ,
+    \FSM_onehot_current_state_reg[3] ,
+    \FSM_onehot_current_state_reg[1] ,
     \FSM_onehot_current_state_reg[0] ,
-    \s_start_node_reg[3]_0 ,
-    \node_seen_reg[16]_0 ,
-    \node_seen_reg[16]_1 ,
+    \s_start_node_reg[4]_0 ,
     \cpt_reg[1] ,
     out,
-    \node_seen_reg[16]_2 ,
-    \FSM_onehot_current_state_reg[1]_0 ,
+    \node_seen_reg[16]_0 ,
+    \FSM_sequential_current_state_reg[0]_0 ,
     data0,
     \s_next_node_reg[5]_1 ,
     \s_next_node_reg[5]_2 ,
+    \FSM_onehot_current_state_reg[1]_0 ,
     \FSM_onehot_current_state_reg[1]_1 ,
     \FSM_onehot_current_state_reg[1]_2 ,
-    \FSM_onehot_current_state_reg[1]_3 ,
     \s_next_node_reg[0]_0 ,
     s00_axi_aresetn,
     Q,
     s00_axi_aclk,
     \memory_ram[16][4]_i_2_0 ,
-    \s_end_node_reg[4]_0 ,
+    \s_end_node_reg[4]_1 ,
     \memory_ram_reg[30][9] ,
     \memory_ram_reg[30][9]_0 ,
     \memory_ram_reg[30][9]_1 ,
-    \FSM_sequential_current_state_reg[0]_0 ,
+    \FSM_sequential_current_state_reg[0]_1 ,
     \comp_out_reg[3] ,
     \comp_out_reg[3]_0 ,
-    \FSM_sequential_current_state_reg[0]_1 ,
     \FSM_sequential_current_state_reg[0]_2 ,
-    \FSM_onehot_current_state_reg[2] ,
-    \FSM_onehot_current_state_reg[6] ,
+    \FSM_sequential_current_state_reg[0]_3 ,
+    \FSM_onehot_current_state_reg[5] ,
     \FSM_onehot_current_state[6]_i_5 ,
-    \FSM_onehot_current_state_reg[6]_0 ,
+    \FSM_onehot_current_state_reg[6] ,
     s_finished,
     \memory_ram_reg[16][0] ,
     UP_addr_ram,
@@ -197,7 +199,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     \memory_ram_reg[16][4] ,
     \memory_ram_reg[16][4]_0 ,
     \s_next_node_reg[9]_0 ,
-    \node_seen_reg[16]_3 ,
+    \node_seen_reg[16]_1 ,
+    \node_seen_reg[16]_2 ,
     \node_seen_reg[15]_0 ,
     \node_seen_reg[15]_1 ,
     \node_seen_reg[14]_0 ,
@@ -215,50 +218,50 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     \node_seen_reg[4]_0 ,
     \node_seen_reg[3]_0 ,
     \node_seen_reg[2]_0 ,
-    \node_seen_reg[1]_0 ,
-    \node_seen_reg[0]_0 );
+    \node_seen_reg[1]_0 );
+  output [0:0]D;
+  output \cpt_addr_reg[3] ;
+  output [4:0]\s_end_node_reg[4]_0 ;
   output \comp_out_reg[4] ;
   output \s_next_node_reg[8]_0 ;
   output \s_next_node_reg[6]_0 ;
-  output s00_axi_aresetn_0;
   output prev_flag_node_reg_0;
   output [1:0]\FSM_sequential_current_state_reg[1]_0 ;
-  output \FSM_onehot_current_state_reg[1] ;
-  output [3:0]D;
-  output \s_next_node_reg[5]_0 ;
   output \FSM_sequential_current_state_reg[1]_1 ;
+  output s00_axi_aresetn_0;
+  output [3:0]\data_out_a_reg[8] ;
+  output \s_next_node_reg[5]_0 ;
+  output \FSM_onehot_current_state_reg[3] ;
+  output \FSM_onehot_current_state_reg[1] ;
   output [0:0]\FSM_onehot_current_state_reg[0] ;
-  output \s_start_node_reg[3]_0 ;
-  output \node_seen_reg[16]_0 ;
-  output [0:0]\node_seen_reg[16]_1 ;
+  output [4:0]\s_start_node_reg[4]_0 ;
   output \cpt_reg[1] ;
   output [2:0]out;
-  output \node_seen_reg[16]_2 ;
-  output \FSM_onehot_current_state_reg[1]_0 ;
+  output \node_seen_reg[16]_0 ;
+  output \FSM_sequential_current_state_reg[0]_0 ;
   output [4:0]data0;
   output \s_next_node_reg[5]_1 ;
   output \s_next_node_reg[5]_2 ;
+  output \FSM_onehot_current_state_reg[1]_0 ;
   output \FSM_onehot_current_state_reg[1]_1 ;
   output \FSM_onehot_current_state_reg[1]_2 ;
-  output \FSM_onehot_current_state_reg[1]_3 ;
   output [4:0]\s_next_node_reg[0]_0 ;
   input s00_axi_aresetn;
-  input [1:0]Q;
+  input [2:0]Q;
   input s00_axi_aclk;
   input [4:0]\memory_ram[16][4]_i_2_0 ;
-  input [10:0]\s_end_node_reg[4]_0 ;
+  input [10:0]\s_end_node_reg[4]_1 ;
   input \memory_ram_reg[30][9] ;
   input [2:0]\memory_ram_reg[30][9]_0 ;
   input \memory_ram_reg[30][9]_1 ;
-  input [4:0]\FSM_sequential_current_state_reg[0]_0 ;
+  input [4:0]\FSM_sequential_current_state_reg[0]_1 ;
   input [4:0]\comp_out_reg[3] ;
   input \comp_out_reg[3]_0 ;
-  input \FSM_sequential_current_state_reg[0]_1 ;
   input \FSM_sequential_current_state_reg[0]_2 ;
-  input [4:0]\FSM_onehot_current_state_reg[2] ;
-  input [4:0]\FSM_onehot_current_state_reg[6] ;
+  input \FSM_sequential_current_state_reg[0]_3 ;
+  input [4:0]\FSM_onehot_current_state_reg[5] ;
   input [2:0]\FSM_onehot_current_state[6]_i_5 ;
-  input [4:0]\FSM_onehot_current_state_reg[6]_0 ;
+  input [4:0]\FSM_onehot_current_state_reg[6] ;
   input [0:0]s_finished;
   input \memory_ram_reg[16][0] ;
   input [0:0]UP_addr_ram;
@@ -273,7 +276,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   input \memory_ram_reg[16][4] ;
   input \memory_ram_reg[16][4]_0 ;
   input [9:0]\s_next_node_reg[9]_0 ;
-  input \node_seen_reg[16]_3 ;
+  input \node_seen_reg[16]_1 ;
+  input \node_seen_reg[16]_2 ;
   input \node_seen_reg[15]_0 ;
   input \node_seen_reg[15]_1 ;
   input \node_seen_reg[14]_0 ;
@@ -292,50 +296,46 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   input \node_seen_reg[3]_0 ;
   input \node_seen_reg[2]_0 ;
   input \node_seen_reg[1]_0 ;
-  input \node_seen_reg[0]_0 ;
 
-  wire [3:0]D;
-  wire \FSM_onehot_current_state[2]_i_3_n_0 ;
+  wire [0:0]D;
+  wire \FSM_onehot_current_state[5]_i_5_n_0 ;
+  wire \FSM_onehot_current_state[5]_i_6_n_0 ;
+  wire \FSM_onehot_current_state[5]_i_7_n_0 ;
+  wire \FSM_onehot_current_state[5]_i_8_n_0 ;
   wire \FSM_onehot_current_state[6]_i_10_n_0 ;
   wire \FSM_onehot_current_state[6]_i_11_n_0 ;
   wire \FSM_onehot_current_state[6]_i_12_n_0 ;
   wire [2:0]\FSM_onehot_current_state[6]_i_5 ;
-  wire \FSM_onehot_current_state[6]_i_6_n_0 ;
-  wire \FSM_onehot_current_state[6]_i_7_n_0 ;
-  wire \FSM_onehot_current_state[6]_i_8_n_0 ;
-  wire \FSM_onehot_current_state[6]_i_9__0_n_0 ;
   wire \FSM_onehot_current_state[6]_i_9_n_0 ;
   wire [0:0]\FSM_onehot_current_state_reg[0] ;
   wire \FSM_onehot_current_state_reg[1] ;
   wire \FSM_onehot_current_state_reg[1]_0 ;
   wire \FSM_onehot_current_state_reg[1]_1 ;
   wire \FSM_onehot_current_state_reg[1]_2 ;
-  wire \FSM_onehot_current_state_reg[1]_3 ;
-  wire [4:0]\FSM_onehot_current_state_reg[2] ;
+  wire \FSM_onehot_current_state_reg[3] ;
+  wire [4:0]\FSM_onehot_current_state_reg[5] ;
+  wire \FSM_onehot_current_state_reg[5]_i_3_n_0 ;
+  wire \FSM_onehot_current_state_reg[5]_i_4_n_0 ;
   wire [4:0]\FSM_onehot_current_state_reg[6] ;
-  wire [4:0]\FSM_onehot_current_state_reg[6]_0 ;
-  wire \FSM_onehot_current_state_reg[6]_i_4_n_0 ;
-  wire \FSM_onehot_current_state_reg[6]_i_5_n_0 ;
   wire \FSM_onehot_current_state_reg[6]_i_6_n_0 ;
   wire \FSM_onehot_current_state_reg[6]_i_7_n_0 ;
-  wire \FSM_sequential_current_state[0]_i_3_n_0 ;
+  wire \FSM_sequential_current_state[0]_i_5_n_0 ;
   wire \FSM_sequential_current_state[0]_i_6_n_0 ;
   wire \FSM_sequential_current_state[0]_i_7_n_0 ;
   wire \FSM_sequential_current_state[0]_i_8_n_0 ;
-  wire \FSM_sequential_current_state[1]_i_3_n_0 ;
-  wire [4:0]\FSM_sequential_current_state_reg[0]_0 ;
-  wire \FSM_sequential_current_state_reg[0]_1 ;
+  wire \FSM_sequential_current_state_reg[0]_0 ;
+  wire [4:0]\FSM_sequential_current_state_reg[0]_1 ;
   wire \FSM_sequential_current_state_reg[0]_2 ;
+  wire \FSM_sequential_current_state_reg[0]_3 ;
   wire [1:0]\FSM_sequential_current_state_reg[1]_0 ;
   wire \FSM_sequential_current_state_reg[1]_1 ;
-  wire [1:0]Q;
+  wire [2:0]Q;
   wire [0:0]UP_addr_ram;
   wire UP_we_ram;
   wire \comp_out[0]_i_2_n_0 ;
   wire \comp_out[0]_i_3_n_0 ;
   wire \comp_out[0]_i_4_n_0 ;
   wire \comp_out[0]_i_5_n_0 ;
-  wire \comp_out[0]_i_6_n_0 ;
   wire \comp_out[1]_i_2_n_0 ;
   wire \comp_out[2]_i_2_n_0 ;
   wire \comp_out[3]_i_2_n_0 ;
@@ -345,8 +345,12 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire [4:0]\comp_out_reg[3] ;
   wire \comp_out_reg[3]_0 ;
   wire \comp_out_reg[4] ;
+  wire \cpt_addr_reg[3] ;
   wire \cpt_reg[1] ;
   wire [4:0]data0;
+  wire [3:0]\data_out_a_reg[8] ;
+  wire en_ram_ext_INST_0_i_2_n_0;
+  wire en_ram_ext_INST_0_i_3_n_0;
   wire g0_b0_i_1_n_0;
   wire g0_b0_i_2_n_0;
   wire g0_b0_i_3_n_0;
@@ -393,7 +397,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire [2:0]\memory_ram_reg[30][9]_0 ;
   wire \memory_ram_reg[30][9]_1 ;
   wire [1:0]next_state__0;
-  wire [15:0]node_seen;
+  wire [16:0]node_seen;
   wire \node_seen[0]_i_1_n_0 ;
   wire \node_seen[10]_i_1_n_0 ;
   wire \node_seen[11]_i_1_n_0 ;
@@ -411,7 +415,6 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire \node_seen[7]_i_1_n_0 ;
   wire \node_seen[8]_i_1_n_0 ;
   wire \node_seen[9]_i_1_n_0 ;
-  wire \node_seen_reg[0]_0 ;
   wire \node_seen_reg[10]_0 ;
   wire \node_seen_reg[11]_0 ;
   wire \node_seen_reg[12]_0 ;
@@ -421,9 +424,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire \node_seen_reg[15]_0 ;
   wire \node_seen_reg[15]_1 ;
   wire \node_seen_reg[16]_0 ;
-  wire [0:0]\node_seen_reg[16]_1 ;
+  wire \node_seen_reg[16]_1 ;
   wire \node_seen_reg[16]_2 ;
-  wire \node_seen_reg[16]_3 ;
   wire \node_seen_reg[1]_0 ;
   wire \node_seen_reg[2]_0 ;
   wire \node_seen_reg[3]_0 ;
@@ -440,8 +442,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
   wire s00_axi_aresetn_0;
-  wire [4:0]s_end_node;
-  wire [10:0]\s_end_node_reg[4]_0 ;
+  wire [4:0]\s_end_node_reg[4]_0 ;
+  wire [10:0]\s_end_node_reg[4]_1 ;
   wire [0:0]s_finished;
   wire [9:0]s_next_node;
   wire s_next_node_0;
@@ -453,38 +455,18 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   wire \s_next_node_reg[8]_0 ;
   wire [9:0]\s_next_node_reg[9]_0 ;
   wire s_start_node;
-  wire \s_start_node_reg[3]_0 ;
-  wire [4:0]start_node;
+  wire [4:0]\s_start_node_reg[4]_0 ;
 
   LUT5 #(
     .INIT(32'hFF40FF44)) 
     \FSM_onehot_current_state[0]_i_1__0 
        (.I0(\FSM_sequential_current_state_reg[1]_1 ),
-        .I1(\FSM_sequential_current_state_reg[0]_0 [0]),
+        .I1(\FSM_sequential_current_state_reg[0]_1 [0]),
         .I2(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [4]),
+        .I3(\FSM_sequential_current_state_reg[0]_1 [4]),
         .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
         .O(\FSM_onehot_current_state_reg[0] ));
-  LUT5 #(
-    .INIT(32'h09000009)) 
-    \FSM_onehot_current_state[2]_i_2__0 
-       (.I0(start_node[3]),
-        .I1(\FSM_onehot_current_state_reg[2] [3]),
-        .I2(\FSM_onehot_current_state[2]_i_3_n_0 ),
-        .I3(\FSM_onehot_current_state_reg[2] [4]),
-        .I4(start_node[4]),
-        .O(\s_start_node_reg[3]_0 ));
-  LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
-    \FSM_onehot_current_state[2]_i_3 
-       (.I0(start_node[0]),
-        .I1(\FSM_onehot_current_state_reg[2] [0]),
-        .I2(\FSM_onehot_current_state_reg[2] [1]),
-        .I3(start_node[1]),
-        .I4(\FSM_onehot_current_state_reg[2] [2]),
-        .I5(start_node[2]),
-        .O(\FSM_onehot_current_state[2]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT5 #(
     .INIT(32'hB3BFBFBF)) 
     \FSM_onehot_current_state[3]_i_2 
@@ -492,16 +474,71 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I1(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I2(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I3(prev_flag_node),
-        .I4(\FSM_sequential_current_state[1]_i_3_n_0 ),
+        .I4(en_ram_ext_INST_0_i_2_n_0),
         .O(\FSM_onehot_current_state_reg[1] ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \FSM_onehot_current_state[5]_i_1 
+       (.I0(\cpt_addr_reg[3] ),
+        .I1(Q[2]),
+        .O(D));
+  LUT5 #(
+    .INIT(32'h00FF4747)) 
+    \FSM_onehot_current_state[5]_i_2 
+       (.I0(\FSM_onehot_current_state_reg[5]_i_3_n_0 ),
+        .I1(\FSM_onehot_current_state_reg[5] [3]),
+        .I2(\FSM_onehot_current_state_reg[5]_i_4_n_0 ),
+        .I3(node_seen[16]),
+        .I4(\FSM_onehot_current_state_reg[5] [4]),
+        .O(\cpt_addr_reg[3] ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \FSM_onehot_current_state[5]_i_5 
+       (.I0(node_seen[11]),
+        .I1(node_seen[10]),
+        .I2(\FSM_onehot_current_state_reg[5] [1]),
+        .I3(node_seen[9]),
+        .I4(\FSM_onehot_current_state_reg[5] [0]),
+        .I5(node_seen[8]),
+        .O(\FSM_onehot_current_state[5]_i_5_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \FSM_onehot_current_state[5]_i_6 
+       (.I0(node_seen[15]),
+        .I1(node_seen[14]),
+        .I2(\FSM_onehot_current_state_reg[5] [1]),
+        .I3(node_seen[13]),
+        .I4(\FSM_onehot_current_state_reg[5] [0]),
+        .I5(node_seen[12]),
+        .O(\FSM_onehot_current_state[5]_i_6_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \FSM_onehot_current_state[5]_i_7 
+       (.I0(node_seen[3]),
+        .I1(node_seen[2]),
+        .I2(\FSM_onehot_current_state_reg[5] [1]),
+        .I3(node_seen[1]),
+        .I4(\FSM_onehot_current_state_reg[5] [0]),
+        .I5(node_seen[0]),
+        .O(\FSM_onehot_current_state[5]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'hAFA0CFCFAFA0C0C0)) 
+    \FSM_onehot_current_state[5]_i_8 
+       (.I0(node_seen[7]),
+        .I1(node_seen[6]),
+        .I2(\FSM_onehot_current_state_reg[5] [1]),
+        .I3(node_seen[5]),
+        .I4(\FSM_onehot_current_state_reg[5] [0]),
+        .I5(node_seen[4]),
+        .O(\FSM_onehot_current_state[5]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \FSM_onehot_current_state[6]_i_10 
        (.I0(node_seen[15]),
         .I1(node_seen[14]),
-        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6] [1]),
         .I3(node_seen[13]),
-        .I4(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\FSM_onehot_current_state_reg[6] [0]),
         .I5(node_seen[12]),
         .O(\FSM_onehot_current_state[6]_i_10_n_0 ));
   LUT6 #(
@@ -509,9 +546,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     \FSM_onehot_current_state[6]_i_11 
        (.I0(node_seen[3]),
         .I1(node_seen[2]),
-        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6] [1]),
         .I3(node_seen[1]),
-        .I4(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\FSM_onehot_current_state_reg[6] [0]),
         .I5(node_seen[0]),
         .O(\FSM_onehot_current_state[6]_i_11_n_0 ));
   LUT6 #(
@@ -519,62 +556,23 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     \FSM_onehot_current_state[6]_i_12 
        (.I0(node_seen[7]),
         .I1(node_seen[6]),
-        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6] [1]),
         .I3(node_seen[5]),
-        .I4(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\FSM_onehot_current_state_reg[6] [0]),
         .I5(node_seen[4]),
         .O(\FSM_onehot_current_state[6]_i_12_n_0 ));
   LUT5 #(
     .INIT(32'hB8BBB888)) 
-    \FSM_onehot_current_state[6]_i_2 
-       (.I0(\node_seen_reg[16]_1 ),
-        .I1(\FSM_onehot_current_state_reg[6] [4]),
-        .I2(\FSM_onehot_current_state_reg[6]_i_4_n_0 ),
-        .I3(\FSM_onehot_current_state_reg[6] [3]),
-        .I4(\FSM_onehot_current_state_reg[6]_i_5_n_0 ),
-        .O(\node_seen_reg[16]_0 ));
-  LUT5 #(
-    .INIT(32'hB8BBB888)) 
     \FSM_onehot_current_state[6]_i_2__0 
-       (.I0(\node_seen_reg[16]_1 ),
-        .I1(\FSM_onehot_current_state_reg[6]_0 [4]),
+       (.I0(node_seen[16]),
+        .I1(\FSM_onehot_current_state_reg[6] [4]),
         .I2(\FSM_onehot_current_state_reg[6]_i_6_n_0 ),
-        .I3(\FSM_onehot_current_state_reg[6]_0 [3]),
+        .I3(\FSM_onehot_current_state_reg[6] [3]),
         .I4(\FSM_onehot_current_state_reg[6]_i_7_n_0 ),
-        .O(\node_seen_reg[16]_2 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \FSM_onehot_current_state[6]_i_6 
-       (.I0(node_seen[11]),
-        .I1(node_seen[10]),
-        .I2(\FSM_onehot_current_state_reg[6] [1]),
-        .I3(node_seen[9]),
-        .I4(\FSM_onehot_current_state_reg[6] [0]),
-        .I5(node_seen[8]),
-        .O(\FSM_onehot_current_state[6]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \FSM_onehot_current_state[6]_i_7 
-       (.I0(node_seen[15]),
-        .I1(node_seen[14]),
-        .I2(\FSM_onehot_current_state_reg[6] [1]),
-        .I3(node_seen[13]),
-        .I4(\FSM_onehot_current_state_reg[6] [0]),
-        .I5(node_seen[12]),
-        .O(\FSM_onehot_current_state[6]_i_7_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \FSM_onehot_current_state[6]_i_8 
-       (.I0(node_seen[3]),
-        .I1(node_seen[2]),
-        .I2(\FSM_onehot_current_state_reg[6] [1]),
-        .I3(node_seen[1]),
-        .I4(\FSM_onehot_current_state_reg[6] [0]),
-        .I5(node_seen[0]),
-        .O(\FSM_onehot_current_state[6]_i_8_n_0 ));
+        .O(\node_seen_reg[16]_0 ));
   LUT6 #(
     .INIT(64'hD4DD0000FFFFD4DD)) 
-    \FSM_onehot_current_state[6]_i_8__0 
+    \FSM_onehot_current_state[6]_i_8 
        (.I0(out[1]),
         .I1(\FSM_onehot_current_state[6]_i_5 [1]),
         .I2(\FSM_onehot_current_state[6]_i_5 [0]),
@@ -585,43 +583,33 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \FSM_onehot_current_state[6]_i_9 
-       (.I0(node_seen[7]),
-        .I1(node_seen[6]),
-        .I2(\FSM_onehot_current_state_reg[6] [1]),
-        .I3(node_seen[5]),
-        .I4(\FSM_onehot_current_state_reg[6] [0]),
-        .I5(node_seen[4]),
-        .O(\FSM_onehot_current_state[6]_i_9_n_0 ));
-  LUT6 #(
-    .INIT(64'hAFA0CFCFAFA0C0C0)) 
-    \FSM_onehot_current_state[6]_i_9__0 
        (.I0(node_seen[11]),
         .I1(node_seen[10]),
-        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6] [1]),
         .I3(node_seen[9]),
-        .I4(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\FSM_onehot_current_state_reg[6] [0]),
         .I5(node_seen[8]),
-        .O(\FSM_onehot_current_state[6]_i_9__0_n_0 ));
-  MUXF7 \FSM_onehot_current_state_reg[6]_i_4 
-       (.I0(\FSM_onehot_current_state[6]_i_6_n_0 ),
-        .I1(\FSM_onehot_current_state[6]_i_7_n_0 ),
-        .O(\FSM_onehot_current_state_reg[6]_i_4_n_0 ),
-        .S(\FSM_onehot_current_state_reg[6] [2]));
-  MUXF7 \FSM_onehot_current_state_reg[6]_i_5 
-       (.I0(\FSM_onehot_current_state[6]_i_8_n_0 ),
-        .I1(\FSM_onehot_current_state[6]_i_9_n_0 ),
-        .O(\FSM_onehot_current_state_reg[6]_i_5_n_0 ),
-        .S(\FSM_onehot_current_state_reg[6] [2]));
+        .O(\FSM_onehot_current_state[6]_i_9_n_0 ));
+  MUXF7 \FSM_onehot_current_state_reg[5]_i_3 
+       (.I0(\FSM_onehot_current_state[5]_i_5_n_0 ),
+        .I1(\FSM_onehot_current_state[5]_i_6_n_0 ),
+        .O(\FSM_onehot_current_state_reg[5]_i_3_n_0 ),
+        .S(\FSM_onehot_current_state_reg[5] [2]));
+  MUXF7 \FSM_onehot_current_state_reg[5]_i_4 
+       (.I0(\FSM_onehot_current_state[5]_i_7_n_0 ),
+        .I1(\FSM_onehot_current_state[5]_i_8_n_0 ),
+        .O(\FSM_onehot_current_state_reg[5]_i_4_n_0 ),
+        .S(\FSM_onehot_current_state_reg[5] [2]));
   MUXF7 \FSM_onehot_current_state_reg[6]_i_6 
-       (.I0(\FSM_onehot_current_state[6]_i_9__0_n_0 ),
+       (.I0(\FSM_onehot_current_state[6]_i_9_n_0 ),
         .I1(\FSM_onehot_current_state[6]_i_10_n_0 ),
         .O(\FSM_onehot_current_state_reg[6]_i_6_n_0 ),
-        .S(\FSM_onehot_current_state_reg[6]_0 [2]));
+        .S(\FSM_onehot_current_state_reg[6] [2]));
   MUXF7 \FSM_onehot_current_state_reg[6]_i_7 
        (.I0(\FSM_onehot_current_state[6]_i_11_n_0 ),
         .I1(\FSM_onehot_current_state[6]_i_12_n_0 ),
         .O(\FSM_onehot_current_state_reg[6]_i_7_n_0 ),
-        .S(\FSM_onehot_current_state_reg[6]_0 [2]));
+        .S(\FSM_onehot_current_state_reg[6] [2]));
   LUT6 #(
     .INIT(64'hBFAABFEEAEAAAEEE)) 
     \FSM_sequential_current_state[0]_i_1 
@@ -629,57 +617,57 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I1(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I2(Q[0]),
         .I3(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [4]),
+        .I4(\FSM_sequential_current_state_reg[0]_1 [4]),
         .I5(prev_flag_node),
         .O(next_state__0[0]));
   LUT6 #(
-    .INIT(64'h0000000000010000)) 
+    .INIT(64'h0000000001000000)) 
     \FSM_sequential_current_state[0]_i_2 
-       (.I0(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I1(\FSM_sequential_current_state_reg[0]_1 ),
-        .I2(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I3(\FSM_sequential_current_state_reg[1]_0 [0]),
-        .I4(\s_end_node_reg[4]_0 [0]),
-        .I5(\FSM_sequential_current_state_reg[0]_2 ),
+       (.I0(\FSM_sequential_current_state_reg[0]_2 ),
+        .I1(\FSM_sequential_current_state_reg[1]_0 [1]),
+        .I2(\FSM_sequential_current_state_reg[1]_0 [0]),
+        .I3(\s_end_node_reg[4]_1 [0]),
+        .I4(\FSM_sequential_current_state_reg[0]_3 ),
+        .I5(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .O(\FSM_sequential_current_state_reg[1]_1 ));
   LUT6 #(
     .INIT(64'h0000000009000009)) 
-    \FSM_sequential_current_state[0]_i_3 
-       (.I0(s_end_node[4]),
-        .I1(\s_end_node_reg[4]_0 [10]),
+    \FSM_sequential_current_state[0]_i_5 
+       (.I0(\s_end_node_reg[4]_0 [4]),
+        .I1(\s_end_node_reg[4]_1 [10]),
         .I2(\FSM_sequential_current_state[0]_i_6_n_0 ),
-        .I3(\s_end_node_reg[4]_0 [9]),
-        .I4(s_end_node[3]),
+        .I3(\s_end_node_reg[4]_1 [9]),
+        .I4(\s_end_node_reg[4]_0 [3]),
         .I5(\FSM_sequential_current_state[0]_i_7_n_0 ),
-        .O(\FSM_sequential_current_state[0]_i_3_n_0 ));
+        .O(\FSM_sequential_current_state[0]_i_5_n_0 ));
   LUT6 #(
     .INIT(64'h6FF6FFFFFFFF6FF6)) 
     \FSM_sequential_current_state[0]_i_6 
-       (.I0(\s_end_node_reg[4]_0 [8]),
-        .I1(s_end_node[2]),
-        .I2(\s_end_node_reg[4]_0 [7]),
-        .I3(s_end_node[1]),
-        .I4(s_end_node[0]),
-        .I5(\s_end_node_reg[4]_0 [6]),
+       (.I0(\s_end_node_reg[4]_1 [8]),
+        .I1(\s_end_node_reg[4]_0 [2]),
+        .I2(\s_end_node_reg[4]_1 [7]),
+        .I3(\s_end_node_reg[4]_0 [1]),
+        .I4(\s_end_node_reg[4]_0 [0]),
+        .I5(\s_end_node_reg[4]_1 [6]),
         .O(\FSM_sequential_current_state[0]_i_6_n_0 ));
   LUT5 #(
     .INIT(32'hF6FFFFF6)) 
     \FSM_sequential_current_state[0]_i_7 
-       (.I0(start_node[3]),
-        .I1(\s_end_node_reg[4]_0 [4]),
+       (.I0(\s_start_node_reg[4]_0 [3]),
+        .I1(\s_end_node_reg[4]_1 [4]),
         .I2(\FSM_sequential_current_state[0]_i_8_n_0 ),
-        .I3(\s_end_node_reg[4]_0 [5]),
-        .I4(start_node[4]),
+        .I3(\s_end_node_reg[4]_1 [5]),
+        .I4(\s_start_node_reg[4]_0 [4]),
         .O(\FSM_sequential_current_state[0]_i_7_n_0 ));
   LUT6 #(
     .INIT(64'h6FF6FFFFFFFF6FF6)) 
     \FSM_sequential_current_state[0]_i_8 
-       (.I0(start_node[0]),
-        .I1(\s_end_node_reg[4]_0 [1]),
-        .I2(\s_end_node_reg[4]_0 [2]),
-        .I3(start_node[1]),
-        .I4(\s_end_node_reg[4]_0 [3]),
-        .I5(start_node[2]),
+       (.I0(\s_start_node_reg[4]_0 [0]),
+        .I1(\s_end_node_reg[4]_1 [1]),
+        .I2(\s_end_node_reg[4]_1 [3]),
+        .I3(\s_start_node_reg[4]_0 [2]),
+        .I4(\s_end_node_reg[4]_1 [2]),
+        .I5(\s_start_node_reg[4]_0 [1]),
         .O(\FSM_sequential_current_state[0]_i_8_n_0 ));
   LUT1 #(
     .INIT(2'h1)) 
@@ -687,25 +675,15 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(prev_flag_node_reg_0),
         .O(next_state__0[1]));
   LUT6 #(
-    .INIT(64'hF0002F2FFF0F2F2F)) 
+    .INIT(64'hF00022FFF0FF22FF)) 
     \FSM_sequential_current_state[1]_i_2 
        (.I0(prev_flag_node),
-        .I1(\FSM_sequential_current_state[1]_i_3_n_0 ),
-        .I2(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I3(Q[0]),
+        .I1(en_ram_ext_INST_0_i_2_n_0),
+        .I2(Q[0]),
+        .I3(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
-        .I5(\FSM_sequential_current_state_reg[0]_0 [4]),
+        .I5(\FSM_sequential_current_state_reg[0]_1 [4]),
         .O(prev_flag_node_reg_0));
-  (* SOFT_HLUTNM = "soft_lutpair3" *) 
-  LUT5 #(
-    .INIT(32'h41000041)) 
-    \FSM_sequential_current_state[1]_i_3 
-       (.I0(\comp_out[0]_i_4_n_0 ),
-        .I1(s_end_node[4]),
-        .I2(s_next_node[4]),
-        .I3(s_next_node[3]),
-        .I4(s_end_node[3]),
-        .O(\FSM_sequential_current_state[1]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "nearest_node:10,update_ram:01,read_path:11,idle:00" *) 
   FDCE \FSM_sequential_current_state_reg[0] 
        (.C(s00_axi_aclk),
@@ -732,20 +710,20 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I1(\comp_out[0]_i_2_n_0 ),
         .I2(\comp_out[3]_i_3_n_0 ),
         .I3(\comp_out_reg[3] [0]),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [2]),
-        .I5(\FSM_sequential_current_state_reg[0]_0 [3]),
-        .O(D[0]));
+        .I4(\FSM_sequential_current_state_reg[0]_1 [2]),
+        .I5(\FSM_sequential_current_state_reg[0]_1 [3]),
+        .O(\data_out_a_reg[8] [0]));
   LUT6 #(
-    .INIT(64'h00000000AAAABAAB)) 
+    .INIT(64'h00000000AAAAAAEB)) 
     \comp_out[0]_i_2 
        (.I0(\comp_out[0]_i_3_n_0 ),
-        .I1(\comp_out[0]_i_4_n_0 ),
-        .I2(s_end_node[4]),
-        .I3(s_next_node[4]),
-        .I4(\comp_out[0]_i_5_n_0 ),
-        .I5(\comp_out[0]_i_6_n_0 ),
+        .I1(\s_end_node_reg[4]_0 [3]),
+        .I2(s_next_node[3]),
+        .I3(en_ram_ext_INST_0_i_3_n_0),
+        .I4(\comp_out[0]_i_4_n_0 ),
+        .I5(\comp_out[0]_i_5_n_0 ),
         .O(\comp_out[0]_i_2_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair0" *) 
+  (* SOFT_HLUTNM = "soft_lutpair1" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \comp_out[0]_i_3 
@@ -753,44 +731,34 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I1(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I2(prev_flag_node),
         .O(\comp_out[0]_i_3_n_0 ));
-  LUT6 #(
-    .INIT(64'h6FF6FFFFFFFF6FF6)) 
-    \comp_out[0]_i_4 
-       (.I0(s_next_node[0]),
-        .I1(s_end_node[0]),
-        .I2(s_end_node[1]),
-        .I3(s_next_node[1]),
-        .I4(s_end_node[2]),
-        .I5(s_next_node[2]),
-        .O(\comp_out[0]_i_4_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
-    \comp_out[0]_i_5 
-       (.I0(s_end_node[3]),
-        .I1(s_next_node[3]),
-        .O(\comp_out[0]_i_5_n_0 ));
+    \comp_out[0]_i_4 
+       (.I0(s_next_node[4]),
+        .I1(\s_end_node_reg[4]_0 [4]),
+        .O(\comp_out[0]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
     .INIT(8'h04)) 
-    \comp_out[0]_i_6 
+    \comp_out[0]_i_5 
        (.I0(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I1(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I2(init_node),
-        .O(\comp_out[0]_i_6_n_0 ));
+        .O(\comp_out[0]_i_5_n_0 ));
   LUT5 #(
     .INIT(32'h74747444)) 
     \comp_out[1]_i_1__0 
        (.I0(\comp_out[1]_i_2_n_0 ),
         .I1(\comp_out[3]_i_3_n_0 ),
         .I2(\comp_out_reg[3] [1]),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [2]),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [3]),
-        .O(D[1]));
+        .I3(\FSM_sequential_current_state_reg[0]_1 [2]),
+        .I4(\FSM_sequential_current_state_reg[0]_1 [3]),
+        .O(\data_out_a_reg[8] [1]));
   LUT5 #(
     .INIT(32'hFFF1FF1F)) 
     \comp_out[1]_i_2 
-       (.I0(\FSM_sequential_current_state_reg[0]_0 [2]),
-        .I1(\FSM_sequential_current_state_reg[0]_0 [3]),
+       (.I0(\FSM_sequential_current_state_reg[0]_1 [2]),
+        .I1(\FSM_sequential_current_state_reg[0]_1 [3]),
         .I2(s_next_node[5]),
         .I3(\comp_out[0]_i_2_n_0 ),
         .I4(s_next_node[6]),
@@ -801,10 +769,10 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(\comp_out[2]_i_2_n_0 ),
         .I1(\comp_out[3]_i_3_n_0 ),
         .I2(\comp_out_reg[3] [2]),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [2]),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [3]),
-        .O(D[2]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+        .I3(\FSM_sequential_current_state_reg[0]_1 [2]),
+        .I4(\FSM_sequential_current_state_reg[0]_1 [3]),
+        .O(\data_out_a_reg[8] [2]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT4 #(
     .INIT(16'hF8F7)) 
     \comp_out[2]_i_2 
@@ -819,10 +787,10 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(\comp_out[3]_i_2_n_0 ),
         .I1(\comp_out[3]_i_3_n_0 ),
         .I2(\comp_out_reg[3] [3]),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [2]),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [3]),
-        .O(D[3]));
-  (* SOFT_HLUTNM = "soft_lutpair1" *) 
+        .I3(\FSM_sequential_current_state_reg[0]_1 [2]),
+        .I4(\FSM_sequential_current_state_reg[0]_1 [3]),
+        .O(\data_out_a_reg[8] [3]));
+  (* SOFT_HLUTNM = "soft_lutpair0" *) 
   LUT5 #(
     .INIT(32'hFF80FF7F)) 
     \comp_out[3]_i_2 
@@ -847,19 +815,19 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     \comp_out[3]_i_4 
        (.I0(\comp_out_reg[3] [2]),
         .I1(\comp_out[2]_i_2_n_0 ),
-        .I2(\FSM_sequential_current_state_reg[0]_0 [3]),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [2]),
+        .I2(\FSM_sequential_current_state_reg[0]_1 [3]),
+        .I3(\FSM_sequential_current_state_reg[0]_1 [2]),
         .I4(\comp_out[3]_i_6_n_0 ),
         .O(\comp_out[3]_i_4_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFEFFFFFFACFFA2)) 
+    .INIT(64'hFFFFFFEDFFFDFF20)) 
     \comp_out[3]_i_6 
-       (.I0(\comp_out_reg[3] [0]),
-        .I1(s_next_node[5]),
-        .I2(\comp_out[0]_i_2_n_0 ),
+       (.I0(s_next_node[6]),
+        .I1(\comp_out[0]_i_2_n_0 ),
+        .I2(s_next_node[5]),
         .I3(\comp_out_reg[3]_0 ),
-        .I4(s_next_node[6]),
-        .I5(\comp_out_reg[3] [1]),
+        .I4(\comp_out_reg[3] [1]),
+        .I5(\comp_out_reg[3] [0]),
         .O(\comp_out[3]_i_6_n_0 ));
   LUT6 #(
     .INIT(64'hFFFF8000FFFF7FFF)) 
@@ -871,6 +839,36 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I4(\comp_out[0]_i_2_n_0 ),
         .I5(s_next_node[9]),
         .O(\s_next_node_reg[8]_0 ));
+  LUT6 #(
+    .INIT(64'h00800000AA800000)) 
+    en_ram_ext_INST_0_i_1
+       (.I0(Q[1]),
+        .I1(en_ram_ext_INST_0_i_2_n_0),
+        .I2(prev_flag_node),
+        .I3(\FSM_sequential_current_state_reg[1]_0 [0]),
+        .I4(\FSM_sequential_current_state_reg[1]_0 [1]),
+        .I5(Q[0]),
+        .O(\FSM_onehot_current_state_reg[3] ));
+  (* SOFT_HLUTNM = "soft_lutpair3" *) 
+  LUT5 #(
+    .INIT(32'h09000009)) 
+    en_ram_ext_INST_0_i_2
+       (.I0(\s_end_node_reg[4]_0 [3]),
+        .I1(s_next_node[3]),
+        .I2(en_ram_ext_INST_0_i_3_n_0),
+        .I3(s_next_node[4]),
+        .I4(\s_end_node_reg[4]_0 [4]),
+        .O(en_ram_ext_INST_0_i_2_n_0));
+  LUT6 #(
+    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    en_ram_ext_INST_0_i_3
+       (.I0(s_next_node[1]),
+        .I1(\s_end_node_reg[4]_0 [1]),
+        .I2(s_next_node[2]),
+        .I3(\s_end_node_reg[4]_0 [2]),
+        .I4(\s_end_node_reg[4]_0 [0]),
+        .I5(s_next_node[0]),
+        .O(en_ram_ext_INST_0_i_3_n_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
     .INIT(32'h0001DD3E)) 
@@ -898,25 +896,25 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(s_next_node[0]),
         .I1(\comp_out[0]_i_2_n_0 ),
         .I2(g0_b0_i_6_n_0),
-        .I3(\s_end_node_reg[4]_0 [1]),
+        .I3(\s_end_node_reg[4]_1 [1]),
         .O(g0_b0_i_1_n_0));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT4 #(
-    .INIT(16'h22F2)) 
+    .INIT(16'h2F22)) 
     g0_b0_i_2
-       (.I0(\s_end_node_reg[4]_0 [2]),
+       (.I0(\s_end_node_reg[4]_1 [2]),
         .I1(g0_b0_i_6_n_0),
-        .I2(s_next_node[1]),
-        .I3(\comp_out[0]_i_2_n_0 ),
+        .I2(\comp_out[0]_i_2_n_0 ),
+        .I3(s_next_node[1]),
         .O(g0_b0_i_2_n_0));
   (* SOFT_HLUTNM = "soft_lutpair10" *) 
   LUT4 #(
     .INIT(16'h2F22)) 
     g0_b0_i_3
-       (.I0(s_next_node[2]),
-        .I1(\comp_out[0]_i_2_n_0 ),
-        .I2(g0_b0_i_6_n_0),
-        .I3(\s_end_node_reg[4]_0 [3]),
+       (.I0(\s_end_node_reg[4]_1 [3]),
+        .I1(g0_b0_i_6_n_0),
+        .I2(\comp_out[0]_i_2_n_0 ),
+        .I3(s_next_node[2]),
         .O(g0_b0_i_3_n_0));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT4 #(
@@ -925,26 +923,26 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(s_next_node[3]),
         .I1(\comp_out[0]_i_2_n_0 ),
         .I2(g0_b0_i_6_n_0),
-        .I3(\s_end_node_reg[4]_0 [4]),
+        .I3(\s_end_node_reg[4]_1 [4]),
         .O(g0_b0_i_4_n_0));
   (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT4 #(
     .INIT(16'h22F2)) 
     g0_b0_i_5
-       (.I0(\s_end_node_reg[4]_0 [5]),
+       (.I0(\s_end_node_reg[4]_1 [5]),
         .I1(g0_b0_i_6_n_0),
         .I2(s_next_node[4]),
         .I3(\comp_out[0]_i_2_n_0 ),
         .O(g0_b0_i_5_n_0));
   (* SOFT_HLUTNM = "soft_lutpair2" *) 
   LUT5 #(
-    .INIT(32'hDFDFDF00)) 
+    .INIT(32'hDF00DFDF)) 
     g0_b0_i_6
        (.I0(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I1(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I2(init_node),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
-        .I4(\FSM_sequential_current_state[0]_i_3_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I4(\memory_ram[16][4]_i_12_n_0 ),
         .O(g0_b0_i_6_n_0));
   (* SOFT_HLUTNM = "soft_lutpair4" *) 
   LUT5 #(
@@ -1031,12 +1029,12 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(UP_we_ram),
         .O(data0[0]));
   LUT6 #(
-    .INIT(64'hDDD50000DDD5DDD5)) 
+    .INIT(64'hD5DD0000D5DDD5DD)) 
     \memory_ram[16][0]_i_2 
-       (.I0(\s_end_node_reg[4]_0 [1]),
+       (.I0(\s_end_node_reg[4]_1 [1]),
         .I1(\memory_ram[16][4]_i_11_n_0 ),
-        .I2(\memory_ram[16][4]_i_12_n_0 ),
-        .I3(\FSM_sequential_current_state[0]_i_3_n_0 ),
+        .I2(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I3(\memory_ram[16][4]_i_12_n_0 ),
         .I4(\comp_out[0]_i_2_n_0 ),
         .I5(s_next_node[0]),
         .O(\memory_ram[16][0]_i_2_n_0 ));
@@ -1051,14 +1049,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(UP_we_ram),
         .O(data0[1]));
   LUT6 #(
-    .INIT(64'hB0B0B000BBBBBBBB)) 
+    .INIT(64'hD000D0D0DDDDDDDD)) 
     \memory_ram[16][1]_i_2 
-       (.I0(\comp_out[0]_i_2_n_0 ),
-        .I1(s_next_node[1]),
+       (.I0(s_next_node[1]),
+        .I1(\comp_out[0]_i_2_n_0 ),
         .I2(\memory_ram[16][4]_i_11_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
-        .I4(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I5(\s_end_node_reg[4]_0 [2]),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I4(\memory_ram[16][4]_i_12_n_0 ),
+        .I5(\s_end_node_reg[4]_1 [2]),
         .O(\memory_ram[16][1]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBBBBBBBBF0FFF000)) 
@@ -1071,14 +1069,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(UP_we_ram),
         .O(data0[2]));
   LUT6 #(
-    .INIT(64'hDDD50000DDD5DDD5)) 
+    .INIT(64'hD000D0D0DDDDDDDD)) 
     \memory_ram[16][2]_i_2 
-       (.I0(\s_end_node_reg[4]_0 [3]),
-        .I1(\memory_ram[16][4]_i_11_n_0 ),
-        .I2(\memory_ram[16][4]_i_12_n_0 ),
-        .I3(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I4(\comp_out[0]_i_2_n_0 ),
-        .I5(s_next_node[2]),
+       (.I0(s_next_node[2]),
+        .I1(\comp_out[0]_i_2_n_0 ),
+        .I2(\memory_ram[16][4]_i_11_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I4(\memory_ram[16][4]_i_12_n_0 ),
+        .I5(\s_end_node_reg[4]_1 [3]),
         .O(\memory_ram[16][2]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hBBBBBBBBF0FFF000)) 
@@ -1091,12 +1089,12 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(UP_we_ram),
         .O(data0[3]));
   LUT6 #(
-    .INIT(64'hDDD50000DDD5DDD5)) 
+    .INIT(64'hD5DD0000D5DDD5DD)) 
     \memory_ram[16][3]_i_2 
-       (.I0(\s_end_node_reg[4]_0 [4]),
+       (.I0(\s_end_node_reg[4]_1 [4]),
         .I1(\memory_ram[16][4]_i_11_n_0 ),
-        .I2(\memory_ram[16][4]_i_12_n_0 ),
-        .I3(\FSM_sequential_current_state[0]_i_3_n_0 ),
+        .I2(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I3(\memory_ram[16][4]_i_12_n_0 ),
         .I4(\comp_out[0]_i_2_n_0 ),
         .I5(s_next_node[3]),
         .O(\memory_ram[16][3]_i_2_n_0 ));
@@ -1111,14 +1109,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(UP_we_ram),
         .O(data0[4]));
   LUT6 #(
-    .INIT(64'h6665555566666666)) 
+    .INIT(64'h6656555566666666)) 
     \memory_ram[16][4]_i_10 
-       (.I0(\memory_ram[16][4]_i_2_0 [2]),
+       (.I0(\memory_ram[16][4]_i_2_0 [0]),
         .I1(\memory_ram[16][4]_i_21_n_0 ),
-        .I2(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
+        .I2(\memory_ram[16][4]_i_12_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .I4(\memory_ram[16][4]_i_11_n_0 ),
-        .I5(\s_end_node_reg[4]_0 [3]),
+        .I5(\s_end_node_reg[4]_1 [1]),
         .O(\memory_ram[16][4]_i_10_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair14" *) 
   LUT3 #(
@@ -1129,40 +1127,40 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I2(\FSM_sequential_current_state_reg[1]_0 [0]),
         .O(\memory_ram[16][4]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFFFFFE0000)) 
+    .INIT(64'h0000000055555557)) 
     \memory_ram[16][4]_i_12 
-       (.I0(\s_end_node_reg[4]_0 [8]),
-        .I1(\s_end_node_reg[4]_0 [9]),
-        .I2(\s_end_node_reg[4]_0 [7]),
-        .I3(\s_end_node_reg[4]_0 [6]),
-        .I4(\s_end_node_reg[4]_0 [10]),
+       (.I0(\s_end_node_reg[4]_1 [5]),
+        .I1(\s_end_node_reg[4]_1 [3]),
+        .I2(\s_end_node_reg[4]_1 [4]),
+        .I3(\s_end_node_reg[4]_1 [2]),
+        .I4(\s_end_node_reg[4]_1 [1]),
         .I5(\memory_ram[16][4]_i_22_n_0 ),
         .O(\memory_ram[16][4]_i_12_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair8" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \memory_ram[16][4]_i_17 
-       (.I0(s_next_node[4]),
-        .I1(\comp_out[0]_i_2_n_0 ),
-        .O(\memory_ram[16][4]_i_17_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair9" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \memory_ram[16][4]_i_18 
+    \memory_ram[16][4]_i_17 
        (.I0(s_next_node[3]),
         .I1(\comp_out[0]_i_2_n_0 ),
-        .O(\memory_ram[16][4]_i_18_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair12" *) 
+        .O(\memory_ram[16][4]_i_17_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair8" *) 
   LUT2 #(
     .INIT(4'h2)) 
-    \memory_ram[16][4]_i_19 
-       (.I0(s_next_node[0]),
+    \memory_ram[16][4]_i_18 
+       (.I0(s_next_node[4]),
         .I1(\comp_out[0]_i_2_n_0 ),
+        .O(\memory_ram[16][4]_i_18_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
+    \memory_ram[16][4]_i_19 
+       (.I0(\comp_out[0]_i_2_n_0 ),
+        .I1(s_next_node[2]),
         .O(\memory_ram[16][4]_i_19_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAAAA2AAAAA)) 
+    .INIT(64'hAAAAAAAA8AAAAAAA)) 
     \memory_ram[16][4]_i_2 
-       (.I0(\FSM_sequential_current_state_reg[0]_0 [1]),
+       (.I0(\FSM_sequential_current_state_reg[0]_1 [1]),
         .I1(\memory_ram[16][4]_i_6_n_0 ),
         .I2(\memory_ram[16][4]_i_7_n_0 ),
         .I3(\memory_ram[16][4]_i_8_n_0 ),
@@ -1171,75 +1169,75 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .O(\memory_ram[16][4]_i_2_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair11" *) 
   LUT2 #(
-    .INIT(4'h2)) 
+    .INIT(4'hB)) 
     \memory_ram[16][4]_i_20 
-       (.I0(s_next_node[1]),
-        .I1(\comp_out[0]_i_2_n_0 ),
+       (.I0(\comp_out[0]_i_2_n_0 ),
+        .I1(s_next_node[1]),
         .O(\memory_ram[16][4]_i_20_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair10" *) 
+  (* SOFT_HLUTNM = "soft_lutpair12" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \memory_ram[16][4]_i_21 
-       (.I0(s_next_node[2]),
+       (.I0(s_next_node[0]),
         .I1(\comp_out[0]_i_2_n_0 ),
         .O(\memory_ram[16][4]_i_21_n_0 ));
   LUT6 #(
     .INIT(64'hFFFE0000FFFFFFFF)) 
     \memory_ram[16][4]_i_22 
-       (.I0(\s_end_node_reg[4]_0 [3]),
-        .I1(\s_end_node_reg[4]_0 [4]),
-        .I2(\s_end_node_reg[4]_0 [2]),
-        .I3(\s_end_node_reg[4]_0 [1]),
-        .I4(\s_end_node_reg[4]_0 [5]),
+       (.I0(\s_end_node_reg[4]_1 [8]),
+        .I1(\s_end_node_reg[4]_1 [9]),
+        .I2(\s_end_node_reg[4]_1 [7]),
+        .I3(\s_end_node_reg[4]_1 [6]),
+        .I4(\s_end_node_reg[4]_1 [10]),
         .I5(s_start_node),
         .O(\memory_ram[16][4]_i_22_n_0 ));
   LUT6 #(
-    .INIT(64'hB0B0B000BBBBBBBB)) 
+    .INIT(64'hB000B0B0BBBBBBBB)) 
     \memory_ram[16][4]_i_3 
        (.I0(\comp_out[0]_i_2_n_0 ),
         .I1(s_next_node[4]),
         .I2(\memory_ram[16][4]_i_11_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
-        .I4(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I5(\s_end_node_reg[4]_0 [5]),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
+        .I4(\memory_ram[16][4]_i_12_n_0 ),
+        .I5(\s_end_node_reg[4]_1 [5]),
         .O(\memory_ram[16][4]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA55599999)) 
+    .INIT(64'h6656555566666666)) 
     \memory_ram[16][4]_i_6 
-       (.I0(\memory_ram[16][4]_i_2_0 [4]),
-        .I1(\s_end_node_reg[4]_0 [5]),
-        .I2(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
+       (.I0(\memory_ram[16][4]_i_2_0 [3]),
+        .I1(\memory_ram[16][4]_i_17_n_0 ),
+        .I2(\memory_ram[16][4]_i_12_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .I4(\memory_ram[16][4]_i_11_n_0 ),
-        .I5(\memory_ram[16][4]_i_17_n_0 ),
+        .I5(\s_end_node_reg[4]_1 [4]),
         .O(\memory_ram[16][4]_i_6_n_0 ));
   LUT6 #(
-    .INIT(64'h999AAAAA99999999)) 
+    .INIT(64'hAAAAAAAA55959999)) 
     \memory_ram[16][4]_i_7 
-       (.I0(\memory_ram[16][4]_i_2_0 [3]),
-        .I1(\memory_ram[16][4]_i_18_n_0 ),
-        .I2(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
+       (.I0(\memory_ram[16][4]_i_2_0 [4]),
+        .I1(\s_end_node_reg[4]_1 [5]),
+        .I2(\memory_ram[16][4]_i_12_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .I4(\memory_ram[16][4]_i_11_n_0 ),
-        .I5(\s_end_node_reg[4]_0 [4]),
+        .I5(\memory_ram[16][4]_i_18_n_0 ),
         .O(\memory_ram[16][4]_i_7_n_0 ));
   LUT6 #(
-    .INIT(64'h6665555566666666)) 
+    .INIT(64'h55959999AAAAAAAA)) 
     \memory_ram[16][4]_i_8 
-       (.I0(\memory_ram[16][4]_i_2_0 [0]),
-        .I1(\memory_ram[16][4]_i_19_n_0 ),
-        .I2(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
+       (.I0(\memory_ram[16][4]_i_2_0 [2]),
+        .I1(\s_end_node_reg[4]_1 [3]),
+        .I2(\memory_ram[16][4]_i_12_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .I4(\memory_ram[16][4]_i_11_n_0 ),
-        .I5(\s_end_node_reg[4]_0 [1]),
+        .I5(\memory_ram[16][4]_i_19_n_0 ),
         .O(\memory_ram[16][4]_i_8_n_0 ));
   LUT6 #(
-    .INIT(64'hAAAAAAAA55599999)) 
+    .INIT(64'h55959999AAAAAAAA)) 
     \memory_ram[16][4]_i_9 
        (.I0(\memory_ram[16][4]_i_2_0 [1]),
-        .I1(\s_end_node_reg[4]_0 [2]),
-        .I2(\FSM_sequential_current_state[0]_i_3_n_0 ),
-        .I3(\memory_ram[16][4]_i_12_n_0 ),
+        .I1(\s_end_node_reg[4]_1 [2]),
+        .I2(\memory_ram[16][4]_i_12_n_0 ),
+        .I3(\FSM_sequential_current_state[0]_i_5_n_0 ),
         .I4(\memory_ram[16][4]_i_11_n_0 ),
         .I5(\memory_ram[16][4]_i_20_n_0 ),
         .O(\memory_ram[16][4]_i_9_n_0 ));
@@ -1250,7 +1248,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I1(s_next_node[5]),
         .I2(\memory_ram[16][4]_i_2_n_0 ),
         .I3(\comp_out_reg[4] ),
-        .I4(\FSM_sequential_current_state_reg[0]_0 [1]),
+        .I4(\FSM_sequential_current_state_reg[0]_1 [1]),
         .O(\s_next_node_reg[5]_1 ));
   LUT6 #(
     .INIT(64'h00ED00FF00EDFFFF)) 
@@ -1260,7 +1258,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I2(s_next_node[6]),
         .I3(\memory_ram[16][4]_i_2_n_0 ),
         .I4(\comp_out_reg[4] ),
-        .I5(\FSM_sequential_current_state_reg[0]_0 [1]),
+        .I5(\FSM_sequential_current_state_reg[0]_1 [1]),
         .O(\s_next_node_reg[5]_2 ));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
@@ -1269,8 +1267,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(\comp_out[2]_i_2_n_0 ),
         .I1(\memory_ram[16][4]_i_2_n_0 ),
         .I2(\comp_out_reg[4] ),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [1]),
-        .O(\FSM_onehot_current_state_reg[1]_1 ));
+        .I3(\FSM_sequential_current_state_reg[0]_1 [1]),
+        .O(\FSM_onehot_current_state_reg[1]_0 ));
   (* SOFT_HLUTNM = "soft_lutpair13" *) 
   LUT4 #(
     .INIT(16'h232F)) 
@@ -1278,16 +1276,16 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.I0(\comp_out[3]_i_2_n_0 ),
         .I1(\memory_ram[16][4]_i_2_n_0 ),
         .I2(\comp_out_reg[4] ),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [1]),
-        .O(\FSM_onehot_current_state_reg[1]_2 ));
+        .I3(\FSM_sequential_current_state_reg[0]_1 [1]),
+        .O(\FSM_onehot_current_state_reg[1]_1 ));
   LUT4 #(
     .INIT(16'h232F)) 
     \memory_ram[16][9]_i_3 
        (.I0(\s_next_node_reg[8]_0 ),
         .I1(\memory_ram[16][4]_i_2_n_0 ),
         .I2(\comp_out_reg[4] ),
-        .I3(\FSM_sequential_current_state_reg[0]_0 [1]),
-        .O(\FSM_onehot_current_state_reg[1]_3 ));
+        .I3(\FSM_sequential_current_state_reg[0]_1 [1]),
+        .O(\FSM_onehot_current_state_reg[1]_2 ));
   LUT6 #(
     .INIT(64'h5955A6AAAAAAAAAA)) 
     \memory_ram[30][9]_i_11 
@@ -1299,41 +1297,41 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I5(\memory_ram_reg[30][9] ),
         .O(\memory_ram[30][9]_i_11_n_0 ));
   LUT6 #(
-    .INIT(64'h88888888AAAAAAA8)) 
+    .INIT(64'h88888888AAA8AAAA)) 
     \memory_ram[30][9]_i_12 
        (.I0(s_next_node[5]),
-        .I1(\comp_out[0]_i_6_n_0 ),
-        .I2(\comp_out[0]_i_5_n_0 ),
-        .I3(\memory_ram[30][9]_i_15_n_0 ),
-        .I4(\comp_out[0]_i_4_n_0 ),
+        .I1(\comp_out[0]_i_5_n_0 ),
+        .I2(\comp_out[0]_i_4_n_0 ),
+        .I3(en_ram_ext_INST_0_i_3_n_0),
+        .I4(\memory_ram[30][9]_i_15_n_0 ),
         .I5(\comp_out[0]_i_3_n_0 ),
         .O(\s_next_node_reg[5]_0 ));
   LUT6 #(
-    .INIT(64'h55550001FFFFFFFF)) 
+    .INIT(64'h55550100FFFFFFFF)) 
     \memory_ram[30][9]_i_13 
-       (.I0(\comp_out[0]_i_6_n_0 ),
-        .I1(\comp_out[0]_i_5_n_0 ),
-        .I2(\memory_ram[30][9]_i_15_n_0 ),
-        .I3(\comp_out[0]_i_4_n_0 ),
+       (.I0(\comp_out[0]_i_5_n_0 ),
+        .I1(\comp_out[0]_i_4_n_0 ),
+        .I2(en_ram_ext_INST_0_i_3_n_0),
+        .I3(\memory_ram[30][9]_i_15_n_0 ),
         .I4(\comp_out[0]_i_3_n_0 ),
         .I5(s_next_node[6]),
         .O(\s_next_node_reg[6]_0 ));
   LUT6 #(
-    .INIT(64'h88888888AAAAAAA8)) 
+    .INIT(64'h88888888AAA8AAAA)) 
     \memory_ram[30][9]_i_14 
        (.I0(s_next_node[8]),
-        .I1(\comp_out[0]_i_6_n_0 ),
-        .I2(\comp_out[0]_i_5_n_0 ),
-        .I3(\memory_ram[30][9]_i_15_n_0 ),
-        .I4(\comp_out[0]_i_4_n_0 ),
+        .I1(\comp_out[0]_i_5_n_0 ),
+        .I2(\comp_out[0]_i_4_n_0 ),
+        .I3(en_ram_ext_INST_0_i_3_n_0),
+        .I4(\memory_ram[30][9]_i_15_n_0 ),
         .I5(\comp_out[0]_i_3_n_0 ),
         .O(\memory_ram[30][9]_i_14_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair3" *) 
   LUT2 #(
-    .INIT(4'h6)) 
+    .INIT(4'h9)) 
     \memory_ram[30][9]_i_15 
-       (.I0(s_end_node[4]),
-        .I1(s_next_node[4]),
+       (.I0(s_next_node[3]),
+        .I1(\s_end_node_reg[4]_0 [3]),
         .O(\memory_ram[30][9]_i_15_n_0 ));
   LUT6 #(
     .INIT(64'h000000000000004B)) 
@@ -1359,7 +1357,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     .INIT(64'h55F7FF5500000800)) 
     \node_seen[0]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(\node_seen_reg[0]_0 ),
+        .I1(\node_seen_reg[16]_1 ),
         .I2(\node_seen_reg[7]_0 ),
         .I3(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
@@ -1425,14 +1423,15 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
         .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I5(node_seen[15]),
         .O(\node_seen[15]_i_1_n_0 ));
-  LUT5 #(
-    .INIT(32'h3FF30800)) 
+  LUT6 #(
+    .INIT(64'h55F7FF5500000800)) 
     \node_seen[16]_i_1 
-       (.I0(\node_seen_reg[16]_3 ),
-        .I1(s00_axi_aresetn),
-        .I2(\FSM_sequential_current_state_reg[1]_0 [0]),
+       (.I0(s00_axi_aresetn),
+        .I1(\node_seen_reg[16]_1 ),
+        .I2(\node_seen_reg[16]_2 ),
         .I3(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I4(\node_seen_reg[16]_1 ),
+        .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
+        .I5(node_seen[16]),
         .O(\node_seen[16]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h55F7FF5500000800)) 
@@ -1508,8 +1507,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
     .INIT(64'h557FFF5500008000)) 
     \node_seen[8]_i_1 
        (.I0(s00_axi_aresetn),
-        .I1(\node_seen_reg[8]_0 ),
-        .I2(\node_seen_reg[14]_0 ),
+        .I1(\node_seen_reg[14]_0 ),
+        .I2(\node_seen_reg[8]_0 ),
         .I3(\FSM_sequential_current_state_reg[1]_0 [1]),
         .I4(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I5(node_seen[8]),
@@ -1570,7 +1569,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\node_seen[16]_i_1_n_0 ),
-        .Q(\node_seen_reg[16]_1 ),
+        .Q(node_seen[16]),
         .R(1'b0));
   FDRE \node_seen_reg[1] 
        (.C(s00_axi_aclk),
@@ -1635,7 +1634,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
   LUT3 #(
     .INIT(8'h02)) 
     \s_end_node[4]_i_1 
-       (.I0(\s_end_node_reg[4]_0 [0]),
+       (.I0(\s_end_node_reg[4]_1 [0]),
         .I1(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I2(\FSM_sequential_current_state_reg[1]_0 [1]),
         .O(s_start_node));
@@ -1643,41 +1642,41 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [6]),
-        .Q(s_end_node[0]));
+        .D(\s_end_node_reg[4]_1 [6]),
+        .Q(\s_end_node_reg[4]_0 [0]));
   FDCE \s_end_node_reg[1] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [7]),
-        .Q(s_end_node[1]));
+        .D(\s_end_node_reg[4]_1 [7]),
+        .Q(\s_end_node_reg[4]_0 [1]));
   FDCE \s_end_node_reg[2] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [8]),
-        .Q(s_end_node[2]));
+        .D(\s_end_node_reg[4]_1 [8]),
+        .Q(\s_end_node_reg[4]_0 [2]));
   FDCE \s_end_node_reg[3] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [9]),
-        .Q(s_end_node[3]));
+        .D(\s_end_node_reg[4]_1 [9]),
+        .Q(\s_end_node_reg[4]_0 [3]));
   FDCE \s_end_node_reg[4] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [10]),
-        .Q(s_end_node[4]));
+        .D(\s_end_node_reg[4]_1 [10]),
+        .Q(\s_end_node_reg[4]_0 [4]));
   LUT5 #(
     .INIT(32'hFF808080)) 
     \s_finished[31]_i_1 
-       (.I0(Q[0]),
+       (.I0(\FSM_sequential_current_state_reg[1]_0 [0]),
         .I1(\FSM_sequential_current_state_reg[1]_0 [1]),
-        .I2(\FSM_sequential_current_state_reg[1]_0 [0]),
-        .I3(\s_end_node_reg[4]_0 [0]),
+        .I2(Q[0]),
+        .I3(\s_end_node_reg[4]_1 [0]),
         .I4(s_finished),
-        .O(\FSM_onehot_current_state_reg[1]_0 ));
+        .O(\FSM_sequential_current_state_reg[0]_0 ));
   LUT3 #(
     .INIT(8'h08)) 
     \s_next_node[9]_i_1 
@@ -1749,42 +1748,43 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [1]),
-        .Q(start_node[0]));
+        .D(\s_end_node_reg[4]_1 [1]),
+        .Q(\s_start_node_reg[4]_0 [0]));
   FDCE \s_start_node_reg[1] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [2]),
-        .Q(start_node[1]));
+        .D(\s_end_node_reg[4]_1 [2]),
+        .Q(\s_start_node_reg[4]_0 [1]));
   FDCE \s_start_node_reg[2] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [3]),
-        .Q(start_node[2]));
+        .D(\s_end_node_reg[4]_1 [3]),
+        .Q(\s_start_node_reg[4]_0 [2]));
   FDCE \s_start_node_reg[3] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [4]),
-        .Q(start_node[3]));
+        .D(\s_end_node_reg[4]_1 [4]),
+        .Q(\s_start_node_reg[4]_0 [3]));
   FDCE \s_start_node_reg[4] 
        (.C(s00_axi_aclk),
         .CE(s_start_node),
         .CLR(s00_axi_aresetn_0),
-        .D(\s_end_node_reg[4]_0 [5]),
-        .Q(start_node[4]));
+        .D(\s_end_node_reg[4]_1 [5]),
+        .Q(\s_start_node_reg[4]_0 [4]));
 endmodule
 
 (* ORIG_REF_NAME = "Dijkstra_algorithm_v1_0" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0
-   (addr_ram_ext,
-    S_AXI_AWREADY,
+   (S_AXI_AWREADY,
     S_AXI_WREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     en_ram_ext,
+    we_ram_ext,
+    addr_ram_ext,
     din_ram_ext,
     s00_axi_rvalid,
     s00_axi_bvalid,
@@ -1800,12 +1800,13 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0
     s00_axi_wstrb,
     s00_axi_bready,
     s00_axi_rready);
-  output [5:0]addr_ram_ext;
   output S_AXI_AWREADY;
   output S_AXI_WREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output en_ram_ext;
+  output we_ram_ext;
+  output [5:0]addr_ram_ext;
   output [4:0]din_ram_ext;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
@@ -1843,6 +1844,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0
   wire [31:0]s00_axi_wdata;
   wire [3:0]s00_axi_wstrb;
   wire s00_axi_wvalid;
+  wire we_ram_ext;
 
   design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AXI Dijkstra_algorithm_v1_0_S00_AXI_inst
        (.S_AXI_ARREADY(S_AXI_ARREADY),
@@ -1865,17 +1867,19 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0
         .s00_axi_rvalid(s00_axi_rvalid),
         .s00_axi_wdata(s00_axi_wdata),
         .s00_axi_wstrb(s00_axi_wstrb),
-        .s00_axi_wvalid(s00_axi_wvalid));
+        .s00_axi_wvalid(s00_axi_wvalid),
+        .we_ram_ext(we_ram_ext));
 endmodule
 
 (* ORIG_REF_NAME = "Dijkstra_algorithm_v1_0_S00_AXI" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AXI
-   (addr_ram_ext,
-    S_AXI_AWREADY,
+   (S_AXI_AWREADY,
     S_AXI_WREADY,
     S_AXI_ARREADY,
     s00_axi_rdata,
     en_ram_ext,
+    we_ram_ext,
+    addr_ram_ext,
     din_ram_ext,
     s00_axi_rvalid,
     s00_axi_bvalid,
@@ -1891,12 +1895,13 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
     s00_axi_wstrb,
     s00_axi_bready,
     s00_axi_rready);
-  output [5:0]addr_ram_ext;
   output S_AXI_AWREADY;
   output S_AXI_WREADY;
   output S_AXI_ARREADY;
   output [31:0]s00_axi_rdata;
   output en_ram_ext;
+  output we_ram_ext;
+  output [5:0]addr_ram_ext;
   output [4:0]din_ram_ext;
   output s00_axi_rvalid;
   output s00_axi_bvalid;
@@ -1913,8 +1918,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
   input s00_axi_bready;
   input s00_axi_rready;
 
-  wire DIJKSTRA_n_13;
-  wire DIJKSTRA_n_7;
+  wire DIJKSTRA_n_14;
+  wire DIJKSTRA_n_2;
   wire S_AXI_ARREADY;
   wire S_AXI_AWREADY;
   wire S_AXI_WREADY;
@@ -1991,10 +1996,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
   wire slv_reg_rden;
   wire slv_reg_wren__2;
   wire [4:0]start_node_0;
+  wire we_ram_ext;
 
   design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra DIJKSTRA
-       (.AR(DIJKSTRA_n_7),
-        .\FSM_onehot_current_state_reg[1] (DIJKSTRA_n_13),
+       (.AR(DIJKSTRA_n_2),
+        .\FSM_sequential_current_state_reg[0] (DIJKSTRA_n_14),
         .Q({end_node,start_node_0,en}),
         .addr_ram_ext(addr_ram_ext),
         .busy_ram_ext(busy_ram_ext),
@@ -2002,7 +2008,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .en_ram_ext(en_ram_ext),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .s_finished(s_finished));
+        .s_finished(s_finished),
+        .we_ram_ext(we_ram_ext));
   LUT6 #(
     .INIT(64'hBFFFBF00BF00BF00)) 
     aw_en_i_1
@@ -2018,7 +2025,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(aw_en_i_1_n_0),
         .Q(aw_en_reg_n_0),
-        .S(DIJKSTRA_n_7));
+        .S(DIJKSTRA_n_2));
   LUT4 #(
     .INIT(16'hFB08)) 
     \axi_araddr[2]_i_1 
@@ -2040,14 +2047,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(\axi_araddr[2]_i_1_n_0 ),
         .Q(axi_araddr[2]),
-        .S(DIJKSTRA_n_7));
+        .S(DIJKSTRA_n_2));
   FDSE \axi_araddr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\axi_araddr[3]_i_1_n_0 ),
         .Q(axi_araddr[3]),
-        .S(DIJKSTRA_n_7));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+        .S(DIJKSTRA_n_2));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT2 #(
     .INIT(4'h2)) 
     axi_arready_i_1
@@ -2059,7 +2066,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(axi_arready0),
         .Q(S_AXI_ARREADY),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT6 #(
     .INIT(64'hFFFFBFFF00008000)) 
     \axi_awaddr[2]_i_1 
@@ -2085,14 +2092,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(\axi_awaddr[2]_i_1_n_0 ),
         .Q(axi_awaddr[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_awaddr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\axi_awaddr[3]_i_1_n_0 ),
         .Q(axi_awaddr[3]),
-        .R(DIJKSTRA_n_7));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+        .R(DIJKSTRA_n_2));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_awready_i_2
@@ -2106,7 +2113,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(axi_awready0),
         .Q(S_AXI_AWREADY),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT6 #(
     .INIT(64'h0000FFFF80008000)) 
     axi_bvalid_i_1
@@ -2122,7 +2129,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(axi_bvalid_i_1_n_0),
         .Q(s00_axi_bvalid),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT6 #(
     .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[0]_i_1 
@@ -2164,41 +2171,41 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[12]),
         .O(reg_data_out[12]));
   LUT6 #(
-    .INIT(64'hF0FFCCAAF000CCAA)) 
+    .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[13]_i_1 
-       (.I0(\slv_reg0_reg_n_0_[13] ),
+       (.I0(slv_reg3[13]),
         .I1(s_finished),
-        .I2(slv_reg3[13]),
+        .I2(\slv_reg0_reg_n_0_[13] ),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[13]),
         .O(reg_data_out[13]));
   LUT6 #(
-    .INIT(64'hAAFFCCF0AA00CCF0)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[14]_i_1 
-       (.I0(slv_reg3[14]),
+       (.I0(\slv_reg0_reg_n_0_[14] ),
         .I1(s_finished),
-        .I2(\slv_reg0_reg_n_0_[14] ),
+        .I2(slv_reg3[14]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[14]),
         .O(reg_data_out[14]));
   LUT6 #(
-    .INIT(64'hAAFFCCF0AA00CCF0)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[15]_i_1 
-       (.I0(slv_reg3[15]),
+       (.I0(\slv_reg0_reg_n_0_[15] ),
         .I1(s_finished),
-        .I2(\slv_reg0_reg_n_0_[15] ),
+        .I2(slv_reg3[15]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[15]),
         .O(reg_data_out[15]));
   LUT6 #(
-    .INIT(64'hAAFFCCF0AA00CCF0)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[16]_i_1 
-       (.I0(slv_reg3[16]),
+       (.I0(end_node[0]),
         .I1(s_finished),
-        .I2(end_node[0]),
+        .I2(slv_reg3[16]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[16]),
@@ -2214,11 +2221,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[17]),
         .O(reg_data_out[17]));
   LUT6 #(
-    .INIT(64'hF0FFCCAAF000CCAA)) 
+    .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[18]_i_1 
-       (.I0(end_node[2]),
+       (.I0(slv_reg3[18]),
         .I1(s_finished),
-        .I2(slv_reg3[18]),
+        .I2(end_node[2]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[18]),
@@ -2254,11 +2261,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[20]),
         .O(reg_data_out[20]));
   LUT6 #(
-    .INIT(64'hAAFFCCF0AA00CCF0)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[21]_i_1 
-       (.I0(slv_reg3[21]),
+       (.I0(\slv_reg0_reg_n_0_[21] ),
         .I1(s_finished),
-        .I2(\slv_reg0_reg_n_0_[21] ),
+        .I2(slv_reg3[21]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[21]),
@@ -2274,11 +2281,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[22]),
         .O(reg_data_out[22]));
   LUT6 #(
-    .INIT(64'hF0FFCCAAF000CCAA)) 
+    .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[23]_i_1 
-       (.I0(\slv_reg0_reg_n_0_[23] ),
+       (.I0(slv_reg3[23]),
         .I1(s_finished),
-        .I2(slv_reg3[23]),
+        .I2(\slv_reg0_reg_n_0_[23] ),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[23]),
@@ -2314,11 +2321,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[26]),
         .O(reg_data_out[26]));
   LUT6 #(
-    .INIT(64'hF0FFCCAAF000CCAA)) 
+    .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[27]_i_1 
-       (.I0(\slv_reg0_reg_n_0_[27] ),
+       (.I0(slv_reg3[27]),
         .I1(s_finished),
-        .I2(slv_reg3[27]),
+        .I2(\slv_reg0_reg_n_0_[27] ),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[27]),
@@ -2391,11 +2398,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[3]),
         .O(reg_data_out[3]));
   LUT6 #(
-    .INIT(64'hAAFFCCF0AA00CCF0)) 
+    .INIT(64'hF0FFCCAAF000CCAA)) 
     \axi_rdata[4]_i_1 
-       (.I0(slv_reg3[4]),
+       (.I0(\slv_reg0_reg_n_0_[4] ),
         .I1(s_finished),
-        .I2(\slv_reg0_reg_n_0_[4] ),
+        .I2(slv_reg3[4]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[4]),
@@ -2441,11 +2448,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .I5(slv_reg2[8]),
         .O(reg_data_out[8]));
   LUT6 #(
-    .INIT(64'hF0FFCCAAF000CCAA)) 
+    .INIT(64'hAAFFCCF0AA00CCF0)) 
     \axi_rdata[9]_i_1 
-       (.I0(start_node_0[1]),
+       (.I0(slv_reg3[9]),
         .I1(s_finished),
-        .I2(slv_reg3[9]),
+        .I2(start_node_0[1]),
         .I3(axi_araddr[2]),
         .I4(axi_araddr[3]),
         .I5(slv_reg2[9]),
@@ -2455,194 +2462,194 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(slv_reg_rden),
         .D(reg_data_out[0]),
         .Q(s00_axi_rdata[0]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[10] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[10]),
         .Q(s00_axi_rdata[10]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[11] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[11]),
         .Q(s00_axi_rdata[11]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[12] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[12]),
         .Q(s00_axi_rdata[12]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[13] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[13]),
         .Q(s00_axi_rdata[13]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[14] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[14]),
         .Q(s00_axi_rdata[14]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[15] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[15]),
         .Q(s00_axi_rdata[15]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[16] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[16]),
         .Q(s00_axi_rdata[16]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[17] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[17]),
         .Q(s00_axi_rdata[17]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[18] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[18]),
         .Q(s00_axi_rdata[18]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[19] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[19]),
         .Q(s00_axi_rdata[19]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[1] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[1]),
         .Q(s00_axi_rdata[1]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[20] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[20]),
         .Q(s00_axi_rdata[20]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[21] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[21]),
         .Q(s00_axi_rdata[21]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[22] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[22]),
         .Q(s00_axi_rdata[22]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[23] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[23]),
         .Q(s00_axi_rdata[23]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[24] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[24]),
         .Q(s00_axi_rdata[24]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[25] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[25]),
         .Q(s00_axi_rdata[25]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[26] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[26]),
         .Q(s00_axi_rdata[26]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[27] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[27]),
         .Q(s00_axi_rdata[27]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[28] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[28]),
         .Q(s00_axi_rdata[28]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[29] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[29]),
         .Q(s00_axi_rdata[29]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[2] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[2]),
         .Q(s00_axi_rdata[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[30] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[30]),
         .Q(s00_axi_rdata[30]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[31] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[31]),
         .Q(s00_axi_rdata[31]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[3] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[3]),
         .Q(s00_axi_rdata[3]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[4] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[4]),
         .Q(s00_axi_rdata[4]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[5] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[5]),
         .Q(s00_axi_rdata[5]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[6] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[6]),
         .Q(s00_axi_rdata[6]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[7] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[7]),
         .Q(s00_axi_rdata[7]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[8] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[8]),
         .Q(s00_axi_rdata[8]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \axi_rdata_reg[9] 
        (.C(s00_axi_aclk),
         .CE(slv_reg_rden),
         .D(reg_data_out[9]),
         .Q(s00_axi_rdata[9]),
-        .R(DIJKSTRA_n_7));
-  (* SOFT_HLUTNM = "soft_lutpair51" *) 
+        .R(DIJKSTRA_n_2));
+  (* SOFT_HLUTNM = "soft_lutpair54" *) 
   LUT4 #(
     .INIT(16'h08F8)) 
     axi_rvalid_i_1
@@ -2656,8 +2663,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(axi_rvalid_i_1_n_0),
         .Q(s00_axi_rvalid),
-        .R(DIJKSTRA_n_7));
-  (* SOFT_HLUTNM = "soft_lutpair50" *) 
+        .R(DIJKSTRA_n_2));
+  (* SOFT_HLUTNM = "soft_lutpair53" *) 
   LUT4 #(
     .INIT(16'h0080)) 
     axi_wready_i_1
@@ -2671,13 +2678,13 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(1'b1),
         .D(axi_wready0),
         .Q(S_AXI_WREADY),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \s_finished_reg[31] 
        (.C(s00_axi_aclk),
         .CE(1'b1),
-        .D(DIJKSTRA_n_13),
+        .D(DIJKSTRA_n_14),
         .Q(s_finished),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT4 #(
     .INIT(16'h0200)) 
     \slv_reg0[15]_i_1 
@@ -2723,193 +2730,193 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
         .Q(en),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
         .Q(start_node_0[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
         .Q(start_node_0[3]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
         .Q(start_node_0[4]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
         .Q(\slv_reg0_reg_n_0_[13] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
         .Q(\slv_reg0_reg_n_0_[14] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
         .Q(\slv_reg0_reg_n_0_[15] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[16] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
         .Q(end_node[0]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[17] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(end_node[1]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[18] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(end_node[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[19] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(end_node[3]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
         .Q(\slv_reg0_reg_n_0_[1] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[20] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(end_node[4]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[21] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(\slv_reg0_reg_n_0_[21] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[22] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(\slv_reg0_reg_n_0_[22] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[23] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(\slv_reg0_reg_n_0_[23] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[24] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
         .Q(\slv_reg0_reg_n_0_[24] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[25] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
         .Q(\slv_reg0_reg_n_0_[25] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[26] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
         .Q(\slv_reg0_reg_n_0_[26] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[27] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
         .Q(\slv_reg0_reg_n_0_[27] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[28] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
         .Q(\slv_reg0_reg_n_0_[28] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[29] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
         .Q(\slv_reg0_reg_n_0_[29] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
         .Q(\slv_reg0_reg_n_0_[2] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[30] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
         .Q(\slv_reg0_reg_n_0_[30] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[31] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
         .Q(\slv_reg0_reg_n_0_[31] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
         .Q(\slv_reg0_reg_n_0_[3] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
         .Q(\slv_reg0_reg_n_0_[4] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
         .Q(\slv_reg0_reg_n_0_[5] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
         .Q(\slv_reg0_reg_n_0_[6] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
         .Q(\slv_reg0_reg_n_0_[7] ),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
         .Q(start_node_0[0]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg0_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg0[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
         .Q(start_node_0[1]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT4 #(
     .INIT(16'h0080)) 
     \slv_reg2[15]_i_1 
@@ -2947,193 +2954,193 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
         .Q(slv_reg2[0]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
         .Q(slv_reg2[10]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
         .Q(slv_reg2[11]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
         .Q(slv_reg2[12]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
         .Q(slv_reg2[13]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
         .Q(slv_reg2[14]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
         .Q(slv_reg2[15]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[16] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
         .Q(slv_reg2[16]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[17] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(slv_reg2[17]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[18] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(slv_reg2[18]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[19] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(slv_reg2[19]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
         .Q(slv_reg2[1]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[20] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(slv_reg2[20]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[21] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(slv_reg2[21]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[22] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(slv_reg2[22]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[23] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(slv_reg2[23]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[24] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
         .Q(slv_reg2[24]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[25] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
         .Q(slv_reg2[25]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[26] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
         .Q(slv_reg2[26]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[27] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
         .Q(slv_reg2[27]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[28] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
         .Q(slv_reg2[28]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[29] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
         .Q(slv_reg2[29]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
         .Q(slv_reg2[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[30] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
         .Q(slv_reg2[30]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[31] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
         .Q(slv_reg2[31]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
         .Q(slv_reg2[3]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
         .Q(slv_reg2[4]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
         .Q(slv_reg2[5]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
         .Q(slv_reg2[6]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
         .Q(slv_reg2[7]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
         .Q(slv_reg2[8]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg2_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg2[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
         .Q(slv_reg2[9]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   LUT4 #(
     .INIT(16'h8000)) 
     \slv_reg3[15]_i_1 
@@ -3171,307 +3178,319 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_Dijkstra_algorithm_v1_0_S00_AX
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[0]),
         .Q(slv_reg3[0]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[10] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[10]),
         .Q(slv_reg3[10]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[11] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[11]),
         .Q(slv_reg3[11]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[12] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[12]),
         .Q(slv_reg3[12]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[13] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[13]),
         .Q(slv_reg3[13]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[14] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[14]),
         .Q(slv_reg3[14]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[15] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[15]),
         .Q(slv_reg3[15]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[16] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[16]),
         .Q(slv_reg3[16]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[17] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[17]),
         .Q(slv_reg3[17]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[18] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[18]),
         .Q(slv_reg3[18]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[19] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[19]),
         .Q(slv_reg3[19]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[1] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[1]),
         .Q(slv_reg3[1]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[20] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[20]),
         .Q(slv_reg3[20]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[21] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[21]),
         .Q(slv_reg3[21]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[22] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[22]),
         .Q(slv_reg3[22]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[23] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[23]_i_1_n_0 ),
         .D(s00_axi_wdata[23]),
         .Q(slv_reg3[23]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[24] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[24]),
         .Q(slv_reg3[24]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[25] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[25]),
         .Q(slv_reg3[25]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[26] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[26]),
         .Q(slv_reg3[26]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[27] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[27]),
         .Q(slv_reg3[27]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[28] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[28]),
         .Q(slv_reg3[28]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[29] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[29]),
         .Q(slv_reg3[29]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[2] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[2]),
         .Q(slv_reg3[2]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[30] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[30]),
         .Q(slv_reg3[30]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[31] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[31]_i_1_n_0 ),
         .D(s00_axi_wdata[31]),
         .Q(slv_reg3[31]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[3] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[3]),
         .Q(slv_reg3[3]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[4] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[4]),
         .Q(slv_reg3[4]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[5] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[5]),
         .Q(slv_reg3[5]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[6] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[6]),
         .Q(slv_reg3[6]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[7] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[7]_i_1_n_0 ),
         .D(s00_axi_wdata[7]),
         .Q(slv_reg3[7]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[8] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[8]),
         .Q(slv_reg3[8]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
   FDRE \slv_reg3_reg[9] 
        (.C(s00_axi_aclk),
         .CE(\slv_reg3[15]_i_1_n_0 ),
         .D(s00_axi_wdata[9]),
         .Q(slv_reg3[9]),
-        .R(DIJKSTRA_n_7));
+        .R(DIJKSTRA_n_2));
 endmodule
 
 (* ORIG_REF_NAME = "NEAREST_NODE" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
-   (addr_ram_ext,
-    Q,
-    \s_next_node_reg[0]_0 ,
+   (\s_next_node_reg[0]_0 ,
     \s_next_node_reg[3]_0 ,
-    \s_next_node_reg[9]_0 ,
+    Q,
     \s_next_node_reg[4]_0 ,
     \FSM_onehot_current_state_reg[3]_0 ,
+    \s_next_node_reg[0]_1 ,
     \s_next_node_reg[2]_0 ,
     \s_next_node_reg[1]_0 ,
-    \s_next_node_reg[0]_1 ,
+    \s_next_node_reg[0]_2 ,
+    \FSM_onehot_current_state_reg[6]_0 ,
     en_ram_ext,
-    \FSM_onehot_current_state_reg[3]_1 ,
+    we_ram_ext,
+    \cpt_addr_reg[4]_0 ,
+    addr_ram_ext,
     D,
     NN_addr_ram,
+    \FSM_onehot_current_state_reg[2]_0 ,
     \s_next_node_reg[1]_1 ,
-    \s_next_node_reg[0]_2 ,
     \s_next_node_reg[0]_3 ,
+    \s_next_node_reg[0]_4 ,
     \s_next_node_reg[2]_1 ,
     \s_next_node_reg[2]_2 ,
     \s_next_node_reg[3]_1 ,
     din_ram_ext,
+    \FSM_sequential_current_state_reg[0] ,
     \s_next_node_reg[2]_3 ,
-    \s_next_node_reg[0]_4 ,
     \s_next_node_reg[2]_4 ,
     \s_next_node_reg[2]_5 ,
     \s_next_node_reg[2]_6 ,
     \s_next_node_reg[2]_7 ,
-    \s_next_node_reg[2]_8 ,
     s00_axi_aclk,
     \node_seen_reg[7] ,
     s00_axi_aresetn,
-    busy_ram_ext,
-    \FSM_onehot_current_state_reg[2]_0 ,
-    \s_next_node_reg[9]_1 ,
+    en_ram_ext_0,
     \FSM_onehot_current_state_reg[0]_0 ,
-    \FSM_onehot_current_state_reg[3]_2 ,
-    \FSM_onehot_current_state_reg[6]_0 ,
-    \FSM_onehot_current_state_reg[4]_0 ,
-    \s_next_node_reg[9]_2 ,
+    busy_ram_ext,
+    \FSM_onehot_current_state_reg[3]_1 ,
+    \FSM_onehot_current_state_reg[2]_1 ,
+    \s_next_node_reg[9]_0 ,
+    \data_out_b[9]_i_10 ,
+    \s_next_node_reg[9]_1 ,
     \node_seen_reg[6] ,
-    \FSM_onehot_current_state_reg[1]_0 );
-  output [5:0]addr_ram_ext;
-  output [4:0]Q;
+    \din_ram_ext[4] ,
+    \FSM_onehot_current_state_reg[4]_0 ,
+    \FSM_onehot_current_state_reg[1]_0 ,
+    \FSM_onehot_current_state_reg[5]_0 );
   output \s_next_node_reg[0]_0 ;
   output \s_next_node_reg[3]_0 ;
-  output [9:0]\s_next_node_reg[9]_0 ;
+  output [9:0]Q;
   output \s_next_node_reg[4]_0 ;
   output \FSM_onehot_current_state_reg[3]_0 ;
+  output \s_next_node_reg[0]_1 ;
   output \s_next_node_reg[2]_0 ;
   output \s_next_node_reg[1]_0 ;
-  output \s_next_node_reg[0]_1 ;
+  output \s_next_node_reg[0]_2 ;
+  output [2:0]\FSM_onehot_current_state_reg[6]_0 ;
   output en_ram_ext;
-  output [1:0]\FSM_onehot_current_state_reg[3]_1 ;
+  output we_ram_ext;
+  output [4:0]\cpt_addr_reg[4]_0 ;
+  output [5:0]addr_ram_ext;
   output [9:0]D;
   output [4:0]NN_addr_ram;
+  output \FSM_onehot_current_state_reg[2]_0 ;
   output \s_next_node_reg[1]_1 ;
-  output \s_next_node_reg[0]_2 ;
   output \s_next_node_reg[0]_3 ;
+  output \s_next_node_reg[0]_4 ;
   output \s_next_node_reg[2]_1 ;
   output \s_next_node_reg[2]_2 ;
   output \s_next_node_reg[3]_1 ;
   output [4:0]din_ram_ext;
+  output \FSM_sequential_current_state_reg[0] ;
   output \s_next_node_reg[2]_3 ;
-  output \s_next_node_reg[0]_4 ;
   output \s_next_node_reg[2]_4 ;
   output \s_next_node_reg[2]_5 ;
   output \s_next_node_reg[2]_6 ;
   output \s_next_node_reg[2]_7 ;
-  output \s_next_node_reg[2]_8 ;
   input s00_axi_aclk;
   input [1:0]\node_seen_reg[7] ;
   input s00_axi_aresetn;
-  input busy_ram_ext;
-  input \FSM_onehot_current_state_reg[2]_0 ;
-  input [9:0]\s_next_node_reg[9]_1 ;
+  input en_ram_ext_0;
   input \FSM_onehot_current_state_reg[0]_0 ;
-  input \FSM_onehot_current_state_reg[3]_2 ;
-  input \FSM_onehot_current_state_reg[6]_0 ;
-  input [0:0]\FSM_onehot_current_state_reg[4]_0 ;
-  input [9:0]\s_next_node_reg[9]_2 ;
+  input busy_ram_ext;
+  input \FSM_onehot_current_state_reg[3]_1 ;
+  input \FSM_onehot_current_state_reg[2]_1 ;
+  input [9:0]\s_next_node_reg[9]_0 ;
+  input \data_out_b[9]_i_10 ;
+  input [9:0]\s_next_node_reg[9]_1 ;
   input [4:0]\node_seen_reg[6] ;
+  input [4:0]\din_ram_ext[4] ;
+  input \FSM_onehot_current_state_reg[4]_0 ;
   input \FSM_onehot_current_state_reg[1]_0 ;
+  input [0:0]\FSM_onehot_current_state_reg[5]_0 ;
 
   wire [9:0]D;
   wire \FSM_onehot_current_state[0]_i_1_n_0 ;
   wire \FSM_onehot_current_state[1]_i_1__0_n_0 ;
-  wire \FSM_onehot_current_state[1]_i_2_n_0 ;
   wire \FSM_onehot_current_state[2]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[2]_i_3_n_0 ;
   wire \FSM_onehot_current_state[3]_i_1_n_0 ;
   wire \FSM_onehot_current_state[4]_i_1_n_0 ;
-  wire \FSM_onehot_current_state[5]_i_1_n_0 ;
   wire \FSM_onehot_current_state[6]_i_1_n_0 ;
+  wire \FSM_onehot_current_state[6]_i_2_n_0 ;
   wire \FSM_onehot_current_state[6]_i_3_n_0 ;
   wire \FSM_onehot_current_state_reg[0]_0 ;
   wire \FSM_onehot_current_state_reg[1]_0 ;
   wire \FSM_onehot_current_state_reg[2]_0 ;
+  wire \FSM_onehot_current_state_reg[2]_1 ;
   wire \FSM_onehot_current_state_reg[3]_0 ;
-  wire [1:0]\FSM_onehot_current_state_reg[3]_1 ;
-  wire \FSM_onehot_current_state_reg[3]_2 ;
-  wire [0:0]\FSM_onehot_current_state_reg[4]_0 ;
-  wire \FSM_onehot_current_state_reg[6]_0 ;
+  wire \FSM_onehot_current_state_reg[3]_1 ;
+  wire \FSM_onehot_current_state_reg[4]_0 ;
+  wire [0:0]\FSM_onehot_current_state_reg[5]_0 ;
+  wire [2:0]\FSM_onehot_current_state_reg[6]_0 ;
   wire \FSM_onehot_current_state_reg_n_0_[0] ;
   wire \FSM_onehot_current_state_reg_n_0_[2] ;
-  wire \FSM_onehot_current_state_reg_n_0_[5] ;
-  wire \FSM_onehot_current_state_reg_n_0_[6] ;
+  wire \FSM_sequential_current_state_reg[0] ;
   wire [4:0]NN_addr_ram;
-  wire [4:0]Q;
+  wire [9:0]Q;
   wire [5:0]addr_ram_ext;
+  wire \addr_ram_ext[3]_INST_0_i_1_n_0 ;
   wire busy_ram_ext;
   wire comp;
+  wire comp_0;
   wire comp_i_1_n_0;
   wire \comp_out[0]_i_2__0_n_0 ;
   wire \comp_out[0]_i_3__0_n_0 ;
@@ -3501,16 +3520,23 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
   wire \cpt_addr[3]_i_1_n_0 ;
   wire \cpt_addr[4]_i_1_n_0 ;
   wire \cpt_addr[4]_i_3_n_0 ;
+  wire [4:0]\cpt_addr_reg[4]_0 ;
+  wire \data_out_b[9]_i_10 ;
   wire \data_out_b[9]_i_13_n_0 ;
   wire \data_out_b[9]_i_16_n_0 ;
   wire \data_out_b[9]_i_19_n_0 ;
   wire \data_out_b[9]_i_22_n_0 ;
   wire \data_out_b[9]_i_23_n_0 ;
-  wire \data_out_b[9]_i_24_n_0 ;
-  wire \data_out_b[9]_i_25_n_0 ;
   wire [4:0]din_ram_ext;
-  wire \din_ram_ext[4]_INST_0_i_1_n_0 ;
+  wire \din_ram_ext[0]_INST_0_i_1_n_0 ;
+  wire \din_ram_ext[1]_INST_0_i_1_n_0 ;
+  wire \din_ram_ext[2]_INST_0_i_1_n_0 ;
+  wire \din_ram_ext[3]_INST_0_i_1_n_0 ;
+  wire [4:0]\din_ram_ext[4] ;
+  wire \din_ram_ext[4]_INST_0_i_2_n_0 ;
+  wire \din_ram_ext[4]_INST_0_i_3_n_0 ;
   wire en_ram_ext;
+  wire en_ram_ext_0;
   wire \node_seen[6]_i_4_n_0 ;
   wire [4:0]\node_seen_reg[6] ;
   wire [1:0]\node_seen_reg[7] ;
@@ -3533,91 +3559,93 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
   wire \s_next_node_reg[2]_5 ;
   wire \s_next_node_reg[2]_6 ;
   wire \s_next_node_reg[2]_7 ;
-  wire \s_next_node_reg[2]_8 ;
   wire \s_next_node_reg[3]_0 ;
   wire \s_next_node_reg[3]_1 ;
   wire \s_next_node_reg[4]_0 ;
   wire [9:0]\s_next_node_reg[9]_0 ;
   wire [9:0]\s_next_node_reg[9]_1 ;
-  wire [9:0]\s_next_node_reg[9]_2 ;
+  wire we_ram_ext;
 
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT4 #(
-    .INIT(16'hFEAA)) 
+    .INIT(16'hFAF8)) 
     \FSM_onehot_current_state[0]_i_1 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I2(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I3(\FSM_onehot_current_state_reg[0]_0 ),
+       (.I0(\FSM_onehot_current_state_reg[0]_0 ),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I3(\FSM_onehot_current_state_reg_n_0_[0] ),
         .O(\FSM_onehot_current_state[0]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
   LUT2 #(
     .INIT(4'h8)) 
     \FSM_onehot_current_state[1]_i_1__0 
-       (.I0(\FSM_onehot_current_state[1]_i_2_n_0 ),
-        .I1(\FSM_onehot_current_state_reg[2]_0 ),
+       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
+        .I1(\FSM_onehot_current_state_reg[2]_1 ),
         .O(\FSM_onehot_current_state[1]_i_1__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hAAAAAAAAAAAAAAA8)) 
-    \FSM_onehot_current_state[1]_i_2 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(Q[4]),
-        .I2(Q[2]),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .I5(Q[3]),
-        .O(\FSM_onehot_current_state[1]_i_2_n_0 ));
   LUT5 #(
-    .INIT(32'hFF4F4444)) 
+    .INIT(32'hD0FFD0D0)) 
     \FSM_onehot_current_state[2]_i_1 
-       (.I0(\FSM_onehot_current_state_reg[3]_2 ),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I2(\FSM_onehot_current_state_reg[2]_0 ),
-        .I3(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
+        .I1(\FSM_onehot_current_state[2]_i_3_n_0 ),
+        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I3(busy_ram_ext),
+        .I4(en_ram_ext_0),
         .O(\FSM_onehot_current_state[2]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hBAAA)) 
-    \FSM_onehot_current_state[3]_i_1 
-       (.I0(p_1_in),
-        .I1(\FSM_onehot_current_state_reg[0]_0 ),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I3(\FSM_onehot_current_state_reg[3]_2 ),
-        .O(\FSM_onehot_current_state[3]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT4 #(
-    .INIT(16'hA888)) 
-    \FSM_onehot_current_state[4]_i_1 
-       (.I0(\FSM_onehot_current_state[6]_i_3_n_0 ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I3(\FSM_onehot_current_state_reg[4]_0 ),
-        .O(\FSM_onehot_current_state[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair29" *) 
-  LUT2 #(
-    .INIT(4'h2)) 
-    \FSM_onehot_current_state[5]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(\FSM_onehot_current_state_reg[6]_0 ),
-        .O(\FSM_onehot_current_state[5]_i_1_n_0 ));
-  LUT6 #(
-    .INIT(64'h00EA00EAFFFF00EA)) 
-    \FSM_onehot_current_state[6]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I2(\FSM_onehot_current_state_reg[6]_0 ),
-        .I3(\FSM_onehot_current_state[6]_i_3_n_0 ),
-        .I4(\FSM_onehot_current_state_reg_n_0_[0] ),
-        .I5(\FSM_onehot_current_state_reg[0]_0 ),
-        .O(\FSM_onehot_current_state[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  LUT5 #(
+    .INIT(32'h00000001)) 
+    \FSM_onehot_current_state[2]_i_3 
+       (.I0(\cpt_addr_reg[4]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
+        .I2(\cpt_addr_reg[4]_0 [1]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\cpt_addr_reg[4]_0 [3]),
+        .O(\FSM_onehot_current_state[2]_i_3_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
+    .INIT(32'hAAAAFEAA)) 
+    \FSM_onehot_current_state[3]_i_1 
+       (.I0(p_1_in),
+        .I1(busy_ram_ext),
+        .I2(\FSM_onehot_current_state_reg[3]_1 ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(\FSM_onehot_current_state_reg[0]_0 ),
+        .O(\FSM_onehot_current_state[3]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h00000000FFFE0000)) 
+    \FSM_onehot_current_state[4]_i_1 
+       (.I0(\cpt_addr_reg[4]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
+        .I2(\cpt_addr_reg[4]_0 [1]),
+        .I3(\cpt_addr_reg[4]_0 [3]),
+        .I4(\cpt_addr_reg[4]_0 [4]),
+        .I5(\FSM_onehot_current_state[6]_i_2_n_0 ),
+        .O(\FSM_onehot_current_state[4]_i_1_n_0 ));
+  LUT6 #(
+    .INIT(64'h444F4F4F444F444F)) 
+    \FSM_onehot_current_state[6]_i_1 
+       (.I0(\FSM_onehot_current_state_reg[0]_0 ),
+        .I1(\FSM_onehot_current_state_reg_n_0_[0] ),
+        .I2(\FSM_onehot_current_state[6]_i_2_n_0 ),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\cpt_addr_reg[4]_0 [3]),
+        .I5(\FSM_onehot_current_state[6]_i_3_n_0 ),
+        .O(\FSM_onehot_current_state[6]_i_1_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  LUT3 #(
+    .INIT(8'h0D)) 
+    \FSM_onehot_current_state[6]_i_2 
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(\FSM_onehot_current_state_reg[4]_0 ),
+        .I2(comp_0),
+        .O(\FSM_onehot_current_state[6]_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT3 #(
+    .INIT(8'h01)) 
     \FSM_onehot_current_state[6]_i_3 
-       (.I0(Q[4]),
-        .I1(Q[3]),
-        .I2(Q[1]),
-        .I3(Q[0]),
-        .I4(Q[2]),
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
+        .I2(\cpt_addr_reg[4]_0 [2]),
         .O(\FSM_onehot_current_state[6]_i_3_n_0 ));
   (* FSM_ENCODED_STATES = "compare:0100000,read_ram:1000000,buff:0010000,idle:0000001,nearest_node:0001000,write_ram_ext:0000100,write_nb_nodes:0000010" *) 
   FDPE #(
@@ -3636,7 +3664,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
         .CE(1'b1),
         .CLR(\FSM_onehot_current_state_reg[1]_0 ),
         .D(\FSM_onehot_current_state[1]_i_1__0_n_0 ),
-        .Q(\FSM_onehot_current_state_reg[3]_1 [0]));
+        .Q(\FSM_onehot_current_state_reg[6]_0 [0]));
   (* FSM_ENCODED_STATES = "compare:0100000,read_ram:1000000,buff:0010000,idle:0000001,nearest_node:0001000,write_ram_ext:0000100,write_nb_nodes:0000010" *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -3654,7 +3682,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
         .CE(1'b1),
         .CLR(\FSM_onehot_current_state_reg[1]_0 ),
         .D(\FSM_onehot_current_state[3]_i_1_n_0 ),
-        .Q(\FSM_onehot_current_state_reg[3]_1 [1]));
+        .Q(\FSM_onehot_current_state_reg[6]_0 [1]));
   (* FSM_ENCODED_STATES = "compare:0100000,read_ram:1000000,buff:0010000,idle:0000001,nearest_node:0001000,write_ram_ext:0000100,write_nb_nodes:0000010" *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -3671,8 +3699,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .CLR(\FSM_onehot_current_state_reg[1]_0 ),
-        .D(\FSM_onehot_current_state[5]_i_1_n_0 ),
-        .Q(\FSM_onehot_current_state_reg_n_0_[5] ));
+        .D(\FSM_onehot_current_state_reg[5]_0 ),
+        .Q(comp_0));
   (* FSM_ENCODED_STATES = "compare:0100000,read_ram:1000000,buff:0010000,idle:0000001,nearest_node:0001000,write_ram_ext:0000100,write_nb_nodes:0000010" *) 
   FDCE #(
     .INIT(1'b0)) 
@@ -3681,965 +3709,1014 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE
         .CE(1'b1),
         .CLR(\FSM_onehot_current_state_reg[1]_0 ),
         .D(\FSM_onehot_current_state[6]_i_1_n_0 ),
-        .Q(\FSM_onehot_current_state_reg_n_0_[6] ));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+        .Q(\FSM_onehot_current_state_reg[6]_0 [2]));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \addr_ram_ext[0]_INST_0 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(Q[0]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
         .O(addr_ram_ext[0]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
-  LUT4 #(
-    .INIT(16'hEBAA)) 
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT5 #(
+    .INIT(32'hFEEFEEEE)) 
     \addr_ram_ext[1]_INST_0 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(addr_ram_ext[1]));
-  (* SOFT_HLUTNM = "soft_lutpair25" *) 
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
     .INIT(16'h02A8)) 
     \addr_ram_ext[2]_INST_0 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
+        .I2(\cpt_addr_reg[4]_0 [1]),
+        .I3(\cpt_addr_reg[4]_0 [2]),
         .O(addr_ram_ext[2]));
   LUT6 #(
-    .INIT(64'hEBEBEBBBAAAAAAAA)) 
+    .INIT(64'hFFFFFFFF99950000)) 
     \addr_ram_ext[3]_INST_0 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I1(Q[3]),
-        .I2(Q[2]),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\cpt_addr_reg[4]_0 [3]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I5(\addr_ram_ext[3]_INST_0_i_1_n_0 ),
         .O(addr_ram_ext[3]));
+  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  LUT2 #(
+    .INIT(4'hE)) 
+    \addr_ram_ext[3]_INST_0_i_1 
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .O(\addr_ram_ext[3]_INST_0_i_1_n_0 ));
   LUT6 #(
-    .INIT(64'h1115EEEA00000000)) 
+    .INIT(64'h02020222A8A8A888)) 
     \addr_ram_ext[4]_INST_0 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(Q[4]),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I1(\cpt_addr_reg[4]_0 [3]),
+        .I2(\cpt_addr_reg[4]_0 [2]),
+        .I3(\cpt_addr_reg[4]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
+        .I5(\cpt_addr_reg[4]_0 [4]),
         .O(addr_ram_ext[4]));
   LUT6 #(
     .INIT(64'h28A8A88800000000)) 
     \addr_ram_ext[5]_INST_0 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(Q[3]),
-        .I2(Q[2]),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .I5(Q[4]),
+        .I1(\cpt_addr_reg[4]_0 [3]),
+        .I2(\cpt_addr_reg[4]_0 [2]),
+        .I3(\cpt_addr_reg[4]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
+        .I5(\cpt_addr_reg[4]_0 [4]),
         .O(addr_ram_ext[5]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
+  (* SOFT_HLUTNM = "soft_lutpair27" *) 
   LUT4 #(
     .INIT(16'h0BAA)) 
     comp_i_1
        (.I0(comp),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I2(comp_0),
         .I3(s00_axi_aresetn),
         .O(comp_i_1_n_0));
   LUT6 #(
-    .INIT(64'h8888BB88BBB8BBB8)) 
+    .INIT(64'h0CEEFFFF0CEE0000)) 
     \comp_out[0]_i_1__0 
-       (.I0(\comp_out[0]_i_2__0_n_0 ),
-        .I1(\comp_out[8]_i_2_n_0 ),
-        .I2(comp),
-        .I3(\s_next_node_reg[9]_2 [0]),
-        .I4(\comp_out[9]_i_2_n_0 ),
+       (.I0(comp),
+        .I1(\s_next_node_reg[9]_1 [0]),
+        .I2(\comp_out[9]_i_2_n_0 ),
+        .I3(\comp_out[0]_i_2__0_n_0 ),
+        .I4(\comp_out[8]_i_3_n_0 ),
         .I5(\comp_out[0]_i_3__0_n_0 ),
         .O(D[0]));
-  (* SOFT_HLUTNM = "soft_lutpair24" *) 
-  LUT2 #(
-    .INIT(4'hB)) 
-    \comp_out[0]_i_2__0 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[0]),
-        .O(\comp_out[0]_i_2__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT2 #(
     .INIT(4'h1)) 
+    \comp_out[0]_i_2__0 
+       (.I0(comp_0),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .O(\comp_out[0]_i_2__0_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  LUT2 #(
+    .INIT(4'hB)) 
     \comp_out[0]_i_3__0 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
         .O(\comp_out[0]_i_3__0_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT5 #(
-    .INIT(32'hEBFFEB00)) 
+    .INIT(32'hBBB8B8BB)) 
     \comp_out[1]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(\comp_out[8]_i_2_n_0 ),
-        .I4(\comp_out[1]_i_2__0_n_0 ),
+       (.I0(\comp_out[1]_i_2__0_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\cpt_addr_reg[4]_0 [0]),
         .O(D[1]));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[1]_i_2__0 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [1]),
+        .I1(\s_next_node_reg[9]_1 [1]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[1]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFEABFFFFFEAB0000)) 
+    .INIT(64'hBBBBBBB8B8B8B8BB)) 
     \comp_out[2]_i_1__0 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[2]),
-        .I4(\comp_out[8]_i_2_n_0 ),
-        .I5(\comp_out[2]_i_2__0_n_0 ),
+       (.I0(\comp_out[2]_i_2__0_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I3(\cpt_addr_reg[4]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
+        .I5(\cpt_addr_reg[4]_0 [2]),
         .O(D[2]));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[2]_i_2__0 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [2]),
+        .I1(\s_next_node_reg[9]_1 [2]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[2]_i_2__0_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEEEEEEEEEEECCC0)) 
-    \comp_out[3]_i_2__0 
-       (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [3]),
-        .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .O(\comp_out[3]_i_2__0_n_0 ));
   LUT5 #(
     .INIT(32'hFFFEAAAB)) 
+    \comp_out[3]_i_2__0 
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [1]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [2]),
+        .I4(\cpt_addr_reg[4]_0 [3]),
+        .O(\comp_out[3]_i_2__0_n_0 ));
+  LUT6 #(
+    .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[3]_i_3__0 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[2]),
-        .I4(Q[3]),
+       (.I0(comp),
+        .I1(\s_next_node_reg[9]_1 [3]),
+        .I2(p_1_in),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[3]_i_3__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFEFFF0FFFE0000)) 
+    .INIT(64'hFFFFFFFEAAAAAAAB)) 
     \comp_out[4]_i_2__0 
-       (.I0(p_1_in),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I4(\s_next_node_reg[9]_2 [4]),
-        .I5(comp),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\cpt_addr_reg[4]_0 [3]),
+        .I5(\cpt_addr_reg[4]_0 [4]),
         .O(\comp_out[4]_i_2__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFFFFFEAAAAAAAB)) 
+    .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[4]_i_3 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .I3(Q[1]),
-        .I4(Q[3]),
-        .I5(Q[4]),
+       (.I0(comp),
+        .I1(\s_next_node_reg[9]_1 [4]),
+        .I2(p_1_in),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[4]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hFFD0FFFFFFD00000)) 
+    .INIT(64'hBBBBBBBBBB8B8888)) 
     \comp_out[5]_i_1 
-       (.I0(\comp_out[9]_i_2_n_0 ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\s_next_node_reg[9]_1 [5]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I4(\comp_out[8]_i_2_n_0 ),
-        .I5(\comp_out[5]_i_2_n_0 ),
+       (.I0(\comp_out[5]_i_2_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\comp_out[9]_i_2_n_0 ),
+        .I3(comp_0),
+        .I4(\s_next_node_reg[9]_0 [5]),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(D[5]));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[5]_i_2 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [5]),
+        .I1(\s_next_node_reg[9]_1 [5]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[5]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFD0FFFFFFD00000)) 
+    .INIT(64'hBBBBBBBBBB8B8888)) 
     \comp_out[6]_i_1 
-       (.I0(\comp_out[9]_i_2_n_0 ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\s_next_node_reg[9]_1 [6]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I4(\comp_out[8]_i_2_n_0 ),
-        .I5(\comp_out[6]_i_2_n_0 ),
+       (.I0(\comp_out[6]_i_2_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\comp_out[9]_i_2_n_0 ),
+        .I3(comp_0),
+        .I4(\s_next_node_reg[9]_0 [6]),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(D[6]));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[6]_i_2 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [6]),
+        .I1(\s_next_node_reg[9]_1 [6]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[6]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFD0FFFFFFD00000)) 
+    .INIT(64'hBBBBBBBBBB8B8888)) 
     \comp_out[7]_i_1 
-       (.I0(\comp_out[9]_i_2_n_0 ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\s_next_node_reg[9]_1 [7]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I4(\comp_out[8]_i_2_n_0 ),
-        .I5(\comp_out[7]_i_2_n_0 ),
+       (.I0(\comp_out[7]_i_2_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\comp_out[9]_i_2_n_0 ),
+        .I3(comp_0),
+        .I4(\s_next_node_reg[9]_0 [7]),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(D[7]));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
     \comp_out[7]_i_2 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [7]),
+        .I1(\s_next_node_reg[9]_1 [7]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[7]_i_2_n_0 ));
   LUT6 #(
-    .INIT(64'hFFD0FFFFFFD00000)) 
+    .INIT(64'hBBBBBBBBBB8B8888)) 
     \comp_out[8]_i_1 
-       (.I0(\comp_out[9]_i_2_n_0 ),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I2(\s_next_node_reg[9]_1 [8]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I4(\comp_out[8]_i_2_n_0 ),
-        .I5(\comp_out[8]_i_3_n_0 ),
+       (.I0(\comp_out[8]_i_2_n_0 ),
+        .I1(\comp_out[8]_i_3_n_0 ),
+        .I2(\comp_out[9]_i_2_n_0 ),
+        .I3(comp_0),
+        .I4(\s_next_node_reg[9]_0 [8]),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(D[8]));
-  LUT5 #(
-    .INIT(32'hFFFFFE00)) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  LUT4 #(
+    .INIT(16'hFFFE)) 
     \comp_out[8]_i_10 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\s_next_node_reg[9]_1 [7]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(comp_0),
+        .I2(p_1_in),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
         .O(\comp_out[8]_i_10_n_0 ));
-  LUT5 #(
-    .INIT(32'h71FF0071)) 
-    \comp_out[8]_i_2 
-       (.I0(\comp_out[8]_i_4_n_0 ),
-        .I1(\comp_out[8]_i_5_n_0 ),
-        .I2(\comp_out[8]_i_3_n_0 ),
-        .I3(\comp_out[8]_i_6_n_0 ),
-        .I4(\comp_out[8]_i_7_n_0 ),
-        .O(\comp_out[8]_i_2_n_0 ));
   LUT6 #(
     .INIT(64'hEEEEEEEEEEEECCC0)) 
-    \comp_out[8]_i_3 
+    \comp_out[8]_i_2 
        (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [8]),
+        .I1(\s_next_node_reg[9]_1 [8]),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .O(\comp_out[8]_i_2_n_0 ));
+  LUT5 #(
+    .INIT(32'h8E88EEEE)) 
+    \comp_out[8]_i_3 
+       (.I0(\comp_out[8]_i_4_n_0 ),
+        .I1(\comp_out[8]_i_5_n_0 ),
+        .I2(\comp_out[8]_i_2_n_0 ),
+        .I3(\comp_out[8]_i_6_n_0 ),
+        .I4(\comp_out[8]_i_7_n_0 ),
         .O(\comp_out[8]_i_3_n_0 ));
   LUT6 #(
-    .INIT(64'hBB2B0000FFFFBB2B)) 
+    .INIT(64'h111111111111333F)) 
     \comp_out[8]_i_4 
-       (.I0(\comp_out[8]_i_8_n_0 ),
-        .I1(\comp_out[6]_i_2_n_0 ),
-        .I2(\comp_out[5]_i_2_n_0 ),
-        .I3(\comp_out[8]_i_9_n_0 ),
-        .I4(\comp_out[8]_i_10_n_0 ),
-        .I5(\comp_out[7]_i_2_n_0 ),
+       (.I0(comp),
+        .I1(\s_next_node_reg[9]_1 [9]),
+        .I2(p_1_in),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I4(comp_0),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[8]_i_4_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFFE00)) 
     \comp_out[8]_i_5 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\s_next_node_reg[9]_1 [8]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I2(comp_0),
+        .I3(\s_next_node_reg[9]_0 [9]),
+        .I4(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[8]_i_5_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT5 #(
     .INIT(32'hFFFFFE00)) 
     \comp_out[8]_i_6 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\s_next_node_reg[9]_1 [9]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I2(comp_0),
+        .I3(\s_next_node_reg[9]_0 [8]),
+        .I4(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[8]_i_6_n_0 ));
-  LUT6 #(
-    .INIT(64'hEEEEEEEEEEEECCC0)) 
-    \comp_out[8]_i_7 
-       (.I0(comp),
-        .I1(\s_next_node_reg[9]_2 [9]),
-        .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .O(\comp_out[8]_i_7_n_0 ));
   LUT5 #(
-    .INIT(32'hFFFFFE00)) 
+    .INIT(32'h8E8EFF8E)) 
+    \comp_out[8]_i_7 
+       (.I0(\comp_out[8]_i_8_n_0 ),
+        .I1(\comp_out[7]_i_2_n_0 ),
+        .I2(\comp_out[8]_i_9_n_0 ),
+        .I3(\comp_out[8]_i_2_n_0 ),
+        .I4(\comp_out[8]_i_6_n_0 ),
+        .O(\comp_out[8]_i_7_n_0 ));
+  LUT6 #(
+    .INIT(64'h02FF02AA23FF02AA)) 
     \comp_out[8]_i_8 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\s_next_node_reg[9]_1 [6]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\comp_out[6]_i_2_n_0 ),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I2(\s_next_node_reg[9]_0 [6]),
+        .I3(\comp_out[8]_i_10_n_0 ),
+        .I4(\comp_out[5]_i_2_n_0 ),
+        .I5(\s_next_node_reg[9]_0 [5]),
         .O(\comp_out[8]_i_8_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair23" *) 
   LUT5 #(
     .INIT(32'hFFFFFE00)) 
     \comp_out[8]_i_9 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(\s_next_node_reg[9]_1 [5]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I2(comp_0),
+        .I3(\s_next_node_reg[9]_0 [7]),
+        .I4(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\comp_out[8]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hECEEECECECEE0000)) 
     \comp_out[9]_i_1 
-       (.I0(\s_next_node_reg[9]_1 [9]),
-        .I1(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
+       (.I0(\s_next_node_reg[9]_0 [9]),
+        .I1(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I2(comp_0),
         .I3(\comp_out[9]_i_2_n_0 ),
-        .I4(\s_next_node_reg[9]_2 [9]),
+        .I4(\s_next_node_reg[9]_1 [9]),
         .I5(comp),
         .O(D[9]));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+  (* SOFT_HLUTNM = "soft_lutpair16" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \comp_out[9]_i_2 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I1(p_1_in),
         .O(\comp_out[9]_i_2_n_0 ));
   MUXF7 \comp_out_reg[3]_i_1 
        (.I0(\comp_out[3]_i_2__0_n_0 ),
         .I1(\comp_out[3]_i_3__0_n_0 ),
         .O(D[3]),
-        .S(\comp_out[8]_i_2_n_0 ));
+        .S(\comp_out[8]_i_3_n_0 ));
   MUXF7 \comp_out_reg[4]_i_1 
        (.I0(\comp_out[4]_i_2__0_n_0 ),
         .I1(\comp_out[4]_i_3_n_0 ),
         .O(D[4]),
-        .S(\comp_out[8]_i_2_n_0 ));
+        .S(\comp_out[8]_i_3_n_0 ));
   FDRE comp_reg
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(comp_i_1_n_0),
         .Q(comp),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair35" *) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \cpt_addr[0]_i_1 
-       (.I0(Q[0]),
+       (.I0(\cpt_addr_reg[4]_0 [0]),
         .O(\cpt_addr[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair17" *) 
+  (* SOFT_HLUTNM = "soft_lutpair18" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \cpt_addr[1]_i_1 
-       (.I0(Q[0]),
-        .I1(Q[1]),
+       (.I0(\cpt_addr_reg[4]_0 [0]),
+        .I1(\cpt_addr_reg[4]_0 [1]),
         .O(\cpt_addr[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \cpt_addr[2]_i_1 
-       (.I0(Q[2]),
-        .I1(Q[1]),
-        .I2(Q[0]),
+       (.I0(\cpt_addr_reg[4]_0 [2]),
+        .I1(\cpt_addr_reg[4]_0 [1]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
         .O(\cpt_addr[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+  (* SOFT_HLUTNM = "soft_lutpair29" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \cpt_addr[3]_i_1 
-       (.I0(Q[3]),
-        .I1(Q[2]),
-        .I2(Q[0]),
-        .I3(Q[1]),
+       (.I0(\cpt_addr_reg[4]_0 [3]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
         .O(\cpt_addr[3]_i_1_n_0 ));
   LUT4 #(
     .INIT(16'h0004)) 
     \cpt_addr[4]_i_1 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
         .I1(s00_axi_aresetn),
         .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[5] ),
+        .I3(comp_0),
         .O(\cpt_addr[4]_i_1_n_0 ));
-  LUT4 #(
-    .INIT(16'hAA08)) 
+  LUT3 #(
+    .INIT(8'hA8)) 
     \cpt_addr[4]_i_2 
        (.I0(s00_axi_aresetn),
         .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I2(busy_ram_ext),
-        .I3(\FSM_onehot_current_state_reg_n_0_[6] ),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(cpt_addr0));
-  (* SOFT_HLUTNM = "soft_lutpair16" *) 
+  (* SOFT_HLUTNM = "soft_lutpair17" *) 
   LUT5 #(
     .INIT(32'h7FFF8000)) 
     \cpt_addr[4]_i_3 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .I4(Q[4]),
+       (.I0(\cpt_addr_reg[4]_0 [3]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\cpt_addr_reg[4]_0 [4]),
         .O(\cpt_addr[4]_i_3_n_0 ));
   FDRE \cpt_addr_reg[0] 
        (.C(s00_axi_aclk),
         .CE(cpt_addr0),
         .D(\cpt_addr[0]_i_1_n_0 ),
-        .Q(Q[0]),
+        .Q(\cpt_addr_reg[4]_0 [0]),
         .R(\cpt_addr[4]_i_1_n_0 ));
   FDRE \cpt_addr_reg[1] 
        (.C(s00_axi_aclk),
         .CE(cpt_addr0),
         .D(\cpt_addr[1]_i_1_n_0 ),
-        .Q(Q[1]),
+        .Q(\cpt_addr_reg[4]_0 [1]),
         .R(\cpt_addr[4]_i_1_n_0 ));
   FDRE \cpt_addr_reg[2] 
        (.C(s00_axi_aclk),
         .CE(cpt_addr0),
         .D(\cpt_addr[2]_i_1_n_0 ),
-        .Q(Q[2]),
+        .Q(\cpt_addr_reg[4]_0 [2]),
         .R(\cpt_addr[4]_i_1_n_0 ));
   FDRE \cpt_addr_reg[3] 
        (.C(s00_axi_aclk),
         .CE(cpt_addr0),
         .D(\cpt_addr[3]_i_1_n_0 ),
-        .Q(Q[3]),
+        .Q(\cpt_addr_reg[4]_0 [3]),
         .R(\cpt_addr[4]_i_1_n_0 ));
   FDRE \cpt_addr_reg[4] 
        (.C(s00_axi_aclk),
         .CE(cpt_addr0),
         .D(\cpt_addr[4]_i_3_n_0 ),
-        .Q(Q[4]),
+        .Q(\cpt_addr_reg[4]_0 [4]),
         .R(\cpt_addr[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair20" *) 
-  LUT5 #(
-    .INIT(32'hAAFCFE00)) 
+  LUT6 #(
+    .INIT(64'hFFFFFFFFFF404040)) 
     \data_out_b[9]_i_13 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(Q[4]),
-        .I4(\data_out_b[9]_i_22_n_0 ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
+        .I1(\s_next_node_reg[9]_0 [4]),
+        .I2(\FSM_onehot_current_state_reg[2]_0 ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I4(\cpt_addr_reg[4]_0 [4]),
+        .I5(\din_ram_ext[4]_INST_0_i_2_n_0 ),
         .O(\data_out_b[9]_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hB0B0B0B0B0B0B0A3)) 
+    .INIT(64'hFFFF000155540001)) 
     \data_out_b[9]_i_16 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(\data_out_b[9]_i_23_n_0 ),
-        .I2(Q[3]),
-        .I3(Q[2]),
-        .I4(Q[0]),
-        .I5(Q[1]),
+       (.I0(\data_out_b[9]_i_22_n_0 ),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\cpt_addr_reg[4]_0 [3]),
+        .I5(\FSM_onehot_current_state_reg[6]_0 [2]),
         .O(\data_out_b[9]_i_16_n_0 ));
   LUT6 #(
     .INIT(64'hFE00FE00FE00AAFC)) 
     \data_out_b[9]_i_19 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(Q[2]),
-        .I4(Q[1]),
-        .I5(Q[0]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(comp_0),
+        .I2(p_1_in),
+        .I3(\cpt_addr_reg[4]_0 [2]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
+        .I5(\cpt_addr_reg[4]_0 [0]),
         .O(\data_out_b[9]_i_19_n_0 ));
-  LUT6 #(
-    .INIT(64'hFFFFFFFF8D880000)) 
+  (* SOFT_HLUTNM = "soft_lutpair20" *) 
+  LUT5 #(
+    .INIT(32'hFFFFFF40)) 
     \data_out_b[9]_i_20 
-       (.I0(\din_ram_ext[4]_INST_0_i_1_n_0 ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
         .I1(\s_next_node_reg[9]_0 [1]),
         .I2(\FSM_onehot_current_state_reg[2]_0 ),
-        .I3(\s_next_node_reg[9]_1 [1]),
-        .I4(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I5(\data_out_b[9]_i_24_n_0 ),
+        .I3(\data_out_b[9]_i_23_n_0 ),
+        .I4(\din_ram_ext[1]_INST_0_i_1_n_0 ),
         .O(NN_addr_ram[1]));
   LUT6 #(
-    .INIT(64'hFFF0F4F4F0F0F0F0)) 
+    .INIT(64'hFFFFFFFFF444F4FF)) 
     \data_out_b[9]_i_21 
-       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
-        .I1(\s_next_node_reg[9]_1 [0]),
-        .I2(\data_out_b[9]_i_25_n_0 ),
-        .I3(\s_next_node_reg[9]_0 [0]),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
+        .I1(\data_out_b[9]_i_10 ),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I3(\cpt_addr_reg[4]_0 [0]),
+        .I4(\data_out_b[9]_i_22_n_0 ),
+        .I5(\din_ram_ext[0]_INST_0_i_1_n_0 ),
         .O(NN_addr_ram[0]));
-  (* SOFT_HLUTNM = "soft_lutpair30" *) 
-  LUT4 #(
-    .INIT(16'h0001)) 
-    \data_out_b[9]_i_22 
-       (.I0(Q[2]),
-        .I1(Q[0]),
-        .I2(Q[1]),
-        .I3(Q[3]),
-        .O(\data_out_b[9]_i_22_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  (* SOFT_HLUTNM = "soft_lutpair24" *) 
   LUT2 #(
     .INIT(4'h1)) 
-    \data_out_b[9]_i_23 
-       (.I0(p_1_in),
-        .I1(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .O(\data_out_b[9]_i_23_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
+    \data_out_b[9]_i_22 
+       (.I0(comp_0),
+        .I1(p_1_in),
+        .O(\data_out_b[9]_i_22_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair21" *) 
   LUT5 #(
     .INIT(32'hFEAA00FC)) 
-    \data_out_b[9]_i_24 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(p_1_in),
-        .I2(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .I3(Q[0]),
-        .I4(Q[1]),
-        .O(\data_out_b[9]_i_24_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair18" *) 
-  LUT4 #(
-    .INIT(16'hBBB8)) 
-    \data_out_b[9]_i_25 
-       (.I0(\FSM_onehot_current_state_reg_n_0_[6] ),
-        .I1(Q[0]),
+    \data_out_b[9]_i_23 
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [2]),
+        .I1(comp_0),
         .I2(p_1_in),
-        .I3(\FSM_onehot_current_state_reg_n_0_[5] ),
-        .O(\data_out_b[9]_i_25_n_0 ));
+        .I3(\cpt_addr_reg[4]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
+        .O(\data_out_b[9]_i_23_n_0 ));
   LUT6 #(
-    .INIT(64'hFFF0F4F4F0F0F0F0)) 
+    .INIT(64'hFFFFFFFFE00EE0E0)) 
     \data_out_b[9]_i_4 
-       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
-        .I1(\s_next_node_reg[9]_1 [4]),
-        .I2(\data_out_b[9]_i_13_n_0 ),
-        .I3(\s_next_node_reg[9]_0 [4]),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(comp_0),
+        .I1(p_1_in),
+        .I2(\cpt_addr_reg[4]_0 [4]),
+        .I3(\cpt_addr_reg[4]_0 [3]),
+        .I4(\FSM_onehot_current_state[6]_i_3_n_0 ),
+        .I5(\data_out_b[9]_i_13_n_0 ),
         .O(NN_addr_ram[4]));
-  LUT6 #(
-    .INIT(64'hFFF0F4F4F0F0F0F0)) 
+  LUT5 #(
+    .INIT(32'hFFFFFF40)) 
     \data_out_b[9]_i_6 
-       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
-        .I1(\s_next_node_reg[9]_1 [3]),
-        .I2(\data_out_b[9]_i_16_n_0 ),
-        .I3(\s_next_node_reg[9]_0 [3]),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
+        .I1(\FSM_onehot_current_state_reg[2]_0 ),
+        .I2(\s_next_node_reg[9]_0 [3]),
+        .I3(\data_out_b[9]_i_16_n_0 ),
+        .I4(\din_ram_ext[3]_INST_0_i_1_n_0 ),
         .O(NN_addr_ram[3]));
-  LUT6 #(
-    .INIT(64'hFFF0F4F4F0F0F0F0)) 
+  LUT5 #(
+    .INIT(32'hFFFFFF40)) 
     \data_out_b[9]_i_8 
-       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
-        .I1(\s_next_node_reg[9]_1 [2]),
-        .I2(\data_out_b[9]_i_19_n_0 ),
-        .I3(\s_next_node_reg[9]_0 [2]),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
+       (.I0(\FSM_onehot_current_state_reg[2]_1 ),
+        .I1(\s_next_node_reg[9]_0 [2]),
+        .I2(\FSM_onehot_current_state_reg[2]_0 ),
+        .I3(\data_out_b[9]_i_19_n_0 ),
+        .I4(\din_ram_ext[2]_INST_0_i_1_n_0 ),
         .O(NN_addr_ram[2]));
-  LUT6 #(
-    .INIT(64'hFFFFAC00AC00AC00)) 
+  (* SOFT_HLUTNM = "soft_lutpair22" *) 
+  LUT5 #(
+    .INIT(32'hFFF8F8F8)) 
     \din_ram_ext[0]_INST_0 
-       (.I0(\s_next_node_reg[9]_0 [0]),
-        .I1(\s_next_node_reg[9]_1 [0]),
-        .I2(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I4(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I5(Q[0]),
+       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
+        .I1(\s_next_node_reg[9]_0 [0]),
+        .I2(\din_ram_ext[0]_INST_0_i_1_n_0 ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [0]),
         .O(din_ram_ext[0]));
   LUT6 #(
-    .INIT(64'hF888F8F8F8888888)) 
+    .INIT(64'h0000000000010000)) 
+    \din_ram_ext[0]_INST_0_i_1 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [3]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\din_ram_ext[4] [0]),
+        .I5(\din_ram_ext[4]_INST_0_i_3_n_0 ),
+        .O(\din_ram_ext[0]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFF8F8F8)) 
     \din_ram_ext[1]_INST_0 
-       (.I0(Q[1]),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I3(\s_next_node_reg[9]_0 [1]),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\s_next_node_reg[9]_1 [1]),
+       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
+        .I1(\s_next_node_reg[9]_0 [1]),
+        .I2(\din_ram_ext[1]_INST_0_i_1_n_0 ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [1]),
         .O(din_ram_ext[1]));
   LUT6 #(
-    .INIT(64'hFFFFAC00AC00AC00)) 
+    .INIT(64'h0000000000010000)) 
+    \din_ram_ext[1]_INST_0_i_1 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [3]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\din_ram_ext[4] [1]),
+        .I5(\din_ram_ext[4]_INST_0_i_3_n_0 ),
+        .O(\din_ram_ext[1]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFF888)) 
     \din_ram_ext[2]_INST_0 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_1 [2]),
-        .I2(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I4(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I5(Q[2]),
+       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
+        .I1(\s_next_node_reg[9]_0 [2]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [2]),
+        .I4(\din_ram_ext[2]_INST_0_i_1_n_0 ),
         .O(din_ram_ext[2]));
   LUT6 #(
-    .INIT(64'hFFFFB080B080B080)) 
+    .INIT(64'h0000000000010000)) 
+    \din_ram_ext[2]_INST_0_i_1 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [3]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\din_ram_ext[4] [2]),
+        .I5(\din_ram_ext[4]_INST_0_i_3_n_0 ),
+        .O(\din_ram_ext[2]_INST_0_i_1_n_0 ));
+  LUT5 #(
+    .INIT(32'hFFFFF888)) 
     \din_ram_ext[3]_INST_0 
        (.I0(\s_next_node_reg[9]_0 [3]),
-        .I1(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I3(\s_next_node_reg[9]_1 [3]),
-        .I4(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I5(Q[3]),
+        .I1(\FSM_onehot_current_state_reg[2]_0 ),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I3(\cpt_addr_reg[4]_0 [3]),
+        .I4(\din_ram_ext[3]_INST_0_i_1_n_0 ),
         .O(din_ram_ext[3]));
   LUT6 #(
-    .INIT(64'hFFC0EAC0C0C0EAC0)) 
-    \din_ram_ext[4]_INST_0 
-       (.I0(\s_next_node_reg[9]_1 [4]),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .I2(Q[4]),
-        .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I4(\din_ram_ext[4]_INST_0_i_1_n_0 ),
-        .I5(\s_next_node_reg[9]_0 [4]),
-        .O(din_ram_ext[4]));
-  (* SOFT_HLUTNM = "soft_lutpair19" *) 
+    .INIT(64'h0000000000010000)) 
+    \din_ram_ext[3]_INST_0_i_1 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [3]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\din_ram_ext[4] [3]),
+        .I5(\din_ram_ext[4]_INST_0_i_3_n_0 ),
+        .O(\din_ram_ext[3]_INST_0_i_1_n_0 ));
   LUT5 #(
-    .INIT(32'h00000001)) 
+    .INIT(32'hFFF8F8F8)) 
+    \din_ram_ext[4]_INST_0 
+       (.I0(\FSM_onehot_current_state_reg[2]_0 ),
+        .I1(\s_next_node_reg[9]_0 [4]),
+        .I2(\din_ram_ext[4]_INST_0_i_2_n_0 ),
+        .I3(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I4(\cpt_addr_reg[4]_0 [4]),
+        .O(din_ram_ext[4]));
+  LUT6 #(
+    .INIT(64'hAAAAAAAAAAAAAAA8)) 
     \din_ram_ext[4]_INST_0_i_1 
-       (.I0(Q[3]),
-        .I1(Q[1]),
-        .I2(Q[0]),
-        .I3(Q[2]),
-        .I4(Q[4]),
-        .O(\din_ram_ext[4]_INST_0_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+       (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I1(\cpt_addr_reg[4]_0 [3]),
+        .I2(\cpt_addr_reg[4]_0 [4]),
+        .I3(\cpt_addr_reg[4]_0 [1]),
+        .I4(\cpt_addr_reg[4]_0 [0]),
+        .I5(\cpt_addr_reg[4]_0 [2]),
+        .O(\FSM_onehot_current_state_reg[2]_0 ));
+  LUT6 #(
+    .INIT(64'h0000000000010000)) 
+    \din_ram_ext[4]_INST_0_i_2 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [2]),
+        .I2(\cpt_addr_reg[4]_0 [3]),
+        .I3(\cpt_addr_reg[4]_0 [4]),
+        .I4(\din_ram_ext[4] [4]),
+        .I5(\din_ram_ext[4]_INST_0_i_3_n_0 ),
+        .O(\din_ram_ext[4]_INST_0_i_2_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair33" *) 
   LUT4 #(
-    .INIT(16'h0002)) 
-    \node_seen[0]_i_2 
-       (.I0(\FSM_onehot_current_state_reg[3]_0 ),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [1]),
-        .I3(\s_next_node_reg[9]_0 [2]),
-        .O(\s_next_node_reg[0]_4 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+    .INIT(16'hFF4F)) 
+    \din_ram_ext[4]_INST_0_i_3 
+       (.I0(\cpt_addr_reg[4]_0 [1]),
+        .I1(\cpt_addr_reg[4]_0 [0]),
+        .I2(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I3(\cpt_addr_reg[4]_0 [2]),
+        .O(\din_ram_ext[4]_INST_0_i_3_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  LUT3 #(
+    .INIT(8'hFE)) 
+    en_ram_ext_INST_0
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
+        .I2(en_ram_ext_0),
+        .O(en_ram_ext));
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'hFB)) 
     \node_seen[10]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
-        .O(\s_next_node_reg[2]_6 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .O(\s_next_node_reg[2]_5 ));
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hBF)) 
     \node_seen[11]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
-        .O(\s_next_node_reg[2]_5 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .O(\s_next_node_reg[2]_4 ));
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'hEF)) 
     \node_seen[12]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [1]),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [2]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .O(\s_next_node_reg[1]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair33" *) 
+  (* SOFT_HLUTNM = "soft_lutpair35" *) 
   LUT3 #(
     .INIT(8'hDF)) 
     \node_seen[13]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [0]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [2]),
-        .O(\s_next_node_reg[0]_1 ));
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
+        .O(\s_next_node_reg[0]_2 ));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT5 #(
     .INIT(32'h00200000)) 
     \node_seen[14]_i_2 
        (.I0(\FSM_onehot_current_state_reg[3]_0 ),
-        .I1(\s_next_node_reg[9]_0 [4]),
+        .I1(Q[4]),
         .I2(\node_seen_reg[7] [1]),
         .I3(\node_seen_reg[7] [0]),
-        .I4(\s_next_node_reg[9]_0 [3]),
+        .I4(Q[3]),
         .O(\s_next_node_reg[4]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair34" *) 
+  (* SOFT_HLUTNM = "soft_lutpair38" *) 
   LUT3 #(
     .INIT(8'h08)) 
     \node_seen[14]_i_3 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
-        .O(\s_next_node_reg[2]_7 ));
-  (* SOFT_HLUTNM = "soft_lutpair31" *) 
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .O(\s_next_node_reg[2]_6 ));
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
   LUT4 #(
     .INIT(16'h8000)) 
     \node_seen[15]_i_2 
        (.I0(\FSM_onehot_current_state_reg[3]_0 ),
-        .I1(\s_next_node_reg[9]_0 [2]),
-        .I2(\s_next_node_reg[9]_0 [0]),
-        .I3(\s_next_node_reg[9]_0 [1]),
-        .O(\s_next_node_reg[2]_4 ));
+        .I1(Q[2]),
+        .I2(Q[0]),
+        .I3(Q[1]),
+        .O(\s_next_node_reg[2]_3 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
   LUT4 #(
     .INIT(16'h0020)) 
     \node_seen[15]_i_3 
-       (.I0(\s_next_node_reg[9]_0 [3]),
+       (.I0(Q[3]),
         .I1(\node_seen_reg[7] [0]),
         .I2(\node_seen_reg[7] [1]),
-        .I3(\s_next_node_reg[9]_0 [4]),
+        .I3(Q[4]),
         .O(\s_next_node_reg[3]_1 ));
-  LUT6 #(
-    .INIT(64'h0000000001000000)) 
+  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  LUT4 #(
+    .INIT(16'h0002)) 
     \node_seen[16]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
-        .I3(\FSM_onehot_current_state_reg[3]_0 ),
-        .I4(\s_next_node_reg[9]_0 [4]),
-        .I5(\s_next_node_reg[9]_0 [3]),
-        .O(\s_next_node_reg[2]_3 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+       (.I0(\FSM_onehot_current_state_reg[3]_0 ),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[2]),
+        .O(\s_next_node_reg[0]_1 ));
+  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  LUT3 #(
+    .INIT(8'hFB)) 
+    \node_seen[16]_i_3 
+       (.I0(\node_seen_reg[7] [0]),
+        .I1(Q[4]),
+        .I2(Q[3]),
+        .O(\FSM_sequential_current_state_reg[0] ));
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'hFFFB)) 
     \node_seen[1]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [1]),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [2]),
+       (.I0(Q[1]),
+        .I1(Q[0]),
+        .I2(Q[2]),
         .I3(\s_next_node_reg[3]_0 ),
         .O(\s_next_node_reg[1]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hFFFB)) 
     \node_seen[2]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [0]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [2]),
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
         .I3(\s_next_node_reg[3]_0 ),
-        .O(\s_next_node_reg[0]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair27" *) 
+        .O(\s_next_node_reg[0]_3 ));
+  (* SOFT_HLUTNM = "soft_lutpair30" *) 
   LUT4 #(
     .INIT(16'hFFF7)) 
     \node_seen[3]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [0]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [2]),
+       (.I0(Q[0]),
+        .I1(Q[1]),
+        .I2(Q[2]),
         .I3(\s_next_node_reg[3]_0 ),
-        .O(\s_next_node_reg[0]_3 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+        .O(\s_next_node_reg[0]_4 ));
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'hFFFD)) 
     \node_seen[4]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [1]),
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
         .I3(\s_next_node_reg[3]_0 ),
         .O(\s_next_node_reg[2]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair28" *) 
+  (* SOFT_HLUTNM = "soft_lutpair31" *) 
   LUT4 #(
     .INIT(16'hFFDF)) 
     \node_seen[5]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
         .I3(\s_next_node_reg[3]_0 ),
         .O(\s_next_node_reg[2]_2 ));
   LUT6 #(
     .INIT(64'hAA28AAAAAAAAAA28)) 
     \node_seen[6]_i_2 
-       (.I0(\FSM_onehot_current_state_reg[3]_1 [1]),
-        .I1(\s_next_node_reg[9]_0 [4]),
+       (.I0(\FSM_onehot_current_state_reg[6]_0 [1]),
+        .I1(Q[4]),
         .I2(\node_seen_reg[6] [4]),
         .I3(\node_seen[6]_i_4_n_0 ),
         .I4(\node_seen_reg[6] [3]),
-        .I5(\s_next_node_reg[9]_0 [3]),
+        .I5(Q[3]),
         .O(\FSM_onehot_current_state_reg[3]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair23" *) 
+  (* SOFT_HLUTNM = "soft_lutpair25" *) 
   LUT4 #(
     .INIT(16'hEFFF)) 
     \node_seen[6]_i_3 
        (.I0(\s_next_node_reg[3]_0 ),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [1]),
-        .I3(\s_next_node_reg[9]_0 [2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .I3(Q[2]),
         .O(\s_next_node_reg[0]_0 ));
   LUT6 #(
     .INIT(64'h6FF6FFFFFFFF6FF6)) 
     \node_seen[6]_i_4 
-       (.I0(\s_next_node_reg[9]_0 [0]),
+       (.I0(Q[0]),
         .I1(\node_seen_reg[6] [0]),
-        .I2(\node_seen_reg[6] [2]),
-        .I3(\s_next_node_reg[9]_0 [2]),
-        .I4(\node_seen_reg[6] [1]),
-        .I5(\s_next_node_reg[9]_0 [1]),
+        .I2(\node_seen_reg[6] [1]),
+        .I3(Q[1]),
+        .I4(\node_seen_reg[6] [2]),
+        .I5(Q[2]),
         .O(\node_seen[6]_i_4_n_0 ));
   (* SOFT_HLUTNM = "soft_lutpair15" *) 
   LUT4 #(
     .INIT(16'hFFEF)) 
     \node_seen[7]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [3]),
+       (.I0(Q[3]),
         .I1(\node_seen_reg[7] [0]),
         .I2(\node_seen_reg[7] [1]),
-        .I3(\s_next_node_reg[9]_0 [4]),
+        .I3(Q[4]),
         .O(\s_next_node_reg[3]_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair32" *) 
+  (* SOFT_HLUTNM = "soft_lutpair34" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \node_seen[8]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [1]),
-        .I2(\s_next_node_reg[9]_0 [0]),
+       (.I0(Q[2]),
+        .I1(Q[1]),
+        .I2(Q[0]),
         .O(\s_next_node_reg[2]_0 ));
   LUT3 #(
     .INIT(8'hFB)) 
     \node_seen[9]_i_2 
-       (.I0(\s_next_node_reg[9]_0 [2]),
-        .I1(\s_next_node_reg[9]_0 [0]),
-        .I2(\s_next_node_reg[9]_0 [1]),
-        .O(\s_next_node_reg[2]_8 ));
-  (* SOFT_HLUTNM = "soft_lutpair21" *) 
+       (.I0(Q[2]),
+        .I1(Q[0]),
+        .I2(Q[1]),
+        .O(\s_next_node_reg[2]_7 ));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[0]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [0]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [0]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [0]),
+        .I4(\s_next_node_reg[9]_1 [0]),
         .O(p_0_in1_in[0]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[1]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [1]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [1]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [1]),
+        .I4(\s_next_node_reg[9]_1 [1]),
         .O(p_0_in1_in[1]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[2]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [2]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [2]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [2]),
+        .I4(\s_next_node_reg[9]_1 [2]),
         .O(p_0_in1_in[2]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[3]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [3]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [3]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [3]),
+        .I4(\s_next_node_reg[9]_1 [3]),
         .O(p_0_in1_in[3]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[4]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [4]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [4]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [4]),
+        .I4(\s_next_node_reg[9]_1 [4]),
         .O(p_0_in1_in[4]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[5]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [5]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [5]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [5]),
+        .I4(\s_next_node_reg[9]_1 [5]),
         .O(p_0_in1_in[5]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[6]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [6]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [6]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [6]),
+        .I4(\s_next_node_reg[9]_1 [6]),
         .O(p_0_in1_in[6]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[7]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [7]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [7]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [7]),
+        .I4(\s_next_node_reg[9]_1 [7]),
         .O(p_0_in1_in[7]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[8]_i_1 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [8]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [8]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [8]),
+        .I4(\s_next_node_reg[9]_1 [8]),
         .O(p_0_in1_in[8]));
   LUT5 #(
     .INIT(32'hFFF80008)) 
     \s_next_node[9]_i_1__0 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\s_next_node_reg[9]_1 [9]),
-        .I2(\FSM_onehot_current_state_reg[3]_1 [1]),
+        .I1(\s_next_node_reg[9]_0 [9]),
+        .I2(\FSM_onehot_current_state_reg[6]_0 [1]),
         .I3(p_1_in),
-        .I4(\s_next_node_reg[9]_2 [9]),
+        .I4(\s_next_node_reg[9]_1 [9]),
         .O(p_0_in1_in[9]));
   FDRE \s_next_node_reg[0] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[0]),
-        .Q(\s_next_node_reg[9]_0 [0]),
+        .Q(Q[0]),
         .R(1'b0));
   FDRE \s_next_node_reg[1] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[1]),
-        .Q(\s_next_node_reg[9]_0 [1]),
+        .Q(Q[1]),
         .R(1'b0));
   FDRE \s_next_node_reg[2] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[2]),
-        .Q(\s_next_node_reg[9]_0 [2]),
+        .Q(Q[2]),
         .R(1'b0));
   FDRE \s_next_node_reg[3] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[3]),
-        .Q(\s_next_node_reg[9]_0 [3]),
+        .Q(Q[3]),
         .R(1'b0));
   FDRE \s_next_node_reg[4] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[4]),
-        .Q(\s_next_node_reg[9]_0 [4]),
+        .Q(Q[4]),
         .R(1'b0));
   FDRE \s_next_node_reg[5] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[5]),
-        .Q(\s_next_node_reg[9]_0 [5]),
+        .Q(Q[5]),
         .R(1'b0));
   FDRE \s_next_node_reg[6] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[6]),
-        .Q(\s_next_node_reg[9]_0 [6]),
+        .Q(Q[6]),
         .R(1'b0));
   FDRE \s_next_node_reg[7] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[7]),
-        .Q(\s_next_node_reg[9]_0 [7]),
+        .Q(Q[7]),
         .R(1'b0));
   FDRE \s_next_node_reg[8] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[8]),
-        .Q(\s_next_node_reg[9]_0 [8]),
+        .Q(Q[8]),
         .R(1'b0));
   FDRE \s_next_node_reg[9] 
        (.C(s00_axi_aclk),
         .CE(s00_axi_aresetn),
         .D(p_0_in1_in[9]),
-        .Q(\s_next_node_reg[9]_0 [9]),
+        .Q(Q[9]),
         .R(1'b0));
-  (* SOFT_HLUTNM = "soft_lutpair26" *) 
+  (* SOFT_HLUTNM = "soft_lutpair28" *) 
   LUT2 #(
     .INIT(4'hE)) 
     we_ram_ext_INST_0
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
-        .I1(\FSM_onehot_current_state_reg[3]_1 [0]),
-        .O(en_ram_ext));
+        .I1(\FSM_onehot_current_state_reg[6]_0 [0]),
+        .O(we_ram_ext));
 endmodule
 
 (* ORIG_REF_NAME = "ROM" *) 
@@ -4665,7 +4742,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_ROM
   wire \data_rom[3]_i_1_n_0 ;
   wire s00_axi_aclk;
 
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'hA2A254D5)) 
     \data_rom[0]_i_1 
@@ -4675,7 +4752,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_ROM
         .I3(addr_rom[4]),
         .I4(addr_rom[1]),
         .O(\data_rom[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'hA21DFBB0)) 
     \data_rom[1]_i_1 
@@ -4685,7 +4762,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_ROM
         .I3(addr_rom[2]),
         .I4(addr_rom[1]),
         .O(\data_rom[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair37" *) 
+  (* SOFT_HLUTNM = "soft_lutpair40" *) 
   LUT5 #(
     .INIT(32'h91CCF4FC)) 
     \data_rom[2]_i_1 
@@ -4695,7 +4772,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_ROM
         .I3(addr_rom[1]),
         .I4(addr_rom[2]),
         .O(\data_rom[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair36" *) 
+  (* SOFT_HLUTNM = "soft_lutpair39" *) 
   LUT5 #(
     .INIT(32'hBFF0C080)) 
     \data_rom[3]_i_1 
@@ -4739,21 +4816,23 @@ endmodule
 
 (* ORIG_REF_NAME = "TOP_dijkstra" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
-   (addr_ram_ext,
-    en_ram_ext,
+   (en_ram_ext,
+    we_ram_ext,
     AR,
+    addr_ram_ext,
     din_ram_ext,
-    \FSM_onehot_current_state_reg[1] ,
+    \FSM_sequential_current_state_reg[0] ,
     s00_axi_aresetn,
     s00_axi_aclk,
     Q,
     busy_ram_ext,
     s_finished);
-  output [5:0]addr_ram_ext;
   output en_ram_ext;
+  output we_ram_ext;
   output [0:0]AR;
+  output [5:0]addr_ram_ext;
   output [4:0]din_ram_ext;
-  output \FSM_onehot_current_state_reg[1] ;
+  output \FSM_sequential_current_state_reg[0] ;
   input s00_axi_aresetn;
   input s00_axi_aclk;
   input [10:0]Q;
@@ -4764,35 +4843,37 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
   wire CONTROLLER_n_0;
   wire CONTROLLER_n_1;
   wire CONTROLLER_n_10;
-  wire CONTROLLER_n_11;
-  wire CONTROLLER_n_12;
   wire CONTROLLER_n_13;
-  wire CONTROLLER_n_14;
   wire CONTROLLER_n_15;
   wire CONTROLLER_n_16;
+  wire CONTROLLER_n_17;
   wire CONTROLLER_n_18;
   wire CONTROLLER_n_19;
-  wire CONTROLLER_n_2;
   wire CONTROLLER_n_20;
   wire CONTROLLER_n_21;
   wire CONTROLLER_n_22;
+  wire CONTROLLER_n_28;
   wire CONTROLLER_n_29;
   wire CONTROLLER_n_30;
   wire CONTROLLER_n_31;
   wire CONTROLLER_n_32;
-  wire CONTROLLER_n_33;
-  wire CONTROLLER_n_34;
-  wire CONTROLLER_n_35;
-  wire CONTROLLER_n_36;
-  wire CONTROLLER_n_37;
-  wire CONTROLLER_n_38;
-  wire CONTROLLER_n_4;
-  wire CONTROLLER_n_5;
-  wire CONTROLLER_n_6;
+  wire CONTROLLER_n_39;
+  wire CONTROLLER_n_40;
+  wire CONTROLLER_n_41;
+  wire CONTROLLER_n_42;
+  wire CONTROLLER_n_43;
+  wire CONTROLLER_n_44;
+  wire CONTROLLER_n_45;
+  wire CONTROLLER_n_46;
+  wire CONTROLLER_n_47;
+  wire CONTROLLER_n_48;
   wire CONTROLLER_n_7;
   wire CONTROLLER_n_8;
   wire CONTROLLER_n_9;
-  wire \FSM_onehot_current_state_reg[1] ;
+  wire \FSM_sequential_current_state_reg[0] ;
+  wire NEAREST_NODE_D_n_0;
+  wire NEAREST_NODE_D_n_1;
+  wire NEAREST_NODE_D_n_10;
   wire NEAREST_NODE_D_n_11;
   wire NEAREST_NODE_D_n_12;
   wire NEAREST_NODE_D_n_13;
@@ -4801,38 +4882,37 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
   wire NEAREST_NODE_D_n_16;
   wire NEAREST_NODE_D_n_17;
   wire NEAREST_NODE_D_n_18;
-  wire NEAREST_NODE_D_n_19;
-  wire NEAREST_NODE_D_n_20;
-  wire NEAREST_NODE_D_n_21;
-  wire NEAREST_NODE_D_n_22;
-  wire NEAREST_NODE_D_n_23;
-  wire NEAREST_NODE_D_n_24;
-  wire NEAREST_NODE_D_n_25;
-  wire NEAREST_NODE_D_n_26;
-  wire NEAREST_NODE_D_n_27;
-  wire NEAREST_NODE_D_n_31;
-  wire NEAREST_NODE_D_n_32;
-  wire NEAREST_NODE_D_n_33;
+  wire NEAREST_NODE_D_n_2;
+  wire NEAREST_NODE_D_n_3;
   wire NEAREST_NODE_D_n_34;
   wire NEAREST_NODE_D_n_35;
   wire NEAREST_NODE_D_n_36;
   wire NEAREST_NODE_D_n_37;
   wire NEAREST_NODE_D_n_38;
   wire NEAREST_NODE_D_n_39;
+  wire NEAREST_NODE_D_n_4;
   wire NEAREST_NODE_D_n_40;
-  wire NEAREST_NODE_D_n_46;
-  wire NEAREST_NODE_D_n_47;
-  wire NEAREST_NODE_D_n_48;
+  wire NEAREST_NODE_D_n_41;
+  wire NEAREST_NODE_D_n_42;
+  wire NEAREST_NODE_D_n_43;
   wire NEAREST_NODE_D_n_49;
+  wire NEAREST_NODE_D_n_5;
   wire NEAREST_NODE_D_n_50;
   wire NEAREST_NODE_D_n_51;
-  wire NEAREST_NODE_D_n_57;
-  wire NEAREST_NODE_D_n_58;
-  wire NEAREST_NODE_D_n_59;
-  wire NEAREST_NODE_D_n_60;
+  wire NEAREST_NODE_D_n_52;
+  wire NEAREST_NODE_D_n_53;
+  wire NEAREST_NODE_D_n_54;
+  wire NEAREST_NODE_D_n_55;
+  wire NEAREST_NODE_D_n_6;
   wire NEAREST_NODE_D_n_61;
   wire NEAREST_NODE_D_n_62;
   wire NEAREST_NODE_D_n_63;
+  wire NEAREST_NODE_D_n_64;
+  wire NEAREST_NODE_D_n_65;
+  wire NEAREST_NODE_D_n_66;
+  wire NEAREST_NODE_D_n_7;
+  wire NEAREST_NODE_D_n_8;
+  wire NEAREST_NODE_D_n_9;
   wire [4:0]NN_addr_ram;
   wire [10:0]Q;
   wire [4:0]ROM_data;
@@ -5148,20 +5228,23 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
   wire [4:0]cpt_addr_reg;
   wire [4:0]cpt_ram_reg;
   wire [2:0]cpt_reg;
+  wire [1:0]current_state;
   wire [9:0]data0;
   wire [4:0]din_ram_ext;
   wire [9:5]dpram_0_data_out_a;
   wire [9:0]dpram_0_data_out_b;
-  wire dpram_0_n_126;
-  wire dpram_0_n_277;
-  wire dpram_0_n_278;
-  wire dpram_0_n_279;
-  wire dpram_0_n_280;
-  wire dpram_0_n_281;
-  wire dpram_0_n_282;
-  wire dpram_0_n_283;
-  wire dpram_0_n_284;
-  wire dpram_0_n_5;
+  wire dpram_0_n_0;
+  wire dpram_0_n_11;
+  wire dpram_0_n_138;
+  wire dpram_0_n_17;
+  wire dpram_0_n_289;
+  wire dpram_0_n_290;
+  wire dpram_0_n_291;
+  wire dpram_0_n_292;
+  wire dpram_0_n_293;
+  wire dpram_0_n_294;
+  wire dpram_0_n_295;
+  wire dpram_0_n_296;
   wire en_ram_ext;
   wire en_rom;
   wire flag_RAM;
@@ -5194,130 +5277,138 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
   wire [9:0]\memory_ram_reg[6]_24 ;
   wire [9:0]\memory_ram_reg[7]_23 ;
   wire [9:0]\memory_ram_reg[9]_21 ;
-  wire [16:16]node_seen;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
+  wire [4:0]s_end_node;
   wire [0:0]s_finished;
+  wire [4:0]start_node;
+  wire we_ram_ext;
 
   design_dijkstra_ram_Dijkstra_algorithm_0_0_DIJKSTRA_CONTROLLER CONTROLLER
-       (.D({CONTROLLER_n_8,CONTROLLER_n_9,CONTROLLER_n_10,CONTROLLER_n_11}),
+       (.D(CONTROLLER_n_0),
         .\FSM_onehot_current_state[6]_i_5 (cpt_reg),
-        .\FSM_onehot_current_state_reg[0] (CONTROLLER_n_14),
-        .\FSM_onehot_current_state_reg[1] (CONTROLLER_n_7),
-        .\FSM_onehot_current_state_reg[1]_0 (\FSM_onehot_current_state_reg[1] ),
-        .\FSM_onehot_current_state_reg[1]_1 (CONTROLLER_n_31),
-        .\FSM_onehot_current_state_reg[1]_2 (CONTROLLER_n_32),
-        .\FSM_onehot_current_state_reg[1]_3 (CONTROLLER_n_33),
-        .\FSM_onehot_current_state_reg[2] (dpram_0_data_out_b[4:0]),
-        .\FSM_onehot_current_state_reg[6] (cpt_addr_reg),
-        .\FSM_onehot_current_state_reg[6]_0 (ROM_data),
-        .\FSM_sequential_current_state_reg[0]_0 ({flag_RAM,UPDATE_RAM_D_n_7,UPDATE_RAM_D_n_8,UPDATE_RAM_D_n_9,UPDATE_RAM_D_n_10}),
-        .\FSM_sequential_current_state_reg[0]_1 (UPDATE_RAM_D_n_303),
-        .\FSM_sequential_current_state_reg[0]_2 (UPDATE_RAM_D_n_304),
-        .\FSM_sequential_current_state_reg[1]_0 ({CONTROLLER_n_5,CONTROLLER_n_6}),
+        .\FSM_onehot_current_state_reg[0] (CONTROLLER_n_22),
+        .\FSM_onehot_current_state_reg[1] (CONTROLLER_n_21),
+        .\FSM_onehot_current_state_reg[1]_0 (CONTROLLER_n_41),
+        .\FSM_onehot_current_state_reg[1]_1 (CONTROLLER_n_42),
+        .\FSM_onehot_current_state_reg[1]_2 (CONTROLLER_n_43),
+        .\FSM_onehot_current_state_reg[3] (CONTROLLER_n_20),
+        .\FSM_onehot_current_state_reg[5] (cpt_addr_reg),
+        .\FSM_onehot_current_state_reg[6] (ROM_data),
+        .\FSM_sequential_current_state_reg[0]_0 (\FSM_sequential_current_state_reg[0] ),
+        .\FSM_sequential_current_state_reg[0]_1 ({flag_RAM,UPDATE_RAM_D_n_7,UPDATE_RAM_D_n_8,UPDATE_RAM_D_n_9,UPDATE_RAM_D_n_10}),
+        .\FSM_sequential_current_state_reg[0]_2 (UPDATE_RAM_D_n_303),
+        .\FSM_sequential_current_state_reg[0]_3 (UPDATE_RAM_D_n_304),
+        .\FSM_sequential_current_state_reg[1]_0 (current_state),
         .\FSM_sequential_current_state_reg[1]_1 (CONTROLLER_n_13),
-        .Q({flag_node,flag_end_write}),
+        .Q({NEAREST_NODE_D_n_18,flag_node,flag_end_write}),
         .UP_addr_ram(UP_addr_ram[4]),
         .UP_we_ram(UP_we_ram),
         .\comp_out_reg[3] (dpram_0_data_out_a),
         .\comp_out_reg[3]_0 (UPDATE_RAM_D_n_305),
-        .\comp_out_reg[4] (CONTROLLER_n_0),
-        .\cpt_reg[1] (CONTROLLER_n_18),
+        .\comp_out_reg[4] (CONTROLLER_n_7),
+        .\cpt_addr_reg[3] (CONTROLLER_n_1),
+        .\cpt_reg[1] (CONTROLLER_n_28),
         .data0(data0[4:0]),
+        .\data_out_a_reg[8] ({CONTROLLER_n_15,CONTROLLER_n_16,CONTROLLER_n_17,CONTROLLER_n_18}),
         .\memory_ram[16][4]_i_2_0 (cpt_ram_reg),
-        .\memory_ram_reg[16][0] (dpram_0_n_126),
-        .\memory_ram_reg[16][0]_0 (dpram_0_n_5),
-        .\memory_ram_reg[16][1] (dpram_0_n_278),
-        .\memory_ram_reg[16][1]_0 (dpram_0_n_277),
-        .\memory_ram_reg[16][2] (dpram_0_n_280),
-        .\memory_ram_reg[16][2]_0 (dpram_0_n_279),
-        .\memory_ram_reg[16][3] (dpram_0_n_282),
-        .\memory_ram_reg[16][3]_0 (dpram_0_n_281),
-        .\memory_ram_reg[16][4] (dpram_0_n_284),
-        .\memory_ram_reg[16][4]_0 (dpram_0_n_283),
+        .\memory_ram_reg[16][0] (dpram_0_n_138),
+        .\memory_ram_reg[16][0]_0 (dpram_0_n_17),
+        .\memory_ram_reg[16][1] (dpram_0_n_290),
+        .\memory_ram_reg[16][1]_0 (dpram_0_n_289),
+        .\memory_ram_reg[16][2] (dpram_0_n_292),
+        .\memory_ram_reg[16][2]_0 (dpram_0_n_291),
+        .\memory_ram_reg[16][3] (dpram_0_n_294),
+        .\memory_ram_reg[16][3]_0 (dpram_0_n_293),
+        .\memory_ram_reg[16][4] (dpram_0_n_296),
+        .\memory_ram_reg[16][4]_0 (dpram_0_n_295),
         .\memory_ram_reg[30][9] (UPDATE_RAM_D_n_5),
         .\memory_ram_reg[30][9]_0 ({comparateur1_0_n_1,comparateur1_0_n_2,comparateur1_0_n_3}),
         .\memory_ram_reg[30][9]_1 (comparateur1_0_n_0),
-        .\node_seen_reg[0]_0 (NEAREST_NODE_D_n_58),
-        .\node_seen_reg[10]_0 (NEAREST_NODE_D_n_61),
-        .\node_seen_reg[11]_0 (NEAREST_NODE_D_n_60),
-        .\node_seen_reg[12]_0 (NEAREST_NODE_D_n_26),
-        .\node_seen_reg[13]_0 (NEAREST_NODE_D_n_27),
-        .\node_seen_reg[14]_0 (NEAREST_NODE_D_n_23),
-        .\node_seen_reg[14]_1 (NEAREST_NODE_D_n_62),
-        .\node_seen_reg[15]_0 (NEAREST_NODE_D_n_59),
-        .\node_seen_reg[15]_1 (NEAREST_NODE_D_n_51),
-        .\node_seen_reg[16]_0 (CONTROLLER_n_16),
-        .\node_seen_reg[16]_1 (node_seen),
-        .\node_seen_reg[16]_2 (CONTROLLER_n_22),
-        .\node_seen_reg[16]_3 (NEAREST_NODE_D_n_57),
-        .\node_seen_reg[1]_0 (NEAREST_NODE_D_n_46),
-        .\node_seen_reg[2]_0 (NEAREST_NODE_D_n_47),
-        .\node_seen_reg[3]_0 (NEAREST_NODE_D_n_48),
-        .\node_seen_reg[4]_0 (NEAREST_NODE_D_n_49),
-        .\node_seen_reg[5]_0 (NEAREST_NODE_D_n_50),
-        .\node_seen_reg[6]_0 (NEAREST_NODE_D_n_24),
-        .\node_seen_reg[6]_1 (NEAREST_NODE_D_n_11),
-        .\node_seen_reg[7]_0 (NEAREST_NODE_D_n_12),
-        .\node_seen_reg[8]_0 (NEAREST_NODE_D_n_25),
-        .\node_seen_reg[9]_0 (NEAREST_NODE_D_n_63),
-        .out({CONTROLLER_n_19,CONTROLLER_n_20,CONTROLLER_n_21}),
-        .prev_flag_node_reg_0(CONTROLLER_n_4),
+        .\node_seen_reg[10]_0 (NEAREST_NODE_D_n_64),
+        .\node_seen_reg[11]_0 (NEAREST_NODE_D_n_63),
+        .\node_seen_reg[12]_0 (NEAREST_NODE_D_n_16),
+        .\node_seen_reg[13]_0 (NEAREST_NODE_D_n_17),
+        .\node_seen_reg[14]_0 (NEAREST_NODE_D_n_12),
+        .\node_seen_reg[14]_1 (NEAREST_NODE_D_n_65),
+        .\node_seen_reg[15]_0 (NEAREST_NODE_D_n_62),
+        .\node_seen_reg[15]_1 (NEAREST_NODE_D_n_55),
+        .\node_seen_reg[16]_0 (CONTROLLER_n_32),
+        .\node_seen_reg[16]_1 (NEAREST_NODE_D_n_14),
+        .\node_seen_reg[16]_2 (NEAREST_NODE_D_n_61),
+        .\node_seen_reg[1]_0 (NEAREST_NODE_D_n_50),
+        .\node_seen_reg[2]_0 (NEAREST_NODE_D_n_51),
+        .\node_seen_reg[3]_0 (NEAREST_NODE_D_n_52),
+        .\node_seen_reg[4]_0 (NEAREST_NODE_D_n_53),
+        .\node_seen_reg[5]_0 (NEAREST_NODE_D_n_54),
+        .\node_seen_reg[6]_0 (NEAREST_NODE_D_n_13),
+        .\node_seen_reg[6]_1 (NEAREST_NODE_D_n_0),
+        .\node_seen_reg[7]_0 (NEAREST_NODE_D_n_1),
+        .\node_seen_reg[8]_0 (NEAREST_NODE_D_n_15),
+        .\node_seen_reg[9]_0 (NEAREST_NODE_D_n_66),
+        .out({CONTROLLER_n_29,CONTROLLER_n_30,CONTROLLER_n_31}),
+        .prev_flag_node_reg_0(CONTROLLER_n_10),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
         .s00_axi_aresetn_0(AR),
-        .\s_end_node_reg[4]_0 (Q),
+        .\s_end_node_reg[4]_0 (s_end_node),
+        .\s_end_node_reg[4]_1 (Q),
         .s_finished(s_finished),
-        .\s_next_node_reg[0]_0 ({CONTROLLER_n_34,CONTROLLER_n_35,CONTROLLER_n_36,CONTROLLER_n_37,CONTROLLER_n_38}),
-        .\s_next_node_reg[5]_0 (CONTROLLER_n_12),
-        .\s_next_node_reg[5]_1 (CONTROLLER_n_29),
-        .\s_next_node_reg[5]_2 (CONTROLLER_n_30),
-        .\s_next_node_reg[6]_0 (CONTROLLER_n_2),
-        .\s_next_node_reg[8]_0 (CONTROLLER_n_1),
-        .\s_next_node_reg[9]_0 ({NEAREST_NODE_D_n_13,NEAREST_NODE_D_n_14,NEAREST_NODE_D_n_15,NEAREST_NODE_D_n_16,NEAREST_NODE_D_n_17,NEAREST_NODE_D_n_18,NEAREST_NODE_D_n_19,NEAREST_NODE_D_n_20,NEAREST_NODE_D_n_21,NEAREST_NODE_D_n_22}),
-        .\s_start_node_reg[3]_0 (CONTROLLER_n_15));
+        .\s_next_node_reg[0]_0 ({CONTROLLER_n_44,CONTROLLER_n_45,CONTROLLER_n_46,CONTROLLER_n_47,CONTROLLER_n_48}),
+        .\s_next_node_reg[5]_0 (CONTROLLER_n_19),
+        .\s_next_node_reg[5]_1 (CONTROLLER_n_39),
+        .\s_next_node_reg[5]_2 (CONTROLLER_n_40),
+        .\s_next_node_reg[6]_0 (CONTROLLER_n_9),
+        .\s_next_node_reg[8]_0 (CONTROLLER_n_8),
+        .\s_next_node_reg[9]_0 ({NEAREST_NODE_D_n_2,NEAREST_NODE_D_n_3,NEAREST_NODE_D_n_4,NEAREST_NODE_D_n_5,NEAREST_NODE_D_n_6,NEAREST_NODE_D_n_7,NEAREST_NODE_D_n_8,NEAREST_NODE_D_n_9,NEAREST_NODE_D_n_10,NEAREST_NODE_D_n_11}),
+        .\s_start_node_reg[4]_0 (start_node));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_NEAREST_NODE NEAREST_NODE_D
-       (.D({NEAREST_NODE_D_n_31,NEAREST_NODE_D_n_32,NEAREST_NODE_D_n_33,NEAREST_NODE_D_n_34,NEAREST_NODE_D_n_35,NEAREST_NODE_D_n_36,NEAREST_NODE_D_n_37,NEAREST_NODE_D_n_38,NEAREST_NODE_D_n_39,NEAREST_NODE_D_n_40}),
-        .\FSM_onehot_current_state_reg[0]_0 (CONTROLLER_n_4),
+       (.D({NEAREST_NODE_D_n_34,NEAREST_NODE_D_n_35,NEAREST_NODE_D_n_36,NEAREST_NODE_D_n_37,NEAREST_NODE_D_n_38,NEAREST_NODE_D_n_39,NEAREST_NODE_D_n_40,NEAREST_NODE_D_n_41,NEAREST_NODE_D_n_42,NEAREST_NODE_D_n_43}),
+        .\FSM_onehot_current_state_reg[0]_0 (CONTROLLER_n_10),
         .\FSM_onehot_current_state_reg[1]_0 (AR),
-        .\FSM_onehot_current_state_reg[2]_0 (CONTROLLER_n_15),
-        .\FSM_onehot_current_state_reg[3]_0 (NEAREST_NODE_D_n_24),
-        .\FSM_onehot_current_state_reg[3]_1 ({flag_node,flag_end_write}),
-        .\FSM_onehot_current_state_reg[3]_2 (CONTROLLER_n_7),
-        .\FSM_onehot_current_state_reg[4]_0 (node_seen),
-        .\FSM_onehot_current_state_reg[6]_0 (CONTROLLER_n_16),
+        .\FSM_onehot_current_state_reg[2]_0 (NEAREST_NODE_D_n_49),
+        .\FSM_onehot_current_state_reg[2]_1 (dpram_0_n_11),
+        .\FSM_onehot_current_state_reg[3]_0 (NEAREST_NODE_D_n_13),
+        .\FSM_onehot_current_state_reg[3]_1 (CONTROLLER_n_21),
+        .\FSM_onehot_current_state_reg[4]_0 (CONTROLLER_n_1),
+        .\FSM_onehot_current_state_reg[5]_0 (CONTROLLER_n_0),
+        .\FSM_onehot_current_state_reg[6]_0 ({NEAREST_NODE_D_n_18,flag_node,flag_end_write}),
+        .\FSM_sequential_current_state_reg[0] (NEAREST_NODE_D_n_61),
         .NN_addr_ram(NN_addr_ram),
-        .Q(cpt_addr_reg),
+        .Q({NEAREST_NODE_D_n_2,NEAREST_NODE_D_n_3,NEAREST_NODE_D_n_4,NEAREST_NODE_D_n_5,NEAREST_NODE_D_n_6,NEAREST_NODE_D_n_7,NEAREST_NODE_D_n_8,NEAREST_NODE_D_n_9,NEAREST_NODE_D_n_10,NEAREST_NODE_D_n_11}),
         .addr_ram_ext(addr_ram_ext),
         .busy_ram_ext(busy_ram_ext),
+        .\cpt_addr_reg[4]_0 (cpt_addr_reg),
+        .\data_out_b[9]_i_10 (dpram_0_n_0),
         .din_ram_ext(din_ram_ext),
+        .\din_ram_ext[4] (s_end_node),
         .en_ram_ext(en_ram_ext),
+        .en_ram_ext_0(CONTROLLER_n_20),
         .\node_seen_reg[6] (Q[10:6]),
-        .\node_seen_reg[7] ({CONTROLLER_n_5,CONTROLLER_n_6}),
+        .\node_seen_reg[7] (current_state),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .\s_next_node_reg[0]_0 (NEAREST_NODE_D_n_11),
-        .\s_next_node_reg[0]_1 (NEAREST_NODE_D_n_27),
-        .\s_next_node_reg[0]_2 (NEAREST_NODE_D_n_47),
-        .\s_next_node_reg[0]_3 (NEAREST_NODE_D_n_48),
-        .\s_next_node_reg[0]_4 (NEAREST_NODE_D_n_58),
-        .\s_next_node_reg[1]_0 (NEAREST_NODE_D_n_26),
-        .\s_next_node_reg[1]_1 (NEAREST_NODE_D_n_46),
-        .\s_next_node_reg[2]_0 (NEAREST_NODE_D_n_25),
-        .\s_next_node_reg[2]_1 (NEAREST_NODE_D_n_49),
-        .\s_next_node_reg[2]_2 (NEAREST_NODE_D_n_50),
-        .\s_next_node_reg[2]_3 (NEAREST_NODE_D_n_57),
-        .\s_next_node_reg[2]_4 (NEAREST_NODE_D_n_59),
-        .\s_next_node_reg[2]_5 (NEAREST_NODE_D_n_60),
-        .\s_next_node_reg[2]_6 (NEAREST_NODE_D_n_61),
-        .\s_next_node_reg[2]_7 (NEAREST_NODE_D_n_62),
-        .\s_next_node_reg[2]_8 (NEAREST_NODE_D_n_63),
-        .\s_next_node_reg[3]_0 (NEAREST_NODE_D_n_12),
-        .\s_next_node_reg[3]_1 (NEAREST_NODE_D_n_51),
-        .\s_next_node_reg[4]_0 (NEAREST_NODE_D_n_23),
-        .\s_next_node_reg[9]_0 ({NEAREST_NODE_D_n_13,NEAREST_NODE_D_n_14,NEAREST_NODE_D_n_15,NEAREST_NODE_D_n_16,NEAREST_NODE_D_n_17,NEAREST_NODE_D_n_18,NEAREST_NODE_D_n_19,NEAREST_NODE_D_n_20,NEAREST_NODE_D_n_21,NEAREST_NODE_D_n_22}),
-        .\s_next_node_reg[9]_1 (dpram_0_data_out_b),
-        .\s_next_node_reg[9]_2 ({comparateur2_0_n_0,comparateur2_0_n_1,comparateur2_0_n_2,comparateur2_0_n_3,comparateur2_0_n_4,comparateur2_0_n_5,comparateur2_0_n_6,comparateur2_0_n_7,comparateur2_0_n_8,comparateur2_0_n_9}));
+        .\s_next_node_reg[0]_0 (NEAREST_NODE_D_n_0),
+        .\s_next_node_reg[0]_1 (NEAREST_NODE_D_n_14),
+        .\s_next_node_reg[0]_2 (NEAREST_NODE_D_n_17),
+        .\s_next_node_reg[0]_3 (NEAREST_NODE_D_n_51),
+        .\s_next_node_reg[0]_4 (NEAREST_NODE_D_n_52),
+        .\s_next_node_reg[1]_0 (NEAREST_NODE_D_n_16),
+        .\s_next_node_reg[1]_1 (NEAREST_NODE_D_n_50),
+        .\s_next_node_reg[2]_0 (NEAREST_NODE_D_n_15),
+        .\s_next_node_reg[2]_1 (NEAREST_NODE_D_n_53),
+        .\s_next_node_reg[2]_2 (NEAREST_NODE_D_n_54),
+        .\s_next_node_reg[2]_3 (NEAREST_NODE_D_n_62),
+        .\s_next_node_reg[2]_4 (NEAREST_NODE_D_n_63),
+        .\s_next_node_reg[2]_5 (NEAREST_NODE_D_n_64),
+        .\s_next_node_reg[2]_6 (NEAREST_NODE_D_n_65),
+        .\s_next_node_reg[2]_7 (NEAREST_NODE_D_n_66),
+        .\s_next_node_reg[3]_0 (NEAREST_NODE_D_n_1),
+        .\s_next_node_reg[3]_1 (NEAREST_NODE_D_n_55),
+        .\s_next_node_reg[4]_0 (NEAREST_NODE_D_n_12),
+        .\s_next_node_reg[9]_0 (dpram_0_data_out_b),
+        .\s_next_node_reg[9]_1 ({comparateur2_0_n_0,comparateur2_0_n_1,comparateur2_0_n_2,comparateur2_0_n_3,comparateur2_0_n_4,comparateur2_0_n_5,comparateur2_0_n_6,comparateur2_0_n_7,comparateur2_0_n_8,comparateur2_0_n_9}),
+        .we_ram_ext(we_ram_ext));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_ROM ROM_M
        (.D(UPDATE_RAM_D_n_66),
         .E(en_rom),
@@ -5327,11 +5418,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
   design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM UPDATE_RAM_D
        (.D(UPDATE_RAM_D_n_66),
         .E(en_rom),
-        .\FSM_onehot_current_state_reg[0]_0 (CONTROLLER_n_14),
+        .\FSM_onehot_current_state_reg[0]_0 (CONTROLLER_n_22),
         .\FSM_onehot_current_state_reg[1]_0 (CONTROLLER_n_13),
         .\FSM_onehot_current_state_reg[1]_1 (AR),
-        .\FSM_onehot_current_state_reg[2]_0 ({CONTROLLER_n_5,CONTROLLER_n_6}),
-        .\FSM_onehot_current_state_reg[2]_1 (CONTROLLER_n_18),
+        .\FSM_onehot_current_state_reg[2]_0 (current_state),
+        .\FSM_onehot_current_state_reg[2]_1 (CONTROLLER_n_28),
         .\FSM_onehot_current_state_reg[4]_0 (UPDATE_RAM_D_n_11),
         .\FSM_onehot_current_state_reg[4]_1 (UPDATE_RAM_D_n_12),
         .\FSM_onehot_current_state_reg[4]_2 (UPDATE_RAM_D_n_13),
@@ -5345,18 +5436,18 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
         .\FSM_onehot_current_state_reg[5]_0 (UPDATE_RAM_D_n_5),
         .\FSM_onehot_current_state_reg[5]_1 (UPDATE_RAM_D_n_302),
         .\FSM_onehot_current_state_reg[5]_2 (UPDATE_RAM_D_n_305),
-        .\FSM_onehot_current_state_reg[6]_0 (CONTROLLER_n_22),
+        .\FSM_onehot_current_state_reg[6]_0 (CONTROLLER_n_32),
         .\FSM_sequential_current_state[0]_i_2 (Q[10:1]),
         .Q({flag_RAM,UPDATE_RAM_D_n_7,UPDATE_RAM_D_n_8,UPDATE_RAM_D_n_9,UPDATE_RAM_D_n_10}),
         .UP_addr_ram(UP_addr_ram),
         .UP_we_ram(UP_we_ram),
         .addr_rom(addr_rom),
         .\comp_out_reg[4] (dpram_0_data_out_a[9]),
-        .\comp_out_reg[4]_0 (CONTROLLER_n_1),
+        .\comp_out_reg[4]_0 (CONTROLLER_n_8),
         .\cpt_ram_reg[4]_0 (cpt_ram_reg),
         .\cpt_reg[2]_0 (cpt_reg),
         .data0(data0),
-        .\data_rom_reg[4] ({CONTROLLER_n_34,CONTROLLER_n_35,CONTROLLER_n_36,CONTROLLER_n_37,CONTROLLER_n_38}),
+        .\data_rom[4]_i_6_0 ({CONTROLLER_n_44,CONTROLLER_n_45,CONTROLLER_n_46,CONTROLLER_n_47,CONTROLLER_n_48}),
         .\memory_ram_reg[0][0] (UPDATE_RAM_D_n_65),
         .\memory_ram_reg[0][1] (UPDATE_RAM_D_n_64),
         .\memory_ram_reg[0][2] (UPDATE_RAM_D_n_63),
@@ -5587,7 +5678,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
         .\memory_ram_reg[30][7] (UPDATE_RAM_D_n_109),
         .\memory_ram_reg[30][8] (UPDATE_RAM_D_n_108),
         .\memory_ram_reg[30][9] (UPDATE_RAM_D_n_107),
-        .\memory_ram_reg[30][9]_0 (CONTROLLER_n_0),
+        .\memory_ram_reg[30][9]_0 (CONTROLLER_n_7),
         .\memory_ram_reg[30][9]_1 (ROM_data),
         .\memory_ram_reg[30]_0 (\memory_ram_reg[30]_0 ),
         .\memory_ram_reg[31][0] (UPDATE_RAM_D_n_126),
@@ -5656,45 +5747,48 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
         .\memory_ram_reg[9][8] (UPDATE_RAM_D_n_23),
         .\memory_ram_reg[9][9] (UPDATE_RAM_D_n_24),
         .\memory_ram_reg[9]_21 (\memory_ram_reg[9]_21 ),
-        .out({CONTROLLER_n_19,CONTROLLER_n_20,CONTROLLER_n_21}),
+        .out({CONTROLLER_n_29,CONTROLLER_n_30,CONTROLLER_n_31}),
         .s00_axi_aclk(s00_axi_aclk),
         .s00_axi_aresetn(s00_axi_aresetn),
-        .\slv_reg0_reg[12] (UPDATE_RAM_D_n_303),
-        .\slv_reg0_reg[20] (UPDATE_RAM_D_n_304));
+        .\slv_reg0_reg[20] (UPDATE_RAM_D_n_303),
+        .\slv_reg0_reg[8] (UPDATE_RAM_D_n_304));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_comparateur1 comparateur1_0
-       (.D({UPDATE_RAM_D_n_302,CONTROLLER_n_8,CONTROLLER_n_9,CONTROLLER_n_10,CONTROLLER_n_11}),
+       (.D({UPDATE_RAM_D_n_302,CONTROLLER_n_15,CONTROLLER_n_16,CONTROLLER_n_17,CONTROLLER_n_18}),
         .Q(UPDATE_RAM_D_n_7),
         .\comp_out_reg[0]_0 (comparateur1_0_n_0),
         .\comp_out_reg[0]_1 (AR),
         .\comp_out_reg[4]_0 ({comparateur1_0_n_1,comparateur1_0_n_2,comparateur1_0_n_3}),
         .\memory_ram[30][9]_i_3 (UPDATE_RAM_D_n_5),
-        .\memory_ram[30][9]_i_3_0 (CONTROLLER_n_12),
-        .\memory_ram[30][9]_i_3_1 (CONTROLLER_n_2),
+        .\memory_ram[30][9]_i_3_0 (CONTROLLER_n_19),
+        .\memory_ram[30][9]_i_3_1 (CONTROLLER_n_9),
         .s00_axi_aclk(s00_axi_aclk));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_comparateur2 comparateur2_0
-       (.D({NEAREST_NODE_D_n_31,NEAREST_NODE_D_n_32,NEAREST_NODE_D_n_33,NEAREST_NODE_D_n_34,NEAREST_NODE_D_n_35,NEAREST_NODE_D_n_36,NEAREST_NODE_D_n_37,NEAREST_NODE_D_n_38,NEAREST_NODE_D_n_39,NEAREST_NODE_D_n_40}),
+       (.D({NEAREST_NODE_D_n_34,NEAREST_NODE_D_n_35,NEAREST_NODE_D_n_36,NEAREST_NODE_D_n_37,NEAREST_NODE_D_n_38,NEAREST_NODE_D_n_39,NEAREST_NODE_D_n_40,NEAREST_NODE_D_n_41,NEAREST_NODE_D_n_42,NEAREST_NODE_D_n_43}),
         .Q({comparateur2_0_n_0,comparateur2_0_n_1,comparateur2_0_n_2,comparateur2_0_n_3,comparateur2_0_n_4,comparateur2_0_n_5,comparateur2_0_n_6,comparateur2_0_n_7,comparateur2_0_n_8,comparateur2_0_n_9}),
         .\comp_out_reg[0]_0 (AR),
         .s00_axi_aclk(s00_axi_aclk));
   design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram dpram_0
-       (.\FSM_onehot_current_state_reg[4] (dpram_0_n_5),
-        .\FSM_onehot_current_state_reg[4]_0 (dpram_0_n_126),
-        .\FSM_onehot_current_state_reg[4]_1 (dpram_0_n_277),
-        .\FSM_onehot_current_state_reg[4]_2 (dpram_0_n_278),
-        .\FSM_onehot_current_state_reg[4]_3 (dpram_0_n_279),
-        .\FSM_onehot_current_state_reg[4]_4 (dpram_0_n_280),
-        .\FSM_onehot_current_state_reg[4]_5 (dpram_0_n_281),
-        .\FSM_onehot_current_state_reg[4]_6 (dpram_0_n_282),
-        .\FSM_onehot_current_state_reg[4]_7 (dpram_0_n_283),
-        .\FSM_onehot_current_state_reg[4]_8 (dpram_0_n_284),
+       (.\FSM_onehot_current_state_reg[2] (start_node),
+        .\FSM_onehot_current_state_reg[4] (dpram_0_n_17),
+        .\FSM_onehot_current_state_reg[4]_0 (dpram_0_n_138),
+        .\FSM_onehot_current_state_reg[4]_1 (dpram_0_n_289),
+        .\FSM_onehot_current_state_reg[4]_2 (dpram_0_n_290),
+        .\FSM_onehot_current_state_reg[4]_3 (dpram_0_n_291),
+        .\FSM_onehot_current_state_reg[4]_4 (dpram_0_n_292),
+        .\FSM_onehot_current_state_reg[4]_5 (dpram_0_n_293),
+        .\FSM_onehot_current_state_reg[4]_6 (dpram_0_n_294),
+        .\FSM_onehot_current_state_reg[4]_7 (dpram_0_n_295),
+        .\FSM_onehot_current_state_reg[4]_8 (dpram_0_n_296),
         .NN_addr_ram(NN_addr_ram),
-        .Q(dpram_0_data_out_a),
+        .Q(dpram_0_data_out_b),
         .UP_addr_ram(UP_addr_ram),
         .UP_we_ram(UP_we_ram),
         .data0(data0[9:5]),
+        .\data_out_a_reg[9]_0 (dpram_0_data_out_a),
         .\data_out_a_reg[9]_i_3_0 (UPDATE_RAM_D_n_26),
         .\data_out_a_reg[9]_i_4_0 (UPDATE_RAM_D_n_12),
-        .\data_out_b_reg[9]_0 (dpram_0_data_out_b),
+        .\data_out_b[9]_i_21 (NEAREST_NODE_D_n_49),
+        .\data_out_b_reg[0]_0 (dpram_0_n_0),
         .\memory_ram_reg[0][0]_0 (UPDATE_RAM_D_n_65),
         .\memory_ram_reg[0][1]_0 (UPDATE_RAM_D_n_64),
         .\memory_ram_reg[0][2]_0 (UPDATE_RAM_D_n_63),
@@ -5775,11 +5869,11 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
         .\memory_ram_reg[15]_15 (\memory_ram_reg[15]_15 ),
         .\memory_ram_reg[16][1]_0 (UPDATE_RAM_D_n_16),
         .\memory_ram_reg[16][4]_0 (data0[4:0]),
-        .\memory_ram_reg[16][5]_0 (CONTROLLER_n_29),
-        .\memory_ram_reg[16][6]_0 (CONTROLLER_n_30),
-        .\memory_ram_reg[16][7]_0 (CONTROLLER_n_31),
-        .\memory_ram_reg[16][8]_0 (CONTROLLER_n_32),
-        .\memory_ram_reg[16][9]_0 (CONTROLLER_n_33),
+        .\memory_ram_reg[16][5]_0 (CONTROLLER_n_39),
+        .\memory_ram_reg[16][6]_0 (CONTROLLER_n_40),
+        .\memory_ram_reg[16][7]_0 (CONTROLLER_n_41),
+        .\memory_ram_reg[16][8]_0 (CONTROLLER_n_42),
+        .\memory_ram_reg[16][9]_0 (CONTROLLER_n_43),
         .\memory_ram_reg[16][9]_1 (UPDATE_RAM_D_n_13),
         .\memory_ram_reg[16][9]_2 (UPDATE_RAM_D_n_308),
         .\memory_ram_reg[17][0]_0 (UPDATE_RAM_D_n_25),
@@ -6006,7 +6100,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_TOP_dijkstra
         .\memory_ram_reg[9][8]_0 (UPDATE_RAM_D_n_23),
         .\memory_ram_reg[9][9]_0 (UPDATE_RAM_D_n_24),
         .\memory_ram_reg[9]_21 (\memory_ram_reg[9]_21 ),
-        .s00_axi_aclk(s00_axi_aclk));
+        .s00_axi_aclk(s00_axi_aclk),
+        .\s_start_node_reg[3] (dpram_0_n_11));
 endmodule
 
 (* ORIG_REF_NAME = "UPDATE_RAM" *) 
@@ -6296,8 +6391,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
     UP_we_ram,
     \cpt_reg[2]_0 ,
     \FSM_onehot_current_state_reg[5]_1 ,
-    \slv_reg0_reg[12] ,
     \slv_reg0_reg[20] ,
+    \slv_reg0_reg[8] ,
     \FSM_onehot_current_state_reg[5]_2 ,
     \FSM_onehot_current_state_reg[4]_5 ,
     \FSM_onehot_current_state_reg[4]_6 ,
@@ -6336,7 +6431,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
     \memory_ram_reg[18]_12 ,
     \memory_ram_reg[10]_20 ,
     s00_axi_aresetn,
-    \data_rom_reg[4] ,
+    \data_rom[4]_i_6_0 ,
     \comp_out_reg[4] ,
     \comp_out_reg[4]_0 ,
     \FSM_onehot_current_state_reg[1]_0 ,
@@ -6632,8 +6727,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
   output UP_we_ram;
   output [2:0]\cpt_reg[2]_0 ;
   output [0:0]\FSM_onehot_current_state_reg[5]_1 ;
-  output \slv_reg0_reg[12] ;
   output \slv_reg0_reg[20] ;
+  output \slv_reg0_reg[8] ;
   output \FSM_onehot_current_state_reg[5]_2 ;
   output \FSM_onehot_current_state_reg[4]_5 ;
   output \FSM_onehot_current_state_reg[4]_6 ;
@@ -6672,7 +6767,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
   input [9:0]\memory_ram_reg[18]_12 ;
   input [9:0]\memory_ram_reg[10]_20 ;
   input s00_axi_aresetn;
-  input [4:0]\data_rom_reg[4] ;
+  input [4:0]\data_rom[4]_i_6_0 ;
   input [0:0]\comp_out_reg[4] ;
   input \comp_out_reg[4]_0 ;
   input \FSM_onehot_current_state_reg[1]_0 ;
@@ -6687,7 +6782,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
   wire [0:0]D;
   wire [0:0]E;
   wire \FSM_onehot_current_state[1]_i_1_n_0 ;
-  wire \FSM_onehot_current_state[1]_i_2__0_n_0 ;
+  wire \FSM_onehot_current_state[1]_i_2_n_0 ;
   wire \FSM_onehot_current_state[2]_i_1__0_n_0 ;
   wire \FSM_onehot_current_state[2]_i_2_n_0 ;
   wire \FSM_onehot_current_state[4]_i_1__0_n_0 ;
@@ -6743,9 +6838,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
   wire \data_rom[4]_i_15_n_0 ;
   wire \data_rom[4]_i_16_n_0 ;
   wire \data_rom[4]_i_17_n_0 ;
+  wire [4:0]\data_rom[4]_i_6_0 ;
   wire \data_rom[4]_i_8_n_0 ;
   wire \data_rom[4]_i_9_n_0 ;
-  wire [4:0]\data_rom_reg[4] ;
   wire \memory_ram[27][9]_i_2_n_0 ;
   wire \memory_ram[27][9]_i_3_n_0 ;
   wire \memory_ram[29][9]_i_2_n_0 ;
@@ -7054,27 +7149,27 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
   wire [4:1]p_0_in;
   wire s00_axi_aclk;
   wire s00_axi_aresetn;
-  wire \slv_reg0_reg[12] ;
   wire \slv_reg0_reg[20] ;
+  wire \slv_reg0_reg[8] ;
 
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT4 #(
     .INIT(16'hF444)) 
     \FSM_onehot_current_state[1]_i_1 
-       (.I0(\FSM_onehot_current_state[1]_i_2__0_n_0 ),
+       (.I0(\FSM_onehot_current_state[1]_i_2_n_0 ),
         .I1(Q[1]),
         .I2(Q[0]),
         .I3(\FSM_onehot_current_state_reg[1]_0 ),
         .O(\FSM_onehot_current_state[1]_i_1_n_0 ));
   LUT5 #(
     .INIT(32'h00000400)) 
-    \FSM_onehot_current_state[1]_i_2__0 
+    \FSM_onehot_current_state[1]_i_2 
        (.I0(\cpt_ram_reg[4]_0 [1]),
         .I1(\cpt_ram_reg[4]_0 [0]),
         .I2(\cpt_ram_reg[4]_0 [2]),
         .I3(\cpt_ram_reg[4]_0 [4]),
         .I4(\cpt_ram_reg[4]_0 [3]),
-        .O(\FSM_onehot_current_state[1]_i_2__0_n_0 ));
+        .O(\FSM_onehot_current_state[1]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'hFFFFAA80)) 
     \FSM_onehot_current_state[2]_i_1__0 
@@ -7085,14 +7180,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\FSM_onehot_current_state[2]_i_2_n_0 ),
         .O(\FSM_onehot_current_state[2]_i_1__0_n_0 ));
   LUT6 #(
-    .INIT(64'hFFFF000800080008)) 
+    .INIT(64'h888888888888F888)) 
     \FSM_onehot_current_state[2]_i_2 
-       (.I0(Q[0]),
-        .I1(\FSM_onehot_current_state_reg[2]_0 [0]),
-        .I2(Q[4]),
-        .I3(\FSM_onehot_current_state_reg[2]_0 [1]),
-        .I4(\FSM_onehot_current_state[1]_i_2__0_n_0 ),
-        .I5(Q[1]),
+       (.I0(\FSM_onehot_current_state[1]_i_2_n_0 ),
+        .I1(Q[1]),
+        .I2(Q[0]),
+        .I3(\FSM_onehot_current_state_reg[2]_0 [0]),
+        .I4(Q[4]),
+        .I5(\FSM_onehot_current_state_reg[2]_0 [1]),
         .O(\FSM_onehot_current_state[2]_i_2_n_0 ));
   LUT5 #(
     .INIT(32'h73770000)) 
@@ -7133,7 +7228,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(out[2]),
         .I5(\cpt_reg[2]_0 [2]),
         .O(\FSM_onehot_current_state[6]_i_4_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
   LUT3 #(
     .INIT(8'h01)) 
     \FSM_onehot_current_state[6]_i_5 
@@ -7206,30 +7301,30 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .Q(Q[4]));
   LUT5 #(
     .INIT(32'hAAAAAAA8)) 
-    \FSM_sequential_current_state[0]_i_4 
-       (.I0(\FSM_sequential_current_state[0]_i_2 [4]),
-        .I1(\FSM_sequential_current_state[0]_i_2 [0]),
-        .I2(\FSM_sequential_current_state[0]_i_2 [1]),
-        .I3(\FSM_sequential_current_state[0]_i_2 [3]),
-        .I4(\FSM_sequential_current_state[0]_i_2 [2]),
-        .O(\slv_reg0_reg[12] ));
-  LUT5 #(
-    .INIT(32'hAAAAAAA8)) 
-    \FSM_sequential_current_state[0]_i_5 
+    \FSM_sequential_current_state[0]_i_3 
        (.I0(\FSM_sequential_current_state[0]_i_2 [9]),
         .I1(\FSM_sequential_current_state[0]_i_2 [5]),
         .I2(\FSM_sequential_current_state[0]_i_2 [6]),
         .I3(\FSM_sequential_current_state[0]_i_2 [8]),
         .I4(\FSM_sequential_current_state[0]_i_2 [7]),
         .O(\slv_reg0_reg[20] ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  LUT5 #(
+    .INIT(32'h0001FFFF)) 
+    \FSM_sequential_current_state[0]_i_4 
+       (.I0(\FSM_sequential_current_state[0]_i_2 [0]),
+        .I1(\FSM_sequential_current_state[0]_i_2 [1]),
+        .I2(\FSM_sequential_current_state[0]_i_2 [3]),
+        .I3(\FSM_sequential_current_state[0]_i_2 [2]),
+        .I4(\FSM_sequential_current_state[0]_i_2 [4]),
+        .O(\slv_reg0_reg[8] ));
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \comp_out[3]_i_5 
        (.I0(Q[3]),
         .I1(Q[2]),
         .O(\FSM_onehot_current_state_reg[5]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair44" *) 
+  (* SOFT_HLUTNM = "soft_lutpair47" *) 
   LUT4 #(
     .INIT(16'h00E0)) 
     \comp_out[4]_i_1 
@@ -7238,20 +7333,19 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I2(\comp_out_reg[4] ),
         .I3(\comp_out_reg[4]_0 ),
         .O(\FSM_onehot_current_state_reg[5]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \cpt[0]_i_1 
        (.I0(\cpt_reg[2]_0 [0]),
         .O(\cpt[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair49" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT2 #(
     .INIT(4'h6)) 
     \cpt[1]_i_1 
        (.I0(\cpt_reg[2]_0 [1]),
         .I1(\cpt_reg[2]_0 [0]),
         .O(p_0_in[1]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair51" *) 
   LUT3 #(
     .INIT(8'h6A)) 
     \cpt[2]_i_1 
@@ -7259,7 +7353,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I1(\cpt_reg[2]_0 [0]),
         .I2(\cpt_reg[2]_0 [1]),
         .O(p_0_in[2]));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT4 #(
     .INIT(16'h6AAA)) 
     \cpt[3]_i_1 
@@ -7283,7 +7377,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
        (.I0(s00_axi_aresetn),
         .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(cpt0));
-  (* SOFT_HLUTNM = "soft_lutpair40" *) 
+  (* SOFT_HLUTNM = "soft_lutpair43" *) 
   LUT5 #(
     .INIT(32'h6AAAAAAA)) 
     \cpt[4]_i_3 
@@ -7293,14 +7387,14 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I3(\cpt_reg[2]_0 [1]),
         .I4(cpt_reg[3]),
         .O(p_0_in[4]));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT2 #(
     .INIT(4'h2)) 
     \cpt_ram[0]_i_1 
        (.I0(Q[1]),
         .I1(\cpt_ram_reg[4]_0 [0]),
         .O(\cpt_ram[0]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair47" *) 
+  (* SOFT_HLUTNM = "soft_lutpair50" *) 
   LUT3 #(
     .INIT(8'h28)) 
     \cpt_ram[1]_i_1 
@@ -7308,7 +7402,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I1(\cpt_ram_reg[4]_0 [0]),
         .I2(\cpt_ram_reg[4]_0 [1]),
         .O(\cpt_ram[1]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT4 #(
     .INIT(16'h2888)) 
     \cpt_ram[2]_i_1 
@@ -7317,25 +7411,25 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I2(\cpt_ram_reg[4]_0 [1]),
         .I3(\cpt_ram_reg[4]_0 [0]),
         .O(\cpt_ram[2]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair39" *) 
+  (* SOFT_HLUTNM = "soft_lutpair42" *) 
   LUT5 #(
     .INIT(32'h28888888)) 
     \cpt_ram[3]_i_1 
        (.I0(Q[1]),
         .I1(\cpt_ram_reg[4]_0 [3]),
-        .I2(\cpt_ram_reg[4]_0 [2]),
-        .I3(\cpt_ram_reg[4]_0 [0]),
-        .I4(\cpt_ram_reg[4]_0 [1]),
+        .I2(\cpt_ram_reg[4]_0 [0]),
+        .I3(\cpt_ram_reg[4]_0 [1]),
+        .I4(\cpt_ram_reg[4]_0 [2]),
         .O(\cpt_ram[3]_i_1_n_0 ));
   LUT6 #(
     .INIT(64'h2888888888888888)) 
     \cpt_ram[4]_i_1 
        (.I0(Q[1]),
         .I1(\cpt_ram_reg[4]_0 [4]),
-        .I2(\cpt_ram_reg[4]_0 [1]),
-        .I3(\cpt_ram_reg[4]_0 [0]),
-        .I4(\cpt_ram_reg[4]_0 [2]),
-        .I5(\cpt_ram_reg[4]_0 [3]),
+        .I2(\cpt_ram_reg[4]_0 [3]),
+        .I3(\cpt_ram_reg[4]_0 [2]),
+        .I4(\cpt_ram_reg[4]_0 [1]),
+        .I5(\cpt_ram_reg[4]_0 [0]),
         .O(\cpt_ram[4]_i_1_n_0 ));
   FDRE \cpt_ram_reg[0] 
        (.C(s00_axi_aclk),
@@ -7397,7 +7491,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .D(p_0_in[4]),
         .Q(cpt_reg[4]),
         .R(\cpt[4]_i_1_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT4 #(
     .INIT(16'hFFFE)) 
     \data_rom[4]_i_1 
@@ -7407,69 +7501,70 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I3(Q[3]),
         .O(E));
   LUT6 #(
-    .INIT(64'h000017771777FFFF)) 
+    .INIT(64'h0000077F077FFFFF)) 
     \data_rom[4]_i_10 
-       (.I0(\cpt_reg[2]_0 [1]),
-        .I1(\data_rom_reg[4] [1]),
-        .I2(\cpt_reg[2]_0 [0]),
-        .I3(\data_rom_reg[4] [0]),
+       (.I0(\cpt_reg[2]_0 [0]),
+        .I1(\data_rom[4]_i_6_0 [0]),
+        .I2(\data_rom[4]_i_6_0 [1]),
+        .I3(\cpt_reg[2]_0 [1]),
         .I4(\cpt_reg[2]_0 [2]),
-        .I5(\data_rom_reg[4] [2]),
+        .I5(\data_rom[4]_i_6_0 [2]),
         .O(\data_rom[4]_i_10_n_0 ));
   LUT6 #(
     .INIT(64'hFFFE88808880FFFE)) 
     \data_rom[4]_i_11 
        (.I0(\cpt_reg[2]_0 [1]),
-        .I1(\data_rom_reg[4] [1]),
+        .I1(\data_rom[4]_i_6_0 [1]),
         .I2(\cpt_reg[2]_0 [0]),
-        .I3(\data_rom_reg[4] [0]),
+        .I3(\data_rom[4]_i_6_0 [0]),
         .I4(\cpt_reg[2]_0 [2]),
-        .I5(\data_rom_reg[4] [2]),
+        .I5(\data_rom[4]_i_6_0 [2]),
         .O(\data_rom[4]_i_11_n_0 ));
   LUT2 #(
     .INIT(4'h6)) 
     \data_rom[4]_i_12 
        (.I0(cpt_reg[3]),
-        .I1(\data_rom_reg[4] [3]),
+        .I1(\data_rom[4]_i_6_0 [3]),
         .O(\data_rom[4]_i_12_n_0 ));
   LUT2 #(
-    .INIT(4'h1)) 
+    .INIT(4'hE)) 
     \data_rom[4]_i_13 
        (.I0(\cpt_reg[2]_0 [2]),
-        .I1(\data_rom_reg[4] [2]),
+        .I1(\data_rom[4]_i_6_0 [2]),
         .O(\data_rom[4]_i_13_n_0 ));
   LUT6 #(
-    .INIT(64'hA220088A088AA220)) 
+    .INIT(64'hD5D5D554FDD5D5D5)) 
     \data_rom[4]_i_14 
+       (.I0(\data_rom[4]_i_12_n_0 ),
+        .I1(\data_rom[4]_i_6_0 [2]),
+        .I2(\cpt_reg[2]_0 [2]),
+        .I3(\cpt_reg[2]_0 [1]),
+        .I4(\data_rom[4]_i_6_0 [1]),
+        .I5(\data_rom[4]_i_17_n_0 ),
+        .O(\data_rom[4]_i_14_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair52" *) 
+  LUT2 #(
+    .INIT(4'h6)) 
+    \data_rom[4]_i_15 
+       (.I0(cpt_reg[4]),
+        .I1(\data_rom[4]_i_6_0 [4]),
+        .O(\data_rom[4]_i_15_n_0 ));
+  LUT6 #(
+    .INIT(64'hA220088A088AA220)) 
+    \data_rom[4]_i_16 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I1(\data_rom[4]_i_10_n_0 ),
         .I2(cpt_reg[3]),
-        .I3(\data_rom_reg[4] [3]),
+        .I3(\data_rom[4]_i_6_0 [3]),
         .I4(cpt_reg[4]),
-        .I5(\data_rom_reg[4] [4]),
-        .O(\data_rom[4]_i_14_n_0 ));
-  LUT6 #(
-    .INIT(64'hFDFF55D555D55455)) 
-    \data_rom[4]_i_15 
-       (.I0(\data_rom[4]_i_12_n_0 ),
-        .I1(\cpt_reg[2]_0 [1]),
-        .I2(\data_rom_reg[4] [1]),
-        .I3(\data_rom[4]_i_17_n_0 ),
-        .I4(\data_rom_reg[4] [2]),
-        .I5(\cpt_reg[2]_0 [2]),
-        .O(\data_rom[4]_i_15_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair48" *) 
-  LUT2 #(
-    .INIT(4'h1)) 
-    \data_rom[4]_i_16 
-       (.I0(cpt_reg[3]),
-        .I1(\data_rom_reg[4] [3]),
+        .I5(\data_rom[4]_i_6_0 [4]),
         .O(\data_rom[4]_i_16_n_0 ));
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT2 #(
     .INIT(4'h1)) 
     \data_rom[4]_i_17 
        (.I0(\cpt_reg[2]_0 [0]),
-        .I1(\data_rom_reg[4] [0]),
+        .I1(\data_rom[4]_i_6_0 [0]),
         .O(\data_rom[4]_i_17_n_0 ));
   LUT5 #(
     .INIT(32'h00008000)) 
@@ -7481,27 +7576,27 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(addr_rom[0]),
         .O(D));
   LUT6 #(
-    .INIT(64'hC2BFBFC202A8A802)) 
+    .INIT(64'hEB3C3CBE28282882)) 
     \data_rom[4]_i_3 
        (.I0(\FSM_onehot_current_state_reg[5]_0 ),
-        .I1(\data_rom_reg[4] [0]),
-        .I2(\cpt_reg[2]_0 [0]),
-        .I3(\data_rom_reg[4] [1]),
-        .I4(\cpt_reg[2]_0 [1]),
+        .I1(\data_rom[4]_i_6_0 [1]),
+        .I2(\cpt_reg[2]_0 [1]),
+        .I3(\data_rom[4]_i_6_0 [0]),
+        .I4(\cpt_reg[2]_0 [0]),
         .I5(\FSM_onehot_current_state_reg_n_0_[2] ),
         .O(addr_rom[1]));
   LUT6 #(
     .INIT(64'hFFFF690069006900)) 
     \data_rom[4]_i_4 
-       (.I0(\data_rom[4]_i_8_n_0 ),
-        .I1(\data_rom_reg[4] [2]),
-        .I2(\cpt_reg[2]_0 [2]),
+       (.I0(\data_rom[4]_i_6_0 [2]),
+        .I1(\cpt_reg[2]_0 [2]),
+        .I2(\data_rom[4]_i_8_n_0 ),
         .I3(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I4(\data_rom[4]_i_9_n_0 ),
         .I5(\FSM_onehot_current_state_reg[5]_0 ),
         .O(addr_rom[2]));
   LUT6 #(
-    .INIT(64'hF84F8FF488448844)) 
+    .INIT(64'h8FF4F84F88448844)) 
     \data_rom[4]_i_5 
        (.I0(\data_rom[4]_i_10_n_0 ),
         .I1(\FSM_onehot_current_state_reg_n_0_[2] ),
@@ -7511,43 +7606,43 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I5(\FSM_onehot_current_state_reg[5]_0 ),
         .O(addr_rom[3]));
   LUT6 #(
-    .INIT(64'hBEEBEBBEAAAAAAAA)) 
+    .INIT(64'hFFFFFFFF66690000)) 
     \data_rom[4]_i_6 
        (.I0(\data_rom[4]_i_14_n_0 ),
         .I1(\data_rom[4]_i_15_n_0 ),
-        .I2(\data_rom[4]_i_16_n_0 ),
-        .I3(cpt_reg[4]),
-        .I4(\data_rom_reg[4] [4]),
-        .I5(\FSM_onehot_current_state_reg[5]_0 ),
+        .I2(cpt_reg[3]),
+        .I3(\data_rom[4]_i_6_0 [3]),
+        .I4(\FSM_onehot_current_state_reg[5]_0 ),
+        .I5(\data_rom[4]_i_16_n_0 ),
         .O(addr_rom[4]));
   LUT6 #(
     .INIT(64'hEBEBEBEBEBEBEB28)) 
     \data_rom[4]_i_7 
        (.I0(\FSM_onehot_current_state_reg_n_0_[2] ),
         .I1(\cpt_reg[2]_0 [0]),
-        .I2(\data_rom_reg[4] [0]),
+        .I2(\data_rom[4]_i_6_0 [0]),
         .I3(Q[3]),
         .I4(Q[2]),
         .I5(\FSM_onehot_current_state_reg_n_0_[3] ),
         .O(addr_rom[0]));
-  (* SOFT_HLUTNM = "soft_lutpair46" *) 
+  (* SOFT_HLUTNM = "soft_lutpair49" *) 
   LUT4 #(
-    .INIT(16'h1777)) 
+    .INIT(16'h077F)) 
     \data_rom[4]_i_8 
-       (.I0(\cpt_reg[2]_0 [1]),
-        .I1(\data_rom_reg[4] [1]),
-        .I2(\cpt_reg[2]_0 [0]),
-        .I3(\data_rom_reg[4] [0]),
+       (.I0(\cpt_reg[2]_0 [0]),
+        .I1(\data_rom[4]_i_6_0 [0]),
+        .I2(\data_rom[4]_i_6_0 [1]),
+        .I3(\cpt_reg[2]_0 [1]),
         .O(\data_rom[4]_i_8_n_0 ));
   LUT6 #(
     .INIT(64'hE11E0FF00FF01EE1)) 
     \data_rom[4]_i_9 
        (.I0(\cpt_reg[2]_0 [0]),
-        .I1(\data_rom_reg[4] [0]),
+        .I1(\data_rom[4]_i_6_0 [0]),
         .I2(\cpt_reg[2]_0 [2]),
-        .I3(\data_rom_reg[4] [2]),
+        .I3(\data_rom[4]_i_6_0 [2]),
         .I4(\cpt_reg[2]_0 [1]),
-        .I5(\data_rom_reg[4] [1]),
+        .I5(\data_rom[4]_i_6_0 [1]),
         .O(\data_rom[4]_i_9_n_0 ));
   LUT6 #(
     .INIT(64'hFFFF0001FFFE0000)) 
@@ -8239,7 +8334,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\FSM_onehot_current_state_reg[4]_2 ),
         .I5(\memory_ram_reg[15]_15 [8]),
         .O(\memory_ram_reg[15][8] ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT1 #(
     .INIT(2'h1)) 
     \memory_ram[15][9]_i_1 
@@ -8265,7 +8360,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\cpt_ram_reg[4]_0 [1]),
         .I5(Q[1]),
         .O(\FSM_onehot_current_state_reg[4]_1 ));
-  (* SOFT_HLUTNM = "soft_lutpair42" *) 
+  (* SOFT_HLUTNM = "soft_lutpair45" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \memory_ram[16][9]_i_1 
@@ -8275,7 +8370,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I3(UP_addr_ram[0]),
         .I4(\FSM_onehot_current_state_reg[4]_4 ),
         .O(\FSM_onehot_current_state_reg[4]_7 ));
-  (* SOFT_HLUTNM = "soft_lutpair45" *) 
+  (* SOFT_HLUTNM = "soft_lutpair48" *) 
   LUT2 #(
     .INIT(4'hE)) 
     \memory_ram[16][9]_i_6 
@@ -8582,7 +8677,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\memory_ram[27][9]_i_3_n_0 ),
         .I5(\memory_ram_reg[19]_11 [9]),
         .O(\memory_ram_reg[19][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'h00000010)) 
     \memory_ram[1][9]_i_1 
@@ -9636,7 +9731,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I1(UP_addr_ram[0]),
         .I2(UP_addr_ram[2]),
         .O(\memory_ram[29][9]_i_3_n_0 ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \memory_ram[2][9]_i_1 
@@ -9826,7 +9921,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\cpt_ram_reg[4]_0 [3]),
         .I5(Q[1]),
         .O(\FSM_onehot_current_state_reg[4]_2 ));
-  (* SOFT_HLUTNM = "soft_lutpair43" *) 
+  (* SOFT_HLUTNM = "soft_lutpair46" *) 
   LUT3 #(
     .INIT(8'hFE)) 
     \memory_ram[30][9]_i_8 
@@ -10034,7 +10129,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(\memory_ram[27][9]_i_3_n_0 ),
         .I5(\memory_ram_reg[3]_27 [9]),
         .O(\memory_ram_reg[3][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair38" *) 
+  (* SOFT_HLUTNM = "soft_lutpair41" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \memory_ram[4][9]_i_1 
@@ -10344,7 +10439,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_UPDATE_RAM
         .I4(data0[9]),
         .I5(\memory_ram_reg[7]_23 [9]),
         .O(\memory_ram_reg[7][9] ));
-  (* SOFT_HLUTNM = "soft_lutpair41" *) 
+  (* SOFT_HLUTNM = "soft_lutpair44" *) 
   LUT5 #(
     .INIT(32'h00000002)) 
     \memory_ram[8][9]_i_1 
@@ -10611,7 +10706,10 @@ endmodule
 
 (* ORIG_REF_NAME = "dpram" *) 
 module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
-   (data0,
+   (\data_out_b_reg[0]_0 ,
+    Q,
+    \s_start_node_reg[3] ,
+    data0,
     \FSM_onehot_current_state_reg[4] ,
     \memory_ram_reg[3]_27 ,
     \memory_ram_reg[0]_30 ,
@@ -10649,8 +10747,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
     \FSM_onehot_current_state_reg[4]_6 ,
     \FSM_onehot_current_state_reg[4]_7 ,
     \FSM_onehot_current_state_reg[4]_8 ,
-    Q,
-    \data_out_b_reg[9]_0 ,
+    \data_out_a_reg[9]_0 ,
+    \data_out_b[9]_i_21 ,
+    \FSM_onehot_current_state_reg[2] ,
     \memory_ram_reg[16][5]_0 ,
     UP_addr_ram,
     UP_we_ram,
@@ -10941,6 +11040,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
     \memory_ram_reg[31][2]_0 ,
     \memory_ram_reg[31][1]_0 ,
     \memory_ram_reg[31][0]_0 );
+  output \data_out_b_reg[0]_0 ;
+  output [9:0]Q;
+  output \s_start_node_reg[3] ;
   output [4:0]data0;
   output \FSM_onehot_current_state_reg[4] ;
   output [9:0]\memory_ram_reg[3]_27 ;
@@ -10979,8 +11081,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   output \FSM_onehot_current_state_reg[4]_6 ;
   output \FSM_onehot_current_state_reg[4]_7 ;
   output \FSM_onehot_current_state_reg[4]_8 ;
-  output [4:0]Q;
-  output [9:0]\data_out_b_reg[9]_0 ;
+  output [4:0]\data_out_a_reg[9]_0 ;
+  input \data_out_b[9]_i_21 ;
+  input [4:0]\FSM_onehot_current_state_reg[2] ;
   input \memory_ram_reg[16][5]_0 ;
   input [4:0]UP_addr_ram;
   input UP_we_ram;
@@ -11272,6 +11375,8 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   input \memory_ram_reg[31][1]_0 ;
   input \memory_ram_reg[31][0]_0 ;
 
+  wire \FSM_onehot_current_state[2]_i_4_n_0 ;
+  wire [4:0]\FSM_onehot_current_state_reg[2] ;
   wire \FSM_onehot_current_state_reg[4] ;
   wire \FSM_onehot_current_state_reg[4]_0 ;
   wire \FSM_onehot_current_state_reg[4]_1 ;
@@ -11283,7 +11388,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   wire \FSM_onehot_current_state_reg[4]_7 ;
   wire \FSM_onehot_current_state_reg[4]_8 ;
   wire [4:0]NN_addr_ram;
-  wire [4:0]Q;
+  wire [9:0]Q;
   wire [4:0]UP_addr_ram;
   wire UP_we_ram;
   wire [4:0]data0;
@@ -11348,6 +11453,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   wire \data_out_a_reg[8]_i_3_n_0 ;
   wire \data_out_a_reg[8]_i_4_n_0 ;
   wire \data_out_a_reg[8]_i_5_n_0 ;
+  wire [4:0]\data_out_a_reg[9]_0 ;
   wire \data_out_a_reg[9]_i_2_n_0 ;
   wire \data_out_a_reg[9]_i_3_0 ;
   wire \data_out_a_reg[9]_i_3_n_0 ;
@@ -11443,7 +11549,9 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   wire \data_out_b[9]_i_17_n_0 ;
   wire \data_out_b[9]_i_18_n_0 ;
   wire \data_out_b[9]_i_1_n_0 ;
+  wire \data_out_b[9]_i_21 ;
   wire \data_out_b[9]_i_9_n_0 ;
+  wire \data_out_b_reg[0]_0 ;
   wire \data_out_b_reg[0]_i_2_n_0 ;
   wire \data_out_b_reg[0]_i_3_n_0 ;
   wire \data_out_b_reg[0]_i_4_n_0 ;
@@ -11480,7 +11588,6 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   wire \data_out_b_reg[8]_i_3_n_0 ;
   wire \data_out_b_reg[8]_i_4_n_0 ;
   wire \data_out_b_reg[8]_i_5_n_0 ;
-  wire [9:0]\data_out_b_reg[9]_0 ;
   wire \data_out_b_reg[9]_i_2_n_0 ;
   wire \data_out_b_reg[9]_i_3_n_0 ;
   wire \data_out_b_reg[9]_i_5_n_0 ;
@@ -11872,7 +11979,27 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
   wire \memory_ram_reg[9][9]_0 ;
   wire [9:0]\memory_ram_reg[9]_21 ;
   wire s00_axi_aclk;
+  wire \s_start_node_reg[3] ;
 
+  LUT5 #(
+    .INIT(32'h09000009)) 
+    \FSM_onehot_current_state[2]_i_2__0 
+       (.I0(\FSM_onehot_current_state_reg[2] [3]),
+        .I1(Q[3]),
+        .I2(\FSM_onehot_current_state[2]_i_4_n_0 ),
+        .I3(Q[4]),
+        .I4(\FSM_onehot_current_state_reg[2] [4]),
+        .O(\s_start_node_reg[3] ));
+  LUT6 #(
+    .INIT(64'h6FF6FFFFFFFF6FF6)) 
+    \FSM_onehot_current_state[2]_i_4 
+       (.I0(Q[1]),
+        .I1(\FSM_onehot_current_state_reg[2] [1]),
+        .I2(Q[2]),
+        .I3(\FSM_onehot_current_state_reg[2] [2]),
+        .I4(\FSM_onehot_current_state_reg[2] [0]),
+        .I5(Q[0]),
+        .O(\FSM_onehot_current_state[2]_i_4_n_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \data_out_a[5]_i_1 
@@ -12327,7 +12454,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_a[5]_i_1_n_0 ),
-        .Q(Q[0]),
+        .Q(\data_out_a_reg[9]_0 [0]),
         .R(1'b0));
   MUXF7 \data_out_a_reg[5]_i_2 
        (.I0(\data_out_a[5]_i_6_n_0 ),
@@ -12353,7 +12480,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_a[6]_i_1_n_0 ),
-        .Q(Q[1]),
+        .Q(\data_out_a_reg[9]_0 [1]),
         .R(1'b0));
   MUXF7 \data_out_a_reg[6]_i_2 
        (.I0(\data_out_a[6]_i_6_n_0 ),
@@ -12379,7 +12506,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_a[7]_i_1_n_0 ),
-        .Q(Q[2]),
+        .Q(\data_out_a_reg[9]_0 [2]),
         .R(1'b0));
   MUXF7 \data_out_a_reg[7]_i_2 
        (.I0(\data_out_a[7]_i_6_n_0 ),
@@ -12405,7 +12532,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_a[8]_i_1_n_0 ),
-        .Q(Q[3]),
+        .Q(\data_out_a_reg[9]_0 [3]),
         .R(1'b0));
   MUXF7 \data_out_a_reg[8]_i_2 
        (.I0(\data_out_a[8]_i_6_n_0 ),
@@ -12431,7 +12558,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_a[9]_i_1_n_0 ),
-        .Q(Q[4]),
+        .Q(\data_out_a_reg[9]_0 [4]),
         .R(1'b0));
   MUXF7 \data_out_a_reg[9]_i_2 
        (.I0(\data_out_a[9]_i_6_n_0 ),
@@ -13343,6 +13470,12 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
         .I4(NN_addr_ram[0]),
         .I5(\memory_ram_reg[4]_26 [9]),
         .O(\data_out_b[9]_i_18_n_0 ));
+  LUT2 #(
+    .INIT(4'h8)) 
+    \data_out_b[9]_i_24 
+       (.I0(Q[0]),
+        .I1(\data_out_b[9]_i_21 ),
+        .O(\data_out_b_reg[0]_0 ));
   LUT6 #(
     .INIT(64'hAFA0CFCFAFA0C0C0)) 
     \data_out_b[9]_i_9 
@@ -13357,7 +13490,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[0]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [0]),
+        .Q(Q[0]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[0]_i_2 
        (.I0(\data_out_b[0]_i_6_n_0 ),
@@ -13383,7 +13516,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[1]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [1]),
+        .Q(Q[1]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[1]_i_2 
        (.I0(\data_out_b[1]_i_6_n_0 ),
@@ -13409,7 +13542,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[2]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [2]),
+        .Q(Q[2]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[2]_i_2 
        (.I0(\data_out_b[2]_i_6_n_0 ),
@@ -13435,7 +13568,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[3]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [3]),
+        .Q(Q[3]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[3]_i_2 
        (.I0(\data_out_b[3]_i_6_n_0 ),
@@ -13461,7 +13594,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[4]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [4]),
+        .Q(Q[4]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[4]_i_2 
        (.I0(\data_out_b[4]_i_6_n_0 ),
@@ -13487,7 +13620,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[5]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [5]),
+        .Q(Q[5]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[5]_i_2 
        (.I0(\data_out_b[5]_i_6_n_0 ),
@@ -13513,7 +13646,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[6]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [6]),
+        .Q(Q[6]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[6]_i_2 
        (.I0(\data_out_b[6]_i_6_n_0 ),
@@ -13539,7 +13672,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[7]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [7]),
+        .Q(Q[7]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[7]_i_2 
        (.I0(\data_out_b[7]_i_6_n_0 ),
@@ -13565,7 +13698,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[8]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [8]),
+        .Q(Q[8]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[8]_i_2 
        (.I0(\data_out_b[8]_i_6_n_0 ),
@@ -13591,7 +13724,7 @@ module design_dijkstra_ram_Dijkstra_algorithm_0_0_dpram
        (.C(s00_axi_aclk),
         .CE(1'b1),
         .D(\data_out_b[9]_i_1_n_0 ),
-        .Q(\data_out_b_reg[9]_0 [9]),
+        .Q(Q[9]),
         .R(1'b0));
   MUXF7 \data_out_b_reg[9]_i_2 
        (.I0(\data_out_b[9]_i_9_n_0 ),

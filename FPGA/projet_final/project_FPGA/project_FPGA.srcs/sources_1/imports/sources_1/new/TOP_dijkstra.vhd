@@ -117,8 +117,7 @@ architecture Behavioral of TOP_dijkstra is
     din_ram : out STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
     data_ram : in STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
     en_ram : out STD_LOGIC;
-    we_ram : out STD_LOGIC;
-    led_u : out STD_LOGIC_VECTOR ( 2 downto 0 )
+    we_ram : out STD_LOGIC
   );
   end component UPDATE_RAM;
   
@@ -129,6 +128,7 @@ architecture Behavioral of TOP_dijkstra is
     en : in STD_LOGIC;
     node_seen : in STD_LOGIC_VECTOR ( 16 downto 0 );
     start_node : in std_logic_vector(nb_bit_addr-1 downto 0);
+    end_node : in std_logic_vector(nb_bit_addr-1 downto 0);
     flag_node : out STD_LOGIC;
     flag_end_write : out STD_LOGIC;
     flag_read_path : in STD_LOGIC;
@@ -144,8 +144,7 @@ architecture Behavioral of TOP_dijkstra is
     din_ram_ext : out STD_LOGIC_VECTOR ( 15 downto 0 );
     en_ram_ext : out STD_LOGIC;
     busy_ram_ext : in STD_LOGIC;
-    we_ram_ext : out STD_LOGIC;
-    led_n : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    we_ram_ext : out STD_LOGIC
   );
   end component NEAREST_NODE;
   
@@ -168,7 +167,7 @@ architecture Behavioral of TOP_dijkstra is
     flag_read_path : out STD_LOGIC;
     next_node : in STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
     o_start_node : out std_logic_vector(nb_bit_addr-1 downto 0);
-    led_c : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    o_end_node : out std_logic_vector(nb_bit_addr-1 downto 0)
   );
  end component DIJKSTRA_CONTROLLER;
 
@@ -177,7 +176,6 @@ architecture Behavioral of TOP_dijkstra is
   signal C_flag_finished : STD_LOGIC;
   signal flag_init : STD_LOGIC;
   signal flag_read_path : STD_LOGIC;
-  signal C_led_c : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal node : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
   signal node_seen : STD_LOGIC_VECTOR ( 16 downto 0 );
   signal NN_addr_ram : STD_LOGIC_VECTOR ( nb_bit_addr-1 downto 0 );
@@ -185,17 +183,15 @@ architecture Behavioral of TOP_dijkstra is
   signal NN_comp_in2 : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
   signal flag_end_write : STD_LOGIC;
   signal flag_node : STD_LOGIC;
-  signal NN_led_n : STD_LOGIC_VECTOR ( 1 downto 0 );
   signal next_node : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
   signal ROM_data : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
   signal UP_addr_ram : STD_LOGIC_VECTOR ( nb_bit_addr-1 downto 0 );
-  signal addr_rom, o_start_node : STD_LOGIC_VECTOR ( nb_bit_addr-1 downto 0 );
+  signal addr_rom, o_start_node, o_end_node : STD_LOGIC_VECTOR ( nb_bit_addr-1 downto 0 );
   signal UP_comp_in1 : STD_LOGIC_VECTOR ( nb_bit_dist-1 downto 0 );
   signal UP_comp_in2 : STD_LOGIC_VECTOR ( nb_bit_dist-1 downto 0 );
   signal UP_din_ram : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
   signal en_rom : STD_LOGIC;
   signal flag_RAM : STD_LOGIC;
-  signal led_u : STD_LOGIC_VECTOR ( 2 downto 0 );
   signal UP_we_ram : STD_LOGIC;
   signal UP_comp_out : STD_LOGIC_VECTOR ( nb_bit_dist-1 downto 0 );
   signal NN_comp_out : STD_LOGIC_VECTOR ( nb_bit_dist+nb_bit_addr-1 downto 0 );
@@ -218,12 +214,12 @@ CONTROLLER: component DIJKSTRA_CONTROLLER
       flag_init => flag_init,
       flag_node => flag_node,
       flag_read_path => flag_read_path,
-      led_c => C_led_c,
       next_node => next_node,
       node => node,
       node_seen => node_seen,
       rst_n => rst_n,
       o_start_node => o_start_node,
+      o_end_node => o_end_node,
       start_node => start_node
     );
     
@@ -245,10 +241,10 @@ NEAREST_NODE_D: component NEAREST_NODE
       flag_end_write => flag_end_write,
       flag_node => flag_node,
       flag_read_path => flag_read_path,
-      led_n => NN_led_n,
       next_node => next_node,
       node_seen => node_seen,
       start_node => o_start_node,
+      end_node => o_end_node,
       rst_n => rst_n,
       we_ram_ext => we_ram_ext
     );
@@ -277,7 +273,6 @@ UPDATE_RAM_D: component UPDATE_RAM
       en_rom => en_rom,
       flag_RAM => flag_RAM,
       flag_init => flag_init,
-      led_u => led_u,
       node => node,
       node_seen => node_seen,
       rst_n => rst_n,

@@ -1,10 +1,10 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Mon Jun 13 13:54:02 2022
+-- Date        : Mon Jun 13 13:54:01 2022
 -- Host        : D-14JM0W2 running 64-bit major release  (build 9200)
--- Command     : write_vhdl -force -mode synth_stub
---               d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl
+-- Command     : write_vhdl -force -mode synth_stub -rename_top design_dijkstra_ram_rst_ps7_0_50M_0 -prefix
+--               design_dijkstra_ram_rst_ps7_0_50M_0_ design_dijkstra_ram_rst_ps7_0_50M_0_stub.vhdl
 -- Design      : design_dijkstra_ram_rst_ps7_0_50M_0
 -- Purpose     : Stub declaration of top-level module interface
 -- Device      : xc7z020clg400-1
