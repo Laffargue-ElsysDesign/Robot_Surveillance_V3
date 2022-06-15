@@ -1,6 +1,0 @@
-design_IMU_I2C_master_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/ip/design_IMU_I2C_master_0_0/sim/design_IMU_I2C_master_0_0.vhd,
-design_IMU_IMU_control_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/ip/design_IMU_IMU_control_0_0/sim/design_IMU_IMU_control_0_0.vhd,
-design_IMU_IO_buffer_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/ip/design_IMU_IO_buffer_0_0/sim/design_IMU_IO_buffer_0_0.vhd,
-design_IMU_IO_buffer_1_0.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/ip/design_IMU_IO_buffer_1_0/sim/design_IMU_IO_buffer_1_0.vhd,
-design_IMU_time_pulse_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/ip/design_IMU_time_pulse_0_0/sim/design_IMU_time_pulse_0_0.vhd,
-design_IMU.vhd,vhdl,xil_defaultlib,../../../bd/design_IMU/sim/design_IMU.vhd,

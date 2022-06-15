@@ -1,0 +1,273 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 15 10:07:02 2022
+# Process ID: 9496
+# Current directory: D:/projets/2020_2/project_IMU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5280 D:\projets\2020_2\project_IMU\project_IMU.xpr
+# Log file: D:/projets/2020_2/project_IMU/vivado.log
+# Journal file: D:/projets/2020_2/project_IMU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_IMU/project_IMU.xpr
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+open_bd_design {D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd}
+set_property library xil_defaultlib [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/new/package_IMU.vhd]
+file mkdir D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new
+close [ open D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd w ]
+add_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd
+update_module_reference design_IMU_IMU_control_0_0
+update_compile_order -fileset sources_1
+close [ open D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd w ]
+add_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd
+set_property library robot [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd]
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+update_compile_order -fileset sources_1
+set_property library xil_defaultlib [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/imports/new/I2C_master.vhd]
+set_property library robot [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/new/package_IMU.vhd]
+update_module_reference design_IMU_IMU_control_0_0
+reset_run synth_1
+launch_runs synth_1 -jobs 10
+wait_on_run synth_1
+update_module_reference design_IMU_IMU_control_0_0
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+create_peripheral elsys-design.com user IP_IMU 1.0 -dir D:/projets/2020_2/project_IMU
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+set_property VALUE 6 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+write_peripheral [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+set_property  ip_repo_paths  D:/projets/2020_2/project_IMU/IP_IMU_1.0 [current_project]
+update_ip_catalog -rebuild
+ipx::edit_ip_in_project -upgrade true -name edit_IP_IMU_v1_0 -directory D:/projets/2020_2/project_IMU d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+current_project project_IMU
+current_project edit_IP_IMU_v1_0
+add_files -norecurse -copy_to d:/projets/2020_2/project_IMU/IP_IMU_1.0/src {D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd}
+update_compile_order -fileset sources_1
+set_property library robot [get_files  d:/projets/2020_2/project_IMU/IP_IMU_1.0/src/package_IMU_AXI.vhd]
+current_project project_IMU
+current_project edit_IP_IMU_v1_0
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+create_bd_design "design_IMU_AXI"
+startgroup
+create_bd_cell -type ip -vlnv elsys-design.com:user:IP_IMU:1.0 IP_IMU_0
+endgroup
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/IP_IMU_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins IP_IMU_0/S00_AXI]
+create_bd_cell -type module -reference IO_buffer IO_buffer_0
+create_bd_cell -type module -reference time_pulse time_pulse_0
+create_bd_cell -type module -reference I2C_master I2C_master_0
+set_property location {3 1006 41} [get_bd_cells I2C_master_0]
+connect_bd_net [get_bd_pins I2C_master_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins I2C_master_0/rst_n] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+connect_bd_net [get_bd_pins I2C_master_0/ena] [get_bd_pins IP_IMU_0/ena_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/addr] [get_bd_pins IP_IMU_0/addr_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/data_wr] [get_bd_pins IP_IMU_0/data_wi2c]
+connect_bd_net [get_bd_pins I2C_master_0/ack_err] [get_bd_pins IP_IMU_0/ack_err_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/data_rd] [get_bd_pins IP_IMU_0/data_ri2c]
+connect_bd_net [get_bd_pins I2C_master_0/busy] [get_bd_pins IP_IMU_0/busy_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/flag_data_ack] [get_bd_pins IP_IMU_0/flag_data_i2c]
+connect_bd_net [get_bd_pins time_pulse_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins time_pulse_0/rst_n] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+connect_bd_net [get_bd_pins IP_IMU_0/pulse_1ms] [get_bd_pins time_pulse_0/pulse_1ms]
+set_property location {3.5 1380 -58} [get_bd_cells IO_buffer_0]
+copy_bd_objs /  [get_bd_cells {IO_buffer_0}]
+set_property location {4 1433 73} [get_bd_cells IO_buffer_1]
+set_property location {3 1082 11} [get_bd_cells I2C_master_0]
+connect_bd_net [get_bd_pins I2C_master_0/SDA_o] [get_bd_pins IO_buffer_0/IOBUF_IO_I]
+connect_bd_net [get_bd_pins I2C_master_0/SDA_t] [get_bd_pins IO_buffer_0/IOBUF_IO_T]
+connect_bd_net [get_bd_pins I2C_master_0/SCL_o] [get_bd_pins IO_buffer_1/IOBUF_IO_I]
+connect_bd_net [get_bd_pins I2C_master_0/SCL_t] [get_bd_pins IO_buffer_1/IOBUF_IO_T]
+connect_bd_net [get_bd_pins IO_buffer_1/IOBUF_IO_O] [get_bd_pins I2C_master_0/SCL_i]
+connect_bd_net [get_bd_pins IO_buffer_0/IOBUF_IO_O] [get_bd_pins I2C_master_0/SDA_i]
+startgroup
+make_bd_pins_external  [get_bd_pins IO_buffer_0/IOBUF_IO_IO]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins IO_buffer_1/IOBUF_IO_IO]
+endgroup
+current_bd_design [get_bd_designs design_IMU]
+current_bd_design [get_bd_designs design_IMU_AXI]
+set_property name IMU_I2C_SCL [get_bd_ports IOBUF_IO_IO_1]
+set_property name IMU_I2C_SDA [get_bd_ports IOBUF_IO_IO_0]
+connect_bd_net [get_bd_pins I2C_master_0/rw] [get_bd_pins IP_IMU_0/ena_i2c]
+undo
+connect_bd_net [get_bd_pins I2C_master_0/rw] [get_bd_pins IP_IMU_0/rw_i2c]
+regenerate_bd_layout
+set_property location {1 197 356} [get_bd_cells rst_ps7_0_50M]
+set_property location {1 236 572} [get_bd_cells processing_system7_0]
+set_property location {2 657 651} [get_bd_cells ps7_0_axi_periph]
+set_property location {1 300 187} [get_bd_cells time_pulse_0]
+set_property location {2 743 449} [get_bd_cells IP_IMU_0]
+set_property location {3 1103 590} [get_bd_cells IO_buffer_1]
+set_property location {3 1081 418} [get_bd_cells IO_buffer_0]
+set_property location {2 677 405} [get_bd_cells IP_IMU_0]
+set_property location {2 696 630} [get_bd_cells ps7_0_axi_periph]
+set_property location {3 1057 86} [get_bd_cells IO_buffer_0]
+set_property location {3 1096 224} [get_bd_cells IO_buffer_1]
+set_property location {1309 624} [get_bd_intf_ports DDR]
+set_property location {3 1071 453} [get_bd_cells ps7_0_axi_periph]
+set_property location {1 181 118} [get_bd_cells time_pulse_0]
+set_property location {1 182 289} [get_bd_cells rst_ps7_0_50M]
+set_property location {1 200 502} [get_bd_cells processing_system7_0]
+make_wrapper -files [get_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd] -top
+add_files -norecurse d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.freq_clk_MHz {50}] [get_bd_cells time_pulse_0]
+endgroup
+save_bd_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_IMU_AXI_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+update_compile_order -fileset sources_1
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets I2C_master_0_ack_err] [get_bd_nets I2C_master_0_data_rd] [get_bd_nets IP_IMU_0_addr_i2c] [get_bd_nets IP_IMU_0_data_wi2c] [get_bd_nets IP_IMU_0_ena_i2c] [get_bd_nets I2C_master_0_busy] [get_bd_nets I2C_master_0_flag_data_ack] [get_bd_nets time_pulse_0_pulse_1ms] [get_bd_nets IP_IMU_0_rw_i2c] [get_bd_cells IP_IMU_0]
+undo
+set_property location {2 617 527} [get_bd_cells IP_IMU_0]
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+set_property offset 0x43C00000 [get_bd_addr_segs {processing_system7_0/Data/SEG_IP_IMU_0_S00_AXI_reg}]
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
