@@ -1,2 +1,6 @@
    text	   data	    bss	    dec	    hex	filename
+<<<<<<< Updated upstream
   51044	   2556	  22656	  76256	  129e0	dijkstra.elf
+=======
+  51364	   2556	  22656	  76576	  12b20	dijkstra.elf
+>>>>>>> Stashed changes

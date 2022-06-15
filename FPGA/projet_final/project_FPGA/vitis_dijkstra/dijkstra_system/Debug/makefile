@@ -24,7 +24,11 @@ SYS_CONFIG = design_dijkstra_ram_wrapper
 DOMAINS = standalone_ps7_cortexa9_0
 BIF_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra_system/Debug/system.bif
 
+<<<<<<< Updated upstream
 BITSTREAM_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+=======
+BITSTREAM_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_controller_wrapper.bit
+>>>>>>> Stashed changes
 SD_FILES = --elf D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/Debug/dijkstra.elf,ps7_cortexa9_0
 
 #
@@ -35,7 +39,11 @@ all: package
 
 package:
 	-@echo Generating bif file for the system project
+<<<<<<< Updated upstream
 	generate_system_bif.bat 52376 ${XPFM_PATH} ${DOMAINS} ${BIF_PATH}
+=======
+	generate_system_bif.bat 56065 ${XPFM_PATH} ${DOMAINS} ${BIF_PATH}
+>>>>>>> Stashed changes
 	${SDCARD_GEN} --xpfm ${XPFM_PATH} --sys_config ${SYS_CONFIG} --bif ${BIF_PATH} --bitstream ${BITSTREAM_PATH} ${SD_FILES}
 
 clean:

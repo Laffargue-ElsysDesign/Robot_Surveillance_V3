@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root VersionMajor="1" VersionMinor="15">
+<<<<<<< Updated upstream
   <GenAppInfo Name="Vivado" Version="2020.2" CL="3064766" TimeStamp="Mon Jun 13 13:58:09 2022"/>
+=======
+  <GenAppInfo Name="Vivado" Version="2020.2" CL="3064766" TimeStamp="Tue Jun 14 16:01:38 2022"/>
+>>>>>>> Stashed changes
   <DSA Vendor="xilinx" BoardId="zybo-z7-20" Name="" VersionMajor="0" VersionMinor="0" Description="Vivado generated Hardware Platform" FeatureRomTimestamp="0" DcpLogicFunctionStripped="false" DcpEncrypt="false" Unified="true" Fixed="true" DefaultOutputType="hw_export">
     <Build UsesPR="false" PlatformState="pre_synth" AcceleratorBinaryContent="bitstream" ValidBinaryContentValues="dcp,bitstream" TopModuleName="design_dijkstra_ram_wrapper"/>
     <Board Name="digilentinc.com:zybo-z7-20:1.1" Vendor="digilentinc.com" Part="xc7z020clg400-1" BoardPart="digilentinc.com:zybo-z7-20:part0:1.1">
@@ -16,8 +20,13 @@
       </Device>
     </Devices>
     <Files>
+<<<<<<< Updated upstream
       <File Type="FULL_BIT" Name="design_dijkstra_ram_wrapper.bit"/>
       <File Type="MMI" Name="design_dijkstra_ram_wrapper.mmi"/>
+=======
+      <File Type="FULL_BIT" Name="design_dijkstra_ram_controller_wrapper.bit"/>
+      <File Type="MMI" Name="design_dijkstra_ram_controller_wrapper.mmi"/>
+>>>>>>> Stashed changes
     </Files>
   </DSA>
 </Root>
