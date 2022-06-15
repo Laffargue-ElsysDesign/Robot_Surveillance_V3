@@ -36,17 +36,17 @@ CON-SOCJ-2155                   J01            GRAVITECH_CON-SOCJ-2155
 TFM-110-21-S-D                  J11            SAMTEC_TFM-110-21-S-D
 TFM-110-21-S-D                  J12            SAMTEC_TFM-110-21-S-D
 1x7 Header                      J13            header 1x7
-61301221021                     J14            61301221021
+61301221021                     J14            61301221021							JE
 1x4 Header                      J21            header 1x4
 1x4 Header                      J22            header 1x4
 1x4 Header                      J23            header 1x4
 1x4 Header                      J24            header 1x4
 1x4 Header                      J25            header 1x4
-61301221021                     J26            61301221021
+61301221021                     J26            61301221021							JD
 1x6 Header                      J31            header 1x6
 1x4 Grove conector              J32            FP-110990030
 1x4 Header                      J33            header 1x4
-61301221021                     J34            61301221021
+61301221021                     J34            61301221021							JC
 M20-9990246                     J51            FP-M20-9990246-MFG
 M20-9990246                     J52            FP-M20-9990246-MFG
 M20-9990246                     J53            FP-M20-9990246-MFG
@@ -121,19 +121,19 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
         U23        4       4              PASSIVE     SN74LV1T02DBVRG4
 
 [00109] US_TRIG_3V3
-        J26        7       7              PASSIVE     61301221021
+        J26        7       7              PASSIVE     61301221021					U14
         R24        1       1              PASSIVE     100Ohm
 
 [00108] US_SEL_2
-        J26        3       3              PASSIVE     61301221021
+        J26        3       3              PASSIVE     61301221021					P14
         R23        2       2              PASSIVE     100Ohm
 
 [00107] US_SEL_1
-        J26        2       2              PASSIVE     61301221021
+        J26        2       2              PASSIVE     61301221021					T15
         R22        2       2              PASSIVE     100Ohm
 
 [00106] US_SEL_0
-        J26        1       1              PASSIVE     61301221021
+        J26        1       1              PASSIVE     61301221021					T14
         R21        2       2              PASSIVE     100Ohm
 
 [00105] US_ECHO_5V
@@ -142,11 +142,11 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
         U24        2       2              PASSIVE     SN74LV1T02DBVRG4
 
 [00104] US_ECHO_3V3
-        J26        8       8              PASSIVE     61301221021
+        J26        8       8              PASSIVE     61301221021					U15
         R25        2       2              PASSIVE     100Ohm
 
 [00103] US_5_TRIG_5V
-        J25        2       2              PASSIVE     1x4 Header
+        J25         2       2              PASSIVE     1x4 Header
         U21        1       S4             I/O         TMUX1308PWR
 
 [00102] US_5_ECHO_5V
@@ -186,29 +186,29 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
         U22        12      S3             I/O         TMUX1308PWR
 
 [00093] PWR_MGT_US
-        J26        9       9              PASSIVE     61301221021
+        J26        9       9              PASSIVE     61301221021					V17
         R54        1       1              PASSIVE     100Ohm
         R511       1       1              PASSIVE     100Ohm
 
 [00092] PWR_MGT_NFC
-        J26        10      10             PASSIVE     61301221021
+        J26        10      10             PASSIVE     61301221021					V18
         R525       1       1              PASSIVE     100Ohm
 
 [00091] PWR_MGT_GSM
-        J26        4       4              PASSIVE     61301221021
+        J26        4       4              PASSIVE     61301221021					R14
         R518       1       1              PASSIVE     100Ohm
 
 [00090] NFC_I2C_SDA
         J31        4       4              PASSIVE     1x6 Header
-        J34        1       1              PASSIVE     61301221021
+        J34        1       1              PASSIVE     61301221021					V15
 
 [00089] NFC_I2C_SCL
         J31        5       5              PASSIVE     1x6 Header
-        J34        7       7              PASSIVE     61301221021
+        J34        7       7              PASSIVE     61301221021					W14
 
 [00088] NFC_FD
         J31        3       3              PASSIVE     1x6 Header
-        J34        8       8              PASSIVE     61301221021
+        J34        8       8              PASSIVE     61301221021					Y14
 
 [00077] NetR524_1
         R524       1       1              PASSIVE     100kOhm
@@ -400,19 +400,19 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
 
 [00023] IMU_I2C_SDA
         J32        3       3              PASSIVE     1x4 Grove conector
-        J34        4       4              PASSIVE     61301221021
+        J34        4       4              PASSIVE     61301221021					T10
 
 [00022] IMU_I2C_SCL
         J32        4       4              PASSIVE     1x4 Grove conector
-        J34        3       3              PASSIVE     61301221021
+        J34        3       3              PASSIVE     61301221021					T11
 
 [00021] HOLO_UART_TX
         J11        3       3              PASSIVE     TFM-110-21-S-D
-        J14        10      10             PASSIVE     61301221021
+        J14        10      10             PASSIVE     61301221021					Y17
 
 [00020] HOLO_UART_RX
         J11        1       1              PASSIVE     TFM-110-21-S-D
-        J14        4       4              PASSIVE     61301221021
+        J14        4       4              PASSIVE     61301221021					H15
 
 [00019] HOLO_LED_PWR
         J11        14      14             PASSIVE     TFM-110-21-S-D
@@ -424,15 +424,15 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
 
 [00017] GSM_UART_TXD
         J13        4       4              PASSIVE     1x7 Header
-        J14        7       7              PASSIVE     61301221021
+        J14        7       7              PASSIVE     61301221021					V13
 
 [00016] GSM_UART_RXD
         J13        5       5              PASSIVE     1x7 Header
-        J14        2       2              PASSIVE     61301221021
+        J14        2       2              PASSIVE     61301221021					W16
 
 [00015] GSM_RST
         J13        7       7              PASSIVE     1x7 Header
-        J14        8       8              PASSIVE     61301221021
+        J14        8       8              PASSIVE     61301221021					U17
 
 [00014] GSM_PWR_5VIN
         C11        2       2              PASSIVE     10nF
@@ -484,7 +484,7 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
         J12        20      20             PASSIVE     TFM-110-21-S-D
         J13        2       2              PASSIVE     1x7 Header
         J13        6       6              PASSIVE     1x7 Header
-        J14        5       5              PASSIVE     61301221021
+        J14        5       5              PASSIVE     61301221021					
         J14        11      11             PASSIVE     61301221021
         J21        4       4              PASSIVE     1x4 Header
         J22        4       4              PASSIVE     1x4 Header
@@ -522,24 +522,24 @@ AP62301WU-7                     U61            TSOP95P280X100-6N
         U61        1       1              PASSIVE     AP62301WU-7
 
 [00012] BAT_I2C_SDA
-        J14        9       9              PASSIVE     61301221021
+        J14        9       9              PASSIVE     61301221021					T17
         U31        6       SDA            I/O         ADC101C027CIMK/NOPB
 
 [00011] BAT_I2C_SCL
-        J14        3       3              PASSIVE     61301221021
+        J14        3       3              PASSIVE     61301221021					J15
         U31        5       SCL            INPUT       ADC101C027CIMK/NOPB
 
 [00010] BAT_ALERT
-        J14        1       1              PASSIVE     61301221021
+        J14        1       1              PASSIVE     61301221021					V12
         R47        1       1              PASSIVE     100Ohm
 
 [00009] BALISE_I2C_SDA
         J33        3       3              PASSIVE     1x4 Header
-        J34        9       9              PASSIVE     61301221021
+        J34        9       9              PASSIVE     61301221021					T12
 
 [00008] BALISE_I2C_SCL
         J33        4       4              PASSIVE     1x4 Header
-        J34        2       2              PASSIVE     61301221021
+        J34        2       2              PASSIVE     61301221021					W15
 
 [00007] +12V
         C61        2       2              PASSIVE     10µF
