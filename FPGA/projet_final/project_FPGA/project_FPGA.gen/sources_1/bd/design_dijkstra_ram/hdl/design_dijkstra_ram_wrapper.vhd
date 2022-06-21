@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue Jun 14 15:57:55 2022
+--Date        : Tue Jun 21 10:56:11 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_dijkstra_ram_wrapper.bd
 --Design      : design_dijkstra_ram_wrapper
@@ -33,19 +33,15 @@ entity design_dijkstra_ram_wrapper is
     FIXED_IO_0_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
     FIXED_IO_0_ps_clk : inout STD_LOGIC;
     FIXED_IO_0_ps_porb : inout STD_LOGIC;
-    FIXED_IO_0_ps_srstb : inout STD_LOGIC
+    FIXED_IO_0_ps_srstb : inout STD_LOGIC;
+    HOLO_UART_rxd : in STD_LOGIC;
+    HOLO_UART_txd : out STD_LOGIC
   );
 end design_dijkstra_ram_wrapper;
 
 architecture STRUCTURE of design_dijkstra_ram_wrapper is
   component design_dijkstra_ram is
   port (
-    FIXED_IO_0_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_0_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_0_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_0_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_0_ps_clk : inout STD_LOGIC;
-    FIXED_IO_0_ps_porb : inout STD_LOGIC;
     DDR_0_cas_n : inout STD_LOGIC;
     DDR_0_cke : inout STD_LOGIC;
     DDR_0_ck_n : inout STD_LOGIC;
@@ -60,7 +56,15 @@ architecture STRUCTURE of design_dijkstra_ram_wrapper is
     DDR_0_dm : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_0_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_0_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    DDR_0_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 )
+    DDR_0_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
+    FIXED_IO_0_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_0_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_0_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_0_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_0_ps_clk : inout STD_LOGIC;
+    FIXED_IO_0_ps_porb : inout STD_LOGIC;
+    HOLO_UART_rxd : in STD_LOGIC;
+    HOLO_UART_txd : out STD_LOGIC
   );
   end component design_dijkstra_ram;
 begin
@@ -86,6 +90,8 @@ design_dijkstra_ram_i: component design_dijkstra_ram
       FIXED_IO_0_mio(53 downto 0) => FIXED_IO_0_mio(53 downto 0),
       FIXED_IO_0_ps_clk => FIXED_IO_0_ps_clk,
       FIXED_IO_0_ps_porb => FIXED_IO_0_ps_porb,
-      FIXED_IO_0_ps_srstb => FIXED_IO_0_ps_srstb
+      FIXED_IO_0_ps_srstb => FIXED_IO_0_ps_srstb,
+      HOLO_UART_rxd => HOLO_UART_rxd,
+      HOLO_UART_txd => HOLO_UART_txd
     );
 end STRUCTURE;

@@ -70,7 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
-set_param chipscope.maxJobs 3
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -100,6 +99,9 @@ set_property used_in_implementation false [get_files -all d:/projets/2020_2/proj
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0_board.xdc]
+set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0_ooc.xdc]
+set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/design_dijkstra_ram_ooc.xdc]
 
 OPTRACE "Adding files" END { }
