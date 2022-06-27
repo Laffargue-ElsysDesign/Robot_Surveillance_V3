@@ -1,0 +1,1 @@
+-wto "b1093c9091664e24a7878faa3b5cc88f" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "secureip" --snapshot "tb_ultrason_behav" "xil_defaultlib.tb_ultrason" -log "elaborate.log" 

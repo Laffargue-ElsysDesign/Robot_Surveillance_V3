@@ -1,0 +1,47 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.916364",
+   "Default View_TopLeft":"-108,-210",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS-threadsafe
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x 0 -y 80 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x 0 -y 100 -defaultsOSRD
+preplace port enable -pg 1 -lvl 0 -x 0 -y 300 -defaultsOSRD
+preplace port trig_out -pg 1 -lvl 3 -x 920 -y 250 -defaultsOSRD
+preplace port echo_in -pg 1 -lvl 0 -x 0 -y 340 -defaultsOSRD
+preplace port RX_Serial -pg 1 -lvl 0 -x 0 -y -20 -defaultsOSRD
+preplace port TX_Serial -pg 1 -lvl 3 -x 920 -y -20 -defaultsOSRD
+preplace port sw -pg 1 -lvl 0 -x 0 -y 40 -defaultsOSRD
+preplace port en_ult -pg 1 -lvl 3 -x 920 -y 290 -defaultsOSRD
+preplace inst clk_wiz -pg 1 -lvl 1 -x 360 -y 250 -defaultsOSRD
+preplace inst time_pulse_0 -pg 1 -lvl 1 -x 360 -y 120 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 1 -x 360 -y -100 -defaultsOSRD
+preplace inst Ultrason_0 -pg 1 -lvl 2 -x 720 -y 290 -defaultsOSRD
+preplace inst UART_test_0 -pg 1 -lvl 2 -x 720 -y 0 -defaultsOSRD
+preplace netloc clk_wiz_clk_out1 1 0 2 160 390 530J
+preplace netloc sys_clock_1 1 0 1 70 -190n
+preplace netloc rst_n_0_1 1 0 2 20 410 580
+preplace netloc enable_0_1 1 0 2 30J 360 550J
+preplace netloc time_pulse_0_pulse_1ms 1 0 2 150 370 500
+preplace netloc time_pulse_0_pulse_1us 1 0 2 110 380 520
+preplace netloc Ultrason_0_trig_out 1 0 3 90 340 540 170 890
+preplace netloc echo_in_0_1 1 0 2 60J 350 560J
+preplace netloc RX_Serial_0_1 1 0 2 50J 310 470J
+preplace netloc UART_test_0_TX_Serial 1 2 1 N -20
+preplace netloc Ultrason_0_data_valid 1 0 3 140 330 510 160 860
+preplace netloc Ultrason_0_data_ult 1 0 3 130 320 480 150 870
+preplace netloc sw_0_1 1 0 2 40J 400 570J
+preplace netloc Ultrason_0_en_ult 1 2 1 890 270n
+preplace netloc Ultrason_0_nb_ult 1 0 3 80 430 NJ 430 880
+preplace netloc Ultrason_0_o_cpt_dist_us 1 0 3 100 440 NJ 440 870
+preplace netloc Ultrason_0_led 1 0 3 120 420 NJ 420 860
+preplace netloc time_pulse_0_pulse_1s 1 1 1 490 30n
+levelinfo -pg 1 0 360 720 920
+pagesize -pg 1 -db -bbox -sgen -120 -250 1040 540
+"
+}
+{
+   "da_board_cnt":"1",
+   "da_clkrst_cnt":"1"
+}

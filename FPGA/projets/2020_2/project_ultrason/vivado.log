@@ -1,0 +1,23 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 22 10:06:36 2022
+# Process ID: 9760
+# Current directory: D:/projets/2020_2/project_ultrason
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20412 D:\projets\2020_2\project_ultrason\project_ultrason.xpr
+# Log file: D:/projets/2020_2/project_ultrason/vivado.log
+# Journal file: D:/projets/2020_2/project_ultrason\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_ultrason/project_ultrason.xpr
+WARNING: [filemgmt 56-3] Default IP Output Path : Could not find the directory 'D:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1'.
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:11 ; elapsed = 00:00:06 . Memory (MB): peak = 1126.367 ; gain = 0.000
+update_compile_order -fileset sources_1
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 22 14:52:00 2022...

@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/projets/2020_2/project_ultrason/project_ultrason.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="32693fs"></ZoomStartTime>
+      <ZoomEndTime time="32713fs"></ZoomEndTime>
+      <Cursor1Time time="32778fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="180"></NameColumnWidth>
+      <ValueColumnWidth column_width="82"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="9" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_trig_out" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_trig_out</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_trig_out</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/echo_in_0_1" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/echo_in_0_1</obj_property>
+      <obj_property name="ObjectShortName">echo_in_0_1</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_nb_ult" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_nb_ult[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_nb_ult[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_data_ult" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_data_ult[15:0]</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_data_ult[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_data_valid" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_data_valid</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_data_valid</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/time_pulse_0_pulse_1ms" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/time_pulse_0_pulse_1ms</obj_property>
+      <obj_property name="ObjectShortName">time_pulse_0_pulse_1ms</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/time_pulse_0_pulse_1us" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/time_pulse_0_pulse_1us</obj_property>
+      <obj_property name="ObjectShortName">time_pulse_0_pulse_1us</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_led" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_led[2:0]</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_led[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_test_ultrason_i/Ultrason_0_o_cpt_dist_us" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_test_ultrason_i/Ultrason_0_o_cpt_dist_us[12:0]</obj_property>
+      <obj_property name="ObjectShortName">Ultrason_0_o_cpt_dist_us[12:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

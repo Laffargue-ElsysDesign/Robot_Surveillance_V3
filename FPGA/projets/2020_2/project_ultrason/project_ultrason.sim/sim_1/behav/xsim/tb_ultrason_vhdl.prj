@@ -1,0 +1,9 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_ultrason.srcs/sources_1/new/Counter.vhd" \
+"../../../../project_ultrason.srcs/sources_1/new/Ultrason.vhd" \
+"../../../../project_ultrason.srcs/sources_1/imports/new/time_pulse.vhd" \
+"../../../../project_ultrason.srcs/sim_1/new/tb_ultrason.vhd" \
+
+# Do not sort compile order
+nosort
