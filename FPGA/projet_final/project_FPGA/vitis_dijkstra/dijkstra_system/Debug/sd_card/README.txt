@@ -2,7 +2,11 @@
 
 Platform: design_dijkstra_ram_wrapper
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 Application: design_dijkstra_ram_wrapper
+=======
+Application: design_dijkstra_ram_controller_wrapper
+>>>>>>> Stashed changes
 =======
 Application: design_dijkstra_ram_controller_wrapper
 >>>>>>> Stashed changes

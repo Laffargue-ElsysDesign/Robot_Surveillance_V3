@@ -25,7 +25,11 @@ DOMAINS = standalone_ps7_cortexa9_0
 BIF_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra_system/Debug/system.bif
 
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 BITSTREAM_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+=======
+BITSTREAM_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_controller_wrapper.bit
+>>>>>>> Stashed changes
 =======
 BITSTREAM_PATH = D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_controller_wrapper.bit
 >>>>>>> Stashed changes
@@ -40,7 +44,11 @@ all: package
 package:
 	-@echo Generating bif file for the system project
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 	generate_system_bif.bat 52376 ${XPFM_PATH} ${DOMAINS} ${BIF_PATH}
+=======
+	generate_system_bif.bat 56065 ${XPFM_PATH} ${DOMAINS} ${BIF_PATH}
+>>>>>>> Stashed changes
 =======
 	generate_system_bif.bat 56065 ${XPFM_PATH} ${DOMAINS} ${BIF_PATH}
 >>>>>>> Stashed changes

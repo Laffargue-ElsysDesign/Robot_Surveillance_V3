@@ -1,7 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <Root VersionMajor="1" VersionMinor="15">
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
   <GenAppInfo Name="Vivado" Version="2020.2" CL="3064766" TimeStamp="Mon Jun 13 13:58:09 2022"/>
+=======
+  <GenAppInfo Name="Vivado" Version="2020.2" CL="3064766" TimeStamp="Tue Jun 14 16:01:38 2022"/>
+>>>>>>> Stashed changes
 =======
   <GenAppInfo Name="Vivado" Version="2020.2" CL="3064766" TimeStamp="Tue Jun 14 16:01:38 2022"/>
 >>>>>>> Stashed changes
@@ -21,8 +25,13 @@
     </Devices>
     <Files>
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
       <File Type="FULL_BIT" Name="design_dijkstra_ram_wrapper.bit"/>
       <File Type="MMI" Name="design_dijkstra_ram_wrapper.mmi"/>
+=======
+      <File Type="FULL_BIT" Name="design_dijkstra_ram_controller_wrapper.bit"/>
+      <File Type="MMI" Name="design_dijkstra_ram_controller_wrapper.mmi"/>
+>>>>>>> Stashed changes
 =======
       <File Type="FULL_BIT" Name="design_dijkstra_ram_controller_wrapper.bit"/>
       <File Type="MMI" Name="design_dijkstra_ram_controller_wrapper.mmi"/>
