@@ -1,6 +1,185 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 16:14:38 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_ram_Dijkstra_algorithm_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_dijkstra_ram_Dijkstra_algorithm_0_0 (elsys-design.com:user:Dijkstra_algorithm:1.0 (Rev. 22)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 15:19:12 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 15:18:09 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 14:59:48 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0 (Rev. 5)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 14:08:41 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 14:04:29 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+CAUTION (success, with warnings) in the upgrade of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0) from (Rev. 3) to (Rev. 4)
+
+After upgrade, an IP may have parameter and port differences compared to the original customization. Please review the parameters within the IP customization GUI to ensure proper functionality. Also, please review the updated IP instantiation template to ensure proper connectivity, and update your design if required.
+
+2. Connection Warnings
+----------------------
+
+Detected external port differences while upgrading 'design_dijkstra_reg_Dijkstra_reg_0_0'. These changes may impact your design.
+
+
+-Upgraded port order differs after port 's00_axi_aclk'
+
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 13:58:34 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_reg_Dijkstra_reg_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_dijkstra_reg_Dijkstra_reg_0_0 (elsys-design.com:user:Dijkstra_reg:1.0) from (Rev. 1) to (Rev. 3)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 22 13:58:31 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_dijkstra_ram_Dijkstra_algorithm_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the conversion of design_dijkstra_ram_Dijkstra_algorithm_0_0 (elsys-design.com:user:Dijkstra_algorithm:1.0 (Rev. 22)) to Vivado generation flows.
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
 | Date         : Tue Jun 14 15:57:20 2022
 | Host         : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command      : upgrade_ip

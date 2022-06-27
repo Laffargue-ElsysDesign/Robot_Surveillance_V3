@@ -56,3 +56,7 @@ platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_co
 platform generate -domains 
 platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
 platform generate -domains 
+platform active {design_dijkstra_ram_wrapper}
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_controller_wrapper.xsa}
+platform config -updatehw {D:/projets/2020_2/project_FPGA/design_dijkstra_ram_wrapper.xsa}
+platform generate

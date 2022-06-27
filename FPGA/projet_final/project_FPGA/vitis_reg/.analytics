@@ -1,0 +1,9 @@
+timestamp=[2022-06-22 14:15:10], mode=WORKBENCH_START, duration=0:00:19.003, duration_ms=19003, data={}
+timestamp=[2022-06-22 14:15:11], mode=WORKBENCH_UI_INIT, duration=0:00:01.247, duration_ms=1247, data={editors_count=0, platform_editors_count=0, projects_count=0, platform_projects_count=0, active_platform_editor=false, projects=}
+timestamp=[2022-06-22 14:15:19], mode=PLATFORM_REPOSITORY_INIT, duration=0:00:05.407, duration_ms=5407, data={}
+timestamp=[2022-06-22 14:17:33], mode=APP_CREATION, duration=0:00:46.357, duration_ms=46357, data={name=dijkstra_reg, project_type=sdk, os=standalone, processor=ps7_cortexa9, runtime=cpp, platform=design_dijkstra_reg_wrapper, application_type=application}
+timestamp=[2022-06-22 14:20:33], mode=PLATFORM_GENERATION, duration=0:00:38.386, duration_ms=38386, data={name=design_dijkstra_reg_wrapper}
+timestamp=[2022-06-22 14:20:34], mode=BUILD, duration=0:00:01.054, duration_ms=1054, data={name=dijkstra_reg, configuration=Debug, clean_build=false}
+timestamp=[2022-06-22 14:20:54], mode=BUILD, duration=0:00:01.057, duration_ms=1057, data={name=dijkstra_reg, configuration=Debug, clean_build=false}
+timestamp=[2022-06-22 14:24:10], mode=BUILD, duration=0:00:00.923, duration_ms=923, data={name=dijkstra_reg, configuration=Debug, clean_build=false}
+timestamp=[2022-06-22 14:24:54], mode=BUILD, duration=0:00:02.577, duration_ms=2577, data={name=dijkstra_reg, configuration=Debug, clean_build=false}

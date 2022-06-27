@@ -16,11 +16,11 @@ OBJECTS = $(wildcard *.o)
 libs:
 	echo "Compiling Dijkstra_algorithm..."
 	$(COMPILER) $(COMPILER_FLAGS) $(EXTRA_COMPILER_FLAGS) $(INCLUDES) $(LIBSOURCES)
-	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${OBJECTS}
+	$(ARCHIVER) -r ${RELEASEDIR}/${LIB} ${${OBJECTS}}
 	make clean
 
 include:
 	${CP} $(INCLUDEFILES) $(INCLUDEDIR)
 
 clean:
-	rm -rf ${OUTS}
+	rm -rf ${OBJECTS}

@@ -33,10 +33,10 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijk
 # IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_Dijkstra_algorithm_0_0 || ORIG_REF_NAME==design_dijkstra_ram_Dijkstra_algorithm_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_auto_pc_0 || ORIG_REF_NAME==design_dijkstra_ram_auto_pc_0} -quiet] -quiet
-
 # IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_axi_uartlite_0_0 || ORIG_REF_NAME==design_dijkstra_ram_axi_uartlite_0_0} -quiet] -quiet
+
+# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_auto_pc_0 || ORIG_REF_NAME==design_dijkstra_ram_auto_pc_0} -quiet] -quiet
 
 # XDC: d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/design_dijkstra_ram_ooc.xdc

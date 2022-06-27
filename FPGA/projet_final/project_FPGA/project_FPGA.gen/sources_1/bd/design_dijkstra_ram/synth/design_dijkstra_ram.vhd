@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Tue Jun 21 10:56:10 2022
+--Date        : Wed Jun 22 16:18:19 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_dijkstra_ram.bd
 --Design      : design_dijkstra_ram
@@ -1545,6 +1545,32 @@ architecture STRUCTURE of design_dijkstra_ram is
     we_ram : out STD_LOGIC_VECTOR ( 3 downto 0 )
   );
   end component design_dijkstra_ram_RAM_Controller_0_0;
+  component design_dijkstra_ram_axi_uartlite_0_0 is
+  port (
+    s_axi_aclk : in STD_LOGIC;
+    s_axi_aresetn : in STD_LOGIC;
+    interrupt : out STD_LOGIC;
+    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_awvalid : in STD_LOGIC;
+    s_axi_awready : out STD_LOGIC;
+    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_wvalid : in STD_LOGIC;
+    s_axi_wready : out STD_LOGIC;
+    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_bvalid : out STD_LOGIC;
+    s_axi_bready : in STD_LOGIC;
+    s_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
+    s_axi_arvalid : in STD_LOGIC;
+    s_axi_arready : out STD_LOGIC;
+    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
+    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
+    s_axi_rvalid : out STD_LOGIC;
+    s_axi_rready : in STD_LOGIC;
+    rx : in STD_LOGIC;
+    tx : out STD_LOGIC
+  );
+  end component design_dijkstra_ram_axi_uartlite_0_0;
   component design_dijkstra_ram_Dijkstra_algorithm_0_0 is
   port (
     addr_ram_ext : out STD_LOGIC_VECTOR ( 7 downto 0 );
@@ -1576,32 +1602,6 @@ architecture STRUCTURE of design_dijkstra_ram is
     s00_axi_rready : in STD_LOGIC
   );
   end component design_dijkstra_ram_Dijkstra_algorithm_0_0;
-  component design_dijkstra_ram_axi_uartlite_0_0 is
-  port (
-    s_axi_aclk : in STD_LOGIC;
-    s_axi_aresetn : in STD_LOGIC;
-    interrupt : out STD_LOGIC;
-    s_axi_awaddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_awvalid : in STD_LOGIC;
-    s_axi_awready : out STD_LOGIC;
-    s_axi_wdata : in STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_wstrb : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_wvalid : in STD_LOGIC;
-    s_axi_wready : out STD_LOGIC;
-    s_axi_bresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_bvalid : out STD_LOGIC;
-    s_axi_bready : in STD_LOGIC;
-    s_axi_araddr : in STD_LOGIC_VECTOR ( 3 downto 0 );
-    s_axi_arvalid : in STD_LOGIC;
-    s_axi_arready : out STD_LOGIC;
-    s_axi_rdata : out STD_LOGIC_VECTOR ( 31 downto 0 );
-    s_axi_rresp : out STD_LOGIC_VECTOR ( 1 downto 0 );
-    s_axi_rvalid : out STD_LOGIC;
-    s_axi_rready : in STD_LOGIC;
-    rx : in STD_LOGIC;
-    tx : out STD_LOGIC
-  );
-  end component design_dijkstra_ram_axi_uartlite_0_0;
   signal Dijkstra_algorithm_0_addr_ram_ext : STD_LOGIC_VECTOR ( 7 downto 0 );
   signal Dijkstra_algorithm_0_din_ram_ext : STD_LOGIC_VECTOR ( 15 downto 0 );
   signal Dijkstra_algorithm_0_en_ram_ext : STD_LOGIC;
@@ -1773,8 +1773,8 @@ architecture STRUCTURE of design_dijkstra_ram is
   attribute X_INTERFACE_INFO of FIXED_IO_0_ps_clk : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO_0 PS_CLK";
   attribute X_INTERFACE_INFO of FIXED_IO_0_ps_porb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO_0 PS_PORB";
   attribute X_INTERFACE_INFO of FIXED_IO_0_ps_srstb : signal is "xilinx.com:display_processing_system7:fixedio:1.0 FIXED_IO_0 PS_SRSTB";
-  attribute X_INTERFACE_INFO of HOLO_UART_rxd : signal is "xilinx.com:interface:uart:1.0 HOLO_UART ";
-  attribute X_INTERFACE_INFO of HOLO_UART_txd : signal is "xilinx.com:interface:uart:1.0 HOLO_UART ";
+  attribute X_INTERFACE_INFO of HOLO_UART_rxd : signal is "xilinx.com:interface:uart:1.0 HOLO_UART RxD";
+  attribute X_INTERFACE_INFO of HOLO_UART_txd : signal is "xilinx.com:interface:uart:1.0 HOLO_UART TxD";
   attribute X_INTERFACE_INFO of DDR_0_addr : signal is "xilinx.com:interface:ddrx:1.0 DDR_0 ADDR";
   attribute X_INTERFACE_PARAMETER of DDR_0_addr : signal is "XIL_INTERFACENAME DDR_0, AXI_ARBITRATION_SCHEME TDM, BURST_LENGTH 8, CAN_DEBUG false, CAS_LATENCY 11, CAS_WRITE_LATENCY 11, CS_ENABLED true, DATA_MASK_ENABLED true, DATA_WIDTH 8, MEMORY_TYPE COMPONENTS, MEM_ADDR_MAP ROW_COLUMN_BANK, SLOT Single, TIMEPERIOD_PS 1250";
   attribute X_INTERFACE_INFO of DDR_0_ba : signal is "xilinx.com:interface:ddrx:1.0 DDR_0 BA";

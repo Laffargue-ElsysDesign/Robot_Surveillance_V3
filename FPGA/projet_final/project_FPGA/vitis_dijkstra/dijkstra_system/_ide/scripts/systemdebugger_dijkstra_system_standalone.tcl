@@ -14,9 +14,9 @@ targets -set -nocase -filter {name =~"APU*"}
 rst -system
 after 3000
 targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
-fpga -file D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_controller_wrapper.bit
+fpga -file D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/bitstream/design_dijkstra_ram_wrapper.bit
 targets -set -nocase -filter {name =~"APU*"}
-loadhw -hw D:/projets/2020_2/project_FPGA/vitis_dijkstra/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_controller_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+loadhw -hw D:/projets/2020_2/project_FPGA/vitis_dijkstra/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
 configparams force-mem-access 1
 targets -set -nocase -filter {name =~"APU*"}
 source D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/_ide/psinit/ps7_init.tcl
@@ -25,5 +25,4 @@ ps7_post_config
 targets -set -nocase -filter {name =~ "*A9*#0"}
 dow D:/projets/2020_2/project_FPGA/vitis_dijkstra/dijkstra/Debug/dijkstra.elf
 configparams force-mem-access 0
-targets -set -nocase -filter {name =~ "*A9*#0"}
-con
+bpadd -addr &main

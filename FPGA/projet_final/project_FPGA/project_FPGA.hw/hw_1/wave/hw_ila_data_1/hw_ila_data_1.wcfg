@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/projets/2020_2/project_FPGA/project_FPGA.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="16896fs"></ZoomStartTime>
+      <ZoomEndTime time="16985fs"></ZoomEndTime>
+      <Cursor1Time time="16977fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="269"></NameColumnWidth>
+      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="6" />
+   <wave_markers>
+   </wave_markers>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FSM_sequential_current_state[1]_i_2__0[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[2:0]</obj_property>
+      <obj_property name="ObjectShortName">FSM_onehot_current_state[6]_i_5[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[15:0]</obj_property>
+      <obj_property name="ObjectShortName">node_seen[15:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[9:0]</obj_property>
+      <obj_property name="ObjectShortName">s_next_node[9:0]</obj_property>
+      <obj_property name="Radix">BINARYRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4[0:0]</obj_property>
+      <obj_property name="ObjectShortName">FSM_sequential_current_state_reg[1]_4[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished[0:0]</obj_property>
+      <obj_property name="ObjectShortName">s_finished[0:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>

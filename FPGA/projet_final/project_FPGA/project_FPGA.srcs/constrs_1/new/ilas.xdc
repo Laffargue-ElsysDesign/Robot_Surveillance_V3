@@ -1,0 +1,41 @@
+set_property -dict {PACKAGE_PIN V15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_txd]
+set_property -dict {PACKAGE_PIN W15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_rxd]
+
+create_debug_core u_ila_0 ila
+set_property ALL_PROBE_SAME_MU true [get_debug_cores u_ila_0]
+set_property ALL_PROBE_SAME_MU_CNT 1 [get_debug_cores u_ila_0]
+set_property C_ADV_TRIGGER false [get_debug_cores u_ila_0]
+set_property C_DATA_DEPTH 32768 [get_debug_cores u_ila_0]
+set_property C_EN_STRG_QUAL false [get_debug_cores u_ila_0]
+set_property C_INPUT_PIPE_STAGES 0 [get_debug_cores u_ila_0]
+set_property C_TRIGIN_EN false [get_debug_cores u_ila_0]
+set_property C_TRIGOUT_EN false [get_debug_cores u_ila_0]
+set_property port_width 1 [get_debug_ports u_ila_0/clk]
+connect_debug_port u_ila_0/clk [get_nets [list design_dijkstra_reg_i/processing_system7_0/inst/FCLK_CLK0]]
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe0]
+set_property port_width 3 [get_debug_ports u_ila_0/probe0]
+connect_debug_port u_ila_0/probe0 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[0]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[1]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[2]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe1]
+set_property port_width 3 [get_debug_ports u_ila_0/probe1]
+connect_debug_port u_ila_0/probe1 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[0]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[1]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[2]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe2]
+set_property port_width 16 [get_debug_ports u_ila_0/probe2]
+connect_debug_port u_ila_0/probe2 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[0]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[1]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[2]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[3]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[4]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[5]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[6]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[7]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[8]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[9]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[10]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[11]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[12]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[13]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[14]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[15]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe3]
+set_property port_width 10 [get_debug_ports u_ila_0/probe3]
+connect_debug_port u_ila_0/probe3 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[0]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[1]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[2]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[3]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[4]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[5]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[6]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[7]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[8]} {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[9]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe4]
+set_property port_width 1 [get_debug_ports u_ila_0/probe4]
+connect_debug_port u_ila_0/probe4 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4[0]}]]
+create_debug_port u_ila_0 probe
+set_property PROBE_TYPE DATA_AND_TRIGGER [get_debug_ports u_ila_0/probe5]
+set_property port_width 1 [get_debug_ports u_ila_0/probe5]
+connect_debug_port u_ila_0/probe5 [get_nets [list {design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished[0]}]]
+set_property C_CLK_INPUT_FREQ_HZ 300000000 [get_debug_cores dbg_hub]
+set_property C_ENABLE_CLK_DIVIDER false [get_debug_cores dbg_hub]
+set_property C_USER_SCAN_CHAIN 1 [get_debug_cores dbg_hub]
+connect_debug_port dbg_hub/clk [get_nets u_ila_0_FCLK_CLK0]

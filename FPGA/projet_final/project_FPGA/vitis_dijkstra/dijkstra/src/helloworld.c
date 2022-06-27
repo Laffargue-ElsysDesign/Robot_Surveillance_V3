@@ -98,7 +98,7 @@ int main()
 
 	*(addr_dijkstra+0) = 0x00000000;
 	// Read flag off
-	printf("Read flag off : 0x%08lx \n\r", *(addr_dijkstra+1));
+	printf("Read flag off : 0x%08lx \n\r", (addr_dijkstra+1));
 
 	// New write
 	*(addr_dijkstra+0) = 0x00100001;

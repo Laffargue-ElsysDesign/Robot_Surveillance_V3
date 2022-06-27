@@ -1,0 +1,160 @@
+14:15:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_FPGA\vitis_reg\temp_xsdb_launch_script.tcl
+14:15:14 INFO  : Registering command handlers for Vitis TCF services
+14:15:19 INFO  : XSCT server has started successfully.
+14:15:19 INFO  : Successfully done setting XSCT server connection channel  
+14:15:19 INFO  : Platform repository initialization has completed.
+14:15:27 INFO  : plnx-install-location is set to ''
+14:15:27 INFO  : Successfully done setting workspace for the tool. 
+14:15:27 INFO  : Successfully done query RDI_DATADIR 
+14:17:23 INFO  : Result from executing command 'getProjects': design_dijkstra_reg_wrapper
+14:17:23 INFO  : Result from executing command 'getPlatforms': 
+14:17:23 WARN  : An unexpected exception occurred in the module 'platform project logging'
+14:17:23 INFO  : Platform 'design_dijkstra_reg_wrapper' is added to custom repositories.
+14:17:34 INFO  : Platform 'design_dijkstra_reg_wrapper' is added to custom repositories.
+14:20:32 INFO  : Result from executing command 'getProjects': design_dijkstra_reg_wrapper
+14:20:32 INFO  : Result from executing command 'getPlatforms': design_dijkstra_reg_wrapper|D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/design_dijkstra_reg_wrapper.xpfm
+14:20:33 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_reg'...
+14:20:53 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_reg'...
+14:24:09 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_reg'...
+14:24:51 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_reg'...
+14:25:06 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:07 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+14:25:10 INFO  : Device configured successfully with "D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit"
+14:25:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:25:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+14:25:21 INFO  : 'jtag frequency' command is executed.
+14:25:21 INFO  : Context for 'APU' is selected.
+14:25:21 INFO  : System reset is completed.
+14:25:24 INFO  : 'after 3000' command is executed.
+14:25:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+14:25:26 INFO  : Device configured successfully with "D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit"
+14:25:26 INFO  : Context for 'APU' is selected.
+14:25:26 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa'.
+14:25:26 INFO  : 'configparams force-mem-access 1' command is executed.
+14:25:26 INFO  : Context for 'APU' is selected.
+14:25:26 INFO  : Sourcing of 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl' is done.
+14:25:27 INFO  : 'ps7_init' command is executed.
+14:25:27 INFO  : 'ps7_post_config' command is executed.
+14:25:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:27 INFO  : The application 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:25:27 INFO  : 'configparams force-mem-access 0' command is executed.
+14:25:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:25:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:25:27 INFO  : 'con' command is executed.
+14:25:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:25:27 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_FPGA\vitis_reg\dijkstra_reg_system\_ide\scripts\systemdebugger_dijkstra_reg_system_standalone.tcl'
+14:36:34 INFO  : Disconnected from the channel tcfchan#2.
+14:36:34 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:36:34 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+14:36:34 INFO  : 'jtag frequency' command is executed.
+14:36:34 INFO  : Context for 'APU' is selected.
+14:36:34 INFO  : System reset is completed.
+14:36:37 INFO  : 'after 3000' command is executed.
+14:36:37 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+14:36:40 INFO  : Device configured successfully with "D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit"
+14:36:40 INFO  : Context for 'APU' is selected.
+14:36:40 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa'.
+14:36:40 INFO  : 'configparams force-mem-access 1' command is executed.
+14:36:40 INFO  : Context for 'APU' is selected.
+14:36:40 INFO  : Sourcing of 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl' is done.
+14:36:40 INFO  : 'ps7_init' command is executed.
+14:36:40 INFO  : 'ps7_post_config' command is executed.
+14:36:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:40 INFO  : The application 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:36:40 INFO  : 'configparams force-mem-access 0' command is executed.
+14:36:40 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:36:40 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:36:40 INFO  : 'con' command is executed.
+14:36:40 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:36:40 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_FPGA\vitis_reg\dijkstra_reg_system\_ide\scripts\systemdebugger_dijkstra_reg_system_standalone.tcl'
+15:27:41 INFO  : Disconnected from the channel tcfchan#3.
+15:27:41 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:27:41 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+15:27:41 INFO  : 'jtag frequency' command is executed.
+15:27:41 INFO  : Context for 'APU' is selected.
+15:27:41 INFO  : System reset is completed.
+15:27:44 INFO  : 'after 3000' command is executed.
+15:27:45 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+15:27:47 INFO  : Device configured successfully with "D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit"
+15:27:47 INFO  : Context for 'APU' is selected.
+15:27:47 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa'.
+15:27:47 INFO  : 'configparams force-mem-access 1' command is executed.
+15:27:47 INFO  : Context for 'APU' is selected.
+15:27:47 INFO  : Sourcing of 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl' is done.
+15:27:47 INFO  : 'ps7_init' command is executed.
+15:27:47 INFO  : 'ps7_post_config' command is executed.
+15:27:47 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:48 INFO  : The application 'D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:27:48 INFO  : 'configparams force-mem-access 0' command is executed.
+15:27:48 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/bitstream/design_dijkstra_reg_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/hw/design_dijkstra_reg_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_FPGA/vitis_reg/dijkstra_reg/Debug/dijkstra_reg.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:27:48 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:48 INFO  : 'con' command is executed.
+15:27:48 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:27:48 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_FPGA\vitis_reg\dijkstra_reg_system\_ide\scripts\systemdebugger_dijkstra_reg_system_standalone.tcl'
+15:33:04 INFO  : Disconnected from the channel tcfchan#4.

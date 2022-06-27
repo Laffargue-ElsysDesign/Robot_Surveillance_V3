@@ -70,6 +70,9 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
+set_param chipscope.maxJobs 3
+set_param xicom.use_bs_reader 1
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
 
@@ -83,7 +86,10 @@ set_property XPM_LIBRARIES {XPM_CDC XPM_MEMORY} [current_project]
 set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
-set_property ip_repo_paths d:/projets/2020_2/ip_repo [current_project]
+set_property ip_repo_paths {
+  d:/projets/2020_2/ip_repo/Dijkstra_reg_1.0
+  d:/projets/2020_2/ip_repo
+} [current_project]
 update_ip_catalog
 set_property ip_output_repo d:/projets/2020_2/project_FPGA/project_FPGA.cache/ip [current_project]
 set_property ip_cache_permissions {read write} [current_project]
@@ -98,10 +104,10 @@ set_property used_in_implementation false [get_files -all d:/projets/2020_2/proj
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0_ooc.xdc]
-set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0_board.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0.xdc]
+set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0_ooc.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/design_dijkstra_ram_ooc.xdc]
 
 OPTRACE "Adding files" END { }
