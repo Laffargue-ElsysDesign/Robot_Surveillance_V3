@@ -1,0 +1,49 @@
+2022-06-22T14:24:51.558600900255-14:24:51 **** Incremental Build of configuration Debug for project dijkstra_reg ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/sw/design_dijkstra_reg_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-../src/helloworld.c: In function 'main':
+000/dijkstra_reg/src/helloworld.c81-1-1format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]1-../src/helloworld.c:81:36: warning: format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]
+000-   81 |   printf("Read reg address : 0x%08lx & read ram value 0x%08lx \n\r", addr_dijkstra+i+2,*(addr_dijkstra+2+i));
+000-      |                                ~~~~^                                 ~~~~~~~~~~~~~~~~~
+000-      |                                    |                                                |
+000-      |                                    long unsigned int                                int32_t * {aka long int *}
+000-      |                                %08ln
+000/dijkstra_reg/src/helloworld.c95-1-1format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]1-../src/helloworld.c:95:37: warning: format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]
+000-   95 |    printf("Read reg address : 0x%08lx & read ram value 0x%08lx \n\r", addr_dijkstra+i+2,*(addr_dijkstra+2+i));
+000-      |                                 ~~~~^                                 ~~~~~~~~~~~~~~~~~
+000-      |                                     |                                                |
+000-      |                                     long unsigned int                                int32_t * {aka long int *}
+000-      |                                 %08ln
+000/dijkstra_reg/src/helloworld.c110-1-1format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]1-../src/helloworld.c:110:37: warning: format '%lx' expects argument of type 'long unsigned int', but argument 2 has type 'int32_t *' {aka 'long int *'} [-Wformat=]
+000-  110 |    printf("Read reg address : 0x%08lx & read ram value 0x%08lx \n\r", addr_dijkstra+i+2,*(addr_dijkstra+2+i));
+000-      |                                 ~~~~^                                 ~~~~~~~~~~~~~~~~~
+000-      |                                     |                                                |
+000-      |                                     long unsigned int                                int32_t * {aka long int *}
+000-      |                                 %08ln
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building file: ../src/platform.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/platform.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/sw/design_dijkstra_reg_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/platform.d" -MT"src/platform.o" -o "src/platform.o" "../src/platform.c"
+000-'Finished building: ../src/platform.c'
+000-' '
+000-'Building target: dijkstra_reg.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/projets/2020_2/project_FPGA/vitis_reg/design_dijkstra_reg_wrapper/export/design_dijkstra_reg_wrapper/sw/design_dijkstra_reg_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "dijkstra_reg.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: dijkstra_reg.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size dijkstra_reg.elf  |tee "dijkstra_reg.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  51364	   2548	  22656	  76568	  12b18	dijkstra_reg.elf
+000-'Finished building: dijkstra_reg.elf.size'
+000-' '
+00255-
+14:24:54 Build Finished (took 2s.551ms)
+
