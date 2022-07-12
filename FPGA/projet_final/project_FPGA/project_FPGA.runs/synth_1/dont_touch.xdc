@@ -3,40 +3,37 @@
 
 # XDC: imports/Desktop/zybo-z7-20.xdc
 
-# Block Designs: bd/design_dijkstra_ram/design_dijkstra_ram.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram || ORIG_REF_NAME==design_dijkstra_ram} -quiet] -quiet
+# Block Designs: bd/design_dijkstra_reg/design_dijkstra_reg.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg || ORIG_REF_NAME==design_dijkstra_reg} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_bram_ctrl_0_0/design_dijkstra_ram_axi_bram_ctrl_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_axi_bram_ctrl_0_0 || ORIG_REF_NAME==design_dijkstra_ram_axi_bram_ctrl_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_axi_uartlite_0_0/design_dijkstra_reg_axi_uartlite_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_axi_uartlite_0_0 || ORIG_REF_NAME==design_dijkstra_reg_axi_uartlite_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_blk_mem_gen_0_0/design_dijkstra_ram_blk_mem_gen_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_blk_mem_gen_0_0 || ORIG_REF_NAME==design_dijkstra_ram_blk_mem_gen_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_processing_system7_0_0/design_dijkstra_reg_processing_system7_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_processing_system7_0_0 || ORIG_REF_NAME==design_dijkstra_reg_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_processing_system7_0_0/design_dijkstra_ram_processing_system7_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_processing_system7_0_0 || ORIG_REF_NAME==design_dijkstra_ram_processing_system7_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_xbar_0/design_dijkstra_reg_xbar_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_xbar_0 || ORIG_REF_NAME==design_dijkstra_reg_xbar_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_xbar_0/design_dijkstra_ram_xbar_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_xbar_0 || ORIG_REF_NAME==design_dijkstra_ram_xbar_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_ps7_0_axi_periph_0/design_dijkstra_reg_ps7_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_dijkstra_reg_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_ps7_0_axi_periph_0/design_dijkstra_ram_ps7_0_axi_periph_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_dijkstra_ram_ps7_0_axi_periph_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_rst_ps7_0_50M_0/design_dijkstra_reg_rst_ps7_0_50M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_dijkstra_reg_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_rst_ps7_0_50M_0/design_dijkstra_ram_rst_ps7_0_50M_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_dijkstra_ram_rst_ps7_0_50M_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_Balise_0_1/design_dijkstra_reg_Balise_0_1.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_Balise_0_1 || ORIG_REF_NAME==design_dijkstra_reg_Balise_0_1} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_xlconstant_0_0/design_dijkstra_ram_xlconstant_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_xlconstant_0_0 || ORIG_REF_NAME==design_dijkstra_ram_xlconstant_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_Timer_ronde_0_0/design_dijkstra_reg_Timer_ronde_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_Timer_ronde_0_0 || ORIG_REF_NAME==design_dijkstra_reg_Timer_ronde_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_RAM_Controller_0_0/design_dijkstra_ram_RAM_Controller_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_RAM_Controller_0_0 || ORIG_REF_NAME==design_dijkstra_ram_RAM_Controller_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/design_dijkstra_reg_Dijkstra_reg_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_Dijkstra_reg_0_0 || ORIG_REF_NAME==design_dijkstra_reg_Dijkstra_reg_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_Dijkstra_algorithm_0_0/design_dijkstra_ram_Dijkstra_algorithm_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_Dijkstra_algorithm_0_0 || ORIG_REF_NAME==design_dijkstra_ram_Dijkstra_algorithm_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_time_pulse_0_0/design_dijkstra_reg_time_pulse_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_time_pulse_0_0 || ORIG_REF_NAME==design_dijkstra_reg_time_pulse_0_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_axi_uartlite_0_0/design_dijkstra_ram_axi_uartlite_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_axi_uartlite_0_0 || ORIG_REF_NAME==design_dijkstra_ram_axi_uartlite_0_0} -quiet] -quiet
+# IP: bd/design_dijkstra_reg/ip/design_dijkstra_reg_auto_pc_0/design_dijkstra_reg_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_reg_auto_pc_0 || ORIG_REF_NAME==design_dijkstra_reg_auto_pc_0} -quiet] -quiet
 
-# IP: bd/design_dijkstra_ram/ip/design_dijkstra_ram_auto_pc_0/design_dijkstra_ram_auto_pc_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_dijkstra_ram_auto_pc_0 || ORIG_REF_NAME==design_dijkstra_ram_auto_pc_0} -quiet] -quiet
-
-# XDC: d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_ram/design_dijkstra_ram_ooc.xdc
+# XDC: d:/projets/2020_2/project_FPGA/project_FPGA.gen/sources_1/bd/design_dijkstra_reg/design_dijkstra_reg_ooc.xdc

@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log design_dijkstra_ram_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_dijkstra_ram_wrapper.tcl -notrace" );
+         "-log design_dijkstra_reg_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_dijkstra_reg_wrapper.tcl -notrace" );
 
 
 

@@ -6,7 +6,7 @@
 <Project Version="7" Minor="54" Path="d:/projets/2020_2/project_fpga/project_fpga.tmp/dijkstra_reg_v1_0_project/Dijkstra_reg_v1_0_project.xpr">
   <DefaultLaunch Dir="$PRUNDIR"/>
   <Configuration>
-    <Option Name="Id" Val="a8966f6d2e544b24b936c17e210985cf"/>
+    <Option Name="Id" Val="a95a3565cc2c4c7893c10cb2c04ece5f"/>
     <Option Name="Part" Val="xc7z020clg400-1"/>
     <Option Name="CompiledLibDir" Val="$PCACHEDIR/compile_simlib"/>
     <Option Name="CompiledLibDirXSim" Val=""/>
@@ -37,6 +37,8 @@
     <Option Name="ActiveSimSet" Val="sim_1"/>
     <Option Name="DefaultLib" Val="xil_defaultlib"/>
     <Option Name="ProjectType" Val="Default"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/Timer_ronde_1.0"/>
+    <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/Balise_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo/Dijkstra_reg_1.0"/>
     <Option Name="IPRepoPath" Val="$PPRDIR/../../../ip_repo"/>
     <Option Name="IPOutputRepo" Val="$PCACHEDIR/ip"/>

@@ -1,0 +1,29 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Jul  8 10:54:22 2022
+# Process ID: 12248
+# Current directory: D:/projets/2020_2/project_FPGA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10116 D:\projets\2020_2\project_FPGA\project_FPGA.xpr
+# Log file: D:/projets/2020_2/project_FPGA/vivado.log
+# Journal file: D:/projets/2020_2/project_FPGA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_FPGA/project_FPGA.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/projets/2020_2/ip_repo/Balise_1.0'. The path is contained within another repository.
+WARNING: [IP_Flow 19-3685] Ignored loading user repository 'd:/projets/2020_2/ip_repo/Dijkstra_reg_1.0'. The path is contained within another repository.
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+WARNING: [BD 41-1661] One or more IPs have been locked in the design 'design_dijkstra_reg.bd'. Please run report_ip_status for more details and recommendations on how to fix this issue.
+List of locked IPs:
+design_dijkstra_reg_Balise_0_0
+
+ERROR: [Vivado 12-106] *** Exception: java.lang.NullPointerException (See D:/projets/2020_2/project_FPGA/vivado_pid12248.debug)
+open_project: Time (s): cpu = 00:00:10 ; elapsed = 00:00:10 . Memory (MB): peak = 1126.465 ; gain = 0.000
+ERROR: [Common 17-39] 'open_project' failed due to earlier errors.
+exit
+INFO: [Common 17-206] Exiting Vivado at Fri Jul  8 10:54:46 2022...

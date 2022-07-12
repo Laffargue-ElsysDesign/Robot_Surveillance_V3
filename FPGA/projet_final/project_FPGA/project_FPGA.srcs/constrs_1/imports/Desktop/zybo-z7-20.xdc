@@ -123,13 +123,13 @@
 
 
 ##Pmod Header JC
-set_property -dict {PACKAGE_PIN V15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_txd]
-set_property -dict {PACKAGE_PIN W15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_rxd]
+#set_property -dict {PACKAGE_PIN V15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_txd]
+set_property -dict {PACKAGE_PIN W15 IOSTANDARD LVCMOS33} [get_ports BALISE_UART_RX]
 #set_property -dict { PACKAGE_PIN T11   IOSTANDARD LVCMOS33     } [get_ports { jc[2] }]; #IO_L1P_T0_34 Sch=jc_p[2]
 #set_property -dict { PACKAGE_PIN T10   IOSTANDARD LVCMOS33     } [get_ports { jc[3] }]; #IO_L1N_T0_34 Sch=jc_n[2]
 #set_property -dict { PACKAGE_PIN W14   IOSTANDARD LVCMOS33     } [get_ports { jc[4] }]; #IO_L8P_T1_34 Sch=jc_p[3]
 #set_property -dict { PACKAGE_PIN Y14   IOSTANDARD LVCMOS33     } [get_ports { jc[5] }]; #IO_L8N_T1_34 Sch=jc_n[3]
-#set_property -dict { PACKAGE_PIN T12   IOSTANDARD LVCMOS33     } [get_ports { jc[6] }]; #IO_L2P_T0_34 Sch=jc_p[4]
+set_property -dict {PACKAGE_PIN T12 IOSTANDARD LVCMOS33} [get_ports BALISE_UART_TX]
 #set_property -dict { PACKAGE_PIN U12   IOSTANDARD LVCMOS33     } [get_ports { jc[7] }]; #IO_L2N_T0_34 Sch=jc_n[4]
 
 
@@ -148,11 +148,11 @@ set_property -dict {PACKAGE_PIN W15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_rx
 #set_property -dict { PACKAGE_PIN V12   IOSTANDARD LVCMOS33 } [get_ports { je[0] }]; #IO_L4P_T0_34 Sch=je[1]
 #set_property -dict { PACKAGE_PIN W16   IOSTANDARD LVCMOS33 } [get_ports { je[1] }]; #IO_L18N_T2_34 Sch=je[2]
 #set_property -dict { PACKAGE_PIN J15   IOSTANDARD LVCMOS33 } [get_ports { je[2] }]; #IO_25_35 Sch=je[3]
-#set_property -dict { PACKAGE_PIN H15   IOSTANDARD LVCMOS33 } [get_ports { je[3] }]; #IO_L19P_T3_35 Sch=je[4]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_txd]
 #set_property -dict { PACKAGE_PIN V13   IOSTANDARD LVCMOS33 } [get_ports { je[4] }]; #IO_L3N_T0_DQS_34 Sch=je[7]
 #set_property -dict { PACKAGE_PIN U17   IOSTANDARD LVCMOS33 } [get_ports { je[5] }]; #IO_L9N_T1_DQS_34 Sch=je[8]
 #set_property -dict { PACKAGE_PIN T17   IOSTANDARD LVCMOS33 } [get_ports { je[6] }]; #IO_L20P_T3_34 Sch=je[9]
-#set_property -dict { PACKAGE_PIN Y17   IOSTANDARD LVCMOS33 } [get_ports { je[7] }]; #IO_L7N_T1_34 Sch=je[10]
+set_property -dict {PACKAGE_PIN Y17 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_rxd]
 
 
 ##Pcam MIPI CSI-2 Connector
@@ -194,5 +194,3 @@ set_property -dict {PACKAGE_PIN W15 IOSTANDARD LVCMOS33} [get_ports HOLO_UART_rx
 #set_property PACKAGE_PIN W11 [get_ports {netic19_w11}]; #IO_L18P_T2_13
 #set_property PACKAGE_PIN W9 [get_ports {netic19_w9}]; #IO_L16N_T2_13
 #set_property PACKAGE_PIN Y9 [get_ports {netic19_y9}]; #IO_L14P_T2_SRCC_13
-
-

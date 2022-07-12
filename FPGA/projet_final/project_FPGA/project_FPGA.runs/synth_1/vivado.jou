@@ -2,11 +2,11 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Jun 22 16:19:18 2022
-# Process ID: 33376
+# Start of session at: Mon Jul 11 10:44:41 2022
+# Process ID: 11888
 # Current directory: D:/projets/2020_2/project_FPGA/project_FPGA.runs/synth_1
-# Command line: vivado.exe -log design_dijkstra_ram_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_ram_wrapper.tcl
-# Log file: D:/projets/2020_2/project_FPGA/project_FPGA.runs/synth_1/design_dijkstra_ram_wrapper.vds
+# Command line: vivado.exe -log design_dijkstra_reg_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_reg_wrapper.tcl
+# Log file: D:/projets/2020_2/project_FPGA/project_FPGA.runs/synth_1/design_dijkstra_reg_wrapper.vds
 # Journal file: D:/projets/2020_2/project_FPGA/project_FPGA.runs/synth_1\vivado.jou
 #-----------------------------------------------------------
-source design_dijkstra_ram_wrapper.tcl -notrace
+source design_dijkstra_reg_wrapper.tcl -notrace

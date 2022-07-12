@@ -70,9 +70,6 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "design_dijkstra_reg_Dijkstra_reg_0_0_synth_1" START { ROLLUP_AUTO }
-set_param tcl.collectionResultDisplayLimit 0
-set_param chipscope.maxJobs 3
-set_param xicom.use_bs_reader 1
 set_param project.vivado.isBlockSynthRun true
 OPTRACE "Creating in-memory project" START { }
 create_project -in_memory -part xc7z020clg400-1
@@ -88,6 +85,8 @@ set_property default_lib xil_defaultlib [current_project]
 set_property target_language VHDL [current_project]
 set_property board_part digilentinc.com:zybo-z7-20:part0:1.1 [current_project]
 set_property ip_repo_paths {
+  d:/projets/2020_2/ip_repo/Timer_ronde_1.0
+  d:/projets/2020_2/ip_repo/Balise_1.0
   d:/projets/2020_2/ip_repo/Dijkstra_reg_1.0
   d:/projets/2020_2/ip_repo
 } [current_project]
@@ -96,7 +95,7 @@ set_property ip_output_repo d:/projets/2020_2/project_FPGA/project_FPGA.cache/ip
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_ip -quiet d:/projets/2020_2/project_FPGA/project_FPGA.srcs/sources_1/bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/design_dijkstra_reg_Dijkstra_reg_0_0.xci
+read_ip -quiet D:/projets/2020_2/project_FPGA/project_FPGA.srcs/sources_1/bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/design_dijkstra_reg_Dijkstra_reg_0_0.xci
 
 OPTRACE "Adding files" END { }
 # Mark all dcp files as not used in implementation to prevent them from being

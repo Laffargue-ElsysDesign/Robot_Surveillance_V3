@@ -9,61 +9,42 @@
       </db_ref>
    </db_ref_list>
    <zoom_setting>
-      <ZoomStartTime time="16896fs"></ZoomStartTime>
-      <ZoomEndTime time="16985fs"></ZoomEndTime>
-      <Cursor1Time time="16977fs"></Cursor1Time>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="40fs"></ZoomEndTime>
+      <Cursor1Time time="0fs"></Cursor1Time>
    </zoom_setting>
    <column_width_setting>
-      <NameColumnWidth column_width="269"></NameColumnWidth>
-      <ValueColumnWidth column_width="79"></ValueColumnWidth>
+      <NameColumnWidth column_width="151"></NameColumnWidth>
+      <ValueColumnWidth column_width="61"></ValueColumnWidth>
    </column_width_setting>
-   <WVObjectSize size="6" />
-   <wave_markers>
-   </wave_markers>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0" type="array">
+   <WVObjectSize size="4" />
+   <wvobject fp_name="design_dijkstra_reg_i/Timer_ronde_0/pulse_min" type="logic">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[2:0]</obj_property>
-      <obj_property name="ObjectShortName">FSM_sequential_current_state[1]_i_2__0[2:0]</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Timer_ronde_0/pulse_min</obj_property>
+      <obj_property name="ObjectShortName">pulse_min</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/cpt_time" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/cpt_time[6:0]</obj_property>
+      <obj_property name="ObjectShortName">cpt_time[6:0]</obj_property>
+      <obj_property name="Radix">UNSIGNEDDECRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/flag" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/flag[31:31]</obj_property>
+      <obj_property name="ObjectShortName">flag[31:31]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
    </wvobject>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5" type="array">
+   <wvobject fp_name="design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/slv_reg0" type="array">
       <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[2:0]</obj_property>
-      <obj_property name="ObjectShortName">FSM_onehot_current_state[6]_i_5[2:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[15:0]</obj_property>
-      <obj_property name="ObjectShortName">node_seen[15:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[9:0]</obj_property>
-      <obj_property name="ObjectShortName">s_next_node[9:0]</obj_property>
-      <obj_property name="Radix">BINARYRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4[0:0]</obj_property>
-      <obj_property name="ObjectShortName">FSM_sequential_current_state_reg[1]_4[0:0]</obj_property>
-      <obj_property name="Radix">HEXRADIX</obj_property>
-      <obj_property name="LABELRADIX">true</obj_property>
-      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
-   </wvobject>
-   <wvobject fp_name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished" type="array">
-      <obj_property name="DisplayName">FullPathName</obj_property>
-      <obj_property name="ElementShortName">design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished[0:0]</obj_property>
-      <obj_property name="ObjectShortName">s_finished[0:0]</obj_property>
+      <obj_property name="ElementShortName">design_dijkstra_reg_i/Timer_ronde_0/U0/Timer_ronde_v1_0_S00_AXI_inst/slv_reg0[0:0]</obj_property>
+      <obj_property name="ObjectShortName">slv_reg0[0:0]</obj_property>
       <obj_property name="Radix">HEXRADIX</obj_property>
       <obj_property name="LABELRADIX">true</obj_property>
       <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>

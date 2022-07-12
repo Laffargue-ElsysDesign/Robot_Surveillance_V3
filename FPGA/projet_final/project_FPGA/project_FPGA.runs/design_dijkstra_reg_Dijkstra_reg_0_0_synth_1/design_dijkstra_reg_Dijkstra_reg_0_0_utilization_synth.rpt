@@ -1,7 +1,7 @@
 Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
 | Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
-| Date         : Wed Jun 22 15:20:35 2022
+| Date         : Fri Jul  8 16:30:12 2022
 | Host         : D-14JM0W2 running 64-bit major release  (build 9200)
 | Command      : report_utilization -file design_dijkstra_reg_Dijkstra_reg_0_0_utilization_synth.rpt -pb design_dijkstra_reg_Dijkstra_reg_0_0_utilization_synth.pb
 | Design       : design_dijkstra_reg_Dijkstra_reg_0_0
@@ -30,8 +30,8 @@ Table of Contents
 +-------------------------+------+-------+-----------+-------+
 |        Site Type        | Used | Fixed | Available | Util% |
 +-------------------------+------+-------+-----------+-------+
-| Slice LUTs*             |  530 |     0 |     53200 |  1.00 |
-|   LUT as Logic          |  530 |     0 |     53200 |  1.00 |
+| Slice LUTs*             |  541 |     0 |     53200 |  1.02 |
+|   LUT as Logic          |  541 |     0 |     53200 |  1.02 |
 |   LUT as Memory         |    0 |     0 |     17400 |  0.00 |
 | Slice Registers         |  607 |     0 |    106400 |  0.57 |
 |   Register as Flip Flop |  607 |     0 |    106400 |  0.57 |
@@ -147,13 +147,13 @@ Table of Contents
 | Ref Name | Used | Functional Category |
 +----------+------+---------------------+
 | FDRE     |  550 |        Flop & Latch |
-| LUT6     |  346 |                 LUT |
-| LUT4     |  129 |                 LUT |
-| LUT5     |   79 |                 LUT |
+| LUT6     |  360 |                 LUT |
+| LUT4     |  127 |                 LUT |
+| LUT5     |   78 |                 LUT |
 | MUXF7    |   76 |               MuxFx |
 | FDCE     |   49 |        Flop & Latch |
-| LUT2     |   31 |                 LUT |
-| LUT3     |   30 |                 LUT |
+| LUT2     |   32 |                 LUT |
+| LUT3     |   28 |                 LUT |
 | FDSE     |    6 |        Flop & Latch |
 | LUT1     |    4 |                 LUT |
 | FDPE     |    2 |        Flop & Latch |
