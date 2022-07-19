@@ -59,7 +59,7 @@ signal current_state : state;
 signal periph : std_logic;
 signal prev_flag_data_i2c : std_logic;
 signal cpt_ms : integer range 0 to 21;
-signal nb_r : integer range 0 to 6;
+signal nb_r : integer range 0 to 7;
 signal acc_xH, acc_yH, vit_ang_zH, mag_xL, mag_yL, mag_zL : std_logic_vector(7 downto 0);
 --  signal acc_xH, acc_xL, acc_yH, acc_yL, vit_ang_zL, vit_ang_zH, mag_xL, mag_xH, mag_yL, mag_yH : std_logic_vector(7 downto 0);
 --  signal acc_x, acc_y, vit_ang_z, mag_x, mag_y : std_logic_vector(15 downto 0);
@@ -152,10 +152,10 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     ena_i2c <= '0'; 
                     current_state <= init_data;
                 elsif periph = '0' and busy_i2c = '0' then -- on passe a l'init du deuxieme periphérique lorsque l'i2c a terminé avc le periph précédent ------------------------------------------------------------------------------------------------------------------------------
---                    periph <= '1';----------------------------------------------------------------------------------------------------------------------------
---                    current_state <= idle; --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
-                    periph <= '0'; -- on commence par la lecture du periph 1 : l'ICM20600 ----------------------------------
-                    current_state <= wait_data; -------------------------------------------
+                    periph <= '1';----------------------------------------------------------------------------------------------------------------------------
+                    current_state <= idle; --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+--                    periph <= '0'; -- on commence par la lecture du periph 1 : l'ICM20600 ----------------------------------
+--                    current_state <= wait_data; -------------------------------------------
                     nb_r <= 0;
                     cpt_ms <= 0; 
                 elsif ack_err_i2c = '1' then -- erreur d'ack, on refait l'initialisation du periphérique
@@ -227,11 +227,11 @@ process(clk, rst_n, periph, flag_data_i2c, prev_flag_data_i2c, ack_err_i2c, busy
                     nb_r <= 0;
                     current_state <= wait_data;  
                     ena_i2c <= '0';   
-                elsif busy_i2c = '0' and ((nb_r = 4 and periph = '0') or (nb_r = 5 and periph = '1'))then 
+                elsif busy_i2c = '0' and ((nb_r = 4 and periph = '0') or (nb_r = 6 and periph = '1'))then --&&&&&&&&&&&&&&&&&&&&&&&&&&&& nb_r = 5
                      current_state <= wait_data;
-                elsif busy_i2c = '0' and ((nb_r >= 5 and periph = '0') or (nb_r >= 6 and periph = '1')) then 
+                elsif busy_i2c = '0' and ((nb_r >= 5 and periph = '0') or (nb_r >= 7 and periph = '1')) then --&&&&&&&&&&&&&&&&&&&&&&&&&&&& nb_r = 6
                      current_state <= wait_data;
-                     periph <= '0';-- not periph-------------------------------------------------------------------------------------------------
+                     periph <= not periph;-- '0'-------------------------------------------------------------------------------------------------
                      nb_r <= 0; 
                      data_nb <= (others=>'0'); 
                      data_wr <= (others=>'0'); 

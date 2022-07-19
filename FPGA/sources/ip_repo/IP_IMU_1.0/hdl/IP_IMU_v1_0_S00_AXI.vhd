@@ -520,15 +520,15 @@ busy => busy_i2c,
 flag_data_ack => flag_data_i2c);
 
 BUFF1 :  IO_buffer Port Map(
-IOBUF_IO_O => SDA_O,
+IOBUF_IO_O => SDA_I,
 IOBUF_IO_IO => SDA_IO,
-IOBUF_IO_I => SDA_I,
+IOBUF_IO_I => SDA_O,
 IOBUF_IO_T => SDA_T);
 
 BUFF2 :  IO_buffer Port Map(
-IOBUF_IO_O => SCL_O,
+IOBUF_IO_O => SCL_I,
 IOBUF_IO_IO => SCL_IO,
-IOBUF_IO_I => SCL_I,
+IOBUF_IO_I => SCL_O,
 IOBUF_IO_T => SCL_T);
 
 
