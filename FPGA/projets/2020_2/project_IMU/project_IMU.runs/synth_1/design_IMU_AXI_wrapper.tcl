@@ -70,6 +70,7 @@ proc create_report { reportName command } {
   }
 }
 OPTRACE "synth_1" START { ROLLUP_AUTO }
+set_param tcl.collectionResultDisplayLimit 0
 set_param chipscope.maxJobs 3
 set_param xicom.use_bs_reader 1
 set_msg_config -id {Common 17-41} -limit 10000000
@@ -92,7 +93,7 @@ set_property ip_output_repo d:/projets/2020_2/project_IMU/project_IMU.cache/ip [
 set_property ip_cache_permissions {read write} [current_project]
 OPTRACE "Creating in-memory project" END { }
 OPTRACE "Adding files" START { }
-read_vhdl -library xil_defaultlib d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+read_vhdl -library xil_defaultlib D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
 add_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_processing_system7_0_0/design_IMU_AXI_processing_system7_0_0.xdc]
 set_property used_in_implementation false [get_files -all d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_rst_ps7_0_50M_0/design_IMU_AXI_rst_ps7_0_50M_0_board.xdc]

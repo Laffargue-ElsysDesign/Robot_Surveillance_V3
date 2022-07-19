@@ -24,3 +24,7 @@ platform config -updatehw {D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.
 platform generate -domains 
 platform config -updatehw {D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa}
 platform generate -domains 
+platform active {design_IMU_AXI_wrapper}
+platform config -updatehw {D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa}
+platform generate -domains 
+platform generate

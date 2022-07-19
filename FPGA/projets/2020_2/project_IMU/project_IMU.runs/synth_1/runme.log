@@ -20,48 +20,48 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 18400
+INFO: [Synth 8-7075] Helper process launched with PID 8604
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1189.273 ; gain = 62.652
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1187.598 ; gain = 61.480
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_wrapper' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:42]
-INFO: [Synth 8-3491] module 'design_IMU_AXI' declared at 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:591' bound to instance 'design_IMU_AXI_i' of component 'design_IMU_AXI' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:71]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_wrapper' [D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:42]
+INFO: [Synth 8-3491] module 'design_IMU_AXI' declared at 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:591' bound to instance 'design_IMU_AXI_i' of component 'design_IMU_AXI' [D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:71]
 INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:623]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_I2C_master_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_I2C_master_0_0_stub.vhdl:5' bound to instance 'I2C_master_0' of component 'design_IMU_AXI_I2C_master_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:920]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_I2C_master_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_I2C_master_0_0_stub.vhdl:27]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_IO_buffer_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_0_stub.vhdl:5' bound to instance 'IO_buffer_0' of component 'design_IMU_AXI_IO_buffer_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:939]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IO_buffer_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_0_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_IO_buffer_0_1' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_1_stub.vhdl:5' bound to instance 'IO_buffer_1' of component 'design_IMU_AXI_IO_buffer_0_1' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:946]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IO_buffer_0_1' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_1_stub.vhdl:15]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_IP_IMU_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IP_IMU_0_0_stub.vhdl:5' bound to instance 'IP_IMU_0' of component 'design_IMU_AXI_IP_IMU_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:953]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IP_IMU_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_IP_IMU_0_0_stub.vhdl:41]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_processing_system7_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_IMU_AXI_processing_system7_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:986]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_processing_system7_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_I2C_master_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_I2C_master_0_0_stub.vhdl:5' bound to instance 'I2C_master_0' of component 'design_IMU_AXI_I2C_master_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:920]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_I2C_master_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_I2C_master_0_0_stub.vhdl:27]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_IO_buffer_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_0_stub.vhdl:5' bound to instance 'IO_buffer_0' of component 'design_IMU_AXI_IO_buffer_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:939]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IO_buffer_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_0_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_IO_buffer_0_1' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_1_stub.vhdl:5' bound to instance 'IO_buffer_1' of component 'design_IMU_AXI_IO_buffer_0_1' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:946]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IO_buffer_0_1' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IO_buffer_0_1_stub.vhdl:15]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_IP_IMU_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IP_IMU_0_0_stub.vhdl:5' bound to instance 'IP_IMU_0' of component 'design_IMU_AXI_IP_IMU_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:953]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_IP_IMU_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_IP_IMU_0_0_stub.vhdl:41]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_processing_system7_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_IMU_AXI_processing_system7_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:986]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_processing_system7_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_processing_system7_0_0_stub.vhdl:76]
 INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_ps7_0_axi_periph_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:398]
 INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1VS6TZ4' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:80]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_auto_pc_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_IMU_AXI_auto_pc_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:263]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_auto_pc_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_auto_pc_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_IMU_AXI_auto_pc_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:263]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_auto_pc_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_auto_pc_0_stub.vhdl:70]
 INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1VS6TZ4' (1#1) [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:80]
 INFO: [Synth 8-256] done synthesizing module 'design_IMU_AXI_ps7_0_axi_periph_0' (2#1) [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:398]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_rst_ps7_0_50M_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_IMU_AXI_rst_ps7_0_50M_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:1120]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_rst_ps7_0_50M_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_IMU_AXI_time_pulse_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_time_pulse_0_0_stub.vhdl:5' bound to instance 'time_pulse_0' of component 'design_IMU_AXI_time_pulse_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:1133]
-INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_time_pulse_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-21788-D-14JM0W2/realtime/design_IMU_AXI_time_pulse_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_rst_ps7_0_50M_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_IMU_AXI_rst_ps7_0_50M_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:1120]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_rst_ps7_0_50M_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_IMU_AXI_time_pulse_0_0' declared at 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_time_pulse_0_0_stub.vhdl:5' bound to instance 'time_pulse_0' of component 'design_IMU_AXI_time_pulse_0_0' [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:1133]
+INFO: [Synth 8-638] synthesizing module 'design_IMU_AXI_time_pulse_0_0' [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/.Xil/Vivado-14444-D-14JM0W2/realtime/design_IMU_AXI_time_pulse_0_0_stub.vhdl:17]
 INFO: [Synth 8-256] done synthesizing module 'design_IMU_AXI' (3#1) [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd:623]
-INFO: [Synth 8-256] done synthesizing module 'design_IMU_AXI_wrapper' (4#1) [d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:42]
+INFO: [Synth 8-256] done synthesizing module 'design_IMU_AXI_wrapper' (4#1) [D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd:42]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1245.480 ; gain = 118.859
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.230 ; gain = 118.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1245.480 ; gain = 118.859
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.230 ; gain = 118.113
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1245.480 ; gain = 118.859
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 1244.230 ; gain = 118.113
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1245.480 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.016 . Memory (MB): peak = 1244.230 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -90,20 +90,20 @@ Parsing XDC File [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/dont_to
 Finished Parsing XDC File [D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.684 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1275.320 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.007 . Memory (MB): peak = 1275.684 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1275.320 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1275.684 ; gain = 149.062
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.320 ; gain = 149.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1275.684 ; gain = 149.062
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.320 ; gain = 149.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -383,10 +383,10 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_IMU_AXI_i/I2C_master_0. (c
 Applied set_property KEEP_HIERARCHY = SOFT for design_IMU_AXI_i/IO_buffer_1. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_IMU_AXI_i/IP_IMU_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.684 ; gain = 149.062
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.320 ; gain = 149.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.684 ; gain = 149.062
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1275.320 ; gain = 149.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -408,25 +408,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:13 . Memory (MB): peak = 1275.684 ; gain = 149.062
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:14 . Memory (MB): peak = 1275.320 ; gain = 149.203
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1318.871 ; gain = 192.250
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1320.406 ; gain = 194.289
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1319.094 ; gain = 192.473
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1320.555 ; gain = 194.438
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1338.199 ; gain = 211.578
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:19 . Memory (MB): peak = 1339.668 ; gain = 213.551
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -444,37 +444,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -508,23 +508,25 @@ Report Cell Usage:
 |8     |design_IMU_AXI_time_pulse_0_0_bbox         |     1|
 +------+-------------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1346.395 ; gain = 220.277
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1343.980 ; gain = 187.156
-Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:22 . Memory (MB): peak = 1343.980 ; gain = 217.359
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:20 . Memory (MB): peak = 1346.395 ; gain = 189.188
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:23 . Memory (MB): peak = 1346.395 ; gain = 220.277
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1343.980 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.015 . Memory (MB): peak = 1346.395 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1367.473 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1369.164 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
 41 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1372.492 ; gain = 245.871
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:30 . Memory (MB): peak = 1373.168 ; gain = 247.051
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
 INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/design_IMU_AXI_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_IMU_AXI_wrapper_utilization_synth.rpt -pb design_IMU_AXI_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Jun 15 16:07:02 2022...
+INFO: [Common 17-206] Exiting Vivado at Tue Jul 19 10:35:11 2022...

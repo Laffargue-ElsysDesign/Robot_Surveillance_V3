@@ -1,7 +1,7 @@
 -- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 -- --------------------------------------------------------------------------------
 -- Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
--- Date        : Wed Jun 15 16:06:18 2022
+-- Date        : Tue Jul 19 10:34:26 2022
 -- Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 -- Command     : write_vhdl -force -mode synth_stub
 --               d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_IP_IMU_0_0/design_IMU_AXI_IP_IMU_0_0_stub.vhdl

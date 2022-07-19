@@ -47,7 +47,7 @@
 -- DO NOT MODIFY THIS FILE.
 
 -- IP VLNV: elsys-design.com:user:IP_IMU:1.0
--- IP Revision: 7
+-- IP Revision: 13
 
 LIBRARY ieee;
 USE ieee.std_logic_1164.ALL;

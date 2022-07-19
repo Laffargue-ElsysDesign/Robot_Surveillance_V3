@@ -52,22 +52,26 @@
 #include "xil_types.h"
 #include "xil_assert.h"
 
-int32_t *baseaddr = (int32_t *)XPAR_IP_IMU_0_S00_AXI_BASEADDR;
+int32_t *baseaddr = (int32_t *)0x43C30000;
 
 int main()
 {
 	xil_printf("Debut Test\n\r");
     init_platform();
     while (1){
-		printf("Read acc_x : 0x%08lx \n\r", *(baseaddr+0));
+		//printf("Read acc_x : 0x%08lx \n\r", *(baseaddr+0));
 		printf("Read acc_x : %d\n\r",(int)*(baseaddr+0));
-		printf("Read acc_y : 0x%08lx \n\r", *(baseaddr+1));
-		printf("Read acc_x : %d\n\r",(int)*(baseaddr+1));
-		printf("Read vit_ang_z : 0x%08lx \n\r", *(baseaddr+2));
-		printf("Read acc_x : %d\n\r",(int)*(baseaddr+2));
-		printf("Read mag_x : 0x%08lx \n\r", *(baseaddr+3));
-		printf("Read mag_y : 0x%08lx \n\r", *(baseaddr+4));
-		printf("Read mag_z: 0x%08lx \n\r", *(baseaddr+5));
+		//printf("Read acc_y : 0x%08lx \n\r", *(baseaddr+1));
+		printf("Read acc_y : %d\n\r",(int)*(baseaddr+1));
+		//printf("Read vit_ang_z : 0x%08lx \n\r", *(baseaddr+2));
+		printf("Read vit_ang_z : %d\n\r",(int)*(baseaddr+2));
+		//printf("Read mag_x : 0x%08lx \n\r", *(baseaddr+3));
+		printf("Read mag_x : %d \n\r", *(baseaddr+3));
+		//printf("Read mag_y : 0x%08lx \n\r", *(baseaddr+4));
+		printf("Read mag_y : %d \n\r", *(baseaddr+4));
+		//printf("Read mag_z: 0x%08lx \n\r", *(baseaddr+5));
+		printf("Read mag_z: %d \n\r", *(baseaddr+5));
+		sleep(1);
     }
 
     cleanup_platform();

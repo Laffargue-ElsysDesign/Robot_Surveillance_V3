@@ -1,0 +1,719 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 15 10:07:02 2022
+# Process ID: 9496
+# Current directory: D:/projets/2020_2/project_IMU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5280 D:\projets\2020_2\project_IMU\project_IMU.xpr
+# Log file: D:/projets/2020_2/project_IMU/vivado.log
+# Journal file: D:/projets/2020_2/project_IMU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_IMU/project_IMU.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:14 ; elapsed = 00:00:09 . Memory (MB): peak = 1126.348 ; gain = 0.000
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Reading block design file <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd>...
+Adding component instance block -- xilinx.com:module_ref:I2C_master:1.0 - I2C_master_0
+Adding component instance block -- xilinx.com:module_ref:IMU_control:1.0 - IMU_control_0
+Adding component instance block -- xilinx.com:module_ref:filtre_anti_rebond:1.0 - filtre_anti_rebond_0
+Adding component instance block -- xilinx.com:module_ref:time_pulse:1.0 - time_pulse_0
+Adding component instance block -- xilinx.com:module_ref:IO_buffer:1.0 - IO_buffer_0
+Adding component instance block -- xilinx.com:module_ref:IO_buffer:1.0 - IO_buffer_1
+Adding component instance block -- xilinx.com:ip:blk_mem_gen:8.4 - blk_mem_gen_0
+Adding component instance block -- xilinx.com:ip:xlconstant:1.1 - xlconstant_0
+Successfully read diagram <design_IMU> from block design file <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd>
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/ui/bd_3c9dbf30.ui> 
+upgrade_ip: Time (s): cpu = 00:00:14 ; elapsed = 00:00:11 . Memory (MB): peak = 1213.863 ; gain = 87.516
+update_module_reference: Time (s): cpu = 00:00:16 ; elapsed = 00:00:24 . Memory (MB): peak = 1213.863 ; gain = 87.516
+reset_run synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/synth/design_IMU.vhd
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/sim/design_IMU.vhd
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hdl/design_IMU_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IMU_control_0 .
+Exporting to file d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hw_handoff/design_IMU.hwh
+Generated Block Design Tcl file d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hw_handoff/design_IMU_bd.tcl
+Generated Hardware Definition File d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/synth/design_IMU.hwdef
+[Wed Jun 15 10:18:02 2022] Launched design_IMU_IMU_control_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_IMU_control_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_IMU_control_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 10:18:02 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:17 . Memory (MB): peak = 1371.812 ; gain = 157.949
+open_hw_manager
+connect_hw_server -allow_non_jtag
+INFO: [Labtools 27-2285] Connecting to hw_server url TCP:localhost:3121
+INFO: [Labtools 27-2222] Launching hw_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+****** Xilinx hw_server v2020.2
+  **** Build date : Nov 18 2020 at 10:01:48
+    ** Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+
+
+INFO: [Labtools 27-3415] Connecting to cs_server url TCP:localhost:3042
+INFO: [Labtools 27-3417] Launching cs_server...
+INFO: [Labtools 27-2221] Launch Output:
+
+
+******** Xilinx cs_server v2020.2
+  ****** Build date   : Nov 03 2020-22:02:56
+    **** Build number : 2020.2.1604437376
+      ** Copyright 2017-2020 Xilinx, Inc. All Rights Reserved.
+
+
+
+connect_hw_server: Time (s): cpu = 00:00:00 ; elapsed = 00:00:12 . Memory (MB): peak = 1409.559 ; gain = 0.000
+open_hw_target
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351B48339A
+open_hw_target: Time (s): cpu = 00:00:05 ; elapsed = 00:00:07 . Memory (MB): peak = 2962.312 ; gain = 1552.754
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device -update_hw_probes false [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+set_property PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {} [get_hw_devices xc7z020_1]
+set_property PROGRAM.FILE {D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/design_IMU_wrapper.bit} [get_hw_devices xc7z020_1]
+program_hw_devices [get_hw_devices xc7z020_1]
+INFO: [Labtools 27-3164] End of startup status: HIGH
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+INFO: [Labtools 27-1434] Device xc7z020 (JTAG device index = 1) is programmed with a design that has no supported debug core(s) in it.
+open_bd_design {D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd}
+set_property library xil_defaultlib [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/new/package_IMU.vhd]
+file mkdir D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new
+close [ open D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd w ]
+add_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_IMU_control_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/ui/bd_3c9dbf30.ui> 
+update_compile_order -fileset sources_1
+close [ open D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd w ]
+add_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd
+set_property library robot [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd]
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:06 . Memory (MB): peak = 3042.371 ; gain = 4.531
+update_compile_order -fileset sources_1
+set_property library xil_defaultlib [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/imports/new/I2C_master.vhd]
+set_property library robot [get_files  D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/imports/sources_1/new/package_IMU.vhd]
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs synth_1 -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/synth/design_IMU.vhd
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/sim/design_IMU.vhd
+VHDL Output written to : d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hdl/design_IMU_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IMU_control_0 .
+Exporting to file d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hw_handoff/design_IMU.hwh
+Generated Block Design Tcl file d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/hw_handoff/design_IMU_bd.tcl
+Generated Hardware Definition File d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU/synth/design_IMU.hwdef
+[Wed Jun 15 11:47:57 2022] Launched design_IMU_IMU_control_0_0_synth_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_IMU_control_0_0_synth_1/runme.log
+[Wed Jun 15 11:47:57 2022] Launched synth_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+launch_runs: Time (s): cpu = 00:00:01 ; elapsed = 00:00:11 . Memory (MB): peak = 3045.207 ; gain = 0.000
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_IMU_control_0_0_synth_1
+
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+update_module_reference: Time (s): cpu = 00:00:02 ; elapsed = 00:00:13 . Memory (MB): peak = 3047.242 ; gain = 2.035
+update_compile_order -fileset sources_1
+update_module_reference design_IMU_IMU_control_0_0
+INFO: [IP_Flow 19-5107] Inferred bus interface 'rst_n' of definition 'xilinx.com:signal:reset:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-5107] Inferred bus interface 'clk' of definition 'xilinx.com:signal:clock:1.0' (from Xilinx Repository).
+INFO: [IP_Flow 19-4728] Bus Interface 'rst_n': Added interface parameter 'POLARITY' with value 'ACTIVE_LOW'.
+WARNING: [IP_Flow 19-3157] Bus Interface 'rst_n': Bus parameter POLARITY is ACTIVE_LOW but port 'rst_n' is not *resetn - please double check the POLARITY setting.
+WARNING: [IP_Flow 19-5661] Bus Interface 'clk' does not have any bus interfaces associated with it.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU/design_IMU.bd'
+INFO: [IP_Flow 19-1972] Upgraded design_IMU_IMU_control_0_0 from IMU_control_v1_0 1.0 to IMU_control_v1_0 1.0
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU\design_IMU.bd> 
+update_module_reference: Time (s): cpu = 00:00:01 ; elapsed = 00:00:05 . Memory (MB): peak = 3047.867 ; gain = 0.625
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351B48339A
+create_peripheral elsys-design.com user IP_IMU 1.0 -dir D:/projets/2020_2/project_IMU
+add_peripheral_interface S00_AXI -interface_mode slave -axi_type lite [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+set_property VALUE 6 [ipx::get_bus_parameters WIZ_NUM_REG -of_objects [ipx::get_bus_interfaces S00_AXI -of_objects [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]]]
+generate_peripheral -driver -bfm_example_design -debug_hw_example_design [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+write_peripheral [ipx::find_open_core elsys-design.com:user:IP_IMU:1.0]
+set_property  ip_repo_paths  D:/projets/2020_2/project_IMU/IP_IMU_1.0 [current_project]
+update_ip_catalog -rebuild
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+ipx::edit_ip_in_project -upgrade true -name edit_IP_IMU_v1_0 -directory D:/projets/2020_2/project_IMU d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+current_project project_IMU
+current_project edit_IP_IMU_v1_0
+add_files -norecurse -copy_to d:/projets/2020_2/project_IMU/IP_IMU_1.0/src {D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/package_IMU_AXI.vhd D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/new/IMU_AXI.vhd}
+update_compile_order -fileset sources_1
+set_property library robot [get_files  d:/projets/2020_2/project_IMU/IP_IMU_1.0/src/package_IMU_AXI.vhd]
+current_project project_IMU
+current_project edit_IP_IMU_v1_0
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+ipx::merge_project_changes hdl_parameters [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+INFO: [IP_Flow 19-3166] Bus Interface 'S00_AXI': References existing memory map 'S00_AXI'.
+set_property core_revision 2 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+create_bd_design "design_IMU_AXI"
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+startgroup
+create_bd_cell -type ip -vlnv elsys-design.com:user:IP_IMU:1.0 IP_IMU_0
+endgroup
+update_compile_order -fileset sources_1
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:processing_system7:5.5 processing_system7_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:processing_system7 -config {make_external "FIXED_IO, DDR" apply_board_preset "1" Master "Disable" Slave "Disable" }  [get_bd_cells processing_system7_0]
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {Auto} Clk_slave {Auto} Clk_xbar {Auto} Master {/processing_system7_0/M_AXI_GP0} Slave {/IP_IMU_0/S00_AXI} ddr_seg {Auto} intc_ip {New AXI Interconnect} master_apm {0}}  [get_bd_intf_pins IP_IMU_0/S00_AXI]
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+Slave segment '/IP_IMU_0/S00_AXI/S00_AXI_reg' is being assigned into address space '/processing_system7_0/Data' at <0x43C0_0000 [ 64K ]>.
+create_bd_cell -type module -reference IO_buffer IO_buffer_0
+create_bd_cell -type module -reference time_pulse time_pulse_0
+create_bd_cell -type module -reference I2C_master I2C_master_0
+set_property location {3 1006 41} [get_bd_cells I2C_master_0]
+connect_bd_net [get_bd_pins I2C_master_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins I2C_master_0/rst_n] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+connect_bd_net [get_bd_pins I2C_master_0/ena] [get_bd_pins IP_IMU_0/ena_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/addr] [get_bd_pins IP_IMU_0/addr_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/data_wr] [get_bd_pins IP_IMU_0/data_wi2c]
+connect_bd_net [get_bd_pins I2C_master_0/ack_err] [get_bd_pins IP_IMU_0/ack_err_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/data_rd] [get_bd_pins IP_IMU_0/data_ri2c]
+connect_bd_net [get_bd_pins I2C_master_0/busy] [get_bd_pins IP_IMU_0/busy_i2c]
+connect_bd_net [get_bd_pins I2C_master_0/flag_data_ack] [get_bd_pins IP_IMU_0/flag_data_i2c]
+connect_bd_net [get_bd_pins time_pulse_0/clk] [get_bd_pins processing_system7_0/FCLK_CLK0]
+connect_bd_net [get_bd_pins time_pulse_0/rst_n] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn]
+connect_bd_net [get_bd_pins IP_IMU_0/pulse_1ms] [get_bd_pins time_pulse_0/pulse_1ms]
+set_property location {3.5 1380 -58} [get_bd_cells IO_buffer_0]
+copy_bd_objs /  [get_bd_cells {IO_buffer_0}]
+set_property location {4 1433 73} [get_bd_cells IO_buffer_1]
+set_property location {3 1082 11} [get_bd_cells I2C_master_0]
+connect_bd_net [get_bd_pins I2C_master_0/SDA_o] [get_bd_pins IO_buffer_0/IOBUF_IO_I]
+connect_bd_net [get_bd_pins I2C_master_0/SDA_t] [get_bd_pins IO_buffer_0/IOBUF_IO_T]
+connect_bd_net [get_bd_pins I2C_master_0/SCL_o] [get_bd_pins IO_buffer_1/IOBUF_IO_I]
+connect_bd_net [get_bd_pins I2C_master_0/SCL_t] [get_bd_pins IO_buffer_1/IOBUF_IO_T]
+connect_bd_net [get_bd_pins IO_buffer_1/IOBUF_IO_O] [get_bd_pins I2C_master_0/SCL_i]
+connect_bd_net [get_bd_pins IO_buffer_0/IOBUF_IO_O] [get_bd_pins I2C_master_0/SDA_i]
+startgroup
+make_bd_pins_external  [get_bd_pins IO_buffer_0/IOBUF_IO_IO]
+endgroup
+startgroup
+make_bd_pins_external  [get_bd_pins IO_buffer_1/IOBUF_IO_IO]
+endgroup
+current_bd_design [get_bd_designs design_IMU]
+current_bd_design [get_bd_designs design_IMU_AXI]
+set_property name IMU_I2C_SCL [get_bd_ports IOBUF_IO_IO_1]
+set_property name IMU_I2C_SDA [get_bd_ports IOBUF_IO_IO_0]
+connect_bd_net [get_bd_pins I2C_master_0/rw] [get_bd_pins IP_IMU_0/ena_i2c]
+undo
+INFO: [Common 17-17] undo 'connect_bd_net [get_bd_pins I2C_master_0/rw] [get_bd_pins IP_IMU_0/ena_i2c]'
+connect_bd_net [get_bd_pins I2C_master_0/rw] [get_bd_pins IP_IMU_0/rw_i2c]
+regenerate_bd_layout
+set_property location {1 197 356} [get_bd_cells rst_ps7_0_50M]
+set_property location {1 236 572} [get_bd_cells processing_system7_0]
+set_property location {2 657 651} [get_bd_cells ps7_0_axi_periph]
+set_property location {1 300 187} [get_bd_cells time_pulse_0]
+set_property location {2 743 449} [get_bd_cells IP_IMU_0]
+set_property location {3 1103 590} [get_bd_cells IO_buffer_1]
+set_property location {3 1081 418} [get_bd_cells IO_buffer_0]
+set_property location {2 677 405} [get_bd_cells IP_IMU_0]
+set_property location {2 696 630} [get_bd_cells ps7_0_axi_periph]
+set_property location {3 1057 86} [get_bd_cells IO_buffer_0]
+set_property location {3 1096 224} [get_bd_cells IO_buffer_1]
+set_property location {1309 624} [get_bd_intf_ports DDR]
+set_property location {3 1071 453} [get_bd_cells ps7_0_axi_periph]
+set_property location {1 181 118} [get_bd_cells time_pulse_0]
+set_property location {1 182 289} [get_bd_cells rst_ps7_0_50M]
+set_property location {1 200 502} [get_bd_cells processing_system7_0]
+make_wrapper -files [get_files D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd] -top
+CRITICAL WARNING: [PSU-1]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_0 has negative value -0.050 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-2]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_1 has negative value -0.044 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-3]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_2 has negative value -0.035 . PS DDR interfaces might fail when entering negative DQS skew values. 
+CRITICAL WARNING: [PSU-4]  Parameter : PCW_UIPARAM_DDR_DQS_TO_CLK_DELAY_3 has negative value -0.100 . PS DDR interfaces might fail when entering negative DQS skew values. 
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/ui/bd_a83ab243.ui> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+add_files -norecurse d:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+update_compile_order -fileset sources_1
+startgroup
+set_property -dict [list CONFIG.freq_clk_MHz {50}] [get_bd_cells time_pulse_0]
+endgroup
+save_bd_design
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/ui/bd_a83ab243.ui> 
+set_property top design_IMU_AXI_wrapper [current_fileset]
+update_compile_order -fileset sources_1
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_processing_system7_0_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_processing_system7_0_0' detected simulation language mismatch. Simulation type 'tlm_dpi' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Any Language' outputs instead.
+WARNING: [IP_Flow 19-5611] Unable to find an associated reset port for the interface 'M_AXI_GP0'. A default connection has been created.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block processing_system7_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block rst_ps7_0_50M .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IO_buffer_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block time_pulse_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block I2C_master_0 .
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IO_buffer_1 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_processing_system7_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_rst_ps7_0_50M_0
+[Wed Jun 15 13:57:23 2022] Launched design_IMU_AXI_auto_pc_0_synth_1, design_IMU_AXI_processing_system7_0_0_synth_1, design_IMU_AXI_I2C_master_0_0_synth_1, design_IMU_AXI_IP_IMU_0_0_synth_1, design_IMU_AXI_time_pulse_0_0_synth_1, design_IMU_AXI_IO_buffer_0_0_synth_1, design_IMU_AXI_IO_buffer_0_1_synth_1, design_IMU_AXI_rst_ps7_0_50M_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_auto_pc_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_auto_pc_0_synth_1/runme.log
+design_IMU_AXI_processing_system7_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_processing_system7_0_0_synth_1/runme.log
+design_IMU_AXI_I2C_master_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_I2C_master_0_0_synth_1/runme.log
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+design_IMU_AXI_time_pulse_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_time_pulse_0_0_synth_1/runme.log
+design_IMU_AXI_IO_buffer_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IO_buffer_0_0_synth_1/runme.log
+design_IMU_AXI_IO_buffer_0_1_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IO_buffer_0_1_synth_1/runme.log
+design_IMU_AXI_rst_ps7_0_50M_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_rst_ps7_0_50M_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 13:57:23 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:28 ; elapsed = 00:00:45 . Memory (MB): peak = 3383.895 ; gain = 65.395
+delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets I2C_master_0_ack_err] [get_bd_nets I2C_master_0_data_rd] [get_bd_nets IP_IMU_0_addr_i2c] [get_bd_nets IP_IMU_0_data_wi2c] [get_bd_nets IP_IMU_0_ena_i2c] [get_bd_nets I2C_master_0_busy] [get_bd_nets I2C_master_0_flag_data_ack] [get_bd_nets time_pulse_0_pulse_1ms] [get_bd_nets IP_IMU_0_rw_i2c] [get_bd_cells IP_IMU_0]
+INFO: [Common 17-41] Interrupt caught. Command should exit soon.
+INFO: [Common 17-344] 'delete_bd_objs' was cancelled
+undo
+INFO: [Common 17-17] undo 'delete_bd_objs [get_bd_intf_nets ps7_0_axi_periph_M00_AXI] [get_bd_nets I2C_master_0_ack_err] [get_bd_nets I2C_master_0_data_rd] [get_bd_nets IP_IMU_0_addr_i2c] [get_bd_nets IP_IMU_0_data_wi2c] [get_bd_nets IP_IMU_0_ena_i2c] [get_bd_nets I2C_master_0_busy] [get_bd_nets I2C_master_0_flag_data_ack] [get_bd_nets time_pulse_0_pulse_1ms] [get_bd_nets IP_IMU_0_rw_i2c] [get_bd_cells IP_IMU_0]'
+set_property location {2 617 527} [get_bd_cells IP_IMU_0]
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+create_project: Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 3413.316 ; gain = 13.453
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+ipx::edit_ip_in_project: Time (s): cpu = 00:00:07 ; elapsed = 00:00:07 . Memory (MB): peak = 3416.844 ; gain = 16.980
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+ipx::update_checksums [ipx::current_core]
+ipx::save_core [ipx::current_core]
+set_property core_revision 3 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_IMU_AXI_IP_IMU_0_0 (IP_IMU_v1.0 1.0) from revision 2 to revision 3
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/ui/bd_a83ab243.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/projets/2020_2/project_IMU/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_IMU_AXI_auto_pc_0, cache-ID = 661c56cfa8991866; cache size = 2.174 MB.
+[Wed Jun 15 14:02:30 2022] Launched design_IMU_AXI_IP_IMU_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 14:02:30 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:51 . Memory (MB): peak = 3464.629 ; gain = 0.000
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+set_property core_revision 4 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_IMU_AXI_IP_IMU_0_0 (IP_IMU_v1.0 1.0) from revision 3 to revision 4
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/projets/2020_2/project_IMU/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_IMU_AXI_auto_pc_0, cache-ID = 661c56cfa8991866; cache size = 2.174 MB.
+[Wed Jun 15 14:06:09 2022] Launched design_IMU_AXI_IP_IMU_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 14:06:09 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:05 ; elapsed = 00:00:49 . Memory (MB): peak = 3517.570 ; gain = 2.141
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+set_property core_revision 5 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_IMU_AXI_IP_IMU_0_0 (IP_IMU_v1.0 1.0) from revision 4 to revision 5
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+Wrote  : <D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/ui/bd_a83ab243.ui> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/projets/2020_2/project_IMU/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_IMU_AXI_auto_pc_0, cache-ID = 661c56cfa8991866; cache size = 2.174 MB.
+[Wed Jun 15 14:17:18 2022] Launched design_IMU_AXI_IP_IMU_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 14:17:18 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:06 ; elapsed = 00:00:45 . Memory (MB): peak = 3567.203 ; gain = 2.418
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa ...
+INFO: [Hsi 55-2053] elapsed time for repository (D:/Programmes/Vivado/2020.2/data\embeddedsw) loading 4 seconds
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:06 ; elapsed = 00:00:11 . Memory (MB): peak = 3744.055 ; gain = 176.852
+INFO: [Vivado 12-8231] Launching Vitis
+INFO: [Vivado 12-417] Running vitis
+INFO: [Vivado 12-8232] Vitis launch initiated. Please check console for any further messages.
+INFO: [Labtoolstcl 44-466] Opening hw_target localhost:3121/xilinx_tcf/Digilent/210351B48339A
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+INFO: [Labtools 27-1435] Device xc7z020 (JTAG device index = 1) is not programmed (DONE status = 0).
+WARNING: [Labtoolstcl 44-129] No matching hw_ila_data was found.
+set_property offset 0x43C00000 [get_bd_addr_segs {processing_system7_0/Data/SEG_IP_IMU_0_S00_AXI_reg}]
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+set_property core_revision 6 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_IMU_AXI_IP_IMU_0_0 (IP_IMU_v1.0 1.0) from revision 5 to revision 6
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/projets/2020_2/project_IMU/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_IMU_AXI_auto_pc_0, cache-ID = 661c56cfa8991866; cache size = 3.545 MB.
+[Wed Jun 15 15:09:14 2022] Launched design_IMU_AXI_IP_IMU_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 15:09:14 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:28 . Memory (MB): peak = 3801.824 ; gain = 0.000
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3848.191 ; gain = 46.367
+ipx::edit_ip_in_project -upgrade true -name IP_IMU_v1_0_project -directory D:/projets/2020_2/project_IMU/project_IMU.tmp/IP_IMU_v1_0_project d:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'.
+INFO: [IP_Flow 19-795] Syncing license key meta-data
+update_compile_order -fileset sources_1
+ipx::merge_project_changes files [ipx::current_core]
+WARNING: [IP_Flow 19-5226] Project source file 'd:/projets/2020_2/project_IMU/IP_IMU_1.0/component.xml' ignored by IP packager.
+set_property core_revision 7 [ipx::current_core]
+ipx::update_source_project_archive -component [ipx::current_core]
+ipx::create_xgui_files [ipx::current_core]
+ipx::update_checksums [ipx::current_core]
+ipx::check_integrity [ipx::current_core]
+INFO: [IP_Flow 19-2181] Payment Required is not set for this core.
+INFO: [IP_Flow 19-2187] The Product Guide file is missing.
+INFO: [Ipptcl 7-1486] check_integrity: Integrity check passed.
+ipx::save_core [ipx::current_core]
+ipx::move_temp_component_back -component [ipx::current_core]
+close_project -delete
+update_ip_catalog -rebuild -repo_path d:/projets/2020_2/project_IMU/IP_IMU_1.0
+INFO: [IP_Flow 19-725] Reloaded user IP repository 'd:/projets/2020_2/project_IMU/IP_IMU_1.0'
+report_ip_status -name ip_status 
+upgrade_ip -vlnv elsys-design.com:user:IP_IMU:1.0 [get_ips  design_IMU_AXI_IP_IMU_0_0] -log ip_upgrade.log
+Upgrading 'D:/projets/2020_2/project_IMU/project_IMU.srcs/sources_1/bd/design_IMU_AXI/design_IMU_AXI.bd'
+INFO: [IP_Flow 19-3422] Upgraded design_IMU_AXI_IP_IMU_0_0 (IP_IMU_v1.0 1.0) from revision 6 to revision 7
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+INFO: [Coretcl 2-1525] Wrote upgrade log to 'D:/projets/2020_2/project_IMU/ip_upgrade.log'.
+export_ip_user_files -of_objects [get_ips design_IMU_AXI_IP_IMU_0_0] -no_script -sync -force -quiet
+report_ip_status -name ip_status 
+reset_run synth_1
+WARNING: [Vivado 12-1017] Problems encountered:
+1. Failed to delete one or more files in run directory D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1
+
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+Wrote  : <D:\projets\2020_2\project_IMU\project_IMU.srcs\sources_1\bd\design_IMU_AXI\design_IMU_AXI.bd> 
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/sim/design_IMU_AXI.vhd
+VHDL Output written to : D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd
+INFO: [BD 41-1029] Generation completed for the IP Integrator block IP_IMU_0 .
+WARNING: [IP_Flow 19-4994] Overwriting existing constraint file 'd:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0_ooc.xdc'
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'rtl' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'Verilog' outputs instead.
+WARNING: [IP_Flow 19-5160] IP 'design_IMU_AXI_auto_pc_0' detected simulation language mismatch. Simulation type 'tlm' does not support 'VHDL' outputs (see project's "simulator_language" property), delivering 'SystemC' outputs instead.
+INFO: [BD 41-1029] Generation completed for the IP Integrator block ps7_0_axi_periph/s00_couplers/auto_pc .
+Exporting to file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI.hwh
+Generated Block Design Tcl file D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/hw_handoff/design_IMU_AXI_bd.tcl
+Generated Hardware Definition File D:/projets/2020_2/project_IMU/project_IMU.gen/sources_1/bd/design_IMU_AXI/synth/design_IMU_AXI.hwdef
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_IP_IMU_0_0
+INFO: [IP_Flow 19-7066] Running IP cache check for IP design_IMU_AXI_auto_pc_0
+INFO: [IP_Flow 19-4993] Using cached IP synthesis design for IP design_IMU_AXI_auto_pc_0, cache-ID = 661c56cfa8991866; cache size = 3.781 MB.
+[Wed Jun 15 16:05:37 2022] Launched design_IMU_AXI_IP_IMU_0_0_synth_1, synth_1...
+Run output will be captured here:
+design_IMU_AXI_IP_IMU_0_0_synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/design_IMU_AXI_IP_IMU_0_0_synth_1/runme.log
+synth_1: D:/projets/2020_2/project_IMU/project_IMU.runs/synth_1/runme.log
+[Wed Jun 15 16:05:37 2022] Launched impl_1...
+Run output will be captured here: D:/projets/2020_2/project_IMU/project_IMU.runs/impl_1/runme.log
+launch_runs: Time (s): cpu = 00:00:04 ; elapsed = 00:00:48 . Memory (MB): peak = 3906.105 ; gain = 0.000
+write_hw_platform -fixed -include_bit -force -file D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+INFO: [Vivado 12-4895] Creating Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa ...
+WARNING: [Project 1-645] Board images not set in Hardware Platform.
+INFO: [Vivado 12-12467] The Hardware Platform can be used for Hardware
+INFO: [Vivado 12-4896] Successfully created Hardware Platform: D:/projets/2020_2/project_IMU/design_IMU_AXI_wrapper.xsa
+write_hw_platform: Time (s): cpu = 00:00:06 ; elapsed = 00:00:05 . Memory (MB): peak = 3912.535 ; gain = 6.430
+ERROR: [Labtoolstcl 44-513] HW Target shutdown. Closing target: localhost:3121/xilinx_tcf/Digilent/210351B48339A
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jun 15 16:18:33 2022...

@@ -733,3 +733,575 @@ con
 
 16:14:08 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
 16:18:02 INFO  : Disconnected from the channel tcfchan#21.
+13:04:28 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\vitis\temp_xsdb_launch_script.tcl
+13:04:31 INFO  : XSCT server has started successfully.
+13:04:31 INFO  : Successfully done setting XSCT server connection channel  
+13:04:31 INFO  : plnx-install-location is set to ''
+13:04:31 INFO  : Successfully done setting workspace for the tool. 
+13:04:37 INFO  : Platform repository initialization has completed.
+13:04:38 INFO  : Registering command handlers for Vitis TCF services
+13:04:40 INFO  : Successfully done query RDI_DATADIR 
+13:06:24 INFO  : Hardware specification for platform project 'design_IMU_AXI_wrapper' is updated.
+13:06:32 INFO  : Result from executing command 'getProjects': design_IMU_AXI_wrapper
+13:06:32 INFO  : Result from executing command 'getPlatforms': design_IMU_AXI_wrapper|D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/design_IMU_AXI_wrapper.xpfm
+13:06:35 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+13:06:40 INFO  : The hardware specfication used by project 'IMU_project' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+13:06:40 INFO  : The file 'D:\projets\2020_2\project_IMU\vitis\IMU_project\_ide\bitstream\design_IMU_AXI_wrapper.bit' stored in project is removed.
+13:06:40 INFO  : The updated bitstream files are copied from platform to folder 'D:\projets\2020_2\project_IMU\vitis\IMU_project\_ide\bitstream' in project 'IMU_project'.
+13:06:40 INFO  : The file 'D:\projets\2020_2\project_IMU\vitis\IMU_project\_ide\psinit\ps7_init.tcl' stored in project is removed.
+13:06:45 INFO  : The updated ps init files are copied from platform to folder 'D:\projets\2020_2\project_IMU\vitis\IMU_project\_ide\psinit' in project 'IMU_project'.
+13:06:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:06:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+13:06:54 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+13:09:39 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:09:39 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+13:09:39 INFO  : 'jtag frequency' command is executed.
+13:09:39 INFO  : Context for 'APU' is selected.
+13:09:39 INFO  : System reset is completed.
+13:09:42 INFO  : 'after 3000' command is executed.
+13:09:42 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+13:09:45 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+13:09:45 INFO  : Context for 'APU' is selected.
+13:09:45 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+13:09:45 INFO  : 'configparams force-mem-access 1' command is executed.
+13:09:45 INFO  : Context for 'APU' is selected.
+13:09:45 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+13:09:45 INFO  : 'ps7_init' command is executed.
+13:09:45 INFO  : 'ps7_post_config' command is executed.
+13:09:45 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:45 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:09:46 INFO  : 'configparams force-mem-access 0' command is executed.
+13:09:46 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:09:46 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:09:46 INFO  : 'con' command is executed.
+13:09:46 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:09:46 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+13:10:36 INFO  : Disconnected from the channel tcfchan#3.
+13:10:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+13:10:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+13:10:36 INFO  : 'jtag frequency' command is executed.
+13:10:36 INFO  : Context for 'APU' is selected.
+13:10:36 INFO  : System reset is completed.
+13:10:39 INFO  : 'after 3000' command is executed.
+13:10:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+13:10:42 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+13:10:42 INFO  : Context for 'APU' is selected.
+13:10:42 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+13:10:42 INFO  : 'configparams force-mem-access 1' command is executed.
+13:10:42 INFO  : Context for 'APU' is selected.
+13:10:42 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+13:10:42 INFO  : 'ps7_init' command is executed.
+13:10:42 INFO  : 'ps7_post_config' command is executed.
+13:10:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:10:42 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+13:10:42 INFO  : 'configparams force-mem-access 0' command is executed.
+13:10:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+13:10:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+13:10:42 INFO  : 'con' command is executed.
+13:10:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+13:10:42 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+13:12:21 INFO  : Disconnected from the channel tcfchan#4.
+09:48:21 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\vitis\temp_xsdb_launch_script.tcl
+09:48:25 INFO  : XSCT server has started successfully.
+09:48:25 INFO  : Successfully done setting XSCT server connection channel  
+09:48:25 INFO  : plnx-install-location is set to ''
+09:48:25 INFO  : Successfully done setting workspace for the tool. 
+09:48:31 INFO  : Platform repository initialization has completed.
+09:48:32 INFO  : Registering command handlers for Vitis TCF services
+09:48:38 INFO  : Successfully done query RDI_DATADIR 
+09:50:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:50:06 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+09:52:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:52:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+09:52:00 INFO  : 'jtag frequency' command is executed.
+09:52:00 INFO  : Context for 'APU' is selected.
+09:52:00 INFO  : System reset is completed.
+09:52:03 INFO  : 'after 3000' command is executed.
+09:52:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:52:06 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+09:52:06 INFO  : Context for 'APU' is selected.
+09:52:06 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+09:52:06 INFO  : 'configparams force-mem-access 1' command is executed.
+09:52:06 INFO  : Context for 'APU' is selected.
+09:52:06 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+09:52:06 INFO  : 'ps7_init' command is executed.
+09:52:06 INFO  : 'ps7_post_config' command is executed.
+09:52:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:52:07 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:52:07 INFO  : 'configparams force-mem-access 0' command is executed.
+09:52:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:52:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:52:07 INFO  : 'con' command is executed.
+09:52:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:52:07 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+09:57:15 INFO  : Disconnected from the channel tcfchan#1.
+09:57:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:57:16 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+09:57:16 INFO  : 'jtag frequency' command is executed.
+09:57:16 INFO  : Context for 'APU' is selected.
+09:57:16 INFO  : System reset is completed.
+09:57:19 INFO  : 'after 3000' command is executed.
+09:57:19 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:57:21 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+09:57:21 INFO  : Context for 'APU' is selected.
+09:57:23 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+09:57:23 INFO  : 'configparams force-mem-access 1' command is executed.
+09:57:23 INFO  : Context for 'APU' is selected.
+09:57:23 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+09:57:23 INFO  : 'ps7_init' command is executed.
+09:57:23 INFO  : 'ps7_post_config' command is executed.
+09:57:23 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:57:24 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:57:24 INFO  : 'configparams force-mem-access 0' command is executed.
+09:57:24 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:57:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:57:24 INFO  : 'con' command is executed.
+09:57:24 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:57:24 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+10:09:34 INFO  : Disconnected from the channel tcfchan#2.
+14:54:07 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\vitis\temp_xsdb_launch_script.tcl
+14:54:14 INFO  : XSCT server has started successfully.
+14:54:14 INFO  : plnx-install-location is set to ''
+14:54:14 INFO  : Successfully done setting XSCT server connection channel  
+14:54:14 INFO  : Successfully done setting workspace for the tool. 
+14:54:20 INFO  : Registering command handlers for Vitis TCF services
+14:54:20 INFO  : Platform repository initialization has completed.
+14:54:31 INFO  : Successfully done query RDI_DATADIR 
+14:57:39 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\vitis\temp_xsdb_launch_script.tcl
+14:57:43 INFO  : XSCT server has started successfully.
+14:57:43 INFO  : plnx-install-location is set to ''
+14:57:43 INFO  : Successfully done setting XSCT server connection channel  
+14:57:43 INFO  : Successfully done setting workspace for the tool. 
+14:57:57 INFO  : Platform repository initialization has completed.
+14:57:57 INFO  : Registering command handlers for Vitis TCF services
+14:58:02 INFO  : Successfully done query RDI_DATADIR 
+14:58:27 ERROR : Failed to compute checksum of hardware specification file used by project 'IMU_project'
+14:58:48 INFO  : Result from executing command 'getProjects': design_IMU_AXI_wrapper
+14:58:48 INFO  : Result from executing command 'getPlatforms': design_IMU_AXI_wrapper|D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/design_IMU_AXI_wrapper.xpfm
+14:58:49 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+14:59:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+14:59:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+14:59:05 INFO  : 'jtag frequency' command is executed.
+14:59:05 INFO  : Context for 'APU' is selected.
+14:59:05 INFO  : System reset is completed.
+14:59:08 INFO  : 'after 3000' command is executed.
+14:59:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+14:59:11 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+14:59:11 INFO  : Context for 'APU' is selected.
+14:59:11 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+14:59:11 INFO  : 'configparams force-mem-access 1' command is executed.
+14:59:11 INFO  : Context for 'APU' is selected.
+14:59:11 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+14:59:11 INFO  : 'ps7_init' command is executed.
+14:59:11 INFO  : 'ps7_post_config' command is executed.
+14:59:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:59:11 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+14:59:12 INFO  : 'configparams force-mem-access 0' command is executed.
+14:59:12 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+14:59:12 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+14:59:12 INFO  : 'con' command is executed.
+14:59:12 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+14:59:12 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+14:59:32 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:13:30 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:14:36 INFO  : Disconnected from the channel tcfchan#2.
+15:14:36 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:14:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+15:14:36 INFO  : 'jtag frequency' command is executed.
+15:14:36 INFO  : Context for 'APU' is selected.
+15:14:36 INFO  : System reset is completed.
+15:14:39 INFO  : 'after 3000' command is executed.
+15:14:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+15:14:42 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+15:14:42 INFO  : Context for 'APU' is selected.
+15:14:42 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+15:14:42 INFO  : 'configparams force-mem-access 1' command is executed.
+15:14:42 INFO  : Context for 'APU' is selected.
+15:14:42 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+15:14:42 INFO  : 'ps7_init' command is executed.
+15:14:42 INFO  : 'ps7_post_config' command is executed.
+15:14:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:14:42 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:14:42 INFO  : 'configparams force-mem-access 0' command is executed.
+15:14:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:14:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:14:42 INFO  : 'con' command is executed.
+15:14:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:14:42 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+15:42:49 INFO  : Disconnected from the channel tcfchan#4.
+15:42:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:50 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+15:42:50 INFO  : 'jtag frequency' command is executed.
+15:42:50 INFO  : Context for 'APU' is selected.
+15:42:50 INFO  : System reset is completed.
+15:42:53 INFO  : 'after 3000' command is executed.
+15:42:53 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+15:42:55 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+15:42:55 INFO  : Context for 'APU' is selected.
+15:42:55 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+15:42:55 INFO  : 'configparams force-mem-access 1' command is executed.
+15:42:55 INFO  : Context for 'APU' is selected.
+15:42:55 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+15:42:56 INFO  : 'ps7_init' command is executed.
+15:42:56 INFO  : 'ps7_post_config' command is executed.
+15:42:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:56 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:42:56 INFO  : 'configparams force-mem-access 0' command is executed.
+15:42:56 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:42:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:56 INFO  : 'con' command is executed.
+15:42:56 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:42:56 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+15:49:33 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:49:54 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:50:05 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:50:53 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+15:50:58 INFO  : Disconnected from the channel tcfchan#5.
+15:50:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:58 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+15:50:58 INFO  : 'jtag frequency' command is executed.
+15:50:58 INFO  : Context for 'APU' is selected.
+15:50:58 INFO  : System reset is completed.
+15:51:01 INFO  : 'after 3000' command is executed.
+15:51:01 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+15:51:04 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+15:51:04 INFO  : Context for 'APU' is selected.
+15:51:04 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+15:51:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:51:04 INFO  : Context for 'APU' is selected.
+15:51:04 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+15:51:04 INFO  : 'ps7_init' command is executed.
+15:51:04 INFO  : 'ps7_post_config' command is executed.
+15:51:04 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:04 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:51:04 INFO  : 'configparams force-mem-access 0' command is executed.
+15:51:04 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:51:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:51:05 INFO  : 'con' command is executed.
+15:51:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:51:05 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+16:30:03 INFO  : Disconnected from the channel tcfchan#6.
+08:53:13 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\vitis\temp_xsdb_launch_script.tcl
+08:53:18 INFO  : XSCT server has started successfully.
+08:53:19 INFO  : Successfully done setting XSCT server connection channel  
+08:53:19 INFO  : plnx-install-location is set to ''
+08:53:19 INFO  : Successfully done setting workspace for the tool. 
+08:53:27 INFO  : Platform repository initialization has completed.
+08:53:27 INFO  : Registering command handlers for Vitis TCF services
+08:53:43 INFO  : Successfully done query RDI_DATADIR 
+09:02:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:02:21 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+09:02:21 INFO  : 'jtag frequency' command is executed.
+09:02:21 INFO  : Context for 'APU' is selected.
+09:02:21 INFO  : System reset is completed.
+09:02:24 INFO  : 'after 3000' command is executed.
+09:02:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:02:27 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+09:02:27 INFO  : Context for 'APU' is selected.
+09:02:27 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+09:02:27 INFO  : 'configparams force-mem-access 1' command is executed.
+09:02:27 INFO  : Context for 'APU' is selected.
+09:02:27 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+09:02:27 INFO  : 'ps7_init' command is executed.
+09:02:27 INFO  : 'ps7_post_config' command is executed.
+09:02:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:02:28 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:02:28 INFO  : 'configparams force-mem-access 0' command is executed.
+09:02:28 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:02:28 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:02:28 INFO  : 'con' command is executed.
+09:02:28 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:02:28 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+11:34:45 INFO  : Disconnected from the channel tcfchan#1.
+11:34:45 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:34:46 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+11:34:46 INFO  : 'jtag frequency' command is executed.
+11:34:46 INFO  : Context for 'APU' is selected.
+11:34:46 INFO  : System reset is completed.
+11:34:49 INFO  : 'after 3000' command is executed.
+11:34:49 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+11:34:51 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+11:34:51 INFO  : Context for 'APU' is selected.
+11:34:56 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+11:34:56 INFO  : 'configparams force-mem-access 1' command is executed.
+11:34:56 INFO  : Context for 'APU' is selected.
+11:34:56 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+11:34:56 INFO  : 'ps7_init' command is executed.
+11:34:56 INFO  : 'ps7_post_config' command is executed.
+11:34:56 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:34:57 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:34:57 INFO  : 'configparams force-mem-access 0' command is executed.
+11:34:57 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:34:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:34:57 INFO  : 'con' command is executed.
+11:34:57 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:34:57 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+11:58:45 INFO  : Checking for BSP changes to sync application flags for project 'IMU_project'...
+11:58:54 INFO  : Disconnected from the channel tcfchan#2.
+11:58:54 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:58:55 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+11:58:55 INFO  : 'jtag frequency' command is executed.
+11:58:55 INFO  : Context for 'APU' is selected.
+11:58:55 INFO  : System reset is completed.
+11:58:58 INFO  : 'after 3000' command is executed.
+11:58:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+11:59:00 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit"
+11:59:00 INFO  : Context for 'APU' is selected.
+11:59:02 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa'.
+11:59:02 INFO  : 'configparams force-mem-access 1' command is executed.
+11:59:02 INFO  : Context for 'APU' is selected.
+11:59:02 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl' is done.
+11:59:03 INFO  : 'ps7_init' command is executed.
+11:59:03 INFO  : 'ps7_post_config' command is executed.
+11:59:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:03 INFO  : The application 'D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:59:03 INFO  : 'configparams force-mem-access 0' command is executed.
+11:59:03 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:59:03 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:59:03 INFO  : 'con' command is executed.
+11:59:03 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:59:03 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\vitis\IMU_project_system\_ide\scripts\systemdebugger_imu_project_system_standalone.tcl'
+12:56:39 INFO  : Disconnected from the channel tcfchan#3.

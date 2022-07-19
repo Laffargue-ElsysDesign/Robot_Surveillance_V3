@@ -6,9 +6,6 @@
 # Block Designs: bd/design_IMU_AXI/design_IMU_AXI.bd
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI || ORIG_REF_NAME==design_IMU_AXI} -quiet] -quiet
 
-# IP: bd/design_IMU_AXI/ip/design_IMU_AXI_IP_IMU_0_0/design_IMU_AXI_IP_IMU_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI_IP_IMU_0_0 || ORIG_REF_NAME==design_IMU_AXI_IP_IMU_0_0} -quiet] -quiet
-
 # IP: bd/design_IMU_AXI/ip/design_IMU_AXI_processing_system7_0_0/design_IMU_AXI_processing_system7_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI_processing_system7_0_0 || ORIG_REF_NAME==design_IMU_AXI_processing_system7_0_0} -quiet] -quiet
 
@@ -29,6 +26,9 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_
 
 # IP: bd/design_IMU_AXI/ip/design_IMU_AXI_IO_buffer_0_1/design_IMU_AXI_IO_buffer_0_1.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI_IO_buffer_0_1 || ORIG_REF_NAME==design_IMU_AXI_IO_buffer_0_1} -quiet] -quiet
+
+# IP: bd/design_IMU_AXI/ip/design_IMU_AXI_IP_IMU_0_0/design_IMU_AXI_IP_IMU_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI_IP_IMU_0_0 || ORIG_REF_NAME==design_IMU_AXI_IP_IMU_0_0} -quiet] -quiet
 
 # IP: bd/design_IMU_AXI/ip/design_IMU_AXI_auto_pc_0/design_IMU_AXI_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_IMU_AXI_auto_pc_0 || ORIG_REF_NAME==design_IMU_AXI_auto_pc_0} -quiet] -quiet

@@ -108,26 +108,26 @@
           <Attr Name="UsedIn" Val="implementation"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
-        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_processing_system7_0_0/design_IMU_AXI_processing_system7_0_0.xci">
-          <Proxy FileSetName="design_IMU_AXI_processing_system7_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_I2C_master_0_0/design_IMU_AXI_I2C_master_0_0.xci">
           <Proxy FileSetName="design_IMU_AXI_I2C_master_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_IP_IMU_0_0/design_IMU_AXI_IP_IMU_0_0.xci">
-          <Proxy FileSetName="design_IMU_AXI_IP_IMU_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_time_pulse_0_0/design_IMU_AXI_time_pulse_0_0.xci">
-          <Proxy FileSetName="design_IMU_AXI_time_pulse_0_0"/>
-        </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_IO_buffer_0_0/design_IMU_AXI_IO_buffer_0_0.xci">
-          <Proxy FileSetName="design_IMU_AXI_IO_buffer_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_IO_buffer_0_1/design_IMU_AXI_IO_buffer_0_1.xci">
           <Proxy FileSetName="design_IMU_AXI_IO_buffer_0_1"/>
         </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_processing_system7_0_0/design_IMU_AXI_processing_system7_0_0.xci">
+          <Proxy FileSetName="design_IMU_AXI_processing_system7_0_0"/>
+        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_rst_ps7_0_50M_0/design_IMU_AXI_rst_ps7_0_50M_0.xci">
           <Proxy FileSetName="design_IMU_AXI_rst_ps7_0_50M_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_time_pulse_0_0/design_IMU_AXI_time_pulse_0_0.xci">
+          <Proxy FileSetName="design_IMU_AXI_time_pulse_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_IP_IMU_0_0/design_IMU_AXI_IP_IMU_0_0.xci">
+          <Proxy FileSetName="design_IMU_AXI_IP_IMU_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_IMU_AXI.bd" FileRelPathName="ip/design_IMU_AXI_IO_buffer_0_0/design_IMU_AXI_IO_buffer_0_0.xci">
+          <Proxy FileSetName="design_IMU_AXI_IO_buffer_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_IMU_AXI/hdl/design_IMU_AXI_wrapper.vhd">
@@ -174,9 +174,6 @@
         <CompFileExtendedInfo CompFileName="design_IMU.bd" FileRelPathName="ip/design_IMU_time_pulse_0_0/design_IMU_time_pulse_0_0.xci">
           <Proxy FileSetName="design_IMU_time_pulse_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_IMU.bd" FileRelPathName="ip/design_IMU_I2C_master_0_0/design_IMU_I2C_master_0_0.xci">
-          <Proxy FileSetName="design_IMU_I2C_master_0_0"/>
-        </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_IMU.bd" FileRelPathName="ip/design_IMU_IO_buffer_0_0/design_IMU_IO_buffer_0_0.xci">
           <Proxy FileSetName="design_IMU_IO_buffer_0_0"/>
         </CompFileExtendedInfo>
@@ -188,6 +185,9 @@
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_IMU.bd" FileRelPathName="ip/design_IMU_blk_mem_gen_0_0/design_IMU_blk_mem_gen_0_0.xci">
           <Proxy FileSetName="design_IMU_blk_mem_gen_0_0"/>
+        </CompFileExtendedInfo>
+        <CompFileExtendedInfo CompFileName="design_IMU.bd" FileRelPathName="ip/design_IMU_I2C_master_0_0/design_IMU_I2C_master_0_0.xci">
+          <Proxy FileSetName="design_IMU_I2C_master_0_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_IMU/hdl/design_IMU_wrapper.vhd">
@@ -228,6 +228,7 @@
         </FileInfo>
       </File>
       <Config>
+        <Option Name="TargetConstrsFile" Val="$PSRCDIR/constrs_1/imports/Desktop/zybo-z7-20.xdc"/>
         <Option Name="ConstrsType" Val="XDC"/>
       </Config>
     </FileSet>
@@ -424,9 +425,7 @@
     </Run>
     <Run Id="design_IMU_AXI_processing_system7_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_processing_system7_0_0" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_processing_system7_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_processing_system7_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_processing_system7_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -436,9 +435,7 @@
     </Run>
     <Run Id="design_IMU_AXI_I2C_master_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_I2C_master_0_0" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_I2C_master_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_I2C_master_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_I2C_master_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -448,9 +445,7 @@
     </Run>
     <Run Id="design_IMU_AXI_time_pulse_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_time_pulse_0_0" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_time_pulse_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_time_pulse_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_time_pulse_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -460,9 +455,7 @@
     </Run>
     <Run Id="design_IMU_AXI_IO_buffer_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_IO_buffer_0_0" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_IO_buffer_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_IO_buffer_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_IO_buffer_0_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -472,9 +465,7 @@
     </Run>
     <Run Id="design_IMU_AXI_IO_buffer_0_1_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_IO_buffer_0_1" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_IO_buffer_0_1" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_IO_buffer_0_1_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_IO_buffer_0_1_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -484,9 +475,7 @@
     </Run>
     <Run Id="design_IMU_AXI_rst_ps7_0_50M_0_synth_1" Type="Ft3:Synth" SrcSet="design_IMU_AXI_rst_ps7_0_50M_0" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_rst_ps7_0_50M_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_IMU_AXI_rst_ps7_0_50M_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_rst_ps7_0_50M_0_synth_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
-          <Desc>Vivado Synthesis Defaults</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020"/>
         <Step Id="synth_design"/>
       </Strategy>
       <GeneratedRun Dir="$PRUNDIR" File="gen_run.xml"/>
@@ -628,9 +617,7 @@
     </Run>
     <Run Id="design_IMU_AXI_processing_system7_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_processing_system7_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_processing_system7_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_processing_system7_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -647,9 +634,7 @@
     </Run>
     <Run Id="design_IMU_AXI_I2C_master_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_I2C_master_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_I2C_master_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_I2C_master_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -666,9 +651,7 @@
     </Run>
     <Run Id="design_IMU_AXI_time_pulse_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_time_pulse_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_time_pulse_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_time_pulse_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -685,9 +668,7 @@
     </Run>
     <Run Id="design_IMU_AXI_IO_buffer_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_IO_buffer_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_IO_buffer_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_IO_buffer_0_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -704,9 +685,7 @@
     </Run>
     <Run Id="design_IMU_AXI_IO_buffer_0_1_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_IO_buffer_0_1" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_IO_buffer_0_1_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_IO_buffer_0_1_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
@@ -723,9 +702,7 @@
     </Run>
     <Run Id="design_IMU_AXI_rst_ps7_0_50M_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_IMU_AXI_rst_ps7_0_50M_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_IMU_AXI_rst_ps7_0_50M_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_IMU_AXI_rst_ps7_0_50M_0_impl_1">
       <Strategy Version="1" Minor="2">
-        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
-          <Desc>Default settings for Implementation.</Desc>
-        </StratHandle>
+        <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020"/>
         <Step Id="init_design"/>
         <Step Id="opt_design"/>
         <Step Id="power_opt_design"/>
