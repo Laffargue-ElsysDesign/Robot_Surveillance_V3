@@ -1,0 +1,10 @@
+Output: Bill of Materials
+Type  : BOM
+From  : PCB Document [interface.PcbDoc]
+   Generated File[Bill of Materials-interface.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 09:16:11 On 30/06/2022

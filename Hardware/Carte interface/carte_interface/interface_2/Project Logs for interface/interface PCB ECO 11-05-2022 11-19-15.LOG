@@ -1,0 +1,2 @@
+Removed Pin From Net: NetName=+5V_US Pin=J32-2
+Added Pin To Net: NetName=+5V Pin=J32-2

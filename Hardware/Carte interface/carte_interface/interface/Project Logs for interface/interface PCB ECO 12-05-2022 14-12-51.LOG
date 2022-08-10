@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=GSM_UART_TXD Pin=J14-6
+Removed Pin From Net: NetName=GSM_UART_RXD Pin=J14-8
+Removed Pin From Net: NetName=HOLO_UART_RX Pin=J14-10
+Removed Pin From Net: NetName=HOLO_UART_TX Pin=J14-12
+Added Pin To Net: NetName=HOLO_UART_TX Pin=J14-6
+Added Pin To Net: NetName=HOLO_UART_TX Pin=J14-8
+Added Pin To Net: NetName=GSM_UART_TXD Pin=J14-10
+Added Pin To Net: NetName=GSM_UART_RXD Pin=J14-12

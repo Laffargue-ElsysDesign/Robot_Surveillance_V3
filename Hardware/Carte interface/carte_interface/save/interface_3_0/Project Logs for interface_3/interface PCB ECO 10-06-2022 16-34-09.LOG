@@ -1,0 +1,5 @@
+Removed Pin From Net: NetName=BAT_ALERT Pin=J13-4
+Removed Pin From Net: NetName=BAT_ALERT Pin=J14-7
+Added Pin To Net: NetName=GSM_UART_TXD Pin=J13-4
+Added Pin To Net: NetName=GSM_UART_TXD Pin=J14-7
+Added Net: Name=GSM_UART_TXD

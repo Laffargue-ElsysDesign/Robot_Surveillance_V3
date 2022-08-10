@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=GSM_RST Pin=J14-11
+Removed Pin From Net: NetName=GSM_UART_RXD Pin=J14-12
+Added Pin To Net: NetName=GSM_UART_RXD Pin=J14-11
+Added Pin To Net: NetName=GSM_RST Pin=J14-12

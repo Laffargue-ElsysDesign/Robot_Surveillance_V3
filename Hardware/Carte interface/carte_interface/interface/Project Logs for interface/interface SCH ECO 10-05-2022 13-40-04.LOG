@@ -1,0 +1,6 @@
+Remove Pin=J11-1 From Net=HOLO_UART_RX
+Remove Pin=J11-3 From Net=HOLO_UART_TX
+Change Component Footprint: Designator=R35 Old Footprint=FP-35WR50KLFTR New Footprint=FP-3313J-2-104E
+Change Component Comment: Designator=R35 Old Comment=35WR50KLFTR New Comment=3313J-2-104E
+Change Pin Designator/Name:  Old Designator=R35-1 Old Name=1 New Designator =2 New Name=2
+Change Pin Designator/Name:  Old Designator=R35-2 Old Name=2 New Designator =1 New Name=1

@@ -1,0 +1,22 @@
+Added Component: Designator=Q?(FP-SIHF530-GE3)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "SIHF530-GE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,97000, 10=0,85800, 50=0,85800, 100=0,65700, 1000=0,41600, 10000=0,36600 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "547"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "78-SIHF530-GE3"; VariantName = "[No Variations]"
+Added Component: Designator=Q?(FP-SIHF530-GE3)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "SIHF530-GE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,97000, 10=0,85800, 50=0,85800, 100=0,65700, 1000=0,41600, 10000=0,36600 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "547"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "78-SIHF530-GE3"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetD3_2 Pin=Q?-1
+Added Pin To Net: NetName=NetD4_2 Pin=Q?-1
+Added Pin To Net: NetName=A Pin=Q?-2
+Added Pin To Net: NetName=B Pin=Q?-2
+Added Pin To Net: NetName=GND Pin=Q?-3
+Added Pin To Net: NetName=GND Pin=Q?-3

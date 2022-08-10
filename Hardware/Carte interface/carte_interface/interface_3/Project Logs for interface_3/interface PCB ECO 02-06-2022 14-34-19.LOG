@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=NetC621_2 Pin=R63-1
+Change Component Designator: OldDesignator=R21 NewDesignator=R?
+Added Pin To Net: NetName=NetC621_2 Pin=J01-1
+Added Pin To Net: NetName=NetC621_2 Pin=R44-2
+Change Net Name : Old Net Name=NetC621_2 New Net Name=+5V_ZYBO
+Change Net Name : Old Net Name=NetR21_1 New Net Name=NetR?_1

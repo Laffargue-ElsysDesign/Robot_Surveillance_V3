@@ -1,0 +1,10 @@
+Removed Pin From Net: NetName=US_SEL_2 Pin=J26-6
+Removed Pin From Net: NetName=US_SEL_1 Pin=J26-8
+Removed Pin From Net: NetName=US_SEL_0 Pin=J26-10
+Removed Pin From Net: NetName=US_ECHO_3V3 Pin=J26-11
+Removed Pin From Net: NetName=US_TRIG_3V3 Pin=J26-12
+Added Pin To Net: NetName=US_ECHO_3V3 Pin=J26-6
+Added Pin To Net: NetName=US_SEL_2 Pin=J26-8
+Added Pin To Net: NetName=US_SEL_1 Pin=J26-10
+Added Pin To Net: NetName=US_TRIG_3V3 Pin=J26-11
+Added Pin To Net: NetName=US_SEL_0 Pin=J26-12

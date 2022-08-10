@@ -1,0 +1,35 @@
+Change Component Library : Designator=D1 Old Library=lib_station_de_charge.SchLib New Library=station_de_charge_SchLib.SchLib
+Change Component Library : Designator=D2 Old Library=lib_station_de_charge.SchLib New Library=station_de_charge_SchLib.SchLib
+Change Component Library : Designator=D3 Old Library=lib_station_de_charge.SchLib New Library=station_de_charge_SchLib.SchLib
+Change Component Library : Designator=D4 Old Library=lib_station_de_charge.SchLib New Library=station_de_charge_SchLib.SchLib
+Added Component: Designator=Q3(FP-IRFR120TRPBF-BE3)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Siliconix"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IRFR120TRPBF-BE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1,41000, 10=1,27000, 50=1,27000, 100=0,98800, 500=0,81600, 1000=0,64400, 2000=0,60400, 10000=0,60400 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "3186"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "78-IRFR120TRPBF-BE3"; VariantName = "[No Variations]"
+Added Component: Designator=Q4(FP-IRFR120TRPBF-BE3)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Vishay Siliconix"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "IRFR120TRPBF-BE3"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1,41000, 10=1,27000, 50=1,27000, 100=0,98800, 500=0,81600, 1000=0,64400, 2000=0,60400, 10000=0,60400 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "3186"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "78-IRFR120TRPBF-BE3"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=NetC1_2 Pin=D1-1
+Added Pin To Net: NetName=NetD1_2 Pin=D1-2
+Added Pin To Net: NetName=NetC1_1 Pin=D2-1
+Added Pin To Net: NetName=NetD2_2 Pin=D2-2
+Added Pin To Net: NetName=NetC1_2 Pin=D3-1
+Added Pin To Net: NetName=NetD3_2 Pin=D3-2
+Added Pin To Net: NetName=NetC1_1 Pin=D4-1
+Added Pin To Net: NetName=NetD4_2 Pin=D4-2
+Added Pin To Net: NetName=NetD3_2 Pin=Q3-1
+Added Pin To Net: NetName=NetC1_1 Pin=Q3-2
+Added Pin To Net: NetName=GND Pin=Q3-3
+Added Pin To Net: NetName=NetD4_2 Pin=Q4-1
+Added Pin To Net: NetName=NetC1_2 Pin=Q4-2
+Added Pin To Net: NetName=GND Pin=Q4-3
+Change Net Name : Old Net Name=+5V New Net Name=+12V

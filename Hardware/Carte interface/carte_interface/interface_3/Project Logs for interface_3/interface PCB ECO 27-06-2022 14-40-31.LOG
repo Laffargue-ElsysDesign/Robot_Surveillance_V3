@@ -1,0 +1,80 @@
+Removed Pin From Net: NetName=US_1_TRIG_5V Pin=U21-12
+Removed Pin From Net: NetName=US_2_TRIG_5V Pin=U21-13
+Removed Pin From Net: NetName=US_3_TRIG_5V Pin=U21-14
+Removed Pin From Net: NetName=US_4_TRIG_5V Pin=U21-15
+Removed Pin From Net: NetName=US_1_ECHO_5V Pin=U22-12
+Removed Pin From Net: NetName=US_2_ECHO_5V Pin=U22-13
+Removed Pin From Net: NetName=US_3_ECHO_5V Pin=U22-14
+Removed Pin From Net: NetName=US_4_ECHO_5V Pin=U22-15
+Change Component Footprint: Designator=U21 Old Footprint=FP-PW0016A-IPC_A New Footprint=FP-TC4051BFTELN
+Change Component Footprint: Designator=U22 Old Footprint=FP-PW0016A-IPC_A New Footprint=FP-TC4051BFTELN
+Change Component Comment : Designator=U21 Old Comment=TMUX1308PWR New Comment=TC4051BFTELN
+Change Component Comment : Designator=U22 Old Comment=TMUX1308PWR New Comment=TC4051BFTELN
+Change component parameters: Designator = "U21" ("U21"); Footprint = "FP-PW0016A-IPC_A"; UniqueID = "\BYFUFCRN" ("\BYFUFCRN")
+Change component parameters (AddParameter): Name = "-3db Bandwidth"; Value = "20MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "TSSOP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Category"; Value = "Interface ICs"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263118.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263118.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263117.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263117.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423126.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423126.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423125.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423125.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Logic Function"; Value = "Multiplexer,Demultiplexer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Toshiba"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TC4051BFTELN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Pins"; Value = "16"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "On-State Resistance"; Value = "160R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0,59000, 10=0,50200, 50=0,50200, 100=0,34800, 500=0,29400, 1000=0,22800, 2000=0,20700, 4000=0,19300, 10000=0,18200, 24000=0,17600 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "1960"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "757-TC4051BFTELN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supply Type"; Value = "Single"; VariantName = "[No Variations]"
+Change component parameters: Designator = "U22" ("U22"); Footprint = "FP-PW0016A-IPC_A"; UniqueID = "\VFZAOGKH" ("\VFZAOGKH")
+Change component parameters (AddParameter): Name = "-3db Bandwidth"; Value = "20MHz"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Case/Package"; Value = "TSSOP"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Category"; Value = "Interface ICs"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263118.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263118.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263117.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/45263/tc4051bft-datasheet-en-20140301-45263117.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3Description"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423126.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink3URL"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423126.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4Description"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423125.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink4URL"; Value = "https://datasheet.ciiva.com/45423/tc4051bft-datasheet-en-20140301-45423125.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Logic Function"; Value = "Multiplexer,Demultiplexer"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Toshiba"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "TC4051BFTELN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "85°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Number of Pins"; Value = "16"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "On-State Resistance"; Value = "160R"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=0,59000, 10=0,50200, 50=0,50200, 100=0,34800, 500=0,29400, 1000=0,22800, 2000=0,20700, 4000=0,19300, 10000=0,18200, 24000=0,17600 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "1960"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "757-TC4051BFTELN"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supply Type"; Value = "Single"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=U21-7
+Added Pin To Net: NetName=US_4_TRIG_5V Pin=U21-12
+Added Pin To Net: NetName=US_1_TRIG_5V Pin=U21-13
+Added Pin To Net: NetName=US_2_TRIG_5V Pin=U21-14
+Added Pin To Net: NetName=US_3_TRIG_5V Pin=U21-15
+Added Pin To Net: NetName=GND Pin=U22-7
+Added Pin To Net: NetName=US_4_ECHO_5V Pin=U22-12
+Added Pin To Net: NetName=US_1_ECHO_5V Pin=U22-13
+Added Pin To Net: NetName=US_2_ECHO_5V Pin=U22-14
+Added Pin To Net: NetName=US_3_ECHO_5V Pin=U22-15

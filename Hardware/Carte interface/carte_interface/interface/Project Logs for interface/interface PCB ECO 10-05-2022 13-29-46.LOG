@@ -1,0 +1,117 @@
+Removed Pin From Net: NetName=GSM_PWR_5VIN Pin=J13-3
+Removed Pin From Net: NetName=GSM_UART_RXD Pin=J14-5
+Removed Pin From Net: NetName=PWR_MGT_GSM Pin=J14-6
+Removed Pin From Net: NetName=GSM_UART_TXD Pin=J14-7
+Removed Pin From Net: NetName=BAT_NEED_CHARGE Pin=J14-8
+Removed Pin From Net: NetName=HOLO_UART_RX Pin=J14-9
+Removed Pin From Net: NetName=BAT_CHARGING Pin=J14-10
+Removed Pin From Net: NetName=HOLO_UART_TX Pin=J14-11
+Removed Pin From Net: NetName=GSM_RST Pin=J14-12
+Removed Pin From Net: NetName=US_SEL_1 Pin=J26-5
+Removed Pin From Net: NetName=PWR_MGT_NFC Pin=J26-6
+Removed Pin From Net: NetName=US_SEL_2 Pin=J26-7
+Removed Pin From Net: NetName=PWR_MGT_GSM Pin=J26-8
+Removed Pin From Net: NetName=US_ECHO_3V3 Pin=J26-9
+Removed Pin From Net: NetName=PWR_MGT_US Pin=J26-10
+Removed Pin From Net: NetName=US_TRIG_3V3 Pin=J26-11
+Removed Pin From Net: NetName=US_SEL_0 Pin=J26-12
+Removed Pin From Net: NetName=BAT_NEED_CHARGE Pin=R32-2
+Removed Pin From Net: NetName=NetR33_1 Pin=R34-2
+Removed Pin From Net: NetName=GND Pin=R35-2
+Removed Pin From Net: NetName=GND Pin=R35-3
+Removed Pin From Net: NetName=BAT_NEED_CHARGE Pin=U31-1
+Removed Pin From Net: NetName=NetR33_1 Pin=U31-4
+Change Component Footprint: Designator=J11 Old Footprint= New Footprint=SAMTEC_TFM-110-21-S-D-A
+Change Component Footprint: Designator=J12 Old Footprint= New Footprint=SAMTEC_TFM-110-21-S-D-A
+Change Component Footprint: Designator=R35 Old Footprint=FP-35WR50KLFTR New Footprint=FP-3313J-2-104E
+Change Component Comment : Designator=R35 Old Comment=35WR50KLFTR New Comment=3313J-2-104E
+Change Component Comment : Designator=R34 Old Comment=237k New Comment=261k
+Change Component Comment : Designator=R33 Old Comment=732k New Comment=680k
+Change component parameters: Designator = "R35" ("R35"); Footprint = "FP-35WR50KLFTR"; UniqueID = "\UDRBJXPT" ("\UDRBJXPT")
+Change component parameters (AddParameter): Name = "Category"; Value = "Variable Resistors and Potentiometers"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1Description"; Value = "https://datasheet.ciiva.com/8700/3313-8700487.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink1URL"; Value = "https://datasheet.ciiva.com/8700/3313-8700487.pdf?src-supplier=Avnet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2Description"; Value = "https://datasheet.ciiva.com/2161/3313-2161114.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "ComponentLink2URL"; Value = "https://datasheet.ciiva.com/2161/3313-2161114.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Depth"; Value = "3.5mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Height"; Value = "0.087inch"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Length"; Value = "3.2mm"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "3313J-2-104E"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Max Power Dissipation"; Value = "125mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Military Standard"; Value = "Not"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Min Operating Temperature"; Value = "-55°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Package Quantity"; Value = "1000"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Packaging"; Value = "Tape and Reel"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Power Rating"; Value = "100mW"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1,83000, 10=1,62000, 50=1,62000, 100=1,34000, 1000=0,96100, 10000=0,96100 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Resistance"; Value = "100kR"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Resistor Type"; Value = "Cermet"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Series"; Value = "Trimpot® 3313 - Sealed"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "164"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier Part Number 1"; Value = "652-3313J-2-104E"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Technology"; Value = "CERMET"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Temperature Coefficient"; Value = "100ppm/°C"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Termination"; Value = "SMD/SMT"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Tolerance"; Value = "20%"; VariantName = "[No Variations]"
+Added Component: Designator=R36(RESC2013X50X30ML20T20)
+Added Component: Designator=U32(SOT65P210X110-5N)
+Add component (AddParameter): Name = "Category"; Value = "Logic Gates"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74lv1t04&src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.ti.com/general/docs/suppproductinfo.tsp?distId=10&amp;gotoUrl=http%3A%2F%2Fwww.ti.com%2Flit%2Fgpn%2Fsn74lv1t04&src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "High Level Output Current"; Value = "8mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Logic Function"; Value = "Inverter"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Low Level Output Current"; Value = "8mA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Texas Instruments"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "SN74LV1T04DCKRG4"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Max Operating Temperature"; Value = "125°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Min Operating Temperature"; Value = "-40°C"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Mount"; Value = "Surface Mount"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Circuits"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Number of Inputs"; Value = "1"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Packaging"; Value = "Cut Tape"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,56000, 10=0,47800, 50=0,47800, 100=0,33100, 1000=0,21700, 10000=0,19700 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Propagation Delay"; Value = "7ns"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Quiescent Current"; Value = "10uA"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS Compliant"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "13588"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "595-SN74LV1T04DCKRG4"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+3V3 Pin=J13-3
+Added Pin To Net: NetName=GSM_UART_RXD Pin=J14-6
+Added Pin To Net: NetName=BAT_NEED_CHARGE Pin=J14-7
+Added Pin To Net: NetName=GSM_UART_TXD Pin=J14-8
+Added Pin To Net: NetName=BAT_CHARGING Pin=J14-9
+Added Pin To Net: NetName=HOLO_UART_RX Pin=J14-10
+Added Pin To Net: NetName=GSM_RST Pin=J14-11
+Added Pin To Net: NetName=HOLO_UART_TX Pin=J14-12
+Added Pin To Net: NetName=PWR_MGT_NFC Pin=J26-5
+Added Pin To Net: NetName=US_SEL_1 Pin=J26-6
+Added Pin To Net: NetName=PWR_MGT_GSM Pin=J26-7
+Added Pin To Net: NetName=US_SEL_2 Pin=J26-8
+Added Pin To Net: NetName=PWR_MGT_US Pin=J26-9
+Added Pin To Net: NetName=US_ECHO_3V3 Pin=J26-10
+Added Pin To Net: NetName=US_SEL_0 Pin=J26-11
+Added Pin To Net: NetName=US_TRIG_3V3 Pin=J26-12
+Added Pin To Net: NetName=GND Pin=R34-1
+Added Pin To Net: NetName=NetR33_1 Pin=R35-2
+Added Pin To Net: NetName=GND Pin=R36-2
+Added Pin To Net: NetName=GND Pin=U32-3
+Added Pin To Net: NetName=BAT_NEED_CHARGE Pin=U32-4
+Added Pin To Net: NetName=+3V3 Pin=U32-5
+Added Pin To Net: NetName=NetR32_2 Pin=R32-2
+Added Pin To Net: NetName=NetR32_2 Pin=R36-1
+Added Pin To Net: NetName=NetR32_2 Pin=U31-1
+Added Pin To Net: NetName=NetR32_2 Pin=U32-2
+Added Net: Name=NetR32_2
+Added Pin To Net: NetName=NetR34_2 Pin=R34-2
+Added Pin To Net: NetName=NetR34_2 Pin=R35-1
+Added Pin To Net: NetName=NetR34_2 Pin=R35-2
+Added Pin To Net: NetName=NetR34_2 Pin=U31-4
+Added Net: Name=NetR34_2

@@ -1,0 +1,13 @@
+Removed Pin From Net: NetName=+5V_ZYBO Pin=J01-1
+Removed Pin From Net: NetName=+5V_ZYBO Pin=R44-2
+Change Component Designator: OldDesignator=J12 ALIM HOLO NewDesignator=J12
+Change Component Designator: OldDesignator=J14 JE NewDesignator=J14
+Change Component Designator: OldDesignator=J26 JD NewDesignator=J26
+Change Component Designator: OldDesignator=J34 JC NewDesignator=J34
+Added Component: Designator=R63(RESC2013X50X30ML20T20)
+Added Pin To Net: NetName=+5V_ZYBO Pin=R63-1
+Change Net Name : Old Net Name=+5V_ZYBO New Net Name=NetC621_2
+Added Pin To Net: NetName=+5V_ZYBO Pin=J01-1
+Added Pin To Net: NetName=+5V_ZYBO Pin=R44-2
+Added Pin To Net: NetName=+5V_ZYBO Pin=R63-2
+Added Net: Name=+5V_ZYBO

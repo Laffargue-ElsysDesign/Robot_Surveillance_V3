@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=NFC_I2C_SCL Pin=J34-10
+Removed Pin From Net: NetName=NFC_I2C_SDA Pin=J34-12
+Added Pin To Net: NetName=NFC_I2C_SDA Pin=J34-10
+Added Pin To Net: NetName=NFC_I2C_SCL Pin=J34-12

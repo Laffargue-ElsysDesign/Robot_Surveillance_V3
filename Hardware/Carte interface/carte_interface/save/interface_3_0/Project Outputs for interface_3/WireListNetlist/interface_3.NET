@@ -1,0 +1,634 @@
+Wire List
+
+<<< Component List >>>
+10nF                            C11            FP-C0603C-CF-IPC_A
+100nF                           C12            FP-C0603C104K5RAC3121-IPC_A
+1µF                             C13            CAPC1608X90X35NL15T15
+100nF                           C21            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C22            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C23            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C24            FP-C0603C104K5RAC3121-IPC_A
+C0603C124K5RACTU                C31            FP-C0603C-CF-IPC_A
+10nF                            C32            FP-C0603C-CF-IPC_A
+100nF                           C33            FP-C0603C104K5RAC3121-IPC_A
+1µF                             C34            CAPC1608X90X35NL15T15
+100nF                           C51            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C52            FP-C0603C104K5RAC3121-IPC_A
+10nF                            C53            FP-C0603C-CF-IPC_A
+100nF                           C54            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C55            FP-C0603C104K5RAC3121-IPC_A
+10nF                            C56            FP-C0603C-CF-IPC_A
+100nF                           C57            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C58            FP-C0603C104K5RAC3121-IPC_A
+10nF                            C59            FP-C0603C-CF-IPC_A
+10µF                            C61            FP-1206-L_3_2_0_15-W_1_6-IPC_
+100nF                           C63            FP-C0603C104K5RAC3121-IPC_A
+100nF                           C510           FP-C0603C104K5RAC3121-IPC_A
+100nF                           C511           FP-C0603C104K5RAC3121-IPC_A
+10nF                            C512           FP-C0603C-CF-IPC_A
+22µF                            C621           CAPC3216X180N
+22µF                            C622           CAPC3216X180N
+LTST-C193TGKT-5A                D1             FP-LTST-C193TGKT-5A
+LTST-C193TBKT-5A                D2             FP-LTST-C193TBKT-5A-MFG
+LTST-C191KRKT                   D3             FP-LTST-C191KRKT
+LTST-C193TGKT-5A                D4             FP-LTST-C193TGKT-5A
+CON-SOCJ-2155                   J01            GRAVITECH_CON-SOCJ-2155
+TFM-110-21-S-D                  J11            SAMTEC_TFM-110-21-S-D
+TFM-110-21-S-D                  J12            SAMTEC_TFM-110-21-S-D
+1x7 Header                      J13            header 1x7
+61301221021                     J14            61301221021
+1x4 Header                      J21            header 1x4
+1x4 Header                      J22            header 1x4
+1x4 Header                      J23            header 1x4
+1x4 Header                      J24            header 1x4
+1x4 Header                      J25            header 1x4
+61301221021                     J26            61301221021
+1x6 Header                      J31            header 1x6
+1x4 Grove conector              J32            FP-110990030
+1x4 Header                      J33            header 1x4
+61301221021                     J34            61301221021
+M20-9990246                     J51            FP-M20-9990246-MFG
+M20-9990246                     J52            FP-M20-9990246-MFG
+M20-9990246                     J53            FP-M20-9990246-MFG
+M20-9990246                     J54            FP-M20-9990246-MFG
+3.3µH                           L61            INDC7066X20N
+NXV55UNR                        Q41            SOT95P230X110-3N
+NXV55UNR                        Q42            SOT95P230X110-3N
+NXV55UNR                        Q43            SOT95P230X110-3N
+MBT3904DW1T1G                   Q51            ONSC-SOT-363-6-419B-02_W_V
+MBT3904DW1T1G                   Q52            ONSC-SOT-363-6-419B-02_W_V
+SI2304BDST1E3                   Q53            FP-SI2304BDST1E3
+SI2304BDST1E3                   Q54            FP-SI2304BDST1E3
+SI2304BDST1E3                   Q55            FP-SI2304BDST1E3
+SI2304BDST1E3                   Q56            FP-SI2304BDST1E3
+100Ohm                          R21            FP-ESR10-IPC_A
+100Ohm                          R22            FP-ESR10-IPC_A
+100Ohm                          R23            FP-ESR10-IPC_A
+100Ohm                          R24            FP-ESR10-IPC_A
+100Ohm                          R25            FP-ESR10-IPC_A
+82kOhm                          R31            FP-ESR10-IPC_A
+20kOhm                          R32            FP-ESR10-IPC_A
+10kOhm                          R33            FP-ESR10-IPC_A
+390Ohm                          R41            FP-ESR10-IPC_A
+390Ohm                          R42            FP-ESR10-IPC_A
+620Ohm                          R43            FP-ESR10-IPC_A
+390Ohm                          R44            FP-ESR10-IPC_A
+100Ohm                          R45            FP-ESR10-IPC_A
+100Ohm                          R46            FP-ESR10-IPC_A
+100Ohm                          R47            FP-ESR10-IPC_A
+1kOhm                           R51            FP-ESR10-IPC_A
+10kOhm                          R52            FP-ESR10-IPC_A
+100kOhm                         R53            FP-ESR10-IPC_A
+100Ohm                          R54            FP-ESR10-IPC_A
+1kOhm                           R55            FP-ESR10-IPC_A
+1kOhm                           R56            FP-ESR10-IPC_A
+820Ohm                          R57            FP-ESR10-IPC_A
+1kOhm                           R58            FP-ESR10-IPC_A
+10kOhm                          R59            FP-ESR10-IPC_A
+52.3kOhm                        R61            FP-KTR10-IPC_A
+10kOhm                          R62            FP-ESR10-IPC_A
+100kOhm                         R510           FP-ESR10-IPC_A
+100Ohm                          R511           FP-ESR10-IPC_A
+1kOhm                           R512           FP-ESR10-IPC_A
+1kOhm                           R513           FP-ESR10-IPC_A
+820Ohm                          R514           FP-ESR10-IPC_A
+1kOhm                           R515           FP-ESR10-IPC_A
+10kOhm                          R516           FP-ESR10-IPC_A
+100kOhm                         R517           FP-ESR10-IPC_A
+100Ohm                          R518           FP-ESR10-IPC_A
+1kOhm                           R519           FP-ESR10-IPC_A
+1kOhm                           R520           FP-ESR10-IPC_A
+820Ohm                          R521           FP-ESR10-IPC_A
+1kOhm                           R522           FP-ESR10-IPC_A
+10kOhm                          R523           FP-ESR10-IPC_A
+100kOhm                         R524           FP-ESR10-IPC_A
+100Ohm                          R525           FP-ESR10-IPC_A
+1kOhm                           R526           FP-ESR10-IPC_A
+1kOhm                           R527           FP-ESR10-IPC_A
+820Ohm                          R528           FP-ESR10-IPC_A
+TMUX1308PWR                     U21            FP-PW0016A-IPC_A
+TMUX1308PWR                     U22            FP-PW0016A-IPC_A
+SN74LV1T02DBVRG4                U23            FP-DBV0005A-IPC_A
+SN74LV1T02DBVRG4                U24            FP-DBV0005A-IPC_A
+ADC101C021CIMKX/NOPB            U31            MK06A_N
+AP62301WU-7                     U61            TSOP95P280X100-6N
+
+<<< Wire List >>>
+
+  NODE  REFERENCE  PIN #   PIN NAME       PIN TYPE    PART VALUE
+
+[00109] US_TRIG_5V
+        U21        3       D              I/O         TMUX1308PWR
+        U23        4       4              PASSIVE     SN74LV1T02DBVRG4
+
+[00108] US_TRIG_3V3
+        J26        7       7              PASSIVE     61301221021
+        R24        1       1              PASSIVE     100Ohm
+
+[00107] US_SEL_2
+        J26        3       3              PASSIVE     61301221021
+        R23        2       2              PASSIVE     100Ohm
+
+[00106] US_SEL_1
+        J26        2       2              PASSIVE     61301221021
+        R22        2       2              PASSIVE     100Ohm
+
+[00105] US_SEL_0
+        J26        1       1              PASSIVE     61301221021
+        R21        2       2              PASSIVE     100Ohm
+
+[00104] US_ECHO_5V
+        U22        3       D              I/O         TMUX1308PWR
+        U24        1       1              PASSIVE     SN74LV1T02DBVRG4
+        U24        2       2              PASSIVE     SN74LV1T02DBVRG4
+
+[00103] US_ECHO_3V3
+        J26        8       8              PASSIVE     61301221021
+        R25        2       2              PASSIVE     100Ohm
+
+[00102] US_5_TRIG_5V
+        J25        2       2              PASSIVE     1x4 Header
+        U21        1       S4             I/O         TMUX1308PWR
+
+[00101] US_5_ECHO_5V
+        J25        3       3              PASSIVE     1x4 Header
+        U22        1       S4             I/O         TMUX1308PWR
+
+[00100] US_4_TRIG_5V
+        J24        2       2              PASSIVE     1x4 Header
+        U21        15      S2             I/O         TMUX1308PWR
+
+[00099] US_4_ECHO_5V
+        J24        3       3              PASSIVE     1x4 Header
+        U22        15      S2             I/O         TMUX1308PWR
+
+[00098] US_3_TRIG_5V
+        J23        2       2              PASSIVE     1x4 Header
+        U21        14      S1             I/O         TMUX1308PWR
+
+[00097] US_3_ECHO_5V
+        J23        3       3              PASSIVE     1x4 Header
+        U22        14      S1             I/O         TMUX1308PWR
+
+[00096] US_2_TRIG_5V
+        J22        2       2              PASSIVE     1x4 Header
+        U21        13      S0             I/O         TMUX1308PWR
+
+[00095] US_2_ECHO_5V
+        J22        3       3              PASSIVE     1x4 Header
+        U22        13      S0             I/O         TMUX1308PWR
+
+[00094] US_1_TRIG_5V
+        J21        2       2              PASSIVE     1x4 Header
+        U21        12      S3             I/O         TMUX1308PWR
+
+[00093] US_1_ECHO_5V
+        J21        3       3              PASSIVE     1x4 Header
+        U22        12      S3             I/O         TMUX1308PWR
+
+[00092] PWR_MGT_US
+        J26        9       9              PASSIVE     61301221021
+        R54        1       1              PASSIVE     100Ohm
+        R511       1       1              PASSIVE     100Ohm
+
+[00091] PWR_MGT_NFC
+        J26        10      10             PASSIVE     61301221021
+        R525       1       1              PASSIVE     100Ohm
+
+[00090] PWR_MGT_GSM
+        J26        4       4              PASSIVE     61301221021
+        R518       1       1              PASSIVE     100Ohm
+
+[00089] NFC_I2C_SDA
+        J31        4       4              PASSIVE     1x6 Header
+        J34        1       1              PASSIVE     61301221021
+
+[00088] NFC_I2C_SCL
+        J31        5       5              PASSIVE     1x6 Header
+        J34        7       7              PASSIVE     61301221021
+
+[00087] NFC_FD
+        J31        3       3              PASSIVE     1x6 Header
+        J34        8       8              PASSIVE     61301221021
+
+[00077] NetR524_1
+        R524       1       1              PASSIVE     100kOhm
+        R525       2       2              PASSIVE     100Ohm
+        R526       1       1              PASSIVE     1kOhm
+
+[00076] NetR517_1
+        R517       1       1              PASSIVE     100kOhm
+        R518       2       2              PASSIVE     100Ohm
+        R519       1       1              PASSIVE     1kOhm
+
+[00075] NetR510_1
+        R510       1       1              PASSIVE     100kOhm
+        R511       2       2              PASSIVE     100Ohm
+        R512       1       1              PASSIVE     1kOhm
+
+[00074] NetR61_1
+        R61        1       1              PASSIVE     52.3kOhm
+        R62        2       2              PASSIVE     10kOhm
+        U61        6       6              PASSIVE     AP62301WU-7
+
+[00073] NetR53_1
+        R53        1       1              PASSIVE     100kOhm
+        R54        2       2              PASSIVE     100Ohm
+        R55        1       1              PASSIVE     1kOhm
+
+[00072] NetR25_1
+        R25        1       1              PASSIVE     100Ohm
+        U24        4       4              PASSIVE     SN74LV1T02DBVRG4
+
+[00071] NetR24_2
+        R24        2       2              PASSIVE     100Ohm
+        U23        1       1              PASSIVE     SN74LV1T02DBVRG4
+        U23        2       2              PASSIVE     SN74LV1T02DBVRG4
+
+[00070] NetR23_1
+        R23        1       1              PASSIVE     100Ohm
+        U21        9       A2             INPUT       TMUX1308PWR
+        U22        9       A2             INPUT       TMUX1308PWR
+
+[00069] NetR22_1
+        R22        1       1              PASSIVE     100Ohm
+        U21        10      A1             INPUT       TMUX1308PWR
+        U22        10      A1             INPUT       TMUX1308PWR
+
+[00068] NetR21_1
+        R21        1       1              PASSIVE     100Ohm
+        U21        11      A0             INPUT       TMUX1308PWR
+        U22        11      A0             INPUT       TMUX1308PWR
+
+[00067] NetQ56_1
+        Q56        1       1              PASSIVE     SI2304BDST1E3
+        R522       2       2              PASSIVE     1kOhm
+
+[00066] NetQ55_1
+        Q55        1       1              PASSIVE     SI2304BDST1E3
+        R515       2       2              PASSIVE     1kOhm
+
+[00065] NetQ54_1
+        Q54        1       1              PASSIVE     SI2304BDST1E3
+        R58        2       2              PASSIVE     1kOhm
+
+[00064] NetQ53_1
+        Q53        1       1              PASSIVE     SI2304BDST1E3
+        R51        2       2              PASSIVE     1kOhm
+
+[00063] NetQ52_4
+        Q52        4       E              PASSIVE     MBT3904DW1T1G
+        R528       2       2              PASSIVE     820Ohm
+
+[00062] NetQ52_1
+        Q52        1       E              PASSIVE     MBT3904DW1T1G
+        R514       2       2              PASSIVE     820Ohm
+
+[00061] NetQ51_4
+        Q51        4       E              PASSIVE     MBT3904DW1T1G
+        R521       2       2              PASSIVE     820Ohm
+
+[00060] NetQ51_1
+        Q51        1       E              PASSIVE     MBT3904DW1T1G
+        R57        2       2              PASSIVE     820Ohm
+
+[00059] NetQ43_1
+        Q43        1       1              PASSIVE     NXV55UNR
+        R47        2       2              PASSIVE     100Ohm
+
+[00058] NetQ42_1
+        Q42        1       1              PASSIVE     NXV55UNR
+        R46        2       2              PASSIVE     100Ohm
+
+[00057] NetQ41_1
+        Q41        1       1              PASSIVE     NXV55UNR
+        R45        2       2              PASSIVE     100Ohm
+
+[00041] NetD4_2
+        D4         2       2              PASSIVE     LTST-C193TGKT-5A
+        R44        1       1              PASSIVE     390Ohm
+
+[00040] NetD3_2
+        D3         2       2              PASSIVE     LTST-C191KRKT
+        R43        1       1              PASSIVE     620Ohm
+
+[00039] NetD3_1
+        D3         1       1              PASSIVE     LTST-C191KRKT
+        Q43        3       3              PASSIVE     NXV55UNR
+
+[00038] NetD2_2
+        D2         2       2              PASSIVE     LTST-C193TBKT-5A
+        R42        1       1              PASSIVE     390Ohm
+
+[00037] NetD2_1
+        D2         1       1              PASSIVE     LTST-C193TBKT-5A
+        Q42        3       3              PASSIVE     NXV55UNR
+
+[00036] NetD1_2
+        D1         2       2              PASSIVE     LTST-C193TGKT-5A
+        R41        1       1              PASSIVE     390Ohm
+
+[00035] NetD1_1
+        D1         1       1              PASSIVE     LTST-C193TGKT-5A
+        Q41        3       3              PASSIVE     NXV55UNR
+
+[00034] NetC512_2
+        C512       2       2              PASSIVE     10nF
+        Q52        5       B              PASSIVE     MBT3904DW1T1G
+        R526       2       2              PASSIVE     1kOhm
+        R527       2       2              PASSIVE     1kOhm
+
+[00033] NetC510_1
+        C510       1       1              PASSIVE     100nF
+        C511       1       1              PASSIVE     100nF
+        Q52        3       C              PASSIVE     MBT3904DW1T1G
+        R522       1       1              PASSIVE     1kOhm
+        R523       2       2              PASSIVE     10kOhm
+
+[00032] NetC63_2
+        C63        2       2              PASSIVE     100nF
+        L61        1       1              PASSIVE     3.3µH
+        U61        2       2              PASSIVE     AP62301WU-7
+
+[00031] NetC63_1
+        C63        1       1              PASSIVE     100nF
+        U61        4       4              PASSIVE     AP62301WU-7
+
+[00030] NetC59_2
+        C59        2       2              PASSIVE     10nF
+        Q51        5       B              PASSIVE     MBT3904DW1T1G
+        R519       2       2              PASSIVE     1kOhm
+        R520       2       2              PASSIVE     1kOhm
+
+[00029] NetC57_1
+        C57        1       1              PASSIVE     100nF
+        C58        1       1              PASSIVE     100nF
+        Q51        3       C              PASSIVE     MBT3904DW1T1G
+        R515       1       1              PASSIVE     1kOhm
+        R516       2       2              PASSIVE     10kOhm
+
+[00028] NetC56_2
+        C56        2       2              PASSIVE     10nF
+        Q52        2       B              PASSIVE     MBT3904DW1T1G
+        R512       2       2              PASSIVE     1kOhm
+        R513       2       2              PASSIVE     1kOhm
+
+[00027] NetC54_1
+        C54        1       1              PASSIVE     100nF
+        C55        1       1              PASSIVE     100nF
+        Q52        6       C              PASSIVE     MBT3904DW1T1G
+        R58        1       1              PASSIVE     1kOhm
+        R59        2       2              PASSIVE     10kOhm
+
+[00026] NetC53_2
+        C53        2       2              PASSIVE     10nF
+        Q51        2       B              PASSIVE     MBT3904DW1T1G
+        R55        2       2              PASSIVE     1kOhm
+        R56        2       2              PASSIVE     1kOhm
+
+[00025] NetC51_1
+        C51        1       1              PASSIVE     100nF
+        C52        1       1              PASSIVE     100nF
+        Q51        6       C              PASSIVE     MBT3904DW1T1G
+        R51        1       1              PASSIVE     1kOhm
+        R52        2       2              PASSIVE     10kOhm
+
+[00024] NetC31_2
+        C31        2       2              PASSIVE     C0603C124K5RACTU
+        R31        1       1              PASSIVE     82kOhm
+        R32        2       2              PASSIVE     20kOhm
+        U31        3       VIN            INPUT       ADC101C021CIMKX/NOPB
+
+[00023] IMU_I2C_SDA
+        J32        3       3              PASSIVE     1x4 Grove conector
+        J34        4       4              PASSIVE     61301221021
+
+[00022] IMU_I2C_SCL
+        J32        4       4              PASSIVE     1x4 Grove conector
+        J34        3       3              PASSIVE     61301221021
+
+[00021] HOLO_UART_TX
+        J11        3       3              PASSIVE     TFM-110-21-S-D
+        J14        10      10             PASSIVE     61301221021
+
+[00020] HOLO_UART_RX
+        J11        1       1              PASSIVE     TFM-110-21-S-D
+        J14        4       4              PASSIVE     61301221021
+
+[00019] HOLO_LED_PWR
+        J11        14      14             PASSIVE     TFM-110-21-S-D
+        R45        1       1              PASSIVE     100Ohm
+
+[00018] HOLO_LED_DEBUG
+        J11        16      16             PASSIVE     TFM-110-21-S-D
+        R46        1       1              PASSIVE     100Ohm
+
+[00017] GSM_UART_TXD
+        J13        4       4              PASSIVE     1x7 Header
+        J14        7       7              PASSIVE     61301221021
+
+[00016] GSM_UART_RXD
+        J13        5       5              PASSIVE     1x7 Header
+        J14        2       2              PASSIVE     61301221021
+
+[00015] GSM_RST
+        J13        7       7              PASSIVE     1x7 Header
+        J14        8       8              PASSIVE     61301221021
+
+[00014] GSM_PWR_5VIN
+        C11        2       2              PASSIVE     10nF
+        C12        2       2              PASSIVE     100nF
+        C13        2       2              PASSIVE     1µF
+        C58        2       2              PASSIVE     100nF
+        J13        1       1              PASSIVE     1x7 Header
+        J53        2       2              PASSIVE     M20-9990246
+        Q55        2       2              PASSIVE     SI2304BDST1E3
+
+[00013] GND
+        C11        1       1              PASSIVE     10nF
+        C12        1       1              PASSIVE     100nF
+        C13        1       1              PASSIVE     1µF
+        C21        1       1              PASSIVE     100nF
+        C22        1       1              PASSIVE     100nF
+        C23        1       1              PASSIVE     100nF
+        C24        1       1              PASSIVE     100nF
+        C31        1       1              PASSIVE     C0603C124K5RACTU
+        C32        1       1              PASSIVE     10nF
+        C33        1       1              PASSIVE     100nF
+        C34        1       1              PASSIVE     1µF
+        C53        1       1              PASSIVE     10nF
+        C56        1       1              PASSIVE     10nF
+        C59        1       1              PASSIVE     10nF
+        C61        1       1              PASSIVE     10µF
+        C512       1       1              PASSIVE     10nF
+        C621       1       1              PASSIVE     22µF
+        C622       1       1              PASSIVE     22µF
+        D4         1       1              PASSIVE     LTST-C193TGKT-5A
+        J01        2       2              PASSIVE     CON-SOCJ-2155
+        J01        3       3              PASSIVE     CON-SOCJ-2155
+        J11        5       5              PASSIVE     TFM-110-21-S-D
+        J11        7       7              PASSIVE     TFM-110-21-S-D
+        J11        10      10             PASSIVE     TFM-110-21-S-D
+        J11        12      12             PASSIVE     TFM-110-21-S-D
+        J11        13      13             PASSIVE     TFM-110-21-S-D
+        J11        15      15             PASSIVE     TFM-110-21-S-D
+        J11        18      18             PASSIVE     TFM-110-21-S-D
+        J11        20      20             PASSIVE     TFM-110-21-S-D
+        J12        1       1              PASSIVE     TFM-110-21-S-D
+        J12        3       3              PASSIVE     TFM-110-21-S-D
+        J12        8       8              PASSIVE     TFM-110-21-S-D
+        J12        10      10             PASSIVE     TFM-110-21-S-D
+        J12        11      11             PASSIVE     TFM-110-21-S-D
+        J12        12      12             PASSIVE     TFM-110-21-S-D
+        J12        13      13             PASSIVE     TFM-110-21-S-D
+        J12        15      15             PASSIVE     TFM-110-21-S-D
+        J12        20      20             PASSIVE     TFM-110-21-S-D
+        J13        2       2              PASSIVE     1x7 Header
+        J13        6       6              PASSIVE     1x7 Header
+        J14        5       5              PASSIVE     61301221021
+        J14        11      11             PASSIVE     61301221021
+        J21        4       4              PASSIVE     1x4 Header
+        J22        4       4              PASSIVE     1x4 Header
+        J23        4       4              PASSIVE     1x4 Header
+        J24        4       4              PASSIVE     1x4 Header
+        J25        4       4              PASSIVE     1x4 Header
+        J26        5       5              PASSIVE     61301221021
+        J26        11      11             PASSIVE     61301221021
+        J31        2       2              PASSIVE     1x6 Header
+        J31        6       6              PASSIVE     1x6 Header
+        J32        1       1              PASSIVE     1x4 Grove conector
+        J33        2       2              PASSIVE     1x4 Header
+        J34        5       5              PASSIVE     61301221021
+        J34        11      11             PASSIVE     61301221021
+        Q41        2       2              PASSIVE     NXV55UNR
+        Q42        2       2              PASSIVE     NXV55UNR
+        Q43        2       2              PASSIVE     NXV55UNR
+        R32        1       1              PASSIVE     20kOhm
+        R56        1       1              PASSIVE     1kOhm
+        R57        1       1              PASSIVE     820Ohm
+        R62        1       1              PASSIVE     10kOhm
+        R513       1       1              PASSIVE     1kOhm
+        R514       1       1              PASSIVE     820Ohm
+        R520       1       1              PASSIVE     1kOhm
+        R521       1       1              PASSIVE     820Ohm
+        R527       1       1              PASSIVE     1kOhm
+        R528       1       1              PASSIVE     820Ohm
+        U21        6       E\N\           INPUT       TMUX1308PWR
+        U21        8       GND            POWER       TMUX1308PWR
+        U22        6       E\N\           INPUT       TMUX1308PWR
+        U22        8       GND            POWER       TMUX1308PWR
+        U23        3       GND            PASSIVE     SN74LV1T02DBVRG4
+        U24        3       GND            PASSIVE     SN74LV1T02DBVRG4
+        U31        2       GND            POWER       ADC101C021CIMKX/NOPB
+        U61        1       1              PASSIVE     AP62301WU-7
+
+[00012] BAT_I2C_SDA
+        J14        9       9              PASSIVE     61301221021
+        U31        6       SDA            I/O         ADC101C021CIMKX/NOPB
+
+[00011] BAT_I2C_SCL
+        J14        3       3              PASSIVE     61301221021
+        U31        5       SCL            INPUT       ADC101C021CIMKX/NOPB
+
+[00010] BAT_ALERT
+        J14        1       1              PASSIVE     61301221021
+        R33        2       2              PASSIVE     10kOhm
+        R47        1       1              PASSIVE     100Ohm
+        U31        4       ALERT          OPEN COLLECTORADC101C021CIMKX/NOPB
+
+[00009] BALISE_I2C_SDA
+        J33        3       3              PASSIVE     1x4 Header
+        J34        9       9              PASSIVE     61301221021
+
+[00008] BALISE_I2C_SCL
+        J33        4       4              PASSIVE     1x4 Header
+        J34        2       2              PASSIVE     61301221021
+
+[00007] +12V
+        C61        2       2              PASSIVE     10µF
+        J12        14      14             PASSIVE     TFM-110-21-S-D
+        J12        16      16             PASSIVE     TFM-110-21-S-D
+        J12        18      18             PASSIVE     TFM-110-21-S-D
+        R31        2       2              PASSIVE     82kOhm
+        R52        1       1              PASSIVE     10kOhm
+        R59        1       1              PASSIVE     10kOhm
+        R516       1       1              PASSIVE     10kOhm
+        R523       1       1              PASSIVE     10kOhm
+        U61        3       3              PASSIVE     AP62301WU-7
+
+[00006] +5V_ZYBO
+        C621       2       2              PASSIVE     22µF
+        C622       2       2              PASSIVE     22µF
+        J01        1       1              PASSIVE     CON-SOCJ-2155
+        L61        2       2              PASSIVE     3.3µH
+        R44        2       2              PASSIVE     390Ohm
+        R61        2       2              PASSIVE     52.3kOhm
+
+[00005] +5V_US
+        C21        2       2              PASSIVE     100nF
+        C22        2       2              PASSIVE     100nF
+        C23        2       2              PASSIVE     100nF
+        C52        2       2              PASSIVE     100nF
+        J21        1       1              PASSIVE     1x4 Header
+        J22        1       1              PASSIVE     1x4 Header
+        J23        1       1              PASSIVE     1x4 Header
+        J24        1       1              PASSIVE     1x4 Header
+        J25        1       1              PASSIVE     1x4 Header
+        J51        2       2              PASSIVE     M20-9990246
+        Q53        2       2              PASSIVE     SI2304BDST1E3
+        U21        16      VDD            POWER       TMUX1308PWR
+        U22        16      VDD            POWER       TMUX1308PWR
+        U23        5       VCC            PASSIVE     SN74LV1T02DBVRG4
+
+[00004] +5V
+        C51        2       2              PASSIVE     100nF
+        C57        2       2              PASSIVE     100nF
+        J12        2       2              PASSIVE     TFM-110-21-S-D
+        J12        4       4              PASSIVE     TFM-110-21-S-D
+        J12        6       6              PASSIVE     TFM-110-21-S-D
+        J51        1       1              PASSIVE     M20-9990246
+        J53        1       1              PASSIVE     M20-9990246
+        Q53        3       3              PASSIVE     SI2304BDST1E3
+        Q55        3       3              PASSIVE     SI2304BDST1E3
+        R41        2       2              PASSIVE     390Ohm
+        R42        2       2              PASSIVE     390Ohm
+        R43        2       2              PASSIVE     620Ohm
+
+[00003] +3V3_US
+        C24        2       2              PASSIVE     100nF
+        C55        2       2              PASSIVE     100nF
+        J52        2       2              PASSIVE     M20-9990246
+        Q54        2       2              PASSIVE     SI2304BDST1E3
+        U24        5       VCC            PASSIVE     SN74LV1T02DBVRG4
+
+[00002] +3V3_NFC
+        C511       2       2              PASSIVE     100nF
+        J31        1       1              PASSIVE     1x6 Header
+        J54        2       2              PASSIVE     M20-9990246
+        Q56        2       2              PASSIVE     SI2304BDST1E3
+
+[00001] +3V3
+        C32        2       2              PASSIVE     10nF
+        C33        2       2              PASSIVE     100nF
+        C34        2       2              PASSIVE     1µF
+        C54        2       2              PASSIVE     100nF
+        C510       2       2              PASSIVE     100nF
+        J12        5       5              PASSIVE     TFM-110-21-S-D
+        J12        7       7              PASSIVE     TFM-110-21-S-D
+        J12        9       9              PASSIVE     TFM-110-21-S-D
+        J12        17      17             PASSIVE     TFM-110-21-S-D
+        J12        19      19             PASSIVE     TFM-110-21-S-D
+        J13        3       3              PASSIVE     1x7 Header
+        J32        2       2              PASSIVE     1x4 Grove conector
+        J33        1       1              PASSIVE     1x4 Header
+        J52        1       1              PASSIVE     M20-9990246
+        J54        1       1              PASSIVE     M20-9990246
+        Q54        3       3              PASSIVE     SI2304BDST1E3
+        Q56        3       3              PASSIVE     SI2304BDST1E3
+        R33        1       1              PASSIVE     10kOhm
+        R53        2       2              PASSIVE     100kOhm
+        R510       2       2              PASSIVE     100kOhm
+        R517       2       2              PASSIVE     100kOhm
+        R524       2       2              PASSIVE     100kOhm
+        U31        1       VA             POWER       ADC101C021CIMKX/NOPB
+
