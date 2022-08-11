@@ -1,0 +1,11 @@
+Change Component DesignItemId : Designator=L? Old DesignItemId=0420CDMCCDS-3R3MC New DesignItemId=SRP7020TA-3R3M
+Change Component Footprint: Designator=L? Old Footprint=INDC4442X20N New Footprint=INDC7066X20N
+Change Component Designator: OldDesignator=L? NewDesignator=L61
+Change Component Description : Designator=L61 Old Description=Fixed Ind 3.3UH 3.5A 87 Mohm New Description=Inductor Power Shielded Wirewound 3.3uH 20% 100KHz 15Q-Factor Metal Alloy Powder 5A 0.048Ohm DCR T/R
+Change component parameters: Designator = "L?" ("L?"); Footprint = "INDC4442X20N"; UniqueID = "\YAFUNKXN" ("\YAFUNKXN")
+Change component parameters (AddParameter): Name = "Manufacturer"; Value = "Bourns"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Manufacturer Part Number"; Value = "SRP7020TA-3R3M"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Pricing 1"; Value = "1=1,46000, 10=1,09000, 50=1,09000, 100=0,98300, 250=0,87800, 500=0,75300, 1000=0,66900, 1500=0,64200, 3000=0,59800, 9000=0,56900, 10000=0,56900 (USD)"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Stock 1"; Value = "2936"; VariantName = "[No Variations]"
+Change component parameters (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"

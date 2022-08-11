@@ -1,0 +1,97 @@
+Added Component: Designator=R14(RESC2013X50X30ML20T20)
+Added Component: Designator=R20(RESC2013X50X30ML20T20)
+Added Component: Designator=R21(RESC2013X50X30ML20T20)
+Added Component: Designator=R22(RESC2013X50X30ML20T20)
+Added Component: Designator=R23(RESC2013X50X30ML20T20)
+Added Component: Designator=R24(RESC2013X50X30ML20T20)
+Added Component: Designator=R25(RESC2013X50X30ML20T20)
+Added Component: Designator=R26(RESC2013X50X30ML20T20)
+Added Component: Designator=R27(RESC2013X50X30ML20T20)
+Added Component: Designator=R28(RESC2013X50X30ML20T20)
+Added Component: Designator=R41(RESC2013X50X30ML20T20)
+Added Component: Designator=R42(RESC2013X50X30ML20T20)
+Added Component: Designator=R43(RESC2013X50X30ML20T20)
+Added Component: Designator=R44(RESC2013X50X30ML20T20)
+Added Component: Designator=R51(RESC2013X50X30ML20T20)
+Added Component: Designator=R52(RESC2013X50X30ML20T20)
+Added Component: Designator=R53(RESC2013X50X30ML20T20)
+Added Component: Designator=R54(RESC2013X50X30ML20T20)
+Added Component: Designator=R55(RESC2013X50X30ML20T20)
+Added Component: Designator=R56(RESC2013X50X30ML20T20)
+Added Component: Designator=R57(RESC2013X50X30ML20T20)
+Added Component: Designator=R58(RESC2013X50X30ML20T20)
+Added Component: Designator=R59(RESC2013X50X30ML20T20)
+Added Component: Designator=R510(RESC2013X50X30ML20T20)
+Added Component: Designator=R511(RESC2013X50X30ML20T20)
+Added Component: Designator=R512(RESC2013X50X30ML20T20)
+Added Component: Designator=R513(RESC2013X50X30ML20T20)
+Added Component: Designator=R515(RESC2013X50X30ML20T20)
+Added Component: Designator=R516(RESC2013X50X30ML20T20)
+Added Component: Designator=R517(RESC2013X50X30ML20T20)
+Added Component: Designator=R518(RESC2013X50X30ML20T20)
+Added Component: Designator=R519(RESC2013X50X30ML20T20)
+Added Pin To Net: NetName=GND Pin=R14-1
+Added Pin To Net: NetName=NetQ51_4 Pin=R14-2
+Added Pin To Net: NetName=GND Pin=R20-1
+Added Pin To Net: NetName=NetC59_2 Pin=R20-2
+Added Pin To Net: NetName=GND Pin=R21-1
+Added Pin To Net: NetName=NetQ52_1 Pin=R21-2
+Added Pin To Net: NetName=NetC510_1 Pin=R22-1
+Added Pin To Net: NetName=NetQ56_1 Pin=R22-2
+Added Pin To Net: NetName=+12V Pin=R23-1
+Added Pin To Net: NetName=NetC510_1 Pin=R23-2
+Added Pin To Net: NetName=+3V3 Pin=R24-2
+Added Pin To Net: NetName=PWR_MGT_NFC Pin=R25-1
+Added Pin To Net: NetName=NetC512_2 Pin=R26-2
+Added Pin To Net: NetName=GND Pin=R27-1
+Added Pin To Net: NetName=NetC512_2 Pin=R27-2
+Added Pin To Net: NetName=GND Pin=R28-1
+Added Pin To Net: NetName=NetQ52_4 Pin=R28-2
+Added Pin To Net: NetName=NetD1_2 Pin=R41-1
+Added Pin To Net: NetName=+5V Pin=R41-2
+Added Pin To Net: NetName=NetD2_2 Pin=R42-1
+Added Pin To Net: NetName=+5V Pin=R42-2
+Added Pin To Net: NetName=NetD3_2 Pin=R43-1
+Added Pin To Net: NetName=+5V Pin=R43-2
+Added Pin To Net: NetName=NetD4_2 Pin=R44-1
+Added Pin To Net: NetName=+5V Pin=R44-2
+Added Pin To Net: NetName=NetC51_1 Pin=R51-1
+Added Pin To Net: NetName=NetQ53_1 Pin=R51-2
+Added Pin To Net: NetName=+12V Pin=R52-1
+Added Pin To Net: NetName=NetC51_1 Pin=R52-2
+Added Pin To Net: NetName=NetR53_1 Pin=R53-1
+Added Pin To Net: NetName=+3V3 Pin=R53-2
+Added Pin To Net: NetName=PWR_MGT_US Pin=R54-1
+Added Pin To Net: NetName=NetR53_1 Pin=R54-2
+Added Pin To Net: NetName=NetR53_1 Pin=R55-1
+Added Pin To Net: NetName=NetC53_2 Pin=R55-2
+Added Pin To Net: NetName=GND Pin=R56-1
+Added Pin To Net: NetName=NetC53_2 Pin=R56-2
+Added Pin To Net: NetName=GND Pin=R57-1
+Added Pin To Net: NetName=NetQ51_1 Pin=R57-2
+Added Pin To Net: NetName=NetC54_1 Pin=R58-1
+Added Pin To Net: NetName=NetQ54_1 Pin=R58-2
+Added Pin To Net: NetName=+12V Pin=R59-1
+Added Pin To Net: NetName=NetC54_1 Pin=R59-2
+Added Pin To Net: NetName=NetR510_1 Pin=R510-1
+Added Pin To Net: NetName=+3V3 Pin=R510-2
+Added Pin To Net: NetName=PWR_MGT_US Pin=R511-1
+Added Pin To Net: NetName=NetR510_1 Pin=R511-2
+Added Pin To Net: NetName=NetR510_1 Pin=R512-1
+Added Pin To Net: NetName=NetC56_2 Pin=R512-2
+Added Pin To Net: NetName=GND Pin=R513-1
+Added Pin To Net: NetName=NetC56_2 Pin=R513-2
+Added Pin To Net: NetName=NetC57_1 Pin=R515-1
+Added Pin To Net: NetName=NetQ55_1 Pin=R515-2
+Added Pin To Net: NetName=+12V Pin=R516-1
+Added Pin To Net: NetName=NetC57_1 Pin=R516-2
+Added Pin To Net: NetName=NetR517_1 Pin=R517-1
+Added Pin To Net: NetName=+3V3 Pin=R517-2
+Added Pin To Net: NetName=PWR_MGT_GSM Pin=R518-1
+Added Pin To Net: NetName=NetR517_1 Pin=R518-2
+Added Pin To Net: NetName=NetR517_1 Pin=R519-1
+Added Pin To Net: NetName=NetC59_2 Pin=R519-2
+Added Pin To Net: NetName=NetR24_1 Pin=R24-1
+Added Pin To Net: NetName=NetR24_1 Pin=R25-2
+Added Pin To Net: NetName=NetR24_1 Pin=R26-1
+Added Net: Name=NetR24_1

@@ -1,0 +1,44 @@
+Added Component: Designator=Q41(SOT95P230X110-3N)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "NXV55UNR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,45000, 10=0,34400, 50=0,34400, 100=0,19500, 1000=0,09900, 10000=0,06800 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "55565"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "771-NXV55UNR"; VariantName = "[No Variations]"
+Added Component: Designator=Q42(SOT95P230X110-3N)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "NXV55UNR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,45000, 10=0,34400, 50=0,34400, 100=0,19500, 1000=0,09900, 10000=0,06800 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "55565"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "771-NXV55UNR"; VariantName = "[No Variations]"
+Added Component: Designator=Q43(SOT95P230X110-3N)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "NXV55UNR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,45000, 10=0,34400, 50=0,34400, 100=0,19500, 1000=0,09900, 10000=0,06800 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "55565"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "771-NXV55UNR"; VariantName = "[No Variations]"
+Added Component: Designator=Q44(SOT95P230X110-3N)
+Add component (AddParameter): Name = "Manufacturer"; Value = "Nexperia"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "NXV55UNR"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=0,45000, 10=0,34400, 50=0,34400, 100=0,19500, 1000=0,09900, 10000=0,06800 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "55565"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "771-NXV55UNR"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=HOLO_LED_PWR Pin=Q41-1
+Added Pin To Net: NetName=GND Pin=Q41-2
+Added Pin To Net: NetName=NetD1_1 Pin=Q41-3
+Added Pin To Net: NetName=HOLO_LED_DEBUG Pin=Q42-1
+Added Pin To Net: NetName=GND Pin=Q42-2
+Added Pin To Net: NetName=NetD2_1 Pin=Q42-3
+Added Pin To Net: NetName=BAT_CHARGING Pin=Q43-1
+Added Pin To Net: NetName=GND Pin=Q43-2
+Added Pin To Net: NetName=NetD3_1 Pin=Q43-3
+Added Pin To Net: NetName=BAT_NEED_CHARGE Pin=Q44-1
+Added Pin To Net: NetName=GND Pin=Q44-2
+Added Pin To Net: NetName=NetD4_1 Pin=Q44-3

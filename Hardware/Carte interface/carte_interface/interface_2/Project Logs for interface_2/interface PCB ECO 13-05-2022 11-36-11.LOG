@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=BALISE_I2C_SDA Pin=J34-8
+Removed Pin From Net: NetName=IMU_I2C_SCL Pin=J34-10
+Added Pin To Net: NetName=IMU_I2C_SCL Pin=J34-8
+Added Pin To Net: NetName=BALISE_I2C_SDA Pin=J34-10

@@ -1,0 +1,14 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 15:06:19 On 16/05/2022
+
+Output: Bill of Materials
+Type  : BOM
+From  : PCB Document [interface.PcbDoc]
+   Generated File[Bill of Materials-interface.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 15:06:26 On 16/05/2022

@@ -1,0 +1,7 @@
+Change Component Designator: OldDesignator=C1 NewDesignator=C21
+Change Component Designator: OldDesignator=C2 NewDesignator=C22
+Change Component Designator: OldDesignator=U1 NewDesignator=U21
+Change Component Designator: OldDesignator=U2 NewDesignator=U22
+Change Component Designator: OldDesignator=U3 NewDesignator=U23
+Change Component Designator: OldDesignator=U4 NewDesignator=U24
+Added Pin To Net: NetName=NetR34_2 Pin=R35-3

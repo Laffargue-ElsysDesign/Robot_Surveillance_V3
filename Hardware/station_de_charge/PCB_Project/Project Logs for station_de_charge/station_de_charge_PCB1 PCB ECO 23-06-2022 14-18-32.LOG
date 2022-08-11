@@ -1,0 +1,3 @@
+Added Component: Designator=L1(loop)
+Added Pin To Net: NetName=NetC1_1 Pin=L1-1
+Added Pin To Net: NetName=NetC1_2 Pin=L1-2

@@ -1,0 +1,12 @@
+Added Component: Designator=R31(RESC2013X50X30ML20T20)
+Added Component: Designator=R32(RESC2013X50X30ML20T20)
+Added Component: Designator=R33(RESC2013X50X30ML20T20)
+Added Component: Designator=R34(RESC2013X50X30ML20T20)
+Added Pin To Net: NetName=+3V3 Pin=R31-1
+Added Pin To Net: NetName=NetR31_2 Pin=R31-2
+Added Pin To Net: NetName=NetR31_2 Pin=R32-1
+Added Pin To Net: NetName=BAT_NEED_CHARGE Pin=R32-2
+Added Pin To Net: NetName=NetR33_1 Pin=R33-1
+Added Pin To Net: NetName=+12V Pin=R33-2
+Added Pin To Net: NetName=NetR34_1 Pin=R34-1
+Added Pin To Net: NetName=NetR33_1 Pin=R34-2

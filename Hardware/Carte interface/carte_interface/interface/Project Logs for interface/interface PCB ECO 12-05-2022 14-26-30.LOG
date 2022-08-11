@@ -1,0 +1,6 @@
+Removed Pin From Net: NetName=BALISE_I2C_SCL Pin=J34-9
+Removed Pin From Net: NetName=BALISE_I2C_SDA Pin=J34-11
+Removed Pin From Net: NetName=NFC_I2C_SCL Pin=J34-12
+Added Pin To Net: NetName=NFC_I2C_SCL Pin=J34-9
+Added Pin To Net: NetName=BALISE_I2C_SCL Pin=J34-11
+Added Pin To Net: NetName=BALISE_I2C_SDA Pin=J34-12

@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=BAT_ALERT Pin=J14-8
+Removed Pin From Net: NetName=BAT_I2C_SCL Pin=J14-9
+Added Pin To Net: NetName=BAT_I2C_SCL Pin=J14-8
+Added Pin To Net: NetName=BAT_ALERT Pin=J14-9

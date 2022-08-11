@@ -1,0 +1,18 @@
+Change Component Comment : Designator=R36 Old Comment=10k New Comment=100k
+Added Component: Designator=J01(GRAVITECH_CON-SOCJ-2155)
+Add component (AddParameter): Name = "Category"; Value = "Uncategorized"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Color"; Value = "Black"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.gravitech.us/poja2x51.html?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.gravitech.us/poja2x51.html?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Connector Type"; Value = "Power"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Contact Gender"; Value = "Female"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Gravitech"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "CON-SOCJ-2155"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1,00000, 10=1,00000, 50=1,00000, 100=1,00000, 1000=1,00000, 10000=1,00000 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "Yes"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "14426"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "992-CON-SOCJ-2155"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=+12V Pin=J01-1
+Added Pin To Net: NetName=GND Pin=J01-2
+Added Pin To Net: NetName=GND Pin=J01-3

@@ -1,0 +1,8 @@
+Removed Pin From Net: NetName=US_4_ECHO_5V Pin=U22-12
+Removed Pin From Net: NetName=US_1_ECHO_5V Pin=U22-13
+Removed Pin From Net: NetName=US_2_ECHO_5V Pin=U22-14
+Removed Pin From Net: NetName=US_3_ECHO_5V Pin=U22-15
+Added Pin To Net: NetName=US_1_ECHO_5V Pin=U22-12
+Added Pin To Net: NetName=US_2_ECHO_5V Pin=U22-13
+Added Pin To Net: NetName=US_3_ECHO_5V Pin=U22-14
+Added Pin To Net: NetName=US_4_ECHO_5V Pin=U22-15

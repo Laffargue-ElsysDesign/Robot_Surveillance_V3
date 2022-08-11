@@ -1,0 +1,11 @@
+Removed Pin From Net: NetName=NetR21_1 Pin=R21-1
+Removed Pin From Net: NetName=US_SEL_0 Pin=R21-2
+Removed Pin From Net: NetName=NetR21_1 Pin=U21-11
+Removed Pin From Net: NetName=NetR21_1 Pin=U22-11
+Added Component: Designator=R?(RESC2013X50X30ML20T20)
+Added Pin To Net: NetName=US_SEL_0 Pin=R?-2
+Change Net Name : Old Net Name=NetR21_1 New Net Name=NetR23_1
+Added Pin To Net: NetName=NetR?_1 Pin=R?-1
+Added Pin To Net: NetName=NetR?_1 Pin=U21-11
+Added Pin To Net: NetName=NetR?_1 Pin=U22-11
+Added Net: Name=NetR?_1

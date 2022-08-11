@@ -1,0 +1,29 @@
+Project Outputs Generation Report
+---------------------------------
+Start Output Generation At 17:16:32 On 13/06/2022
+
+Output: Gerber X2 Files
+Type  : GerberX2
+From  : PCB Document [interface.PcbDoc]
+   Generated File[interface_Copper_Signal_Top.gbr]
+   Generated File[interface_Copper_Signal_1.gbr]
+   Generated File[interface_Copper_Signal_2.gbr]
+   Generated File[interface_Copper_Signal_Bot.gbr]
+   Generated File[interface_Soldermask_Bot.gbr]
+   Generated File[interface_Paste_Bot.gbr]
+   Generated File[interface_Legend_Top.gbr]
+   Generated File[interface_Paste_Top.gbr]
+   Generated File[interface_Soldermask_Top.gbr]
+   Generated File[interface_Profile.gbr]
+   Generated File[interface_NPTH_Drill.gbr]
+   Generated File[interface_PTH_Drill.gbr]
+   Generated File[interface_Plated_Drill_2_3.gbr]
+   Generated File[interface.RUL]
+   Generated File[interface.EXTREP]
+   Generated File[interface.REP]
+
+
+Files Generated   : 16
+Documents Printed : 0
+
+Finished Output Generation At 17:16:34 On 13/06/2022

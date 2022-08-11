@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=HOLO_UART_RX Pin=J14-5
+Removed Pin From Net: NetName=HOLO_UART_TX Pin=J14-6
+Added Pin To Net: NetName=HOLO_UART_TX Pin=J14-5
+Added Pin To Net: NetName=HOLO_UART_RX Pin=J14-6

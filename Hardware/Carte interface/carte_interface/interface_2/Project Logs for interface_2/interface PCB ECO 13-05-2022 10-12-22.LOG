@@ -1,0 +1,4 @@
+Removed Pin From Net: NetName=US_TRIG_3V3 Pin=J26-6
+Removed Pin From Net: NetName=PWR_MGT_GSM Pin=J26-9
+Added Pin To Net: NetName=PWR_MGT_GSM Pin=J26-6
+Added Pin To Net: NetName=US_TRIG_3V3 Pin=J26-9

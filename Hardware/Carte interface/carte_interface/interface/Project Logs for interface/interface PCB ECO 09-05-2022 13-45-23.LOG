@@ -1,0 +1,17 @@
+Added Component: Designator=J32(FP-110990030)
+Add component (AddParameter): Name = "Category"; Value = "Connectors"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1Description"; Value = "http://www.mouser.com/ds/2/744/Seeed_316010005-786598.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink1URL"; Value = "http://www.mouser.com/ds/2/744/Seeed_316010005-786598.pdf?src-supplier=Mouser"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2Description"; Value = "https://statics3.seeedstudio.com/images/opl/datasheet/3470130P1.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "ComponentLink2URL"; Value = "https://statics3.seeedstudio.com/images/opl/datasheet/3470130P1.pdf?src-supplier=Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer"; Value = "Seeed Studio"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Manufacturer Part Number"; Value = "110990030"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Pricing 1"; Value = "1=1,70000 (USD)"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "RoHS"; Value = "No"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Stock 1"; Value = "3588"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier 1"; Value = "Digi-Key"; VariantName = "[No Variations]"
+Add component (AddParameter): Name = "Supplier Part Number 1"; Value = "1597-1082-ND"; VariantName = "[No Variations]"
+Added Pin To Net: NetName=GND Pin=J32-1
+Added Pin To Net: NetName=+5V_US Pin=J32-2
+Added Pin To Net: NetName=IMU_I2C_SDA Pin=J32-3
+Added Pin To Net: NetName=IMU_I2C_SCL Pin=J32-4

@@ -1,0 +1,12 @@
+Change Component Footprint: Designator=Q51 Old Footprint=ONSC-SOT-363-6-419B-02_W_V New Footprint=ONSC-SOT-363-6-419B-02_W_V
+Change Component Footprint: Designator=Q52 Old Footprint=ONSC-SOT-363-6-419B-02_W_V New Footprint=ONSC-SOT-363-6-419B-02_W_V
+Change Component Designator: OldDesignator=R20 NewDesignator=R520
+Change Component Designator: OldDesignator=R21 NewDesignator=R521
+Change Component Designator: OldDesignator=R22 NewDesignator=R522
+Change Component Designator: OldDesignator=R23 NewDesignator=R523
+Change Component Designator: OldDesignator=R24 NewDesignator=R524
+Change Component Designator: OldDesignator=R25 NewDesignator=R525
+Change Component Designator: OldDesignator=R26 NewDesignator=R526
+Change Component Designator: OldDesignator=R27 NewDesignator=R527
+Change Component Designator: OldDesignator=R28 NewDesignator=R528
+Change Net Name : Old Net Name=NetR24_1 New Net Name=NetR524_1
