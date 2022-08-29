@@ -1,0 +1,5 @@
+set_property SRC_FILE_INFO {cfile:D:/projets/2020_2/project_IMU/project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc rfile:../../../project_IMU.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc id:1} [current_design]
+set_property src_info {type:XDC file:1 line:156 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN J15 IOSTANDARD LVCMOS33} [get_ports iic_rtl_sda_io]
+set_property src_info {type:XDC file:1 line:159 export:INPUT save:INPUT read:READ} [current_design]
+set_property -dict {PACKAGE_PIN H15 IOSTANDARD LVCMOS33} [get_ports iic_rtl_scl_io]

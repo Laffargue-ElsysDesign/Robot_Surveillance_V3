@@ -1,0 +1,556 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x8AB9697C0145F222",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_IMU.gen/sources_1/bd/design_IMU",
+      "name": "design_IMU",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "I2C_master_0": "",
+      "filtre_anti_rebond_0": "",
+      "time_pulse_0": "",
+      "IO_buffer_0": "",
+      "IO_buffer_1": "",
+      "blk_mem_gen_0": "",
+      "xlconstant_0": "",
+      "IMU_control_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "led": {
+        "direction": "O",
+        "left": "3",
+        "right": "0"
+      },
+      "IMU_I2C_SDA": {
+        "direction": "IO"
+      },
+      "IMU_I2C_SCL": {
+        "direction": "IO"
+      }
+    },
+    "components": {
+      "I2C_master_0": {
+        "vlnv": "xilinx.com:module_ref:I2C_master:1.0",
+        "xci_name": "design_IMU_I2C_master_0_0",
+        "xci_path": "ip\\design_IMU_I2C_master_0_0\\design_IMU_I2C_master_0_0.xci",
+        "inst_hier_path": "I2C_master_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "I2C_master",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_IMU_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ena": {
+            "direction": "I"
+          },
+          "addr": {
+            "direction": "I",
+            "left": "6",
+            "right": "0"
+          },
+          "ack_err": {
+            "direction": "O"
+          },
+          "data_wr": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "data_rd": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "SDA_i": {
+            "direction": "I"
+          },
+          "SDA_o": {
+            "direction": "O"
+          },
+          "SDA_t": {
+            "direction": "O"
+          },
+          "SCL_i": {
+            "direction": "I"
+          },
+          "SCL_o": {
+            "direction": "O"
+          },
+          "SCL_t": {
+            "direction": "O"
+          },
+          "rw": {
+            "direction": "I"
+          },
+          "busy": {
+            "direction": "O"
+          },
+          "flag_data_ack": {
+            "direction": "O"
+          }
+        }
+      },
+      "filtre_anti_rebond_0": {
+        "vlnv": "xilinx.com:module_ref:filtre_anti_rebond:1.0",
+        "xci_name": "design_IMU_filtre_anti_rebond_0_0",
+        "xci_path": "ip\\design_IMU_filtre_anti_rebond_0_0\\design_IMU_filtre_anti_rebond_0_0.xci",
+        "inst_hier_path": "filtre_anti_rebond_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "filtre_anti_rebond",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_IMU_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "i_sign": {
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "o_sign": {
+            "direction": "O"
+          }
+        }
+      },
+      "time_pulse_0": {
+        "vlnv": "xilinx.com:module_ref:time_pulse:1.0",
+        "xci_name": "design_IMU_time_pulse_0_0",
+        "xci_path": "ip\\design_IMU_time_pulse_0_0\\design_IMU_time_pulse_0_0.xci",
+        "inst_hier_path": "time_pulse_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "time_pulse",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "CLK_DOMAIN": {
+                "value": "design_IMU_clk_0",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_1us": {
+            "direction": "O"
+          },
+          "pulse_1ms": {
+            "direction": "O"
+          },
+          "pulse_1s": {
+            "direction": "O"
+          },
+          "pulse_1min": {
+            "direction": "O"
+          }
+        }
+      },
+      "IO_buffer_0": {
+        "vlnv": "xilinx.com:module_ref:IO_buffer:1.0",
+        "xci_name": "design_IMU_IO_buffer_0_0",
+        "xci_path": "ip\\design_IMU_IO_buffer_0_0\\design_IMU_IO_buffer_0_0.xci",
+        "inst_hier_path": "IO_buffer_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IO_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "IOBUF_IO_O": {
+            "direction": "O"
+          },
+          "IOBUF_IO_IO": {
+            "direction": "IO"
+          },
+          "IOBUF_IO_I": {
+            "direction": "I"
+          },
+          "IOBUF_IO_T": {
+            "direction": "I"
+          }
+        }
+      },
+      "IO_buffer_1": {
+        "vlnv": "xilinx.com:module_ref:IO_buffer:1.0",
+        "xci_name": "design_IMU_IO_buffer_0_1",
+        "xci_path": "ip\\design_IMU_IO_buffer_0_1\\design_IMU_IO_buffer_0_1.xci",
+        "inst_hier_path": "IO_buffer_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IO_buffer",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "IOBUF_IO_O": {
+            "direction": "O"
+          },
+          "IOBUF_IO_IO": {
+            "direction": "IO"
+          },
+          "IOBUF_IO_I": {
+            "direction": "I"
+          },
+          "IOBUF_IO_T": {
+            "direction": "I"
+          }
+        }
+      },
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_IMU_blk_mem_gen_0_0",
+        "xci_path": "ip\\design_IMU_blk_mem_gen_0_0\\design_IMU_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Algorithm": {
+            "value": "Minimum_Area"
+          },
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Operating_Mode_A": {
+            "value": "NO_CHANGE"
+          },
+          "Read_Width_A": {
+            "value": "16"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "false"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_IMU_xlconstant_0_0",
+        "xci_path": "ip\\design_IMU_xlconstant_0_0\\design_IMU_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0"
+      },
+      "IMU_control_0": {
+        "vlnv": "xilinx.com:module_ref:IMU_control:1.0",
+        "xci_name": "design_IMU_IMU_control_0_0",
+        "xci_path": "ip\\design_IMU_IMU_control_0_0\\design_IMU_IMU_control_0_0.xci",
+        "inst_hier_path": "IMU_control_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "IMU_control",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "ack_err_i2c": {
+            "direction": "I"
+          },
+          "data_ri2c": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "addr_i2c": {
+            "direction": "O",
+            "left": "6",
+            "right": "0"
+          },
+          "data_wi2c": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "ena_i2c": {
+            "direction": "O"
+          },
+          "rw_i2c": {
+            "direction": "O"
+          },
+          "busy_i2c": {
+            "direction": "I"
+          },
+          "flag_data_i2c": {
+            "direction": "I"
+          },
+          "addr_bram": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "din_bram": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "en_bram": {
+            "direction": "O"
+          },
+          "we_bram": {
+            "direction": "O"
+          },
+          "pulse_1ms": {
+            "direction": "I"
+          },
+          "led": {
+            "direction": "O",
+            "left": "3",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "time_pulse_0/clk",
+          "filtre_anti_rebond_0/clk",
+          "I2C_master_0/clk",
+          "blk_mem_gen_0/clka",
+          "IMU_control_0/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "filtre_anti_rebond_0/o_sign",
+          "time_pulse_0/rst_n",
+          "I2C_master_0/rst_n",
+          "IMU_control_0/rst_n"
+        ]
+      },
+      "I2C_master_0_ack_err": {
+        "ports": [
+          "I2C_master_0/ack_err",
+          "IMU_control_0/ack_err_i2c"
+        ]
+      },
+      "IMU_control_0_addr_i2c": {
+        "ports": [
+          "IMU_control_0/addr_i2c",
+          "I2C_master_0/addr"
+        ]
+      },
+      "IMU_control_0_ena_i2c": {
+        "ports": [
+          "IMU_control_0/ena_i2c",
+          "I2C_master_0/ena"
+        ]
+      },
+      "IMU_control_0_led": {
+        "ports": [
+          "IMU_control_0/led",
+          "led"
+        ]
+      },
+      "rst_n_0_2": {
+        "ports": [
+          "rst_n",
+          "filtre_anti_rebond_0/i_sign"
+        ]
+      },
+      "I2C_master_0_SDA_o": {
+        "ports": [
+          "I2C_master_0/SDA_o",
+          "IO_buffer_0/IOBUF_IO_I"
+        ]
+      },
+      "I2C_master_0_SDA_t": {
+        "ports": [
+          "I2C_master_0/SDA_t",
+          "IO_buffer_0/IOBUF_IO_T"
+        ]
+      },
+      "Net": {
+        "ports": [
+          "IMU_I2C_SDA",
+          "IO_buffer_0/IOBUF_IO_IO"
+        ]
+      },
+      "Net1": {
+        "ports": [
+          "IMU_I2C_SCL",
+          "IO_buffer_1/IOBUF_IO_IO"
+        ]
+      },
+      "I2C_master_0_SCL_o": {
+        "ports": [
+          "I2C_master_0/SCL_o",
+          "IO_buffer_1/IOBUF_IO_I"
+        ]
+      },
+      "I2C_master_0_SCL_t": {
+        "ports": [
+          "I2C_master_0/SCL_t",
+          "IO_buffer_1/IOBUF_IO_T"
+        ]
+      },
+      "IO_buffer_1_IOBUF_IO_O": {
+        "ports": [
+          "IO_buffer_1/IOBUF_IO_O",
+          "I2C_master_0/SCL_i"
+        ]
+      },
+      "IO_buffer_0_IOBUF_IO_O": {
+        "ports": [
+          "IO_buffer_0/IOBUF_IO_O",
+          "I2C_master_0/SDA_i"
+        ]
+      },
+      "IMU_control_0_data_wi2c": {
+        "ports": [
+          "IMU_control_0/data_wi2c",
+          "I2C_master_0/data_wr"
+        ]
+      },
+      "IMU_control_0_rw_i2c": {
+        "ports": [
+          "IMU_control_0/rw_i2c",
+          "I2C_master_0/rw"
+        ]
+      },
+      "I2C_master_0_busy": {
+        "ports": [
+          "I2C_master_0/busy",
+          "IMU_control_0/busy_i2c"
+        ]
+      },
+      "I2C_master_0_flag_data_ack": {
+        "ports": [
+          "I2C_master_0/flag_data_ack",
+          "IMU_control_0/flag_data_i2c"
+        ]
+      },
+      "I2C_master_0_data_rd": {
+        "ports": [
+          "I2C_master_0/data_rd",
+          "IMU_control_0/data_ri2c"
+        ]
+      },
+      "time_pulse_0_pulse_1ms": {
+        "ports": [
+          "time_pulse_0/pulse_1ms",
+          "IMU_control_0/pulse_1ms"
+        ]
+      },
+      "IMU_control_0_addr_bram": {
+        "ports": [
+          "IMU_control_0/addr_bram",
+          "blk_mem_gen_0/addra"
+        ]
+      },
+      "IMU_control_0_din_bram": {
+        "ports": [
+          "IMU_control_0/din_bram",
+          "blk_mem_gen_0/dina"
+        ]
+      },
+      "IMU_control_0_en_bram": {
+        "ports": [
+          "IMU_control_0/en_bram",
+          "blk_mem_gen_0/ena"
+        ]
+      },
+      "IMU_control_0_we_bram": {
+        "ports": [
+          "IMU_control_0/we_bram",
+          "blk_mem_gen_0/wea"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "filtre_anti_rebond_0/rst_n"
+        ]
+      }
+    }
+  }
+}

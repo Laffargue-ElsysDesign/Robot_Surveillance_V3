@@ -1,0 +1,603 @@
+13:46:50 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_IMU\IP_I2C_vitis\temp_xsdb_launch_script.tcl
+13:46:50 INFO  : Registering command handlers for Vitis TCF services
+13:46:53 INFO  : Platform repository initialization has completed.
+13:46:54 INFO  : XSCT server has started successfully.
+13:46:54 INFO  : Successfully done setting XSCT server connection channel  
+13:46:54 INFO  : plnx-install-location is set to ''
+13:46:59 INFO  : Successfully done setting workspace for the tool. 
+13:46:59 INFO  : Successfully done query RDI_DATADIR 
+13:48:15 INFO  : Result from executing command 'getProjects': design_IP_I2C_wrapper
+13:48:15 INFO  : Result from executing command 'getPlatforms': 
+13:48:16 WARN  : An unexpected exception occurred in the module 'platform project logging'
+13:48:16 INFO  : Platform 'design_IP_I2C_wrapper' is added to custom repositories.
+13:48:27 INFO  : Platform 'design_IP_I2C_wrapper' is added to custom repositories.
+14:18:04 INFO  : Result from executing command 'getProjects': design_IP_I2C_wrapper
+14:18:04 INFO  : Result from executing command 'getPlatforms': design_IP_I2C_wrapper|D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/design_IP_I2C_wrapper.xpfm
+14:18:05 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:18:48 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:19:00 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:19:14 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:19:27 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:19:41 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:19:56 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:20:20 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:29:26 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:29:38 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:36:43 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+14:38:08 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:06:36 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:08:49 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:08:50 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:08:52 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:09:08 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:09:08 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:09:08 INFO  : 'jtag frequency' command is executed.
+15:09:08 INFO  : Context for 'APU' is selected.
+15:09:09 INFO  : System reset is completed.
+15:09:12 INFO  : 'after 3000' command is executed.
+15:09:12 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:09:14 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:09:14 INFO  : Context for 'APU' is selected.
+15:09:14 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:09:14 INFO  : 'configparams force-mem-access 1' command is executed.
+15:09:14 INFO  : Context for 'APU' is selected.
+15:09:14 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:09:15 INFO  : 'ps7_init' command is executed.
+15:09:15 INFO  : 'ps7_post_config' command is executed.
+15:09:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:15 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:09:15 INFO  : 'configparams force-mem-access 0' command is executed.
+15:09:15 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:09:15 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:09:15 INFO  : 'con' command is executed.
+15:09:15 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:09:15 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:21:14 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:22:10 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:22:19 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:22:56 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:23:51 INFO  : Disconnected from the channel tcfchan#2.
+15:23:52 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:23:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:23:52 INFO  : 'jtag frequency' command is executed.
+15:23:52 INFO  : Context for 'APU' is selected.
+15:23:52 INFO  : System reset is completed.
+15:23:55 INFO  : 'after 3000' command is executed.
+15:23:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:23:58 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:23:58 INFO  : Context for 'APU' is selected.
+15:23:58 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:23:58 INFO  : 'configparams force-mem-access 1' command is executed.
+15:23:58 INFO  : Context for 'APU' is selected.
+15:23:58 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:23:58 INFO  : 'ps7_init' command is executed.
+15:23:58 INFO  : 'ps7_post_config' command is executed.
+15:23:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:58 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:23:58 INFO  : 'configparams force-mem-access 0' command is executed.
+15:23:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:23:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:23:58 INFO  : 'con' command is executed.
+15:23:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:23:58 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:25:22 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:25:26 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:25:31 INFO  : Disconnected from the channel tcfchan#3.
+15:25:32 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:25:32 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:25:32 INFO  : 'jtag frequency' command is executed.
+15:25:32 INFO  : Context for 'APU' is selected.
+15:25:32 INFO  : System reset is completed.
+15:25:35 INFO  : 'after 3000' command is executed.
+15:25:35 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:25:38 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:25:38 INFO  : Context for 'APU' is selected.
+15:25:38 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:25:38 INFO  : 'configparams force-mem-access 1' command is executed.
+15:25:38 INFO  : Context for 'APU' is selected.
+15:25:38 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:25:38 INFO  : 'ps7_init' command is executed.
+15:25:38 INFO  : 'ps7_post_config' command is executed.
+15:25:38 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:39 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:25:39 INFO  : 'configparams force-mem-access 0' command is executed.
+15:25:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:25:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:25:39 INFO  : 'con' command is executed.
+15:25:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:25:39 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:26:29 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:26:30 INFO  : Disconnected from the channel tcfchan#4.
+15:26:30 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:26:30 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:26:30 INFO  : 'jtag frequency' command is executed.
+15:26:30 INFO  : Context for 'APU' is selected.
+15:26:30 INFO  : System reset is completed.
+15:26:33 INFO  : 'after 3000' command is executed.
+15:26:33 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:26:36 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:26:36 INFO  : Context for 'APU' is selected.
+15:26:36 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:26:36 INFO  : 'configparams force-mem-access 1' command is executed.
+15:26:36 INFO  : Context for 'APU' is selected.
+15:26:36 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:26:36 INFO  : 'ps7_init' command is executed.
+15:26:36 INFO  : 'ps7_post_config' command is executed.
+15:26:36 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:36 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:26:37 INFO  : 'configparams force-mem-access 0' command is executed.
+15:26:37 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:26:37 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:26:37 INFO  : 'con' command is executed.
+15:26:37 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:26:37 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:27:19 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:27:24 INFO  : Disconnected from the channel tcfchan#5.
+15:27:24 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:27:24 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:27:24 INFO  : 'jtag frequency' command is executed.
+15:27:24 INFO  : Context for 'APU' is selected.
+15:27:24 INFO  : System reset is completed.
+15:27:27 INFO  : 'after 3000' command is executed.
+15:27:27 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:27:29 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:27:29 INFO  : Context for 'APU' is selected.
+15:27:29 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:27:29 INFO  : 'configparams force-mem-access 1' command is executed.
+15:27:29 INFO  : Context for 'APU' is selected.
+15:27:29 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:27:30 INFO  : 'ps7_init' command is executed.
+15:27:30 INFO  : 'ps7_post_config' command is executed.
+15:27:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:30 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:27:30 INFO  : 'configparams force-mem-access 0' command is executed.
+15:27:30 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:27:30 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:30 INFO  : 'con' command is executed.
+15:27:30 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:27:30 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:27:34 INFO  : Disconnected from the channel tcfchan#6.
+15:27:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:27:35 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:27:35 INFO  : 'jtag frequency' command is executed.
+15:27:35 INFO  : Context for 'APU' is selected.
+15:27:35 INFO  : System reset is completed.
+15:27:38 INFO  : 'after 3000' command is executed.
+15:27:38 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:27:40 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:27:40 INFO  : Context for 'APU' is selected.
+15:27:40 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:27:40 INFO  : 'configparams force-mem-access 1' command is executed.
+15:27:40 INFO  : Context for 'APU' is selected.
+15:27:40 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:27:41 INFO  : 'ps7_init' command is executed.
+15:27:41 INFO  : 'ps7_post_config' command is executed.
+15:27:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:41 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:27:41 INFO  : 'configparams force-mem-access 0' command is executed.
+15:27:41 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:27:41 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:27:41 INFO  : 'con' command is executed.
+15:27:41 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:27:41 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:28:05 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:28:18 INFO  : Disconnected from the channel tcfchan#7.
+15:28:18 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:28:19 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:28:19 INFO  : 'jtag frequency' command is executed.
+15:28:19 INFO  : Context for 'APU' is selected.
+15:28:19 INFO  : System reset is completed.
+15:28:22 INFO  : 'after 3000' command is executed.
+15:28:22 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:28:24 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:28:24 INFO  : Context for 'APU' is selected.
+15:28:24 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:28:24 INFO  : 'configparams force-mem-access 1' command is executed.
+15:28:24 INFO  : Context for 'APU' is selected.
+15:28:24 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:28:24 INFO  : 'ps7_init' command is executed.
+15:28:24 INFO  : 'ps7_post_config' command is executed.
+15:28:24 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:25 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:28:25 INFO  : 'configparams force-mem-access 0' command is executed.
+15:28:25 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:28:25 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:28:25 INFO  : 'con' command is executed.
+15:28:25 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:28:25 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:30:37 INFO  : Disconnected from the channel tcfchan#8.
+15:30:37 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:30:37 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:30:37 INFO  : 'jtag frequency' command is executed.
+15:30:37 INFO  : Context for 'APU' is selected.
+15:30:38 INFO  : System reset is completed.
+15:30:41 INFO  : 'after 3000' command is executed.
+15:30:41 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:30:43 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:30:43 INFO  : Context for 'APU' is selected.
+15:30:43 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:30:43 INFO  : 'configparams force-mem-access 1' command is executed.
+15:30:43 INFO  : Context for 'APU' is selected.
+15:30:43 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:30:43 INFO  : 'ps7_init' command is executed.
+15:30:43 INFO  : 'ps7_post_config' command is executed.
+15:30:43 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:30:44 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:30:44 INFO  : 'configparams force-mem-access 0' command is executed.
+15:30:44 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:30:44 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:30:44 INFO  : 'con' command is executed.
+15:30:44 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:30:44 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:31:53 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:31:58 INFO  : Disconnected from the channel tcfchan#9.
+15:31:58 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:31:59 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:31:59 INFO  : 'jtag frequency' command is executed.
+15:31:59 INFO  : Context for 'APU' is selected.
+15:31:59 INFO  : System reset is completed.
+15:32:02 INFO  : 'after 3000' command is executed.
+15:32:02 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:32:04 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:32:04 INFO  : Context for 'APU' is selected.
+15:32:04 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:32:04 INFO  : 'configparams force-mem-access 1' command is executed.
+15:32:04 INFO  : Context for 'APU' is selected.
+15:32:04 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:32:05 INFO  : 'ps7_init' command is executed.
+15:32:05 INFO  : 'ps7_post_config' command is executed.
+15:32:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:05 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:32:05 INFO  : 'configparams force-mem-access 0' command is executed.
+15:32:05 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:32:05 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:32:05 INFO  : 'con' command is executed.
+15:32:05 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:32:05 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:41:56 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:42:11 INFO  : Disconnected from the channel tcfchan#10.
+15:42:11 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:42:11 INFO  : 'jtag frequency' command is executed.
+15:42:11 INFO  : Context for 'APU' is selected.
+15:42:11 INFO  : System reset is completed.
+15:42:14 INFO  : 'after 3000' command is executed.
+15:42:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:42:17 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:42:17 INFO  : Context for 'APU' is selected.
+15:42:17 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:42:17 INFO  : 'configparams force-mem-access 1' command is executed.
+15:42:17 INFO  : Context for 'APU' is selected.
+15:42:17 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:42:17 INFO  : 'ps7_init' command is executed.
+15:42:17 INFO  : 'ps7_post_config' command is executed.
+15:42:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:17 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:42:17 INFO  : 'configparams force-mem-access 0' command is executed.
+15:42:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:42:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:42:17 INFO  : 'con' command is executed.
+15:42:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:42:17 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:42:40 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:42:47 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:42:52 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:42:55 INFO  : Disconnected from the channel tcfchan#11.
+15:42:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:42:55 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:42:55 INFO  : 'jtag frequency' command is executed.
+15:42:55 INFO  : Context for 'APU' is selected.
+15:42:55 INFO  : System reset is completed.
+15:42:58 INFO  : 'after 3000' command is executed.
+15:42:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:43:01 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:43:01 INFO  : Context for 'APU' is selected.
+15:43:01 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:43:01 INFO  : 'configparams force-mem-access 1' command is executed.
+15:43:01 INFO  : Context for 'APU' is selected.
+15:43:01 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:43:01 INFO  : 'ps7_init' command is executed.
+15:43:01 INFO  : 'ps7_post_config' command is executed.
+15:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:01 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:43:01 INFO  : 'configparams force-mem-access 0' command is executed.
+15:43:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:43:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:43:01 INFO  : 'con' command is executed.
+15:43:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:43:01 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+15:46:37 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:47:04 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:47:27 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:47:34 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:48:14 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:49:19 INFO  : Checking for BSP changes to sync application flags for project 'i2c'...
+15:50:10 INFO  : Disconnected from the channel tcfchan#12.
+15:50:10 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+15:50:11 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4815EA' is selected.
+15:50:11 INFO  : 'jtag frequency' command is executed.
+15:50:11 INFO  : Context for 'APU' is selected.
+15:50:11 INFO  : System reset is completed.
+15:50:14 INFO  : 'after 3000' command is executed.
+15:50:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}' command is executed.
+15:50:16 INFO  : Device configured successfully with "D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit"
+15:50:16 INFO  : Context for 'APU' is selected.
+15:50:16 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa'.
+15:50:16 INFO  : 'configparams force-mem-access 1' command is executed.
+15:50:16 INFO  : Context for 'APU' is selected.
+15:50:16 INFO  : Sourcing of 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl' is done.
+15:50:17 INFO  : 'ps7_init' command is executed.
+15:50:17 INFO  : 'ps7_post_config' command is executed.
+15:50:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:17 INFO  : The application 'D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf' is downloaded to processor 'ps7_cortexa9_0'.
+15:50:17 INFO  : 'configparams force-mem-access 0' command is executed.
+15:50:17 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}
+fpga -file D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/bitstream/design_IP_I2C_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/hw/design_IP_I2C_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_IMU/IP_I2C_vitis/i2c/Debug/i2c.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+15:50:17 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+15:50:17 INFO  : 'con' command is executed.
+15:50:17 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+15:50:17 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_IMU\IP_I2C_vitis\i2c_system\_ide\scripts\systemdebugger_i2c_system_standalone.tcl'
+16:08:05 INFO  : Disconnected from the channel tcfchan#13.

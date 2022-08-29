@@ -1,0 +1,150 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="D:/projets/2020_2/project_IMU/project_IMU.hw/hw_1/wave/hw_ila_data_1/hw_ila_data_1.wdb" id="1">
+         <top_modules>
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <zoom_setting>
+      <ZoomStartTime time="0fs"></ZoomStartTime>
+      <ZoomEndTime time="83fs"></ZoomEndTime>
+      <Cursor1Time time="39fs"></Cursor1Time>
+   </zoom_setting>
+   <column_width_setting>
+      <NameColumnWidth column_width="206"></NameColumnWidth>
+      <ValueColumnWidth column_width="65"></ValueColumnWidth>
+   </column_width_setting>
+   <WVObjectSize size="17" />
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/current_state" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/current_state[2:0]</obj_property>
+      <obj_property name="ObjectShortName">current_state[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/data_wr" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/data_wr[15:0]</obj_property>
+      <obj_property name="ObjectShortName">data_wr[15:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/ack_err_i2c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/ack_err_i2c</obj_property>
+      <obj_property name="ObjectShortName">ack_err_i2c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/addr_i2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/addr_i2c[3:2]</obj_property>
+      <obj_property name="ObjectShortName">addr_i2c[3:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/busy_i2c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/busy_i2c</obj_property>
+      <obj_property name="ObjectShortName">busy_i2c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/data_ri2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/data_ri2c[7:0]</obj_property>
+      <obj_property name="ObjectShortName">data_ri2c[7:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/data_wi2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/data_wi2c[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_wi2c[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/flag_data_i2c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/flag_data_i2c</obj_property>
+      <obj_property name="ObjectShortName">flag_data_i2c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/pulse_1ms" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/pulse_1ms</obj_property>
+      <obj_property name="ObjectShortName">pulse_1ms</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/rw_i2c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/rw_i2c</obj_property>
+      <obj_property name="ObjectShortName">rw_i2c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/nb_r" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/nb_r[2:0]</obj_property>
+      <obj_property name="ObjectShortName">nb_r[2:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/periph_reg_n_0" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/U0/IP_IMU_v1_0_S00_AXI_inst/IMU/periph_reg_n_0</obj_property>
+      <obj_property name="ObjectShortName">periph_reg_n_0</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/addr_i2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/addr_i2c[3:2]</obj_property>
+      <obj_property name="ObjectShortName">addr_i2c[3:2]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="design_IMU_AXI_i/IP_IMU_0/data_wi2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">design_IMU_AXI_i/IP_IMU_0/data_wi2c[3:0]</obj_property>
+      <obj_property name="ObjectShortName">data_wi2c[3:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_addr_i2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_addr_i2c[5:5]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_addr_i2c[5:5]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_data_wi2c" type="array">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_data_wi2c[6:4]</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_data_wi2c[6:4]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+   <wvobject fp_name="u_ila_0_ena_i2c" type="logic">
+      <obj_property name="DisplayName">FullPathName</obj_property>
+      <obj_property name="ElementShortName">u_ila_0_ena_i2c</obj_property>
+      <obj_property name="ObjectShortName">u_ila_0_ena_i2c</obj_property>
+      <obj_property name="LABELRADIX">true</obj_property>
+      <obj_property name="WaveformStyle">STYLE_DIGITAL</obj_property>
+   </wvobject>
+</wave_config>
