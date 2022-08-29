@@ -1,0 +1,1 @@
+-wto "3a3f30924d5040e3b065060215be7e8a" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_rfid_behav" "xil_defaultlib.tb_rfid" "xil_defaultlib.glbl" -log "elaborate.log" 

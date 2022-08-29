@@ -1,0 +1,28 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "D:/projets/2020_2/project_RFID/project_RFID.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.srcs/sources_1/new/RFID.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'RFID'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.srcs/sources_1/imports/2020_2/uart_rx.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'UART_RX'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.srcs/sources_1/imports/2020_2/uart_tx.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'UART_TX'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.srcs/sources_1/imports/new/time_pulse.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'time_pulse'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_RFID_0_0/sim/design_simu_RFID_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_RFID_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_RX_0_0/sim/design_simu_UART_RX_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_UART_RX_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_TX_0_0/sim/design_simu_UART_TX_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_UART_TX_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_time_pulse_0_0/sim/design_simu_time_pulse_0_0.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_time_pulse_0_0'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_TX_0_1/sim/design_simu_UART_TX_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_UART_TX_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_RX_0_1/sim/design_simu_UART_RX_0_1.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_UART_RX_0_1'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.ip_user_files/bd/design_simu/sim/design_simu.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.gen/sources_1/bd/design_simu/hdl/design_simu_wrapper.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'design_simu_wrapper'
+INFO: [VRFC 10-163] Analyzing VHDL file "D:/projets/2020_2/project_RFID/project_RFID.srcs/sim_1/new/tb_rfid.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'tb_rfid'

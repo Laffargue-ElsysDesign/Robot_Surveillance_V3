@@ -1,0 +1,482 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xB250FB95F36607FF",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_RFID.gen/sources_1/bd/design_RFID",
+      "name": "design_RFID",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "time_pulse_0": "",
+      "ila_0": "",
+      "clk_wiz_0": "",
+      "UART_RX_0": "",
+      "UART_TX_0": "",
+      "RFID_0": ""
+    },
+    "ports": {
+      "o_TX_Serial": {
+        "direction": "O"
+      },
+      "i_RX_Serial": {
+        "direction": "I"
+      },
+      "Reg_DV": {
+        "direction": "O"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "time_pulse_0": {
+        "vlnv": "xilinx.com:module_ref:time_pulse:1.0",
+        "xci_name": "design_RFID_time_pulse_0_0",
+        "xci_path": "ip\\design_RFID_time_pulse_0_0\\design_RFID_time_pulse_0_0.xci",
+        "inst_hier_path": "time_pulse_0",
+        "parameters": {
+          "freq_clk_MHz": {
+            "value": "50"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "time_pulse",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_1us": {
+            "direction": "O"
+          },
+          "pulse_1ms": {
+            "direction": "O"
+          },
+          "pulse_1s": {
+            "direction": "O"
+          },
+          "pulse_1min": {
+            "direction": "O"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_RFID_ila_0_0",
+        "xci_path": "ip\\design_RFID_ila_0_0\\design_RFID_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "65536"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "11"
+          },
+          "C_PROBE10_WIDTH": {
+            "value": "4"
+          },
+          "C_PROBE11_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE12_WIDTH": {
+            "value": "1"
+          },
+          "C_PROBE1_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE8_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_RFID_clk_wiz_0_0",
+        "xci_path": "ip\\design_RFID_clk_wiz_0_0\\design_RFID_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKIN1_JITTER_PS": {
+            "value": "100.0"
+          },
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "203.457"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "155.540"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "FEEDBACK_SOURCE": {
+            "value": "FDBK_AUTO"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "17"
+          },
+          "MMCM_CLKIN1_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKIN2_PERIOD": {
+            "value": "10.000"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "17"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
+          },
+          "PLL_CLKIN_PERIOD": {
+            "value": "10.000"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "UART_RX_0": {
+        "vlnv": "xilinx.com:module_ref:UART_RX:1.0",
+        "xci_name": "design_RFID_UART_RX_0_0",
+        "xci_path": "ip\\design_RFID_UART_RX_0_0\\design_RFID_UART_RX_0_0.xci",
+        "inst_hier_path": "UART_RX_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TX_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TX:1.0",
+        "xci_name": "design_RFID_UART_TX_0_0",
+        "xci_path": "ip\\design_RFID_UART_TX_0_0\\design_RFID_UART_TX_0_0.xci",
+        "inst_hier_path": "UART_TX_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_0_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "RFID_0": {
+        "vlnv": "xilinx.com:module_ref:RFID:1.0",
+        "xci_name": "design_RFID_RFID_0_0",
+        "xci_path": "ip\\design_RFID_RFID_0_0\\design_RFID_RFID_0_0.xci",
+        "inst_hier_path": "RFID_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RFID",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_ms": {
+            "direction": "I"
+          },
+          "pulse_us": {
+            "direction": "I"
+          },
+          "TX_DV": {
+            "direction": "O"
+          },
+          "TX_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "TX_Active": {
+            "direction": "I"
+          },
+          "TX_Done": {
+            "direction": "I"
+          },
+          "RX_DV": {
+            "direction": "I"
+          },
+          "RX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Reg_DV": {
+            "direction": "O"
+          },
+          "Reg_Data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "Reg_Detect": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "RFID_0_TX_DV": {
+        "ports": [
+          "RFID_0/TX_DV",
+          "ila_0/probe2",
+          "UART_TX_0/i_TX_DV"
+        ]
+      },
+      "RFID_0_TX_Byte": {
+        "ports": [
+          "RFID_0/TX_Byte",
+          "ila_0/probe1",
+          "UART_TX_0/i_TX_Byte"
+        ]
+      },
+      "UART_RX_0_o_RX_DV": {
+        "ports": [
+          "UART_RX_0/o_RX_DV",
+          "ila_0/probe4",
+          "RFID_0/RX_DV"
+        ]
+      },
+      "UART_RX_0_o_RX_Byte": {
+        "ports": [
+          "UART_RX_0/o_RX_Byte",
+          "ila_0/probe5",
+          "RFID_0/RX_Byte"
+        ]
+      },
+      "UART_TX_0_o_TX_Active": {
+        "ports": [
+          "UART_TX_0/o_TX_Active",
+          "ila_0/probe3",
+          "RFID_0/TX_Active"
+        ]
+      },
+      "UART_TX_0_o_TX_Done": {
+        "ports": [
+          "UART_TX_0/o_TX_Done",
+          "RFID_0/TX_Done"
+        ]
+      },
+      "UART_TX_0_o_TX_Serial": {
+        "ports": [
+          "UART_TX_0/o_TX_Serial",
+          "o_TX_Serial",
+          "ila_0/probe7"
+        ]
+      },
+      "i_RX_Serial_0_1": {
+        "ports": [
+          "i_RX_Serial",
+          "ila_0/probe6",
+          "UART_RX_0/i_RX_Serial"
+        ]
+      },
+      "RFID_0_Reg_DV": {
+        "ports": [
+          "RFID_0/Reg_DV",
+          "Reg_DV"
+        ]
+      },
+      "time_pulse_0_pulse_1ms": {
+        "ports": [
+          "time_pulse_0/pulse_1ms",
+          "ila_0/probe0",
+          "RFID_0/pulse_ms"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "time_pulse_0/rst_n",
+          "RFID_0/rst_n"
+        ]
+      },
+      "RFID_0_Reg_Data": {
+        "ports": [
+          "RFID_0/Reg_Data",
+          "ila_0/probe8"
+        ]
+      },
+      "RFID_0_Reg_Detect": {
+        "ports": [
+          "RFID_0/Reg_Detect",
+          "ila_0/probe9"
+        ]
+      },
+      "time_pulse_0_pulse_1us": {
+        "ports": [
+          "time_pulse_0/pulse_1us",
+          "RFID_0/pulse_us"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "time_pulse_0/clk",
+          "ila_0/clk",
+          "UART_RX_0/i_Clk",
+          "UART_TX_0/i_Clk",
+          "RFID_0/clk"
+        ]
+      }
+    }
+  }
+}
