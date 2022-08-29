@@ -1,0 +1,11 @@
+# compile verilog/system verilog design source files
+verilog xil_defaultlib  --include "../../../../project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra/ipshared/d0f7" --include "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra/ipshared/d0f7" \
+"../../../../project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_0/sim/design_dijkstra_all_xlconstant_0_0.v" \
+"../../../../project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_1/sim/design_dijkstra_all_xlconstant_0_1.v" \
+"../../../../project_DIJKSTRA.ip_user_files/bd/design_dijkstra_all/ip/design_dijkstra_all_xlconstant_0_2/sim/design_dijkstra_all_xlconstant_0_2.v" \
+
+# compile glbl module
+verilog xil_defaultlib "glbl.v"
+
+# Do not sort compile order
+nosort

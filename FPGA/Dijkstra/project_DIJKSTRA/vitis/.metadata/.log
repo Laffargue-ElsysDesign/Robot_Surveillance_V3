@@ -1,0 +1,57 @@
+!SESSION 2022-07-05 14:55:53.583 -----------------------------------------------
+eclipse.buildId=2020.2
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file D:\projets\2020_2\project_DIJKSTRA\vitis\.metadata\.bak_0.log
+Created Time: 2022-07-05 16:19:49.355
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.355
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.690
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.692
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.699
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.700
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.723
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.724
+!MESSAGE XSCT Command: [dow D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app/Debug/dijkstra_app.elf], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.983
+!MESSAGE XSCT command with result: [dow D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app/Debug/dijkstra_app.elf], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:49.984
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:50.042
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:50.124
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:50.134
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:50.135
+!MESSAGE XSCT Command: [con], Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:19:50.155
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-51: Launching SystemDebugger_dijkstra_app_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:22:12.731
+!MESSAGE XSCT Command: [disconnect tcfchan#12], Thread: Thread-1077
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-05 16:22:12.734
+!MESSAGE XSCT command with result: [disconnect tcfchan#12], Result: [null, ]. Thread: Thread-1077

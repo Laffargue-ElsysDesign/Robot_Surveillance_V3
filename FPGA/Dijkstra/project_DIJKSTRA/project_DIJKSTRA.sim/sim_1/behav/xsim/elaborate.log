@@ -1,0 +1,59 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 188fec7ef2da41aea7b6047cf526264c --incr --debug typical --relax --mt 2 -L xil_defaultlib -L robot -L xlconstant_v1_1_7 -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_dijkstra_behav xil_defaultlib.tb_dijkstra xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling package robot.pkg_dijkstra
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package ieee.std_logic_textio
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package vl.vl_types
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.DIJKSTRA_CONTROLLER [\DIJKSTRA_CONTROLLER(nb_bit_dist...]
+Compiling architecture design_dijkstra_all_dijkstra_controller_0_0_arch of entity xil_defaultlib.design_dijkstra_all_DIJKSTRA_CONTROLLER_0_0 [design_dijkstra_all_dijkstra_con...]
+Compiling architecture behavioral of entity xil_defaultlib.NEAREST_NODE [\NEAREST_NODE(nb_bit_dist=5,nb_b...]
+Compiling architecture design_dijkstra_all_nearest_node_0_0_arch of entity xil_defaultlib.design_dijkstra_all_NEAREST_NODE_0_0 [design_dijkstra_all_nearest_node...]
+Compiling architecture behavioral of entity xil_defaultlib.ROM [rom_default]
+Compiling architecture design_dijkstra_all_rom_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ROM_0_0 [design_dijkstra_all_rom_0_0_defa...]
+Compiling architecture behavioral of entity xil_defaultlib.UPDATE_RAM [\UPDATE_RAM(nb_bit_dist=5,nb_bit...]
+Compiling architecture design_dijkstra_all_update_ram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_UPDATE_RAM_0_0 [design_dijkstra_all_update_ram_0...]
+Compiling architecture gnd_v of entity unisim.GND [gnd_default]
+Compiling architecture rb18_internal_vhdl_v of entity unisim.RB18_INTERNAL_VHDL [\RB18_INTERNAL_VHDL(bram_size=18...]
+Compiling architecture ramb18e1_v of entity unisim.RAMB18E1 [\RAMB18E1(read_width_a=18,read_w...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_wrapper [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_prim_width [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_generic_cstr [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_top [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4_synth [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0_blk_mem_gen_v8_4_4 [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_blk_mem_gen_0_0 [design_dijkstra_all_blk_mem_gen_...]
+Compiling architecture behavioral of entity xil_defaultlib.comparateur1 [\comparateur1(nb_bit_dist=5)\]
+Compiling architecture design_dijkstra_all_comparateur1_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur1_0_0 [design_dijkstra_all_comparateur1...]
+Compiling architecture behavioral of entity xil_defaultlib.comparateur2 [\comparateur2(nb_bit_dist=5,nb_b...]
+Compiling architecture design_dijkstra_all_comparateur2_0_0_arch of entity xil_defaultlib.design_dijkstra_all_comparateur2_0_0 [design_dijkstra_all_comparateur2...]
+Compiling architecture behavioral of entity xil_defaultlib.dpram [dpram_default]
+Compiling architecture design_dijkstra_all_dpram_0_0_arch of entity xil_defaultlib.design_dijkstra_all_dpram_0_0 [design_dijkstra_all_dpram_0_0_de...]
+Compiling architecture design_dijkstra_all_ila_0_0_arch of entity xil_defaultlib.design_dijkstra_all_ila_0_0 [design_dijkstra_all_ila_0_0_defa...]
+Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
+Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
+Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
+Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
+Compiling module xlconstant_v1_1_7.xlconstant_v1_1_7_xlconstant(CON...
+Compiling module xil_defaultlib.design_dijkstra_all_xlconstant_0...
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all [design_dijkstra_all_default]
+Compiling architecture structure of entity xil_defaultlib.design_dijkstra_all_wrapper [design_dijkstra_all_wrapper_defa...]
+Compiling architecture behavioral of entity xil_defaultlib.tb_dijkstra
+Built simulation snapshot tb_dijkstra_behav
