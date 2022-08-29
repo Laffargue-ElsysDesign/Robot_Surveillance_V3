@@ -1,0 +1,246 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Aug 23 16:01:54 2022
+# Process ID: 6596
+# Current directory: D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1
+# Command line: vivado.exe -log design_test_ultrason_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_test_ultrason_wrapper.tcl
+# Log file: D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/design_test_ultrason_wrapper.vds
+# Journal file: D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_test_ultrason_wrapper.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1704] No user IP repositories specified
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_test_ultrason_wrapper -part xc7z020clg400-1
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 13520
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1198.492 ; gain = 71.984
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_wrapper' [D:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/hdl/design_test_ultrason_wrapper.vhd:28]
+INFO: [Synth 8-3491] module 'design_test_ultrason' declared at 'd:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:14' bound to instance 'design_test_ultrason_i' of component 'design_test_ultrason' [D:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/hdl/design_test_ultrason_wrapper.vhd:43]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:32]
+INFO: [Synth 8-3491] module 'design_test_ultrason_Ultrason_0_0' declared at 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_Ultrason_0_0_stub.vhdl:5' bound to instance 'Ultrason_0' of component 'design_test_ultrason_Ultrason_0_0' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:115]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_Ultrason_0_0' [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_Ultrason_0_0_stub.vhdl:23]
+INFO: [Synth 8-3491] module 'design_test_ultrason_clk_wiz_0' declared at 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_clk_wiz_0_stub.vhdl:5' bound to instance 'clk_wiz' of component 'design_test_ultrason_clk_wiz_0' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:130]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_clk_wiz_0' [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_clk_wiz_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_test_ultrason_ila_0_0' declared at 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_ila_0_0_stub.vhdl:5' bound to instance 'ila_0' of component 'design_test_ultrason_ila_0_0' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:135]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_ila_0_0' [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_ila_0_0_stub.vhdl:18]
+INFO: [Synth 8-3491] module 'design_test_ultrason_test_interface_0_0' declared at 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_test_interface_0_0_stub.vhdl:5' bound to instance 'test_interface_0' of component 'design_test_ultrason_test_interface_0_0' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:145]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_test_interface_0_0' [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_test_interface_0_0_stub.vhdl:13]
+INFO: [Synth 8-3491] module 'design_test_ultrason_time_pulse_0_0' declared at 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_time_pulse_0_0_stub.vhdl:5' bound to instance 'time_pulse_0' of component 'design_test_ultrason_time_pulse_0_0' [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:150]
+INFO: [Synth 8-638] synthesizing module 'design_test_ultrason_time_pulse_0_0' [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/.Xil/Vivado-6596-D-14JM0W2/realtime/design_test_ultrason_time_pulse_0_0_stub.vhdl:17]
+INFO: [Synth 8-256] done synthesizing module 'design_test_ultrason' (1#1) [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/synth/design_test_ultrason.vhd:32]
+INFO: [Synth 8-256] done synthesizing module 'design_test_ultrason_wrapper' (2#1) [D:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/hdl/design_test_ultrason_wrapper.vhd:28]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.141 ; gain = 126.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.141 ; gain = 126.633
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1253.141 ; gain = 126.633
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1253.141 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_time_pulse_0_0/design_test_ultrason_time_pulse_0_0/design_test_ultrason_time_pulse_0_0_in_context.xdc] for cell 'design_test_ultrason_i/time_pulse_0'
+Finished Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_time_pulse_0_0/design_test_ultrason_time_pulse_0_0/design_test_ultrason_time_pulse_0_0_in_context.xdc] for cell 'design_test_ultrason_i/time_pulse_0'
+Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0_in_context.xdc] for cell 'design_test_ultrason_i/clk_wiz'
+Finished Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0_in_context.xdc] for cell 'design_test_ultrason_i/clk_wiz'
+Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_Ultrason_0_0/design_test_ultrason_Ultrason_0_0/design_test_ultrason_Ultrason_0_0_in_context.xdc] for cell 'design_test_ultrason_i/Ultrason_0'
+Finished Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_Ultrason_0_0/design_test_ultrason_Ultrason_0_0/design_test_ultrason_Ultrason_0_0_in_context.xdc] for cell 'design_test_ultrason_i/Ultrason_0'
+Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_ila_0_0/design_test_ultrason_ila_0_0/design_test_ultrason_ila_0_0_in_context.xdc] for cell 'design_test_ultrason_i/ila_0'
+Finished Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_ila_0_0/design_test_ultrason_ila_0_0/design_test_ultrason_ila_0_0_in_context.xdc] for cell 'design_test_ultrason_i/ila_0'
+Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_test_interface_0_0/design_test_ultrason_test_interface_0_0/design_test_ultrason_test_interface_0_0_in_context.xdc] for cell 'design_test_ultrason_i/test_interface_0'
+Finished Parsing XDC File [d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_test_interface_0_0/design_test_ultrason_test_interface_0_0/design_test_ultrason_test_interface_0_0_in_context.xdc] for cell 'design_test_ultrason_i/test_interface_0'
+Parsing XDC File [D:/projets/2020_2/project_ultrason/project_ultrason.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
+Finished Parsing XDC File [D:/projets/2020_2/project_ultrason/project_ultrason.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]
+INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/projets/2020_2/project_ultrason/project_ultrason.srcs/constrs_1/imports/Desktop/zybo-z7-20.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_test_ultrason_wrapper_propImpl.xdc].
+Resolution: To avoid this warning, move constraints listed in [.Xil/design_test_ultrason_wrapper_propImpl.xdc] to another XDC file and exclude this new file from synthesis with the used_in_synthesis property (File Properties dialog in GUI) and re-run elaboration/synthesis.
+Parsing XDC File [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/dont_touch.xdc]
+Finished Parsing XDC File [D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/dont_touch.xdc]
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1289.398 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.003 . Memory (MB): peak = 1289.398 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.398 ; gain = 162.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.398 ; gain = 162.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+Applied set_property IO_BUFFER_TYPE = NONE for clk. (constraint file  d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0_in_context.xdc, line 3).
+Applied set_property CLOCK_BUFFER_TYPE = NONE for clk. (constraint file  d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/ip/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0_in_context.xdc, line 4).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i/time_pulse_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i/clk_wiz. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i/Ultrason_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i/ila_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_test_ultrason_i/test_interface_0. (constraint file  auto generated constraint).
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.398 ; gain = 162.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1289.398 ; gain = 162.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1289.398 ; gain = 162.891
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1328.883 ; gain = 202.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1328.883 ; gain = 202.375
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1347.973 ; gain = 221.465
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++------+----------------------------------------+----------+
+|      |BlackBox name                           |Instances |
++------+----------------------------------------+----------+
+|1     |design_test_ultrason_Ultrason_0_0       |         1|
+|2     |design_test_ultrason_clk_wiz_0          |         1|
+|3     |design_test_ultrason_ila_0_0            |         1|
+|4     |design_test_ultrason_test_interface_0_0 |         1|
+|5     |design_test_ultrason_time_pulse_0_0     |         1|
++------+----------------------------------------+----------+
+
+Report Cell Usage: 
++------+---------------------------------------------+------+
+|      |Cell                                         |Count |
++------+---------------------------------------------+------+
+|1     |design_test_ultrason_Ultrason_0_0_bbox       |     1|
+|2     |design_test_ultrason_clk_wiz_0_bbox          |     1|
+|3     |design_test_ultrason_ila_0_0_bbox            |     1|
+|4     |design_test_ultrason_test_interface_0_0_bbox |     1|
+|5     |design_test_ultrason_time_pulse_0_0_bbox     |     1|
+|6     |IBUF                                         |     3|
+|7     |OBUF                                         |     8|
++------+---------------------------------------------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:13 ; elapsed = 00:00:19 . Memory (MB): peak = 1354.781 ; gain = 192.016
+Synthesis Optimization Complete : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1354.781 ; gain = 228.273
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.824 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1367.734 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+31 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:26 ; elapsed = 00:00:28 . Memory (MB): peak = 1367.734 ; gain = 241.227
+INFO: [Common 17-600] The following parameters have non-default value.
+tcl.collectionResultDisplayLimit
+INFO: [Common 17-1381] The checkpoint 'D:/projets/2020_2/project_ultrason/project_ultrason.runs/synth_1/design_test_ultrason_wrapper.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_test_ultrason_wrapper_utilization_synth.rpt -pb design_test_ultrason_wrapper_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Aug 23 16:02:34 2022...
