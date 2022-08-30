@@ -1,0 +1,38 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jul 20 10:59:08 2022
+# Process ID: 20564
+# Current directory: D:/Projet_range/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent10676 D:\Projet_range\project\project.xpr
+# Log file: D:/Projet_range/project/vivado.log
+# Journal file: D:/Projet_range/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projet_range/project/project.xpr
+Scanning sources...
+Finished scanning sources
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Projet_range/sources/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+open_project: Time (s): cpu = 00:00:17 ; elapsed = 00:00:18 . Memory (MB): peak = 1126.516 ; gain = 0.000
+update_compile_order -fileset sources_1
+open_bd_design {D:/Projet_range/project/project.srcs/sources_1/bd/design_fpga/design_fpga.bd}
+Reading block design file <D:/Projet_range/project/project.srcs/sources_1/bd/design_fpga/design_fpga.bd>...
+Adding component instance block -- xilinx.com:module_ref:time_pulse:1.0 - time_pulse_0
+Adding component instance block -- xilinx.com:ip:processing_system7:5.5 - processing_system7_0
+Adding component instance block -- xilinx.com:ip:axi_interconnect:2.1 - ps7_0_axi_periph
+Adding component instance block -- xilinx.com:ip:axi_crossbar:2.1 - xbar
+Adding component instance block -- xilinx.com:ip:axi_protocol_converter:2.1 - auto_pc
+Adding component instance block -- xilinx.com:ip:proc_sys_reset:5.0 - rst_ps7_0_50M
+Adding component instance block -- xilinx.com:ip:axi_uartlite:2.0 - axi_uartlite_0
+Adding component instance block -- elsys-design.com:user:Balise:1.0 - Balise_0
+Adding component instance block -- elsys-design.com:user:Dijkstra_reg:1.0 - Dijkstra_reg_0
+Adding component instance block -- elsys-design.com:user:Timer_ronde:1.0 - Timer_ronde_0
+Adding component instance block -- elsys-design.com:user:IP_IMU:1.0 - IP_IMU_0
+Successfully read diagram <design_fpga> from block design file <D:/Projet_range/project/project.srcs/sources_1/bd/design_fpga/design_fpga.bd>
+open_bd_design: Time (s): cpu = 00:00:14 ; elapsed = 00:00:10 . Memory (MB): peak = 1245.777 ; gain = 119.262
+INFO: [Ipptcl 7-1463] No Compatible Board Interface found. Board Tab not created in customize GUI
+exit
+INFO: [Common 17-206] Exiting Vivado at Wed Jul 20 11:21:50 2022...
