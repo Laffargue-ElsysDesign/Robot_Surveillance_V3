@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 22 09:44:25 2022
+# Process ID: 4300
+# Current directory: D:/projets/2020_2/project_IMU
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent5636 D:\projets\2020_2\project_IMU\project_IMU.xpr
+# Log file: D:/projets/2020_2/project_IMU/vivado.log
+# Journal file: D:/projets/2020_2/project_IMU\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_IMU/project_IMU.xpr
+update_compile_order -fileset sources_1

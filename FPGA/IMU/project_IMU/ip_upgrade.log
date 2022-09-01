@@ -1,0 +1,352 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 12:01:46 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 18) to (Rev. 19)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 11:52:04 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 17) to (Rev. 18)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 11:43:51 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 16) to (Rev. 17)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 11:37:20 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 15) to (Rev. 16)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 11:30:41 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 14) to (Rev. 15)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jul 20 10:57:54 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 13) to (Rev. 14)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Jul 19 10:32:57 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 12) to (Rev. 13)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Jul 19 10:24:59 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 11) to (Rev. 12)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Jul 18 16:23:49 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 10) to (Rev. 11)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Jul 18 15:37:49 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 9) to (Rev. 10)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Mon Jul 18 15:03:28 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 8) to (Rev. 9)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Thu Jun 16 12:04:38 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 7) to (Rev. 8)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 15 16:04:36 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 6) to (Rev. 7)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 15 15:08:21 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 5) to (Rev. 6)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 15 14:16:26 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 4) to (Rev. 5)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 15 14:05:08 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 3) to (Rev. 4)
+
+
+
+
+
+
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Wed Jun 15 14:01:32 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_IMU_AXI_IP_IMU_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_IMU_AXI_IP_IMU_0_0 (elsys-design.com:user:IP_IMU:1.0) from (Rev. 2) to (Rev. 3)
+

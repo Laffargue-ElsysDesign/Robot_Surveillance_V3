@@ -1,0 +1,1525 @@
+!SESSION 2022-07-21 10:03:38.544 -----------------------------------------------
+eclipse.buildId=2020.2
+java.version=11.0.2
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=fr_FR
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+This is a continuation of log file D:\projets\2020_2\project_IMU\vitis\.metadata\.bak_0.log
+Created Time: 2022-07-21 10:13:35.165
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.165
+!MESSAGE XSCT Command: [::hsi::utils::get_ps_config_params -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.171
+!MESSAGE XSCT command with result: [::hsi::utils::get_ps_config_params -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa], Result: [null, {"PCW_APU_PERIPHERAL_FREQMHZ": "667",
+"PCW_DDR_HPRLPR_QUEUE_PARTITION": "HPR(0)/LPR(32)",
+"PCW_DDR_HPR_TO_CRITICAL_PRIORITY_LEVEL": "15",
+"PCW_DDR_LPR_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_DDR_PORT0_HPR_ENABLE": "0",
+"PCW_DDR_PORT1_HPR_ENABLE": "0",
+"PCW_DDR_PORT2_HPR_ENABLE": "0",
+"PCW_DDR_PORT3_HPR_ENABLE": "0",
+"PCW_DDR_WRITE_TO_CRITICAL_PRIORITY_LEVEL": "2",
+"PCW_FPGA0_PERIPHERAL_FREQMHZ": "50",
+"PCW_UIPARAM_DDR_BUS_WIDTH": "32 Bit",
+"PCW_UIPARAM_DDR_FREQ_MHZ": "533.333333",
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.173
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.180
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Result: [null, {"IP_IMU_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.181
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.194
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Result: [null, {"IP_IMU_0_S00_AXI": {"name": "IP_IMU_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x3FFFFFFF",
+"size": "1072693248",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.195
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.198
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.199
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.202
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.202
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.215
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.216
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.218
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.219
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_FREQ], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.231
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_FREQ], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.232
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.235
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.236
+!MESSAGE XSCT Command: [::hsi::utils::get_cpu_nr -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.239
+!MESSAGE XSCT command with result: [::hsi::utils::get_cpu_nr -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa], Result: [null, {"ps7_cortexa9_0": {"bscan": "",
+"index": "0",
+},
+"ps7_cortexa9_1": {"bscan": "",
+"index": "1",
+},
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.240
+!MESSAGE XSCT Command: [::hsi::utils::get_all_register_data -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.262
+!MESSAGE XSCT command with result: [::hsi::utils::get_all_register_data -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1], Result: [null, {"IP_IMU_0": {},
+"ps7_afi_0": {},
+"ps7_afi_1": {},
+"ps7_afi_2": {},
+"ps7_afi_3": {},
+"ps7_coresight_comp_0": {},
+"ps7_ddr_0": {},
+"ps7_ddrc_0": {},
+"ps7_dev_cfg_0": {},
+"ps7_dma_ns": {},
+"ps7_dma_s": {},
+"ps7_ethernet_0": {},
+"ps7_globaltimer_0": {},
+"ps7_gpio_0": {},
+"ps7_gpv_0": {},
+"ps7_intc_dist_0": {},
+"ps7_iop_bus_config_0": {},
+"ps7_l2cachec_0": {},
+"ps7_ocmc_0": {},
+"ps7_pl310_0": {},
+"ps7_pmu_0": {},
+"ps7_qspi_0": {},
+"ps7_qspi_linear_0": {},
+"ps7_ram_0": {},
+"ps7_ram_1": {},
+"ps7_scuc_0": {},
+"ps7_scugic_0": {},
+"ps7_scutimer_0": {},
+"ps7_scuwdt_0": {},
+"ps7_sd_0": {},
+"ps7_slcr_0": {},
+"ps7_uart_1": {},
+"ps7_usb_0": {},
+"ps7_xadc_0": {},
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.262
+!MESSAGE XSCT Command: [::hsi::utils::get_addr_ranges -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.276
+!MESSAGE XSCT command with result: [::hsi::utils::get_addr_ranges -json D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1], Result: [null, {"IP_IMU_0_S00_AXI": {"name": "IP_IMU_0",
+"base": "0x43C00000",
+"high": "0x43C0FFFF",
+"size": "65536",
+"slaveintf": "S00_AXI",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_0": {"name": "ps7_afi_0",
+"base": "0xF8008000",
+"high": "0xF8008FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_1": {"name": "ps7_afi_1",
+"base": "0xF8009000",
+"high": "0xF8009FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_2": {"name": "ps7_afi_2",
+"base": "0xF800A000",
+"high": "0xF800AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_afi_3": {"name": "ps7_afi_3",
+"base": "0xF800B000",
+"high": "0xF800BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_coresight_comp_0": {"name": "ps7_coresight_comp_0",
+"base": "0xF8800000",
+"high": "0xF88FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddrc_0": {"name": "ps7_ddrc_0",
+"base": "0xF8006000",
+"high": "0xF8006FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dev_cfg_0": {"name": "ps7_dev_cfg_0",
+"base": "0xF8007000",
+"high": "0xF80070FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_ns": {"name": "ps7_dma_ns",
+"base": "0xF8004000",
+"high": "0xF8004FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_dma_s": {"name": "ps7_dma_s",
+"base": "0xF8003000",
+"high": "0xF8003FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ethernet_0": {"name": "ps7_ethernet_0",
+"base": "0xE000B000",
+"high": "0xE000BFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_globaltimer_0": {"name": "ps7_globaltimer_0",
+"base": "0xF8F00200",
+"high": "0xF8F002FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpio_0": {"name": "ps7_gpio_0",
+"base": "0xE000A000",
+"high": "0xE000AFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_gpv_0": {"name": "ps7_gpv_0",
+"base": "0xF8900000",
+"high": "0xF89FFFFF",
+"size": "1048576",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_intc_dist_0": {"name": "ps7_intc_dist_0",
+"base": "0xF8F01000",
+"high": "0xF8F01FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_iop_bus_config_0": {"name": "ps7_iop_bus_config_0",
+"base": "0xE0200000",
+"high": "0xE0200FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_l2cachec_0": {"name": "ps7_l2cachec_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ocmc_0": {"name": "ps7_ocmc_0",
+"base": "0xF800C000",
+"high": "0xF800CFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pl310_0": {"name": "ps7_pl310_0",
+"base": "0xF8F02000",
+"high": "0xF8F02FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_pmu_0": {"name": "ps7_pmu_0",
+"base": "0xF8893000",
+"high": "0xF8893FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_0": {"name": "ps7_qspi_0",
+"base": "0xE000D000",
+"high": "0xE000DFFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_qspi_linear_0": {"name": "ps7_qspi_linear_0",
+"base": "0xFC000000",
+"high": "0xFCFFFFFF",
+"size": "16777216",
+"slaveintf": "",
+"type": "FLASH",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuc_0": {"name": "ps7_scuc_0",
+"base": "0xF8F00000",
+"high": "0xF8F000FC",
+"size": "253",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scugic_0": {"name": "ps7_scugic_0",
+"base": "0xF8F00100",
+"high": "0xF8F001FF",
+"size": "256",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scutimer_0": {"name": "ps7_scutimer_0",
+"base": "0xF8F00600",
+"high": "0xF8F0061F",
+"size": "32",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_scuwdt_0": {"name": "ps7_scuwdt_0",
+"base": "0xF8F00620",
+"high": "0xF8F006FF",
+"size": "224",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_sd_0": {"name": "ps7_sd_0",
+"base": "0xE0100000",
+"high": "0xE0100FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_slcr_0": {"name": "ps7_slcr_0",
+"base": "0xF8000000",
+"high": "0xF8000FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_uart_1": {"name": "ps7_uart_1",
+"base": "0xE0001000",
+"high": "0xE0001FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_usb_0": {"name": "ps7_usb_0",
+"base": "0xE0002000",
+"high": "0xE0002FFF",
+"size": "4096",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_xadc_0": {"name": "ps7_xadc_0",
+"base": "0xF8007100",
+"high": "0xF8007120",
+"size": "33",
+"slaveintf": "",
+"type": "REGISTER",
+"flags": "3",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ddr_0": {"name": "ps7_ddr_0",
+"base": "0x00100000",
+"high": "0x3FFFFFFF",
+"size": "1072693248",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_0": {"name": "ps7_ram_0",
+"base": "0x00000000",
+"high": "0x0002FFFF",
+"size": "196608",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+"ps7_ram_1": {"name": "ps7_ram_1",
+"base": "0xFFFF0000",
+"high": "0xFFFFFDFF",
+"size": "65024",
+"slaveintf": "",
+"type": "MEMORY",
+"flags": "7",
+"segment": "",
+"acctype": "",
+"tz": "",
+},
+}]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.277
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.280
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_ENABLED], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.280
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.292
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_EVENT_COUNTERS], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.293
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.296
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_LATENCY_COUNTERS], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.297
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.299
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_DEBUG_COUNTER_WIDTH], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.307
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_FREQ], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.310
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_FREQ], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.311
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.313
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_param_value D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_1 C_CPU_CLK_FREQ_HZ], Result: [null, 666666687]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.315
+!MESSAGE XSCT Command: [::hsi::utils::get_connected_periphs D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.326
+!MESSAGE XSCT command with result: [::hsi::utils::get_connected_periphs D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa ps7_cortexa9_0], Result: [null, IP_IMU_0 ps7_afi_0 ps7_afi_1 ps7_afi_2 ps7_afi_3 ps7_coresight_comp_0 ps7_ddr_0 ps7_ddrc_0 ps7_dev_cfg_0 ps7_dma_ns ps7_dma_s ps7_ethernet_0 ps7_globaltimer_0 ps7_gpio_0 ps7_gpv_0 ps7_intc_dist_0 ps7_iop_bus_config_0 ps7_l2cachec_0 ps7_ocmc_0 ps7_pl310_0 ps7_pmu_0 ps7_qspi_0 ps7_qspi_linear_0 ps7_ram_0 ps7_ram_1 ps7_scuc_0 ps7_scugic_0 ps7_scutimer_0 ps7_scuwdt_0 ps7_sd_0 ps7_slcr_0 ps7_uart_1 ps7_usb_0 ps7_xadc_0]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.328
+!MESSAGE XSCT Command: [::hsi::utils::get_hw_files_on_hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa bit], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.330
+!MESSAGE XSCT command with result: [::hsi::utils::get_hw_files_on_hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa bit], Result: [null, design_IMU_AXI_wrapper.bit]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.332
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.355
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.371
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.591
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.592
+!MESSAGE XSCT Command: [version -server], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.594
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.594
+!MESSAGE XSCT Command: [version], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.606
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.609
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.614
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.615
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.631
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.639
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.645
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.645
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.662
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.664
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.669
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.670
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.687
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.690
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.697
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.698
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.715
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.716
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.723
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.724
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.740
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.743
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.749
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1  Digilent Zybo Z7 210351B4815EA]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.750
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.767
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.768
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B4815EA" && level == 0}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.806
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B4815EA" && level == 0}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.807
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.815
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.816
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.827
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.828
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.903
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:35.904
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:38.919
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:38.940
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:38.946
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:38.946
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:38.964
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.002
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.004
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#1]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.005
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.011
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.012
+!MESSAGE XSCT Command: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.013
+!MESSAGE XSCT command with result: [proc fetch_device_jtag_ctx { node_id } {
+foreach t [jtag ta -ta] {
+if {[dict get $t node_id] == $node_id} {
+return [dict get $t target_ctx]
+}
+}
+error cannot find a jtag device with node id $node_id}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.014
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.019
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.020
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.038
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.039
+!MESSAGE XSCT Command: [fetch_device_jtag_ctx 2], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.041
+!MESSAGE XSCT command with result: [fetch_device_jtag_ctx 2], Result: [null, jsn-Zybo Z7-210351B4815EA-4ba00477-0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.042
+!MESSAGE XSCT Command: [fetch_device_jtag_ctx 3], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.044
+!MESSAGE XSCT command with result: [fetch_device_jtag_ctx 3], Result: [null, jsn-Zybo Z7-210351B4815EA-23727093-0]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.061
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.089
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:39.090
+!MESSAGE XSCT Command: [fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.460
+!MESSAGE XSCT command with result: [fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.493
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.500
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.501
+!MESSAGE XSCT Command: [loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.542
+!MESSAGE XSCT command with result: [loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_IMU_AXI_wrapper]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.543
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.544
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.545
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.553
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.554
+!MESSAGE XSCT Command: [source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.600
+!MESSAGE XSCT command with result: [source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:41.601
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.081
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.084
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.123
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.124
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.132
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.133
+!MESSAGE XSCT Command: [dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.337
+!MESSAGE XSCT command with result: [dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.338
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.455
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.641
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.669
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.670
+!MESSAGE XSCT Command: [con], Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 10:13:42.710
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-8: Launching SystemDebugger_IMU_project_system
+
+!ENTRY org.eclipse.remote.console 4 0 2022-07-21 10:14:05.752
+!MESSAGE Error opening \\.\COM5 (2)
+!STACK 0
+java.io.IOException: Error opening \\.\COM5 (2)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:312)
+	at org.eclipse.remote.serial.core.SerialPortCommandShell.<init>(SerialPortCommandShell.java:31)
+	at org.eclipse.remote.serial.core.SerialPortConnection.getCommandShell(SerialPortConnection.java:90)
+	at org.eclipse.remote.internal.console.TerminalConsoleConnector$1.run(TerminalConsoleConnector.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.remote.console 4 0 2022-07-21 10:14:05.753
+!MESSAGE Error opening \\.\COM5 (2)
+!STACK 0
+java.io.IOException: Error opening \\.\COM5 (2)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:312)
+	at org.eclipse.remote.serial.core.SerialPortCommandShell.<init>(SerialPortCommandShell.java:31)
+	at org.eclipse.remote.serial.core.SerialPortConnection.getCommandShell(SerialPortConnection.java:90)
+	at org.eclipse.remote.internal.console.TerminalConsoleConnector$1.run(TerminalConsoleConnector.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY org.eclipse.remote.console 4 0 2022-07-21 10:14:08.329
+!MESSAGE Error opening \\.\COM5 (2)
+!STACK 0
+java.io.IOException: Error opening \\.\COM5 (2)
+	at org.eclipse.cdt.serial.SerialPort.open0(Native Method)
+	at org.eclipse.cdt.serial.SerialPort.open(SerialPort.java:312)
+	at org.eclipse.remote.serial.core.SerialPortCommandShell.<init>(SerialPortCommandShell.java:31)
+	at org.eclipse.remote.serial.core.SerialPortConnection.getCommandShell(SerialPortConnection.java:90)
+	at org.eclipse.remote.internal.console.TerminalConsoleConnector$1.run(TerminalConsoleConnector.java:137)
+	at org.eclipse.core.internal.jobs.Worker.run(Worker.java:63)
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:04.864
+!MESSAGE XSCT Command: [disconnect tcfchan#1], Thread: Thread-308
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:04.916
+!MESSAGE XSCT command with result: [disconnect tcfchan#1], Result: [null, ]. Thread: Thread-308
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.031
+!MESSAGE XSCT Command: [connect -url tcp:127.0.0.1:3121], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.052
+!MESSAGE XSCT command with result: [connect -url tcp:127.0.0.1:3121], Result: [null, tcfchan#2]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.053
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.102
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.102
+!MESSAGE XSCT Command: [version -server], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.105
+!MESSAGE XSCT command with result: [version -server], Result: [null, 2020.2]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.105
+!MESSAGE XSCT Command: [version], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.106
+!MESSAGE XSCT command with result: [version], Result: [null, xsct 2020.2
+SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.125
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.131
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.132
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.148
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.149
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.154
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.155
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.171
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.172
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.178
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.179
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.194
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.195
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.201
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.202
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.219
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.220
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.226
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.227
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.244
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.245
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.250
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.251
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.266
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.267
+!MESSAGE XSCT Command: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B4815EA" && level == 0}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.281
+!MESSAGE XSCT command with result: [jtag targets -set -filter {name =~ "Digilent Zybo Z7 210351B4815EA" && level == 0}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.282
+!MESSAGE XSCT Command: [jtag frequency], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.287
+!MESSAGE XSCT command with result: [jtag frequency], Result: [null, 15000000]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.287
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.298
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.299
+!MESSAGE XSCT Command: [rst -system], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.373
+!MESSAGE XSCT command with result: [rst -system], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:05.374
+!MESSAGE XSCT Command: [after 3000], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.386
+!MESSAGE XSCT command with result: [after 3000], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.401
+!MESSAGE XSCT Command: [jtag targets -filter {level == 0}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.416
+!MESSAGE XSCT command with result: [jtag targets -filter {level == 0}], Result: [null,   1* Digilent Zybo Z7 210351B4815EA]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.418
+!MESSAGE XSCT Command: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.434
+!MESSAGE XSCT command with result: [jtag targets -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==1}], Result: [null,      2  arm_dap (idcode 4ba00477 irlen 4)
+     3  xc7z020 (idcode 23727093 irlen 6 fpga)]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.435
+!MESSAGE XSCT Command: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.463
+!MESSAGE XSCT command with result: [targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4815EA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4815EA-23727093-0"}], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:08.464
+!MESSAGE XSCT Command: [fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit], Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:10.842
+!MESSAGE XSCT command with result: [fpga -file D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit], Result: [null, ]. Thread: ModalContext
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:10.889
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:10.897
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:10.898
+!MESSAGE XSCT Command: [loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.850
+!MESSAGE XSCT command with result: [loadhw -hw D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/hw/design_IMU_AXI_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs], Result: [null, design_IMU_AXI_wrapper_0]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.851
+!MESSAGE XSCT Command: [configparams force-mem-access 1], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.853
+!MESSAGE XSCT command with result: [configparams force-mem-access 1], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.853
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~"APU*"}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.861
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~"APU*"}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.862
+!MESSAGE XSCT Command: [source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.887
+!MESSAGE XSCT command with result: [source D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/psinit/ps7_init.tcl], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:12.888
+!MESSAGE XSCT Command: [ps7_init], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.266
+!MESSAGE XSCT command with result: [ps7_init], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.267
+!MESSAGE XSCT Command: [ps7_post_config], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.296
+!MESSAGE XSCT command with result: [ps7_post_config], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.297
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.312
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.313
+!MESSAGE XSCT Command: [dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.523
+!MESSAGE XSCT command with result: [dow D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.524
+!MESSAGE XSCT Command: [configparams force-mem-access 0], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.625
+!MESSAGE XSCT command with result: [configparams force-mem-access 0], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.709
+!MESSAGE XSCT Command: [targets -set -nocase -filter {name =~ "*A9*#0"}], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.718
+!MESSAGE XSCT command with result: [targets -set -nocase -filter {name =~ "*A9*#0"}], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.722
+!MESSAGE XSCT Command: [con], Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 14:06:13.748
+!MESSAGE XSCT command with result: [con], Result: [null, ]. Thread: Worker-55: Launching SystemDebugger_IMU_project_system
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 16:38:10.496
+!MESSAGE XSCT Command: [disconnect tcfchan#2], Thread: Thread-369
+
+!ENTRY com.xilinx.sdk.utils 0 0 2022-07-21 16:38:10.512
+!MESSAGE XSCT command with result: [disconnect tcfchan#2], Result: [null, ]. Thread: Thread-369
