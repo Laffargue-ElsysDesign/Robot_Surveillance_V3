@@ -1,0 +1,37 @@
+<?xml version="1.0"?>
+<Runs Version="1" Minor="0">
+	<Run Id="design_dijkstra_blk_mem_gen_1_0_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_blk_mem_gen_1_0_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_DIJKSTRA_CONTROLLER_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_DIJKSTRA_CONTROLLER_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_UPDATE_RAM_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_UPDATE_RAM_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_NEAREST_NODE_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_NEAREST_NODE_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_ROM_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_ROM_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_comparateur1_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_comparateur1_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_comparateur2_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_comparateur2_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="design_dijkstra_clk_wiz_0_1_synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/design_dijkstra_clk_wiz_0_1_synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado"/>
+	<Run Id="synth_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/synth_1" FlowId="Vivado_Synthesis" FromStepId="vivado" ToStepId="vivado">
+		<Parent Id="design_dijkstra_blk_mem_gen_1_0_synth_1"/>
+		<Parent Id="design_dijkstra_DIJKSTRA_CONTROLLER_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_UPDATE_RAM_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_NEAREST_NODE_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_ROM_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_comparateur1_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_comparateur2_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_clk_wiz_0_1_synth_1"/>
+	</Run>
+	<Run Id="impl_1" LaunchDir="D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1" FlowId="Vivado_Implementation" FromStepId="init_design" ToStepId="write_bitstream">
+		<Parent Id="synth_1"/>
+		<Parent Id="design_dijkstra_blk_mem_gen_1_0_synth_1"/>
+		<Parent Id="design_dijkstra_DIJKSTRA_CONTROLLER_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_UPDATE_RAM_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_NEAREST_NODE_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_ROM_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_comparateur1_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_comparateur2_0_1_synth_1"/>
+		<Parent Id="design_dijkstra_clk_wiz_0_1_synth_1"/>
+	</Run>
+	<Parameters>
+		<Parameter Name="runs.monitorLSFJobs" Val="true" Type="bool"/>
+		<Parameter Name="runs.enableClusterConf" Val="true" Type="bool"/>
+	</Parameters>
+</Runs>
+

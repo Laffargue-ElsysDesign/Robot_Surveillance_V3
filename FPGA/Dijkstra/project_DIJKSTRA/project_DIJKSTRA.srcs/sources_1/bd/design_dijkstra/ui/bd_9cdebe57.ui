@@ -1,0 +1,71 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.434483",
+   "Default View_TopLeft":"-433,0",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 720 -defaultsOSRD
+preplace port en -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace port flag_finished -pg 1 -lvl 6 -x 1880 -y 270 -defaultsOSRD
+preplace port resetn -pg 1 -lvl 0 -x -10 -y 700 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y 640 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 5 -x 1760 -y 120 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 710 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 5 -x 1760 -y 550 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 800 -y 70 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 2 -x 390 -y 490 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 3 -x 800 -y 170 -defaultsOSRD
+preplace inst blk_mem_gen_1 -pg 1 -lvl 5 -x 1760 -y 960 -defaultsOSRD
+preplace inst ROM_0 -pg 1 -lvl 2 -x 390 -y 1080 -defaultsOSRD
+preplace inst comparateur1_0 -pg 1 -lvl 2 -x 390 -y 890 -defaultsOSRD
+preplace inst comparateur2_0 -pg 1 -lvl 2 -x 390 -y 730 -defaultsOSRD
+preplace inst NEAREST_NODE_0 -pg 1 -lvl 3 -x 800 -y 410 -defaultsOSRD
+preplace inst DIJKSTRA_CONTROLLER_0 -pg 1 -lvl 4 -x 1320 -y 340 -defaultsOSRD
+preplace inst UPDATE_RAM_0 -pg 1 -lvl 3 -x 800 -y 810 -defaultsOSRD
+preplace netloc DIJKSTRA_CONTROLLER_0_en_NearestNode 1 2 3 610 250 1080J 490 1510
+preplace netloc DIJKSTRA_CONTROLLER_0_en_UpdateRam 1 2 3 600 630 NJ 630 1540
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_finished 1 4 2 NJ 260 1860J
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_init 1 2 3 590 670 1130J 600 1500
+preplace netloc DIJKSTRA_CONTROLLER_0_flag_read_path 1 2 3 590 230 1040J 200 1470
+preplace netloc DIJKSTRA_CONTROLLER_0_node 1 2 3 610 650 NJ 650 1480
+preplace netloc DIJKSTRA_CONTROLLER_0_node_seen 1 2 3 570 590 1100J 530 1490
+preplace netloc NEAREST_NODE_0_addr_ram 1 3 2 1040J 550 1520
+preplace netloc NEAREST_NODE_0_addr_ram_ext 1 3 2 1050 480 1520J
+preplace netloc NEAREST_NODE_0_comp_in1 1 1 4 240 570 NJ 570 1000 500 1530
+preplace netloc NEAREST_NODE_0_comp_in2 1 1 4 250 580 NJ 580 990 510 1470
+preplace netloc NEAREST_NODE_0_din_ram_ext 1 3 2 1010J 520 1580
+preplace netloc NEAREST_NODE_0_en_ram_ext 1 3 2 1030 160 NJ
+preplace netloc NEAREST_NODE_0_flag_end_write 1 3 1 1090 330n
+preplace netloc NEAREST_NODE_0_flag_node 1 3 1 1100 310n
+preplace netloc NEAREST_NODE_0_next_node 1 3 1 1070 350n
+preplace netloc NEAREST_NODE_0_we_ram_ext 1 3 2 980 180 NJ
+preplace netloc ROM_0_data_rom 1 2 1 590 870n
+preplace netloc UPDATE_RAM_0_addr_ram 1 3 2 N 830 1600
+preplace netloc UPDATE_RAM_0_addr_rom 1 1 3 230 980 NJ 980 970
+preplace netloc UPDATE_RAM_0_comp_in1 1 1 3 240 990 NJ 990 1110
+preplace netloc UPDATE_RAM_0_comp_in2 1 1 3 250 1000 NJ 1000 1090
+preplace netloc UPDATE_RAM_0_din_ram 1 3 2 N 850 1590
+preplace netloc UPDATE_RAM_0_en_rom 1 1 3 220 640 NJ 640 1050
+preplace netloc UPDATE_RAM_0_flag_RAM 1 3 2 1120 620 1570J
+preplace netloc UPDATE_RAM_0_we_ram 1 3 2 NJ 890 1490
+preplace netloc blk_mem_gen_0_douta 1 2 3 580 10 NJ 10 1570J
+preplace netloc clk_0_1 1 1 4 200 620 530 600 1060 190 1560
+preplace netloc clk_1 1 0 1 NJ 720
+preplace netloc comparateur1_0_comp_out 1 2 1 550 850n
+preplace netloc comparateur2_0_comp_out 1 2 3 540 620 1010J 540 1550J
+preplace netloc dpram_0_data_out_b 1 2 3 590 660 NJ 660 1470
+preplace netloc en_0_1 1 0 4 NJ 240 NJ 240 NJ 240 1120J
+preplace netloc resetn_0_1 1 0 1 NJ 700
+preplace netloc rst_n_0_1 1 0 4 NJ 640 210 630 560 610 970J
+preplace netloc xlconstant_0_dout 1 3 1 1130J 70n
+preplace netloc xlconstant_1_dout 1 2 1 550J 490n
+preplace netloc xlconstant_2_dout 1 3 1 1110J 170n
+preplace netloc NEAREST_NODE_0_en_ram 1 3 2 1020 610 1500J
+preplace netloc UPDATE_RAM_0_en_ram 1 3 2 NJ 870 1510
+preplace netloc blk_mem_gen_1_douta 1 2 3 610 950 1130J 930 NJ
+levelinfo -pg 1 -10 110 390 800 1320 1760 1880
+pagesize -pg 1 -db -bbox -sgen -100 0 2010 1170
+"
+}
+0

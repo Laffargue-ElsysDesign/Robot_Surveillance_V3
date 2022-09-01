@@ -1,0 +1,46 @@
+Nothing to build in platform 'design_IMU_AXI_wrapper'
+
+10:13:21 **** Incremental Build of configuration Debug for project IMU_project ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/sw/design_IMU_AXI_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:69:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+   69 |   printf("Read mag_x : %d \n\r", *(baseaddr+3));
+      |                        ~^        ~~~~~~~~~~~~~
+      |                         |        |
+      |                         int      int32_t {aka long int}
+      |                        %ld
+../src/helloworld.c:71:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+   71 |   printf("Read mag_y : %d \n\r", *(baseaddr+4));
+      |                        ~^        ~~~~~~~~~~~~~
+      |                         |        |
+      |                         int      int32_t {aka long int}
+      |                        %ld
+../src/helloworld.c:73:24: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+   73 |   printf("Read mag_z: %d \n\r", *(baseaddr+5));
+      |                       ~^        ~~~~~~~~~~~~~
+      |                        |        |
+      |                        int      int32_t {aka long int}
+      |                       %ld
+../src/helloworld.c:74:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+   74 |   sleep(1);
+      |   ^~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: IMU_project.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/sw/design_IMU_AXI_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "IMU_project.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: IMU_project.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size IMU_project.elf  |tee "IMU_project.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  50564	   2548	  22640	  75752	  127e8	IMU_project.elf
+'Finished building: IMU_project.elf.size'
+' '

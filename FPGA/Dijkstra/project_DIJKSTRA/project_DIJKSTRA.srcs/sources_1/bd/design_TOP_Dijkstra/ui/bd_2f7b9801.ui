@@ -1,0 +1,36 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.867241",
+   "Default View_TopLeft":"-254,-1",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port clk -pg 1 -lvl 0 -x -10 -y 130 -defaultsOSRD
+preplace port en -pg 1 -lvl 0 -x -10 -y 260 -defaultsOSRD
+preplace port flag_finished -pg 1 -lvl 4 -x 870 -y 240 -defaultsOSRD
+preplace port rst_n -pg 1 -lvl 0 -x -10 -y 240 -defaultsOSRD
+preplace inst blk_mem_gen_0 -pg 1 -lvl 3 -x 750 -y 120 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 110 -y 320 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 1 -x 110 -y 420 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 3 -x 750 -y 370 -defaultsOSRD
+preplace inst xlconstant_2 -pg 1 -lvl 1 -x 110 -y 520 -defaultsOSRD
+preplace inst clk_wiz_0 -pg 1 -lvl 1 -x 110 -y 130 -defaultsOSRD
+preplace inst TOP_dijkstra_0 -pg 1 -lvl 2 -x 410 -y 280 -defaultsOSRD
+preplace netloc clk_0_1 1 1 2 230 130 650
+preplace netloc en_0_1 1 0 3 NJ 260 200J 160 580
+preplace netloc TOP_dijkstra_0_flag_finished 1 2 2 600 520 850J
+preplace netloc rst_n_0_1 1 0 2 NJ 240 NJ
+preplace netloc TOP_dijkstra_0_addr_ram_ext 1 2 1 630 80n
+preplace netloc TOP_dijkstra_0_din_ram_ext 1 2 1 640 120n
+preplace netloc TOP_dijkstra_0_we_ram_ext 1 2 1 620 180n
+preplace netloc TOP_dijkstra_0_en_ram_ext 1 2 1 590 160n
+preplace netloc xlconstant_0_dout 1 1 2 210 400 N
+preplace netloc xlconstant_1_dout 1 1 2 220 420 N
+preplace netloc blk_mem_gen_0_douta 1 1 2 230 410 610J
+preplace netloc xlconstant_2_dout 1 1 1 200J 340n
+preplace netloc clk_1 1 0 1 NJ 130
+levelinfo -pg 1 -10 110 410 750 870
+pagesize -pg 1 -db -bbox -sgen -90 0 1000 580
+"
+}
+0

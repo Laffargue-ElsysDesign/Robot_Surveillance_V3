@@ -1,0 +1,78 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun  8 11:26:53 2022
+# Process ID: 6548
+# Current directory: D:/projets/2020_2/project_DIJKSTRA
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent4920 D:\projets\2020_2\project_DIJKSTRA\project_DIJKSTRA.xpr
+# Log file: D:/projets/2020_2/project_DIJKSTRA/vivado.log
+# Journal file: D:/projets/2020_2/project_DIJKSTRA\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.xpr
+open_hw_manager
+connect_hw_server -allow_non_jtag
+open_hw_target
+set_property PROGRAM.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.bit} [get_hw_devices xc7z020_1]
+set_property PROBES.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.ltx} [get_hw_devices xc7z020_1]
+set_property FULL_PROBES.FILE {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.runs/impl_1/design_dijkstra_all_wrapper.ltx} [get_hw_devices xc7z020_1]
+current_hw_device [get_hw_devices xc7z020_1]
+refresh_hw_device [lindex [get_hw_devices xc7z020_1] 0]
+display_hw_ila_data [ get_hw_ila_data hw_ila_data_1 -of_objects [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]]
+update_compile_order -fileset sources_1
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+run_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+wait_on_hw_ila [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]
+display_hw_ila_data [upload_hw_ila_data [get_hw_ilas -of_objects [get_hw_devices xc7z020_1] -filter {CELL_NAME=~"design_dijkstra_all_i/ila_0"}]]
+open_bd_design {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra/design_dijkstra.bd}
+open_bd_design {D:/projets/2020_2/project_DIJKSTRA/project_DIJKSTRA.srcs/sources_1/bd/design_dijkstra_all/design_dijkstra_all.bd}
+current_bd_design [get_bd_designs design_dijkstra]
+startgroup
+delete_bd_objs [get_bd_nets UPDATE_RAM_0_we_ram] [get_bd_nets DIJKSTRA_CONTROLLER_0_node] [get_bd_nets NEAREST_NODE_0_en_ram_ext] [get_bd_nets DIJKSTRA_CONTROLLER_0_led_c] [get_bd_nets blk_mem_gen_1_douta] [get_bd_nets xlconstant_0_dout] [get_bd_nets NEAREST_NODE_0_next_node] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_finished] [get_bd_nets blk_mem_gen_1_doutb] [get_bd_nets UPDATE_RAM_0_addr_ram] [get_bd_nets clk_0_1] [get_bd_nets NEAREST_NODE_0_we_ram_ext] [get_bd_nets NEAREST_NODE_0_comp_in1] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_read_path] [get_bd_nets NEAREST_NODE_0_led_n] [get_bd_nets blk_mem_gen_0_douta] [get_bd_nets UPDATE_RAM_0_comp_in1] [get_bd_nets ROM_0_data_rom] [get_bd_nets NEAREST_NODE_0_comp_in2] [get_bd_nets rst_n_0_1] [get_bd_nets comparateur1_0_comp_out] [get_bd_nets UPDATE_RAM_0_comp_in2] [get_bd_nets DIJKSTRA_CONTROLLER_0_flag_init] [get_bd_nets UPDATE_RAM_0_flag_RAM] [get_bd_nets DIJKSTRA_CONTROLLER_0_en_UpdateRam] [get_bd_nets DIJKSTRA_CONTROLLER_0_en_NearestNode] [get_bd_nets UPDATE_RAM_0_led_u] [get_bd_nets NEAREST_NODE_0_din_ram_ext] [get_bd_nets DIJKSTRA_CONTROLLER_0_node_seen] [get_bd_nets clk_1] [get_bd_nets xlconstant_1_dout] [get_bd_nets UPDATE_RAM_0_en_rom] [get_bd_nets NEAREST_NODE_0_en_ram] [get_bd_nets xlconstant_2_dout] [get_bd_nets UPDATE_RAM_0_din_ram] [get_bd_nets UPDATE_RAM_0_addr_rom] [get_bd_nets NEAREST_NODE_0_addr_ram_ext] [get_bd_nets NEAREST_NODE_0_addr_ram] [get_bd_nets UPDATE_RAM_0_en_ram] [get_bd_nets NEAREST_NODE_0_flag_end_write] [get_bd_nets en_0_1] [get_bd_nets comparateur2_0_comp_out] [get_bd_nets NEAREST_NODE_0_flag_node]
+delete_bd_objs [get_bd_cells comparateur2_0] [get_bd_cells UPDATE_RAM_0] [get_bd_cells comparateur1_0] [get_bd_cells xlconstant_0] [get_bd_cells xlconstant_1] [get_bd_cells NEAREST_NODE_0] [get_bd_cells xlconstant_2] [get_bd_cells blk_mem_gen_0] [get_bd_cells ROM_0] [get_bd_cells DIJKSTRA_CONTROLLER_0] [get_bd_cells blk_mem_gen_1] [get_bd_cells clk_wiz_0]
+delete_bd_objs [get_bd_ports rst_n] [get_bd_ports clk] [get_bd_ports en] [get_bd_ports flag_finished] [get_bd_ports led_u] [get_bd_ports led_c] [get_bd_ports led_n]
+endgroup
+current_bd_design design_dijkstra_all
+set tmpCopyObjs [concat  [get_bd_cells {ila_0 xlconstant_1 comparateur2_0 clk_wiz_0 NEAREST_NODE_0 comparateur1_0 xlconstant_0 xlconstant_2 blk_mem_gen_0 ROM_0 dpram_0 UPDATE_RAM_0 DIJKSTRA_CONTROLLER_0}] [get_bd_ports {rst_n resetn en clk flag_finished led_n led_u led_c}] [get_bd_nets {DIJKSTRA_CONTROLLER_0_en_NearestNode DIJKSTRA_CONTROLLER_0_en_UpdateRam DIJKSTRA_CONTROLLER_0_flag_finished DIJKSTRA_CONTROLLER_0_flag_init DIJKSTRA_CONTROLLER_0_flag_read_path DIJKSTRA_CONTROLLER_0_led_c DIJKSTRA_CONTROLLER_0_node DIJKSTRA_CONTROLLER_0_node_seen NEAREST_NODE_0_addr_ram NEAREST_NODE_0_addr_ram_ext NEAREST_NODE_0_comp_in1 NEAREST_NODE_0_comp_in2 NEAREST_NODE_0_din_ram_ext NEAREST_NODE_0_en_ram_ext NEAREST_NODE_0_flag_end_write NEAREST_NODE_0_flag_node NEAREST_NODE_0_led_n NEAREST_NODE_0_next_node NEAREST_NODE_0_we_ram_ext ROM_0_data_rom UPDATE_RAM_0_addr_ram UPDATE_RAM_0_addr_rom UPDATE_RAM_0_comp_in1 UPDATE_RAM_0_comp_in2 UPDATE_RAM_0_din_ram UPDATE_RAM_0_en_rom UPDATE_RAM_0_flag_RAM UPDATE_RAM_0_led_u UPDATE_RAM_0_we_ram blk_mem_gen_0_douta clk_0_1 clk_1 comparateur1_0_comp_out comparateur2_0_comp_out dpram_0_data_out_a dpram_0_data_out_b en_0_1 resetn_0_1 rst_n_0_1 xlconstant_0_dout xlconstant_1_dout xlconstant_2_dout}]]
+current_bd_design design_dijkstra
+copy_bd_objs -from_design design_dijkstra_all / $tmpCopyObjs
+regenerate_bd_layout
+delete_bd_objs [get_bd_nets dpram_0_data_out_a] [get_bd_cells dpram_0]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:blk_mem_gen:8.4 blk_mem_gen_1
+endgroup
+set_property -dict [list CONFIG.Memory_Type {True_Dual_Port_RAM} CONFIG.Enable_32bit_Address {false} CONFIG.Use_Byte_Write_Enable {false} CONFIG.Byte_Size {9} CONFIG.Write_Width_A {10} CONFIG.Write_Depth_A {32} CONFIG.Read_Width_A {10} CONFIG.Write_Width_B {10} CONFIG.Read_Width_B {10} CONFIG.Enable_B {Use_ENB_Pin} CONFIG.Register_PortA_Output_of_Memory_Primitives {false} CONFIG.Register_PortB_Output_of_Memory_Primitives {false} CONFIG.Use_RSTA_Pin {false} CONFIG.Port_B_Clock {100} CONFIG.Port_B_Write_Rate {50} CONFIG.Port_B_Enable_Rate {100} CONFIG.use_bram_block {Stand_Alone} CONFIG.EN_SAFETY_CKT {false}] [get_bd_cells blk_mem_gen_1]
+set_property location {4 1134 587} [get_bd_cells blk_mem_gen_1]
+connect_bd_net [get_bd_pins blk_mem_gen_1/addrb] [get_bd_pins NEAREST_NODE_0/addr_ram]
+connect_bd_net [get_bd_pins blk_mem_gen_1/clkb] [get_bd_pins clk_wiz_0/clk_out1]
+connect_bd_net [get_bd_pins blk_mem_gen_1/clka] [get_bd_pins clk_wiz_0/clk_out1]
+startgroup
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins NEAREST_NODE_0/data_ram]
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins blk_mem_gen_1/dinb]
+endgroup
+undo
+connect_bd_net [get_bd_pins blk_mem_gen_1/doutb] [get_bd_pins NEAREST_NODE_0/data_ram]
+connect_bd_net [get_bd_pins blk_mem_gen_1/enb] [get_bd_pins NEAREST_NODE_0/en_ram]
+connect_bd_net [get_bd_pins UPDATE_RAM_0/en_ram] [get_bd_pins blk_mem_gen_1/ena]
+connect_bd_net [get_bd_pins UPDATE_RAM_0/we_ram] [get_bd_pins blk_mem_gen_1/wea]
+connect_bd_net [get_bd_pins UPDATE_RAM_0/din_ram] [get_bd_pins blk_mem_gen_1/dina]
+connect_bd_net [get_bd_pins UPDATE_RAM_0/data_ram] [get_bd_pins blk_mem_gen_1/douta]
+connect_bd_net [get_bd_pins blk_mem_gen_1/addra] [get_bd_pins UPDATE_RAM_0/addr_ram]
+startgroup
+endgroup
+regenerate_bd_layout
+save_bd_design
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+set_property top design_dijkstra_wrapper [current_fileset]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]
+# Disabling source management mode.  This is to allow the top design properties to be set without GUI intervention.
+set_property source_mgmt_mode None [current_project]
+# Re-enabling previously disabled source management mode.
+set_property source_mgmt_mode All [current_project]

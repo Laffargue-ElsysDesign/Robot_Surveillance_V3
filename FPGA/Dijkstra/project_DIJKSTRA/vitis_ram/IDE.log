@@ -1,0 +1,759 @@
+16:05:51 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_DIJKSTRA\vitis_ram\temp_xsdb_launch_script.tcl
+16:05:51 INFO  : Registering command handlers for Vitis TCF services
+16:05:55 INFO  : XSCT server has started successfully.
+16:05:55 INFO  : Successfully done setting XSCT server connection channel  
+16:05:55 INFO  : plnx-install-location is set to ''
+16:05:56 INFO  : Platform repository initialization has completed.
+16:06:04 INFO  : Successfully done setting workspace for the tool. 
+16:06:04 INFO  : Successfully done query RDI_DATADIR 
+16:06:56 INFO  : Result from executing command 'getProjects': design_dijkstra_ram_wrapper
+16:06:57 INFO  : Result from executing command 'getPlatforms': 
+16:06:57 WARN  : An unexpected exception occurred in the module 'platform project logging'
+16:06:57 INFO  : Platform 'design_dijkstra_ram_wrapper' is added to custom repositories.
+16:07:08 INFO  : Platform 'design_dijkstra_ram_wrapper' is added to custom repositories.
+16:10:22 INFO  : Result from executing command 'getProjects': design_dijkstra_ram_wrapper
+16:10:23 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+16:11:07 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:11:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:11:10 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:13:15 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:15 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:13:18 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:13:27 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:13:27 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+16:13:27 INFO  : 'jtag frequency' command is executed.
+16:13:27 INFO  : Context for 'APU' is selected.
+16:13:27 INFO  : System reset is completed.
+16:13:30 INFO  : 'after 3000' command is executed.
+16:13:30 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:13:32 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:13:32 INFO  : Context for 'APU' is selected.
+16:13:33 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+16:13:33 INFO  : 'configparams force-mem-access 1' command is executed.
+16:13:33 INFO  : Context for 'APU' is selected.
+16:13:33 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+16:13:33 INFO  : 'ps7_init' command is executed.
+16:13:33 INFO  : 'ps7_post_config' command is executed.
+16:13:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:33 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:13:33 INFO  : 'configparams force-mem-access 0' command is executed.
+16:13:33 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:13:33 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:13:33 INFO  : 'con' command is executed.
+16:13:33 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:13:33 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+16:17:18 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+16:17:33 INFO  : Disconnected from the channel tcfchan#3.
+16:17:33 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:17:33 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+16:17:33 INFO  : 'jtag frequency' command is executed.
+16:17:33 INFO  : Context for 'APU' is selected.
+16:17:33 INFO  : System reset is completed.
+16:17:36 INFO  : 'after 3000' command is executed.
+16:17:36 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:17:39 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:17:39 INFO  : Context for 'APU' is selected.
+16:17:39 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+16:17:39 INFO  : 'configparams force-mem-access 1' command is executed.
+16:17:39 INFO  : Context for 'APU' is selected.
+16:17:39 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+16:17:39 INFO  : 'ps7_init' command is executed.
+16:17:39 INFO  : 'ps7_post_config' command is executed.
+16:17:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:17:39 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:17:39 INFO  : 'configparams force-mem-access 0' command is executed.
+16:17:39 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:17:39 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:17:39 INFO  : 'con' command is executed.
+16:17:39 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:17:39 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+16:17:55 INFO  : Disconnected from the channel tcfchan#4.
+16:17:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:17:55 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+16:17:55 INFO  : 'jtag frequency' command is executed.
+16:17:55 INFO  : Context for 'APU' is selected.
+16:17:55 INFO  : System reset is completed.
+16:17:58 INFO  : 'after 3000' command is executed.
+16:17:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:18:00 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:18:00 INFO  : Context for 'APU' is selected.
+16:18:00 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+16:18:00 INFO  : 'configparams force-mem-access 1' command is executed.
+16:18:00 INFO  : Context for 'APU' is selected.
+16:18:00 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+16:18:01 INFO  : 'ps7_init' command is executed.
+16:18:01 INFO  : 'ps7_post_config' command is executed.
+16:18:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:18:01 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:18:01 INFO  : 'configparams force-mem-access 0' command is executed.
+16:18:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:18:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:18:01 INFO  : 'con' command is executed.
+16:18:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:18:01 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+16:19:40 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+16:19:54 INFO  : Disconnected from the channel tcfchan#5.
+16:19:55 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+16:19:55 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+16:19:55 INFO  : 'jtag frequency' command is executed.
+16:19:55 INFO  : Context for 'APU' is selected.
+16:19:55 INFO  : System reset is completed.
+16:19:58 INFO  : 'after 3000' command is executed.
+16:19:58 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+16:20:00 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+16:20:00 INFO  : Context for 'APU' is selected.
+16:20:00 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+16:20:00 INFO  : 'configparams force-mem-access 1' command is executed.
+16:20:00 INFO  : Context for 'APU' is selected.
+16:20:00 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+16:20:01 INFO  : 'ps7_init' command is executed.
+16:20:01 INFO  : 'ps7_post_config' command is executed.
+16:20:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:20:01 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+16:20:01 INFO  : 'configparams force-mem-access 0' command is executed.
+16:20:01 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+16:20:01 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+16:20:01 INFO  : 'con' command is executed.
+16:20:01 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+16:20:01 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+16:28:05 INFO  : Disconnected from the channel tcfchan#6.
+09:32:54 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_DIJKSTRA\vitis_ram\temp_xsdb_launch_script.tcl
+09:32:58 INFO  : XSCT server has started successfully.
+09:32:58 INFO  : plnx-install-location is set to ''
+09:32:58 INFO  : Successfully done setting XSCT server connection channel  
+09:32:58 INFO  : Successfully done setting workspace for the tool. 
+09:33:04 INFO  : Platform repository initialization has completed.
+09:33:04 INFO  : Registering command handlers for Vitis TCF services
+09:33:06 INFO  : Successfully done query RDI_DATADIR 
+09:46:41 INFO  : Result from executing command 'getProjects': design_dijkstra_ram_low_speed_wrapper;design_dijkstra_ram_wrapper
+09:46:41 INFO  : Result from executing command 'getPlatforms': design_dijkstra_ram_wrapper|D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/design_dijkstra_ram_wrapper.xpfm
+09:46:41 WARN  : An unexpected exception occurred in the module 'platform project logging'
+09:46:41 INFO  : Platform 'design_dijkstra_ram_low_speed_wrapper' is added to custom repositories.
+09:48:05 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+09:49:05 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:49:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:49:08 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+09:50:04 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:05 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+09:50:05 INFO  : 'jtag frequency' command is executed.
+09:50:05 INFO  : Context for 'APU' is selected.
+09:50:05 INFO  : System reset is completed.
+09:50:08 INFO  : 'after 3000' command is executed.
+09:50:08 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:50:10 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+09:50:10 INFO  : Context for 'APU' is selected.
+09:50:10 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+09:50:10 INFO  : 'configparams force-mem-access 1' command is executed.
+09:50:10 INFO  : Context for 'APU' is selected.
+09:50:10 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+09:50:10 INFO  : 'ps7_init' command is executed.
+09:50:11 INFO  : 'ps7_post_config' command is executed.
+09:50:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:11 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:50:11 INFO  : 'configparams force-mem-access 0' command is executed.
+09:50:11 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:50:11 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:11 INFO  : 'con' command is executed.
+09:50:11 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:50:11 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+09:50:51 INFO  : Disconnected from the channel tcfchan#1.
+09:50:51 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+09:50:52 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+09:50:52 INFO  : 'jtag frequency' command is executed.
+09:50:52 INFO  : Context for 'APU' is selected.
+09:50:52 INFO  : System reset is completed.
+09:50:55 INFO  : 'after 3000' command is executed.
+09:50:55 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+09:50:57 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+09:50:57 INFO  : Context for 'APU' is selected.
+09:50:57 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+09:50:57 INFO  : 'configparams force-mem-access 1' command is executed.
+09:50:57 INFO  : Context for 'APU' is selected.
+09:50:57 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+09:50:57 INFO  : 'ps7_init' command is executed.
+09:50:57 INFO  : 'ps7_post_config' command is executed.
+09:50:57 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:58 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+09:50:58 INFO  : 'configparams force-mem-access 0' command is executed.
+09:50:58 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+09:50:58 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+09:50:58 INFO  : 'con' command is executed.
+09:50:58 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+09:50:58 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:01:15 INFO  : Hardware specification for platform project 'design_dijkstra_ram_wrapper' is updated.
+10:01:46 INFO  : Result from executing command 'getProjects': design_dijkstra_ram_wrapper
+10:01:46 INFO  : Result from executing command 'getPlatforms': design_dijkstra_ram_wrapper|D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/design_dijkstra_ram_wrapper.xpfm
+10:02:43 INFO  : The hardware specfication used by project 'dijkstra_ram' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+10:02:43 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream\design_dijkstra_ram_wrapper.bit' stored in project is removed.
+10:02:43 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream\design_dijkstra_ram_wrapper.mmi' stored in project is removed.
+10:02:43 INFO  : The updated bitstream files are copied from platform to folder 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream' in project 'dijkstra_ram'.
+10:02:43 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\psinit\ps7_init.tcl' stored in project is removed.
+10:02:48 INFO  : The updated ps init files are copied from platform to folder 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\psinit' in project 'dijkstra_ram'.
+10:03:03 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:03:06 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:03:14 INFO  : Disconnected from the channel tcfchan#2.
+10:03:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:03:14 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:03:14 INFO  : 'jtag frequency' command is executed.
+10:03:14 INFO  : Context for 'APU' is selected.
+10:03:14 INFO  : System reset is completed.
+10:03:17 INFO  : 'after 3000' command is executed.
+10:03:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:03:20 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:03:20 INFO  : Context for 'APU' is selected.
+10:03:20 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:03:20 INFO  : 'configparams force-mem-access 1' command is executed.
+10:03:20 INFO  : Context for 'APU' is selected.
+10:03:20 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:03:20 INFO  : 'ps7_init' command is executed.
+10:03:20 INFO  : 'ps7_post_config' command is executed.
+10:03:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:20 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:03:21 INFO  : 'configparams force-mem-access 0' command is executed.
+10:03:21 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:03:21 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:03:21 INFO  : 'con' command is executed.
+10:03:21 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:03:21 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:15:48 INFO  : Hardware specification for platform project 'design_dijkstra_ram_wrapper' is updated.
+10:16:03 INFO  : Result from executing command 'getProjects': design_dijkstra_ram_wrapper
+10:16:03 INFO  : Result from executing command 'getPlatforms': design_dijkstra_ram_wrapper|D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/design_dijkstra_ram_wrapper.xpfm
+10:17:08 INFO  : The hardware specfication used by project 'dijkstra_ram' is out of sync with the platform. Resource files extracted from the hardware specfiication will be updated.
+10:17:08 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream\design_dijkstra_ram_wrapper.bit' stored in project is removed.
+10:17:08 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream\design_dijkstra_ram_wrapper.mmi' stored in project is removed.
+10:17:08 INFO  : The updated bitstream files are copied from platform to folder 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\bitstream' in project 'dijkstra_ram'.
+10:17:09 INFO  : The file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\psinit\ps7_init.tcl' stored in project is removed.
+10:17:14 INFO  : The updated ps init files are copied from platform to folder 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram\_ide\psinit' in project 'dijkstra_ram'.
+10:17:17 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:17:18 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:17:20 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:17:22 INFO  : Disconnected from the channel tcfchan#4.
+10:17:23 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:17:23 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:17:23 INFO  : 'jtag frequency' command is executed.
+10:17:23 INFO  : Context for 'APU' is selected.
+10:17:23 INFO  : System reset is completed.
+10:17:26 INFO  : 'after 3000' command is executed.
+10:17:26 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:17:28 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:17:28 INFO  : Context for 'APU' is selected.
+10:17:28 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:17:28 INFO  : 'configparams force-mem-access 1' command is executed.
+10:17:28 INFO  : Context for 'APU' is selected.
+10:17:28 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:17:29 INFO  : 'ps7_init' command is executed.
+10:17:29 INFO  : 'ps7_post_config' command is executed.
+10:17:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:29 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:17:29 INFO  : 'configparams force-mem-access 0' command is executed.
+10:17:29 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:17:29 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:17:29 INFO  : 'con' command is executed.
+10:17:29 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:17:29 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:18:48 INFO  : Disconnected from the channel tcfchan#6.
+10:18:48 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:18:49 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:18:49 INFO  : 'jtag frequency' command is executed.
+10:18:49 INFO  : Context for 'APU' is selected.
+10:18:49 INFO  : System reset is completed.
+10:18:52 INFO  : 'after 3000' command is executed.
+10:18:52 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:18:54 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:18:54 INFO  : Context for 'APU' is selected.
+10:18:54 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:18:54 INFO  : 'configparams force-mem-access 1' command is executed.
+10:18:54 INFO  : Context for 'APU' is selected.
+10:18:54 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:18:55 INFO  : 'ps7_init' command is executed.
+10:18:55 INFO  : 'ps7_post_config' command is executed.
+10:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:18:55 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:18:55 INFO  : 'configparams force-mem-access 0' command is executed.
+10:18:55 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:18:55 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:18:55 INFO  : 'con' command is executed.
+10:18:55 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:18:55 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:21:29 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+10:21:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:21:44 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:21:46 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:22:02 INFO  : Disconnected from the channel tcfchan#7.
+10:22:02 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:22:02 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:22:02 INFO  : 'jtag frequency' command is executed.
+10:22:02 INFO  : Context for 'APU' is selected.
+10:22:02 INFO  : System reset is completed.
+10:22:05 INFO  : 'after 3000' command is executed.
+10:22:06 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:22:08 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:22:08 INFO  : Context for 'APU' is selected.
+10:22:08 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:22:08 INFO  : 'configparams force-mem-access 1' command is executed.
+10:22:08 INFO  : Context for 'APU' is selected.
+10:22:08 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:22:08 INFO  : 'ps7_init' command is executed.
+10:22:08 INFO  : 'ps7_post_config' command is executed.
+10:22:08 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:09 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:22:09 INFO  : 'configparams force-mem-access 0' command is executed.
+10:22:09 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:22:09 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:22:09 INFO  : 'con' command is executed.
+10:22:09 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:22:09 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:34:59 INFO  : Disconnected from the channel tcfchan#8.
+10:35:00 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:35:00 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:35:00 INFO  : 'jtag frequency' command is executed.
+10:35:00 INFO  : Context for 'APU' is selected.
+10:35:00 INFO  : System reset is completed.
+10:35:03 INFO  : 'after 3000' command is executed.
+10:35:03 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:35:05 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:35:05 INFO  : Context for 'APU' is selected.
+10:35:05 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:35:05 INFO  : 'configparams force-mem-access 1' command is executed.
+10:35:05 INFO  : Context for 'APU' is selected.
+10:35:05 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:35:06 INFO  : 'ps7_init' command is executed.
+10:35:06 INFO  : 'ps7_post_config' command is executed.
+10:35:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:35:06 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:35:06 INFO  : 'configparams force-mem-access 0' command is executed.
+10:35:06 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:35:06 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:35:06 INFO  : 'con' command is executed.
+10:35:06 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:35:06 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:47:10 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+10:47:13 INFO  : Disconnected from the channel tcfchan#9.
+10:47:13 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:47:13 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:47:13 INFO  : 'jtag frequency' command is executed.
+10:47:13 INFO  : Context for 'APU' is selected.
+10:47:14 INFO  : System reset is completed.
+10:47:17 INFO  : 'after 3000' command is executed.
+10:47:17 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:47:19 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:47:19 INFO  : Context for 'APU' is selected.
+10:47:19 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:47:19 INFO  : 'configparams force-mem-access 1' command is executed.
+10:47:19 INFO  : Context for 'APU' is selected.
+10:47:19 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:47:19 INFO  : 'ps7_init' command is executed.
+10:47:19 INFO  : 'ps7_post_config' command is executed.
+10:47:19 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:20 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:47:20 INFO  : 'configparams force-mem-access 0' command is executed.
+10:47:20 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:47:20 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:20 INFO  : 'con' command is executed.
+10:47:20 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:47:20 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+10:47:20 INFO  : Disconnected from the channel tcfchan#10.
+10:47:20 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+10:47:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+10:47:20 INFO  : 'jtag frequency' command is executed.
+10:47:20 INFO  : Context for 'APU' is selected.
+10:47:21 INFO  : System reset is completed.
+10:47:24 INFO  : 'after 3000' command is executed.
+10:47:24 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+10:47:26 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+10:47:26 INFO  : Context for 'APU' is selected.
+10:47:26 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+10:47:26 INFO  : 'configparams force-mem-access 1' command is executed.
+10:47:26 INFO  : Context for 'APU' is selected.
+10:47:26 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+10:47:26 INFO  : 'ps7_init' command is executed.
+10:47:26 INFO  : 'ps7_post_config' command is executed.
+10:47:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:27 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+10:47:27 INFO  : 'configparams force-mem-access 0' command is executed.
+10:47:27 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+10:47:27 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+10:47:27 INFO  : 'con' command is executed.
+10:47:27 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+10:47:27 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+11:23:35 INFO  : Disconnected from the channel tcfchan#11.
+11:23:35 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:23:36 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+11:23:36 INFO  : 'jtag frequency' command is executed.
+11:23:36 INFO  : Context for 'APU' is selected.
+11:23:36 INFO  : System reset is completed.
+11:23:39 INFO  : 'after 3000' command is executed.
+11:23:39 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+11:23:41 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+11:23:41 INFO  : Context for 'APU' is selected.
+11:23:41 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+11:23:41 INFO  : 'configparams force-mem-access 1' command is executed.
+11:23:41 INFO  : Context for 'APU' is selected.
+11:23:41 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+11:23:42 INFO  : 'ps7_init' command is executed.
+11:23:42 INFO  : 'ps7_post_config' command is executed.
+11:23:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:23:42 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:23:42 INFO  : 'configparams force-mem-access 0' command is executed.
+11:23:42 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:23:42 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:23:42 INFO  : 'con' command is executed.
+11:23:42 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:23:42 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+11:36:38 INFO  : Checking for BSP changes to sync application flags for project 'dijkstra_ram'...
+11:36:44 INFO  : Disconnected from the channel tcfchan#12.
+11:36:44 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:36:44 INFO  : Jtag cable 'Digilent Zybo Z7 210351B48339A' is selected.
+11:36:44 INFO  : 'jtag frequency' command is executed.
+11:36:44 INFO  : Context for 'APU' is selected.
+11:36:44 INFO  : System reset is completed.
+11:36:47 INFO  : 'after 3000' command is executed.
+11:36:47 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}' command is executed.
+11:36:50 INFO  : Device configured successfully with "D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit"
+11:36:50 INFO  : Context for 'APU' is selected.
+11:36:50 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa'.
+11:36:50 INFO  : 'configparams force-mem-access 1' command is executed.
+11:36:50 INFO  : Context for 'APU' is selected.
+11:36:50 INFO  : Sourcing of 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl' is done.
+11:36:50 INFO  : 'ps7_init' command is executed.
+11:36:50 INFO  : 'ps7_post_config' command is executed.
+11:36:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:50 INFO  : The application 'D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:36:50 INFO  : 'configparams force-mem-access 0' command is executed.
+11:36:50 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B48339A" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B48339A-23727093-0"}
+fpga -file D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/bitstream/design_dijkstra_ram_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_DIJKSTRA/vitis_ram/design_dijkstra_ram_wrapper/export/design_dijkstra_ram_wrapper/hw/design_dijkstra_ram_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_DIJKSTRA/vitis_ram/dijkstra_ram/Debug/dijkstra_ram.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:36:50 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:36:50 INFO  : 'con' command is executed.
+11:36:50 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:36:50 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_DIJKSTRA\vitis_ram\dijkstra_ram_system\_ide\scripts\systemdebugger_dijkstra_ram_system_standalone.tcl'
+13:58:16 INFO  : Disconnected from the channel tcfchan#13.

@@ -1,0 +1,47 @@
+2022-07-21T10:13:21.211543400255-10:13:21 **** Incremental Build of configuration Debug for project IMU_project ****
+000-make all 
+000-make --no-print-directory pre-build
+000-a9-linaro-pre-build-step
+000-' '
+000-make --no-print-directory main-build
+000-'Building file: ../src/helloworld.c'
+000-'Invoking: ARM v7 gcc compiler'
+000-arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/sw/design_IMU_AXI_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+000-../src/helloworld.c: In function 'main':
+000/IMU_project/src/helloworld.c69-1-1format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]1-../src/helloworld.c:69:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+000-   69 |   printf("Read mag_x : %d \n\r", *(baseaddr+3));
+000-      |                        ~^        ~~~~~~~~~~~~~
+000-      |                         |        |
+000-      |                         int      int32_t {aka long int}
+000-      |                        %ld
+000/IMU_project/src/helloworld.c71-1-1format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]1-../src/helloworld.c:71:25: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+000-   71 |   printf("Read mag_y : %d \n\r", *(baseaddr+4));
+000-      |                        ~^        ~~~~~~~~~~~~~
+000-      |                         |        |
+000-      |                         int      int32_t {aka long int}
+000-      |                        %ld
+000/IMU_project/src/helloworld.c73-1-1format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]1-../src/helloworld.c:73:24: warning: format '%d' expects argument of type 'int', but argument 2 has type 'int32_t' {aka 'long int'} [-Wformat=]
+000-   73 |   printf("Read mag_z: %d \n\r", *(baseaddr+5));
+000-      |                       ~^        ~~~~~~~~~~~~~
+000-      |                        |        |
+000-      |                        int      int32_t {aka long int}
+000-      |                       %ld
+000/IMU_project/src/helloworld.c74-1-1implicit declaration of function 'sleep' [-Wimplicit-function-declaration]1-../src/helloworld.c:74:3: warning: implicit declaration of function 'sleep' [-Wimplicit-function-declaration]
+000-   74 |   sleep(1);
+000-      |   ^~~~~
+000-'Finished building: ../src/helloworld.c'
+000-' '
+000-'Building target: IMU_project.elf'
+000-'Invoking: ARM v7 gcc linker'
+000-arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/sw/design_IMU_AXI_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "IMU_project.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+000-'Finished building target: IMU_project.elf'
+000-' '
+000-'Invoking: ARM v7 Print Size'
+000-arm-none-eabi-size IMU_project.elf  |tee "IMU_project.elf.size"
+000-   text	   data	    bss	    dec	    hex	filename
+000-  50564	   2548	  22640	  75752	  127e8	IMU_project.elf
+000-'Finished building: IMU_project.elf.size'
+000-' '
+00255-
+10:13:24 Build Finished (took 3s.722ms)
+

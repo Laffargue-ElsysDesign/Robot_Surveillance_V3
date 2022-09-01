@@ -1,0 +1,8 @@
+design_simu_RFID_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_RFID_0_0/sim/design_simu_RFID_0_0.vhd,
+design_simu_UART_RX_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_UART_RX_0_0/sim/design_simu_UART_RX_0_0.vhd,
+design_simu_UART_TX_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_UART_TX_0_0/sim/design_simu_UART_TX_0_0.vhd,
+design_simu_time_pulse_0_0.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_time_pulse_0_0/sim/design_simu_time_pulse_0_0.vhd,
+design_simu_UART_TX_0_1.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_UART_TX_0_1/sim/design_simu_UART_TX_0_1.vhd,
+design_simu_UART_RX_0_1.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/ip/design_simu_UART_RX_0_1/sim/design_simu_UART_RX_0_1.vhd,
+design_simu.vhd,vhdl,xil_defaultlib,../../../bd/design_simu/sim/design_simu.vhd,
+glbl.v,Verilog,xil_defaultlib,glbl.v

@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Jul  7 15:35:43 2022
+# Process ID: 10092
+# Current directory: D:/projets/2020_2/project_UART_PC/project_UART_PC.runs/impl_1
+# Command line: vivado.exe -log UART_balise.vdi -applog -product Vivado -messageDb vivado.pb -mode batch -source UART_balise.tcl -notrace
+# Log file: D:/projets/2020_2/project_UART_PC/project_UART_PC.runs/impl_1/UART_balise.vdi
+# Journal file: D:/projets/2020_2/project_UART_PC/project_UART_PC.runs/impl_1\vivado.jou
+#-----------------------------------------------------------
+source UART_balise.tcl -notrace

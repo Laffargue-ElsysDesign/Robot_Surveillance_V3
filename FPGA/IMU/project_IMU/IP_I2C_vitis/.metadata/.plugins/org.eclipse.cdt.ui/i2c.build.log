@@ -1,0 +1,59 @@
+15:49:19 **** Incremental Build of configuration Debug for project i2c ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+'Building file: ../src/helloworld.c'
+'Invoking: ARM v7 gcc compiler'
+arm-none-eabi-gcc -Wall -O0 -g3 -c -fmessage-length=0 -MT"src/helloworld.o" -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -ID:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/sw/design_IP_I2C_wrapper/standalone_ps7_cortexa9_0/bspinclude/include -MMD -MP -MF"src/helloworld.d" -MT"src/helloworld.o" -o "src/helloworld.o" "../src/helloworld.c"
+../src/helloworld.c: In function 'main':
+../src/helloworld.c:75:44: warning: passing argument 2 of 'XIic_MasterSend' makes pointer from integer without a cast [-Wint-conversion]
+   75 |     int read = XIic_MasterSend(&myIIC, reg1[1], 2);
+      |                                        ~~~~^~~
+      |                                            |
+      |                                            int32_t {aka long int}
+In file included from ../src/helloworld.c:51:
+D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/sw/design_IP_I2C_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xiic.h:537:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'int32_t' {aka 'long int'}
+  537 | int XIic_MasterSend(XIic *InstancePtr, u8 *TxMsgPtr, int ByteCount);
+      |                                        ~~~~^~~~~~~~
+../src/helloworld.c:77:40: warning: passing argument 2 of 'XIic_MasterRecv' makes pointer from integer without a cast [-Wint-conversion]
+   77 |     int data = XIic_MasterRecv(&myIIC, lect1, 2);
+      |                                        ^~~~~
+      |                                        |
+      |                                        u8 {aka unsigned char}
+In file included from ../src/helloworld.c:51:
+D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/sw/design_IP_I2C_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xiic.h:536:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u8' {aka 'unsigned char'}
+  536 | int XIic_MasterRecv(XIic *InstancePtr, u8 *RxMsgPtr, int ByteCount);
+      |                                        ~~~~^~~~~~~~
+../src/helloworld.c:78:41: warning: passing argument 2 of 'XIic_MasterRecv' makes pointer from integer without a cast [-Wint-conversion]
+   78 |     int data2 = XIic_MasterRecv(&myIIC, lect2, 2);
+      |                                         ^~~~~
+      |                                         |
+      |                                         u8 {aka unsigned char}
+In file included from ../src/helloworld.c:51:
+D:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/sw/design_IP_I2C_wrapper/standalone_ps7_cortexa9_0/bspinclude/include/xiic.h:536:44: note: expected 'u8 *' {aka 'unsigned char *'} but argument is of type 'u8' {aka 'unsigned char'}
+  536 | int XIic_MasterRecv(XIic *InstancePtr, u8 *RxMsgPtr, int ByteCount);
+      |                                        ~~~~^~~~~~~~
+../src/helloworld.c:78:9: warning: unused variable 'data2' [-Wunused-variable]
+   78 |     int data2 = XIic_MasterRecv(&myIIC, lect2, 2);
+      |         ^~~~~
+../src/helloworld.c:72:5: warning: 'Config' is used uninitialized in this function [-Wuninitialized]
+   72 |     XIic_CfgInitialize(&myIIC, Config, (UINTPTR) IIC_BASE_ADDRESS);
+      |     ^~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+'Finished building: ../src/helloworld.c'
+' '
+'Building target: i2c.elf'
+'Invoking: ARM v7 gcc linker'
+arm-none-eabi-gcc -mcpu=cortex-a9 -mfpu=vfpv3 -mfloat-abi=hard -Wl,-build-id=none -specs=Xilinx.spec -Wl,-T -Wl,../src/lscript.ld -LD:/projets/2020_2/project_IMU/IP_I2C_vitis/design_IP_I2C_wrapper/export/design_IP_I2C_wrapper/sw/design_IP_I2C_wrapper/standalone_ps7_cortexa9_0/bsplib/lib -o "i2c.elf"  ./src/helloworld.o ./src/platform.o   -Wl,--start-group,-lxil,-lgcc,-lc,--end-group
+'Finished building target: i2c.elf'
+' '
+'Invoking: ARM v7 Print Size'
+arm-none-eabi-size i2c.elf  |tee "i2c.elf.size"
+   text	   data	    bss	    dec	    hex	filename
+  26764	   1224	  22680	  50668	   c5ec	i2c.elf
+'Finished building: i2c.elf.size'
+' '
+
+15:49:21 Build Finished (took 1s.822ms)
+

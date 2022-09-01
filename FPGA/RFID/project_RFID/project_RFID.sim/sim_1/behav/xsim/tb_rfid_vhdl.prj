@@ -1,0 +1,18 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../project_RFID.srcs/sources_1/new/RFID.vhd" \
+"../../../../project_RFID.srcs/sources_1/imports/2020_2/uart_rx.vhd" \
+"../../../../project_RFID.srcs/sources_1/imports/2020_2/uart_tx.vhd" \
+"../../../../project_RFID.srcs/sources_1/imports/new/time_pulse.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_RFID_0_0/sim/design_simu_RFID_0_0.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_RX_0_0/sim/design_simu_UART_RX_0_0.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_TX_0_0/sim/design_simu_UART_TX_0_0.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_time_pulse_0_0/sim/design_simu_time_pulse_0_0.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_TX_0_1/sim/design_simu_UART_TX_0_1.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/ip/design_simu_UART_RX_0_1/sim/design_simu_UART_RX_0_1.vhd" \
+"../../../../project_RFID.ip_user_files/bd/design_simu/sim/design_simu.vhd" \
+"../../../../project_RFID.gen/sources_1/bd/design_simu/hdl/design_simu_wrapper.vhd" \
+"../../../../project_RFID.srcs/sim_1/new/tb_rfid.vhd" \
+
+# Do not sort compile order
+nosort

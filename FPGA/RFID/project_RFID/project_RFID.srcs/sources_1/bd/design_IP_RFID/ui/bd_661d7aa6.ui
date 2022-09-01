@@ -1,0 +1,37 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"1.0",
+   "Default View_TopLeft":"0,153",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 4 -x 1060 -y 260 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1060 -y 640 -defaultsOSRD
+preplace port RFID_UART_TX -pg 1 -lvl 4 -x 1060 -y 660 -defaultsOSRD
+preplace port RFID_UART_RX -pg 1 -lvl 0 -x -10 -y 540 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 430 -y 310 -defaultsOSRD
+preplace inst time_pulse_0 -pg 1 -lvl 3 -x 850 -y 350 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 3 -x 850 -y 140 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 2 -x 430 -y 120 -defaultsOSRD
+preplace inst ila_0 -pg 1 -lvl 1 -x 120 -y 220 -defaultsOSRD
+preplace inst RFID_reader_0 -pg 1 -lvl 3 -x 850 -y 530 -defaultsOSRD
+preplace netloc time_pulse_0_pulse_1us 1 0 4 30 420 N 420 640 650 1010
+preplace netloc time_pulse_0_pulse_1ms 1 2 2 690 660 1000
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 130 210 10 660
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 1 2 220 20 630
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 1 670 120n
+preplace netloc RFID_reader_0_TX_Serial 1 0 4 20 670 N 670 N 670 1030
+preplace netloc RX_Serial_0_1 1 0 3 10J 540 N 540 NJ
+preplace netloc processing_system7_0_DDR 1 2 2 NJ 260 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 2 640J 20 1040J
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 1 650 80n
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 2 680 640 1020
+levelinfo -pg 1 -10 120 430 850 1060
+pagesize -pg 1 -db -bbox -sgen -170 -90 1220 680
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}

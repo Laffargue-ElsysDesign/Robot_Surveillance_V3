@@ -1,0 +1,10 @@
+2022-07-20T11:26:13.377451100255-11:26:13 **** Build of configuration Debug for project IMU_project_system ****
+000-make all 
+000-Generating bif file for the system project
+000-generate_system_bif.bat 52373 D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/design_IMU_AXI_wrapper.xpfm standalone_ps7_cortexa9_0 D:/projets/2020_2/project_IMU/vitis/IMU_project_system/Debug/system.bif
+000-sdcard_gen --xpfm D:/projets/2020_2/project_IMU/vitis/design_IMU_AXI_wrapper/export/design_IMU_AXI_wrapper/design_IMU_AXI_wrapper.xpfm --sys_config design_IMU_AXI_wrapper --bif D:/projets/2020_2/project_IMU/vitis/IMU_project_system/Debug/system.bif --bitstream D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit --elf D:/projets/2020_2/project_IMU/vitis/IMU_project/Debug/IMU_project.elf,ps7_cortexa9_0
+000-creating BOOT.BIN using D:/projets/2020_2/project_IMU/vitis/IMU_project/_ide/bitstream/design_IMU_AXI_wrapper.bit
+000-Running D:/Programmes/Vitis/2020.2/bin/bootgen  -image D:/projets/2020_2/project_IMU/vitis/IMU_project_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
+00255-
+11:26:24 Build Finished (took 10s.738ms)
+
