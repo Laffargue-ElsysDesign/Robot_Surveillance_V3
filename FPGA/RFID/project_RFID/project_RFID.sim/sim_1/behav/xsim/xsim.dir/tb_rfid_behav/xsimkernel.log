@@ -1,0 +1,7 @@
+Running: xsim.dir/tb_rfid_behav/xsimk.exe -simmode gui -wdb tb_rfid_behav.wdb -simrunnum 0 -socket 49258
+Design successfully loaded
+Design Loading Memory Usage: 6572 KB (Peak: 6572 KB)
+Design Loading CPU Usage: 31 ms
+Simulation completed
+Simulation Memory Usage: 15232 KB (Peak: 15232 KB)
+Simulation CPU Usage: 2499 ms

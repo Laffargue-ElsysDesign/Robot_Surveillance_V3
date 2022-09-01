@@ -1,0 +1,30 @@
+Vivado Simulator 2020.2
+Copyright 1986-1999, 2001-2020 Xilinx, Inc. All Rights Reserved.
+Running: D:/Programmes/Vivado/2020.2/bin/unwrapped/win64.o/xelab.exe -wto 3a3f30924d5040e3b065060215be7e8a --incr --debug typical --relax --mt 2 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot tb_rfid_behav xil_defaultlib.tb_rfid xil_defaultlib.glbl -log elaborate.log 
+Using 2 slave threads.
+Starting static elaboration
+Pass Through NonSizing Optimizer
+Completed static elaboration
+Starting simulation data flow analysis
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package unisim.vcomponents
+Compiling module xil_defaultlib.glbl
+Compiling architecture behavioral of entity xil_defaultlib.RFID [rfid_default]
+Compiling architecture design_simu_rfid_0_0_arch of entity xil_defaultlib.design_simu_RFID_0_0 [design_simu_rfid_0_0_default]
+Compiling architecture rtl of entity xil_defaultlib.UART_RX [uart_rx_default]
+Compiling architecture design_simu_uart_rx_0_0_arch of entity xil_defaultlib.design_simu_UART_RX_0_0 [design_simu_uart_rx_0_0_default]
+Compiling architecture design_simu_uart_rx_0_1_arch of entity xil_defaultlib.design_simu_UART_RX_0_1 [design_simu_uart_rx_0_1_default]
+Compiling architecture rtl of entity xil_defaultlib.UART_TX [uart_tx_default]
+Compiling architecture design_simu_uart_tx_0_0_arch of entity xil_defaultlib.design_simu_UART_TX_0_0 [design_simu_uart_tx_0_0_default]
+Compiling architecture design_simu_uart_tx_0_1_arch of entity xil_defaultlib.design_simu_UART_TX_0_1 [design_simu_uart_tx_0_1_default]
+Compiling architecture behavioral of entity xil_defaultlib.time_pulse [time_pulse_default]
+Compiling architecture design_simu_time_pulse_0_0_arch of entity xil_defaultlib.design_simu_time_pulse_0_0 [design_simu_time_pulse_0_0_defau...]
+Compiling architecture structure of entity xil_defaultlib.design_simu [design_simu_default]
+Compiling architecture structure of entity xil_defaultlib.design_simu_wrapper [design_simu_wrapper_default]
+Compiling architecture behavioral of entity xil_defaultlib.tb_rfid
+Built simulation snapshot tb_rfid_behav

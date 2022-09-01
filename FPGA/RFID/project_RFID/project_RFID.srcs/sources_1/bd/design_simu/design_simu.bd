@@ -1,0 +1,419 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x29BD1625F061C565",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_RFID.gen/sources_1/bd/design_simu",
+      "name": "design_simu",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "time_pulse_0": "",
+      "UART_RX_0": "",
+      "UART_RX_1": "",
+      "UART_TX_0": "",
+      "UART_TX_1": "",
+      "RFID_0": ""
+    },
+    "ports": {
+      "Reg_DV": {
+        "direction": "O"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      },
+      "i_TX_DV_0": {
+        "direction": "I"
+      },
+      "i_TX_Byte_0": {
+        "direction": "I",
+        "left": "7",
+        "right": "0"
+      },
+      "o_TX_Active_0": {
+        "direction": "O"
+      },
+      "o_RX_DV_0": {
+        "direction": "O"
+      },
+      "o_RX_Byte_0": {
+        "direction": "O",
+        "left": "7",
+        "right": "0"
+      }
+    },
+    "components": {
+      "time_pulse_0": {
+        "vlnv": "xilinx.com:module_ref:time_pulse:1.0",
+        "xci_name": "design_simu_time_pulse_0_0",
+        "xci_path": "ip\\design_simu_time_pulse_0_0\\design_simu_time_pulse_0_0.xci",
+        "inst_hier_path": "time_pulse_0",
+        "parameters": {
+          "freq_clk_MHz": {
+            "value": "50"
+          }
+        },
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "time_pulse",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "100000000",
+                "value_src": "default_prop"
+              },
+              "PHASE": {
+                "value": "0.000",
+                "value_src": "default_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "design_simu_clk",
+                "value_src": "default_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_1us": {
+            "direction": "O"
+          },
+          "pulse_1ms": {
+            "direction": "O"
+          },
+          "pulse_1s": {
+            "direction": "O"
+          },
+          "pulse_1min": {
+            "direction": "O"
+          }
+        }
+      },
+      "UART_RX_0": {
+        "vlnv": "xilinx.com:module_ref:UART_RX:1.0",
+        "xci_name": "design_simu_UART_RX_0_0",
+        "xci_path": "ip\\design_simu_UART_RX_0_0\\design_simu_UART_RX_0_0.xci",
+        "inst_hier_path": "UART_RX_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_RX_1": {
+        "vlnv": "xilinx.com:module_ref:UART_RX:1.0",
+        "xci_name": "design_simu_UART_RX_0_1",
+        "xci_path": "ip\\design_simu_UART_RX_0_1\\design_simu_UART_RX_0_1.xci",
+        "inst_hier_path": "UART_RX_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_RX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_RX_Serial": {
+            "direction": "I"
+          },
+          "o_RX_DV": {
+            "direction": "O"
+          },
+          "o_RX_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          }
+        }
+      },
+      "UART_TX_0": {
+        "vlnv": "xilinx.com:module_ref:UART_TX:1.0",
+        "xci_name": "design_simu_UART_TX_0_0",
+        "xci_path": "ip\\design_simu_UART_TX_0_0\\design_simu_UART_TX_0_0.xci",
+        "inst_hier_path": "UART_TX_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "UART_TX_1": {
+        "vlnv": "xilinx.com:module_ref:UART_TX:1.0",
+        "xci_name": "design_simu_UART_TX_0_1",
+        "xci_path": "ip\\design_simu_UART_TX_0_1\\design_simu_UART_TX_0_1.xci",
+        "inst_hier_path": "UART_TX_1",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "UART_TX",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "i_Clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "i_TX_DV": {
+            "direction": "I"
+          },
+          "i_TX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "o_TX_Active": {
+            "direction": "O"
+          },
+          "o_TX_Serial": {
+            "direction": "O"
+          },
+          "o_TX_Done": {
+            "direction": "O"
+          }
+        }
+      },
+      "RFID_0": {
+        "vlnv": "xilinx.com:module_ref:RFID:1.0",
+        "xci_name": "design_simu_RFID_0_0",
+        "xci_path": "ip\\design_simu_RFID_0_0\\design_simu_RFID_0_0.xci",
+        "inst_hier_path": "RFID_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "RFID",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_ms": {
+            "direction": "I"
+          },
+          "pulse_us": {
+            "direction": "I"
+          },
+          "TX_DV": {
+            "direction": "O"
+          },
+          "TX_Byte": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "TX_Active": {
+            "direction": "I"
+          },
+          "TX_Done": {
+            "direction": "I"
+          },
+          "RX_DV": {
+            "direction": "I"
+          },
+          "RX_Byte": {
+            "direction": "I",
+            "left": "7",
+            "right": "0"
+          },
+          "Reg_DV": {
+            "direction": "O"
+          },
+          "Reg_Data": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "Reg_Detect": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "RFID_0_Reg_DV": {
+        "ports": [
+          "RFID_0/Reg_DV",
+          "Reg_DV"
+        ]
+      },
+      "RFID_0_TX_Byte": {
+        "ports": [
+          "RFID_0/TX_Byte",
+          "UART_TX_0/i_TX_Byte"
+        ]
+      },
+      "RFID_0_TX_DV": {
+        "ports": [
+          "RFID_0/TX_DV",
+          "UART_TX_0/i_TX_DV"
+        ]
+      },
+      "UART_RX_0_o_RX_Byte": {
+        "ports": [
+          "UART_RX_0/o_RX_Byte",
+          "RFID_0/RX_Byte"
+        ]
+      },
+      "UART_RX_0_o_RX_DV": {
+        "ports": [
+          "UART_RX_0/o_RX_DV",
+          "RFID_0/RX_DV"
+        ]
+      },
+      "UART_TX_0_o_TX_Active": {
+        "ports": [
+          "UART_TX_0/o_TX_Active",
+          "RFID_0/TX_Active"
+        ]
+      },
+      "UART_TX_0_o_TX_Done": {
+        "ports": [
+          "UART_TX_0/o_TX_Done",
+          "RFID_0/TX_Done"
+        ]
+      },
+      "clk_wiz_0_clk_out1": {
+        "ports": [
+          "clk",
+          "time_pulse_0/clk",
+          "UART_RX_0/i_Clk",
+          "UART_RX_1/i_Clk",
+          "UART_TX_0/i_Clk",
+          "UART_TX_1/i_Clk",
+          "RFID_0/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "time_pulse_0/rst_n",
+          "RFID_0/rst_n"
+        ]
+      },
+      "time_pulse_0_pulse_1ms": {
+        "ports": [
+          "time_pulse_0/pulse_1ms",
+          "RFID_0/pulse_ms"
+        ]
+      },
+      "time_pulse_0_pulse_1us": {
+        "ports": [
+          "time_pulse_0/pulse_1us",
+          "RFID_0/pulse_us"
+        ]
+      },
+      "UART_TX_1_o_TX_Serial": {
+        "ports": [
+          "UART_TX_1/o_TX_Serial",
+          "UART_RX_0/i_RX_Serial"
+        ]
+      },
+      "i_TX_DV_0_1": {
+        "ports": [
+          "i_TX_DV_0",
+          "UART_TX_1/i_TX_DV"
+        ]
+      },
+      "i_TX_Byte_0_1": {
+        "ports": [
+          "i_TX_Byte_0",
+          "UART_TX_1/i_TX_Byte"
+        ]
+      },
+      "UART_TX_1_o_TX_Active": {
+        "ports": [
+          "UART_TX_1/o_TX_Active",
+          "o_TX_Active_0"
+        ]
+      },
+      "UART_TX_0_o_TX_Serial": {
+        "ports": [
+          "UART_TX_0/o_TX_Serial",
+          "UART_RX_1/i_RX_Serial"
+        ]
+      },
+      "UART_RX_1_o_RX_DV": {
+        "ports": [
+          "UART_RX_1/o_RX_DV",
+          "o_RX_DV_0"
+        ]
+      },
+      "UART_RX_1_o_RX_Byte": {
+        "ports": [
+          "UART_RX_1/o_RX_Byte",
+          "o_RX_Byte_0"
+        ]
+      }
+    }
+  }
+}
