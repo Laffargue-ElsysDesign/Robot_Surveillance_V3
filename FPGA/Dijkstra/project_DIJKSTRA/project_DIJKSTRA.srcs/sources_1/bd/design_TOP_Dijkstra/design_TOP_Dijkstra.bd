@@ -1,0 +1,390 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0xBE487D39CBCEA62D",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_DIJKSTRA.gen/sources_1/bd/design_TOP_Dijkstra",
+      "name": "design_TOP_Dijkstra",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2"
+    },
+    "design_tree": {
+      "blk_mem_gen_0": "",
+      "xlconstant_0": "",
+      "xlconstant_1": "",
+      "ila_0": "",
+      "xlconstant_2": "",
+      "clk_wiz_0": "",
+      "TOP_dijkstra_0": ""
+    },
+    "ports": {
+      "clk": {
+        "type": "clk",
+        "direction": "I"
+      },
+      "en": {
+        "direction": "I"
+      },
+      "flag_finished": {
+        "direction": "O"
+      },
+      "rst_n": {
+        "type": "rst",
+        "direction": "I"
+      }
+    },
+    "components": {
+      "blk_mem_gen_0": {
+        "vlnv": "xilinx.com:ip:blk_mem_gen:8.4",
+        "xci_name": "design_TOP_Dijkstra_blk_mem_gen_0_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_blk_mem_gen_0_0\\design_TOP_Dijkstra_blk_mem_gen_0_0.xci",
+        "inst_hier_path": "blk_mem_gen_0",
+        "parameters": {
+          "Enable_32bit_Address": {
+            "value": "false"
+          },
+          "Memory_Type": {
+            "value": "Single_Port_RAM"
+          },
+          "Operating_Mode_A": {
+            "value": "NO_CHANGE"
+          },
+          "Port_A_Write_Rate": {
+            "value": "50"
+          },
+          "Port_B_Clock": {
+            "value": "0"
+          },
+          "Port_B_Enable_Rate": {
+            "value": "0"
+          },
+          "Read_Width_A": {
+            "value": "16"
+          },
+          "Register_PortA_Output_of_Memory_Primitives": {
+            "value": "true"
+          },
+          "Use_Byte_Write_Enable": {
+            "value": "false"
+          },
+          "Use_RSTA_Pin": {
+            "value": "false"
+          },
+          "Write_Depth_A": {
+            "value": "256"
+          },
+          "Write_Width_A": {
+            "value": "16"
+          },
+          "use_bram_block": {
+            "value": "Stand_Alone"
+          }
+        }
+      },
+      "xlconstant_0": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_TOP_Dijkstra_xlconstant_0_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_xlconstant_0_0\\design_TOP_Dijkstra_xlconstant_0_0.xci",
+        "inst_hier_path": "xlconstant_0",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "1"
+          },
+          "CONST_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "xlconstant_1": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_TOP_Dijkstra_xlconstant_1_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_xlconstant_1_0\\design_TOP_Dijkstra_xlconstant_1_0.xci",
+        "inst_hier_path": "xlconstant_1",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "17"
+          },
+          "CONST_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_TOP_Dijkstra_ila_0_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_ila_0_0\\design_TOP_Dijkstra_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "9"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "5"
+          },
+          "C_PROBE6_WIDTH": {
+            "value": "5"
+          },
+          "C_PROBE8_WIDTH": {
+            "value": "16"
+          }
+        }
+      },
+      "xlconstant_2": {
+        "vlnv": "xilinx.com:ip:xlconstant:1.1",
+        "xci_name": "design_TOP_Dijkstra_xlconstant_0_1",
+        "xci_path": "ip\\design_TOP_Dijkstra_xlconstant_0_1\\design_TOP_Dijkstra_xlconstant_0_1.xci",
+        "inst_hier_path": "xlconstant_2",
+        "parameters": {
+          "CONST_VAL": {
+            "value": "0"
+          },
+          "CONST_WIDTH": {
+            "value": "1"
+          }
+        }
+      },
+      "clk_wiz_0": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_TOP_Dijkstra_clk_wiz_0_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_clk_wiz_0_0\\design_TOP_Dijkstra_clk_wiz_0_0.xci",
+        "inst_hier_path": "clk_wiz_0",
+        "parameters": {
+          "CLKOUT1_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT1_JITTER": {
+            "value": "203.457"
+          },
+          "CLKOUT1_PHASE_ERROR": {
+            "value": "155.540"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "CLKOUT2_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT3_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT4_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT5_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT6_DRIVES": {
+            "value": "BUFG"
+          },
+          "CLKOUT7_DRIVES": {
+            "value": "BUFG"
+          },
+          "JITTER_SEL": {
+            "value": "No_Jitter"
+          },
+          "MMCM_BANDWIDTH": {
+            "value": "OPTIMIZED"
+          },
+          "MMCM_CLKFBOUT_MULT_F": {
+            "value": "17"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "17"
+          },
+          "MMCM_CLKOUT0_DUTY_CYCLE": {
+            "value": "0.5"
+          },
+          "MMCM_COMPENSATION": {
+            "value": "ZHOLD"
+          },
+          "MMCM_DIVCLK_DIVIDE": {
+            "value": "2"
+          },
+          "PRIMITIVE": {
+            "value": "PLL"
+          },
+          "RESET_PORT": {
+            "value": "resetn"
+          },
+          "RESET_TYPE": {
+            "value": "ACTIVE_LOW"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_MIN_POWER": {
+            "value": "true"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "TOP_dijkstra_0": {
+        "vlnv": "xilinx.com:module_ref:TOP_dijkstra:1.0",
+        "xci_name": "design_TOP_Dijkstra_TOP_dijkstra_0_0",
+        "xci_path": "ip\\design_TOP_Dijkstra_TOP_dijkstra_0_0\\design_TOP_Dijkstra_TOP_dijkstra_0_0.xci",
+        "inst_hier_path": "TOP_dijkstra_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "TOP_dijkstra",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I"
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "en": {
+            "direction": "I"
+          },
+          "start_node": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "end_node": {
+            "direction": "I",
+            "left": "4",
+            "right": "0"
+          },
+          "flag_finished": {
+            "direction": "O"
+          },
+          "addr_ram_ext": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_ram_ext": {
+            "direction": "I",
+            "left": "15",
+            "right": "0"
+          },
+          "din_ram_ext": {
+            "direction": "O",
+            "left": "15",
+            "right": "0"
+          },
+          "en_ram_ext": {
+            "direction": "O"
+          },
+          "busy_ram_ext": {
+            "direction": "I"
+          },
+          "we_ram_ext": {
+            "direction": "O"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_0_1": {
+        "ports": [
+          "clk_wiz_0/clk_out1",
+          "blk_mem_gen_0/clka",
+          "ila_0/clk",
+          "TOP_dijkstra_0/clk"
+        ]
+      },
+      "en_0_1": {
+        "ports": [
+          "en",
+          "ila_0/probe7",
+          "TOP_dijkstra_0/en"
+        ]
+      },
+      "TOP_dijkstra_0_flag_finished": {
+        "ports": [
+          "TOP_dijkstra_0/flag_finished",
+          "flag_finished",
+          "ila_0/probe0"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "TOP_dijkstra_0/rst_n"
+        ]
+      },
+      "TOP_dijkstra_0_addr_ram_ext": {
+        "ports": [
+          "TOP_dijkstra_0/addr_ram_ext",
+          "blk_mem_gen_0/addra",
+          "ila_0/probe1"
+        ]
+      },
+      "TOP_dijkstra_0_din_ram_ext": {
+        "ports": [
+          "TOP_dijkstra_0/din_ram_ext",
+          "blk_mem_gen_0/dina",
+          "ila_0/probe2"
+        ]
+      },
+      "TOP_dijkstra_0_we_ram_ext": {
+        "ports": [
+          "TOP_dijkstra_0/we_ram_ext",
+          "blk_mem_gen_0/wea",
+          "ila_0/probe3"
+        ]
+      },
+      "TOP_dijkstra_0_en_ram_ext": {
+        "ports": [
+          "TOP_dijkstra_0/en_ram_ext",
+          "blk_mem_gen_0/ena",
+          "ila_0/probe4"
+        ]
+      },
+      "xlconstant_0_dout": {
+        "ports": [
+          "xlconstant_0/dout",
+          "ila_0/probe5",
+          "TOP_dijkstra_0/start_node"
+        ]
+      },
+      "xlconstant_1_dout": {
+        "ports": [
+          "xlconstant_1/dout",
+          "ila_0/probe6",
+          "TOP_dijkstra_0/end_node"
+        ]
+      },
+      "blk_mem_gen_0_douta": {
+        "ports": [
+          "blk_mem_gen_0/douta",
+          "ila_0/probe8",
+          "TOP_dijkstra_0/data_ram_ext"
+        ]
+      },
+      "xlconstant_2_dout": {
+        "ports": [
+          "xlconstant_2/dout",
+          "TOP_dijkstra_0/busy_ram_ext"
+        ]
+      },
+      "clk_1": {
+        "ports": [
+          "clk",
+          "clk_wiz_0/clk_in1"
+        ]
+      }
+    }
+  }
+}

@@ -1,0 +1,367 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul  5 16:06:52 2022
+# Process ID: 16480
+# Current directory: D:/projets/map2_dijkstra/project_1/project_1.runs/design_dijkstra_reg_Dijkstra_reg_0_0_synth_1
+# Command line: vivado.exe -log design_dijkstra_reg_Dijkstra_reg_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_dijkstra_reg_Dijkstra_reg_0_0.tcl
+# Log file: D:/projets/map2_dijkstra/project_1/project_1.runs/design_dijkstra_reg_Dijkstra_reg_0_0_synth_1/design_dijkstra_reg_Dijkstra_reg_0_0.vds
+# Journal file: D:/projets/map2_dijkstra/project_1/project_1.runs/design_dijkstra_reg_Dijkstra_reg_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_dijkstra_reg_Dijkstra_reg_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/projets/map2_dijkstra/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_dijkstra_reg_Dijkstra_reg_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 12524
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1177.355 ; gain = 50.820
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_dijkstra_reg_Dijkstra_reg_0_0' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/synth/design_dijkstra_reg_Dijkstra_reg_0_0.vhd:82]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Dijkstra_reg_v1_0' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0.vhd:8' bound to instance 'U0' of component 'Dijkstra_reg_v1_0' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/synth/design_dijkstra_reg_Dijkstra_reg_0_0.vhd:146]
+INFO: [Synth 8-638] synthesizing module 'Dijkstra_reg_v1_0' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0.vhd:52]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+INFO: [Synth 8-3491] module 'Dijkstra_reg_v1_0_S00_AXI' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0_S00_AXI.vhd:8' bound to instance 'Dijkstra_reg_v1_0_S00_AXI_inst' of component 'Dijkstra_reg_v1_0_S00_AXI' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0.vhd:88]
+INFO: [Synth 8-638] synthesizing module 'Dijkstra_reg_v1_0_S00_AXI' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0_S00_AXI.vhd:91]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 7 - type: integer 
+WARNING: [Synth 8-614] signal 'nb_nodes_stock' is read in the process but is not in the sensitivity list [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0_S00_AXI.vhd:571]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'TOP_dijkstra' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:37' bound to instance 'DIJKSTRA' of component 'TOP_dijkstra' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0_S00_AXI.vhd:642]
+INFO: [Synth 8-638] synthesizing module 'TOP_dijkstra' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:53]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+INFO: [Synth 8-3491] module 'DIJKSTRA_CONTROLLER' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DIJKSTRA_CONTROLLER.vhd:37' bound to instance 'CONTROLLER' of component 'DIJKSTRA_CONTROLLER' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:198]
+INFO: [Synth 8-638] synthesizing module 'DIJKSTRA_CONTROLLER' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DIJKSTRA_CONTROLLER.vhd:62]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+INFO: [Synth 8-226] default block is never used [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DIJKSTRA_CONTROLLER.vhd:123]
+INFO: [Synth 8-256] done synthesizing module 'DIJKSTRA_CONTROLLER' (1#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DIJKSTRA_CONTROLLER.vhd:62]
+INFO: [Synth 8-3491] module 'NEAREST_NODE' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/NEAREST_NODE.vhd:37' bound to instance 'NEAREST_NODE_D' of component 'NEAREST_NODE' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:220]
+INFO: [Synth 8-638] synthesizing module 'NEAREST_NODE' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/NEAREST_NODE.vhd:63]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'NEAREST_NODE' (2#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/NEAREST_NODE.vhd:63]
+INFO: [Synth 8-3491] module 'ROM' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/ROM.vhd:34' bound to instance 'ROM_M' of component 'ROM' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:243]
+INFO: [Synth 8-638] synthesizing module 'ROM' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/ROM.vhd:43]
+	Parameter addr_length bound to: 5 - type: integer 
+	Parameter data_length bound to: 10 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'ROM' (3#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/ROM.vhd:43]
+INFO: [Synth 8-3491] module 'UPDATE_RAM' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/UPDATE_RAM.vhd:37' bound to instance 'UPDATE_RAM_D' of component 'UPDATE_RAM' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:251]
+INFO: [Synth 8-638] synthesizing module 'UPDATE_RAM' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/UPDATE_RAM.vhd:61]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+	Parameter nb_node bound to: 16 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UPDATE_RAM' (4#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/UPDATE_RAM.vhd:61]
+INFO: [Synth 8-3491] module 'comparateur1' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur1.vhd:37' bound to instance 'comparateur1_0' of component 'comparateur1' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:273]
+INFO: [Synth 8-638] synthesizing module 'comparateur1' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur1.vhd:46]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'comparateur1' (5#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur1.vhd:46]
+INFO: [Synth 8-3491] module 'comparateur2' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur2.vhd:37' bound to instance 'comparateur2_0' of component 'comparateur2' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:282]
+INFO: [Synth 8-638] synthesizing module 'comparateur2' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur2.vhd:47]
+	Parameter nb_bit_dist bound to: 5 - type: integer 
+	Parameter nb_bit_addr bound to: 5 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'comparateur2' (6#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/comparateur2.vhd:47]
+INFO: [Synth 8-3491] module 'dpram' declared at 'd:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DPRAM.vhd:29' bound to instance 'dpram_0' of component 'dpram' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:291]
+INFO: [Synth 8-638] synthesizing module 'dpram' [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DPRAM.vhd:43]
+Reason is one or more of the following :
+	1: RAM has multiple writes via different ports in same process. If RAM inferencing intended, write to one port per process. 
+	2: Unable to determine number of words or word size in RAM. 
+	3: No valid read/write found for RAM. 
+RAM "memory_ram_reg" dissolved into registers
+INFO: [Synth 8-256] done synthesizing module 'dpram' (7#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/DPRAM.vhd:43]
+INFO: [Synth 8-256] done synthesizing module 'TOP_dijkstra' (8#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/src/TOP_dijkstra.vhd:53]
+INFO: [Synth 8-256] done synthesizing module 'Dijkstra_reg_v1_0_S00_AXI' (9#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0_S00_AXI.vhd:91]
+INFO: [Synth 8-256] done synthesizing module 'Dijkstra_reg_v1_0' (10#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ipshared/72aa/hdl/Dijkstra_reg_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_dijkstra_reg_Dijkstra_reg_0_0' (11#1) [d:/projets/map2_dijkstra/project_1/project_1.gen/sources_1/bd/design_dijkstra_reg/ip/design_dijkstra_reg_Dijkstra_reg_0_0/synth/design_dijkstra_reg_Dijkstra_reg_0_0.vhd:82]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1246.133 ; gain = 119.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.133 ; gain = 119.598
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:06 . Memory (MB): peak = 1246.133 ; gain = 119.598
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.031 . Memory (MB): peak = 1246.133 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1353.379 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.035 . Memory (MB): peak = 1353.379 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'DIJKSTRA_CONTROLLER'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'NEAREST_NODE'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'UPDATE_RAM'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                               00 |                               00
+              update_ram |                               01 |                               01
+            nearest_node |                               10 |                               10
+               read_path |                               11 |                               11
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'DIJKSTRA_CONTROLLER'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                          0000001 |                              000
+                read_ram |                          1000000 |                              001
+                 compare |                          0100000 |                              010
+                    buff |                          0010000 |                              011
+            nearest_node |                          0001000 |                              100
+           write_ram_ext |                          0000100 |                              101
+          write_nb_nodes |                          0000010 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'NEAREST_NODE'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                          0000001 |                              000
+                init_ram |                          0000010 |                              001
+                read_rom |                          0000100 |                              010
+                read_ram |                          0001000 |                              011
+                 compare |                          0010000 |                              100
+               write_ram |                          0100000 |                              101
+             end_compare |                          1000000 |                              110
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'one-hot' in module 'UPDATE_RAM'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input    5 Bit       Adders := 7     
+	   3 Input    5 Bit       Adders := 1     
++---Registers : 
+	               32 Bit    Registers := 21    
+	               16 Bit    Registers := 1     
+	               10 Bit    Registers := 38    
+	                7 Bit    Registers := 2     
+	                5 Bit    Registers := 6     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 9     
++---Muxes : 
+	   2 Input  320 Bit        Muxes := 1     
+	   2 Input   32 Bit        Muxes := 2     
+	  21 Input   32 Bit        Muxes := 1     
+	  19 Input   32 Bit        Muxes := 16    
+	   2 Input   16 Bit        Muxes := 4     
+	   2 Input   10 Bit        Muxes := 20    
+	   4 Input   10 Bit        Muxes := 1     
+	   7 Input   10 Bit        Muxes := 3     
+	   7 Input    7 Bit        Muxes := 2     
+	   2 Input    7 Bit        Muxes := 14    
+	   2 Input    5 Bit        Muxes := 7     
+	   7 Input    5 Bit        Muxes := 8     
+	   4 Input    2 Bit        Muxes := 1     
+	   2 Input    2 Bit        Muxes := 5     
+	   2 Input    1 Bit        Muxes := 16    
+	   4 Input    1 Bit        Muxes := 5     
+	   7 Input    1 Bit        Muxes := 5     
+	   3 Input    1 Bit        Muxes := 2     
+	  19 Input    1 Bit        Muxes := 18    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:20 ; elapsed = 00:00:21 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+
+ROM: Preliminary Mapping	Report
++-------------+------------------------+---------------+----------------+
+|Module Name  | RTL Object             | Depth x Width | Implemented As | 
++-------------+------------------------+---------------+----------------+
+|ROM          | mem[0]                 | 32x6          | LUT            | 
+|UPDATE_RAM   | node_addr              | 32x5          | LUT            | 
+|UPDATE_RAM   | nb_nodes               | 32x3          | LUT            | 
+|TOP_dijkstra | ROM_M/mem[0]           | 32x6          | LUT            | 
+|TOP_dijkstra | UPDATE_RAM_D/node_addr | 32x5          | LUT            | 
+|TOP_dijkstra | UPDATE_RAM_D/nb_nodes  | 32x3          | LUT            | 
++-------------+------------------------+---------------+----------------+
+
+---------------------------------------------------------------------------------
+Finished ROM, RAM, DSP, Shift Register and Retiming Reporting
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:25 ; elapsed = 00:00:26 . Memory (MB): peak = 1353.379 ; gain = 226.844
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:26 ; elapsed = 00:00:26 . Memory (MB): peak = 1368.734 ; gain = 242.199
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+------+------+
+|      |Cell  |Count |
++------+------+------+
+|1     |LUT1  |     4|
+|2     |LUT2  |    28|
+|3     |LUT3  |    31|
+|4     |LUT4  |    90|
+|5     |LUT5  |    92|
+|6     |LUT6  |   363|
+|7     |MUXF7 |    78|
+|8     |MUXF8 |     2|
+|9     |FDCE  |    49|
+|10    |FDPE  |     2|
+|11    |FDRE  |   531|
+|12    |FDSE  |     6|
++------+------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:22 ; elapsed = 00:00:28 . Memory (MB): peak = 1379.410 ; gain = 145.629
+Synthesis Optimization Complete : Time (s): cpu = 00:00:29 ; elapsed = 00:00:30 . Memory (MB): peak = 1379.410 ; gain = 252.875
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.022 . Memory (MB): peak = 1391.465 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 80 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.001 . Memory (MB): peak = 1391.465 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+56 Infos, 1 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:35 ; elapsed = 00:00:37 . Memory (MB): peak = 1391.465 ; gain = 264.930
+INFO: [Common 17-1381] The checkpoint 'D:/projets/map2_dijkstra/project_1/project_1.runs/design_dijkstra_reg_Dijkstra_reg_0_0_synth_1/design_dijkstra_reg_Dijkstra_reg_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_dijkstra_reg_Dijkstra_reg_0_0, cache-ID = 7e8dcc9c0a96f0e0
+INFO: [Coretcl 2-1174] Renamed 10 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/projets/map2_dijkstra/project_1/project_1.runs/design_dijkstra_reg_Dijkstra_reg_0_0_synth_1/design_dijkstra_reg_Dijkstra_reg_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_dijkstra_reg_Dijkstra_reg_0_0_utilization_synth.rpt -pb design_dijkstra_reg_Dijkstra_reg_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Tue Jul  5 16:07:38 2022...

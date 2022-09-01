@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Product Version: Vivado v2020.2 (64-bit)                     -->
+<!--                                                              -->
+<!-- Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.        -->
+
+<hwsession version="1" minor="2">
+  <device name="xc7z020_1" gui_info="dashboard1=hw_ila_1[xc7z020_1/hw_ila_1/Waveform=ILA_WAVE_1;xc7z020_1/hw_ila_1/Capture Setup=ILA_CAPTURE_1;xc7z020_1/hw_ila_1/Status=ILA_STATUS_1;xc7z020_1/hw_ila_1/Trigger Setup=ILA_TRIGGER_1;xc7z020_1/hw_ila_1/Settings=ILA_SETTINGS_1;]"/>
+  <ObjectList object_type="hw_device" gui_info="">
+    <Object name="xc7z020_1" gui_info="">
+      <Properties Property="FULL_PROBES.FILE" value=""/>
+      <Properties Property="PROBES.FILE" value=""/>
+      <Properties Property="PROGRAM.HW_BITSTREAM" value="$_project_name_.runs/impl_1/design_dijkstra_reg_wrapper.bit"/>
+      <Properties Property="SLR.COUNT" value="1"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_ila" gui_info="">
+    <Object name="u_ila_0" gui_info="">
+      <Properties Property="CONTROL.TRIGGER_CONDITION" value="AND"/>
+      <Properties Property="CORE_REFRESH_RATE_MS" value="500"/>
+    </Object>
+  </ObjectList>
+  <ObjectList object_type="hw_probe" gui_info="">
+    <Object name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[15:0]" gui_info="Trigger Setup=0"/>
+  </ObjectList>
+  <probeset name="hw project" active="false">
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe1[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[2]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[1]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_onehot_current_state[6]_i_5[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq3&apos;hX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe0[2:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq3&apos;hX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[2]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[1]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/FSM_sequential_current_state[1]_i_2__0[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq16&apos;hXXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="neq16&apos;b0000_0000_0000_0000"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe2[15:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="neq16&apos;b0000_0000_0000_0000"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[15]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[14]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[13]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[12]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[11]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[10]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[9]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[8]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[7]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[6]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[5]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[4]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[3]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[2]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[1]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/node_seen[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq10&apos;hXXX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="BINARY"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe3[9:0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq10&apos;hXXX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[9]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[8]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[7]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[6]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[5]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[4]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[3]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[2]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[1]"/>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/CONTROLLER/s_next_node[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe4[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/NEAREST_NODE_D/FSM_sequential_current_state_reg[1]_4[0]"/>
+      </nets>
+    </probe>
+    <probe type="ila" busType="net" source="netlist" spec="ILA_V2_RT">
+      <probeOptions Id="DebugProbeParams">
+        <Option Id="CAPTURE_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="COMPARE_VALUE.0" value="eq1&apos;bX"/>
+        <Option Id="DISPLAY_AS_ENUM" value="1"/>
+        <Option Id="DISPLAY_HINT" value=""/>
+        <Option Id="DISPLAY_RADIX" value="HEX"/>
+        <Option Id="DISPLAY_VISIBILITY" value=""/>
+        <Option Id="HW_ILA" value="hw_ila_1"/>
+        <Option Id="LINK_TO_WAVEFORM" value="1"/>
+        <Option Id="MAP" value="probe5[0]"/>
+        <Option Id="NAME.CUSTOM" value=""/>
+        <Option Id="NAME.SELECT" value="Long"/>
+        <Option Id="SOURCE" value="netlist"/>
+        <Option Id="TRIGGER_COMPARE_VALUE" value="eq1&apos;bX"/>
+        <Option Id="WAVEFORM_STYLE" value="Digital"/>
+      </probeOptions>
+      <nets>
+        <net name="design_dijkstra_reg_i/Dijkstra_reg_0/U0/Dijkstra_reg_v1_0_S00_AXI_inst/DIJKSTRA/s_finished[0]"/>
+      </nets>
+    </probe>
+  </probeset>
+</hwsession>

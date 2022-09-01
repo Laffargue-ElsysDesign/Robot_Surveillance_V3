@@ -1,0 +1,1 @@
+-wto "188fec7ef2da41aea7b6047cf526264c" --incr --debug "typical" --relax --mt "2" -L "xil_defaultlib" -L "robot" -L "xlconstant_v1_1_7" -L "unisims_ver" -L "unimacro_ver" -L "secureip" -L "xpm" --snapshot "tb_dijkstra_behav" "xil_defaultlib.tb_dijkstra" "xil_defaultlib.glbl" -log "elaborate.log" 
