@@ -1,0 +1,67 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Thu Sep  1 13:25:47 2022
+# Process ID: 18548
+# Current directory: D:/Projet_range/project
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent11792 D:\Projet_range\project\project.xpr
+# Log file: D:/Projet_range/project/vivado.log
+# Journal file: D:/Projet_range/project\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/Projet_range/project/project.xpr
+update_compile_order -fileset sources_1
+open_bd_design {D:/Projet_range/project/project.srcs/sources_1/bd/design_fpga/design_fpga.bd}
+startgroup
+create_bd_cell -type ip -vlnv elsys-design.com:user:Ultrasons:1.0 Ultrasons_0
+endgroup
+apply_bd_automation -rule xilinx.com:bd_rule:axi4 -config { Clk_master {/processing_system7_0/FCLK_CLK0 (50 MHz)} Clk_slave {Auto} Clk_xbar {/processing_system7_0/FCLK_CLK0 (50 MHz)} Master {/processing_system7_0/M_AXI_GP0} Slave {/Ultrasons_0/S00_AXI} ddr_seg {Auto} intc_ip {/ps7_0_axi_periph} master_apm {0}}  [get_bd_intf_pins Ultrasons_0/S00_AXI]
+connect_bd_net [get_bd_pins time_pulse_0/pulse_1ms] [get_bd_pins Ultrasons_0/pulse_ms]
+connect_bd_net [get_bd_pins time_pulse_0/pulse_1us] [get_bd_pins Ultrasons_0/pulse_us]
+startgroup
+make_bd_pins_external  [get_bd_cells Ultrasons_0]
+make_bd_intf_pins_external  [get_bd_cells Ultrasons_0]
+endgroup
+set_property name echo_in [get_bd_ports echo_in_0]
+delete_bd_objs [get_bd_nets test_interface_0_out_1] [get_bd_ports out_1]
+delete_bd_objs [get_bd_nets test_interface_0_out_0] [get_bd_ports out_0]
+delete_bd_objs [get_bd_nets input_u_0_1] [get_bd_cells test_interface_0]
+delete_bd_objs [get_bd_ports input_0]
+update_compile_order -fileset sources_1
+set_property name en_ult [get_bd_ports en_ult_0]
+set_property name trig_out [get_bd_ports trig_out_0]
+set_property name sel_ult [get_bd_ports sel_ult_0]
+set_property name US_SEL [get_bd_ports sel_ult]
+set_property name PWR_MGT_US [get_bd_ports en_ult]
+set_property name US_TRIG_3V3 [get_bd_ports trig_out]
+set_property name US_ECHO_3V3 [get_bd_ports echo_in]
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0
+endgroup
+set_property location {5 1365 -116} [get_bd_cells xlconstant_0]
+startgroup
+make_bd_pins_external  [get_bd_cells xlconstant_0]
+make_bd_intf_pins_external  [get_bd_cells xlconstant_0]
+endgroup
+set_property name out_0 [get_bd_ports dout_0]
+startgroup
+set_property -dict [list CONFIG.CONST_VAL {0}] [get_bd_cells xlconstant_0]
+endgroup
+startgroup
+create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1
+endgroup
+set_property location {4 1447 -200} [get_bd_cells xlconstant_1]
+startgroup
+make_bd_pins_external  [get_bd_cells xlconstant_1]
+make_bd_intf_pins_external  [get_bd_cells xlconstant_1]
+endgroup
+set_property name out_1 [get_bd_ports dout_0]
+regenerate_bd_layout
+save_bd_design
+reset_run synth_1
+reset_run design_fpga_xbar_0_synth_1
+launch_runs impl_1 -to_step write_bitstream -jobs 10
+wait_on_run impl_1
+open_hw_manager
+write_hw_platform -fixed -include_bit -force -file D:/Projet_range/project/design_fpga_ultrasons_wrapper.xsa
