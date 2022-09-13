@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1661331998">
+<GenRun Id="synth_1" LaunchPart="xc7z020clg400-1" LaunchTime="1662552950">
   <File Type="PA-TCL" Name="design_fpga_wrapper.tcl"/>
   <File Type="RDS-PROPCONSTRS" Name="design_fpga_wrapper_drc_synth.rpt"/>
   <File Type="REPORTS-TCL" Name="design_fpga_wrapper_reports.tcl"/>
@@ -19,12 +19,6 @@
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
     </File>
-    <File Path="$PSRCDIR/sources_1/new/test_interface.vhd">
-      <FileInfo>
-        <Attr Name="UsedIn" Val="synthesis"/>
-        <Attr Name="UsedIn" Val="simulation"/>
-      </FileInfo>
-    </File>
     <File Path="$PSRCDIR/sources_1/bd/design_fpga/design_fpga.bd">
       <FileInfo>
         <Attr Name="UsedIn" Val="synthesis"/>
@@ -34,6 +28,13 @@
     </File>
     <File Path="$PGENDIR/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd">
       <FileInfo>
+        <Attr Name="UsedIn" Val="synthesis"/>
+        <Attr Name="UsedIn" Val="simulation"/>
+      </FileInfo>
+    </File>
+    <File Path="$PSRCDIR/sources_1/new/test_interface.vhd">
+      <FileInfo>
+        <Attr Name="AutoDisabled" Val="1"/>
         <Attr Name="UsedIn" Val="synthesis"/>
         <Attr Name="UsedIn" Val="simulation"/>
       </FileInfo>
@@ -73,5 +74,5 @@
   <BlockFileSet Type="BlockSrcs" Name="design_fpga_time_pulse_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_fpga_IMU_v3_0_0"/>
   <BlockFileSet Type="BlockSrcs" Name="design_fpga_xbar_0"/>
-  <BlockFileSet Type="BlockSrcs" Name="design_fpga_test_interface_0_0"/>
+  <BlockFileSet Type="BlockSrcs" Name="design_fpga_Ultrasons_0_0"/>
 </GenRun>

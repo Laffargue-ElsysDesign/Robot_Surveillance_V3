@@ -2,8 +2,8 @@
 # Vivado v2020.2 (64-bit)
 # SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
 # IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
-# Start of session at: Wed Aug 24 11:06:41 2022
-# Process ID: 22012
+# Start of session at: Wed Sep  7 14:16:53 2022
+# Process ID: 19260
 # Current directory: D:/Projet_range/project/project.runs/synth_1
 # Command line: vivado.exe -log design_fpga_wrapper.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_fpga_wrapper.tcl
 # Log file: D:/Projet_range/project/project.runs/synth_1/design_fpga_wrapper.vds
@@ -20,28 +20,30 @@ INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020
 INFO: [Device 21-403] Loading part xc7z020clg400-1
 INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
 INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
-INFO: [Synth 8-7075] Helper process launched with PID 2112
+INFO: [Synth 8-7075] Helper process launched with PID 12028
 ---------------------------------------------------------------------------------
-Starting RTL Elaboration : Time (s): cpu = 00:00:03 ; elapsed = 00:00:04 . Memory (MB): peak = 1195.168 ; gain = 68.723
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1196.141 ; gain = 69.727
 ---------------------------------------------------------------------------------
-INFO: [Synth 8-638] synthesizing module 'design_fpga_wrapper' [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:51]
-INFO: [Synth 8-3491] module 'design_fpga' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2113' bound to instance 'design_fpga_i' of component 'design_fpga' [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:89]
-INFO: [Synth 8-638] synthesizing module 'design_fpga' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2154]
-INFO: [Synth 8-3491] module 'design_fpga_Balise_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Balise_0_0_stub.vhdl:5' bound to instance 'Balise_0' of component 'design_fpga_Balise_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2650]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_Balise_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Balise_0_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'design_fpga_Dijkstra_reg_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Dijkstra_reg_0_0_stub.vhdl:5' bound to instance 'Dijkstra_reg_0' of component 'design_fpga_Dijkstra_reg_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2676]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_Dijkstra_reg_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Dijkstra_reg_0_0_stub.vhdl:32]
-INFO: [Synth 8-3491] module 'design_fpga_IMU_v3_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_IMU_v3_0_0_stub.vhdl:5' bound to instance 'IMU_v3_0' of component 'design_fpga_IMU_v3_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2700]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_IMU_v3_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_IMU_v3_0_0_stub.vhdl:35]
-INFO: [Synth 8-3491] module 'design_fpga_RFID_reader_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_RFID_reader_0_0_stub.vhdl:5' bound to instance 'RFID_reader_0' of component 'design_fpga_RFID_reader_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2727]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_RFID_reader_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_RFID_reader_0_0_stub.vhdl:36]
-INFO: [Synth 8-3491] module 'design_fpga_Timer_ronde_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Timer_ronde_0_0_stub.vhdl:5' bound to instance 'Timer_ronde_0' of component 'design_fpga_Timer_ronde_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2755]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_Timer_ronde_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_Timer_ronde_0_0_stub.vhdl:34]
-INFO: [Synth 8-3491] module 'design_fpga_axi_uartlite_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_fpga_axi_uartlite_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2781]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_axi_uartlite_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_axi_uartlite_0_0_stub.vhdl:33]
-INFO: [Synth 8-3491] module 'design_fpga_processing_system7_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_fpga_processing_system7_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2806]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_processing_system7_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_processing_system7_0_0_stub.vhdl:76]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_ps7_0_axi_periph_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1157]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_wrapper' [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:54]
+INFO: [Synth 8-3491] module 'design_fpga' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2366' bound to instance 'design_fpga_i' of component 'design_fpga' [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:95]
+INFO: [Synth 8-638] synthesizing module 'design_fpga' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2410]
+INFO: [Synth 8-3491] module 'design_fpga_Balise_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Balise_0_0_stub.vhdl:5' bound to instance 'Balise_0' of component 'design_fpga_Balise_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2965]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_Balise_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Balise_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'design_fpga_Dijkstra_reg_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Dijkstra_reg_0_0_stub.vhdl:5' bound to instance 'Dijkstra_reg_0' of component 'design_fpga_Dijkstra_reg_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2991]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_Dijkstra_reg_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Dijkstra_reg_0_0_stub.vhdl:32]
+INFO: [Synth 8-3491] module 'design_fpga_IMU_v3_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_IMU_v3_0_0_stub.vhdl:5' bound to instance 'IMU_v3_0' of component 'design_fpga_IMU_v3_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3015]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_IMU_v3_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_IMU_v3_0_0_stub.vhdl:35]
+INFO: [Synth 8-3491] module 'design_fpga_RFID_reader_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_RFID_reader_0_0_stub.vhdl:5' bound to instance 'RFID_reader_0' of component 'design_fpga_RFID_reader_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3042]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_RFID_reader_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_RFID_reader_0_0_stub.vhdl:36]
+INFO: [Synth 8-3491] module 'design_fpga_Timer_ronde_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Timer_ronde_0_0_stub.vhdl:5' bound to instance 'Timer_ronde_0' of component 'design_fpga_Timer_ronde_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3070]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_Timer_ronde_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Timer_ronde_0_0_stub.vhdl:34]
+INFO: [Synth 8-3491] module 'design_fpga_Ultrasons_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Ultrasons_0_0_stub.vhdl:5' bound to instance 'Ultrasons_0' of component 'design_fpga_Ultrasons_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3096]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_Ultrasons_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_Ultrasons_0_0_stub.vhdl:38]
+INFO: [Synth 8-3491] module 'design_fpga_axi_uartlite_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_axi_uartlite_0_0_stub.vhdl:5' bound to instance 'axi_uartlite_0' of component 'design_fpga_axi_uartlite_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3126]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_axi_uartlite_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_axi_uartlite_0_0_stub.vhdl:33]
+INFO: [Synth 8-3491] module 'design_fpga_processing_system7_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_processing_system7_0_0_stub.vhdl:5' bound to instance 'processing_system7_0' of component 'design_fpga_processing_system7_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3151]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_processing_system7_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_processing_system7_0_0_stub.vhdl:76]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_ps7_0_axi_periph_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1289]
 INFO: [Synth 8-638] synthesizing module 'm00_couplers_imp_3SN894' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:61]
 INFO: [Synth 8-256] done synthesizing module 'm00_couplers_imp_3SN894' (1#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:61]
 INFO: [Synth 8-638] synthesizing module 'm01_couplers_imp_14MWGLY' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:172]
@@ -54,34 +56,48 @@ INFO: [Synth 8-638] synthesizing module 'm04_couplers_imp_8P1QGJ' [d:/Projet_ran
 INFO: [Synth 8-256] done synthesizing module 'm04_couplers_imp_8P1QGJ' (5#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:501]
 INFO: [Synth 8-638] synthesizing module 'm05_couplers_imp_ZO2WTP' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:606]
 INFO: [Synth 8-256] done synthesizing module 'm05_couplers_imp_ZO2WTP' (6#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:606]
-INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1QMBDEG' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:736]
-INFO: [Synth 8-3491] module 'design_fpga_auto_pc_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_fpga_auto_pc_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:919]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_auto_pc_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_auto_pc_0_stub.vhdl:70]
-INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1QMBDEG' (7#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:736]
-INFO: [Synth 8-3491] module 'design_fpga_xbar_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_fpga_xbar_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1970]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_xbar_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_xbar_0_stub.vhdl:51]
-INFO: [Synth 8-256] done synthesizing module 'design_fpga_ps7_0_axi_periph_0' (8#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1157]
-INFO: [Synth 8-3491] module 'design_fpga_rst_ps7_0_50M_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_fpga_rst_ps7_0_50M_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3043]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_rst_ps7_0_50M_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_rst_ps7_0_50M_0_stub.vhdl:21]
-INFO: [Synth 8-3491] module 'design_fpga_test_interface_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_test_interface_0_0_stub.vhdl:5' bound to instance 'test_interface_0' of component 'design_fpga_test_interface_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3056]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_test_interface_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_test_interface_0_0_stub.vhdl:14]
-INFO: [Synth 8-3491] module 'design_fpga_time_pulse_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_time_pulse_0_0_stub.vhdl:5' bound to instance 'time_pulse_0' of component 'design_fpga_time_pulse_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3062]
-INFO: [Synth 8-638] synthesizing module 'design_fpga_time_pulse_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-22012-D-14JM0W2/realtime/design_fpga_time_pulse_0_0_stub.vhdl:17]
-INFO: [Synth 8-256] done synthesizing module 'design_fpga' (9#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2154]
-INFO: [Synth 8-256] done synthesizing module 'design_fpga_wrapper' (10#1) [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:51]
+INFO: [Synth 8-638] synthesizing module 'm06_couplers_imp_1XSWOJY' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:717]
+INFO: [Synth 8-256] done synthesizing module 'm06_couplers_imp_1XSWOJY' (7#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:717]
+INFO: [Synth 8-638] synthesizing module 's00_couplers_imp_1QMBDEG' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:847]
+INFO: [Synth 8-3491] module 'design_fpga_auto_pc_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_auto_pc_0_stub.vhdl:5' bound to instance 'auto_pc' of component 'design_fpga_auto_pc_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1030]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_auto_pc_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_auto_pc_0_stub.vhdl:70]
+INFO: [Synth 8-256] done synthesizing module 's00_couplers_imp_1QMBDEG' (8#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:847]
+INFO: [Synth 8-3491] module 'design_fpga_xbar_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_xbar_0_stub.vhdl:5' bound to instance 'xbar' of component 'design_fpga_xbar_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2204]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_xbar_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_xbar_0_stub.vhdl:51]
+INFO: [Synth 8-256] done synthesizing module 'design_fpga_ps7_0_axi_periph_0' (9#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:1289]
+INFO: [Synth 8-3491] module 'design_fpga_rst_ps7_0_50M_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_rst_ps7_0_50M_0_stub.vhdl:5' bound to instance 'rst_ps7_0_50M' of component 'design_fpga_rst_ps7_0_50M_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3409]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_rst_ps7_0_50M_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_rst_ps7_0_50M_0_stub.vhdl:21]
+INFO: [Synth 8-3491] module 'design_fpga_time_pulse_0_0' declared at 'D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_time_pulse_0_0_stub.vhdl:5' bound to instance 'time_pulse_0' of component 'design_fpga_time_pulse_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3422]
+INFO: [Synth 8-638] synthesizing module 'design_fpga_time_pulse_0_0' [D:/Projet_range/project/project.runs/synth_1/.Xil/Vivado-19260-D-14JM0W2/realtime/design_fpga_time_pulse_0_0_stub.vhdl:17]
+INFO: [Synth 8-3491] module 'design_fpga_xlconstant_0_0' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_0_0/synth/design_fpga_xlconstant_0_0.v:57' bound to instance 'xlconstant_0' of component 'design_fpga_xlconstant_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3431]
+INFO: [Synth 8-6157] synthesizing module 'design_fpga_xlconstant_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_0_0/synth/design_fpga_xlconstant_0_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1'b0 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant' (10#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_fpga_xlconstant_0_0' (11#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_0_0/synth/design_fpga_xlconstant_0_0.v:57]
+INFO: [Synth 8-3491] module 'design_fpga_xlconstant_1_0' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_1_0/synth/design_fpga_xlconstant_1_0.v:57' bound to instance 'xlconstant_1' of component 'design_fpga_xlconstant_1_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:3435]
+INFO: [Synth 8-6157] synthesizing module 'design_fpga_xlconstant_1_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_1_0/synth/design_fpga_xlconstant_1_0.v:57]
+INFO: [Synth 8-6157] synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+	Parameter CONST_VAL bound to: 1'b1 
+	Parameter CONST_WIDTH bound to: 1 - type: integer 
+INFO: [Synth 8-6155] done synthesizing module 'xlconstant_v1_1_7_xlconstant__parameterized0' (11#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/fcfc/hdl/xlconstant_v1_1_vl_rfs.v:23]
+INFO: [Synth 8-6155] done synthesizing module 'design_fpga_xlconstant_1_0' (12#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_xlconstant_1_0/synth/design_fpga_xlconstant_1_0.v:57]
+INFO: [Synth 8-256] done synthesizing module 'design_fpga' (13#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/synth/design_fpga.vhd:2410]
+INFO: [Synth 8-256] done synthesizing module 'design_fpga_wrapper' (14#1) [D:/Projet_range/project/project.gen/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd:54]
 ---------------------------------------------------------------------------------
-Finished RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:05 . Memory (MB): peak = 1256.566 ; gain = 130.121
+Finished RTL Elaboration : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1257.727 ; gain = 131.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1256.566 ; gain = 130.121
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1257.727 ; gain = 131.312
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:05 ; elapsed = 00:00:05 . Memory (MB): peak = 1256.566 ; gain = 130.121
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1257.727 ; gain = 131.312
 ---------------------------------------------------------------------------------
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.039 . Memory (MB): peak = 1256.566 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.046 . Memory (MB): peak = 1257.727 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 
 Processing XDC Constraints
@@ -108,8 +124,8 @@ Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/i
 Finished Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_Timer_ronde_0_0/design_fpga_Timer_ronde_0_0/design_fpga_Timer_ronde_0_0_in_context.xdc] for cell 'design_fpga_i/Timer_ronde_0'
 Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0_in_context.xdc] for cell 'design_fpga_i/RFID_reader_0'
 Finished Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0_in_context.xdc] for cell 'design_fpga_i/RFID_reader_0'
-Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0_in_context.xdc] for cell 'design_fpga_i/test_interface_0'
-Finished Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0_in_context.xdc] for cell 'design_fpga_i/test_interface_0'
+Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0_in_context.xdc] for cell 'design_fpga_i/Ultrasons_0'
+Finished Parsing XDC File [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0_in_context.xdc] for cell 'design_fpga_i/Ultrasons_0'
 Parsing XDC File [D:/Projet_range/project/project.srcs/constrs_1/imports/Projet_range/zybo-z7-20.xdc]
 Finished Parsing XDC File [D:/Projet_range/project/project.srcs/constrs_1/imports/Projet_range/zybo-z7-20.xdc]
 INFO: [Project 1-236] Implementation specific constraints were found while reading constraint file [D:/Projet_range/project/project.srcs/constrs_1/imports/Projet_range/zybo-z7-20.xdc]. These constraints will be ignored for synthesis but will be used in implementation. Impacted constraints are listed in the file [.Xil/design_fpga_wrapper_propImpl.xdc].
@@ -118,20 +134,20 @@ Parsing XDC File [D:/Projet_range/project/project.runs/synth_1/dont_touch.xdc]
 Finished Parsing XDC File [D:/Projet_range/project/project.runs/synth_1/dont_touch.xdc]
 Completed Processing XDC Constraints
 
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1292.824 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1292.312 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
-Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.006 . Memory (MB): peak = 1292.824 ; gain = 0.000
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.023 . Memory (MB): peak = 1292.312 ; gain = 0.000
 ---------------------------------------------------------------------------------
-Finished Constraint Validation : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1292.824 ; gain = 166.379
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1292.312 ; gain = 165.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Loading Part and Timing Information
 ---------------------------------------------------------------------------------
 Loading part: xc7z020clg400-1
 ---------------------------------------------------------------------------------
-Finished Loading Part and Timing Information : Time (s): cpu = 00:00:11 ; elapsed = 00:00:11 . Memory (MB): peak = 1292.824 ; gain = 166.379
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1292.312 ; gain = 165.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying 'set_property' XDC Constraints
@@ -413,12 +429,14 @@ Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/Dijkstra_reg_0. (co
 Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/IMU_v3_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/Timer_ronde_0. (constraint file  auto generated constraint).
 Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/RFID_reader_0. (constraint file  auto generated constraint).
-Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/test_interface_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/xlconstant_0. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/xlconstant_1. (constraint file  auto generated constraint).
+Applied set_property KEEP_HIERARCHY = SOFT for design_fpga_i/Ultrasons_0. (constraint file  auto generated constraint).
 ---------------------------------------------------------------------------------
-Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1292.824 ; gain = 166.379
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1292.312 ; gain = 165.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:11 ; elapsed = 00:00:12 . Memory (MB): peak = 1292.824 ; gain = 166.379
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1292.312 ; gain = 165.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start RTL Component Statistics 
@@ -440,25 +458,25 @@ Finished Part Resource Summary
 Start Cross Boundary and Area Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:12 ; elapsed = 00:00:13 . Memory (MB): peak = 1292.824 ; gain = 166.379
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:13 ; elapsed = 00:00:15 . Memory (MB): peak = 1292.312 ; gain = 165.898
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Applying XDC Timing Constraints
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1334.875 ; gain = 208.430
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:19 ; elapsed = 00:00:20 . Memory (MB): peak = 1330.691 ; gain = 204.277
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Timing Optimization
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Timing Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1335.320 ; gain = 208.875
+Finished Timing Optimization : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1331.062 ; gain = 204.648
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Technology Mapping
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Technology Mapping : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1354.422 ; gain = 227.977
+Finished Technology Mapping : Time (s): cpu = 00:00:19 ; elapsed = 00:00:21 . Memory (MB): peak = 1350.164 ; gain = 223.750
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start IO Insertion
@@ -476,37 +494,37 @@ Start Final Netlist Cleanup
 Finished Final Netlist Cleanup
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished IO Insertion : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished IO Insertion : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Instances
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Instances : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Rebuilding User Hierarchy
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Ports
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Ports : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Handling Custom Attributes
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Handling Custom Attributes : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Renaming Generated Nets
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
-Finished Renaming Generated Nets : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 ---------------------------------------------------------------------------------
 Start Writing Synthesis Report
@@ -523,10 +541,10 @@ Report BlackBoxes:
 |5     |design_fpga_IMU_v3_0_0             |         1|
 |6     |design_fpga_RFID_reader_0_0        |         1|
 |7     |design_fpga_Timer_ronde_0_0        |         1|
-|8     |design_fpga_axi_uartlite_0_0       |         1|
-|9     |design_fpga_processing_system7_0_0 |         1|
-|10    |design_fpga_rst_ps7_0_50M_0        |         1|
-|11    |design_fpga_test_interface_0_0     |         1|
+|8     |design_fpga_Ultrasons_0_0          |         1|
+|9     |design_fpga_axi_uartlite_0_0       |         1|
+|10    |design_fpga_processing_system7_0_0 |         1|
+|11    |design_fpga_rst_ps7_0_50M_0        |         1|
 |12    |design_fpga_time_pulse_0_0         |         1|
 +------+-----------------------------------+----------+
 
@@ -539,34 +557,34 @@ Report Cell Usage:
 |3     |design_fpga_IMU_v3_0_0_bbox             |     1|
 |4     |design_fpga_RFID_reader_0_0_bbox        |     1|
 |5     |design_fpga_Timer_ronde_0_0_bbox        |     1|
-|6     |design_fpga_auto_pc_0_bbox              |     1|
-|7     |design_fpga_axi_uartlite_0_0_bbox       |     1|
-|8     |design_fpga_processing_system7_0_0_bbox |     1|
-|9     |design_fpga_rst_ps7_0_50M_0_bbox        |     1|
-|10    |design_fpga_test_interface_0_0_bbox     |     1|
+|6     |design_fpga_Ultrasons_0_0_bbox          |     1|
+|7     |design_fpga_auto_pc_0_bbox              |     1|
+|8     |design_fpga_axi_uartlite_0_0_bbox       |     1|
+|9     |design_fpga_processing_system7_0_0_bbox |     1|
+|10    |design_fpga_rst_ps7_0_50M_0_bbox        |     1|
 |11    |design_fpga_time_pulse_0_0_bbox         |     1|
 |12    |design_fpga_xbar_0_bbox                 |     1|
 |13    |IBUF                                    |     4|
 |14    |OBUF                                    |    10|
 +------+----------------------------------------+------+
 ---------------------------------------------------------------------------------
-Finished Writing Synthesis Report : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 ---------------------------------------------------------------------------------
 Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
-Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:19 . Memory (MB): peak = 1359.219 ; gain = 196.516
-Synthesis Optimization Complete : Time (s): cpu = 00:00:21 ; elapsed = 00:00:22 . Memory (MB): peak = 1359.219 ; gain = 232.773
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:14 ; elapsed = 00:00:21 . Memory (MB): peak = 1355.930 ; gain = 194.930
+Synthesis Optimization Complete : Time (s): cpu = 00:00:22 ; elapsed = 00:00:24 . Memory (MB): peak = 1355.930 ; gain = 229.516
 INFO: [Project 1-571] Translating synthesized netlist
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.024 . Memory (MB): peak = 1371.230 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.030 . Memory (MB): peak = 1367.973 ; gain = 0.000
 INFO: [Project 1-570] Preparing netlist for logic optimization
 INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
-Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1380.316 ; gain = 0.000
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1377.031 ; gain = 0.000
 INFO: [Project 1-111] Unisim Transformation Summary:
 No Unisim elements were transformed.
 
 INFO: [Common 17-83] Releasing license: Synthesis
-61 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+73 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
 synth_design completed successfully
-synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:29 . Memory (MB): peak = 1380.316 ; gain = 253.871
+synth_design: Time (s): cpu = 00:00:27 ; elapsed = 00:00:31 . Memory (MB): peak = 1377.031 ; gain = 250.617
 INFO: [Common 17-1381] The checkpoint 'D:/Projet_range/project/project.runs/synth_1/design_fpga_wrapper.dcp' has been generated.
 INFO: [runtcl-4] Executing : report_utilization -file design_fpga_wrapper_utilization_synth.rpt -pb design_fpga_wrapper_utilization_synth.pb
-INFO: [Common 17-206] Exiting Vivado at Wed Aug 24 11:07:22 2022...
+INFO: [Common 17-206] Exiting Vivado at Wed Sep  7 14:17:37 2022...

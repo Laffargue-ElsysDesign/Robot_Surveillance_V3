@@ -40,7 +40,7 @@ if { [string first $scripts_vivado_version $current_vivado_version] == -1 } {
 
 # The design that will be created by this Tcl script contains the following 
 # module references:
-# test_interface, time_pulse
+# time_pulse
 
 # Please add the sources of those modules before sourcing this Tcl script.
 
@@ -175,11 +175,14 @@ proc create_root_design { parentCell } {
   set BALISE_UART_TX [ create_bd_port -dir O BALISE_UART_TX ]
   set IMU_I2C_SCL [ create_bd_port -dir IO IMU_I2C_SCL ]
   set IMU_I2C_SDA [ create_bd_port -dir IO IMU_I2C_SDA ]
+  set PWR_MGT_US [ create_bd_port -dir O PWR_MGT_US ]
   set RFID_UART_RX [ create_bd_port -dir I RFID_UART_RX ]
   set RFID_UART_TX [ create_bd_port -dir O RFID_UART_TX ]
-  set input_0 [ create_bd_port -dir I input_0 ]
-  set out_0 [ create_bd_port -dir O -from 4 -to 0 out_0 ]
-  set out_1 [ create_bd_port -dir O -from 1 -to 0 out_1 ]
+  set US_ECHO_3V3 [ create_bd_port -dir I US_ECHO_3V3 ]
+  set US_SEL [ create_bd_port -dir O -from 2 -to 0 US_SEL ]
+  set US_TRIG_3V3 [ create_bd_port -dir O US_TRIG_3V3 ]
+  set out_0 [ create_bd_port -dir O -from 0 -to 0 out_0 ]
+  set out_1 [ create_bd_port -dir O -from 0 -to 0 out_1 ]
 
   # Create instance: Balise_0, and set properties
   set Balise_0 [ create_bd_cell -type ip -vlnv elsys-design.com:user:Balise:1.0 Balise_0 ]
@@ -195,6 +198,9 @@ proc create_root_design { parentCell } {
 
   # Create instance: Timer_ronde_0, and set properties
   set Timer_ronde_0 [ create_bd_cell -type ip -vlnv elsys-design.com:user:Timer_ronde:1.0 Timer_ronde_0 ]
+
+  # Create instance: Ultrasons_0, and set properties
+  set Ultrasons_0 [ create_bd_cell -type ip -vlnv elsys-design.com:user:Ultrasons:1.0 Ultrasons_0 ]
 
   # Create instance: axi_uartlite_0, and set properties
   set axi_uartlite_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_uartlite:2.0 axi_uartlite_0 ]
@@ -684,24 +690,13 @@ proc create_root_design { parentCell } {
   # Create instance: ps7_0_axi_periph, and set properties
   set ps7_0_axi_periph [ create_bd_cell -type ip -vlnv xilinx.com:ip:axi_interconnect:2.1 ps7_0_axi_periph ]
   set_property -dict [ list \
-   CONFIG.NUM_MI {6} \
+   CONFIG.NUM_MI {7} \
    CONFIG.NUM_SI {1} \
  ] $ps7_0_axi_periph
 
   # Create instance: rst_ps7_0_50M, and set properties
   set rst_ps7_0_50M [ create_bd_cell -type ip -vlnv xilinx.com:ip:proc_sys_reset:5.0 rst_ps7_0_50M ]
 
-  # Create instance: test_interface_0, and set properties
-  set block_name test_interface
-  set block_cell_name test_interface_0
-  if { [catch {set test_interface_0 [create_bd_cell -type module -reference $block_name $block_cell_name] } errmsg] } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2095 -severity "ERROR" "Unable to add referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   } elseif { $test_interface_0 eq "" } {
-     catch {common::send_gid_msg -ssname BD::TCL -id 2096 -severity "ERROR" "Unable to referenced block <$block_name>. Please add the files for ${block_name}'s definition into the project."}
-     return 1
-   }
-  
   # Create instance: time_pulse_0, and set properties
   set block_name time_pulse
   set block_cell_name time_pulse_0
@@ -713,6 +708,15 @@ proc create_root_design { parentCell } {
      return 1
    }
   
+  # Create instance: xlconstant_0, and set properties
+  set xlconstant_0 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_0 ]
+  set_property -dict [ list \
+   CONFIG.CONST_VAL {0} \
+ ] $xlconstant_0
+
+  # Create instance: xlconstant_1, and set properties
+  set xlconstant_1 [ create_bd_cell -type ip -vlnv xilinx.com:ip:xlconstant:1.1 xlconstant_1 ]
+
   # Create interface connections
   connect_bd_intf_net -intf_net axi_uartlite_0_UART [get_bd_intf_ports HOLO_UART] [get_bd_intf_pins axi_uartlite_0/UART]
   connect_bd_intf_net -intf_net processing_system7_0_DDR [get_bd_intf_ports DDR] [get_bd_intf_pins processing_system7_0/DDR]
@@ -724,6 +728,7 @@ proc create_root_design { parentCell } {
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M03_AXI [get_bd_intf_pins IMU_v3_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M03_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M04_AXI [get_bd_intf_pins axi_uartlite_0/S_AXI] [get_bd_intf_pins ps7_0_axi_periph/M04_AXI]
   connect_bd_intf_net -intf_net ps7_0_axi_periph_M05_AXI [get_bd_intf_pins RFID_reader_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M05_AXI]
+  connect_bd_intf_net -intf_net ps7_0_axi_periph_M06_AXI [get_bd_intf_pins Ultrasons_0/S00_AXI] [get_bd_intf_pins ps7_0_axi_periph/M06_AXI]
 
   # Create port connections
   connect_bd_net -net Balise_0_TX_Serial [get_bd_ports BALISE_UART_TX] [get_bd_pins Balise_0/TX_Serial]
@@ -732,16 +737,19 @@ proc create_root_design { parentCell } {
   connect_bd_net -net RFID_reader_0_TX_Serial [get_bd_ports RFID_UART_TX] [get_bd_pins RFID_reader_0/TX_Serial]
   connect_bd_net -net RX_Serial_0_1 [get_bd_ports BALISE_UART_RX] [get_bd_pins Balise_0/RX_Serial]
   connect_bd_net -net RX_Serial_0_2 [get_bd_ports RFID_UART_RX] [get_bd_pins RFID_reader_0/RX_Serial]
-  connect_bd_net -net input_u_0_1 [get_bd_ports input_0] [get_bd_pins test_interface_0/input_u]
-  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Balise_0/s00_axi_aclk] [get_bd_pins Dijkstra_reg_0/s00_axi_aclk] [get_bd_pins IMU_v3_0/s00_axi_aclk] [get_bd_pins RFID_reader_0/s00_axi_aclk] [get_bd_pins Timer_ronde_0/s00_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins time_pulse_0/clk]
+  connect_bd_net -net Ultrasons_0_en_ult [get_bd_ports PWR_MGT_US] [get_bd_pins Ultrasons_0/en_ult]
+  connect_bd_net -net Ultrasons_0_sel_ult [get_bd_ports US_SEL] [get_bd_pins Ultrasons_0/sel_ult]
+  connect_bd_net -net Ultrasons_0_trig_out [get_bd_ports US_TRIG_3V3] [get_bd_pins Ultrasons_0/trig_out]
+  connect_bd_net -net echo_in_0_1 [get_bd_ports US_ECHO_3V3] [get_bd_pins Ultrasons_0/echo_in]
+  connect_bd_net -net processing_system7_0_FCLK_CLK0 [get_bd_pins Balise_0/s00_axi_aclk] [get_bd_pins Dijkstra_reg_0/s00_axi_aclk] [get_bd_pins IMU_v3_0/s00_axi_aclk] [get_bd_pins RFID_reader_0/s00_axi_aclk] [get_bd_pins Timer_ronde_0/s00_axi_aclk] [get_bd_pins Ultrasons_0/s00_axi_aclk] [get_bd_pins axi_uartlite_0/s_axi_aclk] [get_bd_pins processing_system7_0/FCLK_CLK0] [get_bd_pins processing_system7_0/M_AXI_GP0_ACLK] [get_bd_pins ps7_0_axi_periph/ACLK] [get_bd_pins ps7_0_axi_periph/M00_ACLK] [get_bd_pins ps7_0_axi_periph/M01_ACLK] [get_bd_pins ps7_0_axi_periph/M02_ACLK] [get_bd_pins ps7_0_axi_periph/M03_ACLK] [get_bd_pins ps7_0_axi_periph/M04_ACLK] [get_bd_pins ps7_0_axi_periph/M05_ACLK] [get_bd_pins ps7_0_axi_periph/M06_ACLK] [get_bd_pins ps7_0_axi_periph/S00_ACLK] [get_bd_pins rst_ps7_0_50M/slowest_sync_clk] [get_bd_pins time_pulse_0/clk]
   connect_bd_net -net processing_system7_0_FCLK_RESET0_N [get_bd_pins processing_system7_0/FCLK_RESET0_N] [get_bd_pins rst_ps7_0_50M/ext_reset_in]
-  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins Balise_0/s00_axi_aresetn] [get_bd_pins Dijkstra_reg_0/s00_axi_aresetn] [get_bd_pins IMU_v3_0/s00_axi_aresetn] [get_bd_pins RFID_reader_0/s00_axi_aresetn] [get_bd_pins Timer_ronde_0/s00_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins time_pulse_0/rst_n]
-  connect_bd_net -net test_interface_0_out_0 [get_bd_ports out_0] [get_bd_pins test_interface_0/out_0]
-  connect_bd_net -net test_interface_0_out_1 [get_bd_ports out_1] [get_bd_pins test_interface_0/out_1]
+  connect_bd_net -net rst_ps7_0_50M_peripheral_aresetn [get_bd_pins Balise_0/s00_axi_aresetn] [get_bd_pins Dijkstra_reg_0/s00_axi_aresetn] [get_bd_pins IMU_v3_0/s00_axi_aresetn] [get_bd_pins RFID_reader_0/s00_axi_aresetn] [get_bd_pins Timer_ronde_0/s00_axi_aresetn] [get_bd_pins Ultrasons_0/s00_axi_aresetn] [get_bd_pins axi_uartlite_0/s_axi_aresetn] [get_bd_pins ps7_0_axi_periph/ARESETN] [get_bd_pins ps7_0_axi_periph/M00_ARESETN] [get_bd_pins ps7_0_axi_periph/M01_ARESETN] [get_bd_pins ps7_0_axi_periph/M02_ARESETN] [get_bd_pins ps7_0_axi_periph/M03_ARESETN] [get_bd_pins ps7_0_axi_periph/M04_ARESETN] [get_bd_pins ps7_0_axi_periph/M05_ARESETN] [get_bd_pins ps7_0_axi_periph/M06_ARESETN] [get_bd_pins ps7_0_axi_periph/S00_ARESETN] [get_bd_pins rst_ps7_0_50M/peripheral_aresetn] [get_bd_pins time_pulse_0/rst_n]
   connect_bd_net -net time_pulse_0_pulse_1min [get_bd_pins Timer_ronde_0/pulse_min] [get_bd_pins time_pulse_0/pulse_1min]
-  connect_bd_net -net time_pulse_0_pulse_1ms [get_bd_pins IMU_v3_0/pulse_1ms] [get_bd_pins RFID_reader_0/pulse_ms] [get_bd_pins time_pulse_0/pulse_1ms]
+  connect_bd_net -net time_pulse_0_pulse_1ms [get_bd_pins IMU_v3_0/pulse_1ms] [get_bd_pins RFID_reader_0/pulse_ms] [get_bd_pins Ultrasons_0/pulse_ms] [get_bd_pins time_pulse_0/pulse_1ms]
   connect_bd_net -net time_pulse_0_pulse_1s [get_bd_pins Timer_ronde_0/pulse_s] [get_bd_pins time_pulse_0/pulse_1s]
-  connect_bd_net -net time_pulse_0_pulse_1us [get_bd_pins RFID_reader_0/pulse_us] [get_bd_pins time_pulse_0/pulse_1us]
+  connect_bd_net -net time_pulse_0_pulse_1us [get_bd_pins RFID_reader_0/pulse_us] [get_bd_pins Ultrasons_0/pulse_us] [get_bd_pins time_pulse_0/pulse_1us]
+  connect_bd_net -net xlconstant_0_dout [get_bd_ports out_0] [get_bd_pins xlconstant_0/dout]
+  connect_bd_net -net xlconstant_1_dout [get_bd_ports out_1] [get_bd_pins xlconstant_1/dout]
 
   # Create address segments
   assign_bd_address -offset 0x43C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Balise_0/S00_AXI/S00_AXI_reg] -force
@@ -749,6 +757,7 @@ proc create_root_design { parentCell } {
   assign_bd_address -offset 0x43C20000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs IMU_v3_0/S00_AXI/S00_AXI_reg] -force
   assign_bd_address -offset 0x43C40000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs RFID_reader_0/S00_AXI/S00_AXI_reg] -force
   assign_bd_address -offset 0x43C30000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Timer_ronde_0/S00_AXI/S00_AXI_reg] -force
+  assign_bd_address -offset 0x43C50000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs Ultrasons_0/S00_AXI/S00_AXI_reg] -force
   assign_bd_address -offset 0x42C00000 -range 0x00010000 -target_address_space [get_bd_addr_spaces processing_system7_0/Data] [get_bd_addr_segs axi_uartlite_0/S_AXI/Reg] -force
 
 

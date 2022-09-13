@@ -1,7 +1,7 @@
 --Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
 ----------------------------------------------------------------------------------
 --Tool Version: Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
---Date        : Wed Aug 24 09:56:42 2022
+--Date        : Wed Sep  7 14:15:42 2022
 --Host        : D-14JM0W2 running 64-bit major release  (build 9200)
 --Command     : generate_target design_fpga_wrapper.bd
 --Design      : design_fpga_wrapper
@@ -40,11 +40,14 @@ entity design_fpga_wrapper is
     HOLO_UART_txd : out STD_LOGIC;
     IMU_I2C_SCL : inout STD_LOGIC;
     IMU_I2C_SDA : inout STD_LOGIC;
+    PWR_MGT_US : out STD_LOGIC;
     RFID_UART_RX : in STD_LOGIC;
     RFID_UART_TX : out STD_LOGIC;
-    input_0 : in STD_LOGIC;
-    out_0 : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    out_1 : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    US_ECHO_3V3 : in STD_LOGIC;
+    US_SEL : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    US_TRIG_3V3 : out STD_LOGIC;
+    out_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    out_1 : out STD_LOGIC_VECTOR ( 0 to 0 )
   );
 end design_fpga_wrapper;
 
@@ -57,8 +60,18 @@ architecture STRUCTURE of design_fpga_wrapper is
     IMU_I2C_SCL : inout STD_LOGIC;
     RFID_UART_RX : in STD_LOGIC;
     RFID_UART_TX : out STD_LOGIC;
-    HOLO_UART_rxd : in STD_LOGIC;
-    HOLO_UART_txd : out STD_LOGIC;
+    US_ECHO_3V3 : in STD_LOGIC;
+    PWR_MGT_US : out STD_LOGIC;
+    US_SEL : out STD_LOGIC_VECTOR ( 2 downto 0 );
+    US_TRIG_3V3 : out STD_LOGIC;
+    out_0 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    out_1 : out STD_LOGIC_VECTOR ( 0 to 0 );
+    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
+    FIXED_IO_ddr_vrn : inout STD_LOGIC;
+    FIXED_IO_ddr_vrp : inout STD_LOGIC;
+    FIXED_IO_ps_srstb : inout STD_LOGIC;
+    FIXED_IO_ps_clk : inout STD_LOGIC;
+    FIXED_IO_ps_porb : inout STD_LOGIC;
     DDR_cas_n : inout STD_LOGIC;
     DDR_cke : inout STD_LOGIC;
     DDR_ck_n : inout STD_LOGIC;
@@ -74,15 +87,8 @@ architecture STRUCTURE of design_fpga_wrapper is
     DDR_dq : inout STD_LOGIC_VECTOR ( 31 downto 0 );
     DDR_dqs_n : inout STD_LOGIC_VECTOR ( 3 downto 0 );
     DDR_dqs_p : inout STD_LOGIC_VECTOR ( 3 downto 0 );
-    FIXED_IO_mio : inout STD_LOGIC_VECTOR ( 53 downto 0 );
-    FIXED_IO_ddr_vrn : inout STD_LOGIC;
-    FIXED_IO_ddr_vrp : inout STD_LOGIC;
-    FIXED_IO_ps_srstb : inout STD_LOGIC;
-    FIXED_IO_ps_clk : inout STD_LOGIC;
-    FIXED_IO_ps_porb : inout STD_LOGIC;
-    input_0 : in STD_LOGIC;
-    out_0 : out STD_LOGIC_VECTOR ( 4 downto 0 );
-    out_1 : out STD_LOGIC_VECTOR ( 1 downto 0 )
+    HOLO_UART_rxd : in STD_LOGIC;
+    HOLO_UART_txd : out STD_LOGIC
   );
   end component design_fpga;
 begin
@@ -115,10 +121,13 @@ design_fpga_i: component design_fpga
       HOLO_UART_txd => HOLO_UART_txd,
       IMU_I2C_SCL => IMU_I2C_SCL,
       IMU_I2C_SDA => IMU_I2C_SDA,
+      PWR_MGT_US => PWR_MGT_US,
       RFID_UART_RX => RFID_UART_RX,
       RFID_UART_TX => RFID_UART_TX,
-      input_0 => input_0,
-      out_0(4 downto 0) => out_0(4 downto 0),
-      out_1(1 downto 0) => out_1(1 downto 0)
+      US_ECHO_3V3 => US_ECHO_3V3,
+      US_SEL(2 downto 0) => US_SEL(2 downto 0),
+      US_TRIG_3V3 => US_TRIG_3V3,
+      out_0(0) => out_0(0),
+      out_1(0) => out_1(0)
     );
 end STRUCTURE;

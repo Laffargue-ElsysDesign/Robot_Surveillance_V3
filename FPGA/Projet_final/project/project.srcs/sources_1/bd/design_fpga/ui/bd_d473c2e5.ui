@@ -1,65 +1,74 @@
 {
    "ActiveEmotionalView":"Default View",
-   "Default View_ScaleFactor":"0.601136",
-   "Default View_TopLeft":"-324,-50",
+   "Default View_ScaleFactor":"0.744582",
+   "Default View_TopLeft":"44,788",
    "ExpandedHierarchyInLayout":"",
    "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
 #  -string -flagsOSRD
-preplace port DDR -pg 1 -lvl 4 -x 1440 -y 340 -defaultsOSRD
-preplace port FIXED_IO -pg 1 -lvl 4 -x 1440 -y 360 -defaultsOSRD
-preplace port HOLO_UART -pg 1 -lvl 4 -x 1440 -y 730 -defaultsOSRD
-preplace port BALISE_UART_RX -pg 1 -lvl 0 -x -10 -y 820 -defaultsOSRD
-preplace port BALISE_UART_TX -pg 1 -lvl 4 -x 1440 -y 450 -defaultsOSRD
-preplace port IMU_I2C_SDA -pg 1 -lvl 4 -x 1440 -y 80 -defaultsOSRD
-preplace port IMU_I2C_SCL -pg 1 -lvl 4 -x 1440 -y 100 -defaultsOSRD
-preplace port RFID_UART_RX -pg 1 -lvl 0 -x -10 -y 280 -defaultsOSRD
-preplace port RFID_UART_TX -pg 1 -lvl 4 -x 1440 -y 270 -defaultsOSRD
-preplace port input_0 -pg 1 -lvl 0 -x -10 -y 0 -defaultsOSRD
-preplace portBus out_0 -pg 1 -lvl 4 -x 1440 -y -10 -defaultsOSRD
-preplace portBus out_1 -pg 1 -lvl 4 -x 1440 -y 10 -defaultsOSRD
-preplace inst time_pulse_0 -pg 1 -lvl 2 -x 890 -y 90 -defaultsOSRD
-preplace inst processing_system7_0 -pg 1 -lvl 1 -x 450 -y 390 -defaultsOSRD
-preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 890 -y 580 -defaultsOSRD
-preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 450 -y 610 -defaultsOSRD
-preplace inst axi_uartlite_0 -pg 1 -lvl 3 -x 1250 -y 740 -defaultsOSRD
-preplace inst Balise_0 -pg 1 -lvl 3 -x 1250 -y 450 -defaultsOSRD
-preplace inst Dijkstra_reg_0 -pg 1 -lvl 3 -x 1250 -y 600 -defaultsOSRD
-preplace inst IMU_v3_0 -pg 1 -lvl 3 -x 1250 -y 60 -defaultsOSRD
-preplace inst Timer_ronde_0 -pg 1 -lvl 3 -x 1250 -y 260 -defaultsOSRD
-preplace inst RFID_reader_0 -pg 1 -lvl 2 -x 890 -y 270 -defaultsOSRD
-preplace inst test_interface_0 -pg 1 -lvl 1 -x 450 -y 0 -defaultsOSRD
-preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 10 500 680 -70 1110
-preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 20 510 650
-preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 700 -60 1070
-preplace netloc RX_Serial_0_1 1 0 3 NJ 820 NJ 820 1130J
-preplace netloc Balise_0_TX_Serial 1 3 1 NJ 450
-preplace netloc time_pulse_0_pulse_1s 1 2 1 1130 100n
-preplace netloc time_pulse_0_pulse_1min 1 2 1 1120 120n
-preplace netloc Net 1 3 1 1390 50n
-preplace netloc Net1 1 3 1 1370 70n
-preplace netloc time_pulse_0_pulse_1ms 1 1 2 730 -10 1060
-preplace netloc time_pulse_0_pulse_1us 1 1 2 720 -20 1050
-preplace netloc RX_Serial_0_2 1 0 2 NJ 280 NJ
-preplace netloc RFID_reader_0_TX_Serial 1 2 2 1050J 360 1370J
-preplace netloc input_u_0_1 1 0 1 N 0
-preplace netloc test_interface_0_out_0 1 1 3 670J -30 NJ -30 1410J
-preplace netloc test_interface_0_out_1 1 1 3 650J -80 NJ -80 1420J
-preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 1080 30n
-preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 1100 420n
-preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 1050 610n
-preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 1050 550n
-preplace netloc axi_uartlite_0_UART 1 3 1 NJ 730
-preplace netloc processing_system7_0_DDR 1 1 3 660J -50 NJ -50 1400J
-preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 690 400n
-preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 1090 220n
-preplace netloc processing_system7_0_FIXED_IO 1 1 3 710J -40 NJ -40 1380J
-preplace netloc ps7_0_axi_periph_M05_AXI 1 1 2 740 0 1040
-levelinfo -pg 1 -10 450 890 1250 1440
-pagesize -pg 1 -db -bbox -sgen -190 -110 1620 840
+preplace port DDR -pg 1 -lvl 4 -x 1110 -y 60 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 4 -x 1110 -y 80 -defaultsOSRD
+preplace port HOLO_UART -pg 1 -lvl 4 -x 1110 -y 290 -defaultsOSRD
+preplace port BALISE_UART_RX -pg 1 -lvl 0 -x 0 -y 870 -defaultsOSRD
+preplace port BALISE_UART_TX -pg 1 -lvl 4 -x 1110 -y 790 -defaultsOSRD
+preplace port IMU_I2C_SDA -pg 1 -lvl 4 -x 1110 -y 620 -defaultsOSRD
+preplace port IMU_I2C_SCL -pg 1 -lvl 4 -x 1110 -y 640 -defaultsOSRD
+preplace port RFID_UART_RX -pg 1 -lvl 0 -x 0 -y 980 -defaultsOSRD
+preplace port RFID_UART_TX -pg 1 -lvl 4 -x 1110 -y 970 -defaultsOSRD
+preplace port US_ECHO_3V3 -pg 1 -lvl 0 -x 0 -y 1180 -defaultsOSRD
+preplace port PWR_MGT_US -pg 1 -lvl 4 -x 1110 -y 1150 -defaultsOSRD
+preplace port US_TRIG_3V3 -pg 1 -lvl 4 -x 1110 -y 1170 -defaultsOSRD
+preplace portBus US_SEL -pg 1 -lvl 4 -x 1110 -y 1190 -defaultsOSRD
+preplace portBus out_0 -pg 1 -lvl 4 -x 1110 -y 1320 -defaultsOSRD
+preplace portBus out_1 -pg 1 -lvl 4 -x 1110 -y 1420 -defaultsOSRD
+preplace inst time_pulse_0 -pg 1 -lvl 2 -x 610 -y 780 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 1 -x 230 -y 110 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 2 -x 610 -y 440 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 1 -x 230 -y 320 -defaultsOSRD
+preplace inst axi_uartlite_0 -pg 1 -lvl 3 -x 970 -y 300 -defaultsOSRD
+preplace inst Balise_0 -pg 1 -lvl 3 -x 970 -y 790 -defaultsOSRD
+preplace inst Dijkstra_reg_0 -pg 1 -lvl 3 -x 970 -y 160 -defaultsOSRD
+preplace inst IMU_v3_0 -pg 1 -lvl 3 -x 970 -y 630 -defaultsOSRD
+preplace inst Timer_ronde_0 -pg 1 -lvl 3 -x 970 -y 460 -defaultsOSRD
+preplace inst RFID_reader_0 -pg 1 -lvl 3 -x 970 -y 970 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 3 -x 970 -y 1320 -defaultsOSRD
+preplace inst xlconstant_1 -pg 1 -lvl 3 -x 970 -y 1420 -defaultsOSRD
+preplace inst Ultrasons_0 -pg 1 -lvl 3 -x 970 -y 1170 -defaultsOSRD
+preplace netloc processing_system7_0_FCLK_CLK0 1 0 3 20 420 450 160 790
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 0 2 30 220 430
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 1 2 440 200 800
+preplace netloc RX_Serial_0_1 1 0 3 NJ 870 NJ 870 840J
+preplace netloc Balise_0_TX_Serial 1 3 1 NJ 790
+preplace netloc time_pulse_0_pulse_1s 1 2 1 830 460n
+preplace netloc time_pulse_0_pulse_1min 1 2 1 820 440n
+preplace netloc Net 1 3 1 NJ 620
+preplace netloc Net1 1 3 1 NJ 640
+preplace netloc time_pulse_0_pulse_1ms 1 2 1 850 620n
+preplace netloc time_pulse_0_pulse_1us 1 2 1 760 750n
+preplace netloc RX_Serial_0_2 1 0 3 NJ 980 NJ 980 NJ
+preplace netloc RFID_reader_0_TX_Serial 1 3 1 NJ 970
+preplace netloc echo_in_0_1 1 0 3 NJ 1180 NJ 1180 NJ
+preplace netloc Ultrasons_0_en_ult 1 3 1 NJ 1150
+preplace netloc Ultrasons_0_sel_ult 1 3 1 NJ 1190
+preplace netloc Ultrasons_0_trig_out 1 3 1 NJ 1170
+preplace netloc xlconstant_0_dout 1 3 1 NJ 1320
+preplace netloc xlconstant_1_dout 1 3 1 NJ 1420
+preplace netloc ps7_0_axi_periph_M03_AXI 1 2 1 810 440n
+preplace netloc processing_system7_0_FIXED_IO 1 1 3 NJ 80 NJ 80 NJ
+preplace netloc processing_system7_0_DDR 1 1 3 NJ 60 NJ 60 NJ
+preplace netloc ps7_0_axi_periph_M02_AXI 1 2 1 N 420
+preplace netloc ps7_0_axi_periph_M05_AXI 1 2 1 770 480n
+preplace netloc ps7_0_axi_periph_M01_AXI 1 2 1 770 140n
+preplace netloc axi_uartlite_0_UART 1 3 1 NJ 290
+preplace netloc ps7_0_axi_periph_M00_AXI 1 2 1 840 380n
+preplace netloc processing_system7_0_M_AXI_GP0 1 1 1 460 120n
+preplace netloc ps7_0_axi_periph_M04_AXI 1 2 1 780 280n
+preplace netloc ps7_0_axi_periph_M06_AXI 1 2 1 780 500n
+levelinfo -pg 1 0 230 610 970 1110
+pagesize -pg 1 -db -bbox -sgen -180 0 1290 1480
 "
 }
 {
-   "da_axi4_cnt":"11",
+   "da_axi4_cnt":"12",
    "da_board_cnt":"2",
    "da_clkrst_cnt":"4",
    "da_ps7_cnt":"1"

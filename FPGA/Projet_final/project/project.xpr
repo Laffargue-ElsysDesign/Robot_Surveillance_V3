@@ -85,12 +85,6 @@
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
       </File>
-      <File Path="$PSRCDIR/sources_1/new/test_interface.vhd">
-        <FileInfo>
-          <Attr Name="UsedIn" Val="synthesis"/>
-          <Attr Name="UsedIn" Val="simulation"/>
-        </FileInfo>
-      </File>
       <File Path="$PSRCDIR/sources_1/bd/design_fpga/design_fpga.bd">
         <FileInfo>
           <Attr Name="UsedIn" Val="synthesis"/>
@@ -100,21 +94,28 @@
         <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_time_pulse_0_0/design_fpga_time_pulse_0_0.xci">
           <Proxy FileSetName="design_fpga_time_pulse_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_xbar_0/design_fpga_xbar_0.xci">
-          <Proxy FileSetName="design_fpga_xbar_0"/>
+        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_IMU_v3_0_0/design_fpga_IMU_v3_0_0.xci">
+          <Proxy FileSetName="design_fpga_IMU_v3_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0.xci">
-          <Proxy FileSetName="design_fpga_test_interface_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0.xci">
+          <Proxy FileSetName="design_fpga_Ultrasons_0_0"/>
         </CompFileExtendedInfo>
         <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0.xci">
           <Proxy FileSetName="design_fpga_RFID_reader_0_0"/>
         </CompFileExtendedInfo>
-        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_IMU_v3_0_0/design_fpga_IMU_v3_0_0.xci">
-          <Proxy FileSetName="design_fpga_IMU_v3_0_0"/>
+        <CompFileExtendedInfo CompFileName="design_fpga.bd" FileRelPathName="ip/design_fpga_xbar_0/design_fpga_xbar_0.xci">
+          <Proxy FileSetName="design_fpga_xbar_0"/>
         </CompFileExtendedInfo>
       </File>
       <File Path="$PGENDIR/sources_1/bd/design_fpga/hdl/design_fpga_wrapper.vhd">
         <FileInfo>
+          <Attr Name="UsedIn" Val="synthesis"/>
+          <Attr Name="UsedIn" Val="simulation"/>
+        </FileInfo>
+      </File>
+      <File Path="$PSRCDIR/sources_1/new/test_interface.vhd">
+        <FileInfo>
+          <Attr Name="AutoDisabled" Val="1"/>
           <Attr Name="UsedIn" Val="synthesis"/>
           <Attr Name="UsedIn" Val="simulation"/>
         </FileInfo>
@@ -187,9 +188,9 @@
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
-    <FileSet Name="design_fpga_test_interface_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_fpga_test_interface_0_0" RelGenDir="$PGENDIR/design_fpga_test_interface_0_0">
+    <FileSet Name="design_fpga_Ultrasons_0_0" Type="BlockSrcs" RelSrcDir="$PSRCDIR/design_fpga_Ultrasons_0_0" RelGenDir="$PGENDIR/design_fpga_Ultrasons_0_0">
       <Config>
-        <Option Name="TopModule" Val="design_fpga_test_interface_0_0"/>
+        <Option Name="TopModule" Val="design_fpga_Ultrasons_0_0"/>
         <Option Name="UseBlackboxStub" Val="1"/>
       </Config>
     </FileSet>
@@ -263,7 +264,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_fpga_test_interface_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_fpga_test_interface_0_0" Part="xc7z020clg400-1" ConstrsSet="design_fpga_test_interface_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_fpga_test_interface_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_fpga_test_interface_0_0_synth_1">
+    <Run Id="design_fpga_Ultrasons_0_0_synth_1" Type="Ft3:Synth" SrcSet="design_fpga_Ultrasons_0_0" Part="xc7z020clg400-1" ConstrsSet="design_fpga_Ultrasons_0_0" Description="Vivado Synthesis Defaults" AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" Dir="$PRUNDIR/design_fpga_Ultrasons_0_0_synth_1" IncludeInArchive="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_fpga_Ultrasons_0_0_synth_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Synthesis Defaults" Flow="Vivado Synthesis 2020">
           <Desc>Vivado Synthesis Defaults</Desc>
@@ -361,7 +362,7 @@
       <Report Name="ROUTE_DESIGN.REPORT_METHODOLOGY" Enabled="1"/>
       <RQSFiles/>
     </Run>
-    <Run Id="design_fpga_test_interface_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_fpga_test_interface_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_fpga_test_interface_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_fpga_test_interface_0_0_impl_1">
+    <Run Id="design_fpga_Ultrasons_0_0_impl_1" Type="Ft2:EntireDesign" Part="xc7z020clg400-1" ConstrsSet="design_fpga_Ultrasons_0_0" Description="Default settings for Implementation." AutoIncrementalCheckpoint="false" WriteIncrSynthDcp="false" SynthRun="design_fpga_Ultrasons_0_0_synth_1" IncludeInArchive="false" GenFullBitstream="true" AutoIncrementalDir="$PSRCDIR/utils_1/imports/design_fpga_Ultrasons_0_0_impl_1">
       <Strategy Version="1" Minor="2">
         <StratHandle Name="Vivado Implementation Defaults" Flow="Vivado Implementation 2020">
           <Desc>Default settings for Implementation.</Desc>

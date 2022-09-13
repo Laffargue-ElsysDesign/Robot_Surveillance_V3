@@ -39,8 +39,14 @@ set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga
 # IP: bd/design_fpga/ip/design_fpga_RFID_reader_0_0/design_fpga_RFID_reader_0_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_RFID_reader_0_0 || ORIG_REF_NAME==design_fpga_RFID_reader_0_0} -quiet] -quiet
 
-# IP: bd/design_fpga/ip/design_fpga_test_interface_0_0/design_fpga_test_interface_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_test_interface_0_0 || ORIG_REF_NAME==design_fpga_test_interface_0_0} -quiet] -quiet
+# IP: bd/design_fpga/ip/design_fpga_Ultrasons_0_0/design_fpga_Ultrasons_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_Ultrasons_0_0 || ORIG_REF_NAME==design_fpga_Ultrasons_0_0} -quiet] -quiet
+
+# IP: bd/design_fpga/ip/design_fpga_xlconstant_0_0/design_fpga_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_xlconstant_0_0 || ORIG_REF_NAME==design_fpga_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/design_fpga/ip/design_fpga_xlconstant_1_0/design_fpga_xlconstant_1_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_xlconstant_1_0 || ORIG_REF_NAME==design_fpga_xlconstant_1_0} -quiet] -quiet
 
 # IP: bd/design_fpga/ip/design_fpga_auto_pc_0/design_fpga_auto_pc_0.xci
 set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_fpga_auto_pc_0 || ORIG_REF_NAME==design_fpga_auto_pc_0} -quiet] -quiet
