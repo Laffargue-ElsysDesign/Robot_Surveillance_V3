@@ -23,7 +23,7 @@ eval( EAInclude(ISEJScriptLib) );
 
 
 ISEStep( "vivado",
-         "-log design_test_ultrason_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_test_ultrason_wrapper.tcl" );
+         "-log design_ip_ultrasons_wrapper.vds -m64 -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_ip_ultrasons_wrapper.tcl" );
 
 
 

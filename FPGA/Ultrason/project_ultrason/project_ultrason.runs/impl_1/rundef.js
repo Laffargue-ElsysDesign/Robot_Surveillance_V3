@@ -25,7 +25,7 @@ eval( EAInclude(ISEJScriptLib) );
 // pre-commands:
 ISETouchFile( "init_design", "begin" );
 ISEStep( "vivado",
-         "-log design_test_ultrason_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_test_ultrason_wrapper.tcl -notrace" );
+         "-log design_ip_ultrasons_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_ip_ultrasons_wrapper.tcl -notrace" );
 
 
 

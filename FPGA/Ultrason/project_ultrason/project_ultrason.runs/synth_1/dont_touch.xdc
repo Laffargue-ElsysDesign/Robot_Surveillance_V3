@@ -3,22 +3,28 @@
 
 # XDC: imports/Desktop/zybo-z7-20.xdc
 
-# Block Designs: bd/design_test_ultrason/design_test_ultrason.bd
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason || ORIG_REF_NAME==design_test_ultrason} -quiet] -quiet
+# Block Designs: bd/design_ip_ultrasons/design_ip_ultrasons.bd
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons || ORIG_REF_NAME==design_ip_ultrasons} -quiet] -quiet
 
-# IP: bd/design_test_ultrason/ip/design_test_ultrason_time_pulse_0_0/design_test_ultrason_time_pulse_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason_time_pulse_0_0 || ORIG_REF_NAME==design_test_ultrason_time_pulse_0_0} -quiet] -quiet
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_time_pulse_0_0/design_ip_ultrasons_time_pulse_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_time_pulse_0_0 || ORIG_REF_NAME==design_ip_ultrasons_time_pulse_0_0} -quiet] -quiet
 
-# IP: bd/design_test_ultrason/ip/design_test_ultrason_clk_wiz_0/design_test_ultrason_clk_wiz_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason_clk_wiz_0 || ORIG_REF_NAME==design_test_ultrason_clk_wiz_0} -quiet] -quiet
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_processing_system7_0_0/design_ip_ultrasons_processing_system7_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_processing_system7_0_0 || ORIG_REF_NAME==design_ip_ultrasons_processing_system7_0_0} -quiet] -quiet
 
-# IP: bd/design_test_ultrason/ip/design_test_ultrason_Ultrason_0_0/design_test_ultrason_Ultrason_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason_Ultrason_0_0 || ORIG_REF_NAME==design_test_ultrason_Ultrason_0_0} -quiet] -quiet
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_ps7_0_axi_periph_0/design_ip_ultrasons_ps7_0_axi_periph_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_ps7_0_axi_periph_0 || ORIG_REF_NAME==design_ip_ultrasons_ps7_0_axi_periph_0} -quiet] -quiet
 
-# IP: bd/design_test_ultrason/ip/design_test_ultrason_ila_0_0/design_test_ultrason_ila_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason_ila_0_0 || ORIG_REF_NAME==design_test_ultrason_ila_0_0} -quiet] -quiet
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_rst_ps7_0_50M_0/design_ip_ultrasons_rst_ps7_0_50M_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_rst_ps7_0_50M_0 || ORIG_REF_NAME==design_ip_ultrasons_rst_ps7_0_50M_0} -quiet] -quiet
 
-# IP: bd/design_test_ultrason/ip/design_test_ultrason_test_interface_0_0/design_test_ultrason_test_interface_0_0.xci
-set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_test_ultrason_test_interface_0_0 || ORIG_REF_NAME==design_test_ultrason_test_interface_0_0} -quiet] -quiet
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_Ultrasons_0_0/design_ip_ultrasons_Ultrasons_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_Ultrasons_0_0 || ORIG_REF_NAME==design_ip_ultrasons_Ultrasons_0_0} -quiet] -quiet
 
-# XDC: d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_test_ultrason/design_test_ultrason_ooc.xdc
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_xlconstant_0_0/design_ip_ultrasons_xlconstant_0_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_xlconstant_0_0 || ORIG_REF_NAME==design_ip_ultrasons_xlconstant_0_0} -quiet] -quiet
+
+# IP: bd/design_ip_ultrasons/ip/design_ip_ultrasons_auto_pc_0/design_ip_ultrasons_auto_pc_0.xci
+set_property KEEP_HIERARCHY SOFT [get_cells -hier -filter {REF_NAME==design_ip_ultrasons_auto_pc_0 || ORIG_REF_NAME==design_ip_ultrasons_auto_pc_0} -quiet] -quiet
+
+# XDC: d:/projets/2020_2/project_ultrason/project_ultrason.gen/sources_1/bd/design_ip_ultrasons/design_ip_ultrasons_ooc.xdc

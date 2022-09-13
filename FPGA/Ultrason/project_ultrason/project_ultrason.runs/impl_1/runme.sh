@@ -42,6 +42,6 @@ EAStep()
 
 # pre-commands:
 /bin/touch .init_design.begin.rst
-EAStep vivado -log design_test_ultrason_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_test_ultrason_wrapper.tcl -notrace
+EAStep vivado -log design_ip_ultrasons_wrapper.vdi -applog -m64 -product Vivado -messageDb vivado.pb -mode batch -source design_ip_ultrasons_wrapper.tcl -notrace
 
 

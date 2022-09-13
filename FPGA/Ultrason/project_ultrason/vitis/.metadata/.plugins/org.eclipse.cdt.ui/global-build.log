@@ -1,0 +1,9 @@
+Nothing to build in platform 'design_ip_ultrasons_wrapper'
+
+11:37:43 **** Incremental Build of configuration Debug for project test_ultrasons ****
+make all 
+make --no-print-directory pre-build
+a9-linaro-pre-build-step
+' '
+make --no-print-directory main-build
+make[1]: Nothing to be done for 'main-build'.
