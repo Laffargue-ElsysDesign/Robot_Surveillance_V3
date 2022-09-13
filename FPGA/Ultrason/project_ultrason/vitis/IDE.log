@@ -1,0 +1,116 @@
+11:09:55 INFO  : Launching XSCT server: xsct.bat -n  -interactive D:\projets\2020_2\project_ultrason\vitis\temp_xsdb_launch_script.tcl
+11:09:55 INFO  : Registering command handlers for Vitis TCF services
+11:10:01 INFO  : Platform repository initialization has completed.
+11:10:01 INFO  : XSCT server has started successfully.
+11:10:10 INFO  : plnx-install-location is set to ''
+11:10:10 INFO  : Successfully done setting XSCT server connection channel  
+11:10:10 INFO  : Successfully done query RDI_DATADIR 
+11:10:10 INFO  : Successfully done setting workspace for the tool. 
+11:12:43 INFO  : Result from executing command 'getProjects': design_ip_ultrasons_wrapper
+11:12:43 INFO  : Result from executing command 'getPlatforms': 
+11:12:43 WARN  : An unexpected exception occurred in the module 'platform project logging'
+11:12:44 INFO  : Platform 'design_ip_ultrasons_wrapper' is added to custom repositories.
+11:12:54 INFO  : Platform 'design_ip_ultrasons_wrapper' is added to custom repositories.
+11:19:54 INFO  : Result from executing command 'getProjects': design_ip_ultrasons_wrapper
+11:19:54 INFO  : Result from executing command 'getPlatforms': design_ip_ultrasons_wrapper|D:/projets/2020_2/project_ultrason/vitis/design_ip_ultrasons_wrapper/export/design_ip_ultrasons_wrapper/design_ip_ultrasons_wrapper.xpfm
+11:19:55 INFO  : Checking for BSP changes to sync application flags for project 'test_ultrasons'...
+11:31:44 INFO  : Checking for BSP changes to sync application flags for project 'test_ultrasons'...
+11:31:53 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:31:54 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}' command is executed.
+11:31:57 INFO  : Device configured successfully with "D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit"
+11:32:14 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:14 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}' command is executed.
+11:32:16 INFO  : Device configured successfully with "D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit"
+11:32:19 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:32:20 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4830BA' is selected.
+11:32:20 INFO  : 'jtag frequency' command is executed.
+11:32:20 INFO  : Context for 'APU' is selected.
+11:32:20 INFO  : System reset is completed.
+11:32:23 INFO  : 'after 3000' command is executed.
+11:32:23 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}' command is executed.
+11:32:25 INFO  : Device configured successfully with "D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit"
+11:32:25 INFO  : Context for 'APU' is selected.
+11:32:25 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_ultrason/vitis/design_ip_ultrasons_wrapper/export/design_ip_ultrasons_wrapper/hw/design_ip_ultrasons_wrapper.xsa'.
+11:32:25 INFO  : 'configparams force-mem-access 1' command is executed.
+11:32:25 INFO  : Context for 'APU' is selected.
+11:32:25 INFO  : Sourcing of 'D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/psinit/ps7_init.tcl' is done.
+11:32:26 INFO  : 'ps7_init' command is executed.
+11:32:26 INFO  : 'ps7_post_config' command is executed.
+11:32:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:26 INFO  : The application 'D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/Debug/test_ultrasons.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:32:26 INFO  : 'configparams force-mem-access 0' command is executed.
+11:32:26 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}
+fpga -file D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_ultrason/vitis/design_ip_ultrasons_wrapper/export/design_ip_ultrasons_wrapper/hw/design_ip_ultrasons_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/Debug/test_ultrasons.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:32:26 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:32:26 INFO  : 'con' command is executed.
+11:32:26 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:32:26 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_ultrason\vitis\test_ultrasons_system\_ide\scripts\systemdebugger_test_ultrasons_system_standalone.tcl'
+11:37:43 INFO  : Checking for BSP changes to sync application flags for project 'test_ultrasons'...
+11:39:00 INFO  : Disconnected from the channel tcfchan#2.
+11:39:01 INFO  : Connected to target on host '127.0.0.1' and port '3121'.
+11:39:01 INFO  : Jtag cable 'Digilent Zybo Z7 210351B4830BA' is selected.
+11:39:01 INFO  : 'jtag frequency' command is executed.
+11:39:01 INFO  : Context for 'APU' is selected.
+11:39:01 INFO  : System reset is completed.
+11:39:04 INFO  : 'after 3000' command is executed.
+11:39:04 INFO  : 'targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}' command is executed.
+11:39:06 INFO  : Device configured successfully with "D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit"
+11:39:06 INFO  : Context for 'APU' is selected.
+11:39:06 INFO  : Hardware design and registers information is loaded from 'D:/projets/2020_2/project_ultrason/vitis/design_ip_ultrasons_wrapper/export/design_ip_ultrasons_wrapper/hw/design_ip_ultrasons_wrapper.xsa'.
+11:39:06 INFO  : 'configparams force-mem-access 1' command is executed.
+11:39:06 INFO  : Context for 'APU' is selected.
+11:39:06 INFO  : Sourcing of 'D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/psinit/ps7_init.tcl' is done.
+11:39:07 INFO  : 'ps7_init' command is executed.
+11:39:07 INFO  : 'ps7_post_config' command is executed.
+11:39:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:39:07 INFO  : The application 'D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/Debug/test_ultrasons.elf' is downloaded to processor 'ps7_cortexa9_0'.
+11:39:07 INFO  : 'configparams force-mem-access 0' command is executed.
+11:39:07 INFO  : ----------------XSDB Script----------------
+connect -url tcp:127.0.0.1:3121
+targets -set -nocase -filter {name =~"APU*"}
+rst -system
+after 3000
+targets -set -filter {jtag_cable_name =~ "Digilent Zybo Z7 210351B4830BA" && level==0 && jtag_device_ctx=="jsn-Zybo Z7-210351B4830BA-23727093-0"}
+fpga -file D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/bitstream/design_ip_ultrasons_wrapper.bit
+targets -set -nocase -filter {name =~"APU*"}
+loadhw -hw D:/projets/2020_2/project_ultrason/vitis/design_ip_ultrasons_wrapper/export/design_ip_ultrasons_wrapper/hw/design_ip_ultrasons_wrapper.xsa -mem-ranges [list {0x40000000 0xbfffffff}] -regs
+configparams force-mem-access 1
+targets -set -nocase -filter {name =~"APU*"}
+source D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/_ide/psinit/ps7_init.tcl
+ps7_init
+ps7_post_config
+targets -set -nocase -filter {name =~ "*A9*#0"}
+dow D:/projets/2020_2/project_ultrason/vitis/test_ultrasons/Debug/test_ultrasons.elf
+configparams force-mem-access 0
+----------------End of Script----------------
+
+11:39:07 INFO  : Context for processor 'ps7_cortexa9_0' is selected.
+11:39:07 INFO  : 'con' command is executed.
+11:39:07 INFO  : ----------------XSDB Script (After Launch)----------------
+targets -set -nocase -filter {name =~ "*A9*#0"}
+con
+----------------End of Script----------------
+
+11:39:07 INFO  : Launch script is exported to file 'D:\projets\2020_2\project_ultrason\vitis\test_ultrasons_system\_ide\scripts\systemdebugger_test_ultrasons_system_standalone.tcl'
+11:55:13 INFO  : Disconnected from the channel tcfchan#3.

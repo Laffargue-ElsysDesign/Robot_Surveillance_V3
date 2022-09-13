@@ -1,0 +1,43 @@
+{
+   "ActiveEmotionalView":"Default View",
+   "Default View_ScaleFactor":"0.789552",
+   "Default View_TopLeft":"222,-479",
+   "ExpandedHierarchyInLayout":"",
+   "guistr":"# # String gsaved with Nlview 7.0r6  2020-01-29 bk=1.5227 VDI=41 GEI=36 GUI=JA:10.0 non-TLS
+#  -string -flagsOSRD
+preplace port DDR -pg 1 -lvl 5 -x 1220 -y -250 -defaultsOSRD
+preplace port FIXED_IO -pg 1 -lvl 5 -x 1220 -y -230 -defaultsOSRD
+preplace port echo_in -pg 1 -lvl 0 -x -90 -y 70 -defaultsOSRD
+preplace port en_ult -pg 1 -lvl 5 -x 1220 -y 40 -defaultsOSRD
+preplace port trig_out -pg 1 -lvl 5 -x 1220 -y 60 -defaultsOSRD
+preplace portBus sel_ult -pg 1 -lvl 5 -x 1220 -y 80 -defaultsOSRD
+preplace portBus out_1 -pg 1 -lvl 5 -x 1220 -y -410 -defaultsOSRD
+preplace inst time_pulse_0 -pg 1 -lvl 3 -x 690 -y 80 -defaultsOSRD
+preplace inst processing_system7_0 -pg 1 -lvl 2 -x 290 -y -200 -defaultsOSRD
+preplace inst ps7_0_axi_periph -pg 1 -lvl 4 -x 1040 -y -370 -defaultsOSRD
+preplace inst rst_ps7_0_50M -pg 1 -lvl 3 -x 690 -y -110 -defaultsOSRD
+preplace inst Ultrasons_0 -pg 1 -lvl 4 -x 1040 -y 60 -defaultsOSRD
+preplace inst xlconstant_0 -pg 1 -lvl 1 -x 10 -y -410 -defaultsOSRD
+preplace netloc time_pulse_0_pulse_1us 1 3 1 N 50
+preplace netloc time_pulse_0_pulse_1ms 1 3 1 860 30n
+preplace netloc echo_in_0_1 1 0 4 NJ 70 N 70 490 170 890J
+preplace netloc Ultrasons_0_en_ult 1 4 1 N 40
+preplace netloc Ultrasons_0_trig_out 1 4 1 N 60
+preplace netloc Ultrasons_0_sel_ult 1 4 1 N 80
+preplace netloc processing_system7_0_FCLK_CLK0 1 1 3 90 -310 500 -260 870
+preplace netloc processing_system7_0_FCLK_RESET0_N 1 2 1 490 -150n
+preplace netloc rst_ps7_0_50M_peripheral_aresetn 1 2 2 510 180 880
+preplace netloc xlconstant_0_dout 1 1 4 NJ -410 520J -270 860J -240 1200J
+preplace netloc processing_system7_0_DDR 1 2 3 NJ -250 NJ -250 NJ
+preplace netloc processing_system7_0_FIXED_IO 1 2 3 NJ -230 NJ -230 NJ
+preplace netloc processing_system7_0_M_AXI_GP0 1 2 2 510J -280 860
+preplace netloc ps7_0_axi_periph_M00_AXI 1 3 2 890 -50 1190
+levelinfo -pg 1 -90 10 290 690 1040 1220
+pagesize -pg 1 -db -bbox -sgen -190 -490 1340 220
+"
+}
+{
+   "da_axi4_cnt":"1",
+   "da_clkrst_cnt":"1",
+   "da_ps7_cnt":"1"
+}

@@ -1,0 +1,390 @@
+{
+  "design": {
+    "design_info": {
+      "boundary_crc": "0x4D2B18057986E929",
+      "device": "xc7z020clg400-1",
+      "gen_directory": "../../../../project_ultrason.gen/sources_1/bd/design_test_ultrason",
+      "name": "design_test_ultrason",
+      "rev_ctrl_bd_flag": "RevCtrlBdOff",
+      "synth_flow_mode": "Hierarchical",
+      "tool_version": "2020.2",
+      "validated": "true"
+    },
+    "design_tree": {
+      "time_pulse_0": "",
+      "clk_wiz": "",
+      "Ultrason_0": "",
+      "ila_0": "",
+      "test_interface_0": ""
+    },
+    "ports": {
+      "rst_n": {
+        "type": "rst",
+        "direction": "I",
+        "parameters": {
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "POLARITY": {
+            "value": "ACTIVE_LOW",
+            "value_src": "default"
+          }
+        }
+      },
+      "enable": {
+        "direction": "I"
+      },
+      "trig_out": {
+        "direction": "O"
+      },
+      "echo_in": {
+        "direction": "I"
+      },
+      "en_ult": {
+        "direction": "O"
+      },
+      "clk": {
+        "type": "clk",
+        "direction": "I",
+        "parameters": {
+          "CLK_DOMAIN": {
+            "value": "design_test_ultrason_clk",
+            "value_src": "default"
+          },
+          "FREQ_HZ": {
+            "value": "125000000"
+          },
+          "FREQ_TOLERANCE_HZ": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "INSERT_VIP": {
+            "value": "0",
+            "value_src": "default"
+          },
+          "PHASE": {
+            "value": "0.000",
+            "value_src": "default"
+          }
+        }
+      },
+      "out_1": {
+        "direction": "O",
+        "left": "1",
+        "right": "0"
+      },
+      "nb_ult": {
+        "direction": "O",
+        "left": "2",
+        "right": "0"
+      },
+      "out_0": {
+        "direction": "O"
+      }
+    },
+    "components": {
+      "time_pulse_0": {
+        "vlnv": "xilinx.com:module_ref:time_pulse:1.0",
+        "xci_name": "design_test_ultrason_time_pulse_0_0",
+        "xci_path": "ip\\design_test_ultrason_time_pulse_0_0\\design_test_ultrason_time_pulse_0_0.xci",
+        "inst_hier_path": "time_pulse_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "time_pulse",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "pulse_1us": {
+            "direction": "O"
+          },
+          "pulse_1ms": {
+            "direction": "O"
+          },
+          "pulse_1s": {
+            "direction": "O"
+          },
+          "pulse_1min": {
+            "direction": "O"
+          }
+        }
+      },
+      "clk_wiz": {
+        "vlnv": "xilinx.com:ip:clk_wiz:6.0",
+        "xci_name": "design_test_ultrason_clk_wiz_0",
+        "xci_path": "ip\\design_test_ultrason_clk_wiz_0\\design_test_ultrason_clk_wiz_0.xci",
+        "inst_hier_path": "clk_wiz",
+        "parameters": {
+          "CLKOUT1_JITTER": {
+            "value": "143.688"
+          },
+          "CLKOUT1_REQUESTED_OUT_FREQ": {
+            "value": "50"
+          },
+          "MMCM_CLKOUT0_DIVIDE_F": {
+            "value": "20.000"
+          },
+          "USE_LOCKED": {
+            "value": "false"
+          },
+          "USE_RESET": {
+            "value": "false"
+          }
+        }
+      },
+      "Ultrason_0": {
+        "vlnv": "xilinx.com:module_ref:Ultrason:1.0",
+        "xci_name": "design_test_ultrason_Ultrason_0_0",
+        "xci_path": "ip\\design_test_ultrason_Ultrason_0_0\\design_test_ultrason_Ultrason_0_0.xci",
+        "inst_hier_path": "Ultrason_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "Ultrason",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "clk": {
+            "type": "clk",
+            "direction": "I",
+            "parameters": {
+              "FREQ_HZ": {
+                "value": "50000000",
+                "value_src": "ip_prop"
+              },
+              "PHASE": {
+                "value": "0.0",
+                "value_src": "ip_prop"
+              },
+              "CLK_DOMAIN": {
+                "value": "/clk_wiz_clk_out1",
+                "value_src": "ip_prop"
+              }
+            }
+          },
+          "rst_n": {
+            "type": "rst",
+            "direction": "I",
+            "parameters": {
+              "POLARITY": {
+                "value": "ACTIVE_LOW",
+                "value_src": "constant"
+              }
+            }
+          },
+          "enable": {
+            "direction": "I"
+          },
+          "pulse_ms": {
+            "direction": "I"
+          },
+          "pulse_us": {
+            "direction": "I"
+          },
+          "trig_out": {
+            "direction": "O"
+          },
+          "echo_in": {
+            "direction": "I"
+          },
+          "nb_ult": {
+            "direction": "O",
+            "left": "2",
+            "right": "0"
+          },
+          "en_ult": {
+            "direction": "O"
+          },
+          "data_ult": {
+            "direction": "O",
+            "left": "7",
+            "right": "0"
+          },
+          "data_valid": {
+            "direction": "O"
+          },
+          "o_zone": {
+            "direction": "O",
+            "left": "4",
+            "right": "0"
+          }
+        }
+      },
+      "ila_0": {
+        "vlnv": "xilinx.com:ip:ila:6.2",
+        "xci_name": "design_test_ultrason_ila_0_0",
+        "xci_path": "ip\\design_test_ultrason_ila_0_0\\design_test_ultrason_ila_0_0.xci",
+        "inst_hier_path": "ila_0",
+        "parameters": {
+          "C_DATA_DEPTH": {
+            "value": "131072"
+          },
+          "C_ENABLE_ILA_AXI_MON": {
+            "value": "false"
+          },
+          "C_MONITOR_TYPE": {
+            "value": "Native"
+          },
+          "C_NUM_OF_PROBES": {
+            "value": "6"
+          },
+          "C_PROBE2_WIDTH": {
+            "value": "3"
+          },
+          "C_PROBE3_WIDTH": {
+            "value": "8"
+          },
+          "C_PROBE5_WIDTH": {
+            "value": "5"
+          }
+        }
+      },
+      "test_interface_0": {
+        "vlnv": "xilinx.com:module_ref:test_interface:1.0",
+        "xci_name": "design_test_ultrason_test_interface_0_0",
+        "xci_path": "ip\\design_test_ultrason_test_interface_0_0\\design_test_ultrason_test_interface_0_0.xci",
+        "inst_hier_path": "test_interface_0",
+        "reference_info": {
+          "ref_type": "hdl",
+          "ref_name": "test_interface",
+          "boundary_crc": "0x0"
+        },
+        "ports": {
+          "out_0": {
+            "direction": "O"
+          },
+          "out_1": {
+            "direction": "O",
+            "left": "1",
+            "right": "0"
+          }
+        }
+      }
+    },
+    "nets": {
+      "clk_wiz_clk_out1": {
+        "ports": [
+          "clk_wiz/clk_out1",
+          "time_pulse_0/clk",
+          "Ultrason_0/clk"
+        ]
+      },
+      "rst_n_0_1": {
+        "ports": [
+          "rst_n",
+          "time_pulse_0/rst_n",
+          "Ultrason_0/rst_n"
+        ]
+      },
+      "enable_0_1": {
+        "ports": [
+          "enable",
+          "Ultrason_0/enable"
+        ]
+      },
+      "time_pulse_0_pulse_1ms": {
+        "ports": [
+          "time_pulse_0/pulse_1ms",
+          "Ultrason_0/pulse_ms"
+        ]
+      },
+      "time_pulse_0_pulse_1us": {
+        "ports": [
+          "time_pulse_0/pulse_1us",
+          "Ultrason_0/pulse_us"
+        ]
+      },
+      "Ultrason_0_trig_out": {
+        "ports": [
+          "Ultrason_0/trig_out",
+          "trig_out",
+          "ila_0/probe0"
+        ]
+      },
+      "echo_in_0_1": {
+        "ports": [
+          "echo_in",
+          "Ultrason_0/echo_in",
+          "ila_0/probe1"
+        ]
+      },
+      "Ultrason_0_en_ult": {
+        "ports": [
+          "Ultrason_0/en_ult",
+          "en_ult"
+        ]
+      },
+      "clk_0_1": {
+        "ports": [
+          "clk",
+          "clk_wiz/clk_in1",
+          "ila_0/clk"
+        ]
+      },
+      "test_interface_0_out_1": {
+        "ports": [
+          "test_interface_0/out_1",
+          "out_1"
+        ]
+      },
+      "Ultrason_0_data_ult": {
+        "ports": [
+          "Ultrason_0/data_ult",
+          "ila_0/probe3"
+        ]
+      },
+      "Ultrason_0_data_valid": {
+        "ports": [
+          "Ultrason_0/data_valid",
+          "ila_0/probe4"
+        ]
+      },
+      "Ultrason_0_o_zone": {
+        "ports": [
+          "Ultrason_0/o_zone",
+          "ila_0/probe5"
+        ]
+      },
+      "Ultrason_0_nb_ult": {
+        "ports": [
+          "Ultrason_0/nb_ult",
+          "nb_ult",
+          "ila_0/probe2"
+        ]
+      },
+      "test_interface_0_out_0": {
+        "ports": [
+          "test_interface_0/out_0",
+          "out_0"
+        ]
+      }
+    }
+  }
+}

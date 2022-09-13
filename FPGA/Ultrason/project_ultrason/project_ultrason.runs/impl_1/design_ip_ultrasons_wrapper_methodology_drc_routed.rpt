@@ -1,0 +1,131 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Aug 30 11:04:33 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : report_methodology -file design_ip_ultrasons_wrapper_methodology_drc_routed.rpt -pb design_ip_ultrasons_wrapper_methodology_drc_routed.pb -rpx design_ip_ultrasons_wrapper_methodology_drc_routed.rpx
+| Design       : design_ip_ultrasons_wrapper
+| Device       : xc7z020clg400-1
+| Speed File   : -1
+| Design State : Fully Routed
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+Report Methodology
+
+Table of Contents
+-----------------
+1. REPORT SUMMARY
+2. REPORT DETAILS
+
+1. REPORT SUMMARY
+-----------------
+            Netlist: netlist
+          Floorplan: design_1
+      Design limits: <entire design considered>
+             Max violations: <unlimited>
+             Violations found: 19
++-----------+----------+-------------------------------+------------+
+| Rule      | Severity | Description                   | Violations |
++-----------+----------+-------------------------------+------------+
+| DPIR-1    | Warning  | Asynchronous driver check     | 13         |
+| TIMING-18 | Warning  | Missing input or output delay | 6          |
++-----------+----------+-------------------------------+------------+
+
+2. REPORT DETAILS
+-----------------
+DPIR-1#1 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[0] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#2 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[10] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#3 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[11] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#4 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[12] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#5 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[1] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#6 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[2] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#7 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[3] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#8 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[4] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#9 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[5] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#10 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[6] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#11 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[7] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#12 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[8] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+DPIR-1#13 Warning
+Asynchronous driver check  
+DSP design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1 input pin design_ip_ultrasons_i/Ultrasons_0/U0/Ultrasons_v1_0_S00_AXI_inst/DUT1/s_data_ult1/A[9] is connected to registers with an asynchronous reset. This is preventing the possibility of merging these registers in to the DSP Block since the DSP block registers only possess synchronous reset capability.  It is suggested to recode or change these registers to remove the reset or use a synchronous reset to get the best optimization for performance, power and area.
+Related violations: <none>
+
+TIMING-18#1 Warning
+Missing input or output delay  
+An input delay is missing on echo_in relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#2 Warning
+Missing input or output delay  
+An output delay is missing on en_ult relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#3 Warning
+Missing input or output delay  
+An output delay is missing on sel_ult[0] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#4 Warning
+Missing input or output delay  
+An output delay is missing on sel_ult[1] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#5 Warning
+Missing input or output delay  
+An output delay is missing on sel_ult[2] relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+TIMING-18#6 Warning
+Missing input or output delay  
+An output delay is missing on trig_out relative to clock(s) clk_fpga_0
+Related violations: <none>
+
+
