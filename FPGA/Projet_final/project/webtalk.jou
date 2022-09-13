@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# Webtalk v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Tue Jul 19 12:56:36 2022
+# Process ID: 14356
+# Current directory: d:/Projet_range/project
+# Command line: wbtcv.exe -mode batch -source D:/Projet_range/project/project.hw/webtalk/labtool_webtalk.tcl -notrace
+# Log file: d:/Projet_range/project/webtalk.log
+# Journal file: d:/Projet_range/project\webtalk.jou
+#-----------------------------------------------------------
+source D:/Projet_range/project/project.hw/webtalk/labtool_webtalk.tcl -notrace

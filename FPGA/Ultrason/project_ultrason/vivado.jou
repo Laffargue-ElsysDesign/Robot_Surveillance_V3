@@ -1,0 +1,14 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Wed Jun 22 10:06:36 2022
+# Process ID: 9760
+# Current directory: D:/projets/2020_2/project_ultrason
+# Command line: vivado.exe -gui_launcher_event rodinguilauncherevent20412 D:\projets\2020_2\project_ultrason\project_ultrason.xpr
+# Log file: D:/projets/2020_2/project_ultrason/vivado.log
+# Journal file: D:/projets/2020_2/project_ultrason\vivado.jou
+#-----------------------------------------------------------
+start_gui
+open_project D:/projets/2020_2/project_ultrason/project_ultrason.xpr
+update_compile_order -fileset sources_1

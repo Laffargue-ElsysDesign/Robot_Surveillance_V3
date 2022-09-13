@@ -1,0 +1,16 @@
+Copyright 1986-2020 Xilinx, Inc. All Rights Reserved.
+------------------------------------------------------------------------------------
+| Tool Version : Vivado v.2020.2 (win64) Build 3064766 Wed Nov 18 09:12:45 MST 2020
+| Date         : Tue Aug 30 10:51:06 2022
+| Host         : D-14JM0W2 running 64-bit major release  (build 9200)
+| Command      : upgrade_ip
+| Device       : xc7z020clg400-1
+------------------------------------------------------------------------------------
+
+Upgrade Log for IP 'design_ip_ultrasons_Ultrasons_0_0'
+
+1. Summary
+----------
+
+SUCCESS in the upgrade of design_ip_ultrasons_Ultrasons_0_0 (elsys-design.com:user:Ultrasons:1.0) from (Rev. 2) to (Rev. 3)
+

@@ -1,0 +1,7 @@
+/*design_ip_ultrasons_wrapper*/
+the_ROM_image:
+{
+  [bootloader]<design_ip_ultrasons_wrapper/boot/fsbl.elf>
+   <bitstream> 
+  <elf,ps7_cortexa9_0>
+}

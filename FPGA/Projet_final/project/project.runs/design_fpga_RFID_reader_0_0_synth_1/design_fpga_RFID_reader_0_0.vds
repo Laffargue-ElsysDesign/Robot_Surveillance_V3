@@ -1,0 +1,314 @@
+#-----------------------------------------------------------
+# Vivado v2020.2 (64-bit)
+# SW Build 3064766 on Wed Nov 18 09:12:45 MST 2020
+# IP Build 3064653 on Wed Nov 18 14:17:31 MST 2020
+# Start of session at: Fri Aug 19 11:48:00 2022
+# Process ID: 3068
+# Current directory: D:/Projet_range/project/project.runs/design_fpga_RFID_reader_0_0_synth_1
+# Command line: vivado.exe -log design_fpga_RFID_reader_0_0.vds -product Vivado -mode batch -messageDb vivado.pb -notrace -source design_fpga_RFID_reader_0_0.tcl
+# Log file: D:/Projet_range/project/project.runs/design_fpga_RFID_reader_0_0_synth_1/design_fpga_RFID_reader_0_0.vds
+# Journal file: D:/Projet_range/project/project.runs/design_fpga_RFID_reader_0_0_synth_1\vivado.jou
+#-----------------------------------------------------------
+source design_fpga_RFID_reader_0_0.tcl -notrace
+INFO: [IP_Flow 19-234] Refreshing IP repositories
+INFO: [IP_Flow 19-1700] Loaded user IP repository 'd:/Projet_range/sources/ip_repo'.
+INFO: [IP_Flow 19-2313] Loaded Vivado IP repository 'D:/Programmes/Vivado/2020.2/data/ip'.
+Command: synth_design -top design_fpga_RFID_reader_0_0 -part xc7z020clg400-1 -mode out_of_context
+Starting synth_design
+Attempting to get a license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Common 17-349] Got license for feature 'Synthesis' and/or device 'xc7z020'
+INFO: [Device 21-403] Loading part xc7z020clg400-1
+INFO: [Synth 8-7079] Multithreading enabled for synth_design using a maximum of 2 processes.
+INFO: [Synth 8-7078] Launching helper process for spawning children vivado processes
+INFO: [Synth 8-7075] Helper process launched with PID 19600
+---------------------------------------------------------------------------------
+Starting RTL Elaboration : Time (s): cpu = 00:00:04 ; elapsed = 00:00:04 . Memory (MB): peak = 1177.379 ; gain = 51.156
+---------------------------------------------------------------------------------
+INFO: [Synth 8-638] synthesizing module 'design_fpga_RFID_reader_0_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_RFID_reader_0_0/synth/design_fpga_RFID_reader_0_0.vhd:86]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'RFID_reader_v1_0' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0.vhd:5' bound to instance 'U0' of component 'RFID_reader_v1_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_RFID_reader_0_0/synth/design_fpga_RFID_reader_0_0.vhd:154]
+INFO: [Synth 8-638] synthesizing module 'RFID_reader_v1_0' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0.vhd:52]
+	Parameter C_S00_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S00_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'RFID_reader_v1_0_S00_AXI' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:5' bound to instance 'RFID_reader_v1_0_S00_AXI_inst' of component 'RFID_reader_v1_0_S00_AXI' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0.vhd:92]
+INFO: [Synth 8-638] synthesizing module 'RFID_reader_v1_0_S00_AXI' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:89]
+	Parameter C_S_AXI_DATA_WIDTH bound to: 32 - type: integer 
+	Parameter C_S_AXI_ADDR_WIDTH bound to: 5 - type: integer 
+INFO: [Synth 8-3491] module 'UART_RX' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_rx.vhd:19' bound to instance 'RX' of component 'UART_RX' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:469]
+INFO: [Synth 8-638] synthesizing module 'UART_RX' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_rx.vhd:32]
+	Parameter g_CLKS_PER_BIT bound to: 868 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UART_RX' (1#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_rx.vhd:32]
+INFO: [Synth 8-3491] module 'UART_TX' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_tx.vhd:19' bound to instance 'TX' of component 'UART_TX' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:476]
+INFO: [Synth 8-638] synthesizing module 'UART_TX' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_tx.vhd:34]
+	Parameter g_CLKS_PER_BIT bound to: 868 - type: integer 
+INFO: [Synth 8-256] done synthesizing module 'UART_TX' (2#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/uart_tx.vhd:34]
+INFO: [Synth 8-3491] module 'RFID' declared at 'd:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/RFID.vhd:34' bound to instance 'RFID_comp' of component 'RFID' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:485]
+INFO: [Synth 8-638] synthesizing module 'RFID' [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/RFID.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'RFID' (3#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/src/RFID.vhd:51]
+INFO: [Synth 8-256] done synthesizing module 'RFID_reader_v1_0_S00_AXI' (4#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0_S00_AXI.vhd:89]
+INFO: [Synth 8-256] done synthesizing module 'RFID_reader_v1_0' (5#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ipshared/e27a/hdl/RFID_reader_v1_0.vhd:52]
+INFO: [Synth 8-256] done synthesizing module 'design_fpga_RFID_reader_0_0' (6#1) [d:/Projet_range/project/project.gen/sources_1/bd/design_fpga/ip/design_fpga_RFID_reader_0_0/synth/design_fpga_RFID_reader_0_0.vhd:86]
+---------------------------------------------------------------------------------
+Finished RTL Elaboration : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.082 ; gain = 137.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.082 ; gain = 137.859
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 1 : Time (s): cpu = 00:00:06 ; elapsed = 00:00:06 . Memory (MB): peak = 1264.082 ; gain = 137.859
+---------------------------------------------------------------------------------
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.032 . Memory (MB): peak = 1264.082 ; gain = 0.000
+INFO: [Project 1-570] Preparing netlist for logic optimization
+
+Processing XDC Constraints
+Initializing timing engine
+Completed Processing XDC Constraints
+
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1366.039 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+Constraint Validation Runtime : Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.048 . Memory (MB): peak = 1366.039 ; gain = 0.000
+---------------------------------------------------------------------------------
+Finished Constraint Validation : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Loading Part and Timing Information
+---------------------------------------------------------------------------------
+Loading part: xc7z020clg400-1
+---------------------------------------------------------------------------------
+Finished Loading Part and Timing Information : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying 'set_property' XDC Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished applying 'set_property' XDC Constraints : Time (s): cpu = 00:00:12 ; elapsed = 00:00:12 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+INFO: [Synth 8-802] inferred FSM for state register 'r_SM_Main_reg' in module 'UART_TX'
+INFO: [Synth 8-802] inferred FSM for state register 'current_state_reg' in module 'RFID'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                  s_idle |                            00001 |                              000
+          s_tx_start_bit |                            00010 |                              001
+          s_tx_data_bits |                            00100 |                              010
+           s_tx_stop_bit |                            01000 |                              011
+               s_cleanup |                            10000 |                              100
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'r_SM_Main_reg' using encoding 'one-hot' in module 'UART_TX'
+---------------------------------------------------------------------------------------------------
+                   State |                     New Encoding |                Previous Encoding 
+---------------------------------------------------------------------------------------------------
+                    idle |                             0000 |                             0000
+                   start |                             0001 |                             0001
+                 en_send |                             0010 |                             0010
+          write_prot_sel |                             0011 |                             0011
+           read_prot_sel |                             0100 |                             0100
+                 wait_us |                             0101 |                             0101
+               send_data |                             0110 |                             0110
+            en_send_data |                             0111 |                             0111
+               wait_data |                             1000 |                             1000
+        read_code_result |                             1001 |                             1001
+                read_len |                             1010 |                             1010
+               read_data |                             1011 |                             1011
+---------------------------------------------------------------------------------------------------
+INFO: [Synth 8-3354] encoded FSM with state register 'current_state_reg' using encoding 'sequential' in module 'RFID'
+---------------------------------------------------------------------------------
+Finished RTL Optimization Phase 2 : Time (s): cpu = 00:00:14 ; elapsed = 00:00:14 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start RTL Component Statistics 
+---------------------------------------------------------------------------------
+Detailed RTL Component Info : 
++---Adders : 
+	   2 Input   11 Bit       Adders := 2     
+	   2 Input    7 Bit       Adders := 3     
+	   2 Input    6 Bit       Adders := 5     
+	   2 Input    3 Bit       Adders := 2     
++---Registers : 
+	               32 Bit    Registers := 6     
+	               16 Bit    Registers := 1     
+	               11 Bit    Registers := 2     
+	                8 Bit    Registers := 64    
+	                7 Bit    Registers := 2     
+	                6 Bit    Registers := 4     
+	                5 Bit    Registers := 3     
+	                4 Bit    Registers := 1     
+	                3 Bit    Registers := 3     
+	                2 Bit    Registers := 2     
+	                1 Bit    Registers := 15    
++---Muxes : 
+	   2 Input   32 Bit        Muxes := 3     
+	   7 Input   32 Bit        Muxes := 3     
+	   4 Input   32 Bit        Muxes := 1     
+	   2 Input   16 Bit        Muxes := 3     
+	  12 Input   16 Bit        Muxes := 1     
+	   2 Input   11 Bit        Muxes := 5     
+	   6 Input   11 Bit        Muxes := 1     
+	   5 Input   11 Bit        Muxes := 1     
+	   6 Input    8 Bit        Muxes := 1     
+	   2 Input    8 Bit        Muxes := 19    
+	  12 Input    8 Bit        Muxes := 15    
+	   2 Input    7 Bit        Muxes := 2     
+	   2 Input    6 Bit        Muxes := 4     
+	   6 Input    6 Bit        Muxes := 2     
+	  12 Input    6 Bit        Muxes := 3     
+	   5 Input    5 Bit        Muxes := 1     
+	   2 Input    5 Bit        Muxes := 5     
+	   6 Input    5 Bit        Muxes := 1     
+	  12 Input    4 Bit        Muxes := 2     
+	   2 Input    4 Bit        Muxes := 17    
+	   2 Input    3 Bit        Muxes := 3     
+	   2 Input    2 Bit        Muxes := 3     
+	   3 Input    2 Bit        Muxes := 1     
+	   4 Input    2 Bit        Muxes := 1     
+	   6 Input    1 Bit        Muxes := 2     
+	   2 Input    1 Bit        Muxes := 107   
+	   5 Input    1 Bit        Muxes := 9     
+	  12 Input    1 Bit        Muxes := 66    
+---------------------------------------------------------------------------------
+Finished RTL Component Statistics 
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Part Resource Summary
+---------------------------------------------------------------------------------
+Part Resources:
+DSPs: 220 (col length:60)
+BRAMs: 280 (col length: RAMB18 60 RAMB36 30)
+---------------------------------------------------------------------------------
+Finished Part Resource Summary
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Cross Boundary and Area Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Cross Boundary and Area Optimization : Time (s): cpu = 00:00:18 ; elapsed = 00:00:19 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Applying XDC Timing Constraints
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Applying XDC Timing Constraints : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Timing Optimization
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Timing Optimization : Time (s): cpu = 00:00:24 ; elapsed = 00:00:24 . Memory (MB): peak = 1366.039 ; gain = 239.816
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Technology Mapping
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Technology Mapping : Time (s): cpu = 00:00:24 ; elapsed = 00:00:25 . Memory (MB): peak = 1372.055 ; gain = 245.832
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Flattening Before IO Insertion
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Final Netlist Cleanup
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished IO Insertion : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Instances
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Instances : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Rebuilding User Hierarchy
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Rebuilding User Hierarchy : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Ports
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Ports : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Handling Custom Attributes
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Handling Custom Attributes : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Renaming Generated Nets
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Finished Renaming Generated Nets : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+---------------------------------------------------------------------------------
+Start Writing Synthesis Report
+---------------------------------------------------------------------------------
+
+Report BlackBoxes: 
++-+--------------+----------+
+| |BlackBox name |Instances |
++-+--------------+----------+
++-+--------------+----------+
+
+Report Cell Usage: 
++------+-------+------+
+|      |Cell   |Count |
++------+-------+------+
+|1     |CARRY4 |     5|
+|2     |LUT1   |     2|
+|3     |LUT2   |    44|
+|4     |LUT3   |    34|
+|5     |LUT4   |    50|
+|6     |LUT5   |   102|
+|7     |LUT6   |   334|
+|8     |MUXF7  |    25|
+|9     |MUXF8  |     9|
+|10    |FDCE   |   450|
+|11    |FDPE   |    49|
+|12    |FDRE   |   225|
+|13    |FDSE   |     4|
++------+-------+------+
+---------------------------------------------------------------------------------
+Finished Writing Synthesis Report : Time (s): cpu = 00:00:27 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+---------------------------------------------------------------------------------
+Synthesis finished with 0 errors, 0 critical warnings and 0 warnings.
+Synthesis Optimization Runtime : Time (s): cpu = 00:00:20 ; elapsed = 00:00:26 . Memory (MB): peak = 1378.152 ; gain = 149.973
+Synthesis Optimization Complete : Time (s): cpu = 00:00:28 ; elapsed = 00:00:28 . Memory (MB): peak = 1378.152 ; gain = 251.930
+INFO: [Project 1-571] Translating synthesized netlist
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00.014 . Memory (MB): peak = 1390.188 ; gain = 0.000
+INFO: [Netlist 29-17] Analyzing 39 Unisim elements for replacement
+INFO: [Netlist 29-28] Unisim Transformation completed in 0 CPU seconds
+INFO: [Project 1-570] Preparing netlist for logic optimization
+INFO: [Opt 31-138] Pushed 0 inverter(s) to 0 load pin(s).
+Netlist sorting complete. Time (s): cpu = 00:00:00 ; elapsed = 00:00:00 . Memory (MB): peak = 1390.188 ; gain = 0.000
+INFO: [Project 1-111] Unisim Transformation Summary:
+No Unisim elements were transformed.
+
+INFO: [Common 17-83] Releasing license: Synthesis
+38 Infos, 0 Warnings, 0 Critical Warnings and 0 Errors encountered.
+synth_design completed successfully
+synth_design: Time (s): cpu = 00:00:33 ; elapsed = 00:00:35 . Memory (MB): peak = 1390.188 ; gain = 263.965
+INFO: [Common 17-1381] The checkpoint 'D:/Projet_range/project/project.runs/design_fpga_RFID_reader_0_0_synth_1/design_fpga_RFID_reader_0_0.dcp' has been generated.
+WARNING: [Common 17-576] 'use_project_ipc' is deprecated. This option is deprecated and no longer used.
+INFO: [Coretcl 2-1648] Added synthesis output to IP cache for IP design_fpga_RFID_reader_0_0, cache-ID = 6a610bb27f7f5b88
+INFO: [Coretcl 2-1174] Renamed 5 cell refs.
+INFO: [Common 17-1381] The checkpoint 'D:/Projet_range/project/project.runs/design_fpga_RFID_reader_0_0_synth_1/design_fpga_RFID_reader_0_0.dcp' has been generated.
+INFO: [runtcl-4] Executing : report_utilization -file design_fpga_RFID_reader_0_0_utilization_synth.rpt -pb design_fpga_RFID_reader_0_0_utilization_synth.pb
+INFO: [Common 17-206] Exiting Vivado at Fri Aug 19 11:48:44 2022...
