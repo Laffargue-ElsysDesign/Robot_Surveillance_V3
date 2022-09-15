@@ -2,7 +2,7 @@ FPGA Directory
 
 This repository contains the FPGA projects of the holonome robot project 2022, the entire FPGA part was done with Vivado in VHDL. It also contains all the files to program the esp32 with Arduino IDE. 
 
-Balises et stm32 contains the files used to program the ESP32. Files for the Wifi-Mesh, I2C communicatio, uart communication and some tests with the RFID and NFC readers.
+Balises et stm32 contains the files used to program the ESP32. Files for the Wifi-Mesh, I2C communication, uart communication and some tests with the RFID and NFC readers.
 
 Dijkstra contains the FPGA projects which implements the Dijkstra Algorithm. 
 
@@ -18,4 +18,4 @@ Rapport contains documents for my internship report.
 
 UART PC contains a project which was used to test some modules and see hat they return through  UART communication with the PC.
 
-Ultrasons contans the FPGA project which implements the Ultrasons controller.
+Ultrasons contains the FPGA project which implements the Ultrasons controller.
