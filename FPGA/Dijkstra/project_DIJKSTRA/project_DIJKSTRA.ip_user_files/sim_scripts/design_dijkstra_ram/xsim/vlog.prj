@@ -1,6 +1,0 @@
-verilog xil_defaultlib --include "D:/Programmes/Vivado/2020.2/data/xilinx_vip/include" --include "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ipshared/ec67/hdl" --include "../../../../project_DIJKSTRA.gen/sources_1/bd/design_dijkstra_ram/ipshared/34f8/hdl" \
-"../../../bd/design_dijkstra_ram/ip/design_dijkstra_ram_xlconstant_0_0/sim/design_dijkstra_ram_xlconstant_0_0.v" \
-
-verilog xil_defaultlib "glbl.v"
-
-nosort
