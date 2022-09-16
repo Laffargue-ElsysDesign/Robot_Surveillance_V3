@@ -1,0 +1,67 @@
+Altium Designer Pick and Place Locations
+C:\Users\CORNIERE\Documents\GitHub\Robot_Surveillance_V3\Hardware\station_de_charge\PCB_Project\Project Outputs for station_de_charge\Pick Place\Pick Place for station_de_charge_PCB1.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       09/09/22
+Time:       13:45
+Revision:   b617f4de51295a6d28c8baa9eef6b5c7790ea499
+Variant:    No variations
+Units used: mm
+
+"Designator","Comment","Layer","Footprint","Center-X(mm)","Center-Y(mm)","Rotation","Description"
+"L1","loop","TopLayer","loop","91.8000","26.6750","180",""
+"J5","M20-9990246","TopLayer","FP-M20-9990246-MFG","6.5000","49.0000","360","2.54mm (0.1") Pitch SIL Vertical PC Tail Pin Header, 6.1mm mating pin height, tin, 2 contacts"
+"SW1","MS12ANW03","TopLayer","SW_MS12ANW03","6.8000","26.5000","180","Switch Slide ON None ON SPDT Top Slide 6A 250VAC 100000Cycles PC Pins Thru-Hole"
+"C11","33nF 400VDC","TopLayer","R60PF22205040K","67.7500","26.5000","90","Double Metallized Polypropylene Film Capacitor"
+"C10","33nF 400VDC","TopLayer","R60PF22205040K","61.7500","26.5000","90","Double Metallized Polypropylene Film Capacitor"
+"C9","22nF 630VDC 10%","TopLayer","R60PF22205040K","73.7500","26.5000","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"
+"J2","216571-2002","TopLayer","MOLEX_2165712002","30.1400","30.0100","180","Connector Power Header 2Position 3mm PC Pin Straight Through Hole 2 Terminal 1 Port Tray"
+"R8","33kOhm","TopLayer","FP-ESR10-IPC_A","2.5521","39.1231","360","Res Thick Film 0805 33K Ohm 5% 0.4W ±200ppm/C Pad SMD Automotive T/R"
+"R7","2kOhm","TopLayer","FP-ESR10-IPC_A","9.0521","36.1231","180","Res Thick Film 0805 2K Ohm 1% 2/5W ±100ppm/°C Molded SMD Paper T/R"
+"R6","1kOhm","TopLayer","FP-ESR10-IPC_A","2.5061","45.1231","360","Res Thick Film 0805 1K Ohm 1% 0.4W ±100ppm/C Epoxy Resin Pad SMD Automotive T/R"
+"R5","100Ohm","TopLayer","FP-ESR10-IPC_A","4.5230","33.0000","180","Res Thick Film 0805 100 Ohm 1% 2/5W ±100ppm/°C Molded SMD Paper T/R"
+"Q4","BC817K-25R","TopLayer","SOT95P230X110-3N","7.0291","39.6431","90","BC817K-25H/SOT23/TO-236AB"
+"Q3","BSS84AKVL","TopLayer","SOT95P230X110-3N","7.0091","43.1731","360","BSS84AKV/SOT666/SOT6"
+"J4","M20-9990246","TopLayer","FP-M20-9990246-MFG","9.5000","33.0000","180","2.54mm (0.1") Pitch SIL Vertical PC Tail Pin Header, 6.1mm mating pin height, tin, 2 contacts"
+"C7","10nF","TopLayer","FP-C0603C104K5RAC3121-IPC_A","2.7033","42.1231","360","Cap Ceramic 0.01uF 50V X7R 10% Pad SMD 0603 125C T/R"
+"C5","10nF","TopLayer","FP-C0603C104K5RAC3121-IPC_A","4.8550","36.1231","360","Cap Ceramic 0.01uF 50V X7R 10% Pad SMD 0603 125C T/R"
+"C4","10nF","TopLayer","FP-C0603C104K5RAC3121-IPC_A","7.8550","46.1231","360","Cap Ceramic 0.01uF 50V X7R 10% Pad SMD 0603 125C T/R"
+"R4","10kOhm","TopLayer","FP-ESR10-IPC_A","11.4770","39.0000","360","Res Thick Film 0805 10K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R3","ESR10EZPF4702","TopLayer","FP-ESR10-IPC_A","11.4770","42.0000","360","Res Thick Film 0805 47K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R2","300mOhm","TopLayer","RESC6331X70N","17.9870","27.5000","360","Res Thick Film 2512 0.3 Ohm 5% 1W ±200ppm/°C Molded SMD SMD Embossed Plastic T/R"
+"R1","300mOhm","TopLayer","RESC6331X70N","17.9870","32.0000","360","Res Thick Film 2512 0.3 Ohm 5% 1W ±200ppm/°C Molded SMD SMD Embossed Plastic T/R"
+"Q2","IRF9Z30PBF-BE3","TopLayer","TO-220AB-3-package","20.0000","41.0000","360",""
+"Q1","TMBT3906,LM","TopLayer","FP-TMBT3906","18.0000","36.0000","270","TRANSPNP50V0.15ASOT23-3"
+"C3","10µf","TopLayer","CAPC3225X280N","21.5000","46.0000","360","Multilayer Ceramic Chip Capacitors, Capacitance=10µF, LxWxT: 3.2x2.5x2.5mm"
+"C2","100nF","TopLayer","FP-C0603C104K5RAC3121-IPC_A","20.6989","49.0000","360","Cap Ceramic 0.1uF 50V X7R 10% Pad SMD 0603 125°C T/R"
+"C1","1µF","TopLayer","CAPC1608X90X35NL15T15","20.5000","51.0000","360","Cap Ceramic 1uF 16V X7R 10% SMD 0603 125°C Paper T/R"
+"C8","22nF 630VDC 10%","TopLayer","R60PF22205040K","79.7500","26.5000","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"
+"Q7","SIHF530-GE3","TopLayer","FP-SIHF530-GE3","39.0400","11.5000","360",""
+"Q8","SIHF530-GE3","TopLayer","FP-SIHF530-GE3","39.0400","41.5000","360",""
+"R18","ESR10EZPF4702","TopLayer","FP-ESR10-IPC_A","52.9770","46.0000","180","Res Thick Film 0805 47K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R17","3.3kOhm","TopLayer","FP-ESR10-IPC_A","50.0230","34.0000","180","Res Thick Film 0805 3.3K Ohm 1% 2/5W ±100ppm/°C Molded SMD SMD Paper T/R"
+"R16","3.3kOhm","TopLayer","FP-ESR10-IPC_A","49.9770","21.0000","180","Res Thick Film 0805 3.3K Ohm 1% 2/5W ±100ppm/°C Molded SMD SMD Paper T/R"
+"R15","ESR10EZPF4702","TopLayer","FP-ESR10-IPC_A","53.0230","8.0000","180","Res Thick Film 0805 47K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R14","68Ohm 1W","TopLayer","FP-CRGCQ2512-IPC_A","49.0000","30.0000","180","Res General Purpose Thick Film 2512 68 Ohm 5% 1W ±200ppm/°C Molded Emboss T/R"
+"R13","68Ohm 1W","TopLayer","FP-CRGCQ2512-IPC_A","49.0000","25.0000","180","Res General Purpose Thick Film 2512 68 Ohm 5% 1W ±200ppm/°C Molded Emboss T/R"
+"Q10","2N6491G","TopLayer","ONSC-TO-220-3-221A-09","51.5000","42.0000","270","Power Bipolar Transistor, 15A, 8"
+"Q9","2N6491G","TopLayer","ONSC-TO-220-3-221A-09","51.5000","12.5000","270","Power Bipolar Transistor, 15A, 8"
+"D6","1N4757A","TopLayer","FAIR-DO-41-2_V","54.0000","37.0000","360","Diode Zener Single 51V 5% 1000mW 2-Pin DO-41"
+"D5","1N4757A","TopLayer","FAIR-DO-41-2_V","54.5000","18.0000","360","Diode Zener Single 51V 5% 1000mW 2-Pin DO-41"
+"J1","*","TopLayer","FP-M20-9990246-MFG","18.2700","23.5000","180","2.54mm (0.1") Pitch SIL Vertical PC Tail Pin Header, 6.1mm mating pin height, tin, 2 contacts"
+"D1","PMEG6010ER,115","TopLayer","TVS_PTVS13VS1UR,115","40.0000","19.4000","270","DIODE SCHOTTKY 60V 1A SOD123W"
+"J3","PJ-080BH","TopLayer","CUI_PJ-080BH","7.0000","13.0250","90","Power Barrel Connector Jack 2.50mm ID (0.098"), 5.50mm OD (0.217") Through Hole,"
+"L3","2212-V-RC","TopLayer","IND_HCTI-220-5.8","78.0000","43.0880","90","Inductor High Current Toroid 100uH/64uH 15% 1KHz 4.4A 56mOhm DCR RDL"
+"L2","2212-V-RC","TopLayer","IND_HCTI-220-5.8","78.0000","9.9120","270","Inductor High Current Toroid 100uH/64uH 15% 1KHz 4.4A 56mOhm DCR RDL"
+"R11","10kOhm","TopLayer","FP-ESR10-IPC_A","31.5000","11.9770","270","Res Thick Film 0805 10K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R10","1kOhm","TopLayer","FP-ESR10-IPC_A","30.5000","49.5230","270","Res Thick Film 0805 1K Ohm 1% 0.4W ±100ppm/C Epoxy Resin Pad SMD Automotive T/R"
+"R12","10kOhm","TopLayer","FP-ESR10-IPC_A","30.0000","42.0230","270","Res Thick Film 0805 10K Ohm 1% 0.4W ±100ppm/C Pad SMD Automotive T/R"
+"R9","1kOhm","TopLayer","FP-ESR10-IPC_A","32.0000","19.5230","270","Res Thick Film 0805 1K Ohm 1% 0.4W ±100ppm/C Epoxy Resin Pad SMD Automotive T/R"
+"Q5","BC63916-D74Z","TopLayer","TO92127P478H483-3","37.0000","19.5000","90","NPN Medium Power Transistor"
+"Q6","BC63916-D74Z","TopLayer","TO92127P478H483-3","35.5000","48.5000","90","NPN Medium Power Transistor"
+"D2","PMEG6010ER,115","TopLayer","TVS_PTVS13VS1UR,115","41.5000","48.6000","90","DIODE SCHOTTKY 60V 1A SOD123W"
+"D4","PMEG6010ER,115","TopLayer","TVS_PTVS13VS1UR,115","39.0000","47.1000","270","DIODE SCHOTTKY 60V 1A SOD123W"
+"D3","PMEG6010ER,115","TopLayer","TVS_PTVS13VS1UR,115","42.5000","17.9000","270","DIODE SCHOTTKY 60V 1A SOD123W"
+"C6","22nF 630VDC 10%","TopLayer","R60PF22205040K","85.7500","26.5000","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"

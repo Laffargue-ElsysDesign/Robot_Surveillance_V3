@@ -1,0 +1,10 @@
+Output: Bill of Materials
+Type  : BOM
+From  : Variant [[No Variations]] of Schematic Document [sch_station_de_charge.SchDoc]
+   Generated File[Bill of Materials-sch_station_de_charge.xlsx]
+
+
+Files Generated   : 1
+Documents Printed : 0
+
+Finished Output Generation At 15:28:44 On 26/08/2022

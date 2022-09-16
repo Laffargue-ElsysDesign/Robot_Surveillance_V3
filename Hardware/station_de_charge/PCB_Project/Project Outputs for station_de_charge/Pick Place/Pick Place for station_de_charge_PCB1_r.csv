@@ -1,0 +1,24 @@
+Altium Designer Pick and Place Locations
+C:\Users\CORNIERE\Documents\GitHub\Robot_Surveillance_V3\Hardware\station_de_charge\PCB_Project\Project Outputs for station_de_charge\Pick Place\Pick Place for station_de_charge_PCB1_r.csv
+
+========================================================================================================================
+File Design Information:
+
+Date:       01/09/22
+Time:       10:49
+Revision:   b617f4de51295a6d28c8baa9eef6b5c7790ea499
+Variant:    No variations
+Units used: mil
+
+"Designator","Comment","Layer","Footprint","Center-X(mil)","Center-Y(mil)","Rotation","Description"
+"C15","22nF 630VDC 10%","TopLayer","R60PF22205040K","1220.472","314.961","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"
+"C14","22nF 630VDC 10%","TopLayer","R60PF22205040K","1456.693","314.961","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"
+"C13","22nF 630VDC 10%","TopLayer","R60PF22205040K","1692.913","314.961","90","Cap Film 0.022uF 630V PET 10%( 13 X 4 X 9mm) Radial Wound 10mm 105C Automotive Bag"
+"C12","22µf","TopLayer","CAPPM7343X310N","669.291","314.961","270","Cap Tant Polymer 22uF 50VDC D CASE 20% (7.3 X 4.3 X 2.9mm) SMD 7343-31 0.09 Ohm 125C Automotive T/R"
+"P1","691313710002","TopLayer","691313710002","413.387","334.646","270","Serie 3137 - 5.00mm Close Horizontal PCB Header WR-TBL, 2 pin"
+"L5","loop","TopLayer","LOOP","1948.819","314.961","180",""
+"L4","2212-V-RC","TopLayer","IND_HCTI-220-5.8","1141.732","1020.158","270","Inductor High Current Toroid 100uH/64uH 15% 1KHz 4.4A 56mOhm DCR RDL"
+"D10","PMEG4050EP,115","TopLayer","FP-SOD128-MFG","956.693","511.811","180","DIODE SCHOTTKY 40V 5A SOD128"
+"D9","PMEG4050EP,115","TopLayer","FP-SOD128-MFG","956.693","118.110","180","DIODE SCHOTTKY 40V 5A SOD128"
+"D8","PMEG4050EP,115","TopLayer","FP-SOD128-MFG","2232.284","492.126","180","DIODE SCHOTTKY 40V 5A SOD128"
+"D7","PMEG4050EP,115","TopLayer","FP-SOD128-MFG","2226.378","137.795","180","DIODE SCHOTTKY 40V 5A SOD128"

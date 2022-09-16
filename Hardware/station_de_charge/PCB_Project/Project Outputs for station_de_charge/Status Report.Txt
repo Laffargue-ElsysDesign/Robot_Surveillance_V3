@@ -1,0 +1,11 @@
+Output: Generates pick and place files
+Type  : Pick Place
+From  : Variant [[No Variations]] of PCB Document [station_de_charge_PCB1.PcbDoc]
+   Generated File[Pick Place for station_de_charge_PCB1.txt]
+   Generated File[Pick Place for station_de_charge_PCB1.csv]
+
+
+Files Generated   : 2
+Documents Printed : 0
+
+Finished Output Generation At 13:45:09 On 09/09/2022
