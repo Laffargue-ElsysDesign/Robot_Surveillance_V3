@@ -1,10 +1,0 @@
-2022-06-10T15:04:02.838998600255-15:04:02 **** Incremental Build of configuration Debug for project dijkstra_app_system ****
-000-make all 
-000-Generating bif file for the system project
-000-generate_system_bif.bat 51613 D:/projets/2020_2/project_DIJKSTRA/vitis/design_axi_wrapper/export/design_axi_wrapper/design_axi_wrapper.xpfm standalone_ps7_cortexa9_0 D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app_system/Debug/system.bif
-000-sdcard_gen --xpfm D:/projets/2020_2/project_DIJKSTRA/vitis/design_axi_wrapper/export/design_axi_wrapper/design_axi_wrapper.xpfm --sys_config design_axi_wrapper --bif D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app_system/Debug/system.bif --bitstream D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app/_ide/bitstream/design_axi_wrapper.bit --elf D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app/Debug/dijkstra_app.elf,ps7_cortexa9_0
-000-creating BOOT.BIN using D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app/_ide/bitstream/design_axi_wrapper.bit
-000-Running D:/Programmes/Vitis/2020.2/bin/bootgen  -image D:/projets/2020_2/project_DIJKSTRA/vitis/dijkstra_app_system/Debug/sd_card_temp/boot.bif -w -o i BOOT.BIN
-00255-
-15:04:13 Build Finished (took 10s.929ms)
-
